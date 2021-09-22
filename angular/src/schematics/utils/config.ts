@@ -1,5 +1,7 @@
 import { SchematicsException, Tree } from '@angular-devkit/schematics';
-import { experimental, parseJson, JsonParseMode } from '@angular-devkit/core';
+import { JsonParseMode } from '@angular-devkit/core';
+import { WorkspaceDefinition } from '@angular-devkit/core/src/workspace';
+import { parse } from 'jsonc-parser';
 
 const CONFIG_PATH = 'angular.json';
 
@@ -65,8 +67,11 @@ export function addStyle(host: Tree, projectName: string, stylePath: string) {
 export function addAsset(host: Tree, projectName: string, architect: string, asset: string | {glob: string; input: string; output: string}) {
   const config = readConfig(host);
   const appConfig = getAngularAppConfig(config, projectName);
-  appConfig.architect[architect].options.assets.push(asset);
-  writeConfig(host, config);
+  const target = appConfig.architect[architect];
+  if(target) {
+    target.options.assets.push(asset);
+    writeConfig(host, config);
+  }
 }
 
 export function addArchitectBuilder(host: Tree, projectName: string, builderName: string, builderOpts: any): void | never {
@@ -76,8 +81,6 @@ export function addArchitectBuilder(host: Tree, projectName: string, builderName
   writeConfig(host, config);
 }
 
-export type WorkspaceSchema = experimental.workspace.WorkspaceSchema;
-export type WorkspaceProject = experimental.workspace.WorkspaceProject;
 
 export function getWorkspacePath(host: Tree): string {
   const possibleFiles = ['/angular.json', '/.angular.json'];
@@ -86,7 +89,7 @@ export function getWorkspacePath(host: Tree): string {
   return path;
 }
 
-export function getWorkspace(host: Tree): WorkspaceSchema {
+export function getWorkspace(host: Tree): WorkspaceDefinition {
   const path = getWorkspacePath(host);
   const configBuffer = host.read(path);
   if (configBuffer === null) {
@@ -94,5 +97,5 @@ export function getWorkspace(host: Tree): WorkspaceSchema {
   }
   const content = configBuffer.toString();
 
-  return (parseJson(content, JsonParseMode.Loose) as {}) as WorkspaceSchema;
+  return parse(content) as WorkspaceDefinition;
 }

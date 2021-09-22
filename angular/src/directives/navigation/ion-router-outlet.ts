@@ -5,7 +5,7 @@ import { componentOnReady } from '@ionic/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { distinctUntilChanged, filter, switchMap } from 'rxjs/operators';
 
-import { AnimationBuilder } from '../../';
+import { AnimationBuilder } from '../../ionic-core';
 import { Config } from '../../providers/config';
 import { NavController } from '../../providers/nav-controller';
 
@@ -172,7 +172,7 @@ export class IonRouterOutlet implements OnDestroy, OnInit {
           const contextSnapshot = context.route.snapshot;
 
           this.activatedView.savedExtras.queryParams = contextSnapshot.queryParams;
-          this.activatedView.savedExtras.fragment = contextSnapshot.fragment;
+          (this.activatedView.savedExtras.fragment as string | null) = contextSnapshot.fragment;
         }
       }
       const c = this.component;
