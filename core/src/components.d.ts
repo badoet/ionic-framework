@@ -1806,6 +1806,7 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        "value"?: string | number;
     }
     interface IonPickerInternal {
         /**
@@ -5416,6 +5417,8 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        "onIonChange"?: (event: CustomEvent<PickerColumnItem>) => void;
+        "value"?: string | number;
     }
     interface IonPickerInternal {
         /**

@@ -1446,9 +1446,9 @@ export class Datetime implements ComponentInterface {
    * should just be the default segment.
    */
   private renderTime() {
+    const { workingParts } = this;
     const use24Hour = is24Hour(this.locale, this.hourCycle);
-    const { ampm } = this.workingParts;
-    const { hours, minutes, am, pm } = generateTime(this.workingParts, use24Hour ? 'h23' : 'h12', this.minParts, this.maxParts, this.parsedHourValues, this.parsedMinuteValues);
+    const { hours, minutes } = generateTime(this.workingParts, use24Hour ? 'h23' : 'h12', this.minParts, this.maxParts, this.parsedHourValues, this.parsedMinuteValues);
 
     const hoursItems = hours.map(hour => {
       return {
@@ -1489,11 +1489,15 @@ export class Datetime implements ComponentInterface {
           alignment="center"
           translucent={true}
           overlayIndex={1}
+          arrow={false}
+          style={{
+            '--offset-y': '-10px'
+          }}
           ref={el => this.popoverRef = el}
         >
           <ion-picker-internal>
-            <ion-picker-column-internal items={hoursItems}></ion-picker-column-internal>
-            <ion-picker-column-internal items={minutesItems}></ion-picker-column-internal>
+            <ion-picker-column-internal value={workingParts.hour} items={hoursItems}></ion-picker-column-internal>
+            <ion-picker-column-internal value={workingParts.minute} items={minutesItems}></ion-picker-column-internal>
           </ion-picker-internal>
         </ion-popover>
       </div>
