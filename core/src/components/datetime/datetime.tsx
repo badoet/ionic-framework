@@ -25,6 +25,7 @@ import {
 import {
   addTimePadding,
   getFormattedHour,
+  getFormattedTime,
   getMonthAndDay,
   getMonthAndYear
 } from './utils/format';
@@ -1443,87 +1444,20 @@ export class Datetime implements ComponentInterface {
    * should take on the color prop, but iOS
    * should just be the default segment.
    */
-  private renderTime(mode: Mode) {
-    const { hourCycle } = this;
-    const use24Hour = is24Hour(this.locale, hourCycle);
-    const { ampm } = this.workingParts;
-    const { hours, minutes, am, pm } = generateTime(this.workingParts, use24Hour ? 'h23' : 'h12', this.minParts, this.maxParts, this.parsedHourValues, this.parsedMinuteValues);
+  private renderTime() {
+    const use24Hour = is24Hour(this.locale, this.hourCycle)
     return (
       <div class="datetime-time">
         <div class="time-header">
           {this.renderTimeLabel()}
         </div>
-        <div class="time-body">
-          <div class="time-base" ref={el => this.timeBaseRef = el}>
-            <div class="time-wrapper">
-              <div
-                class="ion-focusable time-column time-column-hours"
-                aria-label="Hours"
-                role="slider"
-                ref={el => this.timeHourRef = el}
-                tabindex="0"
-              >
-                { hours.map(hour => {
-                  return (
-                    <div
-                      class="time-item"
-                      data-value={getInternalHourValue(hour, use24Hour, ampm)}
-                    >{getFormattedHour(hour, use24Hour)}</div>
-                  )
-                })}
-              </div>
-              <div class="time-separator">:</div>
-              <div
-                class="ion-focusable time-column time-column-minutes"
-                aria-label="Minutes"
-                role="slider"
-                ref={el => this.timeMinuteRef = el}
-                tabindex="0"
-              >
-                { minutes.map(minute => {
-                  return (
-                    <div
-                      class="time-item"
-                      data-value={minute}
-                    >{addTimePadding(minute)}</div>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-          { !use24Hour && <div class="time-ampm">
-            <ion-segment
-              color={mode === 'md' ? this.color : undefined}
-              value={this.workingParts.ampm}
-              onIonChange={(ev: CustomEvent) => {
-
-                /**
-                 * Since datetime uses 24-hour time internally
-                 * we need to update the working hour here as well
-                 * if the user is using a 12-hour time format.
-                 */
-                const { value } = ev.detail;
-                const hour = calculateHourFromAMPM(this.workingParts, value);
-
-                this.setWorkingParts({
-                  ...this.workingParts,
-                  ampm: value,
-                  hour
-                });
-
-                /**
-                 * Do not let this event bubble up
-                 * otherwise developers listening for ionChange
-                 * on the datetime will see this event.
-                 */
-                ev.stopPropagation();
-              }}
-            >
-              <ion-segment-button disabled={!am} value="am">AM</ion-segment-button>
-              <ion-segment-button disabled={!pm} value="pm">PM</ion-segment-button>
-            </ion-segment>
-          </div> }
-        </div>
+        <button
+          class="time-body"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
+          {getFormattedTime(this.workingParts, use24Hour)}
+        </button>
       </div>
     )
   }
@@ -1552,20 +1486,20 @@ export class Datetime implements ComponentInterface {
           this.renderCalendarViewHeader(mode),
           this.renderCalendar(mode),
           this.renderYearView(),
-          this.renderTime(mode),
+          this.renderTime(),
           this.renderFooter()
         ]
       case 'time-date':
         return [
           this.renderCalendarViewHeader(mode),
-          this.renderTime(mode),
+          this.renderTime(),
           this.renderCalendar(mode),
           this.renderYearView(),
           this.renderFooter()
         ]
       case 'time':
         return [
-          this.renderTime(mode),
+          this.renderTime(),
           this.renderFooter()
         ]
       case 'month':

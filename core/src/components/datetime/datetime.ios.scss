@@ -142,22 +142,6 @@
   font-weight: 600;
 }
 
-:host .time-base {
-  @include border-radius($datetime-ios-time-border-radius, $datetime-ios-time-border-radius, $datetime-ios-time-border-radius, $datetime-ios-time-border-radius);
-  @include margin(0, $datetime-ios-padding / 2, 0, 0);
-
-  width: $datetime-ios-time-width;
-  height: $datetime-ios-time-height;
-}
-
-:host .time-column {
-  @include border-radius($datetime-ios-time-border-radius, $datetime-ios-time-border-radius, $datetime-ios-time-border-radius, $datetime-ios-time-border-radius);
-}
-
-:host .time-item {
-  line-height: $datetime-ios-time-height;
-}
-
 // Month and Year Picker
 // -----------------------------------
 
