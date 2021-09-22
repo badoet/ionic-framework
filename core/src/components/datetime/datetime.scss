@@ -336,6 +336,10 @@
   scrollbar-width: none;
 }
 
+:host ion-popover {
+  --height: 200px;
+}
+
 @media (any-hover: hover) {
   :host .time-column:focus {
     outline: none;

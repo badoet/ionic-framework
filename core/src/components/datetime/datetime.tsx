@@ -81,6 +81,7 @@ export class Datetime implements ComponentInterface {
   private timeMinuteRef?: HTMLElement;
   private monthRef?: HTMLElement;
   private yearRef?: HTMLElement;
+  private popoverRef?: HTMLIonPopoverElement;
   private clearFocusVisible?: () => void;
   private overlayIsPresenting = false;
 
@@ -1445,7 +1446,24 @@ export class Datetime implements ComponentInterface {
    * should just be the default segment.
    */
   private renderTime() {
-    const use24Hour = is24Hour(this.locale, this.hourCycle)
+    const use24Hour = is24Hour(this.locale, this.hourCycle);
+    const { ampm } = this.workingParts;
+    const { hours, minutes, am, pm } = generateTime(this.workingParts, use24Hour ? 'h23' : 'h12', this.minParts, this.maxParts, this.parsedHourValues, this.parsedMinuteValues);
+
+    const hoursItems = hours.map(hour => {
+      return {
+        text: getFormattedHour(hour, use24Hour),
+        value: hour
+      }
+    });
+
+    const minutesItems = minutes.map(minute => {
+      return {
+        text: addTimePadding(minute),
+        value: minute
+      }
+    });
+
     return (
       <div class="datetime-time">
         <div class="time-header">
@@ -1455,9 +1473,29 @@ export class Datetime implements ComponentInterface {
           class="time-body"
           aria-expanded="false"
           aria-haspopup="true"
+          onClick={(ev) => {
+            const { popoverRef } = this;
+
+            if (popoverRef) {
+              popoverRef.present(ev);
+            }
+          }}
         >
           {getFormattedTime(this.workingParts, use24Hour)}
         </button>
+
+        <ion-popover
+          side="top"
+          alignment="center"
+          translucent={true}
+          overlayIndex={1}
+          ref={el => this.popoverRef = el}
+        >
+          <ion-picker-internal>
+            <ion-picker-column-internal items={hoursItems}></ion-picker-column-internal>
+            <ion-picker-column-internal items={minutesItems}></ion-picker-column-internal>
+          </ion-picker-internal>
+        </ion-popover>
       </div>
     )
   }

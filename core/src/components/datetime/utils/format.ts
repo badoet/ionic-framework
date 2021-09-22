@@ -1,12 +1,30 @@
 import { DatetimeParts } from '../datetime-interface';
 
+const get12HourTime = (hour: number) => {
+  if (hour < 13) {
+    return hour;
+  }
+
+  return hour - 12;
+}
+
+const getFormattedAMPM = (ampm?: string) => {
+  if (ampm === undefined) return '';
+
+  return ampm.toUpperCase();
+}
+
 export const getFormattedTime = (refParts: DatetimeParts, use24Hour: boolean): string => {
   if (refParts.hour === undefined || refParts.minute === undefined) { return 'Invalid Time'; }
 
-  const hour = getFormattedHour(refParts.hour, use24Hour);
+  const hour = use24Hour ? getFormattedHour(refParts.hour, use24Hour) : get12HourTime(refParts.hour);
   const minute = addTimePadding(refParts.minute);
-  const ampm = (use24Hour) ? '' : refParts.ampm;
-  return `${hour}:${minute} ${ampm}`;
+
+  if (use24Hour) {
+    return `${hour}:${minute}`
+  }
+
+  return `${hour}:${minute} ${getFormattedAMPM(refParts.ampm)}`
 }
 
 /**

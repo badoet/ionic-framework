@@ -1,0 +1,43 @@
+@import "./picker-column-internal.vars";
+
+// Picker Internal
+// --------------------------------------------------
+
+:host {
+  scroll-snap-type: y mandatory;
+
+  /**
+   * Need to explicitly set overflow-x: hidden
+   * for older implementations of scroll snapping.
+   */
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  // Hide scrollbars on Firefox
+  scrollbar-width: none;
+
+  height: 200px;
+
+  outline: none;
+
+  padding: 0 16px;
+}
+
+/**
+ * Hide scrollbars on Chrome and Safari
+ */
+:host::-webkit-scrollbar {
+  display: none;
+}
+
+:host .picker-item {
+  height: 38px;
+
+  line-height: 38px;
+
+  scroll-snap-align: center;
+}
+
+:host .picker-item-empty {
+  scroll-snap-align: none;
+}
