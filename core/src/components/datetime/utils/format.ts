@@ -14,6 +14,14 @@ const getFormattedAMPM = (ampm?: string) => {
   return ampm.toUpperCase();
 }
 
+export const get24HourTime = (hour: number, ampm?: 'am' | 'pm') => {
+  if (ampm === 'am') {
+    return hour;
+  }
+
+  return (hour + 12) % 24;
+}
+
 export const getFormattedTime = (refParts: DatetimeParts, use24Hour: boolean): string => {
   if (refParts.hour === undefined || refParts.minute === undefined) { return 'Invalid Time'; }
 

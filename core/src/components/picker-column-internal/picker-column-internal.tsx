@@ -161,9 +161,9 @@ export class PickerColumnInternal implements ComponentInterface {
             >{item.text}</div>
           )
         })}
-        <div class="picker-col-item picker-item-empty">&nbsp;</div>
-        <div class="picker-col-item picker-item-empty">&nbsp;</div>
-        <div class="picker-col-item picker-item-empty">&nbsp;</div>
+        <div class="picker-item picker-item-empty">&nbsp;</div>
+        <div class="picker-item picker-item-empty">&nbsp;</div>
+        <div class="picker-item picker-item-empty">&nbsp;</div>
       </Host>
     );
   }

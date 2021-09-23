@@ -23,6 +23,7 @@ import {
   getToday
 } from './utils/data';
 import {
+  get24HourTime,
   addTimePadding,
   getFormattedHour,
   getFormattedTime,
@@ -1199,7 +1200,7 @@ export class Datetime implements ComponentInterface {
     const hoursItems = hours.map(hour => {
       return {
         text: getFormattedHour(hour, use24Hour),
-        value: hour
+        value: get24HourTime(hour, workingParts.ampm)
       }
     });
 
