@@ -1194,7 +1194,7 @@ export class Datetime implements ComponentInterface {
   private renderTime() {
     const { workingParts } = this;
     const use24Hour = is24Hour(this.locale, this.hourCycle);
-    const { hours, minutes } = generateTime(this.workingParts, use24Hour ? 'h23' : 'h12', this.minParts, this.maxParts, this.parsedHourValues, this.parsedMinuteValues);
+    const { hours, minutes, am, pm } = generateTime(this.workingParts, use24Hour ? 'h23' : 'h12', this.minParts, this.maxParts, this.parsedHourValues, this.parsedMinuteValues);
 
     const hoursItems = hours.map(hour => {
       return {
@@ -1209,6 +1209,21 @@ export class Datetime implements ComponentInterface {
         value: minute
       }
     });
+
+    const ampmItems = [];
+    if (am) {
+      ampmItems.push({
+        text: 'AM',
+        value: 'am'
+      })
+    }
+
+    if (pm) {
+      ampmItems.push({
+        text: 'PM',
+        value: 'pm'
+      })
+    }
 
     return (
       <div class="datetime-time">
@@ -1278,6 +1293,21 @@ export class Datetime implements ComponentInterface {
                 this.setActiveParts({
                   ...this.activeParts,
                   minute: ev.detail.value
+                });
+              }}
+            ></ion-picker-column-internal>
+            <ion-picker-column-internal
+              color={this.color}
+              value={workingParts.ampm}
+              items={ampmItems}
+              onIonChange={(ev: CustomEvent) => {
+                this.setWorkingParts({
+                  ...this.workingParts,
+                  ampm: ev.detail.value
+                });
+                this.setActiveParts({
+                  ...this.activeParts,
+                  ampm: ev.detail.value
                 });
               }}
             ></ion-picker-column-internal>
