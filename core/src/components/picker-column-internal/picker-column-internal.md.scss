@@ -2,6 +2,6 @@
 @import "./picker-column-internal.md.vars.scss";
 @import "../../themes/ionic.globals.md";
 
-:host {
-
+:host .picker-item-active {
+  color: current-color(base);
 }

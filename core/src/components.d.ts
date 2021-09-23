@@ -1801,6 +1801,7 @@ export namespace Components {
         "col": PickerColumn;
     }
     interface IonPickerColumnInternal {
+        "color"?: Color;
         "items": PickerColumnItem[];
         /**
           * The mode determines which platform styles to use.
@@ -5412,6 +5413,7 @@ declare namespace LocalJSX {
         "onIonPickerColChange"?: (event: CustomEvent<PickerColumn>) => void;
     }
     interface IonPickerColumnInternal {
+        "color"?: Color;
         "items"?: PickerColumnItem[];
         /**
           * The mode determines which platform styles to use.
