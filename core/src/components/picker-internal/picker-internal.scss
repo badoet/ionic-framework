@@ -12,14 +12,14 @@
 
   justify-content: center;
 
+  height: 200px;
+
   /**
    * This is required otherwise the
    * highlight will appear behind
    * the datetime.
    */
   z-index: 0;
-
-  height: 200px;
 }
 
 :host .picker-before {

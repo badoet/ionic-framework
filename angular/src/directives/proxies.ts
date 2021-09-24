@@ -569,6 +569,30 @@ export class IonNote {
     this.el = r.nativeElement;
   }
 }
+export declare interface IonPickerColumnInternal extends Components.IonPickerColumnInternal {
+}
+@ProxyCmp({ inputs: ["color", "items", "mode", "value"] })
+@Component({ selector: "ion-picker-column-internal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "items", "mode", "value"] })
+export class IonPickerColumnInternal {
+  ionChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["ionChange"]);
+  }
+}
+export declare interface IonPickerInternal extends Components.IonPickerInternal {
+}
+@ProxyCmp({ inputs: ["mode"] })
+@Component({ selector: "ion-picker-internal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["mode"] })
+export class IonPickerInternal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface IonProgressBar extends Components.IonProgressBar {
 }
 @ProxyCmp({ inputs: ["buffer", "color", "mode", "reversed", "type", "value"] })

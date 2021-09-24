@@ -1801,12 +1801,21 @@ export namespace Components {
         "col": PickerColumn;
     }
     interface IonPickerColumnInternal {
+        /**
+          * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
+         */
         "color"?: Color;
+        /**
+          * A list of options to be displayed in the picker
+         */
         "items": PickerColumnItem[];
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * The selected option in the picker.
+         */
         "value"?: string | number;
     }
     interface IonPickerInternal {
@@ -5413,13 +5422,25 @@ declare namespace LocalJSX {
         "onIonPickerColChange"?: (event: CustomEvent<PickerColumn>) => void;
     }
     interface IonPickerColumnInternal {
+        /**
+          * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
+         */
         "color"?: Color;
+        /**
+          * A list of options to be displayed in the picker
+         */
         "items"?: PickerColumnItem[];
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Emitted when the value has changed.
+         */
         "onIonChange"?: (event: CustomEvent<PickerColumnItem>) => void;
+        /**
+          * The selected option in the picker.
+         */
         "value"?: string | number;
     }
     interface IonPickerInternal {

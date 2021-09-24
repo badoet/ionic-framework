@@ -4,6 +4,13 @@
 // --------------------------------------------------
 
 :host {
+  @include padding(0px, 16px, 0px, 16px);
+
+  height: 200px;
+
+  outline: none;
+
+  font-size: 22px;
   scroll-snap-type: y mandatory;
 
   /**
@@ -15,14 +22,6 @@
 
   // Hide scrollbars on Firefox
   scrollbar-width: none;
-
-  height: 200px;
-
-  outline: none;
-
-  padding: 0 16px;
-
-  font-size: 22px;
 }
 
 /**

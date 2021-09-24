@@ -23,7 +23,6 @@ import {
   getToday
 } from './utils/data';
 import {
-  get24HourTime,
   addTimePadding,
   getFormattedHour,
   getFormattedTime,
@@ -1024,8 +1023,6 @@ export class Datetime implements ComponentInterface {
                 items={months}
                 value={workingParts.month}
                 onIonChange={(ev: CustomEvent) => {
-                  const { presentation } = this;
-
                   this.setWorkingParts({
                     ...this.workingParts,
                     month: ev.detail.value
@@ -1049,8 +1046,6 @@ export class Datetime implements ComponentInterface {
                 items={years}
                 value={workingParts.year}
                 onIonChange={(ev: CustomEvent) => {
-                  const { presentation } = this;
-
                   this.setWorkingParts({
                     ...this.workingParts,
                     year: ev.detail.value
@@ -1204,7 +1199,7 @@ export class Datetime implements ComponentInterface {
     const hoursItems = hours.map(hour => {
       return {
         text: getFormattedHour(hour, use24Hour),
-        value: get24HourTime(hour, workingParts.ampm)
+        value: getInternalHourValue(hour, use24Hour, workingParts.ampm)
       }
     });
 
@@ -1242,7 +1237,7 @@ export class Datetime implements ComponentInterface {
           }}
           aria-expanded="false"
           aria-haspopup="true"
-          onClick={async (ev) => {
+          onClick={async ev => {
             const { popoverRef } = this;
 
             if (popoverRef) {
@@ -1262,7 +1257,7 @@ export class Datetime implements ComponentInterface {
         <ion-popover
           side="top"
           alignment="center"
-          translucent={true}
+          translucent
           overlayIndex={1}
           arrow={false}
           style={{

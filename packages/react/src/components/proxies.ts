@@ -45,6 +45,8 @@ import { IonMenuToggle as IonMenuToggleCmp } from '@ionic/core/components/ion-me
 import { IonNav as IonNavCmp } from '@ionic/core/components/ion-nav.js';
 import { IonNavLink as IonNavLinkCmp } from '@ionic/core/components/ion-nav-link.js';
 import { IonNote as IonNoteCmp } from '@ionic/core/components/ion-note.js';
+import { IonPickerColumnInternal as IonPickerColumnInternalCmp } from '@ionic/core/components/ion-picker-column-internal.js';
+import { IonPickerInternal as IonPickerInternalCmp } from '@ionic/core/components/ion-picker-internal.js';
 import { IonProgressBar as IonProgressBarCmp } from '@ionic/core/components/ion-progress-bar.js';
 import { IonRadio as IonRadioCmp } from '@ionic/core/components/ion-radio.js';
 import { IonRadioGroup as IonRadioGroupCmp } from '@ionic/core/components/ion-radio-group.js';
@@ -114,6 +116,8 @@ export const IonMenuToggle = /*@__PURE__*/createReactComponent<JSX.IonMenuToggle
 export const IonNav = /*@__PURE__*/createReactComponent<JSX.IonNav, HTMLIonNavElement>('ion-nav', undefined, undefined, IonNavCmp);
 export const IonNavLink = /*@__PURE__*/createReactComponent<JSX.IonNavLink, HTMLIonNavLinkElement>('ion-nav-link', undefined, undefined, IonNavLinkCmp);
 export const IonNote = /*@__PURE__*/createReactComponent<JSX.IonNote, HTMLIonNoteElement>('ion-note', undefined, undefined, IonNoteCmp);
+export const IonPickerColumnInternal = /*@__PURE__*/createReactComponent<JSX.IonPickerColumnInternal, HTMLIonPickerColumnInternalElement>('ion-picker-column-internal', undefined, undefined, IonPickerColumnInternalCmp);
+export const IonPickerInternal = /*@__PURE__*/createReactComponent<JSX.IonPickerInternal, HTMLIonPickerInternalElement>('ion-picker-internal', undefined, undefined, IonPickerInternalCmp);
 export const IonProgressBar = /*@__PURE__*/createReactComponent<JSX.IonProgressBar, HTMLIonProgressBarElement>('ion-progress-bar', undefined, undefined, IonProgressBarCmp);
 export const IonRadio = /*@__PURE__*/createReactComponent<JSX.IonRadio, HTMLIonRadioElement>('ion-radio', undefined, undefined, IonRadioCmp);
 export const IonRadioGroup = /*@__PURE__*/createReactComponent<JSX.IonRadioGroup, HTMLIonRadioGroupElement>('ion-radio-group', undefined, undefined, IonRadioGroupCmp);

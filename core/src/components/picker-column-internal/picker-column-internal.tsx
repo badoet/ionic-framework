@@ -1,9 +1,11 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
+
 import { getIonMode } from '../../global/ionic-global';
 import { Color } from '../../interface';
-import { PickerColumnItem } from './picker-column-internal-interfaces';
 import { getElementRoot, raf } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
+
+import { PickerColumnItem } from './picker-column-internal-interfaces';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -21,10 +23,26 @@ export class PickerColumnInternal implements ComponentInterface {
 
   @Element() el!: HTMLIonPickerColumnInternalElement;
 
+  /**
+   * A list of options to be displayed in the picker
+   */
   @Prop() items: PickerColumnItem[] = [];
+
+  /**
+   * The selected option in the picker.
+   */
   @Prop() value?: string | number;
+
+  /**
+   * The color to use from your application's color palette.
+   * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
+   * For more information on colors, see [theming](/docs/theming/basics).
+   */
   @Prop({ reflect: true }) color?: Color;
 
+  /**
+   * Emitted when the value has changed.
+   */
   @Event() ionChange!: EventEmitter<PickerColumnItem>;
 
   /**
@@ -60,7 +78,7 @@ export class PickerColumnInternal implements ComponentInterface {
     }
   }
 
-  centerPickerItemInView(target: HTMLElement, smooth: boolean = true) {
+  centerPickerItemInView(target: HTMLElement, smooth = true) {
     this.el.scroll({
       // (Vertical offset from parent) - (three empty picker rows) + (half the height of the target to ensure the scroll triggers)
       top: target.offsetTop - (3 * target.clientHeight) + (target.clientHeight / 2),
@@ -74,7 +92,7 @@ export class PickerColumnInternal implements ComponentInterface {
 
     let timeout: any;
 
-    let activeEl: HTMLElement = this.activeItem!;
+    let activeEl: HTMLElement | null = this.activeItem;
     const scrollCallback = () => {
       raf(() => {
         if (timeout) {

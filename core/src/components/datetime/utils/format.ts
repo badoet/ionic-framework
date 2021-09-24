@@ -9,17 +9,9 @@ const get12HourTime = (hour: number) => {
 }
 
 const getFormattedAMPM = (ampm?: string) => {
-  if (ampm === undefined) return '';
+  if (ampm === undefined) { return ''; }
 
   return ampm.toUpperCase();
-}
-
-export const get24HourTime = (hour: number, ampm?: 'am' | 'pm') => {
-  if (ampm === 'am') {
-    return hour;
-  }
-
-  return (hour + 12) % 24;
 }
 
 export const getFormattedTime = (refParts: DatetimeParts, use24Hour: boolean): string => {
