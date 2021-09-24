@@ -1037,6 +1037,8 @@ export class Datetime implements ComponentInterface {
                       month: ev.detail.value
                     });
                   }
+
+                  ev.stopPropagation();
                 }}
               ></ion-picker-column-internal>
             }
@@ -1060,6 +1062,8 @@ export class Datetime implements ComponentInterface {
                       year: ev.detail.value
                     });
                   }
+
+                  ev.stopPropagation();
                 }}
               ></ion-picker-column-internal>
             }
@@ -1280,6 +1284,8 @@ export class Datetime implements ComponentInterface {
                   ...this.activeParts,
                   hour: ev.detail.value
                 });
+
+                ev.stopPropagation();
               }}
             ></ion-picker-column-internal>
             <ion-picker-column-internal
@@ -1295,6 +1301,8 @@ export class Datetime implements ComponentInterface {
                   ...this.activeParts,
                   minute: ev.detail.value
                 });
+
+                ev.stopPropagation();
               }}
             ></ion-picker-column-internal>
             <ion-picker-column-internal
@@ -1302,14 +1310,21 @@ export class Datetime implements ComponentInterface {
               value={workingParts.ampm}
               items={ampmItems}
               onIonChange={(ev: CustomEvent) => {
+                const hour = calculateHourFromAMPM(this.workingParts, ev.detail.value);
+
                 this.setWorkingParts({
                   ...this.workingParts,
-                  ampm: ev.detail.value
+                  ampm: ev.detail.value,
+                  hour
                 });
+
                 this.setActiveParts({
-                  ...this.activeParts,
-                  ampm: ev.detail.value
+                  ...this.workingParts,
+                  ampm: ev.detail.value,
+                  hour
                 });
+
+                ev.stopPropagation();
               }}
             ></ion-picker-column-internal>
           </ion-picker-internal>
