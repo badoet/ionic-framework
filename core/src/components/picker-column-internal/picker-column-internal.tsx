@@ -9,6 +9,7 @@ import { PickerColumnItem } from './picker-column-internal-interfaces';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
+ * @internal
  */
 @Component({
   tag: 'ion-picker-column-internal',

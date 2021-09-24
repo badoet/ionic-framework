@@ -49,8 +49,6 @@ export const DIRECTIVES = [
   d.IonNav,
   d.IonNavLink,
   d.IonNote,
-  d.IonPickerColumnInternal,
-  d.IonPickerInternal,
   d.IonProgressBar,
   d.IonRadio,
   d.IonRadioGroup,

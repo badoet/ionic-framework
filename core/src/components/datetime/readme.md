@@ -755,8 +755,8 @@ Type: `Promise<void>`
 
 - [ion-buttons](../buttons)
 - [ion-button](../button)
-- [ion-picker-internal](../picker-internal)
-- [ion-picker-column-internal](../picker-column-internal)
+- ion-picker-internal
+- ion-picker-column-internal
 - [ion-item](../item)
 - [ion-label](../label)
 - ion-icon

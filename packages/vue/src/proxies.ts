@@ -49,8 +49,6 @@ import { IonMenuToggle as IonMenuToggleCmp } from '@ionic/core/components/ion-me
 import { IonNav as IonNavCmp } from '@ionic/core/components/ion-nav.js';
 import { IonNavLink as IonNavLinkCmp } from '@ionic/core/components/ion-nav-link.js';
 import { IonNote as IonNoteCmp } from '@ionic/core/components/ion-note.js';
-import { IonPickerColumnInternal as IonPickerColumnInternalCmp } from '@ionic/core/components/ion-picker-column-internal.js';
-import { IonPickerInternal as IonPickerInternalCmp } from '@ionic/core/components/ion-picker-internal.js';
 import { IonProgressBar as IonProgressBarCmp } from '@ionic/core/components/ion-progress-bar.js';
 import { IonRadio as IonRadioCmp } from '@ionic/core/components/ion-radio.js';
 import { IonRadioGroup as IonRadioGroupCmp } from '@ionic/core/components/ion-radio-group.js';
@@ -540,17 +538,6 @@ export const IonNavLink = /*@__PURE__*/ defineContainer<JSX.IonNavLink>('ion-nav
 export const IonNote = /*@__PURE__*/ defineContainer<JSX.IonNote>('ion-note', IonNoteCmp, [
   'color'
 ]);
-
-
-export const IonPickerColumnInternal = /*@__PURE__*/ defineContainer<JSX.IonPickerColumnInternal>('ion-picker-column-internal', IonPickerColumnInternalCmp, [
-  'items',
-  'value',
-  'color',
-  'ionChange'
-]);
-
-
-export const IonPickerInternal = /*@__PURE__*/ defineContainer<JSX.IonPickerInternal>('ion-picker-internal', IonPickerInternalCmp);
 
 
 export const IonProgressBar = /*@__PURE__*/ defineContainer<JSX.IonProgressBar>('ion-progress-bar', IonProgressBarCmp, [

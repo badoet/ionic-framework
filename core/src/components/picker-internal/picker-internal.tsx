@@ -2,6 +2,7 @@ import { Component, ComponentInterface, Host, h } from '@stencil/core';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
+ * @internal
  */
 @Component({
   tag: 'ion-picker-internal',

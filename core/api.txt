@@ -875,16 +875,6 @@ ion-picker,css-prop,--min-height
 ion-picker,css-prop,--min-width
 ion-picker,css-prop,--width
 
-ion-picker-column-internal,shadow
-ion-picker-column-internal,prop,color,string | undefined,undefined,false,true
-ion-picker-column-internal,prop,items,PickerColumnItem[],[],false,false
-ion-picker-column-internal,prop,mode,"ios" | "md",undefined,false,false
-ion-picker-column-internal,prop,value,number | string | undefined,undefined,false,false
-ion-picker-column-internal,event,ionChange,PickerColumnItem,true
-
-ion-picker-internal,shadow
-ion-picker-internal,prop,mode,"ios" | "md",undefined,false,false
-
 ion-popover,shadow
 ion-popover,prop,alignment,"center" | "end" | "start",'start',false,false
 ion-popover,prop,animated,boolean,true,false,false
