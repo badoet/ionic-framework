@@ -35,7 +35,6 @@
 }
 
 :host .calendar-body,
-:host .time-column,
 :host .datetime-year {
   opacity: 0;
 }
@@ -45,8 +44,7 @@
   pointer-events: none;
 }
 
-:host(.datetime-ready) .calendar-body,
-:host(.datetime-ready) .time-column {
+:host(.datetime-ready) .calendar-body {
   opacity: 1;
 }
 
@@ -289,97 +287,8 @@
   justify-content: space-between;
 }
 
-:host .time-base {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border: 2px solid transparent;
-
-  background: rgba($text-color-rgb, 0.065);
-
-  font-size: 22px;
-  font-weight: 400;
-
-  text-align: center;
-
-  overflow-y: hidden;
-}
-
-:host .time-base.time-base-active {
-  border: 2px solid current-color(base);
-}
-
-:host .time-wrapper {
-  display: flex;
-
-  align-items: center;
-  justify-content: flex-end;
-
-  height: 100%;
-}
-
-:host .time-column {
-  position: relative;
-
-  height: 100%;
-
-  outline: none;
-  scroll-snap-type: y mandatory;
-
-  overflow-y: scroll;
-  overflow-x: hidden;
-
-  -webkit-overflow-scrolling: touch;
-
-  scrollbar-width: none;
-}
-
 :host ion-popover {
   --height: 200px;
-}
-
-@media (any-hover: hover) {
-  :host .time-column:focus {
-    outline: none;
-
-    background: current-color(base, 0.2);
-  }
-}
-
-:host .time-column.time-column-active {
-  background: transparent;
-  color: current-color(base);
-}
-
-:host .time-base.time-base-active .time-column:not(.time-column-active),
-:host .time-base.time-base-active .time-separator {
-  pointer-events: none;
-
-  opacity: 0.4;
-}
-
-:host .time-column::-webkit-scrollbar {
-  display: none;
-}
-
-:host .time-column-hours .time-item {
-  text-align: end;
-}
-
-:host .time-column-minutes .time-item {
-  text-align: start;
-}
-
-:host .time-item {
-  scroll-snap-align: center;
-
-  height: 100%;
-}
-
-:host .time-separator {
-  height: 100%;
 }
 
 :host .time-header {
@@ -420,23 +329,4 @@
 // -----------------------------------
 :host(.show-month-and-year) .calendar-action-buttons ion-item {
   --color: #{current-color(base)};
-}
-
-:host .datetime-year-body {
-  display: flex;
-
-  position: relative;
-
-  align-items: center;
-
-  justify-content: center;
-
-  font-size: 22px;
-
-  /**
-   * This is required otherwise the
-   * highlight will appear behind
-   * the datetime.
-   */
-  z-index: 0;
 }
