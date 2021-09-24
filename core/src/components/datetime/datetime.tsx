@@ -79,6 +79,7 @@ export class Datetime implements ComponentInterface {
   private popoverRef?: HTMLIonPopoverElement;
   private clearFocusVisible?: () => void;
   private overlayIsPresenting = false;
+  private blockCalendarIO = false;
 
   private parsedMinuteValues?: number[];
   private parsedHourValues?: number[];
@@ -466,6 +467,7 @@ export class Datetime implements ComponentInterface {
      * Tab should jump between bodies of selectable content.
      */
     const checkCalendarBodyFocus = (ev: MutationRecord[]) => {
+      console.log('call focus')
       const record = ev[0];
 
       /**
@@ -679,6 +681,17 @@ export class Datetime implements ComponentInterface {
          */
         if (this.overlayIsPresenting) {
           this.overlayIsPresenting = false;
+          return;
+        }
+
+        /**
+         * This works around a bug in Chrome
+         * where the IntersectionObserver
+         * fires for the starting month
+         * when the popover dismisses.
+         */
+        if (this.blockCalendarIO) {
+          console.log('blocking')
           return;
         }
 
@@ -1255,14 +1268,21 @@ export class Datetime implements ComponentInterface {
         </button>
 
         <ion-popover
+          onWillPresent={() => {
+            this.blockCalendarIO = true;
+          }}
+          onDidDismiss={() => {
+            this.blockCalendarIO = false;
+          }}
           side="top"
           alignment="center"
-          translucent
+          translucent={true}
           overlayIndex={1}
           arrow={false}
           style={{
             '--offset-y': '-10px'
           }}
+          keyboardClose={false}
           ref={el => this.popoverRef = el}
         >
           <ion-picker-internal>
