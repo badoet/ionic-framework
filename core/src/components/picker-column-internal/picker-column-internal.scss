@@ -42,3 +42,9 @@
 :host .picker-item-empty {
   scroll-snap-align: none;
 }
+
+@media (any-hover: hover) {
+  :host(:focus) {
+    background: pink;
+  }
+}

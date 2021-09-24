@@ -161,6 +161,7 @@ export class PickerColumnInternal implements ComponentInterface {
 
     return (
       <Host
+        tabindex={0}
         class={createColorClasses(color, {
           [mode]: true
         })}

@@ -1282,7 +1282,6 @@ export class Datetime implements ComponentInterface {
           style={{
             '--offset-y': '-10px'
           }}
-          keyboardClose={false}
           ref={el => this.popoverRef = el}
         >
           <ion-picker-internal>
