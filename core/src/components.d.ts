@@ -1824,8 +1824,6 @@ export namespace Components {
         "value"?: string | number;
     }
     interface IonPickerInternal {
-        "enterInputMode": (columnEl?: HTMLIonPickerColumnInternalElement | undefined) => Promise<void>;
-        "exitInputMode": () => Promise<void>;
         /**
           * The mode determines which platform styles to use.
          */

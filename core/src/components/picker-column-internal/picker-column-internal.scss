@@ -46,3 +46,9 @@
 :host(.picker-column-active) .picker-item.picker-item-active {
   color: current-color(base);
 }
+
+@media (any-hover: hover) {
+  :host(:focus) {
+    outline: 2px solid current-color(base);
+  }
+}
