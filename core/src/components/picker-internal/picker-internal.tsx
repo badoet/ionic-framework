@@ -1,4 +1,5 @@
-import { Component, ComponentInterface, Event, EventEmitter, Host, h } from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, h } from '@stencil/core';
+
 import { PickerInternalChangeEventDetail } from './picker-internal-interfaces';
 
 /**
@@ -19,11 +20,13 @@ export class PickerInternal implements ComponentInterface {
   private inputModeColumn?: HTMLIonPickerColumnInternalElement;
   private highlightEl?: HTMLElement;
 
+  @Element() el!: HTMLIonPickerInternalElement;
+
   @Event() ionInputModeChange!: EventEmitter<PickerInternalChangeEventDetail>;
 
   private isInHighlightBounds = (ev: PointerEvent) => {
     const { highlightEl } = this;
-    if (!highlightEl) return false;
+    if (!highlightEl) { return false; }
 
     const bbox = highlightEl.getBoundingClientRect();
     /**
@@ -32,7 +35,7 @@ export class PickerInternal implements ComponentInterface {
      * that the user did not click on an area covered
      * by the highlight.
      */
-    if (ev.clientX < bbox.left || ev.clientX > bbox.right) return false;
+    if (ev.clientX < bbox.left || ev.clientX > bbox.right) { return false; }
 
     /**
      * Check to see if the x-axis of where
@@ -40,7 +43,7 @@ export class PickerInternal implements ComponentInterface {
      * that the user did not click on an area covered
      * by the highlight.
      */
-    if (ev.clientY < bbox.top || ev.clientY > bbox.bottom) return false;
+    if (ev.clientY < bbox.top || ev.clientY > bbox.bottom) { return false; }
 
     return true;
   }
@@ -48,7 +51,7 @@ export class PickerInternal implements ComponentInterface {
   private onClick = (ev: PointerEvent) => {
     const { inputEl, inputMode, inputModeColumn } = this;
 
-    if (!inputEl) return;
+    if (!inputEl) { return; }
 
     if (this.isInHighlightBounds(ev)) {
       /**
@@ -97,9 +100,10 @@ export class PickerInternal implements ComponentInterface {
     this.exitInputMode();
   }
 
-  private enterInputMode = (columnEl?: HTMLIonPickerColumnInternalElement) => {
-    const { inputEl } = this;
-    if (!inputEl) return;
+  @Method()
+  async enterInputMode(columnEl?: HTMLIonPickerColumnInternalElement) {
+    const { inputEl, inputMode } = this;
+    if (inputMode || !inputEl) { return; }
 
     this.inputMode = true;
     this.inputModeColumn = columnEl;
@@ -108,9 +112,10 @@ export class PickerInternal implements ComponentInterface {
     this.emitInputModeChange();
   }
 
-  private exitInputMode = () => {
-    const { inputEl } = this;
-    if (!inputEl) return;
+  @Method()
+  async exitInputMode() {
+    const { inputEl, inputMode } = this;
+    if (!inputMode || !inputEl) { return; }
 
     this.inputMode = false;
     this.inputModeColumn = undefined;
@@ -121,9 +126,9 @@ export class PickerInternal implements ComponentInterface {
   }
 
   private onInputChange = (ev: Event) => {
-    if (!this.inputMode) return;
+    if (!this.inputMode) { return; }
 
-    console.log('change ',ev)
+    console.log('change ', ev)
   }
 
   private emitInputModeChange = () => {
@@ -136,9 +141,7 @@ export class PickerInternal implements ComponentInterface {
 
   render() {
     return (
-      <Host
-        onClick={(ev: PointerEvent) => this.onClick(ev)}
-      >
+      <Host onClick={(ev: PointerEvent) => this.onClick(ev)}>
         <input
           inputmode="numeric"
           type="text"

@@ -2,11 +2,11 @@ import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop
 
 import { getIonMode } from '../../global/ionic-global';
 import { Color } from '../../interface';
-import { getElementRoot, raf, addEventListener, removeEventListener } from '../../utils/helpers';
+import { addEventListener, getElementRoot, raf, removeEventListener } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
+import { PickerInternalCustomEvent } from '../picker-internal/picker-internal-interfaces';
 
 import { PickerColumnItem } from './picker-column-internal-interfaces';
-import { PickerInternalCustomEvent } from '../picker-internal/picker-internal-interfaces';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -22,6 +22,7 @@ import { PickerInternalCustomEvent } from '../picker-internal/picker-internal-in
 })
 export class PickerColumnInternal implements ComponentInterface {
   private destroyScrollListener?: () => void;
+  private parentEl?: HTMLIonPickerInternalElement | null;
 
   @State() isActive = false;
 
@@ -83,16 +84,17 @@ export class PickerColumnInternal implements ComponentInterface {
   }
 
   connectedCallback() {
-    const parentEl = this.el.closest('ion-picker-internal');
-    if (parentEl) {
+    const parentEl = this.parentEl = this.el.closest('ion-picker-internal') as HTMLIonPickerInternalElement | null;
+    if (parentEl !== null) {
       addEventListener(parentEl, 'ionInputModeChange', this.inputModeChange);
     }
   }
 
   disconnectedCallback() {
-    const parentEl = this.el.closest('ion-picker-internal');
+    const { parentEl } = this;
     if (parentEl) {
       removeEventListener(parentEl, 'ionInputModeChange', this.inputModeChange);
+      this.parentEl = undefined;
     }
   }
 
@@ -126,23 +128,27 @@ export class PickerColumnInternal implements ComponentInterface {
       !inputMode ||
       inputModeColumn !== undefined && inputModeColumn !== this.el
     ) {
-      console.log('deactive',this.el)
+      console.log('deactive', this.el)
       this.isActive = false;
       return;
     }
-    console.log('active',this.el)
+    console.log('active', this.el)
 
     this.isActive = true;
   }
 
   private initializeScrollListener = () => {
-    const { el } = this;
+    const { el, parentEl } = this;
 
     let timeout: any;
 
     let activeEl: HTMLElement | null = this.activeItem;
     const scrollCallback = () => {
       raf(() => {
+        if (parentEl) {
+          parentEl.exitInputMode();
+        }
+
         if (timeout) {
           clearTimeout(timeout);
           timeout = undefined;

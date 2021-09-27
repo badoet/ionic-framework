@@ -1200,8 +1200,8 @@ export class Datetime implements ComponentInterface {
 
   private renderTimePicker(
     hoursItems: PickerColumnItem[],
-     minutesItems: PickerColumnItem[],
-     ampmItems: PickerColumnItem[]
+    minutesItems: PickerColumnItem[],
+    ampmItems: PickerColumnItem[]
    ) {
     const { color, workingParts } = this;
     return (
@@ -1210,7 +1210,7 @@ export class Datetime implements ComponentInterface {
           color={color}
           value={workingParts.hour}
           items={hoursItems}
-          numericInput={true}
+          numericInput
           onIonChange={(ev: CustomEvent) => {
             this.setWorkingParts({
               ...this.workingParts,
@@ -1228,7 +1228,7 @@ export class Datetime implements ComponentInterface {
           color={color}
           value={workingParts.minute}
           items={minutesItems}
-          numericInput={true}
+          numericInput
           onIonChange={(ev: CustomEvent) => {
             this.setWorkingParts({
               ...this.workingParts,
@@ -1310,7 +1310,7 @@ export class Datetime implements ComponentInterface {
         }}
         side="top"
         alignment="center"
-        translucent={true}
+        translucent
         overlayIndex={1}
         arrow={false}
         style={{
@@ -1322,7 +1322,6 @@ export class Datetime implements ComponentInterface {
       </ion-popover>
     ]
   }
-
 
   /**
    * Render time picker inside of datetime.
