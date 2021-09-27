@@ -12,6 +12,7 @@ import { Color, DatetimeChangeEventDetail, DatetimeParts, Mode, StyleEventDetail
 import { startFocusVisible } from '../../utils/focus-visible';
 import { renderHiddenInput } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
+import { PickerColumnItem } from '../picker-column-internal/picker-column-internal-interfaces';
 
 import {
   generateMonths,
@@ -1197,6 +1198,132 @@ export class Datetime implements ComponentInterface {
     );
   }
 
+  private renderTimePicker(
+    hoursItems: PickerColumnItem[],
+     minutesItems: PickerColumnItem[],
+     ampmItems: PickerColumnItem[]
+   ) {
+    const { color, workingParts } = this;
+    return (
+      <ion-picker-internal>
+        <ion-picker-column-internal
+          color={color}
+          value={workingParts.hour}
+          items={hoursItems}
+          numericInput={true}
+          onIonChange={(ev: CustomEvent) => {
+            this.setWorkingParts({
+              ...this.workingParts,
+              hour: ev.detail.value
+            });
+            this.setActiveParts({
+              ...this.activeParts,
+              hour: ev.detail.value
+            });
+
+            ev.stopPropagation();
+          }}
+        ></ion-picker-column-internal>
+        <ion-picker-column-internal
+          color={color}
+          value={workingParts.minute}
+          items={minutesItems}
+          numericInput={true}
+          onIonChange={(ev: CustomEvent) => {
+            this.setWorkingParts({
+              ...this.workingParts,
+              minute: ev.detail.value
+            });
+            this.setActiveParts({
+              ...this.activeParts,
+              minute: ev.detail.value
+            });
+
+            ev.stopPropagation();
+          }}
+        ></ion-picker-column-internal>
+        <ion-picker-column-internal
+          color={color}
+          value={workingParts.ampm}
+          items={ampmItems}
+          onIonChange={(ev: CustomEvent) => {
+            const hour = calculateHourFromAMPM(this.workingParts, ev.detail.value);
+
+            this.setWorkingParts({
+              ...this.workingParts,
+              ampm: ev.detail.value,
+              hour
+            });
+
+            this.setActiveParts({
+              ...this.workingParts,
+              ampm: ev.detail.value,
+              hour
+            });
+
+            ev.stopPropagation();
+          }}
+        ></ion-picker-column-internal>
+      </ion-picker-internal>
+    )
+  }
+
+  private renderTimeOverlay(
+    hoursItems: PickerColumnItem[],
+    minutesItems: PickerColumnItem[],
+    ampmItems: PickerColumnItem[],
+    use24Hour: boolean
+   ) {
+    return [
+      <div class="time-header">
+        {this.renderTimeLabel()}
+      </div>,
+      <button
+        class={{
+          'time-body': true,
+          'time-body-active': this.isTimePopoverOpen
+        }}
+        aria-expanded="false"
+        aria-haspopup="true"
+        onClick={async ev => {
+          const { popoverRef } = this;
+
+          if (popoverRef) {
+
+            this.isTimePopoverOpen = true;
+            popoverRef.present(ev);
+
+            await popoverRef.onWillDismiss();
+
+            this.isTimePopoverOpen = false;
+          }
+        }}
+      >
+        {getFormattedTime(this.workingParts, use24Hour)}
+      </button>,
+      <ion-popover
+        onWillPresent={() => {
+          this.blockCalendarIO = true;
+        }}
+        onDidDismiss={() => {
+          this.blockCalendarIO = false;
+        }}
+        side="top"
+        alignment="center"
+        translucent={true}
+        overlayIndex={1}
+        arrow={false}
+        style={{
+          '--offset-y': '-10px'
+        }}
+        ref={el => this.popoverRef = el}
+      >
+        {this.renderTimePicker(hoursItems, minutesItems, ampmItems)}
+      </ion-popover>
+    ]
+  }
+
+
   /**
    * Render time picker inside of datetime.
    * Do not pass color prop to segment on
@@ -1205,7 +1332,8 @@ export class Datetime implements ComponentInterface {
    * should just be the default segment.
    */
   private renderTime() {
-    const { workingParts } = this;
+    const { workingParts, presentation } = this;
+    const timeOnlyPresentation = presentation === 'time';
     const use24Hour = is24Hour(this.locale, this.hourCycle);
     const { hours, minutes, am, pm } = generateTime(this.workingParts, use24Hour ? 'h23' : 'h12', this.minParts, this.maxParts, this.parsedHourValues, this.parsedMinuteValues);
 
@@ -1240,111 +1368,7 @@ export class Datetime implements ComponentInterface {
 
     return (
       <div class="datetime-time">
-        <div class="time-header">
-          {this.renderTimeLabel()}
-        </div>
-        <button
-          class={{
-            'time-body': true,
-            'time-body-active': this.isTimePopoverOpen
-          }}
-          aria-expanded="false"
-          aria-haspopup="true"
-          onClick={async ev => {
-            const { popoverRef } = this;
-
-            if (popoverRef) {
-
-              this.isTimePopoverOpen = true;
-              popoverRef.present(ev);
-
-              await popoverRef.onWillDismiss();
-
-              this.isTimePopoverOpen = false;
-            }
-          }}
-        >
-          {getFormattedTime(this.workingParts, use24Hour)}
-        </button>
-
-        <ion-popover
-          onWillPresent={() => {
-            this.blockCalendarIO = true;
-          }}
-          onDidDismiss={() => {
-            this.blockCalendarIO = false;
-          }}
-          side="top"
-          alignment="center"
-          translucent={true}
-          overlayIndex={1}
-          arrow={false}
-          style={{
-            '--offset-y': '-10px'
-          }}
-          ref={el => this.popoverRef = el}
-        >
-          <ion-picker-internal>
-            <ion-picker-column-internal
-              color={this.color}
-              value={workingParts.hour}
-              items={hoursItems}
-              numericInput={true}
-              onIonChange={(ev: CustomEvent) => {
-                this.setWorkingParts({
-                  ...this.workingParts,
-                  hour: ev.detail.value
-                });
-                this.setActiveParts({
-                  ...this.activeParts,
-                  hour: ev.detail.value
-                });
-
-                ev.stopPropagation();
-              }}
-            ></ion-picker-column-internal>
-            <ion-picker-column-internal
-              color={this.color}
-              value={workingParts.minute}
-              items={minutesItems}
-              numericInput={true}
-              onIonChange={(ev: CustomEvent) => {
-                this.setWorkingParts({
-                  ...this.workingParts,
-                  minute: ev.detail.value
-                });
-                this.setActiveParts({
-                  ...this.activeParts,
-                  minute: ev.detail.value
-                });
-
-                ev.stopPropagation();
-              }}
-            ></ion-picker-column-internal>
-            <ion-picker-column-internal
-              color={this.color}
-              value={workingParts.ampm}
-              items={ampmItems}
-              onIonChange={(ev: CustomEvent) => {
-                const hour = calculateHourFromAMPM(this.workingParts, ev.detail.value);
-
-                this.setWorkingParts({
-                  ...this.workingParts,
-                  ampm: ev.detail.value,
-                  hour
-                });
-
-                this.setActiveParts({
-                  ...this.workingParts,
-                  ampm: ev.detail.value,
-                  hour
-                });
-
-                ev.stopPropagation();
-              }}
-            ></ion-picker-column-internal>
-          </ion-picker-internal>
-        </ion-popover>
+          {timeOnlyPresentation ? this.renderTimePicker(hoursItems, minutesItems, ampmItems) : this.renderTimeOverlay(hoursItems, minutesItems, ampmItems, use24Hour)}
       </div>
     )
   }
