@@ -1,11 +1,12 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
 import { Color } from '../../interface';
-import { getElementRoot, raf } from '../../utils/helpers';
+import { getElementRoot, raf, addEventListener, removeEventListener } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
 
 import { PickerColumnItem } from './picker-column-internal-interfaces';
+import { PickerInternalCustomEvent } from '../picker-internal/picker-internal-interfaces';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -21,6 +22,8 @@ import { PickerColumnItem } from './picker-column-internal-interfaces';
 })
 export class PickerColumnInternal implements ComponentInterface {
   private destroyScrollListener?: () => void;
+
+  @State() isActive = false;
 
   @Element() el!: HTMLIonPickerColumnInternalElement;
 
@@ -40,6 +43,15 @@ export class PickerColumnInternal implements ComponentInterface {
    * For more information on colors, see [theming](/docs/theming/basics).
    */
   @Prop({ reflect: true }) color?: Color;
+
+  /**
+   * If `true`, tapping the picker will
+   * reveal a number input keyboard that lets
+   * the user type in values for each picker
+   * column. This is useful when working
+   * with time pickers.
+   */
+  @Prop() numericInput = false;
 
   /**
    * Emitted when the value has changed.
@@ -70,6 +82,20 @@ export class PickerColumnInternal implements ComponentInterface {
     visibleIO.observe(this.el);
   }
 
+  connectedCallback() {
+    const parentEl = this.el.closest('ion-picker-internal');
+    if (parentEl) {
+      addEventListener(parentEl, 'ionInputModeChange', this.inputModeChange);
+    }
+  }
+
+  disconnectedCallback() {
+    const parentEl = this.el.closest('ion-picker-internal');
+    if (parentEl) {
+      removeEventListener(parentEl, 'ionInputModeChange', this.inputModeChange);
+    }
+  }
+
   scrollActiveItemIntoView() {
     const activeEl = this.activeItem;
 
@@ -86,6 +112,27 @@ export class PickerColumnInternal implements ComponentInterface {
       left: 0,
       behavior: smooth ? 'smooth' : undefined
     });
+  }
+
+  private inputModeChange = (ev: PickerInternalCustomEvent) => {
+    const { inputMode, inputModeColumn } = ev.detail;
+
+    if (!this.numericInput) {
+      this.isActive = false;
+      return;
+    }
+
+    if (
+      !inputMode ||
+      inputModeColumn !== undefined && inputModeColumn !== this.el
+    ) {
+      console.log('deactive',this.el)
+      this.isActive = false;
+      return;
+    }
+    console.log('active',this.el)
+
+    this.isActive = true;
   }
 
   private initializeScrollListener = () => {
@@ -156,14 +203,15 @@ export class PickerColumnInternal implements ComponentInterface {
   }
 
   render() {
-    const { items, color } = this;
+    const { items, color, isActive } = this;
     const mode = getIonMode(this);
 
     return (
       <Host
         tabindex={0}
         class={createColorClasses(color, {
-          [mode]: true
+          [mode]: true,
+          ['picker-column-active']: isActive
         })}
       >
         <div class="picker-item picker-item-empty">&nbsp;</div>

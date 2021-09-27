@@ -49,3 +49,7 @@
 
   pointer-events: none;
 }
+
+:host input {
+  @include visually-hidden();
+}

@@ -1289,6 +1289,7 @@ export class Datetime implements ComponentInterface {
               color={this.color}
               value={workingParts.hour}
               items={hoursItems}
+              numericInput={true}
               onIonChange={(ev: CustomEvent) => {
                 this.setWorkingParts({
                   ...this.workingParts,
@@ -1306,6 +1307,7 @@ export class Datetime implements ComponentInterface {
               color={this.color}
               value={workingParts.minute}
               items={minutesItems}
+              numericInput={true}
               onIonChange={(ev: CustomEvent) => {
                 this.setWorkingParts({
                   ...this.workingParts,

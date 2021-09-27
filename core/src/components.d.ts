@@ -9,6 +9,7 @@ import { AccordionGroupChangeEventDetail, ActionSheetAttributes, ActionSheetButt
 import { IonicSafeString } from "./utils/sanitization";
 import { AlertAttributes } from "./components/alert/alert-interface";
 import { PickerColumnItem } from "./components/picker-column-internal/picker-column-internal-interfaces";
+import { PickerInternalChangeEventDetail } from "./components/picker-internal/picker-internal-interfaces";
 import { PinFormatter } from "./components/range/range-interface";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
@@ -1813,6 +1814,10 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * If `true`, tapping the picker will reveal a number input keyboard that lets the user type in values for each picker column. This is useful when working with time pickers.
+         */
+        "numericInput": boolean;
         /**
           * The selected option in the picker.
          */
@@ -5435,6 +5440,10 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
         /**
+          * If `true`, tapping the picker will reveal a number input keyboard that lets the user type in values for each picker column. This is useful when working with time pickers.
+         */
+        "numericInput"?: boolean;
+        /**
           * Emitted when the value has changed.
          */
         "onIonChange"?: (event: CustomEvent<PickerColumnItem>) => void;
@@ -5448,6 +5457,7 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        "onIonInputModeChange"?: (event: CustomEvent<PickerInternalChangeEventDetail>) => void;
     }
     interface IonPopover {
         /**

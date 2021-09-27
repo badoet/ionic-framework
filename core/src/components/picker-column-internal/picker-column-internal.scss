@@ -43,8 +43,6 @@
   scroll-snap-align: none;
 }
 
-@media (any-hover: hover) {
-  :host(:focus) {
-    background: pink;
-  }
+:host(.picker-column-active) .picker-item.picker-item-active {
+  color: current-color(base);
 }
