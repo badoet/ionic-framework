@@ -102,8 +102,8 @@ export class PickerInternal implements ComponentInterface {
 
   @Method()
   async enterInputMode(columnEl?: HTMLIonPickerColumnInternalElement) {
-    const { inputEl, inputMode } = this;
-    if (inputMode || !inputEl) { return; }
+    const { inputEl } = this;
+    if (!inputEl) { return; }
 
     this.inputMode = true;
     this.inputModeColumn = columnEl;
