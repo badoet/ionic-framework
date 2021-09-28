@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, h } from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
 import { Color } from '../../interface';
@@ -57,6 +57,11 @@ export class PickerColumnInternal implements ComponentInterface {
    * Emitted when the value has changed.
    */
   @Event() ionChange!: EventEmitter<PickerColumnItem>;
+
+  @Watch('value')
+  valueChange() {
+    this.scrollActiveItemIntoView();
+  }
 
   /**
    * Only setup scroll listeners
