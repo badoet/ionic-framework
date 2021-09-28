@@ -279,10 +279,79 @@ export class PickerInternal implements ComponentInterface {
   }
 
   private selectMultiColumn = () => {
-    const { inputEl } = this;
+    const { inputEl, el } = this;
     if (!inputEl) return;
 
-    console.log('selecting multiple column');
+    const numericPickers = Array.from(el.querySelectorAll('ion-picker-column-internal')).filter(col => col.numericInput);
+
+    const firstColumn = numericPickers[0];
+    const lastColumn = numericPickers[1];
+
+    let value = inputEl.value;
+    let item;
+    switch (value.length) {
+      case 1:
+        console.log('case 1');
+        item = lastColumn.items.find(v => {
+          return (
+            v.text === `0${value}` ||
+            v.text === value
+          )
+        });
+        console.log('found item', item);
+        if (item) {
+          lastColumn.value = item.value;
+          console.log('setting value in last column')
+        }
+        break;
+      case 2:
+        /**
+         * If the first character is `0` or `1` it is
+         * possible that users are trying to type `09`
+         * or `11` into the hour field, so we should look
+         * at that first.
+         */
+        const firstCharacter = inputEl.value.substring(0, 1);
+        value = (firstCharacter === '0' || firstCharacter === '1') ? inputEl.value : firstCharacter;
+        item = firstColumn.items.find(v => {
+          return (
+            v.text === `0${value}` ||
+            v.text === value
+          )
+        });
+        console.log('found item', item);
+        if (item) {
+          firstColumn.value = item.value;
+          console.log('setting value in first column')
+        }
+
+        /**
+         * If only checked the first value,
+         * we can check the second value
+         * for a match in the minutes column
+         */
+        if (value.length === 1) {
+          const minuteValue = inputEl.value.substring(inputEl.value.length - 1);
+          console.log('we have more to process', minuteValue)
+
+          const minuteItem = lastColumn.items.find(v => {
+            return (
+              v.text === `${minuteValue}0` ||
+              v.text === minuteValue
+            )
+          });
+          console.log('found item in', minuteItem)
+
+          if (minuteItem) {
+            lastColumn.value = minuteItem.value;
+            console.log('setting value in the last column')
+          }
+        }
+        break;
+      default:
+        console.log('noop')
+        break;
+    }
   }
 
   /**

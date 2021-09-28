@@ -50,6 +50,8 @@ export class PickerColumnInternal implements ComponentInterface {
    * the user type in values for each picker
    * column. This is useful when working
    * with time pickers.
+   *
+   * @internal
    */
   @Prop() numericInput = false;
 
