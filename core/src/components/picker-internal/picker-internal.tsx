@@ -278,6 +278,32 @@ export class PickerInternal implements ComponentInterface {
     }
   }
 
+  private searchHourColumn = (colEl: HTMLIonPickerColumnInternalElement, value: string) => {
+    const item = colEl.items.find(v => {
+      return (
+        v.text === `0${value}` ||
+        v.text === value
+      )
+    });
+
+    if (item) {
+      colEl.value = item.value;
+    }
+  }
+
+  private searchMinuteColumn = (colEl: HTMLIonPickerColumnInternalElement, value: string) => {
+    const item = colEl.items.find(v => {
+      return (
+        v.text === `${value}0` ||
+        v.text === value
+      )
+    });
+
+    if (item) {
+      colEl.value = item.value;
+    }
+  }
+
   private selectMultiColumn = () => {
     const { inputEl, el } = this;
     if (!inputEl) return;
@@ -288,24 +314,11 @@ export class PickerInternal implements ComponentInterface {
     const lastColumn = numericPickers[1];
 
     let value = inputEl.value;
-    let item;
     switch (value.length) {
       case 1:
-        console.log('case 1');
-        item = lastColumn.items.find(v => {
-          return (
-            v.text === `0${value}` ||
-            v.text === value
-          )
-        });
-        console.log('found item', item);
-        if (item) {
-          lastColumn.value = item.value;
-          console.log('setting value in last column')
-        }
+        this.searchHourColumn(firstColumn, value);
         break;
       case 2:
-        console.log('case 2')
         /**
          * If the first character is `0` or `1` it is
          * possible that users are trying to type `09`
@@ -314,17 +327,8 @@ export class PickerInternal implements ComponentInterface {
          */
         const firstCharacter = inputEl.value.substring(0, 1);
         value = (firstCharacter === '0' || firstCharacter === '1') ? inputEl.value : firstCharacter;
-        item = firstColumn.items.find(v => {
-          return (
-            v.text === `0${value}` ||
-            v.text === value
-          )
-        });
-        console.log('found item', item);
-        if (item) {
-          firstColumn.value = item.value;
-          console.log('setting value in first column')
-        }
+
+        this.searchHourColumn(firstColumn, value);
 
         /**
          * If only checked the first value,
@@ -333,24 +337,10 @@ export class PickerInternal implements ComponentInterface {
          */
         if (value.length === 1) {
           const minuteValue = inputEl.value.substring(inputEl.value.length - 1);
-          console.log('we have more to process', minuteValue)
-
-          const minuteItem = lastColumn.items.find(v => {
-            return (
-              v.text === `${minuteValue}0` ||
-              v.text === minuteValue
-            )
-          });
-          console.log('found item in', minuteItem)
-
-          if (minuteItem) {
-            lastColumn.value = minuteItem.value;
-            console.log('setting value in the last column')
-          }
+          this.searchMinuteColumn(lastColumn, minuteValue);
         }
         break;
       case 3:
-        console.log('case 3')
         /**
          * If the first character is `0` or `1` it is
          * possible that users are trying to type `09`
@@ -359,17 +349,8 @@ export class PickerInternal implements ComponentInterface {
          */
         const firstCharacterAgain = inputEl.value.substring(0, 1);
         value = (firstCharacterAgain === '0' || firstCharacterAgain === '1') ? inputEl.value.substring(0, 2) : firstCharacterAgain;
-        item = firstColumn.items.find(v => {
-          return (
-            v.text === `0${value}` ||
-            v.text === value
-          )
-        });
-        console.log('found item', item, value);
-        if (item) {
-          firstColumn.value = item.value;
-          console.log('setting value in first column')
-        }
+
+        this.searchHourColumn(firstColumn, value);
 
         /**
          * If only checked the first value,
@@ -377,23 +358,10 @@ export class PickerInternal implements ComponentInterface {
          * for a match in the minutes column
          */
         const minuteValue = (value.length === 1) ? inputEl.value.substring(1) : inputEl.value.substring(2);
-        console.log('we have more to process', minuteValue)
 
-        const minuteItem = lastColumn.items.find(v => {
-          return (
-            v.text === `${minuteValue}0` ||
-            v.text === minuteValue
-          )
-        });
-        console.log('found item in', minuteItem, minuteValue)
-
-        if (minuteItem) {
-          lastColumn.value = minuteItem.value;
-          console.log('setting value in the last column')
-        }
+        this.searchMinuteColumn(lastColumn, minuteValue);
         break;
       case 4:
-        console.log('case 4')
         /**
          * If the first character is `0` or `1` it is
          * possible that users are trying to type `09`
@@ -402,17 +370,7 @@ export class PickerInternal implements ComponentInterface {
          */
         const firstCharacterAgainAgain = inputEl.value.substring(0, 1);
         value = (firstCharacterAgainAgain === '0' || firstCharacterAgainAgain === '1') ? inputEl.value.substring(0, 2) : firstCharacterAgainAgain;
-        item = firstColumn.items.find(v => {
-          return (
-            v.text === `0${value}` ||
-            v.text === value
-          )
-        });
-        console.log('found item', item, value);
-        if (item) {
-          firstColumn.value = item.value;
-          console.log('setting value in first column')
-        }
+        this.searchHourColumn(firstColumn, value);
 
         /**
          * If only checked the first value,
@@ -420,26 +378,13 @@ export class PickerInternal implements ComponentInterface {
          * for a match in the minutes column
          */
         const minuteValueAgain = (value.length === 1) ? inputEl.value.substring(1, inputEl.value.length) : inputEl.value.substring(2, inputEl.value.length);
-        console.log('we have more to process', minuteValueAgain)
+        this.searchMinuteColumn(lastColumn, minuteValueAgain);
 
-        const minuteItemAgain = lastColumn.items.find(v => {
-          return (
-            v.text === `${minuteValueAgain}0` ||
-            v.text === minuteValueAgain
-          )
-        });
-        console.log('found item in', minuteItemAgain, minuteValueAgain)
-
-        if (minuteItemAgain) {
-          lastColumn.value = minuteItemAgain.value;
-          console.log('setting value in the last column')
-        }
         break;
       default:
-        console.log('case 5');
         const startIndex = inputEl.value.length - 4;
         const newString = inputEl.value.substring(startIndex);
-        console.log('new value', newString)
+
         inputEl.value = newString;
         this.selectMultiColumn();
         break;
