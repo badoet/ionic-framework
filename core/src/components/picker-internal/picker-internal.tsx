@@ -305,6 +305,7 @@ export class PickerInternal implements ComponentInterface {
         }
         break;
       case 2:
+        console.log('case 2')
         /**
          * If the first character is `0` or `1` it is
          * possible that users are trying to type `09`
@@ -346,6 +347,49 @@ export class PickerInternal implements ComponentInterface {
             lastColumn.value = minuteItem.value;
             console.log('setting value in the last column')
           }
+        }
+        break;
+      case 3:
+        console.log('case 3')
+        /**
+         * If the first character is `0` or `1` it is
+         * possible that users are trying to type `09`
+         * or `11` into the hour field, so we should look
+         * at that first.
+         */
+        const firstCharacterAgain = inputEl.value.substring(0, 1);
+        value = (firstCharacterAgain === '0' || firstCharacterAgain === '1') ? inputEl.value.substring(0, 2) : firstCharacterAgain;
+        item = firstColumn.items.find(v => {
+          return (
+            v.text === `0${value}` ||
+            v.text === value
+          )
+        });
+        console.log('found item', item, value);
+        if (item) {
+          firstColumn.value = item.value;
+          console.log('setting value in first column')
+        }
+
+        /**
+         * If only checked the first value,
+         * we can check the second value
+         * for a match in the minutes column
+         */
+        const minuteValue = (value.length === 1) ? inputEl.value.substring(1) : inputEl.value.substring(2);
+        console.log('we have more to process', minuteValue)
+
+        const minuteItem = lastColumn.items.find(v => {
+          return (
+            v.text === `${minuteValue}0` ||
+            v.text === minuteValue
+          )
+        });
+        console.log('found item in', minuteItem, minuteValue)
+
+        if (minuteItem) {
+          lastColumn.value = minuteItem.value;
+          console.log('setting value in the last column')
         }
         break;
       default:
