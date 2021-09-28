@@ -22,6 +22,7 @@ export class PickerInternal implements ComponentInterface {
   private inputModeColumn?: HTMLIonPickerColumnInternalElement;
   private highlightEl?: HTMLElement;
   private actionOnClick?: () => void;
+  private destroyKeypressListener?: () => void;
 
   @Element() el!: HTMLIonPickerInternalElement;
 
@@ -163,7 +164,7 @@ export class PickerInternal implements ComponentInterface {
   }
 
   private enterInputMode = (columnEl?: HTMLIonPickerColumnInternalElement, focusInput = true) => {
-    const { inputEl } = this;
+    const { inputEl, el } = this;
     if (!inputEl) { return; }
 
     this.inputMode = true;
@@ -171,6 +172,11 @@ export class PickerInternal implements ComponentInterface {
 
     if (focusInput) {
       inputEl.focus();
+    } else {
+      el.addEventListener('keypress', this.onKeyPress);
+      this.destroyKeypressListener = () => {
+        el.removeEventListener('keypress', this.onKeyPress);
+      }
     }
 
     this.emitInputModeChange();
@@ -185,13 +191,86 @@ export class PickerInternal implements ComponentInterface {
     inputEl.blur();
     inputEl.value = '';
 
+    if (this.destroyKeypressListener) {
+      this.destroyKeypressListener();
+      this.destroyKeypressListener = undefined;
+    }
+
     this.emitInputModeChange();
   }
 
-  private onInputChange = (ev: Event) => {
-    if (!this.inputMode) { return; }
+  private onKeyPress = (ev: KeyboardEvent) => {
+    const { inputEl } = this;
+    if (!inputEl) { return; }
 
-    console.log('change ', ev)
+    const parsedValue = parseInt(ev.key, 10);
+
+    /**
+     * Only numbers should be allowed
+     */
+    if (!Number.isNaN(parsedValue)) {
+      inputEl.value += ev.key;
+
+      this.onInputChange()
+    }
+  }
+
+  /**
+   * Searches the value of the active column
+   * to determine which value users are trying
+   * to select
+   */
+  private onInputChange = () => {
+    const { inputMode, inputEl, inputModeColumn } = this;
+    if (!inputMode || !inputEl || !inputModeColumn) { return; }
+
+    const values = inputModeColumn.items;
+    let valueToSelect;
+
+    /**
+     * Checking the value of the input gets priority
+     * first. For example, if the value of the input
+     * is "1" and we entered "2", then the complete value
+     * is "12" and we should select hour 12.
+     */
+    const findItemFromCompleteValue = values.find(v => v.text === inputEl.value);
+    if (findItemFromCompleteValue) {
+      valueToSelect = findItemFromCompleteValue.value;
+    /**
+     * On the other hand, if the value of the
+     * input is "4" and we type "9", then we should
+     * just search on the "9" value because
+     * there is no 49th hour. In other words, if we
+     * cannot find a value using the complete input value
+     * then fall back to just checking on the most recent
+     * character entered.
+     */
+    } else {
+      const changedCharacter = inputEl.value.substring(inputEl.value.length - 1);
+      const findItemFromSingleValue = values.find(v => v.text === changedCharacter);
+
+      /**
+       * If we found a value, then we should update the
+       * input value to be that single character. So if the value
+       * of the input was "8" and we typed "1", the picker
+       * should select hour "1". From there, we should be able
+       * to type "2" to have the picker select hour "12".
+       */
+      if (findItemFromSingleValue) {
+        inputEl.value = changedCharacter;
+        valueToSelect = findItemFromSingleValue.value;
+      }
+    }
+
+    /**
+     * If we found a value then we
+     * need to set the picker column
+     * value so the selection is
+     * reflected in the UI.
+     */
+    if (valueToSelect !== undefined) {
+      inputModeColumn.value = valueToSelect;
+    }
   }
 
   private emitInputModeChange = () => {
@@ -212,9 +291,9 @@ export class PickerInternal implements ComponentInterface {
         <input
           tabindex={-1}
           inputmode="numeric"
-          type="text"
+          type="number"
           ref={el => this.inputEl = el}
-          onInput={ev => this.onInputChange(ev)}
+          onInput={() => this.onInputChange()}
           onBlur={() => this.exitInputMode()}
         />
         <div class="picker-before"></div>
