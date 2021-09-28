@@ -171,6 +171,11 @@ export class PickerInternal implements ComponentInterface {
     this.inputModeColumn = columnEl;
 
     if (focusInput) {
+      if (this.destroyKeypressListener) {
+        this.destroyKeypressListener();
+        this.destroyKeypressListener = undefined;
+      }
+
       inputEl.focus();
     } else {
       el.addEventListener('keypress', this.onKeyPress);
@@ -215,14 +220,9 @@ export class PickerInternal implements ComponentInterface {
     }
   }
 
-  /**
-   * Searches the value of the active column
-   * to determine which value users are trying
-   * to select
-   */
-  private onInputChange = () => {
-    const { inputMode, inputEl, inputModeColumn } = this;
-    if (!inputMode || !inputEl || !inputModeColumn) { return; }
+  private selectSingleColumn = () => {
+    const { inputEl, inputModeColumn } = this;
+    if (!inputEl || !inputModeColumn) return;
 
     const values = inputModeColumn.items;
     let valueToSelect;
@@ -275,6 +275,29 @@ export class PickerInternal implements ComponentInterface {
      */
     if (valueToSelect !== undefined) {
       inputModeColumn.value = valueToSelect;
+    }
+  }
+
+  private selectMultiColumn = () => {
+    const { inputEl } = this;
+    if (!inputEl) return;
+
+    console.log('selecting multiple column');
+  }
+
+  /**
+   * Searches the value of the active column
+   * to determine which value users are trying
+   * to select
+   */
+  private onInputChange = () => {
+    const { inputMode, inputEl, inputModeColumn } = this;
+    if (!inputMode || !inputEl) { return; }
+
+    if (inputModeColumn) {
+      this.selectSingleColumn();
+    } else {
+      this.selectMultiColumn();
     }
   }
 
