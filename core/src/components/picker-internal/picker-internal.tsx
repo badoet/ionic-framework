@@ -247,7 +247,12 @@ export class PickerInternal implements ComponentInterface {
      */
     } else {
       const changedCharacter = inputEl.value.substring(inputEl.value.length - 1);
-      const findItemFromSingleValue = values.find(v => v.text === changedCharacter);
+
+      /**
+       * Match `05` first, allowing users to
+       * then type `6` to match `56`.
+       */
+      const findItemFromSingleValue = values.find(v => v.text === `0${changedCharacter}` || v.text === changedCharacter);
 
       /**
        * If we found a value, then we should update the
