@@ -436,7 +436,12 @@ export class PickerInternal implements ComponentInterface {
         }
         break;
       default:
-        console.log('noop')
+        console.log('case 5');
+        const startIndex = inputEl.value.length - 4;
+        const newString = inputEl.value.substring(startIndex);
+        console.log('new value', newString)
+        inputEl.value = newString;
+        this.selectMultiColumn();
         break;
     }
   }
