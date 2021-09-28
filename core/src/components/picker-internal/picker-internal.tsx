@@ -392,6 +392,49 @@ export class PickerInternal implements ComponentInterface {
           console.log('setting value in the last column')
         }
         break;
+      case 4:
+        console.log('case 4')
+        /**
+         * If the first character is `0` or `1` it is
+         * possible that users are trying to type `09`
+         * or `11` into the hour field, so we should look
+         * at that first.
+         */
+        const firstCharacterAgainAgain = inputEl.value.substring(0, 1);
+        value = (firstCharacterAgainAgain === '0' || firstCharacterAgainAgain === '1') ? inputEl.value.substring(0, 2) : firstCharacterAgainAgain;
+        item = firstColumn.items.find(v => {
+          return (
+            v.text === `0${value}` ||
+            v.text === value
+          )
+        });
+        console.log('found item', item, value);
+        if (item) {
+          firstColumn.value = item.value;
+          console.log('setting value in first column')
+        }
+
+        /**
+         * If only checked the first value,
+         * we can check the second value
+         * for a match in the minutes column
+         */
+        const minuteValueAgain = (value.length === 1) ? inputEl.value.substring(1, inputEl.value.length) : inputEl.value.substring(2, inputEl.value.length);
+        console.log('we have more to process', minuteValueAgain)
+
+        const minuteItemAgain = lastColumn.items.find(v => {
+          return (
+            v.text === `${minuteValueAgain}0` ||
+            v.text === minuteValueAgain
+          )
+        });
+        console.log('found item in', minuteItemAgain, minuteValueAgain)
+
+        if (minuteItemAgain) {
+          lastColumn.value = minuteItemAgain.value;
+          console.log('setting value in the last column')
+        }
+        break;
       default:
         console.log('noop')
         break;
