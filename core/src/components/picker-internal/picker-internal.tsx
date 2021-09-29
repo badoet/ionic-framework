@@ -222,7 +222,7 @@ export class PickerInternal implements ComponentInterface {
 
   private selectSingleColumn = () => {
     const { inputEl, inputModeColumn } = this;
-    if (!inputEl || !inputModeColumn) return;
+    if (!inputEl || !inputModeColumn) { return; }
 
     const values = inputModeColumn.items;
     let valueToSelect;
@@ -306,7 +306,7 @@ export class PickerInternal implements ComponentInterface {
 
   private selectMultiColumn = () => {
     const { inputEl, el } = this;
-    if (!inputEl) return;
+    if (!inputEl) { return; }
 
     const numericPickers = Array.from(el.querySelectorAll('ion-picker-column-internal')).filter(col => col.numericInput);
 
