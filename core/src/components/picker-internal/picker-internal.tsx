@@ -187,13 +187,39 @@ export class PickerInternal implements ComponentInterface {
     }
   }
 
+  /**
+   * Enters input mode to allow
+   * for text entry of numeric values.
+   * If on mobile, we focus a hidden input
+   * field so that the on screen keyboard
+   * is brought up. When tabbing using a
+   * keyboard, picker columns receive an outline
+   * to indicate they are focused. As a result,
+   * we should not focus the hidden input as it
+   * would cause the outline to go away, preventing
+   * users from having any visual indication of which
+   * column is focused.
+   */
   private enterInputMode = (columnEl?: HTMLIonPickerColumnInternalElement, focusInput = true) => {
     const { inputEl, el } = this;
     if (!inputEl) { return; }
 
+    /**
+     * If columnEl is undefined then
+     * it is assumed that all numeric pickers
+     * are eligible for text entry.
+     * (i.e. hour and minute columns)
+     */
     this.inputMode = true;
     this.inputModeColumn = columnEl;
 
+    /**
+     * Users with a keyboard and mouse can
+     * activate input mode where the input is
+     * focused as well as when it is not focused,
+     * so we need to make sure we clean up any
+     * old listeners.
+     */
     if (focusInput) {
       if (this.destroyKeypressListener) {
         this.destroyKeypressListener();
@@ -212,7 +238,6 @@ export class PickerInternal implements ComponentInterface {
   }
 
   private exitInputMode = () => {
-    console.log('exiting input mode')
     const { inputEl, inputMode } = this;
     if (!inputMode || !inputEl) { return; }
 
@@ -432,6 +457,11 @@ export class PickerInternal implements ComponentInterface {
     }
   }
 
+  /**
+   * Emit ionInputModeChange. Picker columns
+   * listen for this event to determine whether
+   * or not their column is "active" for text input.
+   */
   private emitInputModeChange = () => {
     const { inputMode, inputModeColumn } = this;
 
