@@ -76,8 +76,8 @@ export class PickerColumnInternal implements ComponentInterface {
       const ev = entries[0];
 
       if (ev.isIntersecting) {
-      this.scrollActiveItemIntoView();
-      this.initializeScrollListener();
+        this.scrollActiveItemIntoView();
+        this.initializeScrollListener();
       } else {
         if (this.destroyScrollListener) {
           this.destroyScrollListener();
@@ -85,8 +85,7 @@ export class PickerColumnInternal implements ComponentInterface {
         }
       }
     }
-    const visibleIO = new IntersectionObserver(visibleCallback, { threshold: 0.01 });
-    visibleIO.observe(this.el);
+    new IntersectionObserver(visibleCallback, { threshold: 0.01 }).observe(this.el);
 
     const parentEl = this.el.closest('ion-picker-internal') as HTMLIonPickerInternalElement | null;
     if (parentEl !== null) {
@@ -98,12 +97,18 @@ export class PickerColumnInternal implements ComponentInterface {
     const activeEl = this.activeItem;
 
     if (activeEl) {
-      this.centerPickerItemInView(activeEl, false)
+      this.centerPickerItemInView(activeEl, false);
+
+      /**
+       * This is needed because the initial
+       * scrollActiveItemIntoView call fires before
+       * the scroll event listener is setup.
+       */
       activeEl.classList.add(PICKER_COL_ACTIVE);
     }
   }
 
-  centerPickerItemInView(target: HTMLElement, smooth = true) {
+  private centerPickerItemInView = (target: HTMLElement, smooth = true) => {
     this.el.scroll({
       // (Vertical offset from parent) - (three empty picker rows) + (half the height of the target to ensure the scroll triggers)
       top: target.offsetTop - (3 * target.clientHeight) + (target.clientHeight / 2),
@@ -112,18 +117,23 @@ export class PickerColumnInternal implements ComponentInterface {
     });
   }
 
+  /**
+   * When ionInputModeChange is emitted, each column
+   * needs to check if it is the one being made available
+   * for text entry.
+   */
   private inputModeChange = (ev: PickerInternalCustomEvent) => {
+    if (!this.numericInput) { return; }
+
     const { inputMode, inputModeColumn } = ev.detail;
 
-    if (!this.numericInput) {
-      this.isActive = false;
-      return;
-    }
+    /**
+     * If inputModeColumn is undefined then this means
+     * all numericInput columns are being selected.
+     */
+    const isColumnActive = inputModeColumn === undefined || inputModeColumn === this.el;
 
-    if (
-      !inputMode ||
-      (inputModeColumn !== undefined && inputModeColumn !== this.el)
-    ) {
+    if (!inputMode || !isColumnActive) {
       this.isActive = false;
       return;
     }
@@ -131,11 +141,16 @@ export class PickerColumnInternal implements ComponentInterface {
     this.isActive = true;
   }
 
+  /**
+   * When the column scrolls, the component
+   * needs to determine which item is centered
+   * in the view and will emit an ionChange with
+   * the item object.
+   */
   private initializeScrollListener = () => {
     const { el } = this;
 
     let timeout: any;
-
     let activeEl: HTMLElement | null = this.activeItem;
     const scrollCallback = () => {
       raf(() => {
@@ -144,11 +159,11 @@ export class PickerColumnInternal implements ComponentInterface {
           timeout = undefined;
         }
 
-        const bbox = el.getBoundingClientRect();
         /**
          * Select item in the center of the column
          * which is the month/year that we want to select
          */
+        const bbox = el.getBoundingClientRect();
         const centerX = bbox.x + (bbox.width / 2);
         const centerY = bbox.y + (bbox.height / 2);
 
@@ -158,7 +173,6 @@ export class PickerColumnInternal implements ComponentInterface {
         }
 
         activeEl = activeElement;
-
         activeElement.classList.add(PICKER_COL_ACTIVE);
 
         timeout = setTimeout(() => {
@@ -169,9 +183,7 @@ export class PickerColumnInternal implements ComponentInterface {
            * possible we hit one of the
            * empty padding columns.
            */
-          if (dataIndex === null) {
-            return;
-          }
+          if (dataIndex === null) { return; }
 
           const index = parseInt(dataIndex, 10);
           const value = this.items[index];
