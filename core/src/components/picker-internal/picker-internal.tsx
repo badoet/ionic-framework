@@ -30,6 +30,7 @@ export class PickerInternal implements ComponentInterface {
 
   componentWillLoad() {
     getElementRoot(this.el).addEventListener('focusin', this.onFocusIn);
+    getElementRoot(this.el).addEventListener('focusout', this.onFocusOut);
   }
 
   private isInHighlightBounds = (ev: PointerEvent) => {
@@ -56,6 +57,29 @@ export class PickerInternal implements ComponentInterface {
     return true;
   }
 
+  /**
+   * If we are no longer focused
+   * on a picker column, then we should
+   * exit input mode. An exception is made
+   * for the input in the picker since having
+   * that focused means we are still in input mode.
+   */
+  private onFocusOut = (ev: any) => {
+    const { relatedTarget } = ev;
+
+    if (
+      !relatedTarget ||
+      relatedTarget.tagName !== 'ION-PICKER-COLUMN-INTERNAL' && relatedTarget !== this.inputEl
+    ) {
+      this.exitInputMode();
+    }
+  }
+
+  /**
+   * When picker columns receive focus
+   * the parent picker needs to determine
+   * whether to enter/exit input mode.
+   */
   private onFocusIn = (ev: any) => {
     const { target } = ev;
 
@@ -188,6 +212,7 @@ export class PickerInternal implements ComponentInterface {
   }
 
   private exitInputMode = () => {
+    console.log('exiting input mode')
     const { inputEl, inputMode } = this;
     if (!inputMode || !inputEl) { return; }
 
