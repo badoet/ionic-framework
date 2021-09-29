@@ -10,7 +10,7 @@ import {
 import { getIonMode } from '../../global/ionic-global';
 import { Color, DatetimeChangeEventDetail, DatetimeParts, Mode, StyleEventDetail } from '../../interface';
 import { startFocusVisible } from '../../utils/focus-visible';
-import { getElementRoot, raf, renderHiddenInput } from '../../utils/helpers';
+import { getElementRoot, renderHiddenInput } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
 import { PickerColumnItem } from '../picker-column-internal/picker-column-internal-interfaces';
 
