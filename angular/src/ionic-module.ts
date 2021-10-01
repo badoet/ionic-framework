@@ -1,7 +1,6 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
-import type { ModuleWithProviders } from '@angular/core';
-import { APP_INITIALIZER, NgModule, NgZone } from '@angular/core';
-import type { IonicConfig } from '@ionic/core';
+import { ModuleWithProviders, APP_INITIALIZER, NgModule, NgZone } from '@angular/core';
+import { IonicConfig } from '@ionic/core';
 
 import { appInitialize } from './app-initialize';
 import { BooleanValueAccessorDirective } from './directives/control-value-accessors/boolean-value-accessor';

@@ -1,7 +1,6 @@
-import type { ComponentFactoryResolver, ElementRef, Injector, ViewContainerRef } from '@angular/core';
-import { Directive } from '@angular/core';
+import { ComponentFactoryResolver, ElementRef, Injector, ViewContainerRef, Directive } from '@angular/core';
 
-import type { AngularDelegate } from '../../providers/angular-delegate';
+import { AngularDelegate } from '../../providers/angular-delegate';
 import { ProxyCmp, proxyOutputs } from '../proxies-utils';
 
 @ProxyCmp({

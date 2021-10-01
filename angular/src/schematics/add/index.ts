@@ -1,13 +1,22 @@
-import type { Path } from '@angular-devkit/core';
-import { join } from '@angular-devkit/core';
-import type { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
-import { apply, chain, mergeWith, move, SchematicsException, template, url } from '@angular-devkit/schematics';
+import { Path, join } from '@angular-devkit/core';
+import {
+  Rule,
+  SchematicContext,
+  Tree,
+  apply,
+  chain,
+  mergeWith,
+  move,
+  SchematicsException,
+  template,
+  url,
+} from '@angular-devkit/schematics';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
 
 import { addModuleImportToRootModule } from './../utils/ast';
 import { addArchitectBuilder, addAsset, addStyle, getDefaultAngularAppName, getWorkspace } from './../utils/config';
 import { addPackageToPackageJson } from './../utils/package';
-import type { Schema as IonAddOptions } from './schema';
+import { Schema as IonAddOptions } from './schema';
 
 function addIonicAngularToPackageJson(): Rule {
   return (host: Tree) => {

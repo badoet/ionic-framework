@@ -1,6 +1,5 @@
 import { normalize } from '@angular-devkit/core';
-import type { Tree } from '@angular-devkit/schematics';
-import { SchematicsException } from '@angular-devkit/schematics';
+import { Tree, SchematicsException } from '@angular-devkit/schematics';
 import * as ts from 'typescript';
 
 import { addImportToModule } from './devkit-utils/ast-utils';

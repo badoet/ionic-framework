@@ -1,4 +1,4 @@
-import type { ActivatedRouteSnapshot, DetachedRouteHandle, RouteReuseStrategy } from '@angular/router';
+import { ActivatedRouteSnapshot, DetachedRouteHandle, RouteReuseStrategy } from '@angular/router';
 
 export class IonicRouteStrategy implements RouteReuseStrategy {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -1,8 +1,8 @@
-import type { NgZone } from '@angular/core';
+import { NgZone } from '@angular/core';
 import { applyPolyfills, defineCustomElements } from '@ionic/core/loader';
 
-import type { Config } from './providers/config';
-import type { IonicWindow } from './types/interfaces';
+import { Config } from './providers/config';
+import { IonicWindow } from './types/interfaces';
 import { raf } from './util/util';
 
 export const appInitialize = (config: Config, doc: Document, zone: NgZone) => {

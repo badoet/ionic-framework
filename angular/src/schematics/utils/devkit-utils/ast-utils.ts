@@ -7,8 +7,7 @@
  */
 import * as ts from 'typescript';
 
-import type { Change } from './change';
-import { InsertChange, NoopChange } from './change';
+import { Change, InsertChange, NoopChange } from './change';
 
 /**
  * Add Import `import { symbolName } from fileName` if the import doesn't exit

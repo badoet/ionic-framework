@@ -1,13 +1,21 @@
-import type { Location } from '@angular/common';
-import type { ComponentRef, NgZone } from '@angular/core';
-import type { ActivatedRoute, Router } from '@angular/router';
-import type { AnimationBuilder, RouterDirection } from '@ionic/core';
+import { Location } from '@angular/common';
+import { ComponentRef, NgZone } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AnimationBuilder, RouterDirection } from '@ionic/core';
 
 import { bindLifecycleEvents } from '../../providers/angular-delegate';
-import type { NavController } from '../../providers/nav-controller';
+import { NavController } from '../../providers/nav-controller';
 
-import type { RouteView, StackEvent } from './stack-utils';
-import { computeStackId, destroyView, getUrl, insertView, isTabSwitch, toSegments } from './stack-utils';
+import {
+  RouteView,
+  StackEvent,
+  computeStackId,
+  destroyView,
+  getUrl,
+  insertView,
+  isTabSwitch,
+  toSegments,
+} from './stack-utils';
 
 export class StackController {
   private views: RouteView[] = [];

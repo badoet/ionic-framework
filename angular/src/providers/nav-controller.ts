@@ -1,12 +1,11 @@
-import type { Location } from '@angular/common';
+import { Location } from '@angular/common';
 import { Injectable, Optional } from '@angular/core';
-import type { NavigationExtras, Router, UrlSerializer, UrlTree } from '@angular/router';
-import { NavigationStart } from '@angular/router';
-import type { AnimationBuilder, NavDirection, RouterDirection } from '@ionic/core';
+import { NavigationExtras, Router, UrlSerializer, UrlTree, NavigationStart } from '@angular/router';
+import { AnimationBuilder, NavDirection, RouterDirection } from '@ionic/core';
 
-import type { IonRouterOutlet } from '../directives/navigation/ion-router-outlet';
+import { IonRouterOutlet } from '../directives/navigation/ion-router-outlet';
 
-import type { Platform } from './platform';
+import { Platform } from './platform';
 
 export interface AnimationOptions {
   animated?: boolean;

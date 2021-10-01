@@ -1,10 +1,7 @@
 import { DOCUMENT } from '@angular/common';
-import type { NgZone } from '@angular/core';
-import { Inject, Injectable } from '@angular/core';
-import type { BackButtonEventDetail, KeyboardEventDetail, Platforms } from '@ionic/core';
-import { getPlatforms, isPlatform } from '@ionic/core';
-import type { Subscription } from 'rxjs';
-import { Subject } from 'rxjs';
+import { NgZone, Inject, Injectable } from '@angular/core';
+import { BackButtonEventDetail, KeyboardEventDetail, Platforms, getPlatforms, isPlatform } from '@ionic/core';
+import { Subscription, Subject } from 'rxjs';
 
 export interface BackButtonEmitter extends Subject<BackButtonEventDetail> {
   subscribeWithPriority(

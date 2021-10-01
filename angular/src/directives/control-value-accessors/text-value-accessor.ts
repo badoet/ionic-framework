@@ -1,5 +1,4 @@
-import type { ElementRef, Injector } from '@angular/core';
-import { Directive, HostListener } from '@angular/core';
+import { ElementRef, Injector, Directive, HostListener } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { ValueAccessor } from './value-accessor';

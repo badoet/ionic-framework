@@ -1,7 +1,7 @@
 import { Injectable, InjectionToken } from '@angular/core';
-import type { Config as CoreConfig, IonicConfig } from '@ionic/core';
+import { Config as CoreConfig, IonicConfig } from '@ionic/core';
 
-import type { IonicWindow } from '../types/interfaces';
+import { IonicWindow } from '../types/interfaces';
 
 @Injectable({
   providedIn: 'root',

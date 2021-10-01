@@ -1,8 +1,6 @@
-import type { AfterViewInit, ElementRef, Injector, OnDestroy } from '@angular/core';
-import { Directive, HostListener } from '@angular/core';
-import type { ControlValueAccessor } from '@angular/forms';
-import { NgControl } from '@angular/forms';
-import type { Subscription } from 'rxjs';
+import { AfterViewInit, ElementRef, Injector, OnDestroy, Directive, HostListener } from '@angular/core';
+import { ControlValueAccessor, NgControl } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 import { raf } from '../../util/util';
 

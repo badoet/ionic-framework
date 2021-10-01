@@ -1,6 +1,5 @@
-import type { WorkspaceDefinition } from '@angular-devkit/core/src/workspace';
-import type { Tree } from '@angular-devkit/schematics';
-import { SchematicsException } from '@angular-devkit/schematics';
+import { WorkspaceDefinition } from '@angular-devkit/core/src/workspace';
+import { Tree, SchematicsException } from '@angular-devkit/schematics';
 import { parse } from 'jsonc-parser';
 
 const CONFIG_PATH = 'angular.json';

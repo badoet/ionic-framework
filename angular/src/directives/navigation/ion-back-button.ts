@@ -1,10 +1,10 @@
 import { Directive, HostListener, Input, Optional } from '@angular/core';
-import type { AnimationBuilder } from '@ionic/core';
+import { AnimationBuilder } from '@ionic/core';
 
-import type { Config } from '../../providers/config';
-import type { NavController } from '../../providers/nav-controller';
+import { Config } from '../../providers/config';
+import { NavController } from '../../providers/nav-controller';
 
-import type { IonRouterOutlet } from './ion-router-outlet';
+import { IonRouterOutlet } from './ion-router-outlet';
 
 @Directive({
   selector: 'ion-back-button',

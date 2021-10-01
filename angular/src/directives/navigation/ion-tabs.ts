@@ -1,10 +1,10 @@
 import { Component, ContentChild, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
 
-import type { NavController } from '../../providers/nav-controller';
+import { NavController } from '../../providers/nav-controller';
 import { IonTabBar } from '../proxies';
 
 import { IonRouterOutlet } from './ion-router-outlet';
-import type { StackEvent } from './stack-utils';
+import { StackEvent } from './stack-utils';
 
 @Component({
   selector: 'ion-tabs',

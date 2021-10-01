@@ -1,11 +1,10 @@
-import type { LocationStrategy } from '@angular/common';
-import type { ElementRef, OnChanges, OnDestroy, OnInit } from '@angular/core';
-import { Directive, HostListener, Input, Optional } from '@angular/core';
-import type { Router, RouterLink } from '@angular/router';
-import type { AnimationBuilder, RouterDirection } from '@ionic/core';
-import type { Subscription } from 'rxjs';
+import { LocationStrategy } from '@angular/common';
+import { ElementRef, OnChanges, OnDestroy, OnInit, Directive, HostListener, Input, Optional } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { AnimationBuilder, RouterDirection } from '@ionic/core';
+import { Subscription } from 'rxjs';
 
-import type { NavController } from '../../providers/nav-controller';
+import { NavController } from '../../providers/nav-controller';
 
 @Directive({
   selector: '[routerLink]',

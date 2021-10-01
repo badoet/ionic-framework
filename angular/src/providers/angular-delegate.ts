@@ -1,7 +1,14 @@
-import type { ApplicationRef, ComponentFactoryResolver, NgZone, ViewContainerRef } from '@angular/core';
-import { Injectable, InjectionToken, Injector } from '@angular/core';
-import type { FrameworkDelegate } from '@ionic/core';
 import {
+  ApplicationRef,
+  ComponentFactoryResolver,
+  NgZone,
+  ViewContainerRef,
+  Injectable,
+  InjectionToken,
+  Injector,
+} from '@angular/core';
+import {
+  FrameworkDelegate,
   LIFECYCLE_DID_ENTER,
   LIFECYCLE_DID_LEAVE,
   LIFECYCLE_WILL_ENTER,

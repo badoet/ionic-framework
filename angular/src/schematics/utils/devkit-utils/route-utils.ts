@@ -8,8 +8,7 @@
 import * as ts from 'typescript';
 
 import { findNodes, insertAfterLastOccurrence } from './ast-utils';
-import type { Change } from './change';
-import { NoopChange } from './change';
+import { Change, NoopChange } from './change';
 
 /**
  * Add Import `import { symbolName } from fileName` if the import doesn't exit

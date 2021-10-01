@@ -1,5 +1,5 @@
-import type { Location } from '@angular/common';
-import type {
+import { Location } from '@angular/common';
+import {
   ComponentFactoryResolver,
   ComponentRef,
   ElementRef,
@@ -8,22 +8,24 @@ import type {
   OnDestroy,
   OnInit,
   ViewContainerRef,
+  Attribute,
+  Directive,
+  EventEmitter,
+  Optional,
+  Output,
+  SkipSelf,
 } from '@angular/core';
-import { Attribute, Directive, EventEmitter, Optional, Output, SkipSelf } from '@angular/core';
-import type { OutletContext, Router } from '@angular/router';
-import { ActivatedRoute, ChildrenOutletContexts, PRIMARY_OUTLET } from '@angular/router';
+import { OutletContext, Router, ActivatedRoute, ChildrenOutletContexts, PRIMARY_OUTLET } from '@angular/router';
 import { componentOnReady } from '@ionic/core';
-import type { Observable } from 'rxjs';
-import { BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { distinctUntilChanged, filter, switchMap } from 'rxjs/operators';
 
-import type { AnimationBuilder } from '../../ionic-core';
-import type { Config } from '../../providers/config';
-import type { NavController } from '../../providers/nav-controller';
+import { AnimationBuilder } from '../../ionic-core';
+import { Config } from '../../providers/config';
+import { NavController } from '../../providers/nav-controller';
 
 import { StackController } from './stack-controller';
-import type { RouteView } from './stack-utils';
-import { getUrl } from './stack-utils';
+import { RouteView, getUrl } from './stack-utils';
 
 @Directive({
   selector: 'ion-router-outlet',
