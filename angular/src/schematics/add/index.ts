@@ -1,10 +1,13 @@
-import { join, Path } from '@angular-devkit/core';
-import { apply, chain, mergeWith, move, Rule, SchematicContext, SchematicsException, template, Tree, url } from '@angular-devkit/schematics';
+import type { Path } from '@angular-devkit/core';
+import { join } from '@angular-devkit/core';
+import type { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
+import { apply, chain, mergeWith, move, SchematicsException, template, url } from '@angular-devkit/schematics';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
+
 import { addModuleImportToRootModule } from './../utils/ast';
-import { addArchitectBuilder, addAsset, addStyle, getDefaultAngularAppName, getWorkspace  } from './../utils/config';
+import { addArchitectBuilder, addAsset, addStyle, getDefaultAngularAppName, getWorkspace } from './../utils/config';
 import { addPackageToPackageJson } from './../utils/package';
-import { Schema as IonAddOptions } from './schema';
+import type { Schema as IonAddOptions } from './schema';
 
 function addIonicAngularToPackageJson(): Rule {
   return (host: Tree) => {
@@ -15,24 +18,14 @@ function addIonicAngularToPackageJson(): Rule {
 
 function addIonicAngularToolkitToPackageJson(): Rule {
   return (host: Tree) => {
-    addPackageToPackageJson(
-      host,
-      'devDependencies',
-      '@ionic/angular-toolkit',
-      'latest'
-    );
+    addPackageToPackageJson(host, 'devDependencies', '@ionic/angular-toolkit', 'latest');
     return host;
   };
 }
 
 function addIonicAngularModuleToAppModule(projectSourceRoot: Path): Rule {
   return (host: Tree) => {
-    addModuleImportToRootModule(
-      host,
-      projectSourceRoot,
-      'IonicModule.forRoot()',
-      '@ionic/angular'
-    );
+    addModuleImportToRootModule(host, projectSourceRoot, 'IonicModule.forRoot()', '@ionic/angular');
     return host;
   };
 }
@@ -50,13 +43,13 @@ function addIonicStyles(projectName: string, projectSourceRoot: Path): Rule {
       'node_modules/@ionic/angular/css/text-alignment.css',
       'node_modules/@ionic/angular/css/text-transformation.css',
       'node_modules/@ionic/angular/css/flex-utils.css',
-      `${projectSourceRoot}/theme/variables.css`
-    ]
+      `${projectSourceRoot}/theme/variables.css`,
+    ];
 
-    ionicStyles.forEach(entry => {
+    ionicStyles.forEach((entry) => {
       addStyle(host, projectName, entry);
     });
-   return host;
+    return host;
   };
 }
 
@@ -65,7 +58,7 @@ function addIonicons(projectName: string): Rule {
     const ioniconsGlob = {
       glob: '**/*.svg',
       input: 'node_modules/ionicons/dist/ionicons/svg',
-      output: './svg'
+      output: './svg',
     };
     addAsset(host, projectName, 'build', ioniconsGlob);
     addAsset(host, projectName, 'test', ioniconsGlob);
@@ -79,25 +72,25 @@ function addIonicBuilder(projectName: string): Rule {
       builder: '@ionic/angular-toolkit:cordova-serve',
       options: {
         cordovaBuildTarget: `${projectName}:ionic-cordova-build`,
-        devServerTarget: `${projectName}:serve`
+        devServerTarget: `${projectName}:serve`,
       },
       configurations: {
         production: {
           cordovaBuildTarget: `${projectName}:ionic-cordova-build:production`,
-          devServerTarget: `${projectName}:serve:production`
-        }
-      }
+          devServerTarget: `${projectName}:serve:production`,
+        },
+      },
     });
     addArchitectBuilder(host, projectName, 'ionic-cordova-build', {
       builder: '@ionic/angular-toolkit:cordova-build',
       options: {
-        browserTarget: `${projectName}:build`
+        browserTarget: `${projectName}:build`,
       },
       configurations: {
         production: {
-          browserTarget: `${projectName}:build:production`
-        }
-      }
+          browserTarget: `${projectName}:build:production`,
+        },
+      },
     });
     return host;
   };
@@ -111,22 +104,17 @@ function installNodeDeps() {
 
 export default function ngAdd(options: IonAddOptions): Rule {
   return (host: Tree) => {
-    const workspace  = getWorkspace(host);
+    const workspace = getWorkspace(host);
     if (!options.project) {
       options.project = getDefaultAngularAppName(workspace);
     }
     const project = workspace.projects.get(options.project);
 
     if (!project || project.extensions.projectType !== 'application') {
-      throw new SchematicsException(
-        `Ionic Add requires a project type of "application".`
-      );
+      throw new SchematicsException(`Ionic Add requires a project type of "application".`);
     }
     const sourcePath: Path = join(project.sourceRoot as Path);
-    const rootTemplateSource = apply(url('./files/root'), [
-      template({ ...options }),
-      move(sourcePath)
-    ]);
+    const rootTemplateSource = apply(url('./files/root'), [template({ ...options }), move(sourcePath)]);
     return chain([
       // @ionic/angular
       addIonicAngularToPackageJson(),
@@ -137,7 +125,7 @@ export default function ngAdd(options: IonAddOptions): Rule {
       addIonicons(options.project),
       mergeWith(rootTemplateSource),
       // install freshly added dependencies
-      installNodeDeps()
+      installNodeDeps(),
     ]);
   };
 }

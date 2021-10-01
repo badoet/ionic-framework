@@ -1,6 +1,8 @@
-import { SchematicsException, Tree } from '@angular-devkit/schematics';
 import { normalize } from '@angular-devkit/core';
+import type { Tree } from '@angular-devkit/schematics';
+import { SchematicsException } from '@angular-devkit/schematics';
 import * as ts from 'typescript';
+
 import { addImportToModule } from './devkit-utils/ast-utils';
 import { InsertChange } from './devkit-utils/change';
 
@@ -13,12 +15,7 @@ export function getSourceFile(host: Tree, path: string): ts.SourceFile {
     throw new SchematicsException(`Could not find file for path: ${path}`);
   }
   const content = buffer.toString();
-  const source = ts.createSourceFile(
-    path,
-    content,
-    ts.ScriptTarget.Latest,
-    true
-  );
+  const source = ts.createSourceFile(path, content, ts.ScriptTarget.Latest, true);
   return source;
 }
 
@@ -30,13 +27,8 @@ export function addModuleImportToRootModule(
   projectSourceRoot: string,
   moduleName: string,
   importSrc: string
-) {
-  addModuleImportToModule(
-    host,
-    normalize(`${projectSourceRoot}/app/app.module.ts`),
-    moduleName,
-    importSrc
-  );
+): void {
+  addModuleImportToModule(host, normalize(`${projectSourceRoot}/app/app.module.ts`), moduleName, importSrc);
 }
 
 /**
@@ -46,17 +38,12 @@ export function addModuleImportToRootModule(
  * @param moduleName name of module to import
  * @param src src location to import
  */
-export function addModuleImportToModule(
-  host: Tree,
-  modulePath: string,
-  moduleName: string,
-  src: string
-) {
+export function addModuleImportToModule(host: Tree, modulePath: string, moduleName: string, src: string): void {
   const moduleSource = getSourceFile(host, modulePath);
   const changes = addImportToModule(moduleSource, modulePath, moduleName, src);
   const recorder = host.beginUpdate(modulePath);
 
-  changes.forEach(change => {
+  changes.forEach((change) => {
     if (change instanceof InsertChange) {
       recorder.insertLeft(change.pos, change.toAdd);
     }

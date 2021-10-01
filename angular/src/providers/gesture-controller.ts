@@ -1,5 +1,7 @@
-import { Injectable, NgZone } from '@angular/core';
-import { Gesture, GestureConfig, createGesture } from '@ionic/core';
+import type { NgZone } from '@angular/core';
+import { Injectable } from '@angular/core';
+import type { Gesture, GestureConfig } from '@ionic/core';
+import { createGesture } from '@ionic/core';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +13,7 @@ export class GestureController {
    */
   create(opts: GestureConfig, runInsideAngularZone = false): Gesture {
     if (runInsideAngularZone) {
-      Object.getOwnPropertyNames(opts).forEach(key => {
+      Object.getOwnPropertyNames(opts).forEach((key) => {
         if (typeof opts[key] === 'function') {
           const fn = opts[key];
           opts[key] = (...props: any[]) => this.zone.run(() => fn(...props));

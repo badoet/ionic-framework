@@ -1,15 +1,31 @@
-import { ComponentFactoryResolver, Directive, ElementRef, Injector, ViewContainerRef } from '@angular/core';
+import type { ComponentFactoryResolver, ElementRef, Injector, ViewContainerRef } from '@angular/core';
+import { Directive } from '@angular/core';
 
-import { AngularDelegate } from '../../providers/angular-delegate';
+import type { AngularDelegate } from '../../providers/angular-delegate';
 import { ProxyCmp, proxyOutputs } from '../proxies-utils';
 
 @ProxyCmp({
   inputs: ['animated', 'animation', 'root', 'rootParams', 'swipeGesture'],
-  methods: ['push', 'insert', 'insertPages', 'pop', 'popTo', 'popToRoot', 'removeIndex', 'setRoot', 'setPages', 'getActive', 'getByIndex', 'canGoBack', 'getPrevious']
+  methods: [
+    'push',
+    'insert',
+    'insertPages',
+    'pop',
+    'popTo',
+    'popToRoot',
+    'removeIndex',
+    'setRoot',
+    'setPages',
+    'getActive',
+    'getByIndex',
+    'canGoBack',
+    'getPrevious',
+  ],
 })
 @Directive({
-  selector: 'ion-nav'
+  selector: 'ion-nav',
 })
+// eslint-disable-next-line @angular-eslint/directive-class-suffix
 export class NavDelegate {
   protected el: HTMLElement;
   constructor(
@@ -21,6 +37,6 @@ export class NavDelegate {
   ) {
     this.el = ref.nativeElement;
     ref.nativeElement.delegate = angularDelegate.create(resolver, injector, location);
-    proxyOutputs(this, this.el, ['ionNavDidChange' , 'ionNavWillChange' ]);
+    proxyOutputs(this, this.el, ['ionNavDidChange', 'ionNavWillChange']);
   }
 }
