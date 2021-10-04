@@ -1,10 +1,10 @@
 import { AlertOptions, alertController } from '@ionic/core/components';
-import { IonAlert as IonAlertCmp } from '@ionic/core/components/ion-alert.js';
+import { IonAlert as IonAlertCmp } from '@ionic/core/components/syg-alert.js';
 
 import { createControllerComponent } from './createControllerComponent';
 
 export const IonAlert = /*@__PURE__*/ createControllerComponent<AlertOptions, HTMLIonAlertElement>(
-  'ion-alert',
+  'syg-alert',
   alertController,
   IonAlertCmp
 );

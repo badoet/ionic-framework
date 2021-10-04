@@ -6,5 +6,5 @@ export interface CheckboxChangeEventDetail<T = any> {
 
 export interface CheckboxCustomEvent<T = any> extends CustomEvent {
   detail: CheckboxChangeEventDetail<T>;
-  target: HTMLIonCheckboxElement;
+  target: HTMLSygCheckboxElement;
 }

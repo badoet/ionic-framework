@@ -9,98 +9,98 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>
           Select - Spec
-        </ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
+        </syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
       <h1>Floating Selects</h1>
 
       <div class="grid">
         <div class="column">
           <h2>Default</h2>
 
-          <ion-item>
-            <ion-label position="floating">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item>
+            <syg-label position="floating">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Default: Focused</h2>
 
-          <ion-item class="ion-focused">
-            <ion-label position="floating">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item class="syg-focused">
+            <syg-label position="floating">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Filled</h2>
 
-          <ion-item fill="solid">
-            <ion-label position="floating">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="solid">
+            <syg-label position="floating">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Filled: Focused</h2>
 
-          <ion-item fill="solid" class="ion-focused">
-            <ion-label position="floating">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="solid" class="syg-focused">
+            <syg-label position="floating">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Outlined</h2>
 
-          <ion-item fill="outline">
-            <ion-label position="floating">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="outline">
+            <syg-label position="floating">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Outlined: Focused</h2>
 
-          <ion-item fill="outline" class="ion-focused">
-            <ion-label position="floating">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="outline" class="syg-focused">
+            <syg-label position="floating">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
       </div>
 
@@ -112,80 +112,80 @@
         <div class="column">
           <h2>Default</h2>
 
-          <ion-item>
-            <ion-label position="stacked">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item>
+            <syg-label position="stacked">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Default: Focused</h2>
 
-          <ion-item class="ion-focused">
-            <ion-label position="stacked">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item class="syg-focused">
+            <syg-label position="stacked">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Filled</h2>
 
-          <ion-item fill="solid">
-            <ion-label position="stacked">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="solid">
+            <syg-label position="stacked">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Filled: Focused</h2>
 
-          <ion-item fill="solid" class="ion-focused">
-            <ion-label position="stacked">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="solid" class="syg-focused">
+            <syg-label position="stacked">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Outlined</h2>
 
-          <ion-item fill="outline">
-            <ion-label position="stacked">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="outline">
+            <syg-label position="stacked">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Outlined: Focused</h2>
 
-          <ion-item fill="outline" class="ion-focused">
-            <ion-label position="stacked">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="outline" class="syg-focused">
+            <syg-label position="stacked">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
       </div>
 
@@ -197,80 +197,80 @@
         <div class="column">
           <h2>Default</h2>
 
-          <ion-item>
-            <ion-label>Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item>
+            <syg-label>Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Default: Focused</h2>
 
-          <ion-item class="ion-focused">
-            <ion-label>Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item class="syg-focused">
+            <syg-label>Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Filled</h2>
 
-          <ion-item fill="solid">
-            <ion-label>Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="solid">
+            <syg-label>Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Filled: Focused</h2>
 
-          <ion-item fill="solid" class="ion-focused">
-            <ion-label>Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="solid" class="syg-focused">
+            <syg-label>Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Outlined</h2>
 
-          <ion-item fill="outline">
-            <ion-label>Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="outline">
+            <syg-label>Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Outlined: Focused</h2>
 
-          <ion-item fill="outline" class="ion-focused">
-            <ion-label>Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="outline" class="syg-focused">
+            <syg-label>Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
       </div>
 
@@ -282,80 +282,80 @@
         <div class="column">
           <h2>Default</h2>
 
-          <ion-item>
-            <ion-label position="fixed">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item>
+            <syg-label position="fixed">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Default: Focused</h2>
 
-          <ion-item class="ion-focused">
-            <ion-label position="fixed">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item class="syg-focused">
+            <syg-label position="fixed">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Filled</h2>
 
-          <ion-item fill="solid">
-            <ion-label position="fixed">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="solid">
+            <syg-label position="fixed">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Filled: Focused</h2>
 
-          <ion-item fill="solid" class="ion-focused">
-            <ion-label position="fixed">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="solid" class="syg-focused">
+            <syg-label position="fixed">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Outlined</h2>
 
-          <ion-item fill="outline">
-            <ion-label position="fixed">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="outline">
+            <syg-label position="fixed">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
         <div class="column">
           <h2>Outlined: Focused</h2>
 
-          <ion-item fill="outline" class="ion-focused">
-            <ion-label position="fixed">Fruit</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option></ion-select-option>
-              <ion-select-option value="apple">Apple</ion-select-option>
-              <ion-select-option value="orange">Orange</ion-select-option>
-              <ion-select-option value="banana">Banana</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item fill="outline" class="syg-focused">
+            <syg-label position="fixed">Fruit</syg-label>
+            <syg-select interface="popover">
+              <syg-select-option></syg-select-option>
+              <syg-select-option value="apple">Apple</syg-select-option>
+              <syg-select-option value="orange">Orange</syg-select-option>
+              <syg-select-option value="banana">Banana</syg-select-option>
+            </syg-select>
+          </syg-item>
         </div>
       </div>
 
@@ -363,52 +363,52 @@
 
       <h1>Full Width Selects</h1>
 
-      <ion-list>
-        <ion-item>
-          <ion-label>Inline</ion-label>
-          <ion-select interface="popover">
-            <ion-select-option></ion-select-option>
-            <ion-select-option value="apple">Apple</ion-select-option>
-            <ion-select-option value="orange">Orange</ion-select-option>
-            <ion-select-option value="banana">Banana</ion-select-option>
-          </ion-select>
-        </ion-item>
+      <syg-list>
+        <syg-item>
+          <syg-label>Inline</syg-label>
+          <syg-select interface="popover">
+            <syg-select-option></syg-select-option>
+            <syg-select-option value="apple">Apple</syg-select-option>
+            <syg-select-option value="orange">Orange</syg-select-option>
+            <syg-select-option value="banana">Banana</syg-select-option>
+          </syg-select>
+        </syg-item>
 
 
-        <ion-item>
-          <ion-label position="fixed">Fixed</ion-label>
-          <ion-select interface="popover">
-            <ion-select-option></ion-select-option>
-            <ion-select-option value="apple">Apple</ion-select-option>
-            <ion-select-option value="orange">Orange</ion-select-option>
-            <ion-select-option value="banana">Banana</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label position="fixed">Fixed</syg-label>
+          <syg-select interface="popover">
+            <syg-select-option></syg-select-option>
+            <syg-select-option value="apple">Apple</syg-select-option>
+            <syg-select-option value="orange">Orange</syg-select-option>
+            <syg-select-option value="banana">Banana</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label position="floating">Floating</ion-label>
-          <ion-select interface="popover">
-            <ion-select-option></ion-select-option>
-            <ion-select-option value="apple">Apple</ion-select-option>
-            <ion-select-option value="orange">Orange</ion-select-option>
-            <ion-select-option value="banana">Banana</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label position="floating">Floating</syg-label>
+          <syg-select interface="popover">
+            <syg-select-option></syg-select-option>
+            <syg-select-option value="apple">Apple</syg-select-option>
+            <syg-select-option value="orange">Orange</syg-select-option>
+            <syg-select-option value="banana">Banana</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label position="stacked">Stacked</ion-label>
-          <ion-select interface="popover">
-            <ion-select-option></ion-select-option>
-            <ion-select-option value="apple">Apple</ion-select-option>
-            <ion-select-option value="orange">Orange</ion-select-option>
-            <ion-select-option value="banana">Banana</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+        <syg-item>
+          <syg-label position="stacked">Stacked</syg-label>
+          <syg-select interface="popover">
+            <syg-select-option></syg-select-option>
+            <syg-select-option value="apple">Apple</syg-select-option>
+            <syg-select-option value="orange">Orange</syg-select-option>
+            <syg-select-option value="banana">Banana</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
       <div class="margin-bottom-extra"></div>
-    </ion-content>
-  </ion-app>
+    </syg-content>
+  </syg-app>
 
   <style>
     h1 {

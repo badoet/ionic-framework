@@ -1,6 +1,6 @@
 import { Animation } from '../../interface';
 import { createAnimation } from '../animation/animation';
-import { TransitionOptions, getIonPageElement } from '../transition';
+import { TransitionOptions, getSygPageElement } from '../transition';
 
 export const mdTransitionAnimation = (_: HTMLElement, opts: TransitionOptions): Animation => {
   const OFF_BOTTOM = '40px';
@@ -10,14 +10,14 @@ export const mdTransitionAnimation = (_: HTMLElement, opts: TransitionOptions): 
   const enteringEl = opts.enteringEl;
   const leavingEl = opts.leavingEl;
 
-  const ionPageElement = getIonPageElement(enteringEl);
-  const enteringToolbarEle = ionPageElement.querySelector('ion-toolbar');
+  const ionPageElement = getSygPageElement(enteringEl);
+  const enteringToolbarEle = ionPageElement.querySelector('syg-toolbar');
   const rootTransition = createAnimation();
 
   rootTransition
     .addElement(ionPageElement)
     .fill('both')
-    .beforeRemoveClass('ion-page-invisible');
+    .beforeRemoveClass('syg-page-invisible');
 
   // animate the component itself
   if (backDirection) {
@@ -49,7 +49,7 @@ export const mdTransitionAnimation = (_: HTMLElement, opts: TransitionOptions): 
 
     const leavingPage = createAnimation();
     leavingPage
-      .addElement(getIonPageElement(leavingEl))
+      .addElement(getSygPageElement(leavingEl))
       .onFinish(currentStep => {
         if (currentStep === 1 && leavingPage.elements.length > 0) {
           leavingPage.elements[0].style.setProperty('display', 'none');

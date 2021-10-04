@@ -1,70 +1,70 @@
 ```html
-<ion-app>
-  <ion-menu side="start" menu-id="first" content-id="main">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+<syg-app>
+  <syg-menu side="start" menu-id="first" content-id="main">
+    <syg-header>
+      <syg-toolbar color="primary">
+        <syg-title>Start Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-menu>
 
-  <ion-menu side="start" menu-id="custom" class="my-custom-menu" content-id="main">
-    <ion-header>
-      <ion-toolbar color="tertiary">
-        <ion-title>Custom Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <syg-menu side="start" menu-id="custom" class="my-custom-menu" content-id="main">
+    <syg-header>
+      <syg-toolbar color="tertiary">
+        <syg-title>Custom Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-menu>
 
-  <ion-menu side="end" type="push" content-id="main">
-    <ion-header>
-      <ion-toolbar color="danger">
-        <ion-title>End Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <syg-menu side="end" type="push" content-id="main">
+    <syg-header>
+      <syg-toolbar color="danger">
+        <syg-title>End Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-menu>
 
-  <div class="ion-page" id="main">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <ion-button expand="block" onclick="openFirst()">Open Start Menu</ion-button>
-      <ion-button expand="block" onclick="openEnd()">Open End Menu</ion-button>
-      <ion-button expand="block" onclick="openCustom()">Open Custom Menu</ion-button>
-    </ion-content>
+  <div class="syg-page" id="main">
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Menu - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content class="syg-padding">
+      <syg-button expand="block" onclick="openFirst()">Open Start Menu</syg-button>
+      <syg-button expand="block" onclick="openEnd()">Open End Menu</syg-button>
+      <syg-button expand="block" onclick="openCustom()">Open Custom Menu</syg-button>
+    </syg-content>
   </div>
 
-</ion-app>
+</syg-app>
 ```
 
 ```javascript

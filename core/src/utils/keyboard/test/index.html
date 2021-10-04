@@ -18,37 +18,37 @@
       background: blue;
     }
 
-    ion-footer {
+    syg-footer {
       transition: all 0.5s cubic-bezier(0.38, 0.7, 0.128, 1);
     }
   </style>
 </head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>App - Keyboard</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar color="primary">
+        <syg-title>App - Keyboard</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
+    <syg-content>
       <f></f>
       <f></f>
       <f></f>
       <f></f>
-    </ion-content>
+    </syg-content>
 
-    <ion-footer>
-      <ion-toolbar>
-        <ion-input type="text" placeholder="Enter some text..."></ion-input>
-        <ion-input type="text" placeholder="Enter some text..."></ion-input>
-      </ion-toolbar>
-    </ion-footer>
-  </ion-app>
+    <syg-footer>
+      <syg-toolbar>
+        <syg-input type="text" placeholder="Enter some text..."></syg-input>
+        <syg-input type="text" placeholder="Enter some text..."></syg-input>
+      </syg-toolbar>
+    </syg-footer>
+  </syg-app>
 
   <script>
-    const input = document.querySelector('ion-footer');
+    const input = document.querySelector('syg-footer');
 
     window.addEventListener('ionKeyboardDidShow', (e) => {
       console.log('ionKeyboardDidShow');

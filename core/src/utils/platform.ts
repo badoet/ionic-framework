@@ -20,11 +20,11 @@ export const isPlatform: IsPlatformSignature = (winOrPlatform: Window | Platform
 export const setupPlatforms = (win: any = window) => {
   if (typeof win === 'undefined') { return []; }
 
-  win.Ionic = win.Ionic || {};
+  win.Sygic = win.Sygic || {};
 
-  let platforms: Platforms[] | undefined | null = win.Ionic.platforms;
+  let platforms: Platforms[] | undefined | null = win.Sygic.platforms;
   if (platforms == null) {
-    platforms = win.Ionic.platforms = detectPlatforms(win);
+    platforms = win.Sygic.platforms = detectPlatforms(win);
     platforms.forEach(p => win.document.documentElement.classList.add(`plt-${p}`));
   }
   return platforms;

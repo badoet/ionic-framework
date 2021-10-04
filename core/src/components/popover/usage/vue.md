@@ -1,8 +1,8 @@
 ```html
 <template>
-  <ion-content class="ion-padding">
+  <syg-content class="syg-padding">
     Popover Content
-  </ion-content>
+  </syg-content>
 </template>
 
 <script>
@@ -18,11 +18,11 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="openPopover">Open Popover</ion-button>
-    </ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="openPopover">Open Popover</syg-button>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -54,8 +54,8 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true, $event)">Show Popover</ion-button>
-  <ion-popover
+  <syg-button @click="setOpen(true, $event)">Show Popover</syg-button>
+  <syg-popover
     :is-open="isOpenRef"
     css-class="my-custom-class"
     :event="event"
@@ -63,7 +63,7 @@ Developers can also use this component directly in their template:
     @didDismiss="setOpen(false)"
   >
     <Popover></Popover>
-  </ion-popover>
+  </syg-popover>
 </template>
 
 <script>

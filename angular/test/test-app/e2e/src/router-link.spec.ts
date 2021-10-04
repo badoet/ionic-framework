@@ -72,7 +72,7 @@ describe('Router Link', () => {
   });
 
   describe('forward', () => {
-    it('should go forward with ion-button[routerLink]', () => {
+    it('should go forward with syg-button[routerLink]', () => {
       cy.get('#routerLink').click();
       testForward();
     });
@@ -94,7 +94,7 @@ describe('Router Link', () => {
   });
 
   describe('root', () => {
-    it('should go root with ion-button[routerLink][routerDirection=root]', () => {
+    it('should go root with syg-button[routerLink][routerDirection=root]', () => {
       cy.get('#routerLink-root').click();
       testRoot();
     });
@@ -111,7 +111,7 @@ describe('Router Link', () => {
   });
 
   describe('back', () => {
-    it('should go back with ion-button[routerLink][routerDirection=back]', () => {
+    it('should go back with syg-button[routerLink][routerDirection=back]', () => {
       cy.get('#routerLink-back').click();
     });
 

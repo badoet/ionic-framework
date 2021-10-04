@@ -1,5 +1,5 @@
 // Components interfaces
-import { Components as IoniconsComponents, JSX as IoniconsJSX } from 'ionicons';
+import { Components as SygiconsComponents, JSX as SygiconsJSX } from 'ionicons';
 export * from './components';
 export * from './index';
 export * from './components/accordion-group/accordion-group-interface';
@@ -44,7 +44,7 @@ export { Gesture, GestureConfig, GestureDetail } from './utils/gesture';
 // From: https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete
 export type AutocompleteTypes = (
 | 'on' | 'off' | 'name' | 'honorific-prefix' | 'given-name' | 'additional-name' | 'family-name' | 'honorific-suffix'
-| 'nickname' | 'email' | 'username' | 'new-password' | 'current-password' | 'one-time-code' | 'organization-title' | 'organization'
+| 'nickname' | 'email' | 'username' | 'new-password' | 'current-password' | 'one-time-code' | 'organizatsyg-title' | 'organization'
 | 'street-address' | 'address-line1' | 'address-line2' | 'address-line3' | 'address-level4' | 'address-level3' | 'address-level2'
 | 'address-level1' | 'country' | 'country-name' | 'postal-code' | 'cc-name' | 'cc-given-name' | 'cc-additional-name' | 'cc-family-name'
 | 'cc-family-name' | 'cc-number' | 'cc-exp' | 'cc-exp-month' | 'cc-exp-year' | 'cc-csc' | 'cc-type' | 'transaction-currency' | 'transaction-amount'
@@ -84,12 +84,12 @@ export { NavComponentWithProps } from "./components/nav/nav-interface";
 
 declare module "./components" {
   export namespace Components {
-    export interface IonIcon extends IoniconsComponents.IonIcon{}
+    export interface SygIcon extends SygiconsComponents.IonIcon {}
   }
 }
 
 declare module "./components" {
   export namespace JSX {
-    export interface IonIcon extends IoniconsJSX.IonIcon {}
+    export interface SygIcon extends SygiconsJSX.IonIcon {}
   }
 }

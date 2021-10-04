@@ -1,6 +1,6 @@
-# ion-title
+# syg-title
 
-`ion-title` is a component that sets the title of the `Toolbar`.
+`syg-title` is a component that sets the title of the `Toolbar`.
 
 <!-- Auto Generated Below -->
 
@@ -11,98 +11,98 @@
 
 ```html
 <!-- Default title -->
-<ion-toolbar>
-  <ion-title>Default Title</ion-title>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-title>Default Title</syg-title>
+</syg-toolbar>
 
 <!-- Small title above a default title -->
-<ion-toolbar>
-  <ion-title size="small">Small Title above a Default Title</ion-title>
-</ion-toolbar>
-<ion-toolbar>
-  <ion-title>Default Title</ion-title>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-title size="small">Small Title above a Default Title</syg-title>
+</syg-toolbar>
+<syg-toolbar>
+  <syg-title>Default Title</syg-title>
+</syg-toolbar>
 
 <!-- Large title -->
-<ion-toolbar>
-  <ion-title size="large">Large Title</ion-title>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-title size="large">Large Title</syg-title>
+</syg-toolbar>
 ```
 
 ### Collapsible Large Titles
 
-Ionic provides a way to create the collapsible titles that exist on stock iOS apps. Getting this setup requires configuring your `ion-title`, `ion-header`, and (optionally) `ion-buttons` elements.
+Ionic provides a way to create the collapsible titles that exist on stock iOS apps. Getting this setup requires configuring your `syg-title`, `syg-header`, and (optionally) `syg-buttons` elements.
 
 ```html
-<ion-header translucent="true">
-  <ion-toolbar>
-    <ion-title>Settings</ion-title>
-  </ion-toolbar>
-</ion-header>
+<syg-header translucent="true">
+  <syg-toolbar>
+    <syg-title>Settings</syg-title>
+  </syg-toolbar>
+</syg-header>
 
-<ion-content fullscreen="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Settings</ion-title>
-    </ion-toolbar>
-    <ion-toolbar>
-      <ion-searchbar></ion-searchbar>
-    </ion-toolbar>
-  </ion-header>
+<syg-content fullscreen="true">
+  <syg-header collapse="condense">
+    <syg-toolbar>
+      <syg-title size="large">Settings</syg-title>
+    </syg-toolbar>
+    <syg-toolbar>
+      <syg-searchbar></syg-searchbar>
+    </syg-toolbar>
+  </syg-header>
 
   ...
 
-</ion-content>
+</syg-content>
 ```
 
-In the example above, notice there are two `ion-header` elements. The first `ion-header` represents the "collapsed" state of your collapsible header, and the second `ion-header` represents the "expanded" state of your collapsible header. Notice that the second `ion-header` must have `collapse="condense"` and must exist within `ion-content`. Additionally, in order to get the large title styling, `ion-title` must have `size="large"`.
+In the example above, notice there are two `syg-header` elements. The first `syg-header` represents the "collapsed" state of your collapsible header, and the second `syg-header` represents the "expanded" state of your collapsible header. Notice that the second `syg-header` must have `collapse="condense"` and must exist within `syg-content`. Additionally, in order to get the large title styling, `syg-title` must have `size="large"`.
 
 ```html
-<ion-header translucent="true">
-  <ion-toolbar>
-    <ion-buttons collapse="true" slot="end">
-      <ion-button>Click Me</ion-button>
-    </ion-buttons>
-    <ion-title>Settings</ion-title>
-  </ion-toolbar>
-</ion-header>
+<syg-header translucent="true">
+  <syg-toolbar>
+    <syg-buttons collapse="true" slot="end">
+      <syg-button>Click Me</syg-button>
+    </syg-buttons>
+    <syg-title>Settings</syg-title>
+  </syg-toolbar>
+</syg-header>
 
-<ion-content fullscreen="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-buttons collapse="true" slot="end">
-        <ion-button>Click Me</ion-button>
-      </ion-buttons>
-      <ion-title size="large">Settings</ion-title>
-    </ion-toolbar>
-    <ion-toolbar>
-      <ion-searchbar></ion-searchbar>
-    </ion-toolbar>
-  </ion-header>
+<syg-content fullscreen="true">
+  <syg-header collapse="condense">
+    <syg-toolbar>
+      <syg-buttons collapse="true" slot="end">
+        <syg-button>Click Me</syg-button>
+      </syg-buttons>
+      <syg-title size="large">Settings</syg-title>
+    </syg-toolbar>
+    <syg-toolbar>
+      <syg-searchbar></syg-searchbar>
+    </syg-toolbar>
+  </syg-header>
 
   ...
 
-</ion-content>
+</syg-content>
 ```
 
-In this example, notice that we have added two sets of `ion-buttons` both with `collapse` set to `true`. When the secondary header collapses, the buttons in the secondary header will hide, and the buttons in the primary header will show. This is useful for ensuring that your header buttons always appear next to an `ion-title` element.
+In this example, notice that we have added two sets of `syg-buttons` both with `collapse` set to `true`. When the secondary header collapses, the buttons in the secondary header will hide, and the buttons in the primary header will show. This is useful for ensuring that your header buttons always appear next to an `syg-title` element.
 
-`ion-buttons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `ion-buttons` elements inside of `ion-content`, the `ion-buttons` elements should always be placed in the `end` slot.
+`syg-buttons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `syg-buttons` elements inside of `syg-content`, the `syg-buttons` elements should always be placed in the `end` slot.
 
-> When using collapsible large titles, it is required that `fullscreen` is set to `true` on `ion-content` and `translucent` is set to `true` on the main `ion-header`.
+> When using collapsible large titles, it is required that `fullscreen` is set to `true` on `syg-content` and `translucent` is set to `true` on the main `syg-header`.
 
 ### Styling Collapsible Large Titles
 
-The collapsible large title should appear seamless in relation to the rest of your content. This means that the background color of the `ion-toolbar` that contains the collapsible large title should always match the background color of `ion-content`. 
+The collapsible large title should appear seamless in relation to the rest of your content. This means that the background color of the `syg-toolbar` that contains the collapsible large title should always match the background color of `syg-content`. 
 
-By default, the `ion-toolbar` that contains the standard title is hidden using `opacity: 0` and is progressively shown as you collapse the large title by scrolling. As a result, the background color that you see behind the standard title is actually the background color of `ion-content`.
+By default, the `syg-toolbar` that contains the standard title is hidden using `opacity: 0` and is progressively shown as you collapse the large title by scrolling. As a result, the background color that you see behind the standard title is actually the background color of `syg-content`.
 
-You can change the background color of the toolbar with the standard title by setting the `--background` CSS variable on `ion-toolbar`. This will give the effect of the header changing color as you collapse the large title.
+You can change the background color of the toolbar with the standard title by setting the `--background` CSS variable on `syg-toolbar`. This will give the effect of the header changing color as you collapse the large title.
 
 When styling the text color of the large title, you should target the large title globally as opposed to within the context of a particular page or tab, otherwise its styles will not be applied during the navigation animation.
 
 ```css
-ion-title.large-title {
+syg-title.large-title {
   color: purple;
   font-size: 30px;
 }
@@ -225,7 +225,7 @@ export const LargeTitleExample: React.FC = () => (
 
 In this example, notice that we have added two sets of `IonButtons` both with `collapse` set to `true`. When the secondary header collapses, the buttons in the secondary header will hide, and the buttons in the primary header will show. This is useful for ensuring that your header buttons always appear next to an `IonTitle` element.
 
-`IonButtons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `ion-buttons` elements inside of `ion-content`, the `ion-buttons` elements should always be placed in the `end` slot.
+`IonButtons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `syg-buttons` elements inside of `syg-content`, the `syg-buttons` elements should always be placed in the `end` slot.
 
 > When using collapsible large titles, it is required that `fullscreen` is set to `true` on `IonContent` and `translucent="true"` be set on the main `IonHeader`.
 
@@ -240,7 +240,7 @@ You can change the background color of the toolbar with the standard title by se
 When styling the text color of the large title, you should target the large title globally as opposed to within the context of a particular page or tab, otherwise its styles will not be applied during the navigation animation.
 
 ```css
-ion-title.large-title {
+syg-title.large-title {
   color: purple;
   font-size: 30px;
 }
@@ -260,22 +260,22 @@ export class TitleExample {
   render() {
     return [
       // Default title
-      <ion-toolbar>
-        <ion-title>Default Title</ion-title>
-      </ion-toolbar>,
+      <syg-toolbar>
+        <syg-title>Default Title</syg-title>
+      </syg-toolbar>,
 
       // Small title above a default title
-      <ion-toolbar>
-        <ion-title size="small">Small Title above a Default Title</ion-title>
-      </ion-toolbar>,
-      <ion-toolbar>
-        <ion-title>Default Title</ion-title>
-      </ion-toolbar>,
+      <syg-toolbar>
+        <syg-title size="small">Small Title above a Default Title</syg-title>
+      </syg-toolbar>,
+      <syg-toolbar>
+        <syg-title>Default Title</syg-title>
+      </syg-toolbar>,
 
       // Large title
-      <ion-toolbar>
-        <ion-title size="large">Large Title</ion-title>
-      </ion-toolbar>
+      <syg-toolbar>
+        <syg-title size="large">Large Title</syg-title>
+      </syg-toolbar>
     ];
   }
 }
@@ -284,7 +284,7 @@ export class TitleExample {
 
 ### Collapsible Large Titles
 
-Ionic provides a way to create the collapsible titles that exist on stock iOS apps. Getting this setup requires configuring your `ion-title`, `ion-header`, and (optionally) `ion-buttons` elements.
+Ionic provides a way to create the collapsible titles that exist on stock iOS apps. Getting this setup requires configuring your `syg-title`, `syg-header`, and (optionally) `syg-buttons` elements.
 
 ```tsx
 import { Component, h } from '@stencil/core';
@@ -296,31 +296,31 @@ import { Component, h } from '@stencil/core';
 export class TitleExample {
   render() {
     return [
-      <ion-header translucent={true}>
-        <ion-toolbar>
-          <ion-title>Settings</ion-title>
-        </ion-toolbar>
-      </ion-header>,
+      <syg-header translucent={true}>
+        <syg-toolbar>
+          <syg-title>Settings</syg-title>
+        </syg-toolbar>
+      </syg-header>,
 
-      <ion-content fullscreen={true}>
-        <ion-header collapse="condense">
-          <ion-toolbar>
-            <ion-title size="large">Settings</ion-title>
-          </ion-toolbar>
-          <ion-toolbar>
-            <ion-searchbar></ion-searchbar>
-          </ion-toolbar>
-        </ion-header>
+      <syg-content fullscreen={true}>
+        <syg-header collapse="condense">
+          <syg-toolbar>
+            <syg-title size="large">Settings</syg-title>
+          </syg-toolbar>
+          <syg-toolbar>
+            <syg-searchbar></syg-searchbar>
+          </syg-toolbar>
+        </syg-header>
 
         ...
 
-      </ion-content>
+      </syg-content>
     ];
   }
 }
 ```
 
-In the example above, notice there are two `ion-header` elements. The first `ion-header` represents the "collapsed" state of your collapsible header, and the second `ion-header` represents the "expanded" state of your collapsible header. Notice that the second `ion-header` must have `collapse="condense"` and must exist within `ion-content`. Additionally, in order to get the large title styling, `ion-title` must have `size="large"`.
+In the example above, notice there are two `syg-header` elements. The first `syg-header` represents the "collapsed" state of your collapsible header, and the second `syg-header` represents the "expanded" state of your collapsible header. Notice that the second `syg-header` must have `collapse="condense"` and must exist within `syg-content`. Additionally, in order to get the large title styling, `syg-title` must have `size="large"`.
 
 ```tsx
 import { Component, h } from '@stencil/core';
@@ -332,56 +332,56 @@ import { Component, h } from '@stencil/core';
 export class TitleExample {
   render() {
     return [
-      <ion-header translucent={true}>
-        <ion-toolbar>
-          <ion-buttons collapse={true} slot="end">
-            <ion-button>Click Me</ion-button>
-          </ion-buttons>
-          <ion-title>Settings</ion-title>
-        </ion-toolbar>
-      </ion-header>,
+      <syg-header translucent={true}>
+        <syg-toolbar>
+          <syg-buttons collapse={true} slot="end">
+            <syg-button>Click Me</syg-button>
+          </syg-buttons>
+          <syg-title>Settings</syg-title>
+        </syg-toolbar>
+      </syg-header>,
 
-      <ion-content fullscreen={true}>
-        <ion-header collapse="condense">
-          <ion-toolbar>
-            <ion-buttons collapse={true} slot="end">
-              <ion-button>Click Me</ion-button>
-            </ion-buttons>
-            <ion-title size="large">Settings</ion-title>
-          </ion-toolbar>
-          <ion-toolbar>
-            <ion-searchbar></ion-searchbar>
-          </ion-toolbar>
-        </ion-header>
+      <syg-content fullscreen={true}>
+        <syg-header collapse="condense">
+          <syg-toolbar>
+            <syg-buttons collapse={true} slot="end">
+              <syg-button>Click Me</syg-button>
+            </syg-buttons>
+            <syg-title size="large">Settings</syg-title>
+          </syg-toolbar>
+          <syg-toolbar>
+            <syg-searchbar></syg-searchbar>
+          </syg-toolbar>
+        </syg-header>
 
         ...
 
-      </ion-content>
+      </syg-content>
     ];
   }
 }
 ```
 
-In this example, notice that we have added two sets of `ion-buttons` both with `collapse` set to `true`. When the secondary header collapses, the buttons in the secondary header will hide, and the buttons in the primary header will show. This is useful for ensuring that your header buttons always appear next to an `ion-title` element.
+In this example, notice that we have added two sets of `syg-buttons` both with `collapse` set to `true`. When the secondary header collapses, the buttons in the secondary header will hide, and the buttons in the primary header will show. This is useful for ensuring that your header buttons always appear next to an `syg-title` element.
 
-`ion-buttons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `ion-buttons` elements inside of `ion-content`, the `ion-buttons` elements should always be placed in the `end` slot.
+`syg-buttons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `syg-buttons` elements inside of `syg-content`, the `syg-buttons` elements should always be placed in the `end` slot.
 
 When styling the large title, you should target the large title globally as opposed to within the context of a particular page or tab, otherwise its styles will not be applied during the navigation animation.
 
-> When using collapsible large titles, it is required that `fullscreen` is set to `true` on `ion-content` and `translucent` is set to `true` on the main `ion-header`.
+> When using collapsible large titles, it is required that `fullscreen` is set to `true` on `syg-content` and `translucent` is set to `true` on the main `syg-header`.
 
 ### Styling Collapsible Large Titles
 
-The collapsible large title should appear seamless in relation to the rest of your content. This means that the background color of the `ion-toolbar` that contains the collapsible large title should always match the background color of `ion-content`. 
+The collapsible large title should appear seamless in relation to the rest of your content. This means that the background color of the `syg-toolbar` that contains the collapsible large title should always match the background color of `syg-content`. 
 
-By default, the `ion-toolbar` that contains the standard title is hidden using `opacity: 0` and is progressively shown as you collapse the large title by scrolling. As a result, the background color that you see behind the standard title is actually the background color of `ion-content`.
+By default, the `syg-toolbar` that contains the standard title is hidden using `opacity: 0` and is progressively shown as you collapse the large title by scrolling. As a result, the background color that you see behind the standard title is actually the background color of `syg-content`.
 
-You can change the background color of the toolbar with the standard title by setting the `--background` CSS variable on `ion-toolbar`. This will give the effect of the header changing color as you collapse the large title.
+You can change the background color of the toolbar with the standard title by setting the `--background` CSS variable on `syg-toolbar`. This will give the effect of the header changing color as you collapse the large title.
 
 When styling the text color of the large title, you should target the large title globally as opposed to within the context of a particular page or tab, otherwise its styles will not be applied during the navigation animation.
 
 ```css
-ion-title.large-title {
+syg-title.large-title {
   color: purple;
   font-size: 30px;
 }
@@ -393,22 +393,22 @@ ion-title.large-title {
 ```html
 <template>
   <!-- Default title -->
-  <ion-toolbar>
-    <ion-title>Default Title</ion-title>
-  </ion-toolbar>
+  <syg-toolbar>
+    <syg-title>Default Title</syg-title>
+  </syg-toolbar>
 
   <!-- Small title -->
-  <ion-toolbar>
-    <ion-title size="small">Small Title above a Default Title</ion-title>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-title>Default Title</ion-title>
-  </ion-toolbar>
+  <syg-toolbar>
+    <syg-title size="small">Small Title above a Default Title</syg-title>
+  </syg-toolbar>
+  <syg-toolbar>
+    <syg-title>Default Title</syg-title>
+  </syg-toolbar>
 
   <!-- Large title -->
-  <ion-toolbar>
-    <ion-title size="large">Large Title</ion-title>
-  </ion-toolbar>
+  <syg-toolbar>
+    <syg-title size="large">Large Title</syg-title>
+  </syg-toolbar>
 </template>
 
 <script>
@@ -423,29 +423,29 @@ export default defineComponent({
 
 ### Collapsible Large Titles
 
-Ionic provides a way to create the collapsible titles that exist on stock iOS apps. Getting this setup requires configuring your `ion-title`, `ion-header`, and (optionally) `ion-buttons` elements.
+Ionic provides a way to create the collapsible titles that exist on stock iOS apps. Getting this setup requires configuring your `syg-title`, `syg-header`, and (optionally) `syg-buttons` elements.
 
 ```html
 <template>
-  <ion-header :translucent="true">
-    <ion-toolbar>
-      <ion-title>Settings</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <syg-header :translucent="true">
+    <syg-toolbar>
+      <syg-title>Settings</syg-title>
+    </syg-toolbar>
+  </syg-header>
 
-  <ion-content :fullscreen="true">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">Settings</ion-title>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-searchbar></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+  <syg-content :fullscreen="true">
+    <syg-header collapse="condense">
+      <syg-toolbar>
+        <syg-title size="large">Settings</syg-title>
+      </syg-toolbar>
+      <syg-toolbar>
+        <syg-searchbar></syg-searchbar>
+      </syg-toolbar>
+    </syg-header>
 
     ...
 
-  </ion-content>
+  </syg-content>
 </template>
 
 <script>
@@ -470,35 +470,35 @@ export default defineComponent({
 </script>
 ```
 
-In the example above, notice there are two `ion-header` elements. The first `ion-header` represents the "collapsed" state of your collapsible header, and the second `ion-header` represents the "expanded" state of your collapsible header. Notice that the second `ion-header` must have `collapse="condense"` and must exist within `ion-content`. Additionally, in order to get the large title styling, `ion-title` must have `size="large"`.
+In the example above, notice there are two `syg-header` elements. The first `syg-header` represents the "collapsed" state of your collapsible header, and the second `syg-header` represents the "expanded" state of your collapsible header. Notice that the second `syg-header` must have `collapse="condense"` and must exist within `syg-content`. Additionally, in order to get the large title styling, `syg-title` must have `size="large"`.
 
 ```html
 <template>
-  <ion-header :translucent="true">
-    <ion-toolbar>
-      <ion-buttons :collapse="true" slot="end">
-        <ion-button>Click Me</ion-button>
-      </ion-buttons>
-      <ion-title>Settings</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <syg-header :translucent="true">
+    <syg-toolbar>
+      <syg-buttons :collapse="true" slot="end">
+        <syg-button>Click Me</syg-button>
+      </syg-buttons>
+      <syg-title>Settings</syg-title>
+    </syg-toolbar>
+  </syg-header>
 
-  <ion-content :fullscreen="true">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-buttons :collapse="true" slot="end">
-          <ion-button>Click Me</ion-button>
-        </ion-buttons>
-        <ion-title size="large">Settings</ion-title>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-searchbar></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+  <syg-content :fullscreen="true">
+    <syg-header collapse="condense">
+      <syg-toolbar>
+        <syg-buttons :collapse="true" slot="end">
+          <syg-button>Click Me</syg-button>
+        </syg-buttons>
+        <syg-title size="large">Settings</syg-title>
+      </syg-toolbar>
+      <syg-toolbar>
+        <syg-searchbar></syg-searchbar>
+      </syg-toolbar>
+    </syg-header>
 
     ...
 
-  </ion-content>
+  </syg-content>
 </template>
 
 <script>
@@ -527,24 +527,24 @@ export default defineComponent({
 </script>
 ```
 
-In this example, notice that we have added two sets of `ion-buttons` both with `collapse` set to `true`. When the secondary header collapses, the buttons in the secondary header will hide, and the buttons in the primary header will show. This is useful for ensuring that your header buttons always appear next to an `ion-title` element.
+In this example, notice that we have added two sets of `syg-buttons` both with `collapse` set to `true`. When the secondary header collapses, the buttons in the secondary header will hide, and the buttons in the primary header will show. This is useful for ensuring that your header buttons always appear next to an `syg-title` element.
 
-`ion-buttons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `ion-buttons` elements inside of `ion-content`, the `ion-buttons` elements should always be placed in the `end` slot.
+`syg-buttons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `syg-buttons` elements inside of `syg-content`, the `syg-buttons` elements should always be placed in the `end` slot.
 
-> When using collapsible large titles, it is required that `fullscreen` is set to `true` on `ion-content` and `translucent` is set to `true` on the main `ion-header`.
+> When using collapsible large titles, it is required that `fullscreen` is set to `true` on `syg-content` and `translucent` is set to `true` on the main `syg-header`.
 
 ### Styling Collapsible Large Titles
 
-The collapsible large title should appear seamless in relation to the rest of your content. This means that the background color of the `ion-toolbar` that contains the collapsible large title should always match the background color of `ion-content`. 
+The collapsible large title should appear seamless in relation to the rest of your content. This means that the background color of the `syg-toolbar` that contains the collapsible large title should always match the background color of `syg-content`. 
 
-By default, the `ion-toolbar` that contains the standard title is hidden using `opacity: 0` and is progressively shown as you collapse the large title by scrolling. As a result, the background color that you see behind the standard title is actually the background color of `ion-content`.
+By default, the `syg-toolbar` that contains the standard title is hidden using `opacity: 0` and is progressively shown as you collapse the large title by scrolling. As a result, the background color that you see behind the standard title is actually the background color of `syg-content`.
 
-You can change the background color of the toolbar with the standard title by setting the `--background` CSS variable on `ion-toolbar`. This will give the effect of the header changing color as you collapse the large title.
+You can change the background color of the toolbar with the standard title by setting the `--background` CSS variable on `syg-toolbar`. This will give the effect of the header changing color as you collapse the large title.
 
 When styling the text color of the large title, you should target the large title globally as opposed to within the context of a particular page or tab, otherwise its styles will not be applied during the navigation animation.
 
 ```css
-ion-title.large-title {
+syg-title.large-title {
   color: purple;
   font-size: 30px;
 }

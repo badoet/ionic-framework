@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Listen, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { BreadcrumbCollapsedClickEventDetail, Color } from '../../interface';
 import { createColorClasses, hostContext } from '../../utils/theme';
 
@@ -9,7 +9,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
  *
  */
 @Component({
-  tag: 'ion-breadcrumbs',
+  tag: 'syg-breadcrumbs',
   styleUrls: {
     'ios': 'breadcrumbs.ios.scss',
     'md': 'breadcrumbs.md.scss'
@@ -158,20 +158,20 @@ export class Breadcrumbs implements ComponentInterface {
     }
   }
 
-  private getBreadcrumbs = (): HTMLIonBreadcrumbElement[] => {
-    return Array.from(this.el.querySelectorAll('ion-breadcrumb'));
+  private getBreadcrumbs = (): HTMLSygBreadcrumbElement[] => {
+    return Array.from(this.el.querySelectorAll('syg-breadcrumb'));
   }
 
   render() {
     const { color, collapsed } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     return (
       <Host
         class={createColorClasses(color, {
           [mode]: true,
-          'in-toolbar': hostContext('ion-toolbar', this.el),
-          'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
+          'in-toolbar': hostContext('syg-toolbar', this.el),
+          'in-toolbar-color': hostContext('syg-toolbar[color]', this.el),
           'breadcrumbs-collapsed': collapsed,
         })}
       >

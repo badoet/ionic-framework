@@ -8,15 +8,15 @@ import { Component, h } from '@stencil/core';
 export class SelectOptionExample {
   render() {
     return [
-      <ion-item>
-        <ion-label>Select</ion-label>
-        <ion-select>
-          <ion-select-option value="brown">Brown</ion-select-option>
-          <ion-select-option value="blonde">Blonde</ion-select-option>
-          <ion-select-option value="black">Black</ion-select-option>
-          <ion-select-option value="red">Red</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Select</syg-label>
+        <syg-select>
+          <syg-select-option value="brown">Brown</syg-select-option>
+          <syg-select-option value="blonde">Blonde</syg-select-option>
+          <syg-select-option value="black">Black</syg-select-option>
+          <syg-select-option value="red">Red</syg-select-option>
+        </syg-select>
+      </syg-item>
     ];
   }
 }
@@ -38,45 +38,45 @@ export class SelectOptionExample {
 
   render() {
     return [
-      <ion-item>
-        <ion-label>Select: Alert Interface</ion-label>
-        <ion-select interfaceOptions={options}>
-          <ion-select-option value="brown">Brown</ion-select-option>
-          <ion-select-option value="blonde">Blonde</ion-select-option>
-          <ion-select-option value="black">Black</ion-select-option>
-          <ion-select-option value="red">Red</ion-select-option>
-        </ion-select>
-      </ion-item>,
+      <syg-item>
+        <syg-label>Select: Alert Interface</syg-label>
+        <syg-select interfaceOptions={options}>
+          <syg-select-option value="brown">Brown</syg-select-option>
+          <syg-select-option value="blonde">Blonde</syg-select-option>
+          <syg-select-option value="black">Black</syg-select-option>
+          <syg-select-option value="red">Red</syg-select-option>
+        </syg-select>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label>Select: Alert Interface (Multiple Selection)</ion-label>
-        <ion-select interfaceOptions={options} multiple={true}>
-          <ion-select-option value="brown">Brown</ion-select-option>
-          <ion-select-option value="blonde">Blonde</ion-select-option>
-          <ion-select-option value="black">Black</ion-select-option>
-          <ion-select-option value="red">Red</ion-select-option>
-        </ion-select>
-      </ion-item>,
+      <syg-item>
+        <syg-label>Select: Alert Interface (Multiple Selection)</syg-label>
+        <syg-select interfaceOptions={options} multiple={true}>
+          <syg-select-option value="brown">Brown</syg-select-option>
+          <syg-select-option value="blonde">Blonde</syg-select-option>
+          <syg-select-option value="black">Black</syg-select-option>
+          <syg-select-option value="red">Red</syg-select-option>
+        </syg-select>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label>Select: Popover Interface</ion-label>
-        <ion-select interface="popover" interfaceOptions={options}>
-          <ion-select-option value="brown">Brown</ion-select-option>
-          <ion-select-option value="blonde">Blonde</ion-select-option>
-          <ion-select-option value="black">Black</ion-select-option>
-          <ion-select-option value="red">Red</ion-select-option>
-        </ion-select>
-      </ion-item>,
+      <syg-item>
+        <syg-label>Select: Popover Interface</syg-label>
+        <syg-select interface="popover" interfaceOptions={options}>
+          <syg-select-option value="brown">Brown</syg-select-option>
+          <syg-select-option value="blonde">Blonde</syg-select-option>
+          <syg-select-option value="black">Black</syg-select-option>
+          <syg-select-option value="red">Red</syg-select-option>
+        </syg-select>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label>Select: Action Sheet Interface</ion-label>
-        <ion-select interface="action-sheet" interfaceOptions={options}>
-          <ion-select-option value="brown">Brown</ion-select-option>
-          <ion-select-option value="blonde">Blonde</ion-select-option>
-          <ion-select-option value="black">Black</ion-select-option>
-          <ion-select-option value="red">Red</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Select: Action Sheet Interface</syg-label>
+        <syg-select interface="action-sheet" interfaceOptions={options}>
+          <syg-select-option value="brown">Brown</syg-select-option>
+          <syg-select-option value="blonde">Blonde</syg-select-option>
+          <syg-select-option value="black">Black</syg-select-option>
+          <syg-select-option value="red">Red</syg-select-option>
+        </syg-select>
+      </syg-item>
     ];
   }
 }
@@ -120,7 +120,7 @@ export class SelectOptionExample {
 
 ### Customizing Individual Options
 
-To customize an individual option, set a class on the `ion-select-option`:
+To customize an individual option, set a class on the `syg-select-option`:
 
 ```tsx
 import { Component, h } from '@stencil/core';
@@ -136,15 +136,15 @@ export class SelectOptionExample {
 
   render() {
     return [
-      <ion-item>
-        <ion-label>Select</ion-label>
-        <ion-select interface="popover" interfaceOptions={options}>
-          <ion-select-option value="brown" class="brown-option">Brown</ion-select-option>
-          <ion-select-option value="blonde">Blonde</ion-select-option>
-          <ion-select-option value="black">Black</ion-select-option>
-          <ion-select-option value="red">Red</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Select</syg-label>
+        <syg-select interface="popover" interfaceOptions={options}>
+          <syg-select-option value="brown" class="brown-option">Brown</syg-select-option>
+          <syg-select-option value="blonde">Blonde</syg-select-option>
+          <syg-select-option value="black">Black</syg-select-option>
+          <syg-select-option value="red">Red</syg-select-option>
+        </syg-select>
+      </syg-item>
     ];
   }
 }

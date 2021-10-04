@@ -1,4 +1,4 @@
-# ion-loading
+# syg-loading
 
 An overlay that can be used to indicate activity while blocking user interaction. The loading indicator appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app. It includes an optional backdrop, which can be disabled by setting `showBackdrop: false` upon creation.
 
@@ -14,7 +14,7 @@ We recommend passing a custom class to `cssClass` in the `create` method and usi
 
 ```css
 /* DOES NOT WORK - not specific enough */
-ion-loading {
+syg-loading {
   color: green;
 }
 
@@ -44,7 +44,7 @@ Any of the defined [CSS Custom Properties](#css-custom-properties) can be used t
 ```typescript
 interface LoadingOptions {
   spinner?: SpinnerTypes | null;
-  message?: string | IonicSafeString;
+  message?: string | SygSafeString;
   cssClass?: string | string[];
   showBackdrop?: boolean;
   duration?: number;
@@ -118,14 +118,14 @@ export class LoadingExample {
 
 ### Style Placement
 
-In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Loading can be presented from within a page, the `ion-loading` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
+In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Loading can be presented from within a page, the `syg-loading` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
 
 
 ### Javascript
 
 ```javascript
 async function presentLoading() {
-  const loading = document.createElement('ion-loading');
+  const loading = document.createElement('syg-loading');
 
   loading.cssClass = 'my-custom-class';
   loading.message = 'Please wait...';
@@ -139,7 +139,7 @@ async function presentLoading() {
 }
 
 async function presentLoadingWithOptions() {
-  const loading = document.createElement('ion-loading');
+  const loading = document.createElement('syg-loading');
 
   loading.spinner = null;
   loading.duration = 5000;
@@ -270,10 +270,10 @@ export class LoadingExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.presentLoading()}>Present Loading</ion-button>
-        <ion-button onClick={() => this.presentLoadingWithOptions()}>Present Loading: Options</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={() => this.presentLoading()}>Present Loading</syg-button>
+        <syg-button onClick={() => this.presentLoadingWithOptions()}>Present Loading: Options</syg-button>
+      </syg-content>
     ];
   }
 }
@@ -284,9 +284,9 @@ export class LoadingExample {
 
 ```html
 <template>
-  <ion-button @click="presentLoading">Show Loading</ion-button>
+  <syg-button @click="presentLoading">Show Loading</syg-button>
   <br />
-  <ion-button @click="presentLoadingWithOptions">Show Loading</ion-button>
+  <syg-button @click="presentLoadingWithOptions">Show Loading</syg-button>
 </template>
 
 <script>
@@ -307,9 +307,9 @@ export default defineComponent({
           message: 'Please wait...',
           duration: this.timeout,
         });
-        
+
       await loading.present();
-      
+
       setTimeout(function() {
         loading.dismiss()
       }, this.timeout);
@@ -324,9 +324,9 @@ export default defineComponent({
           cssClass: 'custom-class custom-loading',
           backdropDismiss: true
         });
-        
+
       await loading.present();
-        
+
       setTimeout(function() {
         loading.dismiss()
       }, this.timeout);
@@ -341,15 +341,15 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Loading</ion-button>
-  <ion-loading
+  <syg-button @click="setOpen(true)">Show Loading</syg-button>
+  <syg-loading
     :is-open="isOpenRef"
     cssClass="my-custom-class"
     message="Please wait..."
     :duration="timeout"
     @didDismiss="setOpen(false)"
   >
-  </ion-loading>
+  </syg-loading>
 </template>
 
 <script>
@@ -364,7 +364,7 @@ export default defineComponent({
   setup() {
     const isOpenRef = ref(false);
     const setOpen = (state: boolean) => isOpenRef.value = state;
-    
+
     return { isOpenRef, setOpen }
   }
 });
@@ -385,7 +385,7 @@ export default defineComponent({
 | `htmlAttributes`  | --                 | Additional attributes to pass to the loader.                                                                                                                                                                                     | `LoadingAttributes \| undefined`                                                                                                                        | `undefined` |
 | `keyboardClose`   | `keyboard-close`   | If `true`, the keyboard will be automatically dismissed when the overlay is presented.                                                                                                                                           | `boolean`                                                                                                                                               | `true`      |
 | `leaveAnimation`  | --                 | Animation to use when the loading indicator is dismissed.                                                                                                                                                                        | `((baseEl: any, opts?: any) => Animation) \| undefined`                                                                                                 | `undefined` |
-| `message`         | `message`          | Optional text content to display in the loading indicator.                                                                                                                                                                       | `IonicSafeString \| string \| undefined`                                                                                                                | `undefined` |
+| `message`         | `message`          | Optional text content to display in the loading indicator.                                                                                                                                                                       | `SygSafeString \| string \| undefined`                                                                                                                | `undefined` |
 | `mode`            | `mode`             | The mode determines which platform styles to use.                                                                                                                                                                                | `"ios" \| "md"`                                                                                                                                         | `undefined` |
 | `showBackdrop`    | `show-backdrop`    | If `true`, a backdrop will be displayed behind the loading indicator.                                                                                                                                                            | `boolean`                                                                                                                                               | `true`      |
 | `spinner`         | `spinner`          | The name of the spinner to display.                                                                                                                                                                                              | `"bubbles" \| "circles" \| "circular" \| "crescent" \| "dots" \| "lines" \| "lines-sharp" \| "lines-sharp-small" \| "lines-small" \| null \| undefined` | `undefined` |
@@ -464,15 +464,15 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [ion-backdrop](../backdrop)
-- [ion-spinner](../spinner)
+- [syg-backdrop](../backdrop)
+- [syg-spinner](../spinner)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-loading --> ion-backdrop
-  ion-loading --> ion-spinner
-  style ion-loading fill:#f9f,stroke:#333,stroke-width:4px
+  syg-loading --> syg-backdrop
+  syg-loading --> syg-spinner
+  style syg-loading fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -95,7 +95,7 @@ export {
 
   ItemSlidingCustomEvent,
 
-  IonicSafeString,
+  SygSafeString,
 
   LoadingOptions,
 

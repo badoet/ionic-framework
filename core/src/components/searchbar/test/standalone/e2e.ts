@@ -8,7 +8,7 @@ test('searchbar: standalone', async () => {
   const compare = await page.compareScreenshot();
   expect(compare).toMatchScreenshot();
 
-  const searchbar = await page.find('ion-searchbar');
+  const searchbar = await page.find('syg-searchbar');
   await searchbar.callMethod('setFocus');
   expect(await page.compareScreenshot('focused')).toMatchScreenshot();
 });

@@ -5,5 +5,5 @@ export interface TextareaChangeEventDetail {
 
 export interface TextareaCustomEvent extends CustomEvent {
   detail: TextareaChangeEventDetail;
-  target: HTMLIonTextareaElement;
+  target: HTMLSygTextareaElement;
 }

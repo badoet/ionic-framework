@@ -8,8 +8,8 @@ test('should open the popover', async () => {
   const trigger = await page.find('#default');
   trigger.click();
 
-  await page.waitForSelector('ion-popover');
-  const popover = await page.find('ion-popover');
+  await page.waitForSelector('syg-popover');
+  const popover = await page.find('syg-popover');
   await popover.waitForVisible();
 
   screenshotCompares.push(await page.compareScreenshot());
@@ -29,8 +29,8 @@ test('should open the popover then close after a timeout', async () => {
   const trigger = await page.find('#timeout');
   trigger.click();
 
-  await page.waitForSelector('ion-popover');
-  const popover = await page.find('ion-popover');
+  await page.waitForSelector('syg-popover');
+  const popover = await page.find('syg-popover');
   await popover.waitForVisible();
 
   screenshotCompares.push(await page.compareScreenshot());

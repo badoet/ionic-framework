@@ -30,7 +30,7 @@ export const IonicVue: Plugin = {
        * TODO: Remove when all integrations have been
        * migrated to CE build.
        */
-      document.documentElement.classList.add('ion-ce');
+      document.documentElement.classList.add('syg-ce');
 
       const { ael, rel, ce } = getHelperFunctions();
       initialize({

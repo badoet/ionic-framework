@@ -9,136 +9,136 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>  <script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>  <script>
 
     class PageOne extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Page One</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Page One</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
           page one
           <p><a href='#/two/second-page'>Go to page 2</a></p>
           <p><a href='#/two/three/hola'>Go to page 3 (hola)</a></p>
           <p><a href='#/two/three/something'>Go to page 3 (something)</a></p>
 
-        </ion-content>`;
+        </syg-content>`;
       }
     }
 
     class PageTwo extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Page Two</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Page Two</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
           <p><a href='#/two/three/hola'>Go to page 3 (hola)</a></p>
           <p><a href='#/two/three/hello'>Go to page 3 (hello)</a></p>
-        </ion-content>`;
+        </syg-content>`;
       }
     }
 
     class PageThree extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Page 3 ${this.prop1}</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Page 3 ${this.prop1}</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
           <p><a href='#/two/three/hola'>Go to page 3 (hola)</a></p>
           <p><a href='#/two/three/hello'>Go to page 3 (hello)</a></p>
           <p><a href='#/two/second-page'>Go to page 2</a></p>
           <p><a href='#/two/'>Go to page 1</a></p>
-        </ion-content>`;
+        </syg-content>`;
       }
     }
 
     class TabOne extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Tab one</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Tab one</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
           this is the first page
-        </ion-content>`;
+        </syg-content>`;
       }
     }
 
     class TabTwo extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Tab Two</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-          <ion-nav></ion-nav>
-        </ion-content>`;
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Tab Two</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
+          <syg-nav></syg-nav>
+        </syg-content>`;
       }
     }
 
     class TabThree extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Tab three</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Tab three</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
           hey! this is the 3 tab
-        </ion-content>`;
+        </syg-content>`;
       }
     }
 
     class TabsPage extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-<ion-tabs>
+<syg-tabs>
 
-  <ion-tab tab="tab-one" component="tab-one"></ion-tab>
-  <ion-tab tab="tab-two" component="tab-two"></ion-tab>
-  <ion-tab tab="tab-three" component="tab-three"></ion-tab>
-  <ion-tab tab="tab-four">
+  <syg-tab tab="tab-one" component="tab-one"></syg-tab>
+  <syg-tab tab="tab-two" component="tab-two"></syg-tab>
+  <syg-tab tab="tab-three" component="tab-three"></syg-tab>
+  <syg-tab tab="tab-four">
     inline tab 4
-  </ion-tab>
+  </syg-tab>
 
-  <ion-tab-bar slot="bottom">
+  <syg-tab-bar slot="bottom">
 
-    <ion-tab-button tab="tab-one">
-      <ion-label>Plain List</ion-label>
+    <syg-tab-button tab="tab-one">
+      <syg-label>Plain List</syg-label>
       <ion-icon name="star"></ion-icon>
-    </ion-tab-button>
+    </syg-tab-button>
 
-    <ion-tab-button tab="tab-two">
-      <ion-label>Schedule</ion-label>
+    <syg-tab-button tab="tab-two">
+      <syg-label>Schedule</syg-label>
       <ion-icon name="globe"></ion-icon>
-    </ion-tab-button>
+    </syg-tab-button>
 
-    <ion-tab-button tab="tab-three">
-      <ion-label>Stopwatch</ion-label>
+    <syg-tab-button tab="tab-three">
+      <syg-label>Stopwatch</syg-label>
       <ion-icon name="logo-facebook"></ion-icon>
-    </ion-tab-button>
+    </syg-tab-button>
 
-    <ion-tab-button tab="tab-four">
-      <ion-label>Messages</ion-label>
+    <syg-tab-button tab="tab-four">
+      <syg-label>Messages</syg-label>
       <ion-icon name="star"></ion-icon>
-    </ion-tab-button>
+    </syg-tab-button>
 
-  </ion-tab-bar>
-</ion-tabs>
+  </syg-tab-bar>
+</syg-tabs>
 `;
       }
     }
@@ -146,34 +146,34 @@
     class LoginPage extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Login Page</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Login Page</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
           page one
           <p><a href='#/two/second-page'>Go to page 2</a></p>
           <p><a href='#/two/three/hola'>Go to page 3 (hola)</a></p>
           <p><a href='#/two/three/something'>Go to page 3 (something)</a></p>
-        </ion-content>`;
+        </syg-content>`;
       }
     }
 
     class LoginConfirmPage extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Login Confirm Page</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Login Confirm Page</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
           page one
           <p><a href='#/two/second-page'>Go to page 2</a></p>
           <p><a href='#/two/three/hola'>Go to page 3 (hola)</a></p>
           <p><a href='#/two/three/something'>Go to page 3 (something)</a></p>
-        </ion-content>`;
+        </syg-content>`;
       }
     }
 
@@ -194,28 +194,28 @@
 
 <body>
 
-  <ion-app>
+  <syg-app>
 
-    <ion-router>
-      <ion-route url="/login" component="login-page"></ion-route>
-      <ion-route url="/login-confirm" component="login-confirm-page"></ion-route>
+    <syg-router>
+      <syg-route url="/login" component="login-page"></syg-route>
+      <syg-route url="/login-confirm" component="login-confirm-page"></syg-route>
 
-      <ion-route url="/" component="tabs-page">
-        <ion-route url="/" component="tab-one"> </ion-route>
-        <ion-route url="/two" component="tab-two">
-          <ion-route component="page-one"> </ion-route>
-          <ion-route url="/second-page" component="page-two"> </ion-route>
-          <ion-route url="/three/:prop1" component="page-three"> </ion-route>
-        </ion-route>
-        <ion-route url="/three" component="tab-three"> </ion-route>
-        <ion-route url="/four" component="tab-four"> </ion-route>
-      </ion-route>
+      <syg-route url="/" component="tabs-page">
+        <syg-route url="/" component="tab-one"> </syg-route>
+        <syg-route url="/two" component="tab-two">
+          <syg-route component="page-one"> </syg-route>
+          <syg-route url="/second-page" component="page-two"> </syg-route>
+          <syg-route url="/three/:prop1" component="page-three"> </syg-route>
+        </syg-route>
+        <syg-route url="/three" component="tab-three"> </syg-route>
+        <syg-route url="/four" component="tab-four"> </syg-route>
+      </syg-route>
 
-      <ion-route-redirect from="/redirect-to-three" to="/three?has_query_string=true"></ion-route-redirect>
-    </ion-router>
+      <syg-route-redirect from="/redirect-to-three" to="/three?has_query_string=true"></syg-route-redirect>
+    </syg-router>
 
-    <ion-nav></ion-nav>
-  </ion-app>
+    <syg-nav></syg-nav>
+  </syg-app>
 
   <style>
     f {

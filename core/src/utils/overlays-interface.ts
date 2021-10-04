@@ -34,10 +34,10 @@ export interface OverlayInterface {
 export interface OverlayController {
   create(opts?: any): Promise<HTMLElement>;
   dismiss(data?: any, role?: string, id?: string): Promise<boolean>;
-  getTop(): Promise<HTMLIonOverlayElement | undefined>;
+  getTop(): Promise<HTMLSygOverlayElement | undefined>;
 }
 
-export interface HTMLIonOverlayElement extends HTMLStencilElement {
+export interface HTMLSygOverlayElement extends HTMLStencilElement {
   overlayIndex: number;
   backdropDismiss?: boolean;
   lastFocus?: HTMLElement;
@@ -45,4 +45,4 @@ export interface HTMLIonOverlayElement extends HTMLStencilElement {
   dismiss(data?: any, role?: string): Promise<boolean>;
 }
 
-export type OverlaySelect = HTMLIonActionSheetElement | HTMLIonAlertElement | HTMLIonPopoverElement;
+export type OverlaySelect = HTMLSygActionSheetElement | HTMLSygAlertElement | HTMLSygPopoverElement;

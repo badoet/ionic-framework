@@ -9,61 +9,61 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <script type="module">
-    import { loadingController } from '../../../../../dist/ionic/index.esm.js';
+    import { loadingController } from '../../../../../dist/syg/index.esm.js';
     window.loadingController = loadingController;
   </script>
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Loading - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Loading - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding">
-      <ion-button id="basic-loading" expand="block" onclick="openLoading({ message: 'Hellooo', duration: 2000, htmlAttributes: { 'data-testid': 'basic-loading' } })">Show Loading</ion-button>
-      <ion-button id="default" expand="block" onclick="openLoading({duration: 2000, content: 'Please wait...'})">Show Default Loading</ion-button>
-      <ion-button id="long-content-loading" expand="block" onclick="openLoading({duration: 2000, message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptatibus quibusdam eum nihil optio, ullam accusamus magni, nobis suscipit reprehenderit, sequi quam amet impedit. Accusamus dolorem voluptates laborum dolor obcaecati.'})">Show Loading with long message</ion-button>
-      <ion-button id="no-spinner-loading" expand="block" onclick="openLoading({duration: 2000, message: 'Please wait...', spinner: null})">Show Loading with no spinner</ion-button>
-      <ion-button id="translucent-loading" expand="block" onclick="openLoading({duration: 5000, message: 'Please wait...', translucent: true})">Show Loading with translucent</ion-button>
-      <ion-button id="custom-class-loading" expand="block" onclick="openLoading({duration: 5000,message: 'Please wait...', cssClass: 'custom-class custom-loading'})">Show Loading with cssClass</ion-button>
-      <ion-button id="backdrop-loading" expand="block" onclick="openLoading({backdropDismiss: true})">Show Backdrop Click Loading</ion-button>
-      <ion-button id="html-content-loading" expand="block" onclick="openLoading({cssClass: 'html-loading', duration: 5000, message: '<ion-button>Click impatiently to load faster</ion-button>'})">Show Loading with HTML content</ion-button>
+    <syg-content class="syg-padding">
+      <syg-button id="basic-loading" expand="block" onclick="openLoading({ message: 'Hellooo', duration: 2000, htmlAttributes: { 'data-testid': 'basic-loading' } })">Show Loading</syg-button>
+      <syg-button id="default" expand="block" onclick="openLoading({duration: 2000, content: 'Please wait...'})">Show Default Loading</syg-button>
+      <syg-button id="long-content-loading" expand="block" onclick="openLoading({duration: 2000, message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptatibus quibusdam eum nihil optio, ullam accusamus magni, nobis suscipit reprehenderit, sequi quam amet impedit. Accusamus dolorem voluptates laborum dolor obcaecati.'})">Show Loading with long message</syg-button>
+      <syg-button id="no-spinner-loading" expand="block" onclick="openLoading({duration: 2000, message: 'Please wait...', spinner: null})">Show Loading with no spinner</syg-button>
+      <syg-button id="translucent-loading" expand="block" onclick="openLoading({duration: 5000, message: 'Please wait...', translucent: true})">Show Loading with translucent</syg-button>
+      <syg-button id="custom-class-loading" expand="block" onclick="openLoading({duration: 5000,message: 'Please wait...', cssClass: 'custom-class custom-loading'})">Show Loading with cssClass</syg-button>
+      <syg-button id="backdrop-loading" expand="block" onclick="openLoading({backdropDismiss: true})">Show Backdrop Click Loading</syg-button>
+      <syg-button id="html-content-loading" expand="block" onclick="openLoading({cssClass: 'html-loading', duration: 5000, message: '<syg-button>Click impatiently to load faster</syg-button>'})">Show Loading with HTML content</syg-button>
 
-      <ion-grid>
-        <ion-row>
-          <ion-col size="6">
+      <syg-grid>
+        <syg-row>
+          <syg-col size="6">
             <f class="red"></f>
-          </ion-col>
-          <ion-col size="6">
+          </syg-col>
+          <syg-col size="6">
             <f class="green"></f>
-          </ion-col>
-          <ion-col size="6">
+          </syg-col>
+          <syg-col size="6">
             <f class="blue"></f>
-          </ion-col>
-          <ion-col size="6">
+          </syg-col>
+          <syg-col size="6">
             <f class="yellow"></f>
-          </ion-col>
-          <ion-col size="6">
+          </syg-col>
+          <syg-col size="6">
             <f class="pink"></f>
-          </ion-col>
-          <ion-col size="6">
+          </syg-col>
+          <syg-col size="6">
             <f class="purple"></f>
-          </ion-col>
-          <ion-col size="6">
+          </syg-col>
+          <syg-col size="6">
             <f class="black"></f>
-          </ion-col>
-          <ion-col size="6">
+          </syg-col>
+          <syg-col size="6">
             <f class="orange"></f>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-content>
+          </syg-col>
+        </syg-row>
+      </syg-grid>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
   <script>
     async function openLoading(opts) {
       const loading = await loadingController.create(opts);

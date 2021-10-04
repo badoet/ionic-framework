@@ -9,28 +9,28 @@ export class SpinnerExample {
   render() {
     return [
       // Default Spinner
-      <ion-spinner></ion-spinner>,
+      <syg-spinner></syg-spinner>,
 
       // Lines
-      <ion-spinner name="lines"></ion-spinner>,
+      <syg-spinner name="lines"></syg-spinner>,
 
       // Lines Small
-      <ion-spinner name="lines-small"></ion-spinner>,
+      <syg-spinner name="lines-small"></syg-spinner>,
 
       // Dots
-      <ion-spinner name="dots"></ion-spinner>,
+      <syg-spinner name="dots"></syg-spinner>,
 
       // Bubbles
-      <ion-spinner name="bubbles"></ion-spinner>,
+      <syg-spinner name="bubbles"></syg-spinner>,
 
       // Circles
-      <ion-spinner name="circles"></ion-spinner>,
+      <syg-spinner name="circles"></syg-spinner>,
 
       // Crescent
-      <ion-spinner name="crescent"></ion-spinner>,
+      <syg-spinner name="crescent"></syg-spinner>,
 
       // Paused Default Spinner
-      <ion-spinner paused={true}></ion-spinner>
+      <syg-spinner paused={true}></syg-spinner>
     ];
   }
 }

@@ -1,11 +1,11 @@
 import { JSXBase } from '@stencil/core/internal';
 
 import { AnimationBuilder, Color, Mode } from '../../interface';
-import { IonicSafeString } from '../../utils/sanitization';
+import { SygSafeString } from '../../utils/sanitization';
 
 export interface ToastOptions {
   header?: string;
-  message?: string | IonicSafeString;
+  message?: string | SygSafeString;
   cssClass?: string | string[];
   duration?: number;
   buttons?: (ToastButton | string)[];

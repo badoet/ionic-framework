@@ -1,93 +1,93 @@
 ```html
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Header</ion-title>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-title>Header</syg-title>
+  </syg-toolbar>
+</syg-header>
 
-<ion-content>
+<syg-content>
   <!-- fab placed to the top end -->
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button>
+  <syg-fab vertical="top" horizontal="end" slot="fixed">
+    <syg-fab-button>
       <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    </syg-fab-button>
+  </syg-fab>
 
   <!-- fab placed to the bottom end -->
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
+  <syg-fab vertical="bottom" horizontal="end" slot="fixed">
+    <syg-fab-button>
       <ion-icon name="arrow-forward-circle"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    </syg-fab-button>
+  </syg-fab>
 
   <!-- fab placed to the top start -->
-  <ion-fab vertical="top" horizontal="start" slot="fixed">
-    <ion-fab-button>
+  <syg-fab vertical="top" horizontal="start" slot="fixed">
+    <syg-fab-button>
       <ion-icon name="arrow-back-circle"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    </syg-fab-button>
+  </syg-fab>
 
   <!-- fab placed to the bottom start -->
-  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-    <ion-fab-button>
+  <syg-fab vertical="bottom" horizontal="start" slot="fixed">
+    <syg-fab-button>
       <ion-icon name="arrow-up-circle"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    </syg-fab-button>
+  </syg-fab>
 
   <!-- fab placed to the (vertical) center and start -->
-  <ion-fab vertical="center" horizontal="start" slot="fixed">
-    <ion-fab-button>
+  <syg-fab vertical="center" horizontal="start" slot="fixed">
+    <syg-fab-button>
       <ion-icon name="share"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    </syg-fab-button>
+  </syg-fab>
 
   <!-- fab placed to the (vertical) center and end -->
-  <ion-fab vertical="center" horizontal="end" slot="fixed">
-    <ion-fab-button>
+  <syg-fab vertical="center" horizontal="end" slot="fixed">
+    <syg-fab-button>
       <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    </syg-fab-button>
+  </syg-fab>
 
   <!-- fab placed to the top and end and on the top edge of the content overlapping header -->
-  <ion-fab vertical="top" horizontal="end" edge slot="fixed">
-    <ion-fab-button>
+  <syg-fab vertical="top" horizontal="end" edge slot="fixed">
+    <syg-fab-button>
       <ion-icon name="person"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    </syg-fab-button>
+  </syg-fab>
 
   <!-- fab placed to the bottom and start and on the bottom edge of the content overlapping footer with a list to the right -->
-  <ion-fab vertical="bottom" horizontal="start" edge slot="fixed">
-    <ion-fab-button>
+  <syg-fab vertical="bottom" horizontal="start" edge slot="fixed">
+    <syg-fab-button>
       <ion-icon name="settings"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-list side="end">
-      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
-    </ion-fab-list>
-  </ion-fab>
+    </syg-fab-button>
+    <syg-fab-list side="end">
+      <syg-fab-button><ion-icon name="logo-vimeo"></ion-icon></syg-fab-button>
+    </syg-fab-list>
+  </syg-fab>
 
   <!-- fab placed in the center of the content with a list on each side -->
-  <ion-fab vertical="center" horizontal="center" slot="fixed">
-    <ion-fab-button>
+  <syg-fab vertical="center" horizontal="center" slot="fixed">
+    <syg-fab-button>
       <ion-icon name="share"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-list side="top">
-      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
-    </ion-fab-list>
-    <ion-fab-list side="bottom">
-      <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
-    </ion-fab-list>
-    <ion-fab-list side="start">
-      <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
-    </ion-fab-list>
-    <ion-fab-list side="end">
-      <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
-    </ion-fab-list>
-  </ion-fab>
-</ion-content>
+    </syg-fab-button>
+    <syg-fab-list side="top">
+      <syg-fab-button><ion-icon name="logo-vimeo"></ion-icon></syg-fab-button>
+    </syg-fab-list>
+    <syg-fab-list side="bottom">
+      <syg-fab-button><ion-icon name="logo-facebook"></ion-icon></syg-fab-button>
+    </syg-fab-list>
+    <syg-fab-list side="start">
+      <syg-fab-button><ion-icon name="logo-instagram"></ion-icon></syg-fab-button>
+    </syg-fab-list>
+    <syg-fab-list side="end">
+      <syg-fab-button><ion-icon name="logo-twitter"></ion-icon></syg-fab-button>
+    </syg-fab-list>
+  </syg-fab>
+</syg-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>
-</ion-footer>
+<syg-footer>
+  <syg-toolbar>
+    <syg-title>Footer</syg-title>
+  </syg-toolbar>
+</syg-footer>
 ```

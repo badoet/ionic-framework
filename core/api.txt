@@ -1,281 +1,281 @@
 
-ion-accordion,shadow
-ion-accordion,prop,disabled,boolean,false,false,false
-ion-accordion,prop,mode,"ios" | "md",undefined,false,false
-ion-accordion,prop,readonly,boolean,false,false,false
-ion-accordion,prop,toggleIcon,string,'chevron-down',false,false
-ion-accordion,prop,toggleIconSlot,"end" | "start",'end',false,false
-ion-accordion,prop,value,string,`ion-accordion-${accordionIds++}`,false,false
-ion-accordion,part,content
-ion-accordion,part,expanded
-ion-accordion,part,header
+syg-accordion,shadow
+syg-accordion,prop,disabled,boolean,false,false,false
+syg-accordion,prop,mode,"ios" | "md",undefined,false,false
+syg-accordion,prop,readonly,boolean,false,false,false
+syg-accordion,prop,toggleIcon,string,'chevron-down',false,false
+syg-accordion,prop,toggleIconSlot,"end" | "start",'end',false,false
+syg-accordion,prop,value,string,`syg-accordion-${accordionIds++}`,false,false
+syg-accordion,part,content
+syg-accordion,part,expanded
+syg-accordion,part,header
 
-ion-accordion-group,shadow
-ion-accordion-group,prop,animated,boolean,true,false,false
-ion-accordion-group,prop,disabled,boolean,false,false,false
-ion-accordion-group,prop,expand,"compact" | "inset",'compact',false,false
-ion-accordion-group,prop,mode,"ios" | "md",undefined,false,false
-ion-accordion-group,prop,multiple,boolean | undefined,undefined,false,false
-ion-accordion-group,prop,readonly,boolean,false,false,false
-ion-accordion-group,prop,value,null | string | string[] | undefined,undefined,false,false
-ion-accordion-group,event,ionChange,AccordionGroupChangeEventDetail<any>,true
+syg-accordion-group,shadow
+syg-accordion-group,prop,animated,boolean,true,false,false
+syg-accordion-group,prop,disabled,boolean,false,false,false
+syg-accordion-group,prop,expand,"compact" | "inset",'compact',false,false
+syg-accordion-group,prop,mode,"ios" | "md",undefined,false,false
+syg-accordion-group,prop,multiple,boolean | undefined,undefined,false,false
+syg-accordion-group,prop,readonly,boolean,false,false,false
+syg-accordion-group,prop,value,null | string | string[] | undefined,undefined,false,false
+syg-accordion-group,event,ionChange,AccordionGroupChangeEventDetail<any>,true
 
-ion-action-sheet,scoped
-ion-action-sheet,prop,animated,boolean,true,false,false
-ion-action-sheet,prop,backdropDismiss,boolean,true,false,false
-ion-action-sheet,prop,buttons,(string | ActionSheetButton<any>)[],[],false,false
-ion-action-sheet,prop,cssClass,string | string[] | undefined,undefined,false,false
-ion-action-sheet,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-action-sheet,prop,header,string | undefined,undefined,false,false
-ion-action-sheet,prop,htmlAttributes,ActionSheetAttributes | undefined,undefined,false,false
-ion-action-sheet,prop,keyboardClose,boolean,true,false,false
-ion-action-sheet,prop,leaveAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-action-sheet,prop,mode,"ios" | "md",undefined,false,false
-ion-action-sheet,prop,subHeader,string | undefined,undefined,false,false
-ion-action-sheet,prop,translucent,boolean,false,false,false
-ion-action-sheet,method,dismiss,dismiss(data?: any, role?: string | undefined) => Promise<boolean>
-ion-action-sheet,method,onDidDismiss,onDidDismiss<T = any>() => Promise<OverlayEventDetail<T>>
-ion-action-sheet,method,onWillDismiss,onWillDismiss<T = any>() => Promise<OverlayEventDetail<T>>
-ion-action-sheet,method,present,present() => Promise<void>
-ion-action-sheet,event,ionActionSheetDidDismiss,OverlayEventDetail<any>,true
-ion-action-sheet,event,ionActionSheetDidPresent,void,true
-ion-action-sheet,event,ionActionSheetWillDismiss,OverlayEventDetail<any>,true
-ion-action-sheet,event,ionActionSheetWillPresent,void,true
-ion-action-sheet,css-prop,--backdrop-opacity
-ion-action-sheet,css-prop,--background
-ion-action-sheet,css-prop,--button-background
-ion-action-sheet,css-prop,--button-background-activated
-ion-action-sheet,css-prop,--button-background-activated-opacity
-ion-action-sheet,css-prop,--button-background-focused
-ion-action-sheet,css-prop,--button-background-focused-opacity
-ion-action-sheet,css-prop,--button-background-hover
-ion-action-sheet,css-prop,--button-background-hover-opacity
-ion-action-sheet,css-prop,--button-background-selected
-ion-action-sheet,css-prop,--button-background-selected-opacity
-ion-action-sheet,css-prop,--button-color
-ion-action-sheet,css-prop,--button-color-activated
-ion-action-sheet,css-prop,--button-color-focused
-ion-action-sheet,css-prop,--button-color-hover
-ion-action-sheet,css-prop,--button-color-selected
-ion-action-sheet,css-prop,--color
-ion-action-sheet,css-prop,--height
-ion-action-sheet,css-prop,--max-height
-ion-action-sheet,css-prop,--max-width
-ion-action-sheet,css-prop,--min-height
-ion-action-sheet,css-prop,--min-width
-ion-action-sheet,css-prop,--width
+syg-action-sheet,scoped
+syg-action-sheet,prop,animated,boolean,true,false,false
+syg-action-sheet,prop,backdropDismiss,boolean,true,false,false
+syg-action-sheet,prop,buttons,(string | ActionSheetButton<any>)[],[],false,false
+syg-action-sheet,prop,cssClass,string | string[] | undefined,undefined,false,false
+syg-action-sheet,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-action-sheet,prop,header,string | undefined,undefined,false,false
+syg-action-sheet,prop,htmlAttributes,ActionSheetAttributes | undefined,undefined,false,false
+syg-action-sheet,prop,keyboardClose,boolean,true,false,false
+syg-action-sheet,prop,leaveAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-action-sheet,prop,mode,"ios" | "md",undefined,false,false
+syg-action-sheet,prop,subHeader,string | undefined,undefined,false,false
+syg-action-sheet,prop,translucent,boolean,false,false,false
+syg-action-sheet,method,dismiss,dismiss(data?: any, role?: string | undefined) => Promise<boolean>
+syg-action-sheet,method,onDidDismiss,onDidDismiss<T = any>() => Promise<OverlayEventDetail<T>>
+syg-action-sheet,method,onWillDismiss,onWillDismiss<T = any>() => Promise<OverlayEventDetail<T>>
+syg-action-sheet,method,present,present() => Promise<void>
+syg-action-sheet,event,ionActionSheetDidDismiss,OverlayEventDetail<any>,true
+syg-action-sheet,event,ionActionSheetDidPresent,void,true
+syg-action-sheet,event,ionActionSheetWillDismiss,OverlayEventDetail<any>,true
+syg-action-sheet,event,ionActionSheetWillPresent,void,true
+syg-action-sheet,css-prop,--backdrop-opacity
+syg-action-sheet,css-prop,--background
+syg-action-sheet,css-prop,--button-background
+syg-action-sheet,css-prop,--button-background-activated
+syg-action-sheet,css-prop,--button-background-activated-opacity
+syg-action-sheet,css-prop,--button-background-focused
+syg-action-sheet,css-prop,--button-background-focused-opacity
+syg-action-sheet,css-prop,--button-background-hover
+syg-action-sheet,css-prop,--button-background-hover-opacity
+syg-action-sheet,css-prop,--button-background-selected
+syg-action-sheet,css-prop,--button-background-selected-opacity
+syg-action-sheet,css-prop,--button-color
+syg-action-sheet,css-prop,--button-color-activated
+syg-action-sheet,css-prop,--button-color-focused
+syg-action-sheet,css-prop,--button-color-hover
+syg-action-sheet,css-prop,--button-color-selected
+syg-action-sheet,css-prop,--color
+syg-action-sheet,css-prop,--height
+syg-action-sheet,css-prop,--max-height
+syg-action-sheet,css-prop,--max-width
+syg-action-sheet,css-prop,--min-height
+syg-action-sheet,css-prop,--min-width
+syg-action-sheet,css-prop,--width
 
-ion-alert,scoped
-ion-alert,prop,animated,boolean,true,false,false
-ion-alert,prop,backdropDismiss,boolean,true,false,false
-ion-alert,prop,buttons,(string | AlertButton)[],[],false,false
-ion-alert,prop,cssClass,string | string[] | undefined,undefined,false,false
-ion-alert,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-alert,prop,header,string | undefined,undefined,false,false
-ion-alert,prop,htmlAttributes,AlertAttributes | undefined,undefined,false,false
-ion-alert,prop,inputs,AlertInput[],[],false,false
-ion-alert,prop,keyboardClose,boolean,true,false,false
-ion-alert,prop,leaveAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-alert,prop,message,IonicSafeString | string | undefined,undefined,false,false
-ion-alert,prop,mode,"ios" | "md",undefined,false,false
-ion-alert,prop,subHeader,string | undefined,undefined,false,false
-ion-alert,prop,translucent,boolean,false,false,false
-ion-alert,method,dismiss,dismiss(data?: any, role?: string | undefined) => Promise<boolean>
-ion-alert,method,onDidDismiss,onDidDismiss<T = any>() => Promise<OverlayEventDetail<T>>
-ion-alert,method,onWillDismiss,onWillDismiss<T = any>() => Promise<OverlayEventDetail<T>>
-ion-alert,method,present,present() => Promise<void>
-ion-alert,event,ionAlertDidDismiss,OverlayEventDetail<any>,true
-ion-alert,event,ionAlertDidPresent,void,true
-ion-alert,event,ionAlertWillDismiss,OverlayEventDetail<any>,true
-ion-alert,event,ionAlertWillPresent,void,true
-ion-alert,css-prop,--backdrop-opacity
-ion-alert,css-prop,--background
-ion-alert,css-prop,--height
-ion-alert,css-prop,--max-height
-ion-alert,css-prop,--max-width
-ion-alert,css-prop,--min-height
-ion-alert,css-prop,--min-width
-ion-alert,css-prop,--width
+syg-alert,scoped
+syg-alert,prop,animated,boolean,true,false,false
+syg-alert,prop,backdropDismiss,boolean,true,false,false
+syg-alert,prop,buttons,(string | AlertButton)[],[],false,false
+syg-alert,prop,cssClass,string | string[] | undefined,undefined,false,false
+syg-alert,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-alert,prop,header,string | undefined,undefined,false,false
+syg-alert,prop,htmlAttributes,AlertAttributes | undefined,undefined,false,false
+syg-alert,prop,inputs,AlertInput[],[],false,false
+syg-alert,prop,keyboardClose,boolean,true,false,false
+syg-alert,prop,leaveAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-alert,prop,message,SygSafeString | string | undefined,undefined,false,false
+syg-alert,prop,mode,"ios" | "md",undefined,false,false
+syg-alert,prop,subHeader,string | undefined,undefined,false,false
+syg-alert,prop,translucent,boolean,false,false,false
+syg-alert,method,dismiss,dismiss(data?: any, role?: string | undefined) => Promise<boolean>
+syg-alert,method,onDidDismiss,onDidDismiss<T = any>() => Promise<OverlayEventDetail<T>>
+syg-alert,method,onWillDismiss,onWillDismiss<T = any>() => Promise<OverlayEventDetail<T>>
+syg-alert,method,present,present() => Promise<void>
+syg-alert,event,ionAlertDidDismiss,OverlayEventDetail<any>,true
+syg-alert,event,ionAlertDidPresent,void,true
+syg-alert,event,ionAlertWillDismiss,OverlayEventDetail<any>,true
+syg-alert,event,ionAlertWillPresent,void,true
+syg-alert,css-prop,--backdrop-opacity
+syg-alert,css-prop,--background
+syg-alert,css-prop,--height
+syg-alert,css-prop,--max-height
+syg-alert,css-prop,--max-width
+syg-alert,css-prop,--min-height
+syg-alert,css-prop,--min-width
+syg-alert,css-prop,--width
 
-ion-app,none
+syg-app,none
 
-ion-avatar,shadow
-ion-avatar,css-prop,--border-radius
+syg-avatar,shadow
+syg-avatar,css-prop,--border-radius
 
-ion-back-button,shadow
-ion-back-button,prop,color,string | undefined,undefined,false,true
-ion-back-button,prop,defaultHref,string | undefined,undefined,false,false
-ion-back-button,prop,disabled,boolean,false,false,true
-ion-back-button,prop,icon,null | string | undefined,undefined,false,false
-ion-back-button,prop,mode,"ios" | "md",undefined,false,false
-ion-back-button,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-back-button,prop,text,null | string | undefined,undefined,false,false
-ion-back-button,prop,type,"button" | "reset" | "submit",'button',false,false
-ion-back-button,css-prop,--background
-ion-back-button,css-prop,--background-focused
-ion-back-button,css-prop,--background-focused-opacity
-ion-back-button,css-prop,--background-hover
-ion-back-button,css-prop,--background-hover-opacity
-ion-back-button,css-prop,--border-radius
-ion-back-button,css-prop,--color
-ion-back-button,css-prop,--color-focused
-ion-back-button,css-prop,--color-hover
-ion-back-button,css-prop,--icon-font-size
-ion-back-button,css-prop,--icon-font-weight
-ion-back-button,css-prop,--icon-margin-bottom
-ion-back-button,css-prop,--icon-margin-end
-ion-back-button,css-prop,--icon-margin-start
-ion-back-button,css-prop,--icon-margin-top
-ion-back-button,css-prop,--icon-padding-bottom
-ion-back-button,css-prop,--icon-padding-end
-ion-back-button,css-prop,--icon-padding-start
-ion-back-button,css-prop,--icon-padding-top
-ion-back-button,css-prop,--margin-bottom
-ion-back-button,css-prop,--margin-end
-ion-back-button,css-prop,--margin-start
-ion-back-button,css-prop,--margin-top
-ion-back-button,css-prop,--min-height
-ion-back-button,css-prop,--min-width
-ion-back-button,css-prop,--opacity
-ion-back-button,css-prop,--padding-bottom
-ion-back-button,css-prop,--padding-end
-ion-back-button,css-prop,--padding-start
-ion-back-button,css-prop,--padding-top
-ion-back-button,css-prop,--ripple-color
-ion-back-button,css-prop,--transition
-ion-back-button,part,icon
-ion-back-button,part,native
-ion-back-button,part,text
+syg-back-button,shadow
+syg-back-button,prop,color,string | undefined,undefined,false,true
+syg-back-button,prop,defaultHref,string | undefined,undefined,false,false
+syg-back-button,prop,disabled,boolean,false,false,true
+syg-back-button,prop,icon,null | string | undefined,undefined,false,false
+syg-back-button,prop,mode,"ios" | "md",undefined,false,false
+syg-back-button,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-back-button,prop,text,null | string | undefined,undefined,false,false
+syg-back-button,prop,type,"button" | "reset" | "submit",'button',false,false
+syg-back-button,css-prop,--background
+syg-back-button,css-prop,--background-focused
+syg-back-button,css-prop,--background-focused-opacity
+syg-back-button,css-prop,--background-hover
+syg-back-button,css-prop,--background-hover-opacity
+syg-back-button,css-prop,--border-radius
+syg-back-button,css-prop,--color
+syg-back-button,css-prop,--color-focused
+syg-back-button,css-prop,--color-hover
+syg-back-button,css-prop,--icon-font-size
+syg-back-button,css-prop,--icon-font-weight
+syg-back-button,css-prop,--icon-margin-bottom
+syg-back-button,css-prop,--icon-margin-end
+syg-back-button,css-prop,--icon-margin-start
+syg-back-button,css-prop,--icon-margin-top
+syg-back-button,css-prop,--icon-padding-bottom
+syg-back-button,css-prop,--icon-padding-end
+syg-back-button,css-prop,--icon-padding-start
+syg-back-button,css-prop,--icon-padding-top
+syg-back-button,css-prop,--margin-bottom
+syg-back-button,css-prop,--margin-end
+syg-back-button,css-prop,--margin-start
+syg-back-button,css-prop,--margin-top
+syg-back-button,css-prop,--min-height
+syg-back-button,css-prop,--min-width
+syg-back-button,css-prop,--opacity
+syg-back-button,css-prop,--padding-bottom
+syg-back-button,css-prop,--padding-end
+syg-back-button,css-prop,--padding-start
+syg-back-button,css-prop,--padding-top
+syg-back-button,css-prop,--ripple-color
+syg-back-button,css-prop,--transition
+syg-back-button,part,icon
+syg-back-button,part,native
+syg-back-button,part,text
 
-ion-backdrop,shadow
-ion-backdrop,prop,stopPropagation,boolean,true,false,false
-ion-backdrop,prop,tappable,boolean,true,false,false
-ion-backdrop,prop,visible,boolean,true,false,false
-ion-backdrop,event,ionBackdropTap,void,true
+syg-backdrop,shadow
+syg-backdrop,prop,stopPropagation,boolean,true,false,false
+syg-backdrop,prop,tappable,boolean,true,false,false
+syg-backdrop,prop,visible,boolean,true,false,false
+syg-backdrop,event,ionBackdropTap,void,true
 
-ion-badge,shadow
-ion-badge,prop,color,string | undefined,undefined,false,true
-ion-badge,prop,mode,"ios" | "md",undefined,false,false
-ion-badge,css-prop,--background
-ion-badge,css-prop,--color
-ion-badge,css-prop,--padding-bottom
-ion-badge,css-prop,--padding-end
-ion-badge,css-prop,--padding-start
-ion-badge,css-prop,--padding-top
+syg-badge,shadow
+syg-badge,prop,color,string | undefined,undefined,false,true
+syg-badge,prop,mode,"ios" | "md",undefined,false,false
+syg-badge,css-prop,--background
+syg-badge,css-prop,--color
+syg-badge,css-prop,--padding-bottom
+syg-badge,css-prop,--padding-end
+syg-badge,css-prop,--padding-start
+syg-badge,css-prop,--padding-top
 
-ion-breadcrumb,shadow
-ion-breadcrumb,prop,active,boolean,false,false,false
-ion-breadcrumb,prop,color,string | undefined,undefined,false,false
-ion-breadcrumb,prop,disabled,boolean,false,false,false
-ion-breadcrumb,prop,download,string | undefined,undefined,false,false
-ion-breadcrumb,prop,href,string | undefined,undefined,false,false
-ion-breadcrumb,prop,mode,"ios" | "md",undefined,false,false
-ion-breadcrumb,prop,rel,string | undefined,undefined,false,false
-ion-breadcrumb,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-breadcrumb,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
-ion-breadcrumb,prop,separator,boolean | undefined,undefined,false,false
-ion-breadcrumb,prop,target,string | undefined,undefined,false,false
-ion-breadcrumb,event,ionBlur,void,true
-ion-breadcrumb,event,ionFocus,void,true
-ion-breadcrumb,css-prop,--background-focused
-ion-breadcrumb,css-prop,--color
-ion-breadcrumb,css-prop,--color-active
-ion-breadcrumb,css-prop,--color-focused
-ion-breadcrumb,css-prop,--color-hover
-ion-breadcrumb,part,collapsed-indicator
-ion-breadcrumb,part,native
-ion-breadcrumb,part,separator
+syg-breadcrumb,shadow
+syg-breadcrumb,prop,active,boolean,false,false,false
+syg-breadcrumb,prop,color,string | undefined,undefined,false,false
+syg-breadcrumb,prop,disabled,boolean,false,false,false
+syg-breadcrumb,prop,download,string | undefined,undefined,false,false
+syg-breadcrumb,prop,href,string | undefined,undefined,false,false
+syg-breadcrumb,prop,mode,"ios" | "md",undefined,false,false
+syg-breadcrumb,prop,rel,string | undefined,undefined,false,false
+syg-breadcrumb,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-breadcrumb,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
+syg-breadcrumb,prop,separator,boolean | undefined,undefined,false,false
+syg-breadcrumb,prop,target,string | undefined,undefined,false,false
+syg-breadcrumb,event,ionBlur,void,true
+syg-breadcrumb,event,ionFocus,void,true
+syg-breadcrumb,css-prop,--background-focused
+syg-breadcrumb,css-prop,--color
+syg-breadcrumb,css-prop,--color-active
+syg-breadcrumb,css-prop,--color-focused
+syg-breadcrumb,css-prop,--color-hover
+syg-breadcrumb,part,collapsed-indicator
+syg-breadcrumb,part,native
+syg-breadcrumb,part,separator
 
-ion-breadcrumbs,shadow
-ion-breadcrumbs,prop,color,string | undefined,undefined,false,false
-ion-breadcrumbs,prop,itemsAfterCollapse,number,1,false,false
-ion-breadcrumbs,prop,itemsBeforeCollapse,number,1,false,false
-ion-breadcrumbs,prop,maxItems,number | undefined,undefined,false,false
-ion-breadcrumbs,prop,mode,"ios" | "md",undefined,false,false
-ion-breadcrumbs,event,ionCollapsedClick,BreadcrumbCollapsedClickEventDetail,true
-ion-breadcrumbs,css-prop,--background
-ion-breadcrumbs,css-prop,--color
+syg-breadcrumbs,shadow
+syg-breadcrumbs,prop,color,string | undefined,undefined,false,false
+syg-breadcrumbs,prop,itemsAfterCollapse,number,1,false,false
+syg-breadcrumbs,prop,itemsBeforeCollapse,number,1,false,false
+syg-breadcrumbs,prop,maxItems,number | undefined,undefined,false,false
+syg-breadcrumbs,prop,mode,"ios" | "md",undefined,false,false
+syg-breadcrumbs,event,ionCollapsedClick,BreadcrumbCollapsedClickEventDetail,true
+syg-breadcrumbs,css-prop,--background
+syg-breadcrumbs,css-prop,--color
 
-ion-button,shadow
-ion-button,prop,buttonType,string,'button',false,false
-ion-button,prop,color,string | undefined,undefined,false,true
-ion-button,prop,disabled,boolean,false,false,true
-ion-button,prop,download,string | undefined,undefined,false,false
-ion-button,prop,expand,"block" | "full" | undefined,undefined,false,true
-ion-button,prop,fill,"clear" | "default" | "outline" | "solid" | undefined,undefined,false,true
-ion-button,prop,href,string | undefined,undefined,false,false
-ion-button,prop,mode,"ios" | "md",undefined,false,false
-ion-button,prop,rel,string | undefined,undefined,false,false
-ion-button,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-button,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
-ion-button,prop,shape,"round" | undefined,undefined,false,true
-ion-button,prop,size,"default" | "large" | "small" | undefined,undefined,false,true
-ion-button,prop,strong,boolean,false,false,false
-ion-button,prop,target,string | undefined,undefined,false,false
-ion-button,prop,type,"button" | "reset" | "submit",'button',false,false
-ion-button,event,ionBlur,void,true
-ion-button,event,ionFocus,void,true
-ion-button,css-prop,--background
-ion-button,css-prop,--background-activated
-ion-button,css-prop,--background-activated-opacity
-ion-button,css-prop,--background-focused
-ion-button,css-prop,--background-focused-opacity
-ion-button,css-prop,--background-hover
-ion-button,css-prop,--background-hover-opacity
-ion-button,css-prop,--border-color
-ion-button,css-prop,--border-radius
-ion-button,css-prop,--border-style
-ion-button,css-prop,--border-width
-ion-button,css-prop,--box-shadow
-ion-button,css-prop,--color
-ion-button,css-prop,--color-activated
-ion-button,css-prop,--color-focused
-ion-button,css-prop,--color-hover
-ion-button,css-prop,--opacity
-ion-button,css-prop,--padding-bottom
-ion-button,css-prop,--padding-end
-ion-button,css-prop,--padding-start
-ion-button,css-prop,--padding-top
-ion-button,css-prop,--ripple-color
-ion-button,css-prop,--transition
-ion-button,part,native
+syg-button,shadow
+syg-button,prop,buttonType,string,'button',false,false
+syg-button,prop,color,string | undefined,undefined,false,true
+syg-button,prop,disabled,boolean,false,false,true
+syg-button,prop,download,string | undefined,undefined,false,false
+syg-button,prop,expand,"block" | "full" | undefined,undefined,false,true
+syg-button,prop,fill,"clear" | "default" | "outline" | "solid" | undefined,undefined,false,true
+syg-button,prop,href,string | undefined,undefined,false,false
+syg-button,prop,mode,"ios" | "md",undefined,false,false
+syg-button,prop,rel,string | undefined,undefined,false,false
+syg-button,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-button,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
+syg-button,prop,shape,"round" | undefined,undefined,false,true
+syg-button,prop,size,"default" | "large" | "small" | undefined,undefined,false,true
+syg-button,prop,strong,boolean,false,false,false
+syg-button,prop,target,string | undefined,undefined,false,false
+syg-button,prop,type,"button" | "reset" | "submit",'button',false,false
+syg-button,event,ionBlur,void,true
+syg-button,event,ionFocus,void,true
+syg-button,css-prop,--background
+syg-button,css-prop,--background-activated
+syg-button,css-prop,--background-activated-opacity
+syg-button,css-prop,--background-focused
+syg-button,css-prop,--background-focused-opacity
+syg-button,css-prop,--background-hover
+syg-button,css-prop,--background-hover-opacity
+syg-button,css-prop,--border-color
+syg-button,css-prop,--border-radius
+syg-button,css-prop,--border-style
+syg-button,css-prop,--border-width
+syg-button,css-prop,--box-shadow
+syg-button,css-prop,--color
+syg-button,css-prop,--color-activated
+syg-button,css-prop,--color-focused
+syg-button,css-prop,--color-hover
+syg-button,css-prop,--opacity
+syg-button,css-prop,--padding-bottom
+syg-button,css-prop,--padding-end
+syg-button,css-prop,--padding-start
+syg-button,css-prop,--padding-top
+syg-button,css-prop,--ripple-color
+syg-button,css-prop,--transition
+syg-button,part,native
 
-ion-buttons,scoped
-ion-buttons,prop,collapse,boolean,false,false,false
+syg-buttons,scoped
+syg-buttons,prop,collapse,boolean,false,false,false
 
-ion-card,shadow
-ion-card,prop,button,boolean,false,false,false
-ion-card,prop,color,string | undefined,undefined,false,true
-ion-card,prop,disabled,boolean,false,false,false
-ion-card,prop,download,string | undefined,undefined,false,false
-ion-card,prop,href,string | undefined,undefined,false,false
-ion-card,prop,mode,"ios" | "md",undefined,false,false
-ion-card,prop,rel,string | undefined,undefined,false,false
-ion-card,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-card,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
-ion-card,prop,target,string | undefined,undefined,false,false
-ion-card,prop,type,"button" | "reset" | "submit",'button',false,false
-ion-card,css-prop,--background
-ion-card,css-prop,--color
-ion-card,part,native
+syg-card,shadow
+syg-card,prop,button,boolean,false,false,false
+syg-card,prop,color,string | undefined,undefined,false,true
+syg-card,prop,disabled,boolean,false,false,false
+syg-card,prop,download,string | undefined,undefined,false,false
+syg-card,prop,href,string | undefined,undefined,false,false
+syg-card,prop,mode,"ios" | "md",undefined,false,false
+syg-card,prop,rel,string | undefined,undefined,false,false
+syg-card,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-card,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
+syg-card,prop,target,string | undefined,undefined,false,false
+syg-card,prop,type,"button" | "reset" | "submit",'button',false,false
+syg-card,css-prop,--background
+syg-card,css-prop,--color
+syg-card,part,native
 
-ion-card-content,none
-ion-card-content,prop,mode,"ios" | "md",undefined,false,false
+syg-card-content,none
+syg-card-content,prop,mode,"ios" | "md",undefined,false,false
 
-ion-card-header,shadow
-ion-card-header,prop,color,string | undefined,undefined,false,true
-ion-card-header,prop,mode,"ios" | "md",undefined,false,false
-ion-card-header,prop,translucent,boolean,false,false,false
+syg-card-header,shadow
+syg-card-header,prop,color,string | undefined,undefined,false,true
+syg-card-header,prop,mode,"ios" | "md",undefined,false,false
+syg-card-header,prop,translucent,boolean,false,false,false
 
-ion-card-subtitle,shadow
-ion-card-subtitle,prop,color,string | undefined,undefined,false,true
-ion-card-subtitle,prop,mode,"ios" | "md",undefined,false,false
-ion-card-subtitle,css-prop,--color
+syg-card-subtitle,shadow
+syg-card-subtitle,prop,color,string | undefined,undefined,false,true
+syg-card-subtitle,prop,mode,"ios" | "md",undefined,false,false
+syg-card-subtitle,css-prop,--color
 
-ion-card-title,shadow
-ion-card-title,prop,color,string | undefined,undefined,false,true
-ion-card-title,prop,mode,"ios" | "md",undefined,false,false
-ion-card-title,css-prop,--color
+syg-card-title,shadow
+syg-card-title,prop,color,string | undefined,undefined,false,true
+syg-card-title,prop,mode,"ios" | "md",undefined,false,false
+syg-card-title,css-prop,--color
 
 ion-checkbox,shadow
 ion-checkbox,prop,checked,boolean,false,false,false
@@ -481,10 +481,10 @@ ion-grid,css-prop,--ion-grid-width-sm
 ion-grid,css-prop,--ion-grid-width-xl
 ion-grid,css-prop,--ion-grid-width-xs
 
-ion-header,none
-ion-header,prop,collapse,"condense" | undefined,undefined,false,false
-ion-header,prop,mode,"ios" | "md",undefined,false,false
-ion-header,prop,translucent,boolean,false,false,false
+syg-header,none
+syg-header,prop,collapse,"condense" | undefined,undefined,false,false
+syg-header,prop,mode,"ios" | "md",undefined,false,false
+syg-header,prop,translucent,boolean,false,false,false
 
 ion-img,shadow
 ion-img,prop,alt,string | undefined,undefined,false,false
@@ -503,7 +503,7 @@ ion-infinite-scroll,event,ionInfinite,void,true
 
 ion-infinite-scroll-content,none
 ion-infinite-scroll-content,prop,loadingSpinner,"bubbles" | "circles" | "circular" | "crescent" | "dots" | "lines" | "lines-sharp" | "lines-sharp-small" | "lines-small" | null | undefined,undefined,false,false
-ion-infinite-scroll-content,prop,loadingText,IonicSafeString | string | undefined,undefined,false,false
+ion-infinite-scroll-content,prop,loadingText,SygSafeString | string | undefined,undefined,false,false
 
 ion-input,scoped
 ion-input,prop,accept,string | undefined,undefined,false,false
@@ -551,105 +551,105 @@ ion-input,css-prop,--placeholder-font-style
 ion-input,css-prop,--placeholder-font-weight
 ion-input,css-prop,--placeholder-opacity
 
-ion-item,shadow
-ion-item,prop,button,boolean,false,false,false
-ion-item,prop,color,string | undefined,undefined,false,true
-ion-item,prop,counter,boolean,true,false,false
-ion-item,prop,detail,boolean | undefined,undefined,false,false
-ion-item,prop,detailIcon,string,'chevron-forward',false,false
-ion-item,prop,disabled,boolean,false,false,false
-ion-item,prop,download,string | undefined,undefined,false,false
-ion-item,prop,fill,"outline" | "solid" | undefined,undefined,false,false
-ion-item,prop,href,string | undefined,undefined,false,false
-ion-item,prop,lines,"full" | "inset" | "none" | undefined,undefined,false,false
-ion-item,prop,mode,"ios" | "md",undefined,false,false
-ion-item,prop,rel,string | undefined,undefined,false,false
-ion-item,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-item,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
-ion-item,prop,shape,"round" | undefined,undefined,false,false
-ion-item,prop,target,string | undefined,undefined,false,false
-ion-item,prop,type,"button" | "reset" | "submit",'button',false,false
-ion-item,css-prop,--background
-ion-item,css-prop,--background-activated
-ion-item,css-prop,--background-activated-opacity
-ion-item,css-prop,--background-focused
-ion-item,css-prop,--background-focused-opacity
-ion-item,css-prop,--background-hover
-ion-item,css-prop,--background-hover-opacity
-ion-item,css-prop,--border-color
-ion-item,css-prop,--border-radius
-ion-item,css-prop,--border-style
-ion-item,css-prop,--border-width
-ion-item,css-prop,--color
-ion-item,css-prop,--color-activated
-ion-item,css-prop,--color-focused
-ion-item,css-prop,--color-hover
-ion-item,css-prop,--detail-icon-color
-ion-item,css-prop,--detail-icon-font-size
-ion-item,css-prop,--detail-icon-opacity
-ion-item,css-prop,--highlight-color-focused
-ion-item,css-prop,--highlight-color-invalid
-ion-item,css-prop,--highlight-color-valid
-ion-item,css-prop,--highlight-height
-ion-item,css-prop,--inner-border-width
-ion-item,css-prop,--inner-box-shadow
-ion-item,css-prop,--inner-padding-bottom
-ion-item,css-prop,--inner-padding-end
-ion-item,css-prop,--inner-padding-start
-ion-item,css-prop,--inner-padding-top
-ion-item,css-prop,--min-height
-ion-item,css-prop,--padding-bottom
-ion-item,css-prop,--padding-end
-ion-item,css-prop,--padding-start
-ion-item,css-prop,--padding-top
-ion-item,css-prop,--ripple-color
-ion-item,css-prop,--transition
-ion-item,part,detail-icon
-ion-item,part,native
+syg-item,shadow
+syg-item,prop,button,boolean,false,false,false
+syg-item,prop,color,string | undefined,undefined,false,true
+syg-item,prop,counter,boolean,true,false,false
+syg-item,prop,detail,boolean | undefined,undefined,false,false
+syg-item,prop,detailIcon,string,'chevron-forward',false,false
+syg-item,prop,disabled,boolean,false,false,false
+syg-item,prop,download,string | undefined,undefined,false,false
+syg-item,prop,fill,"outline" | "solid" | undefined,undefined,false,false
+syg-item,prop,href,string | undefined,undefined,false,false
+syg-item,prop,lines,"full" | "inset" | "none" | undefined,undefined,false,false
+syg-item,prop,mode,"ios" | "md",undefined,false,false
+syg-item,prop,rel,string | undefined,undefined,false,false
+syg-item,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-item,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
+syg-item,prop,shape,"round" | undefined,undefined,false,false
+syg-item,prop,target,string | undefined,undefined,false,false
+syg-item,prop,type,"button" | "reset" | "submit",'button',false,false
+syg-item,css-prop,--background
+syg-item,css-prop,--background-activated
+syg-item,css-prop,--background-activated-opacity
+syg-item,css-prop,--background-focused
+syg-item,css-prop,--background-focused-opacity
+syg-item,css-prop,--background-hover
+syg-item,css-prop,--background-hover-opacity
+syg-item,css-prop,--border-color
+syg-item,css-prop,--border-radius
+syg-item,css-prop,--border-style
+syg-item,css-prop,--border-width
+syg-item,css-prop,--color
+syg-item,css-prop,--color-activated
+syg-item,css-prop,--color-focused
+syg-item,css-prop,--color-hover
+syg-item,css-prop,--detail-icon-color
+syg-item,css-prop,--detail-icon-font-size
+syg-item,css-prop,--detail-icon-opacity
+syg-item,css-prop,--highlight-color-focused
+syg-item,css-prop,--highlight-color-invalid
+syg-item,css-prop,--highlight-color-valid
+syg-item,css-prop,--highlight-height
+syg-item,css-prop,--inner-border-width
+syg-item,css-prop,--inner-box-shadow
+syg-item,css-prop,--inner-padding-bottom
+syg-item,css-prop,--inner-padding-end
+syg-item,css-prop,--inner-padding-start
+syg-item,css-prop,--inner-padding-top
+syg-item,css-prop,--min-height
+syg-item,css-prop,--padding-bottom
+syg-item,css-prop,--padding-end
+syg-item,css-prop,--padding-start
+syg-item,css-prop,--padding-top
+syg-item,css-prop,--ripple-color
+syg-item,css-prop,--transition
+syg-item,part,detail-icon
+syg-item,part,native
 
-ion-item-divider,shadow
-ion-item-divider,prop,color,string | undefined,undefined,false,true
-ion-item-divider,prop,mode,"ios" | "md",undefined,false,false
-ion-item-divider,prop,sticky,boolean,false,false,false
-ion-item-divider,css-prop,--background
-ion-item-divider,css-prop,--color
-ion-item-divider,css-prop,--inner-padding-bottom
-ion-item-divider,css-prop,--inner-padding-end
-ion-item-divider,css-prop,--inner-padding-start
-ion-item-divider,css-prop,--inner-padding-top
-ion-item-divider,css-prop,--padding-bottom
-ion-item-divider,css-prop,--padding-end
-ion-item-divider,css-prop,--padding-start
-ion-item-divider,css-prop,--padding-top
+syg-item-divider,shadow
+syg-item-divider,prop,color,string | undefined,undefined,false,true
+syg-item-divider,prop,mode,"ios" | "md",undefined,false,false
+syg-item-divider,prop,sticky,boolean,false,false,false
+syg-item-divider,css-prop,--background
+syg-item-divider,css-prop,--color
+syg-item-divider,css-prop,--inner-padding-bottom
+syg-item-divider,css-prop,--inner-padding-end
+syg-item-divider,css-prop,--inner-padding-start
+syg-item-divider,css-prop,--inner-padding-top
+syg-item-divider,css-prop,--padding-bottom
+syg-item-divider,css-prop,--padding-end
+syg-item-divider,css-prop,--padding-start
+syg-item-divider,css-prop,--padding-top
 
-ion-item-group,none
+syg-item-group,none
 
-ion-item-option,shadow
-ion-item-option,prop,color,string | undefined,undefined,false,true
-ion-item-option,prop,disabled,boolean,false,false,false
-ion-item-option,prop,download,string | undefined,undefined,false,false
-ion-item-option,prop,expandable,boolean,false,false,false
-ion-item-option,prop,href,string | undefined,undefined,false,false
-ion-item-option,prop,mode,"ios" | "md",undefined,false,false
-ion-item-option,prop,rel,string | undefined,undefined,false,false
-ion-item-option,prop,target,string | undefined,undefined,false,false
-ion-item-option,prop,type,"button" | "reset" | "submit",'button',false,false
-ion-item-option,css-prop,--background
-ion-item-option,css-prop,--color
-ion-item-option,part,native
+syg-item-option,shadow
+syg-item-option,prop,color,string | undefined,undefined,false,true
+syg-item-option,prop,disabled,boolean,false,false,false
+syg-item-option,prop,download,string | undefined,undefined,false,false
+syg-item-option,prop,expandable,boolean,false,false,false
+syg-item-option,prop,href,string | undefined,undefined,false,false
+syg-item-option,prop,mode,"ios" | "md",undefined,false,false
+syg-item-option,prop,rel,string | undefined,undefined,false,false
+syg-item-option,prop,target,string | undefined,undefined,false,false
+syg-item-option,prop,type,"button" | "reset" | "submit",'button',false,false
+syg-item-option,css-prop,--background
+syg-item-option,css-prop,--color
+syg-item-option,part,native
 
-ion-item-options,none
-ion-item-options,prop,side,"end" | "start",'end',false,false
-ion-item-options,event,ionSwipe,any,true
+syg-item-options,none
+syg-item-options,prop,side,"end" | "start",'end',false,false
+syg-item-options,event,ionSwipe,any,true
 
-ion-item-sliding,none
-ion-item-sliding,prop,disabled,boolean,false,false,false
-ion-item-sliding,method,close,close() => Promise<void>
-ion-item-sliding,method,closeOpened,closeOpened() => Promise<boolean>
-ion-item-sliding,method,getOpenAmount,getOpenAmount() => Promise<number>
-ion-item-sliding,method,getSlidingRatio,getSlidingRatio() => Promise<number>
-ion-item-sliding,method,open,open(side: Side | undefined) => Promise<void>
-ion-item-sliding,event,ionDrag,any,true
+syg-item-sliding,none
+syg-item-sliding,prop,disabled,boolean,false,false,false
+syg-item-sliding,method,close,close() => Promise<void>
+syg-item-sliding,method,closeOpened,closeOpened() => Promise<boolean>
+syg-item-sliding,method,getOpenAmount,getOpenAmount() => Promise<number>
+syg-item-sliding,method,getSlidingRatio,getSlidingRatio() => Promise<number>
+syg-item-sliding,method,open,open(side: Side | undefined) => Promise<void>
+syg-item-sliding,event,ionDrag,any,true
 
 ion-label,scoped
 ion-label,prop,color,string | undefined,undefined,false,true
@@ -683,7 +683,7 @@ ion-loading,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undef
 ion-loading,prop,htmlAttributes,LoadingAttributes | undefined,undefined,false,false
 ion-loading,prop,keyboardClose,boolean,true,false,false
 ion-loading,prop,leaveAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-loading,prop,message,IonicSafeString | string | undefined,undefined,false,false
+ion-loading,prop,message,SygSafeString | string | undefined,undefined,false,false
 ion-loading,prop,mode,"ios" | "md",undefined,false,false
 ion-loading,prop,showBackdrop,boolean,true,false,false
 ion-loading,prop,spinner,"bubbles" | "circles" | "circular" | "crescent" | "dots" | "lines" | "lines-sharp" | "lines-sharp-small" | "lines-small" | null | undefined,undefined,false,false
@@ -761,50 +761,50 @@ ion-menu-toggle,shadow
 ion-menu-toggle,prop,autoHide,boolean,true,false,false
 ion-menu-toggle,prop,menu,string | undefined,undefined,false,false
 
-ion-modal,shadow
-ion-modal,prop,animated,boolean,true,false,false
-ion-modal,prop,backdropBreakpoint,number,0,false,false
-ion-modal,prop,backdropDismiss,boolean,true,false,false
-ion-modal,prop,breakpoints,number[] | undefined,undefined,false,false
-ion-modal,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-modal,prop,handle,boolean | undefined,undefined,false,false
-ion-modal,prop,htmlAttributes,ModalAttributes | undefined,undefined,false,false
-ion-modal,prop,initialBreakpoint,number | undefined,undefined,false,false
-ion-modal,prop,isOpen,boolean,false,false,false
-ion-modal,prop,keyboardClose,boolean,true,false,false
-ion-modal,prop,leaveAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-modal,prop,mode,"ios" | "md",undefined,false,false
-ion-modal,prop,presentingElement,HTMLElement | undefined,undefined,false,false
-ion-modal,prop,showBackdrop,boolean,true,false,false
-ion-modal,prop,swipeToClose,boolean,false,false,false
-ion-modal,prop,trigger,string | undefined,undefined,false,false
-ion-modal,method,dismiss,dismiss(data?: any, role?: string | undefined) => Promise<boolean>
-ion-modal,method,onDidDismiss,onDidDismiss<T = any>() => Promise<OverlayEventDetail<T>>
-ion-modal,method,onWillDismiss,onWillDismiss<T = any>() => Promise<OverlayEventDetail<T>>
-ion-modal,method,present,present() => Promise<void>
-ion-modal,event,didDismiss,OverlayEventDetail<any>,true
-ion-modal,event,didPresent,void,true
-ion-modal,event,ionModalDidDismiss,OverlayEventDetail<any>,true
-ion-modal,event,ionModalDidPresent,void,true
-ion-modal,event,ionModalWillDismiss,OverlayEventDetail<any>,true
-ion-modal,event,ionModalWillPresent,void,true
-ion-modal,event,willDismiss,OverlayEventDetail<any>,true
-ion-modal,event,willPresent,void,true
-ion-modal,css-prop,--backdrop-opacity
-ion-modal,css-prop,--background
-ion-modal,css-prop,--border-color
-ion-modal,css-prop,--border-radius
-ion-modal,css-prop,--border-style
-ion-modal,css-prop,--border-width
-ion-modal,css-prop,--height
-ion-modal,css-prop,--max-height
-ion-modal,css-prop,--max-width
-ion-modal,css-prop,--min-height
-ion-modal,css-prop,--min-width
-ion-modal,css-prop,--width
-ion-modal,part,backdrop
-ion-modal,part,content
-ion-modal,part,handle
+syg-modal,shadow
+syg-modal,prop,animated,boolean,true,false,false
+syg-modal,prop,backdropBreakpoint,number,0,false,false
+syg-modal,prop,backdropDismiss,boolean,true,false,false
+syg-modal,prop,breakpoints,number[] | undefined,undefined,false,false
+syg-modal,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-modal,prop,handle,boolean | undefined,undefined,false,false
+syg-modal,prop,htmlAttributes,ModalAttributes | undefined,undefined,false,false
+syg-modal,prop,initialBreakpoint,number | undefined,undefined,false,false
+syg-modal,prop,isOpen,boolean,false,false,false
+syg-modal,prop,keyboardClose,boolean,true,false,false
+syg-modal,prop,leaveAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+syg-modal,prop,mode,"ios" | "md",undefined,false,false
+syg-modal,prop,presentingElement,HTMLElement | undefined,undefined,false,false
+syg-modal,prop,showBackdrop,boolean,true,false,false
+syg-modal,prop,swipeToClose,boolean,false,false,false
+syg-modal,prop,trigger,string | undefined,undefined,false,false
+syg-modal,method,dismiss,dismiss(data?: any, role?: string | undefined) => Promise<boolean>
+syg-modal,method,onDidDismiss,onDidDismiss<T = any>() => Promise<OverlayEventDetail<T>>
+syg-modal,method,onWillDismiss,onWillDismiss<T = any>() => Promise<OverlayEventDetail<T>>
+syg-modal,method,present,present() => Promise<void>
+syg-modal,event,didDismiss,OverlayEventDetail<any>,true
+syg-modal,event,didPresent,void,true
+syg-modal,event,ionModalDidDismiss,OverlayEventDetail<any>,true
+syg-modal,event,ionModalDidPresent,void,true
+syg-modal,event,ionModalWillDismiss,OverlayEventDetail<any>,true
+syg-modal,event,ionModalWillPresent,void,true
+syg-modal,event,willDismiss,OverlayEventDetail<any>,true
+syg-modal,event,willPresent,void,true
+syg-modal,css-prop,--backdrop-opacity
+syg-modal,css-prop,--background
+syg-modal,css-prop,--border-color
+syg-modal,css-prop,--border-radius
+syg-modal,css-prop,--border-style
+syg-modal,css-prop,--border-width
+syg-modal,css-prop,--height
+syg-modal,css-prop,--max-height
+syg-modal,css-prop,--max-width
+syg-modal,css-prop,--min-height
+syg-modal,css-prop,--min-width
+syg-modal,css-prop,--width
+syg-modal,part,backdrop
+syg-modal,part,content
+syg-modal,part,handle
 
 ion-nav,shadow
 ion-nav,prop,animated,boolean,true,false,false
@@ -1011,9 +1011,9 @@ ion-refresher,event,ionStart,void,true
 
 ion-refresher-content,none
 ion-refresher-content,prop,pullingIcon,null | string | undefined,undefined,false,false
-ion-refresher-content,prop,pullingText,IonicSafeString | string | undefined,undefined,false,false
+ion-refresher-content,prop,pullingText,SygSafeString | string | undefined,undefined,false,false
 ion-refresher-content,prop,refreshingSpinner,"bubbles" | "circles" | "circular" | "crescent" | "dots" | "lines" | "lines-sharp" | "lines-sharp-small" | "lines-small" | null | undefined,undefined,false,false
-ion-refresher-content,prop,refreshingText,IonicSafeString | string | undefined,undefined,false,false
+ion-refresher-content,prop,refreshingText,SygSafeString | string | undefined,undefined,false,false
 
 ion-reorder,shadow
 ion-reorder,part,icon
@@ -1364,7 +1364,7 @@ ion-toast,prop,htmlAttributes,ToastAttributes | undefined,undefined,false,false
 ion-toast,prop,icon,string | undefined,undefined,false,false
 ion-toast,prop,keyboardClose,boolean,false,false,false
 ion-toast,prop,leaveAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
-ion-toast,prop,message,IonicSafeString | string | undefined,undefined,false,false
+ion-toast,prop,message,SygSafeString | string | undefined,undefined,false,false
 ion-toast,prop,mode,"ios" | "md",undefined,false,false
 ion-toast,prop,position,"bottom" | "middle" | "top",'bottom',false,false
 ion-toast,prop,translucent,boolean,false,false,false
@@ -1424,20 +1424,20 @@ ion-toggle,css-prop,--handle-width
 ion-toggle,part,handle
 ion-toggle,part,track
 
-ion-toolbar,shadow
-ion-toolbar,prop,color,string | undefined,undefined,false,true
-ion-toolbar,prop,mode,"ios" | "md",undefined,false,false
-ion-toolbar,css-prop,--background
-ion-toolbar,css-prop,--border-color
-ion-toolbar,css-prop,--border-style
-ion-toolbar,css-prop,--border-width
-ion-toolbar,css-prop,--color
-ion-toolbar,css-prop,--min-height
-ion-toolbar,css-prop,--opacity
-ion-toolbar,css-prop,--padding-bottom
-ion-toolbar,css-prop,--padding-end
-ion-toolbar,css-prop,--padding-start
-ion-toolbar,css-prop,--padding-top
+syg-toolbar,shadow
+syg-toolbar,prop,color,string | undefined,undefined,false,true
+syg-toolbar,prop,mode,"ios" | "md",undefined,false,false
+syg-toolbar,css-prop,--background
+syg-toolbar,css-prop,--border-color
+syg-toolbar,css-prop,--border-style
+syg-toolbar,css-prop,--border-width
+syg-toolbar,css-prop,--color
+syg-toolbar,css-prop,--min-height
+syg-toolbar,css-prop,--opacity
+syg-toolbar,css-prop,--padding-bottom
+syg-toolbar,css-prop,--padding-end
+syg-toolbar,css-prop,--padding-start
+syg-toolbar,css-prop,--padding-top
 
 ion-virtual-scroll,none
 ion-virtual-scroll,prop,approxFooterHeight,number,30,false,false

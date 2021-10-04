@@ -9,147 +9,147 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Item Divider</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Item Divider</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
 
-    <ion-content id="content" class="outer-content">
-      <ion-item-divider>
-        <ion-label>
+    <syg-content id="content" class="outer-content">
+      <syg-item-divider>
+        <syg-label>
           Divider by itself
-        </ion-label>
-      </ion-item-divider>
+        </syg-label>
+      </syg-item-divider>
 
-      <ion-list>
-        <ion-item-divider>
-          <ion-label>
+      <syg-list>
+        <syg-item-divider>
+          <syg-label>
             Divider in List
-          </ion-label>
-        </ion-item-divider>
+          </syg-label>
+        </syg-item-divider>
 
-        <ion-item-divider color="danger">
-          <ion-label>
+        <syg-item-divider color="danger">
+          <syg-label>
             Danger Divider in List
-          </ion-label>
-        </ion-item-divider>
-      </ion-list>
+          </syg-label>
+        </syg-item-divider>
+      </syg-list>
 
-      <ion-item-group>
-        <ion-item-divider>
-          <ion-label>
+      <syg-item-group>
+        <syg-item-divider>
+          <syg-label>
             Divider in Item Group
-          </ion-label>
-        </ion-item-divider>
-        <ion-item-divider color="secondary">
-          <ion-label>
+          </syg-label>
+        </syg-item-divider>
+        <syg-item-divider color="secondary">
+          <syg-label>
             Secondary Divider in Item Group
-          </ion-label>
-        </ion-item-divider>
-      </ion-item-group>
+          </syg-label>
+        </syg-item-divider>
+      </syg-item-group>
 
-      <ion-item-group>
-        <ion-item>
-          <ion-label>
-            <ion-text color="secondary">
+      <syg-item-group>
+        <syg-item>
+          <syg-label>
+            <syg-text color="secondary">
               <h3>Secondary header</h3>
-            </ion-text>
+            </syg-text>
             Plain Ol' div with some text
-          </ion-label>
-        </ion-item>
-      </ion-item-group>
+          </syg-label>
+        </syg-item>
+      </syg-item-group>
 
-      <ion-item-group>
-        <ion-item-divider>
-          <ion-label>
+      <syg-item-group>
+        <syg-item-divider>
+          <syg-label>
             Item Divider
-            <ion-text color="danger">
+            <syg-text color="danger">
               Danger Span
-            </ion-text>
-          </ion-label>
-          <ion-button slot="end">button</ion-button>
-        </ion-item-divider>
+            </syg-text>
+          </syg-label>
+          <syg-button slot="end">button</syg-button>
+        </syg-item-divider>
 
-        <ion-item class="custom-item">
-          <ion-label class="ion-text-wrap">
+        <syg-item class="custom-item">
+          <syg-label class="syg-text-wrap">
             Multiline text that should wrap when it is too long to fit on one line in the item. Attribute on .item
-          </ion-label>
-        </ion-item>
-      </ion-item-group>
+          </syg-label>
+        </syg-item>
+      </syg-item-group>
 
-      <ion-item-group>
-        <ion-item-divider color="dark">
-          <ion-button slot="start" fill="clear">
+      <syg-item-group>
+        <syg-item-divider color="dark">
+          <syg-button slot="start" fill="clear">
             <ion-icon slot="icon-only" name="cloudy"></ion-icon>
-          </ion-button>
-          <ion-button slot="start" fill="clear" color="light">
+          </syg-button>
+          <syg-button slot="start" fill="clear" color="light">
             <ion-icon slot="icon-only" name="rainy"></ion-icon>
-          </ion-button>
+          </syg-button>
 
-          <ion-label>
+          <syg-label>
             Dark
-            <ion-text color="primary">
+            <syg-text color="primary">
               <h5>Primary h5</h5>
-            </ion-text>
-          </ion-label>
-        </ion-item-divider>
+            </syg-text>
+          </syg-label>
+        </syg-item-divider>
 
-        <ion-item>
-          <ion-label class="ion-text-wrap">
+        <syg-item>
+          <syg-label class="syg-text-wrap">
             <h1>H1 Title Text</h1>
-          </ion-label>
-        </ion-item>
-      </ion-item-group>
+          </syg-label>
+        </syg-item>
+      </syg-item-group>
 
-      <ion-item-group>
-        <ion-item-divider color="light">
-          <ion-avatar slot="start">
+      <syg-item-group>
+        <syg-item-divider color="light">
+          <syg-avatar slot="start">
             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-          </ion-avatar>
-          <ion-label>Light</ion-label>
-          <ion-button slot="end" fill="clear" color="danger">
+          </syg-avatar>
+          <syg-label>Light</syg-label>
+          <syg-button slot="end" fill="clear" color="danger">
             <ion-icon name="sunny"></ion-icon>
-          </ion-button>
-        </ion-item-divider>
+          </syg-button>
+        </syg-item-divider>
 
-        <ion-item-divider color="primary">
-          <ion-label>Primary</ion-label>
-          <ion-thumbnail slot="end">
+        <syg-item-divider color="primary">
+          <syg-label>Primary</syg-label>
+          <syg-thumbnail slot="end">
             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-          </ion-thumbnail>
-        </ion-item-divider>
-      </ion-item-group>
+          </syg-thumbnail>
+        </syg-item-divider>
+      </syg-item-group>
 
-      <ion-item-group>
-        <ion-item-divider color="secondary">Secondary</ion-item-divider>
+      <syg-item-group>
+        <syg-item-divider color="secondary">Secondary</syg-item-divider>
 
-        <ion-item>
-          <ion-label>
+        <syg-item>
+          <syg-label>
             Column 1
-          </ion-label>
-          <ion-label>
+          </syg-label>
+          <syg-label>
             Column 2
-          </ion-label>
-          <ion-label>
+          </syg-label>
+          <syg-label>
             Column 3
-          </ion-label>
-        </ion-item>
-      </ion-item-group>
-    </ion-content>
+          </syg-label>
+        </syg-item>
+      </syg-item-group>
+    </syg-content>
 
     <style>
       .outer-content {
         --background: #f2f2f2;
       }
     </style>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

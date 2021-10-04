@@ -29,7 +29,7 @@ export const mdEnterAnimation = (
   const { wrapperAnimation, backdropAnimation } = currentBreakpoint !== undefined ? createSheetEnterAnimation(opts) : createEnterAnimation();
 
   backdropAnimation
-    .addElement(root.querySelector('ion-backdrop')!)
+    .addElement(root.querySelector('syg-backdrop')!)
     .beforeStyles({
       'pointer-events': 'none'
     })

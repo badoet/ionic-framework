@@ -1,11 +1,11 @@
 ```html
 <template>
-  <ion-router>
-    <ion-route url="/home" component="page-home"></ion-route>
-    <ion-route url="/dashboard" component="page-dashboard" :beforeEnter="isLoggedInGuard"></ion-route>
-    <ion-route url="/new-message" component="page-new-message" :beforeLeave="hasUnsavedDataGuard"></ion-route>
-    <ion-route url="/login" component="page-login"></ion-route>
-  </ion-router>
+  <syg-router>
+    <syg-route url="/home" component="page-home"></syg-route>
+    <syg-route url="/dashboard" component="page-dashboard" :beforeEnter="isLoggedInGuard"></syg-route>
+    <syg-route url="/new-message" component="page-new-message" :beforeLeave="hasUnsavedDataGuard"></syg-route>
+    <syg-route url="/login" component="page-login"></syg-route>
+  </syg-router>
 </template>
 
 <script>

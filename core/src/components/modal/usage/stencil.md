@@ -28,23 +28,23 @@ import { Component, h } from '@stencil/core';
 export class PageModal {
   render() {
     return [
-      <ion-list>
-        <ion-item>
-          <ion-label>Documentation</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Feedback</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Settings</ion-label>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-item>
+          <syg-label>Documentation</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Feedback</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Settings</syg-label>
+        </syg-item>
+      </syg-list>
     ];
   }
 }
 ```
 
-> If you need a wrapper element inside of your modal component, we recommend using a `<div class="ion-page">` so that the component dimensions are still computed properly.
+> If you need a wrapper element inside of your modal component, we recommend using a `<div class="syg-page">` so that the component dimensions are still computed properly.
 
 ### Passing Data
 
@@ -93,7 +93,7 @@ export class ModalPage {
 
   dismiss(data?: any) {
     // dismiss the closest modal and optionally pass back data
-    (this.el.closest('ion-modal') as any).dismiss({
+    (this.el.closest('syg-modal') as any).dismiss({
       'dismissed': true
     });
   }
@@ -130,7 +130,7 @@ export class ModalExample {
       component: 'page-modal',
       cssClass: 'my-custom-class',
       swipeToClose: true,
-      presentingElement: this.el.closest('ion-router-outlet'),
+      presentingElement: this.el.closest('syg-router-outlet'),
     });
     await modal.present();
   }
@@ -138,7 +138,7 @@ export class ModalExample {
 }
 ```
 
-In most scenarios, using the `ion-router-outlet` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `ion-modal` element as the `presentingElement`.
+In most scenarios, using the `syg-router-outlet` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `syg-modal` element as the `presentingElement`.
 
 ```tsx
 async presentModal() {
@@ -146,7 +146,7 @@ async presentModal() {
     component: 'page-modal',
     cssClass: 'my-custom-class',
     swipeToClose: true,
-    presentingElement: await modalController.getTop() // Get the top-most ion-modal
+    presentingElement: await modalController.getTop() // Get the top-most syg-modal
   });
   await modal.present();
 }
@@ -193,13 +193,13 @@ export class ModalExample {
 
   render() {
     return [
-      <ion-modal
+      <syg-modal
         isOpen={isModalOpen} 
         initialBreakpoint={0.5} 
         breakpoints={[0, 0.5, 1]}
       >
         <page-modal></page-modal>
-      <ion-modal>
+      <syg-modal>
     ]
   }
 }

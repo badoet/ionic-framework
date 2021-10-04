@@ -20,7 +20,7 @@ export const testActionSheet = async (
     const presentBtn = await page.find(selector);
     await presentBtn.click();
 
-    let actionSheet = await page.find('ion-action-sheet');
+    let actionSheet = await page.find('syg-action-sheet');
     await actionSheet.waitForVisible();
 
     screenshotCompares.push(await page.compareScreenshot());
@@ -32,7 +32,7 @@ export const testActionSheet = async (
 
     screenshotCompares.push(await page.compareScreenshot('dismiss'));
 
-    actionSheet = await page.find('ion-action-sheet');
+    actionSheet = await page.find('syg-action-sheet');
     expect(actionSheet).toBe(null);
 
     for (const screenshotCompare of screenshotCompares) {
@@ -50,7 +50,7 @@ export const testActionSheetBackdrop = async (
   actionSheet: any
 ) => {
   try {
-    const backdrop = await page.find('ion-backdrop');
+    const backdrop = await page.find('syg-backdrop');
     await backdrop.click();
 
     screenshotCompares.push(await page.compareScreenshot(`dismiss backdrop`));
@@ -69,7 +69,7 @@ export const testActionSheetAlert = async (
   const openAlertBtn = await page.find({ text: 'Open Alert' });
   await openAlertBtn.click();
 
-  const alert = await page.find('ion-alert');
+  const alert = await page.find('syg-alert');
   await alert.waitForVisible();
   await page.waitForTimeout(250);
 

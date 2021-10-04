@@ -78,7 +78,7 @@ export const waitUntilNavNode = () => {
   });
 };
 
-const QUERY = ':not([no-router]) ion-nav, :not([no-router]) ion-tabs, :not([no-router]) ion-router-outlet';
+const QUERY = ':not([no-router]) syg-nav, :not([no-router]) syg-tabs, :not([no-router]) syg-router-outlet';
 
 const searchNavNode = (root: HTMLElement | undefined): NavOutletElement | undefined => {
   if (!root) {

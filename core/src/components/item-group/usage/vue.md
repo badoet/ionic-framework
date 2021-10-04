@@ -1,106 +1,106 @@
 ```html
 <template>
-  <ion-item-group>
-    <ion-item-divider>
-      <ion-label>A</ion-label>
-    </ion-item-divider>
+  <syg-item-group>
+    <syg-item-divider>
+      <syg-label>A</syg-label>
+    </syg-item-divider>
 
-    <ion-item>
-      <ion-label>Angola</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Argentina</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Armenia</ion-label>
-    </ion-item>
-  </ion-item-group>
+    <syg-item>
+      <syg-label>Angola</syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-label>Argentina</syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-label>Armenia</syg-label>
+    </syg-item>
+  </syg-item-group>
 
-  <ion-item-group>
-    <ion-item-divider>
-      <ion-label>B</ion-label>
-    </ion-item-divider>
+  <syg-item-group>
+    <syg-item-divider>
+      <syg-label>B</syg-label>
+    </syg-item-divider>
 
-    <ion-item>
-      <ion-label>Bangladesh</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Belarus</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Belgium</ion-label>
-    </ion-item>
-  </ion-item-group>
+    <syg-item>
+      <syg-label>Bangladesh</syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-label>Belarus</syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-label>Belgium</syg-label>
+    </syg-item>
+  </syg-item-group>
 
 
   <!-- They can also be used to group sliding items -->
-  <ion-item-group>
-    <ion-item-divider>
-      <ion-label>
+  <syg-item-group>
+    <syg-item-divider>
+      <syg-label>
         Fruits
-      </ion-label>
-    </ion-item-divider>
+      </syg-label>
+    </syg-item-divider>
 
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>
+    <syg-item-sliding>
+      <syg-item>
+        <syg-label>
           <h3>Grapes</h3>
-        </ion-label>
-      </ion-item>
-      <ion-item-options>
-        <ion-item-option>
+        </syg-label>
+      </syg-item>
+      <syg-item-options>
+        <syg-item-option>
           Favorite
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
+        </syg-item-option>
+      </syg-item-options>
+    </syg-item-sliding>
 
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>
+    <syg-item-sliding>
+      <syg-item>
+        <syg-label>
           <h3>Apples</h3>
-        </ion-label>
-      </ion-item>
-      <ion-item-options>
-        <ion-item-option>
+        </syg-label>
+      </syg-item>
+      <syg-item-options>
+        <syg-item-option>
           Favorite
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-item-group>
+        </syg-item-option>
+      </syg-item-options>
+    </syg-item-sliding>
+  </syg-item-group>
 
-  <ion-item-group>
-    <ion-item-divider>
-      <ion-label>
+  <syg-item-group>
+    <syg-item-divider>
+      <syg-label>
         Vegetables
-      </ion-label>
-    </ion-item-divider>
+      </syg-label>
+    </syg-item-divider>
 
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>
+    <syg-item-sliding>
+      <syg-item>
+        <syg-label>
           <h3>Carrots</h3>
-        </ion-label>
-      </ion-item>
-      <ion-item-options>
-        <ion-item-option>
+        </syg-label>
+      </syg-item>
+      <syg-item-options>
+        <syg-item-option>
           Favorite
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
+        </syg-item-option>
+      </syg-item-options>
+    </syg-item-sliding>
 
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>
+    <syg-item-sliding>
+      <syg-item>
+        <syg-label>
           <h3>Celery</h3>
-        </ion-label>
-      </ion-item>
-      <ion-item-options>
-        <ion-item-option>
+        </syg-label>
+      </syg-item>
+      <syg-item-options>
+        <syg-item-option>
           Favorite
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-item-group>
+        </syg-item-option>
+      </syg-item-options>
+    </syg-item-sliding>
+  </syg-item-group>
 </template>
 <script>
 import { 

@@ -38,7 +38,7 @@ const getElementClasses = (ref: Ref<HTMLElement | undefined>, componentClasses: 
 /**
 * Create a callback to define a Vue component wrapper around a Web Component.
 *
-* @prop name - The component tag name (i.e. `ion-button`)
+* @prop name - The component tag name (i.e. `syg-button`)
 * @prop componentProps - An array of properties on the
 * component. These usually match up with the @Prop definitions
 * in each component's TSX file.

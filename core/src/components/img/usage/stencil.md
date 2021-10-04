@@ -19,16 +19,16 @@ export class ImgExample {
 
   render() {
     return [
-      <ion-list>
+      <syg-list>
         {this.items.map(item =>
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-img src={item.src}></ion-img>
-            </ion-thumbnail>
-            <ion-label>{item.text}</ion-label>
-          </ion-item>
+          <syg-item>
+            <syg-thumbnail slot="start">
+              <syg-img src={item.src}></syg-img>
+            </syg-thumbnail>
+            <syg-label>{item.text}</syg-label>
+          </syg-item>
         )}
-      </ion-list>
+      </syg-list>
     ];
   }
 }

@@ -1,4 +1,4 @@
-# ion-segment
+# syg-segment
 
 Segments display a group of related buttons, sometimes known as segmented controls, in a horizontal row. They can be displayed inside of a toolbar or the main content.
 
@@ -12,7 +12,7 @@ Segments are not scrollable by default. Each segment button has a fixed width, a
 
 ### Keyboard Navigation
 
-The component has full keyboard support for navigating between and selecting `ion-segment-button` elements. By default, keyboard navigation will only focus `ion-segment-button` elements, but you can use the `selectOnFocus` property to ensure that they get selected on focus as well. The following table details what each key does:
+The component has full keyboard support for navigating between and selecting `syg-segment-button` elements. By default, keyboard navigation will only focus `syg-segment-button` elements, but you can use the `selectOnFocus` property to ensure that they get selected on focus as well. The following table details what each key does:
 
 | Key                | Function                                                       |
 | ------------------ | -------------------------------------------------------------- |
@@ -52,94 +52,94 @@ interface SegmentCustomEvent extends CustomEvent {
 
 ```html
 <!-- Default Segment -->
-<ion-segment (ionChange)="segmentChanged($event)">
-  <ion-segment-button value="friends">
-    <ion-label>Friends</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="enemies">
-    <ion-label>Enemies</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment (ionChange)="segmentChanged($event)">
+  <syg-segment-button value="friends">
+    <syg-label>Friends</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="enemies">
+    <syg-label>Enemies</syg-label>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Disabled Segment -->
-<ion-segment (ionChange)="segmentChanged($event)" disabled value="sunny">
-  <ion-segment-button value="sunny">
-    <ion-label>Sunny</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="rainy">
-    <ion-label>Rainy</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment (ionChange)="segmentChanged($event)" disabled value="sunny">
+  <syg-segment-button value="sunny">
+    <syg-label>Sunny</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="rainy">
+    <syg-label>Rainy</syg-label>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Segment with anchors -->
-<ion-segment (ionChange)="segmentChanged($event)">
-  <ion-segment-button value="dogs">
-    <ion-label>Dogs</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="cats">
-    <ion-label>Cats</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment (ionChange)="segmentChanged($event)">
+  <syg-segment-button value="dogs">
+    <syg-label>Dogs</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="cats">
+    <syg-label>Cats</syg-label>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Scrollable Segment -->
-<ion-segment scrollable value="heart">
-  <ion-segment-button value="home">
+<syg-segment scrollable value="heart">
+  <syg-segment-button value="home">
     <ion-icon name="home"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="heart">
+  </syg-segment-button>
+  <syg-segment-button value="heart">
     <ion-icon name="heart"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="pin">
+  </syg-segment-button>
+  <syg-segment-button value="pin">
     <ion-icon name="pin"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="star">
+  </syg-segment-button>
+  <syg-segment-button value="star">
     <ion-icon name="star"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="call">
+  </syg-segment-button>
+  <syg-segment-button value="call">
     <ion-icon name="call"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="globe">
+  </syg-segment-button>
+  <syg-segment-button value="globe">
     <ion-icon name="globe"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="basket">
+  </syg-segment-button>
+  <syg-segment-button value="basket">
     <ion-icon name="basket"></ion-icon>
-  </ion-segment-button>
-</ion-segment>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Segment with secondary color -->
-<ion-segment (ionChange)="segmentChanged($event)" color="secondary">
-  <ion-segment-button value="standard">
-    <ion-label>Standard</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="hybrid">
-    <ion-label>Hybrid</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="sat">
-    <ion-label>Satellite</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment (ionChange)="segmentChanged($event)" color="secondary">
+  <syg-segment-button value="standard">
+    <syg-label>Standard</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="hybrid">
+    <syg-label>Hybrid</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="sat">
+    <syg-label>Satellite</syg-label>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Segment in a toolbar -->
-<ion-toolbar>
-  <ion-segment (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="camera">
+<syg-toolbar>
+  <syg-segment (ionChange)="segmentChanged($event)">
+    <syg-segment-button value="camera">
       <ion-icon name="camera"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="bookmark">
+    </syg-segment-button>
+    <syg-segment-button value="bookmark">
       <ion-icon name="bookmark"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
-</ion-toolbar>
+    </syg-segment-button>
+  </syg-segment>
+</syg-toolbar>
 
 <!-- Segment with default selection -->
-<ion-segment (ionChange)="segmentChanged($event)" value="javascript">
-  <ion-segment-button value="python">
-    <ion-label>Python</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="javascript">
-    <ion-label>Javascript</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment (ionChange)="segmentChanged($event)" value="javascript">
+  <syg-segment-button value="python">
+    <syg-label>Python</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="javascript">
+    <syg-label>Javascript</syg-label>
+  </syg-segment-button>
+</syg-segment>
 ```
 
 ```typescript
@@ -162,99 +162,99 @@ export class SegmentExample {
 
 ```html
 <!-- Default Segment -->
-<ion-segment>
-  <ion-segment-button value="friends">
-    <ion-label>Friends</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="enemies">
-    <ion-label>Enemies</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment>
+  <syg-segment-button value="friends">
+    <syg-label>Friends</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="enemies">
+    <syg-label>Enemies</syg-label>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Disabled Segment -->
-<ion-segment disabled value="sunny">
-  <ion-segment-button value="sunny">
-    <ion-label>Sunny</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="rainy">
-    <ion-label>Rainy</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment disabled value="sunny">
+  <syg-segment-button value="sunny">
+    <syg-label>Sunny</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="rainy">
+    <syg-label>Rainy</syg-label>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Segment with anchors -->
-<ion-segment>
-  <ion-segment-button value="dogs">
-    <ion-label>Dogs</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="cats">
-    <ion-label>Cats</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment>
+  <syg-segment-button value="dogs">
+    <syg-label>Dogs</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="cats">
+    <syg-label>Cats</syg-label>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Scrollable Segment -->
-<ion-segment scrollable value="heart">
-  <ion-segment-button value="home">
+<syg-segment scrollable value="heart">
+  <syg-segment-button value="home">
     <ion-icon name="home"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="heart">
+  </syg-segment-button>
+  <syg-segment-button value="heart">
     <ion-icon name="heart"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="pin">
+  </syg-segment-button>
+  <syg-segment-button value="pin">
     <ion-icon name="pin"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="star">
+  </syg-segment-button>
+  <syg-segment-button value="star">
     <ion-icon name="star"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="call">
+  </syg-segment-button>
+  <syg-segment-button value="call">
     <ion-icon name="call"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="globe">
+  </syg-segment-button>
+  <syg-segment-button value="globe">
     <ion-icon name="globe"></ion-icon>
-  </ion-segment-button>
-  <ion-segment-button value="basket">
+  </syg-segment-button>
+  <syg-segment-button value="basket">
     <ion-icon name="basket"></ion-icon>
-  </ion-segment-button>
-</ion-segment>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Segment with secondary color -->
-<ion-segment color="secondary">
-  <ion-segment-button value="standard">
-    <ion-label>Standard</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="hybrid">
-    <ion-label>Hybrid</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="sat">
-    <ion-label>Satellite</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment color="secondary">
+  <syg-segment-button value="standard">
+    <syg-label>Standard</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="hybrid">
+    <syg-label>Hybrid</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="sat">
+    <syg-label>Satellite</syg-label>
+  </syg-segment-button>
+</syg-segment>
 
 <!-- Segment in a toolbar -->
-<ion-toolbar>
-  <ion-segment>
-    <ion-segment-button value="camera">
+<syg-toolbar>
+  <syg-segment>
+    <syg-segment-button value="camera">
       <ion-icon name="camera"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="bookmark">
+    </syg-segment-button>
+    <syg-segment-button value="bookmark">
       <ion-icon name="bookmark"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
-</ion-toolbar>
+    </syg-segment-button>
+  </syg-segment>
+</syg-toolbar>
 
 <!-- Segment with default selection -->
-<ion-segment value="javascript">
-  <ion-segment-button value="python">
-    <ion-label>Python</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="javascript">
-    <ion-label>Javascript</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<syg-segment value="javascript">
+  <syg-segment-button value="python">
+    <syg-label>Python</syg-label>
+  </syg-segment-button>
+  <syg-segment-button value="javascript">
+    <syg-label>Javascript</syg-label>
+  </syg-segment-button>
+</syg-segment>
 ```
 
 ```javascript
 // Listen for ionChange on all segments
-const segments = document.querySelectorAll('ion-segment')
+const segments = document.querySelectorAll('syg-segment')
 for (let i = 0; i < segments.length; i++) {
   segments[i].addEventListener('ionChange', (ev) => {
     console.log('Segment changed', ev);
@@ -393,94 +393,94 @@ export class SegmentExample {
   render() {
      return [
       // Default Segment
-      <ion-segment onIonChange={(ev) => this.segmentChanged(ev)}>
-        <ion-segment-button value="friends">
-          <ion-label>Friends</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="enemies">
-          <ion-label>Enemies</ion-label>
-        </ion-segment-button>
-      </ion-segment>,
+      <syg-segment onIonChange={(ev) => this.segmentChanged(ev)}>
+        <syg-segment-button value="friends">
+          <syg-label>Friends</syg-label>
+        </syg-segment-button>
+        <syg-segment-button value="enemies">
+          <syg-label>Enemies</syg-label>
+        </syg-segment-button>
+      </syg-segment>,
 
       // Disabled Segment
-      <ion-segment onIonChange={(ev) => this.segmentChanged(ev)} disabled={true} value="sunny">
-        <ion-segment-button value="sunny">
-          <ion-label>Sunny</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="rainy">
-          <ion-label>Rainy</ion-label>
-        </ion-segment-button>
-      </ion-segment>,
+      <syg-segment onIonChange={(ev) => this.segmentChanged(ev)} disabled={true} value="sunny">
+        <syg-segment-button value="sunny">
+          <syg-label>Sunny</syg-label>
+        </syg-segment-button>
+        <syg-segment-button value="rainy">
+          <syg-label>Rainy</syg-label>
+        </syg-segment-button>
+      </syg-segment>,
 
       // Segment with anchors
-      <ion-segment onIonChange={(ev) => this.segmentChanged(ev)}>
-        <ion-segment-button value="dogs">
-          <ion-label>Dogs</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="cats">
-          <ion-label>Cats</ion-label>
-        </ion-segment-button>
-      </ion-segment>,
+      <syg-segment onIonChange={(ev) => this.segmentChanged(ev)}>
+        <syg-segment-button value="dogs">
+          <syg-label>Dogs</syg-label>
+        </syg-segment-button>
+        <syg-segment-button value="cats">
+          <syg-label>Cats</syg-label>
+        </syg-segment-button>
+      </syg-segment>,
 
       // Scrollable Segment
-      <ion-segment scrollable value="heart">
-        <ion-segment-button value="home">
+      <syg-segment scrollable value="heart">
+        <syg-segment-button value="home">
           <ion-icon name="home"></ion-icon>
-        </ion-segment-button>
-        <ion-segment-button value="heart">
+        </syg-segment-button>
+        <syg-segment-button value="heart">
           <ion-icon name="heart"></ion-icon>
-        </ion-segment-button>
-        <ion-segment-button value="pin">
+        </syg-segment-button>
+        <syg-segment-button value="pin">
           <ion-icon name="pin"></ion-icon>
-        </ion-segment-button>
-        <ion-segment-button value="star">
+        </syg-segment-button>
+        <syg-segment-button value="star">
           <ion-icon name="star"></ion-icon>
-        </ion-segment-button>
-        <ion-segment-button value="call">
+        </syg-segment-button>
+        <syg-segment-button value="call">
           <ion-icon name="call"></ion-icon>
-        </ion-segment-button>
-        <ion-segment-button value="globe">
+        </syg-segment-button>
+        <syg-segment-button value="globe">
           <ion-icon name="globe"></ion-icon>
-        </ion-segment-button>
-        <ion-segment-button value="basket">
+        </syg-segment-button>
+        <syg-segment-button value="basket">
           <ion-icon name="basket"></ion-icon>
-        </ion-segment-button>
-      </ion-segment>,
+        </syg-segment-button>
+      </syg-segment>,
 
       // Segment with secondary color
-      <ion-segment onIonChange={(ev) => this.segmentChanged(ev)} color="secondary">
-        <ion-segment-button value="standard">
-          <ion-label>Standard</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="hybrid">
-          <ion-label>Hybrid</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="sat">
-          <ion-label>Satellite</ion-label>
-        </ion-segment-button>
-      </ion-segment>,
+      <syg-segment onIonChange={(ev) => this.segmentChanged(ev)} color="secondary">
+        <syg-segment-button value="standard">
+          <syg-label>Standard</syg-label>
+        </syg-segment-button>
+        <syg-segment-button value="hybrid">
+          <syg-label>Hybrid</syg-label>
+        </syg-segment-button>
+        <syg-segment-button value="sat">
+          <syg-label>Satellite</syg-label>
+        </syg-segment-button>
+      </syg-segment>,
 
       // Segment in a toolbar
-      <ion-toolbar>
-        <ion-segment onIonChange={(ev) => this.segmentChanged(ev)}>
-          <ion-segment-button value="camera">
+      <syg-toolbar>
+        <syg-segment onIonChange={(ev) => this.segmentChanged(ev)}>
+          <syg-segment-button value="camera">
             <ion-icon name="camera"></ion-icon>
-          </ion-segment-button>
-          <ion-segment-button value="bookmark">
+          </syg-segment-button>
+          <syg-segment-button value="bookmark">
             <ion-icon name="bookmark"></ion-icon>
-          </ion-segment-button>
-        </ion-segment>
-      </ion-toolbar>,
+          </syg-segment-button>
+        </syg-segment>
+      </syg-toolbar>,
 
       // Segment with default selection
-      <ion-segment onIonChange={(ev) => this.segmentChanged(ev)} value="javascript">
-        <ion-segment-button value="python">
-          <ion-label>Python</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="javascript">
-          <ion-label>Javascript</ion-label>
-        </ion-segment-button>
-      </ion-segment>
+      <syg-segment onIonChange={(ev) => this.segmentChanged(ev)} value="javascript">
+        <syg-segment-button value="python">
+          <syg-label>Python</syg-label>
+        </syg-segment-button>
+        <syg-segment-button value="javascript">
+          <syg-label>Javascript</syg-label>
+        </syg-segment-button>
+      </syg-segment>
     ];
   }
 }
@@ -492,94 +492,94 @@ export class SegmentExample {
 ```html
 <template>
   <!-- Default Segment -->
-  <ion-segment @ionChange="segmentChanged($event)">
-    <ion-segment-button value="friends">
-      <ion-label>Friends</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="enemies">
-      <ion-label>Enemies</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment @ionChange="segmentChanged($event)">
+    <syg-segment-button value="friends">
+      <syg-label>Friends</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="enemies">
+      <syg-label>Enemies</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 
   <!-- Disabled Segment -->
-  <ion-segment @ionChange="segmentChanged($event)" disabled value="sunny">
-    <ion-segment-button value="sunny">
-      <ion-label>Sunny</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="rainy">
-      <ion-label>Rainy</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment @ionChange="segmentChanged($event)" disabled value="sunny">
+    <syg-segment-button value="sunny">
+      <syg-label>Sunny</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="rainy">
+      <syg-label>Rainy</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 
   <!-- Segment with anchors -->
-  <ion-segment @ionChange="segmentChanged($event)">
-    <ion-segment-button value="dogs">
-      <ion-label>Dogs</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="cats">
-      <ion-label>Cats</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment @ionChange="segmentChanged($event)">
+    <syg-segment-button value="dogs">
+      <syg-label>Dogs</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="cats">
+      <syg-label>Cats</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 
   <!-- Scrollable Segment -->
-  <ion-segment scrollable value="heart">
-    <ion-segment-button value="home">
+  <syg-segment scrollable value="heart">
+    <syg-segment-button value="home">
       <ion-icon name="home"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="heart">
+    </syg-segment-button>
+    <syg-segment-button value="heart">
       <ion-icon name="heart"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="pin">
+    </syg-segment-button>
+    <syg-segment-button value="pin">
       <ion-icon name="pin"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="star">
+    </syg-segment-button>
+    <syg-segment-button value="star">
       <ion-icon name="star"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="call">
+    </syg-segment-button>
+    <syg-segment-button value="call">
       <ion-icon name="call"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="globe">
+    </syg-segment-button>
+    <syg-segment-button value="globe">
       <ion-icon name="globe"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="basket">
+    </syg-segment-button>
+    <syg-segment-button value="basket">
       <ion-icon name="basket"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
+    </syg-segment-button>
+  </syg-segment>
 
   <!-- Segment with secondary color -->
-  <ion-segment @ionChange="segmentChanged($event)" color="secondary">
-    <ion-segment-button value="standard">
-      <ion-label>Standard</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="hybrid">
-      <ion-label>Hybrid</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="sat">
-      <ion-label>Satellite</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment @ionChange="segmentChanged($event)" color="secondary">
+    <syg-segment-button value="standard">
+      <syg-label>Standard</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="hybrid">
+      <syg-label>Hybrid</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="sat">
+      <syg-label>Satellite</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 
   <!-- Segment in a toolbar -->
-  <ion-toolbar>
-    <ion-segment @ionChange="segmentChanged($event)">
-      <ion-segment-button value="camera">
+  <syg-toolbar>
+    <syg-segment @ionChange="segmentChanged($event)">
+      <syg-segment-button value="camera">
         <ion-icon name="camera"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="bookmark">
+      </syg-segment-button>
+      <syg-segment-button value="bookmark">
         <ion-icon name="bookmark"></ion-icon>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+      </syg-segment-button>
+    </syg-segment>
+  </syg-toolbar>
 
   <!-- Segment with default selection -->
-  <ion-segment @ionChange="segmentChanged($event)" value="javascript">
-    <ion-segment-button value="python">
-      <ion-label>Python</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="javascript">
-      <ion-label>Javascript</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment @ionChange="segmentChanged($event)" value="javascript">
+    <syg-segment-button value="python">
+      <syg-label>Python</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="javascript">
+      <syg-label>Javascript</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 </template>
 
 <script lang="ts">
@@ -607,7 +607,7 @@ export default defineComponent({
 | `disabled`      | `disabled`        | If `true`, the user cannot interact with the segment.                                                                                                                                                                                                                  | `boolean`                     | `false`     |
 | `mode`          | `mode`            | The mode determines which platform styles to use.                                                                                                                                                                                                                      | `"ios" \| "md"`               | `undefined` |
 | `scrollable`    | `scrollable`      | If `true`, the segment buttons will overflow and the user can swipe to see them. In addition, this will disable the gesture to drag the indicator between the buttons in order to swipe to see hidden buttons.                                                         | `boolean`                     | `false`     |
-| `selectOnFocus` | `select-on-focus` | If `true`, navigating to an `ion-segment-button` with the keyboard will focus and select the element. If `false`, keyboard navigation will only focus the `ion-segment-button` element.                                                                                | `boolean`                     | `false`     |
+| `selectOnFocus` | `select-on-focus` | If `true`, navigating to an `syg-segment-button` with the keyboard will focus and select the element. If `false`, keyboard navigation will only focus the `syg-segment-button` element.                                                                                | `boolean`                     | `false`     |
 | `swipeGesture`  | `swipe-gesture`   | If `true`, users will be able to swipe between segment buttons to activate them.                                                                                                                                                                                       | `boolean`                     | `true`      |
 | `value`         | `value`           | the value of the segment.                                                                                                                                                                                                                                              | `null \| string \| undefined` | `undefined` |
 
@@ -616,7 +616,7 @@ export default defineComponent({
 
 | Event       | Description                                                                                                | Type                                    |
 | ----------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| `ionChange` | Emitted when the value property has changed and any dragging pointer has been released from `ion-segment`. | `CustomEvent<SegmentChangeEventDetail>` |
+| `ionChange` | Emitted when the value property has changed and any dragging pointer has been released from `syg-segment`. | `CustomEvent<SegmentChangeEventDetail>` |
 
 
 ## CSS Custom Properties
@@ -630,13 +630,13 @@ export default defineComponent({
 
 ### Used by
 
- - [ion-datetime](../datetime)
+ - [syg-datetime](../datetime)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-datetime --> ion-segment
-  style ion-segment fill:#f9f,stroke:#333,stroke-width:4px
+  syg-datetime --> syg-segment
+  style syg-segment fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

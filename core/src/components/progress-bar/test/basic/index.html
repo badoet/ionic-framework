@@ -9,7 +9,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
 
   <style>
     .custom-bar-background {
@@ -20,131 +20,131 @@
       --buffer-background: none;
     }
 
-    ion-content ion-progress-bar {
+    syg-content syg-progress-bar {
       margin: 10px 0;
     }
   </style>
 </head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Progress Bar - Basic</ion-title>
-        <ion-progress-bar type="indeterminate"></ion-progress-bar>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Progress Bar - Basic</syg-title>
+        <syg-progress-bar type="indeterminate"></syg-progress-bar>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="outer-content">
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+    <syg-content class="outer-content">
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Indeterminate
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar type="indeterminate"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar type="indeterminate"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Indeterminate with secondary color
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar color="secondary" type="indeterminate"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar color="secondary" type="indeterminate"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Indeterminate (reversed)
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar type="indeterminate" reversed="true"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Determinate
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar value="0.50"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar value="0.50"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Determinate (reversed)
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar reversed="true" value="0.50"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar reversed="true" value="0.50"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Determinate (secondary color)
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar color="secondary" value="0.50"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar color="secondary" value="0.50"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Determinate (with no bar background)
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar class="no-bar-background" value="0.75"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar class="no-bar-background" value="0.75"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Determinate (with a custom background)
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar class="custom-bar-background" value="0.75"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar class="custom-bar-background" value="0.75"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Determinate (change progress with slider)
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar id="progressBar"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar id="progressBar"></syg-progress-bar>
 
-        <ion-item>
-          <ion-range pin="true" value="0" id="progressValue">
-            <ion-label slot="start">0</ion-label>
-            <ion-label slot="end">100</ion-label>
-          </ion-range>
-        </ion-item>
+        <syg-item>
+          <syg-range pin="true" value="0" id="progressValue">
+            <syg-label slot="start">0</syg-label>
+            <syg-label slot="end">100</syg-label>
+          </syg-range>
+        </syg-item>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Buffer
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar value="0.20" buffer="0.4"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar value="0.20" buffer="0.4"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Buffer (reversed)
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar color="secondary" reversed="true" value="0.20" buffer="0.4"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar color="secondary" reversed="true" value="0.20" buffer="0.4"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Buffer (without value)
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar color="tertiary" buffer="0"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar color="tertiary" buffer="0"></syg-progress-bar>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Buffer (change buffer with slider)
-          </ion-label>
-        </ion-list-header>
-        <ion-progress-bar class="progressBarBuffer" value="0.20" buffer="0.4"></ion-progress-bar>
-        <ion-progress-bar class="progressBarBuffer" value="0.20" buffer="0.4" reversed="true"></ion-progress-bar>
+          </syg-label>
+        </syg-list-header>
+        <syg-progress-bar class="progressBarBuffer" value="0.20" buffer="0.4"></syg-progress-bar>
+        <syg-progress-bar class="progressBarBuffer" value="0.20" buffer="0.4" reversed="true"></syg-progress-bar>
 
-        <ion-item>
-          <ion-range pin="true" value="0" id="progressValueBuffer">
-            <ion-label slot="start">0</ion-label>
-            <ion-label slot="end">100</ion-label>
-          </ion-range>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-app>
+        <syg-item>
+          <syg-range pin="true" value="0" id="progressValueBuffer">
+            <syg-label slot="start">0</syg-label>
+            <syg-label slot="end">100</syg-label>
+          </syg-range>
+        </syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-app>
 
   <script>
     // Progress Bar Value

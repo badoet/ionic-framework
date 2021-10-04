@@ -1,4 +1,4 @@
-# ion-split-pane
+# syg-split-pane
 
 A split pane is useful when creating multi-view layouts. It allows UI elements, like menus, to be
 displayed as the viewport width increases.
@@ -13,10 +13,10 @@ By default, the split pane will expand when the screen is larger than 992px. To 
 
 ```html
 <!-- can be "xs", "sm", "md", "lg", or "xl" -->
-<ion-split-pane when="md"></ion-split-pane>
+<syg-split-pane when="md"></syg-split-pane>
 
 <!-- can be any valid media query https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries -->
-<ion-split-pane when="(min-width: 40px)"></ion-split-pane>
+<syg-split-pane when="(min-width: 40px)"></syg-split-pane>
 ```
 
 
@@ -37,40 +37,40 @@ By default, the split pane will expand when the screen is larger than 992px. To 
 ### Angular
 
 ```html
-<ion-split-pane contentId="main">
+<syg-split-pane contentId="main">
   <!--  the side menu  -->
-  <ion-menu contentId="main">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </ion-menu>
+  <syg-menu contentId="main">
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+  </syg-menu>
 
   <!-- the main content -->
-  <ion-router-outlet id="main"></ion-router-outlet>
-</ion-split-pane>
+  <syg-router-outlet id="main"></syg-router-outlet>
+</syg-split-pane>
 ```
 
 
 ### Javascript
 
 ```html
-<ion-split-pane content-id="main">
+<syg-split-pane content-id="main">
   <!--  the side menu  -->
-  <ion-menu content-id="main">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </ion-menu>
+  <syg-menu content-id="main">
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+  </syg-menu>
 
   <!-- the main content -->
-  <ion-content id="main">
+  <syg-content id="main">
     <h1>Hello</h1>
-  </ion-content>
-</ion-split-pane>
+  </syg-content>
+</syg-split-pane>
 ```
 
 
@@ -121,19 +121,19 @@ import { Component, h } from '@stencil/core';
 export class SplitPaneExample {
   render() {
     return [
-      <ion-split-pane content-id="main">
+      <syg-split-pane content-id="main">
         {/*  the side menu */}
-        <ion-menu content-id="main">
-          <ion-header>
-            <ion-toolbar>
-              <ion-title>Menu</ion-title>
-            </ion-toolbar>
-          </ion-header>
-        </ion-menu>
+        <syg-menu content-id="main">
+          <syg-header>
+            <syg-toolbar>
+              <syg-title>Menu</syg-title>
+            </syg-toolbar>
+          </syg-header>
+        </syg-menu>
 
         {/* the main content */}
-        <ion-router-outlet id="main"></ion-router-outlet>
-      </ion-split-pane>
+        <syg-router-outlet id="main"></syg-router-outlet>
+      </syg-split-pane>
     ];
   }
 }
@@ -144,19 +144,19 @@ export class SplitPaneExample {
 
 ```html
 <template>
-  <ion-split-pane content-id="main">
+  <syg-split-pane content-id="main">
     <!--  the side menu  -->
-    <ion-menu content-id="main">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-    </ion-menu>
+    <syg-menu content-id="main">
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Menu</syg-title>
+        </syg-toolbar>
+      </syg-header>
+    </syg-menu>
 
     <!-- the main content -->
-    <ion-router-outlet id="main"></ion-router-outlet>
-  </ion-split-pane>
+    <syg-router-outlet id="main"></syg-router-outlet>
+  </syg-split-pane>
 </template>
 
 <script>
@@ -189,7 +189,7 @@ export default defineComponent({
 
 | Property    | Attribute    | Description                                                                                                                                                                                                                            | Type                  | Default       |
 | ----------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------- |
-| `contentId` | `content-id` | The `id` of the main content. When using a router this is typically `ion-router-outlet`. When not using a router, this is typically your main view's `ion-content`. This is not the id of the `ion-content` inside of your `ion-menu`. | `string \| undefined` | `undefined`   |
+| `contentId` | `content-id` | The `id` of the main content. When using a router this is typically `syg-router-outlet`. When not using a router, this is typically your main view's `syg-content`. This is not the id of the `syg-content` inside of your `syg-menu`. | `string \| undefined` | `undefined`   |
 | `disabled`  | `disabled`   | If `true`, the split pane will be hidden.                                                                                                                                                                                              | `boolean`             | `false`       |
 | `when`      | `when`       | When the split-pane should be shown. Can be a CSS media query expression, or a shortcut expression. Can also be a boolean expression.                                                                                                  | `boolean \| string`   | `QUERY['lg']` |
 

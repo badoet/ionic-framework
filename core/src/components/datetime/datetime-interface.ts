@@ -8,7 +8,7 @@ export interface DatetimeChangeEventDetail {
 
 export interface DatetimeCustomEvent extends CustomEvent {
   detail: DatetimeChangeEventDetail;
-  target: HTMLIonDatetimeElement;
+  target: HTMLSygDatetimeElement;
 }
 
 export interface DatetimeParts {

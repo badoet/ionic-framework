@@ -15,21 +15,21 @@ export class SlidesExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-slides pager={true} options={this.slideOpts}>
-          <ion-slide>
+      <syg-content>
+        <syg-slides pager={true} options={this.slideOpts}>
+          <syg-slide>
             <h1>Slide 1</h1>
-          </ion-slide>
+          </syg-slide>
 
-          <ion-slide>
+          <syg-slide>
             <h1>Slide 2</h1>
-          </ion-slide>
+          </syg-slide>
 
-          <ion-slide>
+          <syg-slide>
             <h1>Slide 3</h1>
-          </ion-slide>
-        </ion-slides>
-      </ion-content>
+          </syg-slide>
+        </syg-slides>
+      </syg-content>
     ];
   }
 }
@@ -37,7 +37,7 @@ export class SlidesExample {
 
 ```css
 /* Without setting height the slides will take up the height of the slide's content */
-ion-slides {
+syg-slides {
   height: 100%;
 }
 ```

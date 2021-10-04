@@ -23,9 +23,9 @@ export class PopoverExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={(ev) => this.presentPopover(ev)}>Present Popover</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={(ev) => this.presentPopover(ev)}>Present Popover</syg-button>
+      </syg-content>
     ];
   }
 }
@@ -41,17 +41,17 @@ import { Component, h } from '@stencil/core';
 export class PagePopover {
   render() {
     return [
-      <ion-list>
-        <ion-item>
-          <ion-label>Documentation</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Feedback</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Settings</ion-label>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-item>
+          <syg-label>Documentation</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Feedback</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Settings</syg-label>
+        </syg-item>
+      </syg-list>
     ];
   }
 }

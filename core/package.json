@@ -1,9 +1,9 @@
 {
-  "name": "@ionic/core",
+  "name": "@syg/core",
   "version": "6.0.0-beta.6",
-  "description": "Base components for Ionic",
+  "description": "Base components for Syg UI library",
   "keywords": [
-    "ionic",
+    "syg",
     "framework",
     "stencil",
     "mobile",
@@ -96,16 +96,7 @@
     "test.treeshake": "node scripts/treeshaking.js dist/index.js",
     "validate": "npm run lint && npm run test && npm run build && npm run test.treeshake"
   },
-  "author": "Ionic Team",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionic-team/ionic.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ionic-team/ionic/issues"
-  },
-  "homepage": "https://ionicframework.com/",
   "jest": {
     "preset": "@stencil/core/testing"
   }

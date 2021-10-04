@@ -6,14 +6,14 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { AccordionGroupChangeEventDetail, ActionSheetAttributes, ActionSheetButton, AlertButton, AlertInput, AnimationBuilder, AutocompleteTypes, BreadcrumbCollapsedClickEventDetail, CheckboxChangeEventDetail, Color, ComponentProps, ComponentRef, DatetimeChangeEventDetail, DomRenderFn, FooterHeightFn, FrameworkDelegate, HeaderFn, HeaderHeightFn, InputChangeEventDetail, ItemHeightFn, ItemRenderFn, ItemReorderEventDetail, LoadingAttributes, MenuChangeEventDetail, ModalAttributes, NavComponent, NavComponentWithProps, NavOptions, OverlayEventDetail, PickerAttributes, PickerButton, PickerColumn, PopoverAttributes, PopoverSize, PositionAlign, PositionReference, PositionSide, RadioGroupChangeEventDetail, RangeChangeEventDetail, RangeValue, RefresherEventDetail, RouteID, RouterDirection, RouterEventDetail, RouterOutletOptions, RouteWrite, ScrollBaseDetail, ScrollDetail, SearchbarChangeEventDetail, SegmentButtonLayout, SegmentChangeEventDetail, SelectChangeEventDetail, SelectInterface, SelectPopoverOption, Side, SpinnerTypes, StyleEventDetail, SwipeGestureHandler, TabBarChangedEventDetail, TabButtonClickEventDetail, TabButtonLayout, TextareaChangeEventDetail, TextFieldTypes, ToastButton, ToggleChangeEventDetail, TransitionDoneFn, TransitionInstruction, TriggerAction, ViewController } from "./interface";
-import { IonicSafeString } from "./utils/sanitization";
+import { SygSafeString } from "./utils/sanitization";
 import { AlertAttributes } from "./components/alert/alert-interface";
 import { PinFormatter } from "./components/range/range-interface";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
 import { ToastAttributes } from "./components/toast/toast-interface";
 export namespace Components {
-    interface IonAccordion {
+    interface SygAccordion {
         /**
           * If `true`, the accordion cannot be interacted with.
          */
@@ -31,7 +31,7 @@ export namespace Components {
          */
         "toggleIcon": string;
         /**
-          * The slot inside of `ion-item` to place the toggle icon. Defaults to `'end'`.
+          * The slot inside of `syg-item` to place the toggle icon. Defaults to `'end'`.
          */
         "toggleIconSlot": 'start' | 'end';
         /**
@@ -39,7 +39,7 @@ export namespace Components {
          */
         "value": string;
     }
-    interface IonAccordionGroup {
+    interface SygAccordionGroup {
         /**
           * If `true`, all accordions inside of the accordion group will animate when expanding or collapsing.
          */
@@ -52,7 +52,7 @@ export namespace Components {
           * Describes the expansion behavior for each accordion. Possible values are `"compact"` and `"inset"`. Defaults to `"compact"`.
          */
         "expand": 'compact' | 'inset';
-        "getAccordions": () => Promise<HTMLIonAccordionElement[]>;
+        "getAccordions": () => Promise<HTMLSygAccordionElement[]>;
         /**
           * The mode determines which platform styles to use.
          */
@@ -71,7 +71,7 @@ export namespace Components {
          */
         "value"?: string | string[] | null;
     }
-    interface IonActionSheet {
+    interface SygActionSheet {
         /**
           * If `true`, the action sheet will animate.
          */
@@ -140,7 +140,7 @@ export namespace Components {
          */
         "translucent": boolean;
     }
-    interface IonAlert {
+    interface SygAlert {
         /**
           * If `true`, the alert will animate.
          */
@@ -188,9 +188,9 @@ export namespace Components {
          */
         "leaveAnimation"?: AnimationBuilder;
         /**
-          * The main message to be displayed in the alert. `message` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * The main message to be displayed in the alert. `message` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
-        "message"?: string | IonicSafeString;
+        "message"?: string | SygSafeString;
         /**
           * The mode determines which platform styles to use.
          */
@@ -217,12 +217,12 @@ export namespace Components {
          */
         "translucent": boolean;
     }
-    interface IonApp {
+    interface SygApp {
         "setFocus": (elements: HTMLElement[]) => Promise<void>;
     }
-    interface IonAvatar {
+    interface SygAvatar {
     }
-    interface IonBackButton {
+    interface SygBackButton {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -256,7 +256,7 @@ export namespace Components {
          */
         "type": 'submit' | 'reset' | 'button';
     }
-    interface IonBackdrop {
+    interface SygBackdrop {
         /**
           * If `true`, the backdrop will stop propagation on tap.
          */
@@ -270,7 +270,7 @@ export namespace Components {
          */
         "visible": boolean;
     }
-    interface IonBadge {
+    interface SygBadge {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -280,7 +280,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonBreadcrumb {
+    interface SygBreadcrumb {
         /**
           * If `true`, the breadcrumb will take on a different look to show that it is the currently active breadcrumb. Defaults to `true` for the last breadcrumb if it is not set on any.
          */
@@ -329,7 +329,7 @@ export namespace Components {
          */
         "target": string | undefined;
     }
-    interface IonBreadcrumbs {
+    interface SygBreadcrumbs {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -351,7 +351,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonButton {
+    interface SygButton {
         /**
           * The type of button.
          */
@@ -417,13 +417,13 @@ export namespace Components {
          */
         "type": 'submit' | 'reset' | 'button';
     }
-    interface IonButtons {
+    interface SygButtons {
         /**
-          * If true, buttons will disappear when its parent toolbar has fully collapsed if the toolbar is not the first toolbar. If the toolbar is the first toolbar, the buttons will be hidden and will only be shown once all toolbars have fully collapsed.  Only applies in `ios` mode with `collapse` set to `true` on `ion-header`.  Typically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)
+          * If true, buttons will disappear when its parent toolbar has fully collapsed if the toolbar is not the first toolbar. If the toolbar is the first toolbar, the buttons will be hidden and will only be shown once all toolbars have fully collapsed.  Only applies in `ios` mode with `collapse` set to `true` on `syg-header`.  Typically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)
          */
         "collapse": boolean;
     }
-    interface IonCard {
+    interface SygCard {
         /**
           * If `true`, a button tag will be rendered and the card will be tappable.
          */
@@ -469,13 +469,13 @@ export namespace Components {
          */
         "type": 'submit' | 'reset' | 'button';
     }
-    interface IonCardContent {
+    interface SygCardContent {
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
     }
-    interface IonCardHeader {
+    interface SygCardHeader {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -489,7 +489,7 @@ export namespace Components {
          */
         "translucent": boolean;
     }
-    interface IonCardSubtitle {
+    interface SygCardSubtitle {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -499,7 +499,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonCardTitle {
+    interface SygCardTitle {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -509,7 +509,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonCheckbox {
+    interface SygCheckbox {
         /**
           * If `true`, the checkbox is selected.
          */
@@ -539,7 +539,7 @@ export namespace Components {
          */
         "value": string;
     }
-    interface IonChip {
+    interface SygChip {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -557,7 +557,7 @@ export namespace Components {
          */
         "outline": boolean;
     }
-    interface IonCol {
+    interface SygCol {
         /**
           * The amount to offset the column, in terms of how many columns it should shift to the end of the total available.
          */
@@ -655,7 +655,7 @@ export namespace Components {
          */
         "sizeXs"?: string;
     }
-    interface IonContent {
+    interface SygContent {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -669,7 +669,7 @@ export namespace Components {
          */
         "fullscreen": boolean;
         /**
-          * Get the element where the actual scrolling takes place. This element can be used to subscribe to `scroll` events or manually modify `scrollTop`. However, it's recommended to use the API provided by `ion-content`:  i.e. Using `ionScroll`, `ionScrollStart`, `ionScrollEnd` for scrolling events and `scrollToPoint()` to scroll the content into a certain point.
+          * Get the element where the actual scrolling takes place. This element can be used to subscribe to `scroll` events or manually modify `scrollTop`. However, it's recommended to use the API provided by `syg-content`:  i.e. Using `ionScroll`, `ionScrollStart`, `ionScrollEnd` for scrolling events and `scrollToPoint()` to scroll the content into a certain point.
          */
         "getScrollElement": () => Promise<HTMLElement>;
         /**
@@ -709,7 +709,7 @@ export namespace Components {
          */
         "scrollY": boolean;
     }
-    interface IonDatetime {
+    interface SygDatetime {
         /**
           * Emits the ionCancel event and optionally closes the popover or modal that the datetime was presented in.
          */
@@ -743,11 +743,11 @@ export namespace Components {
          */
         "doneText": string;
         /**
-          * The first day of the week to use for `ion-datetime`. The default value is `0` and represents Sunday.
+          * The first day of the week to use for `syg-datetime`. The default value is `0` and represents Sunday.
          */
         "firstDayOfWeek": number;
         /**
-          * The hour cycle of the `ion-datetime`. If no value is set, this is specified by the current locale.
+          * The hour cycle of the `syg-datetime`. If no value is set, this is specified by the current locale.
          */
         "hourCycle"?: 'h23' | 'h12';
         /**
@@ -755,7 +755,7 @@ export namespace Components {
          */
         "hourValues"?: number[] | number | string;
         /**
-          * The locale to use for `ion-datetime`. This impacts month and day name formatting. The `'default'` value refers to the default locale set by your device.
+          * The locale to use for `syg-datetime`. This impacts month and day name formatting. The `'default'` value refers to the default locale set by your device.
          */
         "locale": string;
         /**
@@ -795,15 +795,15 @@ export namespace Components {
          */
         "reset": (startDate?: string | undefined) => Promise<void>;
         /**
-          * If `true`, a "Clear" button will be rendered alongside the default "Cancel" and "OK" buttons at the bottom of the `ion-datetime` component. Developers can also use the `button` slot if they want to customize these buttons. If custom buttons are set in the `button` slot then the default buttons will not be rendered.
+          * If `true`, a "Clear" button will be rendered alongside the default "Cancel" and "OK" buttons at the bottom of the `syg-datetime` component. Developers can also use the `button` slot if they want to customize these buttons. If custom buttons are set in the `button` slot then the default buttons will not be rendered.
          */
         "showClearButton": boolean;
         /**
-          * If `true`, the default "Cancel" and "OK" buttons will be rendered at the bottom of the `ion-datetime` component. Developers can also use the `button` slot if they want to customize these buttons. If custom buttons are set in the `button` slot then the default buttons will not be rendered.
+          * If `true`, the default "Cancel" and "OK" buttons will be rendered at the bottom of the `syg-datetime` component. Developers can also use the `button` slot if they want to customize these buttons. If custom buttons are set in the `button` slot then the default buttons will not be rendered.
          */
         "showDefaultButtons": boolean;
         /**
-          * If `true`, the default "Time" label will be rendered for the time selector of the `ion-datetime` component. Developers can also use the `time-label` slot if they want to customize this label. If a custom label is set in the `time-label` slot then the default label will not be rendered.
+          * If `true`, the default "Time" label will be rendered for the time selector of the `syg-datetime` component. Developers can also use the `time-label` slot if they want to customize this label. If a custom label is set in the `time-label` slot then the default label will not be rendered.
          */
         "showDefaultTimeLabel": boolean;
         /**
@@ -811,7 +811,7 @@ export namespace Components {
          */
         "showDefaultTitle": boolean;
         /**
-          * If `cover`, the `ion-datetime` will expand to cover the full width of its container. If `fixed`, the `ion-datetime` will have a fixed width.
+          * If `cover`, the `syg-datetime` will expand to cover the full width of its container. If `fixed`, the `syg-datetime` will have a fixed width.
          */
         "size": 'cover' | 'fixed';
         /**
@@ -823,9 +823,9 @@ export namespace Components {
          */
         "yearValues"?: number[] | number | string;
     }
-    interface IonFab {
+    interface SygFab {
         /**
-          * If `true`, both the `ion-fab-button` and all `ion-fab-list` inside `ion-fab` will become active. That means `ion-fab-button` will become a `close` icon and `ion-fab-list` will become visible.
+          * If `true`, both the `syg-fab-button` and all `syg-fab-list` inside `syg-fab` will become active. That means `syg-fab-button` will become a `close` icon and `syg-fab-list` will become visible.
          */
         "activated": boolean;
         /**
@@ -845,7 +845,7 @@ export namespace Components {
          */
         "vertical"?: 'top' | 'bottom' | 'center';
     }
-    interface IonFabButton {
+    interface SygFabButton {
         /**
           * If `true`, the fab button will be show a close icon.
          */
@@ -907,7 +907,7 @@ export namespace Components {
          */
         "type": 'submit' | 'reset' | 'button';
     }
-    interface IonFabList {
+    interface SygFabList {
         /**
           * If `true`, the fab list will show all fab buttons in the list.
          */
@@ -917,7 +917,7 @@ export namespace Components {
          */
         "side": 'start' | 'end' | 'top' | 'bottom';
     }
-    interface IonFooter {
+    interface SygFooter {
         /**
           * The mode determines which platform styles to use.
          */
@@ -927,13 +927,13 @@ export namespace Components {
          */
         "translucent": boolean;
     }
-    interface IonGrid {
+    interface SygGrid {
         /**
           * If `true`, the grid will have a fixed width based on the screen size.
          */
         "fixed": boolean;
     }
-    interface IonHeader {
+    interface SygHeader {
         /**
           * Describes the scroll effect that will be applied to the header `condense` only applies in iOS mode.  Typically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)
          */
@@ -947,7 +947,7 @@ export namespace Components {
          */
         "translucent": boolean;
     }
-    interface IonImg {
+    interface SygImg {
         /**
           * This attribute defines the alternative text describing the image. Users will see this text displayed if the image URL is wrong, the image is not in one of the supported formats, or if the image is not yet downloaded.
          */
@@ -957,7 +957,7 @@ export namespace Components {
          */
         "src"?: string;
     }
-    interface IonInfiniteScroll {
+    interface SygInfiniteScroll {
         /**
           * Call `complete()` within the `ionInfinite` output event handler when your async operation has completed. For example, the `loading` state is while the app is performing an asynchronous operation, such as receiving more data from an AJAX request to add more items to a data list. Once the data has been received and UI updated, you then call this method to signify that the loading has completed. This method will change the infinite scroll's state from `loading` to `enabled`.
          */
@@ -975,17 +975,17 @@ export namespace Components {
          */
         "threshold": string;
     }
-    interface IonInfiniteScrollContent {
+    interface SygInfiniteScrollContent {
         /**
           * An animated SVG spinner that shows while loading.
          */
         "loadingSpinner"?: SpinnerTypes | null;
         /**
-          * Optional text to display while loading. `loadingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * Optional text to display while loading. `loadingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
-        "loadingText"?: string | IonicSafeString;
+        "loadingText"?: string | SygSafeString;
     }
-    interface IonInput {
+    interface SygInput {
         /**
           * If the value of the type attribute is `"file"`, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers.
          */
@@ -1087,11 +1087,11 @@ export namespace Components {
          */
         "required": boolean;
         /**
-          * Sets blur on the native `input` in `ion-input`. Use this method instead of the global `input.blur()`.
+          * Sets blur on the native `input` in `syg-input`. Use this method instead of the global `input.blur()`.
          */
         "setBlur": () => Promise<void>;
         /**
-          * Sets focus on the native `input` in `ion-input`. Use this method instead of the global `input.focus()`.
+          * Sets focus on the native `input` in `syg-input`. Use this method instead of the global `input.focus()`.
          */
         "setFocus": () => Promise<void>;
         /**
@@ -1115,7 +1115,7 @@ export namespace Components {
          */
         "value"?: string | number | null;
     }
-    interface IonItem {
+    interface SygItem {
         /**
           * If `true`, a button tag will be rendered and the item will be tappable.
          */
@@ -1125,7 +1125,7 @@ export namespace Components {
          */
         "color"?: Color;
         /**
-          * If `true`, a character counter will display the ratio of characters used and the total character limit. Only applies when the `maxlength` property is set on the inner `ion-input` or `ion-textarea`.
+          * If `true`, a character counter will display the ratio of characters used and the total character limit. Only applies when the `maxlength` property is set on the inner `syg-input` or `syg-textarea`.
          */
         "counter": boolean;
         /**
@@ -1185,7 +1185,7 @@ export namespace Components {
          */
         "type": 'submit' | 'reset' | 'button';
     }
-    interface IonItemDivider {
+    interface SygItemDivider {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -1195,13 +1195,13 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
         /**
-          * When it's set to `true`, the item-divider will stay visible when it reaches the top of the viewport until the next `ion-item-divider` replaces it.  This feature relies in `position:sticky`: https://caniuse.com/#feat=css-sticky
+          * When it's set to `true`, the item-divider will stay visible when it reaches the top of the viewport until the next `syg-item-divider` replaces it.  This feature relies in `position:sticky`: https://caniuse.com/#feat=css-sticky
          */
         "sticky": boolean;
     }
-    interface IonItemGroup {
+    interface SygItemGroup {
     }
-    interface IonItemOption {
+    interface SygItemOption {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -1239,14 +1239,14 @@ export namespace Components {
          */
         "type": 'submit' | 'reset' | 'button';
     }
-    interface IonItemOptions {
+    interface SygItemOptions {
         "fireSwipeEvent": () => Promise<void>;
         /**
-          * The side the option button should be on. Possible values: `"start"` and `"end"`. If you have multiple `ion-item-options`, a side must be provided for each.
+          * The side the option button should be on. Possible values: `"start"` and `"end"`. If you have multiple `syg-item-options`, a side must be provided for each.
          */
         "side": Side;
     }
-    interface IonItemSliding {
+    interface SygItemSliding {
         /**
           * Close the sliding item. Items can also be closed from the [List](../list).
          */
@@ -1273,7 +1273,7 @@ export namespace Components {
          */
         "open": (side: Side | undefined) => Promise<void>;
     }
-    interface IonLabel {
+    interface SygLabel {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -1287,9 +1287,9 @@ export namespace Components {
          */
         "position"?: 'fixed' | 'stacked' | 'floating';
     }
-    interface IonList {
+    interface SygList {
         /**
-          * If `ion-item-sliding` are used inside the list, this method closes any open sliding item.  Returns `true` if an actual `ion-item-sliding` is closed.
+          * If `syg-item-sliding` are used inside the list, this method closes any open sliding item.  Returns `true` if an actual `syg-item-sliding` is closed.
          */
         "closeSlidingItems": () => Promise<boolean>;
         /**
@@ -1305,7 +1305,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonListHeader {
+    interface SygListHeader {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -1319,7 +1319,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonLoading {
+    interface SygLoading {
         /**
           * If `true`, the loading indicator will animate.
          */
@@ -1361,7 +1361,7 @@ export namespace Components {
         /**
           * Optional text content to display in the loading indicator.
          */
-        "message"?: string | IonicSafeString;
+        "message"?: string | SygSafeString;
         /**
           * The mode determines which platform styles to use.
          */
@@ -1392,13 +1392,13 @@ export namespace Components {
          */
         "translucent": boolean;
     }
-    interface IonMenu {
+    interface SygMenu {
         /**
           * Closes the menu. If the menu is already closed or it can't be closed, it returns `false`.
          */
         "close": (animated?: boolean) => Promise<boolean>;
         /**
-          * The `id` of the main content. When using a router this is typically `ion-router-outlet`. When not using a router, this is typically your main view's `ion-content`. This is not the id of the `ion-content` inside of your `ion-menu`.
+          * The `id` of the main content. When using a router this is typically `syg-router-outlet`. When not using a router, this is typically your main view's `syg-content`. This is not the id of the `syg-content` inside of your `syg-menu`.
          */
         "contentId"?: string;
         /**
@@ -1406,7 +1406,7 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
-          * Returns `true` is the menu is active.  A menu is active when it can be opened or closed, meaning it's enabled and it's not part of a `ion-split-pane`.
+          * Returns `true` is the menu is active.  A menu is active when it can be opened or closed, meaning it's enabled and it's not part of a `syg-split-pane`.
          */
         "isActive": () => Promise<boolean>;
         /**
@@ -1446,7 +1446,7 @@ export namespace Components {
          */
         "type"?: string;
     }
-    interface IonMenuButton {
+    interface SygMenuButton {
         /**
           * Automatically hides the menu button when the corresponding menu is not active
          */
@@ -1472,17 +1472,17 @@ export namespace Components {
          */
         "type": 'submit' | 'reset' | 'button';
     }
-    interface IonMenuToggle {
+    interface SygMenuToggle {
         /**
-          * Automatically hides the content when the corresponding menu is not active.  By default, it's `true`. Change it to `false` in order to keep `ion-menu-toggle` always visible regardless the state of the menu.
+          * Automatically hides the content when the corresponding menu is not active.  By default, it's `true`. Change it to `false` in order to keep `syg-menu-toggle` always visible regardless the state of the menu.
          */
         "autoHide": boolean;
         /**
-          * Optional property that maps to a Menu's `menuId` prop. Can also be `start` or `end` for the menu side. This is used to find the correct menu to toggle.  If this property is not used, `ion-menu-toggle` will toggle the first menu that is active.
+          * Optional property that maps to a Menu's `menuId` prop. Can also be `start` or `end` for the menu side. This is used to find the correct menu to toggle.  If this property is not used, `syg-menu-toggle` will toggle the first menu that is active.
          */
         "menu"?: string;
     }
-    interface IonModal {
+    interface SygModal {
         /**
           * If `true`, the modal will animate.
          */
@@ -1580,13 +1580,13 @@ export namespace Components {
          */
         "trigger": string | undefined;
     }
-    interface IonNav {
+    interface SygNav {
         /**
           * If `true`, the nav should animate the transition of components.
          */
         "animated": boolean;
         /**
-          * By default `ion-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions.
+          * By default `syg-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions.
          */
         "animation"?: AnimationBuilder;
         /**
@@ -1691,7 +1691,7 @@ export namespace Components {
          */
         "swipeGesture"?: boolean;
     }
-    interface IonNavLink {
+    interface SygNavLink {
         /**
           * Component to navigate to. Only used if the `routerDirection` is `"forward"` or `"root"`.
          */
@@ -1709,7 +1709,7 @@ export namespace Components {
          */
         "routerDirection": RouterDirection;
     }
-    interface IonNote {
+    interface SygNote {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -1719,7 +1719,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonPicker {
+    interface SygPicker {
         /**
           * If `true`, the picker will animate.
          */
@@ -1793,13 +1793,13 @@ export namespace Components {
          */
         "showBackdrop": boolean;
     }
-    interface IonPickerColumn {
+    interface SygPickerColumn {
         /**
           * Picker column data
          */
         "col": PickerColumn;
     }
-    interface IonPopover {
+    interface SygPopover {
         /**
           * Describes how to align the popover content with the `reference` point.
          */
@@ -1817,7 +1817,7 @@ export namespace Components {
          */
         "backdropDismiss": boolean;
         /**
-          * The component to display inside of the popover. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just slot your component inside of `ion-popover`.
+          * The component to display inside of the popover. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just slot your component inside of `syg-popover`.
          */
         "component"?: ComponentRef;
         /**
@@ -1848,7 +1848,7 @@ export namespace Components {
           * The event to pass to the popover animation.
          */
         "event": any;
-        "getParentPopover": () => Promise<HTMLIonPopoverElement | null>;
+        "getParentPopover": () => Promise<HTMLSygPopoverElement | null>;
         /**
           * Additional attributes to pass to the popover.
          */
@@ -1915,7 +1915,7 @@ export namespace Components {
          */
         "triggerAction": TriggerAction;
     }
-    interface IonProgressBar {
+    interface SygProgressBar {
         /**
           * If the buffer and value are smaller than 1, the buffer circles will show. The buffer should be between [0, 1].
          */
@@ -1941,7 +1941,7 @@ export namespace Components {
          */
         "value": number;
     }
-    interface IonRadio {
+    interface SygRadio {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -1965,7 +1965,7 @@ export namespace Components {
          */
         "value"?: any | null;
     }
-    interface IonRadioGroup {
+    interface SygRadioGroup {
         /**
           * If `true`, the radios can be deselected.
          */
@@ -1979,7 +1979,7 @@ export namespace Components {
          */
         "value"?: any | null;
     }
-    interface IonRange {
+    interface SygRange {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -2037,7 +2037,7 @@ export namespace Components {
          */
         "value": RangeValue;
     }
-    interface IonRefresher {
+    interface SygRefresher {
         /**
           * Changes the refresher's state from `refreshing` to `cancelling`.
          */
@@ -2075,27 +2075,27 @@ export namespace Components {
          */
         "snapbackDuration": string;
     }
-    interface IonRefresherContent {
+    interface SygRefresherContent {
         /**
           * A static icon or a spinner to display when you begin to pull down. A spinner name can be provided to gradually show tick marks when pulling down on iOS devices.
          */
         "pullingIcon"?: SpinnerTypes | string | null;
         /**
-          * The text you want to display when you begin to pull down. `pullingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * The text you want to display when you begin to pull down. `pullingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
-        "pullingText"?: string | IonicSafeString;
+        "pullingText"?: string | SygSafeString;
         /**
           * An animated SVG spinner that shows when refreshing begins
          */
         "refreshingSpinner"?: SpinnerTypes | null;
         /**
-          * The text you want to display when performing a refresh. `refreshingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * The text you want to display when performing a refresh. `refreshingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
-        "refreshingText"?: string | IonicSafeString;
+        "refreshingText"?: string | SygSafeString;
     }
-    interface IonReorder {
+    interface SygReorder {
     }
-    interface IonReorderGroup {
+    interface SygReorderGroup {
         /**
           * Completes the reorder operation. Must be called by the `ionItemReorder` event.  If a list of items is passed, the list will be reordered and returned in the proper order.  If no parameters are passed or if `true` is passed in, the reorder will complete and the item will remain in the position it was dragged to. If `false` is passed, the reorder will complete and the item will bounce back to its original position.
           * @param listOrReorder A list of items to be sorted and returned in the new order or a boolean of whether or not the reorder should reposition the item.
@@ -2106,7 +2106,7 @@ export namespace Components {
          */
         "disabled": boolean;
     }
-    interface IonRippleEffect {
+    interface SygRippleEffect {
         /**
           * Adds the ripple effect to the parent element.
           * @param x The horizontal coordinate of where the ripple should start.
@@ -2118,7 +2118,7 @@ export namespace Components {
          */
         "type": 'bounded' | 'unbounded';
     }
-    interface IonRoute {
+    interface SygRoute {
         /**
           * A navigation hook that is fired when the route tries to enter. Returning `true` allows the navigation to proceed, while returning `false` causes it to be cancelled. Returning a `NavigationHookOptions` object causes the router to redirect to the path specified.
          */
@@ -2128,7 +2128,7 @@ export namespace Components {
          */
         "beforeLeave"?: NavigationHookCallback;
         /**
-          * Name of the component to load/select in the navigation outlet (`ion-tabs`, `ion-nav`) when the route matches.  The value of this property is not always the tagname of the component to load, in `ion-tabs` it actually refers to the name of the `ion-tab` to select.
+          * Name of the component to load/select in the navigation outlet (`syg-tabs`, `syg-nav`) when the route matches.  The value of this property is not always the tagname of the component to load, in `syg-tabs` it actually refers to the name of the `syg-tab` to select.
          */
         "component": string;
         /**
@@ -2140,17 +2140,17 @@ export namespace Components {
          */
         "url": string;
     }
-    interface IonRouteRedirect {
+    interface SygRouteRedirect {
         /**
           * A redirect route, redirects "from" a URL "to" another URL. This property is that "from" URL. It needs to be an exact match of the navigated URL in order to apply.  The path specified in this value is always an absolute path, even if the initial `/` slash is not specified.
          */
         "from": string;
         /**
-          * A redirect route, redirects "from" a URL "to" another URL. This property is that "to" URL. When the defined `ion-route-redirect` rule matches, the router will redirect to the path specified in this property.  The value of this property is always an absolute path inside the scope of routes defined in `ion-router` it can't be used with another router or to perform a redirection to a different domain.  Note that this is a virtual redirect, it will not cause a real browser refresh, again, it's a redirect inside the context of ion-router.  When this property is not specified or his value is `undefined` the whole redirect route is noop, even if the "from" value matches.
+          * A redirect route, redirects "from" a URL "to" another URL. This property is that "to" URL. When the defined `syg-route-redirect` rule matches, the router will redirect to the path specified in this property.  The value of this property is always an absolute path inside the scope of routes defined in `syg-router` it can't be used with another router or to perform a redirection to a different domain.  Note that this is a virtual redirect, it will not cause a real browser refresh, again, it's a redirect inside the context of syg-router.  When this property is not specified or his value is `undefined` the whole redirect route is noop, even if the "from" value matches.
          */
         "to": string | undefined | null;
     }
-    interface IonRouter {
+    interface SygRouter {
         /**
           * Go back to previous page in the window.history.
          */
@@ -2165,7 +2165,7 @@ export namespace Components {
          */
         "push": (url: string, direction?: RouterDirection, animation?: AnimationBuilder | undefined) => Promise<boolean>;
         /**
-          * By default `ion-router` will match the routes at the root path ("/"). That can be changed when
+          * By default `syg-router` will match the routes at the root path ("/"). That can be changed when
          */
         "root": string;
         /**
@@ -2173,7 +2173,7 @@ export namespace Components {
          */
         "useHash": boolean;
     }
-    interface IonRouterLink {
+    interface SygRouterLink {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -2199,13 +2199,13 @@ export namespace Components {
          */
         "target": string | undefined;
     }
-    interface IonRouterOutlet {
+    interface SygRouterOutlet {
         /**
           * If `true`, the router-outlet should animate the transition of components.
          */
         "animated": boolean;
         /**
-          * By default `ion-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions.
+          * By default `syg-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions.
          */
         "animation"?: AnimationBuilder;
         "commit": (enteringEl: HTMLElement, leavingEl: HTMLElement | undefined, opts?: RouterOutletOptions | undefined) => Promise<boolean>;
@@ -2218,9 +2218,9 @@ export namespace Components {
         "setRouteId": (id: string, params: ComponentProps | undefined, direction: RouterDirection, animation?: AnimationBuilder | undefined) => Promise<RouteWrite>;
         "swipeHandler"?: SwipeGestureHandler;
     }
-    interface IonRow {
+    interface SygRow {
     }
-    interface IonSearchbar {
+    interface SygSearchbar {
         /**
           * If `true`, enable searchbar animation.
          */
@@ -2274,7 +2274,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
         /**
-          * Set the input's placeholder. `placeholder` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * Set the input's placeholder. `placeholder` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
         "placeholder": string;
         /**
@@ -2282,7 +2282,7 @@ export namespace Components {
          */
         "searchIcon"?: string;
         /**
-          * Sets focus on the specified `ion-searchbar`. Use this method instead of the global `input.focus()`.
+          * Sets focus on the specified `syg-searchbar`. Use this method instead of the global `input.focus()`.
          */
         "setFocus": () => Promise<void>;
         /**
@@ -2306,7 +2306,7 @@ export namespace Components {
          */
         "value"?: string | null;
     }
-    interface IonSegment {
+    interface SygSegment {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -2324,7 +2324,7 @@ export namespace Components {
          */
         "scrollable": boolean;
         /**
-          * If `true`, navigating to an `ion-segment-button` with the keyboard will focus and select the element. If `false`, keyboard navigation will only focus the `ion-segment-button` element.
+          * If `true`, navigating to an `syg-segment-button` with the keyboard will focus and select the element. If `false`, keyboard navigation will only focus the `syg-segment-button` element.
          */
         "selectOnFocus": boolean;
         /**
@@ -2336,7 +2336,7 @@ export namespace Components {
          */
         "value"?: string | null;
     }
-    interface IonSegmentButton {
+    interface SygSegmentButton {
         /**
           * If `true`, the user cannot interact with the segment button.
          */
@@ -2358,7 +2358,7 @@ export namespace Components {
          */
         "value": string;
     }
-    interface IonSelect {
+    interface SygSelect {
         /**
           * The text to display on the cancel button.
          */
@@ -2376,7 +2376,7 @@ export namespace Components {
          */
         "interface": SelectInterface;
         /**
-          * Any additional options that the `alert`, `action-sheet` or `popover` interface can take. See the [ion-alert docs](../alert), the [ion-action-sheet docs](../action-sheet) and the [ion-popover docs](../popover) for the create options for each interface.  Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
+          * Any additional options that the `alert`, `action-sheet` or `popover` interface can take. See the [syg-alert docs](../alert), the [syg-action-sheet docs](../action-sheet) and the [syg-popover docs](../popover) for the create options for each interface.  Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
          */
         "interfaceOptions": any;
         /**
@@ -2396,7 +2396,7 @@ export namespace Components {
          */
         "okText": string;
         /**
-          * Open the select overlay. The overlay is either an alert, action sheet, or popover, depending on the `interface` property on the `ion-select`.
+          * Open the select overlay. The overlay is either an alert, action sheet, or popover, depending on the `interface` property on the `syg-select`.
           * @param event The user interface event that called the open.
          */
         "open": (event?: UIEvent | undefined) => Promise<any>;
@@ -2413,9 +2413,9 @@ export namespace Components {
          */
         "value"?: any | null;
     }
-    interface IonSelectOption {
+    interface SygSelectOption {
         /**
-          * If `true`, the user cannot interact with the select option. This property does not apply when `interface="action-sheet"` as `ion-action-sheet` does not allow for disabled buttons.
+          * If `true`, the user cannot interact with the select option. This property does not apply when `interface="action-sheet"` as `syg-action-sheet` does not allow for disabled buttons.
          */
         "disabled": boolean;
         /**
@@ -2423,7 +2423,7 @@ export namespace Components {
          */
         "value"?: any | null;
     }
-    interface IonSelectPopover {
+    interface SygSelectPopover {
         /**
           * The header text of the popover
          */
@@ -2445,15 +2445,15 @@ export namespace Components {
          */
         "subHeader"?: string;
     }
-    interface IonSkeletonText {
+    interface SygSkeletonText {
         /**
           * If `true`, the skeleton text will animate.
          */
         "animated": boolean;
     }
-    interface IonSlide {
+    interface SygSlide {
     }
-    interface IonSlides {
+    interface SygSlides {
         /**
           * Get the index of the active slide.
          */
@@ -2546,7 +2546,7 @@ export namespace Components {
          */
         "updateAutoHeight": (speed?: number | undefined) => Promise<void>;
     }
-    interface IonSpinner {
+    interface SygSpinner {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -2564,9 +2564,9 @@ export namespace Components {
          */
         "paused": boolean;
     }
-    interface IonSplitPane {
+    interface SygSplitPane {
         /**
-          * The `id` of the main content. When using a router this is typically `ion-router-outlet`. When not using a router, this is typically your main view's `ion-content`. This is not the id of the `ion-content` inside of your `ion-menu`.
+          * The `id` of the main content. When using a router this is typically `syg-router-outlet`. When not using a router, this is typically your main view's `syg-content`. This is not the id of the `syg-content` inside of your `syg-menu`.
          */
         "contentId"?: string;
         /**
@@ -2578,7 +2578,7 @@ export namespace Components {
          */
         "when": string | boolean;
     }
-    interface IonTab {
+    interface SygTab {
         "active": boolean;
         /**
           * The component to display inside of the tab.
@@ -2590,11 +2590,11 @@ export namespace Components {
          */
         "setActive": () => Promise<void>;
         /**
-          * A tab id must be provided for each `ion-tab`. It's used internally to reference the selected tab or by the router to switch between them.
+          * A tab id must be provided for each `syg-tab`. It's used internally to reference the selected tab or by the router to switch between them.
          */
         "tab": string;
     }
-    interface IonTabBar {
+    interface SygTabBar {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -2612,7 +2612,7 @@ export namespace Components {
          */
         "translucent": boolean;
     }
-    interface IonTabButton {
+    interface SygTabButton {
         /**
           * If `true`, the user cannot interact with the tab button.
          */
@@ -2642,7 +2642,7 @@ export namespace Components {
          */
         "selected": boolean;
         /**
-          * A tab id must be provided for each `ion-tab`. It's used internally to reference the selected tab or by the router to switch between them.
+          * A tab id must be provided for each `syg-tab`. It's used internally to reference the selected tab or by the router to switch between them.
          */
         "tab"?: string;
         /**
@@ -2650,7 +2650,7 @@ export namespace Components {
          */
         "target": string | undefined;
     }
-    interface IonTabs {
+    interface SygTabs {
         "getRouteId": () => Promise<RouteID | undefined>;
         /**
           * Get the currently selected tab.
@@ -2660,16 +2660,16 @@ export namespace Components {
           * Get a specific tab by the value of its `tab` property or an element reference.
           * @param tab The tab instance to select. If passed a string, it should be the value of the tab's `tab` property.
          */
-        "getTab": (tab: string | HTMLIonTabElement) => Promise<HTMLIonTabElement | undefined>;
+        "getTab": (tab: string | HTMLSygTabElement) => Promise<HTMLSygTabElement | undefined>;
         /**
           * Select a tab by the value of its `tab` property or an element reference.
           * @param tab The tab instance to select. If passed a string, it should be the value of the tab's `tab` property.
          */
-        "select": (tab: string | HTMLIonTabElement) => Promise<boolean>;
+        "select": (tab: string | HTMLSygTabElement) => Promise<boolean>;
         "setRouteId": (id: string) => Promise<RouteWrite>;
         "useRouter": boolean;
     }
-    interface IonText {
+    interface SygText {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -2679,7 +2679,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonTextarea {
+    interface SygTextarea {
         /**
           * If `true`, the element height will increase based on the value.
          */
@@ -2761,11 +2761,11 @@ export namespace Components {
          */
         "rows"?: number;
         /**
-          * Sets blur on the native `textarea` in `ion-textarea`. Use this method instead of the global `textarea.blur()`.
+          * Sets blur on the native `textarea` in `syg-textarea`. Use this method instead of the global `textarea.blur()`.
          */
         "setBlur": () => Promise<void>;
         /**
-          * Sets focus on the native `textarea` in `ion-textarea`. Use this method instead of the global `textarea.focus()`.
+          * Sets focus on the native `textarea` in `syg-textarea`. Use this method instead of the global `textarea.focus()`.
          */
         "setFocus": () => Promise<void>;
         /**
@@ -2781,9 +2781,9 @@ export namespace Components {
          */
         "wrap"?: 'hard' | 'soft' | 'off';
     }
-    interface IonThumbnail {
+    interface SygThumbnail {
     }
-    interface IonTitle {
+    interface SygTitle {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -2793,7 +2793,7 @@ export namespace Components {
          */
         "size"?: 'large' | 'small';
     }
-    interface IonToast {
+    interface SygToast {
         /**
           * If `true`, the toast will animate.
          */
@@ -2847,7 +2847,7 @@ export namespace Components {
         /**
           * Message to be shown in the toast.
          */
-        "message"?: string | IonicSafeString;
+        "message"?: string | SygSafeString;
         /**
           * The mode determines which platform styles to use.
          */
@@ -2874,7 +2874,7 @@ export namespace Components {
          */
         "translucent": boolean;
     }
-    interface IonToggle {
+    interface SygToggle {
         /**
           * If `true`, the toggle is selected.
          */
@@ -2900,7 +2900,7 @@ export namespace Components {
          */
         "value"?: string | null;
     }
-    interface IonToolbar {
+    interface SygToolbar {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -2910,7 +2910,7 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonVirtualScroll {
+    interface SygVirtualScroll {
         /**
           * The approximate width of each footer template's cell. This dimension is used to help determine how many cells should be created when initialized, and to help calculate the height of the scrollable area. This height value can only use `px` units. Note that the actual rendered size of each cell comes from the app's CSS, whereas this approximation is used to help calculate initial dimensions before the item has been rendered.
          */
@@ -2949,7 +2949,7 @@ export namespace Components {
          */
         "headerHeight"?: HeaderHeightFn;
         /**
-          * An optional function that maps each item within their height. When this function is provides, heavy optimizations and fast path can be taked by `ion-virtual-scroll` leading to massive performance improvements.  This function allows to skip all DOM reads, which can be Doing so leads to massive performance
+          * An optional function that maps each item within their height. When this function is provides, heavy optimizations and fast path can be taked by `syg-virtual-scroll` leading to massive performance improvements.  This function allows to skip all DOM reads, which can be Doing so leads to massive performance
          */
         "itemHeight"?: ItemHeightFn;
         /**
@@ -2979,648 +2979,648 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLIonAccordionElement extends Components.IonAccordion, HTMLStencilElement {
+    interface HTMLSygAccordionElement extends Components.SygAccordion, HTMLStencilElement {
     }
-    var HTMLIonAccordionElement: {
-        prototype: HTMLIonAccordionElement;
-        new (): HTMLIonAccordionElement;
+    var HTMLSygAccordionElement: {
+        prototype: HTMLSygAccordionElement;
+        new (): HTMLSygAccordionElement;
     };
-    interface HTMLIonAccordionGroupElement extends Components.IonAccordionGroup, HTMLStencilElement {
+    interface HTMLSygAccordionGroupElement extends Components.SygAccordionGroup, HTMLStencilElement {
     }
-    var HTMLIonAccordionGroupElement: {
-        prototype: HTMLIonAccordionGroupElement;
-        new (): HTMLIonAccordionGroupElement;
+    var HTMLSygAccordionGroupElement: {
+        prototype: HTMLSygAccordionGroupElement;
+        new (): HTMLSygAccordionGroupElement;
     };
-    interface HTMLIonActionSheetElement extends Components.IonActionSheet, HTMLStencilElement {
+    interface HTMLSygActionSheetElement extends Components.SygActionSheet, HTMLStencilElement {
     }
-    var HTMLIonActionSheetElement: {
-        prototype: HTMLIonActionSheetElement;
-        new (): HTMLIonActionSheetElement;
+    var HTMLSygActionSheetElement: {
+        prototype: HTMLSygActionSheetElement;
+        new (): HTMLSygActionSheetElement;
     };
-    interface HTMLIonAlertElement extends Components.IonAlert, HTMLStencilElement {
+    interface HTMLSygAlertElement extends Components.SygAlert, HTMLStencilElement {
     }
-    var HTMLIonAlertElement: {
-        prototype: HTMLIonAlertElement;
-        new (): HTMLIonAlertElement;
+    var HTMLSygAlertElement: {
+        prototype: HTMLSygAlertElement;
+        new (): HTMLSygAlertElement;
     };
-    interface HTMLIonAppElement extends Components.IonApp, HTMLStencilElement {
+    interface HTMLSygAppElement extends Components.SygApp, HTMLStencilElement {
     }
-    var HTMLIonAppElement: {
-        prototype: HTMLIonAppElement;
-        new (): HTMLIonAppElement;
+    var HTMLSygAppElement: {
+        prototype: HTMLSygAppElement;
+        new (): HTMLSygAppElement;
     };
-    interface HTMLIonAvatarElement extends Components.IonAvatar, HTMLStencilElement {
+    interface HTMLSygAvatarElement extends Components.SygAvatar, HTMLStencilElement {
     }
-    var HTMLIonAvatarElement: {
-        prototype: HTMLIonAvatarElement;
-        new (): HTMLIonAvatarElement;
+    var HTMLSygAvatarElement: {
+        prototype: HTMLSygAvatarElement;
+        new (): HTMLSygAvatarElement;
     };
-    interface HTMLIonBackButtonElement extends Components.IonBackButton, HTMLStencilElement {
+    interface HTMLSygBackButtonElement extends Components.SygBackButton, HTMLStencilElement {
     }
-    var HTMLIonBackButtonElement: {
-        prototype: HTMLIonBackButtonElement;
-        new (): HTMLIonBackButtonElement;
+    var HTMLSygBackButtonElement: {
+        prototype: HTMLSygBackButtonElement;
+        new (): HTMLSygBackButtonElement;
     };
-    interface HTMLIonBackdropElement extends Components.IonBackdrop, HTMLStencilElement {
+    interface HTMLSygBackdropElement extends Components.SygBackdrop, HTMLStencilElement {
     }
-    var HTMLIonBackdropElement: {
-        prototype: HTMLIonBackdropElement;
-        new (): HTMLIonBackdropElement;
+    var HTMLSygBackdropElement: {
+        prototype: HTMLSygBackdropElement;
+        new (): HTMLSygBackdropElement;
     };
-    interface HTMLIonBadgeElement extends Components.IonBadge, HTMLStencilElement {
+    interface HTMLSygBadgeElement extends Components.SygBadge, HTMLStencilElement {
     }
-    var HTMLIonBadgeElement: {
-        prototype: HTMLIonBadgeElement;
-        new (): HTMLIonBadgeElement;
+    var HTMLSygBadgeElement: {
+        prototype: HTMLSygBadgeElement;
+        new (): HTMLSygBadgeElement;
     };
-    interface HTMLIonBreadcrumbElement extends Components.IonBreadcrumb, HTMLStencilElement {
+    interface HTMLSygBreadcrumbElement extends Components.SygBreadcrumb, HTMLStencilElement {
     }
-    var HTMLIonBreadcrumbElement: {
-        prototype: HTMLIonBreadcrumbElement;
-        new (): HTMLIonBreadcrumbElement;
+    var HTMLSygBreadcrumbElement: {
+        prototype: HTMLSygBreadcrumbElement;
+        new (): HTMLSygBreadcrumbElement;
     };
-    interface HTMLIonBreadcrumbsElement extends Components.IonBreadcrumbs, HTMLStencilElement {
+    interface HTMLSygBreadcrumbsElement extends Components.SygBreadcrumbs, HTMLStencilElement {
     }
-    var HTMLIonBreadcrumbsElement: {
-        prototype: HTMLIonBreadcrumbsElement;
-        new (): HTMLIonBreadcrumbsElement;
+    var HTMLSygBreadcrumbsElement: {
+        prototype: HTMLSygBreadcrumbsElement;
+        new (): HTMLSygBreadcrumbsElement;
     };
-    interface HTMLIonButtonElement extends Components.IonButton, HTMLStencilElement {
+    interface HTMLSygButtonElement extends Components.SygButton, HTMLStencilElement {
     }
-    var HTMLIonButtonElement: {
-        prototype: HTMLIonButtonElement;
-        new (): HTMLIonButtonElement;
+    var HTMLSygButtonElement: {
+        prototype: HTMLSygButtonElement;
+        new (): HTMLSygButtonElement;
     };
-    interface HTMLIonButtonsElement extends Components.IonButtons, HTMLStencilElement {
+    interface HTMLSygButtonsElement extends Components.SygButtons, HTMLStencilElement {
     }
-    var HTMLIonButtonsElement: {
-        prototype: HTMLIonButtonsElement;
-        new (): HTMLIonButtonsElement;
+    var HTMLSygButtonsElement: {
+        prototype: HTMLSygButtonsElement;
+        new (): HTMLSygButtonsElement;
     };
-    interface HTMLIonCardElement extends Components.IonCard, HTMLStencilElement {
+    interface HTMLSygCardElement extends Components.SygCard, HTMLStencilElement {
     }
-    var HTMLIonCardElement: {
-        prototype: HTMLIonCardElement;
-        new (): HTMLIonCardElement;
+    var HTMLSygCardElement: {
+        prototype: HTMLSygCardElement;
+        new (): HTMLSygCardElement;
     };
-    interface HTMLIonCardContentElement extends Components.IonCardContent, HTMLStencilElement {
+    interface HTMLSygCardContentElement extends Components.SygCardContent, HTMLStencilElement {
     }
-    var HTMLIonCardContentElement: {
-        prototype: HTMLIonCardContentElement;
-        new (): HTMLIonCardContentElement;
+    var HTMLSygCardContentElement: {
+        prototype: HTMLSygCardContentElement;
+        new (): HTMLSygCardContentElement;
     };
-    interface HTMLIonCardHeaderElement extends Components.IonCardHeader, HTMLStencilElement {
+    interface HTMLSygCardHeaderElement extends Components.SygCardHeader, HTMLStencilElement {
     }
-    var HTMLIonCardHeaderElement: {
-        prototype: HTMLIonCardHeaderElement;
-        new (): HTMLIonCardHeaderElement;
+    var HTMLSygCardHeaderElement: {
+        prototype: HTMLSygCardHeaderElement;
+        new (): HTMLSygCardHeaderElement;
     };
-    interface HTMLIonCardSubtitleElement extends Components.IonCardSubtitle, HTMLStencilElement {
+    interface HTMLSygCardSubtitleElement extends Components.SygCardSubtitle, HTMLStencilElement {
     }
-    var HTMLIonCardSubtitleElement: {
-        prototype: HTMLIonCardSubtitleElement;
-        new (): HTMLIonCardSubtitleElement;
+    var HTMLSygCardSubtitleElement: {
+        prototype: HTMLSygCardSubtitleElement;
+        new (): HTMLSygCardSubtitleElement;
     };
-    interface HTMLIonCardTitleElement extends Components.IonCardTitle, HTMLStencilElement {
+    interface HTMLSygCardTitleElement extends Components.SygCardTitle, HTMLStencilElement {
     }
-    var HTMLIonCardTitleElement: {
-        prototype: HTMLIonCardTitleElement;
-        new (): HTMLIonCardTitleElement;
+    var HTMLSygCardTitleElement: {
+        prototype: HTMLSygCardTitleElement;
+        new (): HTMLSygCardTitleElement;
     };
-    interface HTMLIonCheckboxElement extends Components.IonCheckbox, HTMLStencilElement {
+    interface HTMLSygCheckboxElement extends Components.SygCheckbox, HTMLStencilElement {
     }
-    var HTMLIonCheckboxElement: {
-        prototype: HTMLIonCheckboxElement;
-        new (): HTMLIonCheckboxElement;
+    var HTMLSygCheckboxElement: {
+        prototype: HTMLSygCheckboxElement;
+        new (): HTMLSygCheckboxElement;
     };
-    interface HTMLIonChipElement extends Components.IonChip, HTMLStencilElement {
+    interface HTMLSygChipElement extends Components.SygChip, HTMLStencilElement {
     }
-    var HTMLIonChipElement: {
-        prototype: HTMLIonChipElement;
-        new (): HTMLIonChipElement;
+    var HTMLSygChipElement: {
+        prototype: HTMLSygChipElement;
+        new (): HTMLSygChipElement;
     };
-    interface HTMLIonColElement extends Components.IonCol, HTMLStencilElement {
+    interface HTMLSygColElement extends Components.SygCol, HTMLStencilElement {
     }
-    var HTMLIonColElement: {
-        prototype: HTMLIonColElement;
-        new (): HTMLIonColElement;
+    var HTMLSygColElement: {
+        prototype: HTMLSygColElement;
+        new (): HTMLSygColElement;
     };
-    interface HTMLIonContentElement extends Components.IonContent, HTMLStencilElement {
+    interface HTMLSygContentElement extends Components.SygContent, HTMLStencilElement {
     }
-    var HTMLIonContentElement: {
-        prototype: HTMLIonContentElement;
-        new (): HTMLIonContentElement;
+    var HTMLSygContentElement: {
+        prototype: HTMLSygContentElement;
+        new (): HTMLSygContentElement;
     };
-    interface HTMLIonDatetimeElement extends Components.IonDatetime, HTMLStencilElement {
+    interface HTMLSygDatetimeElement extends Components.SygDatetime, HTMLStencilElement {
     }
-    var HTMLIonDatetimeElement: {
-        prototype: HTMLIonDatetimeElement;
-        new (): HTMLIonDatetimeElement;
+    var HTMLSygDatetimeElement: {
+        prototype: HTMLSygDatetimeElement;
+        new (): HTMLSygDatetimeElement;
     };
-    interface HTMLIonFabElement extends Components.IonFab, HTMLStencilElement {
+    interface HTMLSygFabElement extends Components.SygFab, HTMLStencilElement {
     }
-    var HTMLIonFabElement: {
-        prototype: HTMLIonFabElement;
-        new (): HTMLIonFabElement;
+    var HTMLSygFabElement: {
+        prototype: HTMLSygFabElement;
+        new (): HTMLSygFabElement;
     };
-    interface HTMLIonFabButtonElement extends Components.IonFabButton, HTMLStencilElement {
+    interface HTMLSygFabButtonElement extends Components.SygFabButton, HTMLStencilElement {
     }
-    var HTMLIonFabButtonElement: {
-        prototype: HTMLIonFabButtonElement;
-        new (): HTMLIonFabButtonElement;
+    var HTMLSygFabButtonElement: {
+        prototype: HTMLSygFabButtonElement;
+        new (): HTMLSygFabButtonElement;
     };
-    interface HTMLIonFabListElement extends Components.IonFabList, HTMLStencilElement {
+    interface HTMLSygFabListElement extends Components.SygFabList, HTMLStencilElement {
     }
-    var HTMLIonFabListElement: {
-        prototype: HTMLIonFabListElement;
-        new (): HTMLIonFabListElement;
+    var HTMLSygFabListElement: {
+        prototype: HTMLSygFabListElement;
+        new (): HTMLSygFabListElement;
     };
-    interface HTMLIonFooterElement extends Components.IonFooter, HTMLStencilElement {
+    interface HTMLSygFooterElement extends Components.SygFooter, HTMLStencilElement {
     }
-    var HTMLIonFooterElement: {
-        prototype: HTMLIonFooterElement;
-        new (): HTMLIonFooterElement;
+    var HTMLSygFooterElement: {
+        prototype: HTMLSygFooterElement;
+        new (): HTMLSygFooterElement;
     };
-    interface HTMLIonGridElement extends Components.IonGrid, HTMLStencilElement {
+    interface HTMLSygGridElement extends Components.SygGrid, HTMLStencilElement {
     }
-    var HTMLIonGridElement: {
-        prototype: HTMLIonGridElement;
-        new (): HTMLIonGridElement;
+    var HTMLSygGridElement: {
+        prototype: HTMLSygGridElement;
+        new (): HTMLSygGridElement;
     };
-    interface HTMLIonHeaderElement extends Components.IonHeader, HTMLStencilElement {
+    interface HTMLSygHeaderElement extends Components.SygHeader, HTMLStencilElement {
     }
-    var HTMLIonHeaderElement: {
-        prototype: HTMLIonHeaderElement;
-        new (): HTMLIonHeaderElement;
+    var HTMLSygHeaderElement: {
+        prototype: HTMLSygHeaderElement;
+        new (): HTMLSygHeaderElement;
     };
-    interface HTMLIonImgElement extends Components.IonImg, HTMLStencilElement {
+    interface HTMLSygImgElement extends Components.SygImg, HTMLStencilElement {
     }
-    var HTMLIonImgElement: {
-        prototype: HTMLIonImgElement;
-        new (): HTMLIonImgElement;
+    var HTMLSygImgElement: {
+        prototype: HTMLSygImgElement;
+        new (): HTMLSygImgElement;
     };
-    interface HTMLIonInfiniteScrollElement extends Components.IonInfiniteScroll, HTMLStencilElement {
+    interface HTMLSygInfiniteScrollElement extends Components.SygInfiniteScroll, HTMLStencilElement {
     }
-    var HTMLIonInfiniteScrollElement: {
-        prototype: HTMLIonInfiniteScrollElement;
-        new (): HTMLIonInfiniteScrollElement;
+    var HTMLSygInfiniteScrollElement: {
+        prototype: HTMLSygInfiniteScrollElement;
+        new (): HTMLSygInfiniteScrollElement;
     };
-    interface HTMLIonInfiniteScrollContentElement extends Components.IonInfiniteScrollContent, HTMLStencilElement {
+    interface HTMLSygInfiniteScrollContentElement extends Components.SygInfiniteScrollContent, HTMLStencilElement {
     }
-    var HTMLIonInfiniteScrollContentElement: {
-        prototype: HTMLIonInfiniteScrollContentElement;
-        new (): HTMLIonInfiniteScrollContentElement;
+    var HTMLSygInfiniteScrollContentElement: {
+        prototype: HTMLSygInfiniteScrollContentElement;
+        new (): HTMLSygInfiniteScrollContentElement;
     };
-    interface HTMLIonInputElement extends Components.IonInput, HTMLStencilElement {
+    interface HTMLSygInputElement extends Components.SygInput, HTMLStencilElement {
     }
-    var HTMLIonInputElement: {
-        prototype: HTMLIonInputElement;
-        new (): HTMLIonInputElement;
+    var HTMLSygInputElement: {
+        prototype: HTMLSygInputElement;
+        new (): HTMLSygInputElement;
     };
-    interface HTMLIonItemElement extends Components.IonItem, HTMLStencilElement {
+    interface HTMLSygItemElement extends Components.SygItem, HTMLStencilElement {
     }
-    var HTMLIonItemElement: {
-        prototype: HTMLIonItemElement;
-        new (): HTMLIonItemElement;
+    var HTMLSygItemElement: {
+        prototype: HTMLSygItemElement;
+        new (): HTMLSygItemElement;
     };
-    interface HTMLIonItemDividerElement extends Components.IonItemDivider, HTMLStencilElement {
+    interface HTMLSygItemDividerElement extends Components.SygItemDivider, HTMLStencilElement {
     }
-    var HTMLIonItemDividerElement: {
-        prototype: HTMLIonItemDividerElement;
-        new (): HTMLIonItemDividerElement;
+    var HTMLSygItemDividerElement: {
+        prototype: HTMLSygItemDividerElement;
+        new (): HTMLSygItemDividerElement;
     };
-    interface HTMLIonItemGroupElement extends Components.IonItemGroup, HTMLStencilElement {
+    interface HTMLSygItemGroupElement extends Components.SygItemGroup, HTMLStencilElement {
     }
-    var HTMLIonItemGroupElement: {
-        prototype: HTMLIonItemGroupElement;
-        new (): HTMLIonItemGroupElement;
+    var HTMLSygItemGroupElement: {
+        prototype: HTMLSygItemGroupElement;
+        new (): HTMLSygItemGroupElement;
     };
-    interface HTMLIonItemOptionElement extends Components.IonItemOption, HTMLStencilElement {
+    interface HTMLSygItemOptionElement extends Components.SygItemOption, HTMLStencilElement {
     }
-    var HTMLIonItemOptionElement: {
-        prototype: HTMLIonItemOptionElement;
-        new (): HTMLIonItemOptionElement;
+    var HTMLSygItemOptionElement: {
+        prototype: HTMLSygItemOptionElement;
+        new (): HTMLSygItemOptionElement;
     };
-    interface HTMLIonItemOptionsElement extends Components.IonItemOptions, HTMLStencilElement {
+    interface HTMLSygItemOptionsElement extends Components.SygItemOptions, HTMLStencilElement {
     }
-    var HTMLIonItemOptionsElement: {
-        prototype: HTMLIonItemOptionsElement;
-        new (): HTMLIonItemOptionsElement;
+    var HTMLSygItemOptionsElement: {
+        prototype: HTMLSygItemOptionsElement;
+        new (): HTMLSygItemOptionsElement;
     };
-    interface HTMLIonItemSlidingElement extends Components.IonItemSliding, HTMLStencilElement {
+    interface HTMLSygItemSlidingElement extends Components.SygItemSliding, HTMLStencilElement {
     }
-    var HTMLIonItemSlidingElement: {
-        prototype: HTMLIonItemSlidingElement;
-        new (): HTMLIonItemSlidingElement;
+    var HTMLSygItemSlidingElement: {
+        prototype: HTMLSygItemSlidingElement;
+        new (): HTMLSygItemSlidingElement;
     };
-    interface HTMLIonLabelElement extends Components.IonLabel, HTMLStencilElement {
+    interface HTMLSygLabelElement extends Components.SygLabel, HTMLStencilElement {
     }
-    var HTMLIonLabelElement: {
-        prototype: HTMLIonLabelElement;
-        new (): HTMLIonLabelElement;
+    var HTMLSygLabelElement: {
+        prototype: HTMLSygLabelElement;
+        new (): HTMLSygLabelElement;
     };
-    interface HTMLIonListElement extends Components.IonList, HTMLStencilElement {
+    interface HTMLSygListElement extends Components.SygList, HTMLStencilElement {
     }
-    var HTMLIonListElement: {
-        prototype: HTMLIonListElement;
-        new (): HTMLIonListElement;
+    var HTMLSygListElement: {
+        prototype: HTMLSygListElement;
+        new (): HTMLSygListElement;
     };
-    interface HTMLIonListHeaderElement extends Components.IonListHeader, HTMLStencilElement {
+    interface HTMLSygListHeaderElement extends Components.SygListHeader, HTMLStencilElement {
     }
-    var HTMLIonListHeaderElement: {
-        prototype: HTMLIonListHeaderElement;
-        new (): HTMLIonListHeaderElement;
+    var HTMLSygListHeaderElement: {
+        prototype: HTMLSygListHeaderElement;
+        new (): HTMLSygListHeaderElement;
     };
-    interface HTMLIonLoadingElement extends Components.IonLoading, HTMLStencilElement {
+    interface HTMLSygLoadingElement extends Components.SygLoading, HTMLStencilElement {
     }
-    var HTMLIonLoadingElement: {
-        prototype: HTMLIonLoadingElement;
-        new (): HTMLIonLoadingElement;
+    var HTMLSygLoadingElement: {
+        prototype: HTMLSygLoadingElement;
+        new (): HTMLSygLoadingElement;
     };
-    interface HTMLIonMenuElement extends Components.IonMenu, HTMLStencilElement {
+    interface HTMLSygMenuElement extends Components.SygMenu, HTMLStencilElement {
     }
-    var HTMLIonMenuElement: {
-        prototype: HTMLIonMenuElement;
-        new (): HTMLIonMenuElement;
+    var HTMLSygMenuElement: {
+        prototype: HTMLSygMenuElement;
+        new (): HTMLSygMenuElement;
     };
-    interface HTMLIonMenuButtonElement extends Components.IonMenuButton, HTMLStencilElement {
+    interface HTMLSygMenuButtonElement extends Components.SygMenuButton, HTMLStencilElement {
     }
-    var HTMLIonMenuButtonElement: {
-        prototype: HTMLIonMenuButtonElement;
-        new (): HTMLIonMenuButtonElement;
+    var HTMLSygMenuButtonElement: {
+        prototype: HTMLSygMenuButtonElement;
+        new (): HTMLSygMenuButtonElement;
     };
-    interface HTMLIonMenuToggleElement extends Components.IonMenuToggle, HTMLStencilElement {
+    interface HTMLSygMenuToggleElement extends Components.SygMenuToggle, HTMLStencilElement {
     }
-    var HTMLIonMenuToggleElement: {
-        prototype: HTMLIonMenuToggleElement;
-        new (): HTMLIonMenuToggleElement;
+    var HTMLSygMenuToggleElement: {
+        prototype: HTMLSygMenuToggleElement;
+        new (): HTMLSygMenuToggleElement;
     };
-    interface HTMLIonModalElement extends Components.IonModal, HTMLStencilElement {
+    interface HTMLSygModalElement extends Components.SygModal, HTMLStencilElement {
     }
-    var HTMLIonModalElement: {
-        prototype: HTMLIonModalElement;
-        new (): HTMLIonModalElement;
+    var HTMLSygModalElement: {
+        prototype: HTMLSygModalElement;
+        new (): HTMLSygModalElement;
     };
-    interface HTMLIonNavElement extends Components.IonNav, HTMLStencilElement {
+    interface HTMLSygNavElement extends Components.SygNav, HTMLStencilElement {
     }
-    var HTMLIonNavElement: {
-        prototype: HTMLIonNavElement;
-        new (): HTMLIonNavElement;
+    var HTMLSygNavElement: {
+        prototype: HTMLSygNavElement;
+        new (): HTMLSygNavElement;
     };
-    interface HTMLIonNavLinkElement extends Components.IonNavLink, HTMLStencilElement {
+    interface HTMLSygNavLinkElement extends Components.SygNavLink, HTMLStencilElement {
     }
-    var HTMLIonNavLinkElement: {
-        prototype: HTMLIonNavLinkElement;
-        new (): HTMLIonNavLinkElement;
+    var HTMLSygNavLinkElement: {
+        prototype: HTMLSygNavLinkElement;
+        new (): HTMLSygNavLinkElement;
     };
-    interface HTMLIonNoteElement extends Components.IonNote, HTMLStencilElement {
+    interface HTMLSygNoteElement extends Components.SygNote, HTMLStencilElement {
     }
-    var HTMLIonNoteElement: {
-        prototype: HTMLIonNoteElement;
-        new (): HTMLIonNoteElement;
+    var HTMLSygNoteElement: {
+        prototype: HTMLSygNoteElement;
+        new (): HTMLSygNoteElement;
     };
-    interface HTMLIonPickerElement extends Components.IonPicker, HTMLStencilElement {
+    interface HTMLSygPickerElement extends Components.SygPicker, HTMLStencilElement {
     }
-    var HTMLIonPickerElement: {
-        prototype: HTMLIonPickerElement;
-        new (): HTMLIonPickerElement;
+    var HTMLSygPickerElement: {
+        prototype: HTMLSygPickerElement;
+        new (): HTMLSygPickerElement;
     };
-    interface HTMLIonPickerColumnElement extends Components.IonPickerColumn, HTMLStencilElement {
+    interface HTMLSygPickerColumnElement extends Components.SygPickerColumn, HTMLStencilElement {
     }
-    var HTMLIonPickerColumnElement: {
-        prototype: HTMLIonPickerColumnElement;
-        new (): HTMLIonPickerColumnElement;
+    var HTMLSygPickerColumnElement: {
+        prototype: HTMLSygPickerColumnElement;
+        new (): HTMLSygPickerColumnElement;
     };
-    interface HTMLIonPopoverElement extends Components.IonPopover, HTMLStencilElement {
+    interface HTMLSygPopoverElement extends Components.SygPopover, HTMLStencilElement {
     }
-    var HTMLIonPopoverElement: {
-        prototype: HTMLIonPopoverElement;
-        new (): HTMLIonPopoverElement;
+    var HTMLSygPopoverElement: {
+        prototype: HTMLSygPopoverElement;
+        new (): HTMLSygPopoverElement;
     };
-    interface HTMLIonProgressBarElement extends Components.IonProgressBar, HTMLStencilElement {
+    interface HTMLSygProgressBarElement extends Components.SygProgressBar, HTMLStencilElement {
     }
-    var HTMLIonProgressBarElement: {
-        prototype: HTMLIonProgressBarElement;
-        new (): HTMLIonProgressBarElement;
+    var HTMLSygProgressBarElement: {
+        prototype: HTMLSygProgressBarElement;
+        new (): HTMLSygProgressBarElement;
     };
-    interface HTMLIonRadioElement extends Components.IonRadio, HTMLStencilElement {
+    interface HTMLSygRadioElement extends Components.SygRadio, HTMLStencilElement {
     }
-    var HTMLIonRadioElement: {
-        prototype: HTMLIonRadioElement;
-        new (): HTMLIonRadioElement;
+    var HTMLSygRadioElement: {
+        prototype: HTMLSygRadioElement;
+        new (): HTMLSygRadioElement;
     };
-    interface HTMLIonRadioGroupElement extends Components.IonRadioGroup, HTMLStencilElement {
+    interface HTMLSygRadioGroupElement extends Components.SygRadioGroup, HTMLStencilElement {
     }
-    var HTMLIonRadioGroupElement: {
-        prototype: HTMLIonRadioGroupElement;
-        new (): HTMLIonRadioGroupElement;
+    var HTMLSygRadioGroupElement: {
+        prototype: HTMLSygRadioGroupElement;
+        new (): HTMLSygRadioGroupElement;
     };
-    interface HTMLIonRangeElement extends Components.IonRange, HTMLStencilElement {
+    interface HTMLSygRangeElement extends Components.SygRange, HTMLStencilElement {
     }
-    var HTMLIonRangeElement: {
-        prototype: HTMLIonRangeElement;
-        new (): HTMLIonRangeElement;
+    var HTMLSygRangeElement: {
+        prototype: HTMLSygRangeElement;
+        new (): HTMLSygRangeElement;
     };
-    interface HTMLIonRefresherElement extends Components.IonRefresher, HTMLStencilElement {
+    interface HTMLSygRefresherElement extends Components.SygRefresher, HTMLStencilElement {
     }
-    var HTMLIonRefresherElement: {
-        prototype: HTMLIonRefresherElement;
-        new (): HTMLIonRefresherElement;
+    var HTMLSygRefresherElement: {
+        prototype: HTMLSygRefresherElement;
+        new (): HTMLSygRefresherElement;
     };
-    interface HTMLIonRefresherContentElement extends Components.IonRefresherContent, HTMLStencilElement {
+    interface HTMLSygRefresherContentElement extends Components.SygRefresherContent, HTMLStencilElement {
     }
-    var HTMLIonRefresherContentElement: {
-        prototype: HTMLIonRefresherContentElement;
-        new (): HTMLIonRefresherContentElement;
+    var HTMLSygRefresherContentElement: {
+        prototype: HTMLSygRefresherContentElement;
+        new (): HTMLSygRefresherContentElement;
     };
-    interface HTMLIonReorderElement extends Components.IonReorder, HTMLStencilElement {
+    interface HTMLSygReorderElement extends Components.SygReorder, HTMLStencilElement {
     }
-    var HTMLIonReorderElement: {
-        prototype: HTMLIonReorderElement;
-        new (): HTMLIonReorderElement;
+    var HTMLSygReorderElement: {
+        prototype: HTMLSygReorderElement;
+        new (): HTMLSygReorderElement;
     };
-    interface HTMLIonReorderGroupElement extends Components.IonReorderGroup, HTMLStencilElement {
+    interface HTMLSygReorderGroupElement extends Components.SygReorderGroup, HTMLStencilElement {
     }
-    var HTMLIonReorderGroupElement: {
-        prototype: HTMLIonReorderGroupElement;
-        new (): HTMLIonReorderGroupElement;
+    var HTMLSygReorderGroupElement: {
+        prototype: HTMLSygReorderGroupElement;
+        new (): HTMLSygReorderGroupElement;
     };
-    interface HTMLIonRippleEffectElement extends Components.IonRippleEffect, HTMLStencilElement {
+    interface HTMLSygRippleEffectElement extends Components.SygRippleEffect, HTMLStencilElement {
     }
-    var HTMLIonRippleEffectElement: {
-        prototype: HTMLIonRippleEffectElement;
-        new (): HTMLIonRippleEffectElement;
+    var HTMLSygRippleEffectElement: {
+        prototype: HTMLSygRippleEffectElement;
+        new (): HTMLSygRippleEffectElement;
     };
-    interface HTMLIonRouteElement extends Components.IonRoute, HTMLStencilElement {
+    interface HTMLSygRouteElement extends Components.SygRoute, HTMLStencilElement {
     }
-    var HTMLIonRouteElement: {
-        prototype: HTMLIonRouteElement;
-        new (): HTMLIonRouteElement;
+    var HTMLSygRouteElement: {
+        prototype: HTMLSygRouteElement;
+        new (): HTMLSygRouteElement;
     };
-    interface HTMLIonRouteRedirectElement extends Components.IonRouteRedirect, HTMLStencilElement {
+    interface HTMLSygRouteRedirectElement extends Components.SygRouteRedirect, HTMLStencilElement {
     }
-    var HTMLIonRouteRedirectElement: {
-        prototype: HTMLIonRouteRedirectElement;
-        new (): HTMLIonRouteRedirectElement;
+    var HTMLSygRouteRedirectElement: {
+        prototype: HTMLSygRouteRedirectElement;
+        new (): HTMLSygRouteRedirectElement;
     };
-    interface HTMLIonRouterElement extends Components.IonRouter, HTMLStencilElement {
+    interface HTMLSygRouterElement extends Components.SygRouter, HTMLStencilElement {
     }
-    var HTMLIonRouterElement: {
-        prototype: HTMLIonRouterElement;
-        new (): HTMLIonRouterElement;
+    var HTMLSygRouterElement: {
+        prototype: HTMLSygRouterElement;
+        new (): HTMLSygRouterElement;
     };
-    interface HTMLIonRouterLinkElement extends Components.IonRouterLink, HTMLStencilElement {
+    interface HTMLSygRouterLinkElement extends Components.SygRouterLink, HTMLStencilElement {
     }
-    var HTMLIonRouterLinkElement: {
-        prototype: HTMLIonRouterLinkElement;
-        new (): HTMLIonRouterLinkElement;
+    var HTMLSygRouterLinkElement: {
+        prototype: HTMLSygRouterLinkElement;
+        new (): HTMLSygRouterLinkElement;
     };
-    interface HTMLIonRouterOutletElement extends Components.IonRouterOutlet, HTMLStencilElement {
+    interface HTMLSygRouterOutletElement extends Components.SygRouterOutlet, HTMLStencilElement {
     }
-    var HTMLIonRouterOutletElement: {
-        prototype: HTMLIonRouterOutletElement;
-        new (): HTMLIonRouterOutletElement;
+    var HTMLSygRouterOutletElement: {
+        prototype: HTMLSygRouterOutletElement;
+        new (): HTMLSygRouterOutletElement;
     };
-    interface HTMLIonRowElement extends Components.IonRow, HTMLStencilElement {
+    interface HTMLSygRowElement extends Components.SygRow, HTMLStencilElement {
     }
-    var HTMLIonRowElement: {
-        prototype: HTMLIonRowElement;
-        new (): HTMLIonRowElement;
+    var HTMLSygRowElement: {
+        prototype: HTMLSygRowElement;
+        new (): HTMLSygRowElement;
     };
-    interface HTMLIonSearchbarElement extends Components.IonSearchbar, HTMLStencilElement {
+    interface HTMLSygSearchbarElement extends Components.SygSearchbar, HTMLStencilElement {
     }
-    var HTMLIonSearchbarElement: {
-        prototype: HTMLIonSearchbarElement;
-        new (): HTMLIonSearchbarElement;
+    var HTMLSygSearchbarElement: {
+        prototype: HTMLSygSearchbarElement;
+        new (): HTMLSygSearchbarElement;
     };
-    interface HTMLIonSegmentElement extends Components.IonSegment, HTMLStencilElement {
+    interface HTMLSygSegmentElement extends Components.SygSegment, HTMLStencilElement {
     }
-    var HTMLIonSegmentElement: {
-        prototype: HTMLIonSegmentElement;
-        new (): HTMLIonSegmentElement;
+    var HTMLSygSegmentElement: {
+        prototype: HTMLSygSegmentElement;
+        new (): HTMLSygSegmentElement;
     };
-    interface HTMLIonSegmentButtonElement extends Components.IonSegmentButton, HTMLStencilElement {
+    interface HTMLSygSegmentButtonElement extends Components.SygSegmentButton, HTMLStencilElement {
     }
-    var HTMLIonSegmentButtonElement: {
-        prototype: HTMLIonSegmentButtonElement;
-        new (): HTMLIonSegmentButtonElement;
+    var HTMLSygSegmentButtonElement: {
+        prototype: HTMLSygSegmentButtonElement;
+        new (): HTMLSygSegmentButtonElement;
     };
-    interface HTMLIonSelectElement extends Components.IonSelect, HTMLStencilElement {
+    interface HTMLSygSelectElement extends Components.SygSelect, HTMLStencilElement {
     }
-    var HTMLIonSelectElement: {
-        prototype: HTMLIonSelectElement;
-        new (): HTMLIonSelectElement;
+    var HTMLSygSelectElement: {
+        prototype: HTMLSygSelectElement;
+        new (): HTMLSygSelectElement;
     };
-    interface HTMLIonSelectOptionElement extends Components.IonSelectOption, HTMLStencilElement {
+    interface HTMLSygSelectOptionElement extends Components.SygSelectOption, HTMLStencilElement {
     }
-    var HTMLIonSelectOptionElement: {
-        prototype: HTMLIonSelectOptionElement;
-        new (): HTMLIonSelectOptionElement;
+    var HTMLSygSelectOptionElement: {
+        prototype: HTMLSygSelectOptionElement;
+        new (): HTMLSygSelectOptionElement;
     };
-    interface HTMLIonSelectPopoverElement extends Components.IonSelectPopover, HTMLStencilElement {
+    interface HTMLSygSelectPopoverElement extends Components.SygSelectPopover, HTMLStencilElement {
     }
-    var HTMLIonSelectPopoverElement: {
-        prototype: HTMLIonSelectPopoverElement;
-        new (): HTMLIonSelectPopoverElement;
+    var HTMLSygSelectPopoverElement: {
+        prototype: HTMLSygSelectPopoverElement;
+        new (): HTMLSygSelectPopoverElement;
     };
-    interface HTMLIonSkeletonTextElement extends Components.IonSkeletonText, HTMLStencilElement {
+    interface HTMLSygSkeletonTextElement extends Components.SygSkeletonText, HTMLStencilElement {
     }
-    var HTMLIonSkeletonTextElement: {
-        prototype: HTMLIonSkeletonTextElement;
-        new (): HTMLIonSkeletonTextElement;
+    var HTMLSygSkeletonTextElement: {
+        prototype: HTMLSygSkeletonTextElement;
+        new (): HTMLSygSkeletonTextElement;
     };
-    interface HTMLIonSlideElement extends Components.IonSlide, HTMLStencilElement {
+    interface HTMLSygSlideElement extends Components.SygSlide, HTMLStencilElement {
     }
-    var HTMLIonSlideElement: {
-        prototype: HTMLIonSlideElement;
-        new (): HTMLIonSlideElement;
+    var HTMLSygSlideElement: {
+        prototype: HTMLSygSlideElement;
+        new (): HTMLSygSlideElement;
     };
-    interface HTMLIonSlidesElement extends Components.IonSlides, HTMLStencilElement {
+    interface HTMLSygSlidesElement extends Components.SygSlides, HTMLStencilElement {
     }
-    var HTMLIonSlidesElement: {
-        prototype: HTMLIonSlidesElement;
-        new (): HTMLIonSlidesElement;
+    var HTMLSygSlidesElement: {
+        prototype: HTMLSygSlidesElement;
+        new (): HTMLSygSlidesElement;
     };
-    interface HTMLIonSpinnerElement extends Components.IonSpinner, HTMLStencilElement {
+    interface HTMLSygSpinnerElement extends Components.SygSpinner, HTMLStencilElement {
     }
-    var HTMLIonSpinnerElement: {
-        prototype: HTMLIonSpinnerElement;
-        new (): HTMLIonSpinnerElement;
+    var HTMLSygSpinnerElement: {
+        prototype: HTMLSygSpinnerElement;
+        new (): HTMLSygSpinnerElement;
     };
-    interface HTMLIonSplitPaneElement extends Components.IonSplitPane, HTMLStencilElement {
+    interface HTMLSygSplitPaneElement extends Components.SygSplitPane, HTMLStencilElement {
     }
-    var HTMLIonSplitPaneElement: {
-        prototype: HTMLIonSplitPaneElement;
-        new (): HTMLIonSplitPaneElement;
+    var HTMLSygSplitPaneElement: {
+        prototype: HTMLSygSplitPaneElement;
+        new (): HTMLSygSplitPaneElement;
     };
-    interface HTMLIonTabElement extends Components.IonTab, HTMLStencilElement {
+    interface HTMLSygTabElement extends Components.SygTab, HTMLStencilElement {
     }
-    var HTMLIonTabElement: {
-        prototype: HTMLIonTabElement;
-        new (): HTMLIonTabElement;
+    var HTMLSygTabElement: {
+        prototype: HTMLSygTabElement;
+        new (): HTMLSygTabElement;
     };
-    interface HTMLIonTabBarElement extends Components.IonTabBar, HTMLStencilElement {
+    interface HTMLSygTabBarElement extends Components.SygTabBar, HTMLStencilElement {
     }
-    var HTMLIonTabBarElement: {
-        prototype: HTMLIonTabBarElement;
-        new (): HTMLIonTabBarElement;
+    var HTMLSygTabBarElement: {
+        prototype: HTMLSygTabBarElement;
+        new (): HTMLSygTabBarElement;
     };
-    interface HTMLIonTabButtonElement extends Components.IonTabButton, HTMLStencilElement {
+    interface HTMLSygTabButtonElement extends Components.SygTabButton, HTMLStencilElement {
     }
-    var HTMLIonTabButtonElement: {
-        prototype: HTMLIonTabButtonElement;
-        new (): HTMLIonTabButtonElement;
+    var HTMLSygTabButtonElement: {
+        prototype: HTMLSygTabButtonElement;
+        new (): HTMLSygTabButtonElement;
     };
-    interface HTMLIonTabsElement extends Components.IonTabs, HTMLStencilElement {
+    interface HTMLSygTabsElement extends Components.SygTabs, HTMLStencilElement {
     }
-    var HTMLIonTabsElement: {
-        prototype: HTMLIonTabsElement;
-        new (): HTMLIonTabsElement;
+    var HTMLSygTabsElement: {
+        prototype: HTMLSygTabsElement;
+        new (): HTMLSygTabsElement;
     };
-    interface HTMLIonTextElement extends Components.IonText, HTMLStencilElement {
+    interface HTMLSygTextElement extends Components.SygText, HTMLStencilElement {
     }
-    var HTMLIonTextElement: {
-        prototype: HTMLIonTextElement;
-        new (): HTMLIonTextElement;
+    var HTMLSygTextElement: {
+        prototype: HTMLSygTextElement;
+        new (): HTMLSygTextElement;
     };
-    interface HTMLIonTextareaElement extends Components.IonTextarea, HTMLStencilElement {
+    interface HTMLSygTextareaElement extends Components.SygTextarea, HTMLStencilElement {
     }
-    var HTMLIonTextareaElement: {
-        prototype: HTMLIonTextareaElement;
-        new (): HTMLIonTextareaElement;
+    var HTMLSygTextareaElement: {
+        prototype: HTMLSygTextareaElement;
+        new (): HTMLSygTextareaElement;
     };
-    interface HTMLIonThumbnailElement extends Components.IonThumbnail, HTMLStencilElement {
+    interface HTMLSygThumbnailElement extends Components.SygThumbnail, HTMLStencilElement {
     }
-    var HTMLIonThumbnailElement: {
-        prototype: HTMLIonThumbnailElement;
-        new (): HTMLIonThumbnailElement;
+    var HTMLSygThumbnailElement: {
+        prototype: HTMLSygThumbnailElement;
+        new (): HTMLSygThumbnailElement;
     };
-    interface HTMLIonTitleElement extends Components.IonTitle, HTMLStencilElement {
+    interface HTMLSygTitleElement extends Components.SygTitle, HTMLStencilElement {
     }
-    var HTMLIonTitleElement: {
-        prototype: HTMLIonTitleElement;
-        new (): HTMLIonTitleElement;
+    var HTMLSygTitleElement: {
+        prototype: HTMLSygTitleElement;
+        new (): HTMLSygTitleElement;
     };
-    interface HTMLIonToastElement extends Components.IonToast, HTMLStencilElement {
+    interface HTMLSygToastElement extends Components.SygToast, HTMLStencilElement {
     }
-    var HTMLIonToastElement: {
-        prototype: HTMLIonToastElement;
-        new (): HTMLIonToastElement;
+    var HTMLSygToastElement: {
+        prototype: HTMLSygToastElement;
+        new (): HTMLSygToastElement;
     };
-    interface HTMLIonToggleElement extends Components.IonToggle, HTMLStencilElement {
+    interface HTMLSygToggleElement extends Components.SygToggle, HTMLStencilElement {
     }
-    var HTMLIonToggleElement: {
-        prototype: HTMLIonToggleElement;
-        new (): HTMLIonToggleElement;
+    var HTMLSygToggleElement: {
+        prototype: HTMLSygToggleElement;
+        new (): HTMLSygToggleElement;
     };
-    interface HTMLIonToolbarElement extends Components.IonToolbar, HTMLStencilElement {
+    interface HTMLSygToolbarElement extends Components.SygToolbar, HTMLStencilElement {
     }
-    var HTMLIonToolbarElement: {
-        prototype: HTMLIonToolbarElement;
-        new (): HTMLIonToolbarElement;
+    var HTMLSygToolbarElement: {
+        prototype: HTMLSygToolbarElement;
+        new (): HTMLSygToolbarElement;
     };
-    interface HTMLIonVirtualScrollElement extends Components.IonVirtualScroll, HTMLStencilElement {
+    interface HTMLSygVirtualScrollElement extends Components.SygVirtualScroll, HTMLStencilElement {
     }
-    var HTMLIonVirtualScrollElement: {
-        prototype: HTMLIonVirtualScrollElement;
-        new (): HTMLIonVirtualScrollElement;
+    var HTMLSygVirtualScrollElement: {
+        prototype: HTMLSygVirtualScrollElement;
+        new (): HTMLSygVirtualScrollElement;
     };
     interface HTMLElementTagNameMap {
-        "ion-accordion": HTMLIonAccordionElement;
-        "ion-accordion-group": HTMLIonAccordionGroupElement;
-        "ion-action-sheet": HTMLIonActionSheetElement;
-        "ion-alert": HTMLIonAlertElement;
-        "ion-app": HTMLIonAppElement;
-        "ion-avatar": HTMLIonAvatarElement;
-        "ion-back-button": HTMLIonBackButtonElement;
-        "ion-backdrop": HTMLIonBackdropElement;
-        "ion-badge": HTMLIonBadgeElement;
-        "ion-breadcrumb": HTMLIonBreadcrumbElement;
-        "ion-breadcrumbs": HTMLIonBreadcrumbsElement;
-        "ion-button": HTMLIonButtonElement;
-        "ion-buttons": HTMLIonButtonsElement;
-        "ion-card": HTMLIonCardElement;
-        "ion-card-content": HTMLIonCardContentElement;
-        "ion-card-header": HTMLIonCardHeaderElement;
-        "ion-card-subtitle": HTMLIonCardSubtitleElement;
-        "ion-card-title": HTMLIonCardTitleElement;
-        "ion-checkbox": HTMLIonCheckboxElement;
-        "ion-chip": HTMLIonChipElement;
-        "ion-col": HTMLIonColElement;
-        "ion-content": HTMLIonContentElement;
-        "ion-datetime": HTMLIonDatetimeElement;
-        "ion-fab": HTMLIonFabElement;
-        "ion-fab-button": HTMLIonFabButtonElement;
-        "ion-fab-list": HTMLIonFabListElement;
-        "ion-footer": HTMLIonFooterElement;
-        "ion-grid": HTMLIonGridElement;
-        "ion-header": HTMLIonHeaderElement;
-        "ion-img": HTMLIonImgElement;
-        "ion-infinite-scroll": HTMLIonInfiniteScrollElement;
-        "ion-infinite-scroll-content": HTMLIonInfiniteScrollContentElement;
-        "ion-input": HTMLIonInputElement;
-        "ion-item": HTMLIonItemElement;
-        "ion-item-divider": HTMLIonItemDividerElement;
-        "ion-item-group": HTMLIonItemGroupElement;
-        "ion-item-option": HTMLIonItemOptionElement;
-        "ion-item-options": HTMLIonItemOptionsElement;
-        "ion-item-sliding": HTMLIonItemSlidingElement;
-        "ion-label": HTMLIonLabelElement;
-        "ion-list": HTMLIonListElement;
-        "ion-list-header": HTMLIonListHeaderElement;
-        "ion-loading": HTMLIonLoadingElement;
-        "ion-menu": HTMLIonMenuElement;
-        "ion-menu-button": HTMLIonMenuButtonElement;
-        "ion-menu-toggle": HTMLIonMenuToggleElement;
-        "ion-modal": HTMLIonModalElement;
-        "ion-nav": HTMLIonNavElement;
-        "ion-nav-link": HTMLIonNavLinkElement;
-        "ion-note": HTMLIonNoteElement;
-        "ion-picker": HTMLIonPickerElement;
-        "ion-picker-column": HTMLIonPickerColumnElement;
-        "ion-popover": HTMLIonPopoverElement;
-        "ion-progress-bar": HTMLIonProgressBarElement;
-        "ion-radio": HTMLIonRadioElement;
-        "ion-radio-group": HTMLIonRadioGroupElement;
-        "ion-range": HTMLIonRangeElement;
-        "ion-refresher": HTMLIonRefresherElement;
-        "ion-refresher-content": HTMLIonRefresherContentElement;
-        "ion-reorder": HTMLIonReorderElement;
-        "ion-reorder-group": HTMLIonReorderGroupElement;
-        "ion-ripple-effect": HTMLIonRippleEffectElement;
-        "ion-route": HTMLIonRouteElement;
-        "ion-route-redirect": HTMLIonRouteRedirectElement;
-        "ion-router": HTMLIonRouterElement;
-        "ion-router-link": HTMLIonRouterLinkElement;
-        "ion-router-outlet": HTMLIonRouterOutletElement;
-        "ion-row": HTMLIonRowElement;
-        "ion-searchbar": HTMLIonSearchbarElement;
-        "ion-segment": HTMLIonSegmentElement;
-        "ion-segment-button": HTMLIonSegmentButtonElement;
-        "ion-select": HTMLIonSelectElement;
-        "ion-select-option": HTMLIonSelectOptionElement;
-        "ion-select-popover": HTMLIonSelectPopoverElement;
-        "ion-skeleton-text": HTMLIonSkeletonTextElement;
-        "ion-slide": HTMLIonSlideElement;
-        "ion-slides": HTMLIonSlidesElement;
-        "ion-spinner": HTMLIonSpinnerElement;
-        "ion-split-pane": HTMLIonSplitPaneElement;
-        "ion-tab": HTMLIonTabElement;
-        "ion-tab-bar": HTMLIonTabBarElement;
-        "ion-tab-button": HTMLIonTabButtonElement;
-        "ion-tabs": HTMLIonTabsElement;
-        "ion-text": HTMLIonTextElement;
-        "ion-textarea": HTMLIonTextareaElement;
-        "ion-thumbnail": HTMLIonThumbnailElement;
-        "ion-title": HTMLIonTitleElement;
-        "ion-toast": HTMLIonToastElement;
-        "ion-toggle": HTMLIonToggleElement;
-        "ion-toolbar": HTMLIonToolbarElement;
-        "ion-virtual-scroll": HTMLIonVirtualScrollElement;
+        "syg-accordion": HTMLSygAccordionElement;
+        "syg-accordion-group": HTMLSygAccordionGroupElement;
+        "syg-action-sheet": HTMLSygActionSheetElement;
+        "syg-alert": HTMLSygAlertElement;
+        "syg-app": HTMLSygAppElement;
+        "syg-avatar": HTMLSygAvatarElement;
+        "syg-back-button": HTMLSygBackButtonElement;
+        "syg-backdrop": HTMLSygBackdropElement;
+        "syg-badge": HTMLSygBadgeElement;
+        "syg-breadcrumb": HTMLSygBreadcrumbElement;
+        "syg-breadcrumbs": HTMLSygBreadcrumbsElement;
+        "syg-button": HTMLSygButtonElement;
+        "syg-buttons": HTMLSygButtonsElement;
+        "syg-card": HTMLSygCardElement;
+        "syg-card-content": HTMLSygCardContentElement;
+        "syg-card-header": HTMLSygCardHeaderElement;
+        "syg-card-subtitle": HTMLSygCardSubtitleElement;
+        "syg-card-title": HTMLSygCardTitleElement;
+        "syg-checkbox": HTMLSygCheckboxElement;
+        "syg-chip": HTMLSygChipElement;
+        "syg-col": HTMLSygColElement;
+        "syg-content": HTMLSygContentElement;
+        "syg-datetime": HTMLSygDatetimeElement;
+        "syg-fab": HTMLSygFabElement;
+        "syg-fab-button": HTMLSygFabButtonElement;
+        "syg-fab-list": HTMLSygFabListElement;
+        "syg-footer": HTMLSygFooterElement;
+        "syg-grid": HTMLSygGridElement;
+        "syg-header": HTMLSygHeaderElement;
+        "syg-img": HTMLSygImgElement;
+        "syg-infinite-scroll": HTMLSygInfiniteScrollElement;
+        "syg-infinite-scroll-content": HTMLSygInfiniteScrollContentElement;
+        "syg-input": HTMLSygInputElement;
+        "syg-item": HTMLSygItemElement;
+        "syg-item-divider": HTMLSygItemDividerElement;
+        "syg-item-group": HTMLSygItemGroupElement;
+        "syg-item-option": HTMLSygItemOptionElement;
+        "syg-item-options": HTMLSygItemOptionsElement;
+        "syg-item-sliding": HTMLSygItemSlidingElement;
+        "syg-label": HTMLSygLabelElement;
+        "syg-list": HTMLSygListElement;
+        "syg-list-header": HTMLSygListHeaderElement;
+        "syg-loading": HTMLSygLoadingElement;
+        "syg-menu": HTMLSygMenuElement;
+        "syg-menu-button": HTMLSygMenuButtonElement;
+        "syg-menu-toggle": HTMLSygMenuToggleElement;
+        "syg-modal": HTMLSygModalElement;
+        "syg-nav": HTMLSygNavElement;
+        "syg-nav-link": HTMLSygNavLinkElement;
+        "syg-note": HTMLSygNoteElement;
+        "syg-picker": HTMLSygPickerElement;
+        "syg-picker-column": HTMLSygPickerColumnElement;
+        "syg-popover": HTMLSygPopoverElement;
+        "syg-progress-bar": HTMLSygProgressBarElement;
+        "syg-radio": HTMLSygRadioElement;
+        "syg-radio-group": HTMLSygRadioGroupElement;
+        "syg-range": HTMLSygRangeElement;
+        "syg-refresher": HTMLSygRefresherElement;
+        "syg-refresher-content": HTMLSygRefresherContentElement;
+        "syg-reorder": HTMLSygReorderElement;
+        "syg-reorder-group": HTMLSygReorderGroupElement;
+        "syg-ripple-effect": HTMLSygRippleEffectElement;
+        "syg-route": HTMLSygRouteElement;
+        "syg-route-redirect": HTMLSygRouteRedirectElement;
+        "syg-router": HTMLSygRouterElement;
+        "syg-router-link": HTMLSygRouterLinkElement;
+        "syg-router-outlet": HTMLSygRouterOutletElement;
+        "syg-row": HTMLSygRowElement;
+        "syg-searchbar": HTMLSygSearchbarElement;
+        "syg-segment": HTMLSygSegmentElement;
+        "syg-segment-button": HTMLSygSegmentButtonElement;
+        "syg-select": HTMLSygSelectElement;
+        "syg-select-option": HTMLSygSelectOptionElement;
+        "syg-select-popover": HTMLSygSelectPopoverElement;
+        "syg-skeleton-text": HTMLSygSkeletonTextElement;
+        "syg-slide": HTMLSygSlideElement;
+        "syg-slides": HTMLSygSlidesElement;
+        "syg-spinner": HTMLSygSpinnerElement;
+        "syg-split-pane": HTMLSygSplitPaneElement;
+        "syg-tab": HTMLSygTabElement;
+        "syg-tab-bar": HTMLSygTabBarElement;
+        "syg-tab-button": HTMLSygTabButtonElement;
+        "syg-tabs": HTMLSygTabsElement;
+        "syg-text": HTMLSygTextElement;
+        "syg-textarea": HTMLSygTextareaElement;
+        "syg-thumbnail": HTMLSygThumbnailElement;
+        "syg-title": HTMLSygTitleElement;
+        "syg-toast": HTMLSygToastElement;
+        "syg-toggle": HTMLSygToggleElement;
+        "syg-toolbar": HTMLSygToolbarElement;
+        "syg-virtual-scroll": HTMLSygVirtualScrollElement;
     }
 }
 declare namespace LocalJSX {
-    interface IonAccordion {
+    interface SygAccordion {
         /**
           * If `true`, the accordion cannot be interacted with.
          */
@@ -3638,7 +3638,7 @@ declare namespace LocalJSX {
          */
         "toggleIcon"?: string;
         /**
-          * The slot inside of `ion-item` to place the toggle icon. Defaults to `'end'`.
+          * The slot inside of `syg-item` to place the toggle icon. Defaults to `'end'`.
          */
         "toggleIconSlot"?: 'start' | 'end';
         /**
@@ -3646,7 +3646,7 @@ declare namespace LocalJSX {
          */
         "value"?: string;
     }
-    interface IonAccordionGroup {
+    interface SygAccordionGroup {
         /**
           * If `true`, all accordions inside of the accordion group will animate when expanding or collapsing.
          */
@@ -3680,7 +3680,7 @@ declare namespace LocalJSX {
          */
         "value"?: string | string[] | null;
     }
-    interface IonActionSheet {
+    interface SygActionSheet {
         /**
           * If `true`, the action sheet will animate.
          */
@@ -3747,7 +3747,7 @@ declare namespace LocalJSX {
          */
         "translucent"?: boolean;
     }
-    interface IonAlert {
+    interface SygAlert {
         /**
           * If `true`, the alert will animate.
          */
@@ -3789,9 +3789,9 @@ declare namespace LocalJSX {
          */
         "leaveAnimation"?: AnimationBuilder;
         /**
-          * The main message to be displayed in the alert. `message` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * The main message to be displayed in the alert. `message` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
-        "message"?: string | IonicSafeString;
+        "message"?: string | SygSafeString;
         /**
           * The mode determines which platform styles to use.
          */
@@ -3822,11 +3822,11 @@ declare namespace LocalJSX {
          */
         "translucent"?: boolean;
     }
-    interface IonApp {
+    interface SygApp {
     }
-    interface IonAvatar {
+    interface SygAvatar {
     }
-    interface IonBackButton {
+    interface SygBackButton {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -3860,7 +3860,7 @@ declare namespace LocalJSX {
          */
         "type"?: 'submit' | 'reset' | 'button';
     }
-    interface IonBackdrop {
+    interface SygBackdrop {
         /**
           * Emitted when the backdrop is tapped.
          */
@@ -3878,7 +3878,7 @@ declare namespace LocalJSX {
          */
         "visible"?: boolean;
     }
-    interface IonBadge {
+    interface SygBadge {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -3888,7 +3888,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonBreadcrumb {
+    interface SygBreadcrumb {
         /**
           * If `true`, the breadcrumb will take on a different look to show that it is the currently active breadcrumb. Defaults to `true` for the last breadcrumb if it is not set on any.
          */
@@ -3916,7 +3916,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
         /**
-          * Emitted when the collapsed indicator is clicked on. `ion-breadcrumbs` will listen for this and emit ionCollapsedClick. Normally we could just emit this as `ionCollapsedClick` and let the event bubble to `ion-breadcrumbs`, but if the event custom event is not set on `ion-breadcrumbs`, TypeScript will throw an error in user applications.
+          * Emitted when the collapsed indicator is clicked on. `syg-breadcrumbs` will listen for this and emit ionCollapsedClick. Normally we could just emit this as `ionCollapsedClick` and let the event bubble to `syg-breadcrumbs`, but if the event custom event is not set on `syg-breadcrumbs`, TypeScript will throw an error in user applications.
          */
         "onCollapsedClick"?: (event: CustomEvent<BreadcrumbCollapsedClickEventDetail>) => void;
         /**
@@ -3949,7 +3949,7 @@ declare namespace LocalJSX {
          */
         "target"?: string | undefined;
     }
-    interface IonBreadcrumbs {
+    interface SygBreadcrumbs {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -3975,7 +3975,7 @@ declare namespace LocalJSX {
          */
         "onIonCollapsedClick"?: (event: CustomEvent<BreadcrumbCollapsedClickEventDetail>) => void;
     }
-    interface IonButton {
+    interface SygButton {
         /**
           * The type of button.
          */
@@ -4049,13 +4049,13 @@ declare namespace LocalJSX {
          */
         "type"?: 'submit' | 'reset' | 'button';
     }
-    interface IonButtons {
+    interface SygButtons {
         /**
-          * If true, buttons will disappear when its parent toolbar has fully collapsed if the toolbar is not the first toolbar. If the toolbar is the first toolbar, the buttons will be hidden and will only be shown once all toolbars have fully collapsed.  Only applies in `ios` mode with `collapse` set to `true` on `ion-header`.  Typically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)
+          * If true, buttons will disappear when its parent toolbar has fully collapsed if the toolbar is not the first toolbar. If the toolbar is the first toolbar, the buttons will be hidden and will only be shown once all toolbars have fully collapsed.  Only applies in `ios` mode with `collapse` set to `true` on `syg-header`.  Typically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)
          */
         "collapse"?: boolean;
     }
-    interface IonCard {
+    interface SygCard {
         /**
           * If `true`, a button tag will be rendered and the card will be tappable.
          */
@@ -4101,13 +4101,13 @@ declare namespace LocalJSX {
          */
         "type"?: 'submit' | 'reset' | 'button';
     }
-    interface IonCardContent {
+    interface SygCardContent {
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
     }
-    interface IonCardHeader {
+    interface SygCardHeader {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -4121,7 +4121,7 @@ declare namespace LocalJSX {
          */
         "translucent"?: boolean;
     }
-    interface IonCardSubtitle {
+    interface SygCardSubtitle {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -4131,7 +4131,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonCardTitle {
+    interface SygCardTitle {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -4141,7 +4141,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonCheckbox {
+    interface SygCheckbox {
         /**
           * If `true`, the checkbox is selected.
          */
@@ -4187,7 +4187,7 @@ declare namespace LocalJSX {
          */
         "value"?: string;
     }
-    interface IonChip {
+    interface SygChip {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -4205,7 +4205,7 @@ declare namespace LocalJSX {
          */
         "outline"?: boolean;
     }
-    interface IonCol {
+    interface SygCol {
         /**
           * The amount to offset the column, in terms of how many columns it should shift to the end of the total available.
          */
@@ -4303,7 +4303,7 @@ declare namespace LocalJSX {
          */
         "sizeXs"?: string;
     }
-    interface IonContent {
+    interface SygContent {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -4341,7 +4341,7 @@ declare namespace LocalJSX {
          */
         "scrollY"?: boolean;
     }
-    interface IonDatetime {
+    interface SygDatetime {
         /**
           * The text to display on the picker's cancel button.
          */
@@ -4367,11 +4367,11 @@ declare namespace LocalJSX {
          */
         "doneText"?: string;
         /**
-          * The first day of the week to use for `ion-datetime`. The default value is `0` and represents Sunday.
+          * The first day of the week to use for `syg-datetime`. The default value is `0` and represents Sunday.
          */
         "firstDayOfWeek"?: number;
         /**
-          * The hour cycle of the `ion-datetime`. If no value is set, this is specified by the current locale.
+          * The hour cycle of the `syg-datetime`. If no value is set, this is specified by the current locale.
          */
         "hourCycle"?: 'h23' | 'h12';
         /**
@@ -4379,7 +4379,7 @@ declare namespace LocalJSX {
          */
         "hourValues"?: number[] | number | string;
         /**
-          * The locale to use for `ion-datetime`. This impacts month and day name formatting. The `'default'` value refers to the default locale set by your device.
+          * The locale to use for `syg-datetime`. This impacts month and day name formatting. The `'default'` value refers to the default locale set by your device.
          */
         "locale"?: string;
         /**
@@ -4435,15 +4435,15 @@ declare namespace LocalJSX {
          */
         "readonly"?: boolean;
         /**
-          * If `true`, a "Clear" button will be rendered alongside the default "Cancel" and "OK" buttons at the bottom of the `ion-datetime` component. Developers can also use the `button` slot if they want to customize these buttons. If custom buttons are set in the `button` slot then the default buttons will not be rendered.
+          * If `true`, a "Clear" button will be rendered alongside the default "Cancel" and "OK" buttons at the bottom of the `syg-datetime` component. Developers can also use the `button` slot if they want to customize these buttons. If custom buttons are set in the `button` slot then the default buttons will not be rendered.
          */
         "showClearButton"?: boolean;
         /**
-          * If `true`, the default "Cancel" and "OK" buttons will be rendered at the bottom of the `ion-datetime` component. Developers can also use the `button` slot if they want to customize these buttons. If custom buttons are set in the `button` slot then the default buttons will not be rendered.
+          * If `true`, the default "Cancel" and "OK" buttons will be rendered at the bottom of the `syg-datetime` component. Developers can also use the `button` slot if they want to customize these buttons. If custom buttons are set in the `button` slot then the default buttons will not be rendered.
          */
         "showDefaultButtons"?: boolean;
         /**
-          * If `true`, the default "Time" label will be rendered for the time selector of the `ion-datetime` component. Developers can also use the `time-label` slot if they want to customize this label. If a custom label is set in the `time-label` slot then the default label will not be rendered.
+          * If `true`, the default "Time" label will be rendered for the time selector of the `syg-datetime` component. Developers can also use the `time-label` slot if they want to customize this label. If a custom label is set in the `time-label` slot then the default label will not be rendered.
          */
         "showDefaultTimeLabel"?: boolean;
         /**
@@ -4451,7 +4451,7 @@ declare namespace LocalJSX {
          */
         "showDefaultTitle"?: boolean;
         /**
-          * If `cover`, the `ion-datetime` will expand to cover the full width of its container. If `fixed`, the `ion-datetime` will have a fixed width.
+          * If `cover`, the `syg-datetime` will expand to cover the full width of its container. If `fixed`, the `syg-datetime` will have a fixed width.
          */
         "size"?: 'cover' | 'fixed';
         /**
@@ -4463,9 +4463,9 @@ declare namespace LocalJSX {
          */
         "yearValues"?: number[] | number | string;
     }
-    interface IonFab {
+    interface SygFab {
         /**
-          * If `true`, both the `ion-fab-button` and all `ion-fab-list` inside `ion-fab` will become active. That means `ion-fab-button` will become a `close` icon and `ion-fab-list` will become visible.
+          * If `true`, both the `syg-fab-button` and all `syg-fab-list` inside `syg-fab` will become active. That means `syg-fab-button` will become a `close` icon and `syg-fab-list` will become visible.
          */
         "activated"?: boolean;
         /**
@@ -4481,7 +4481,7 @@ declare namespace LocalJSX {
          */
         "vertical"?: 'top' | 'bottom' | 'center';
     }
-    interface IonFabButton {
+    interface SygFabButton {
         /**
           * If `true`, the fab button will be show a close icon.
          */
@@ -4551,7 +4551,7 @@ declare namespace LocalJSX {
          */
         "type"?: 'submit' | 'reset' | 'button';
     }
-    interface IonFabList {
+    interface SygFabList {
         /**
           * If `true`, the fab list will show all fab buttons in the list.
          */
@@ -4561,7 +4561,7 @@ declare namespace LocalJSX {
          */
         "side"?: 'start' | 'end' | 'top' | 'bottom';
     }
-    interface IonFooter {
+    interface SygFooter {
         /**
           * The mode determines which platform styles to use.
          */
@@ -4571,13 +4571,13 @@ declare namespace LocalJSX {
          */
         "translucent"?: boolean;
     }
-    interface IonGrid {
+    interface SygGrid {
         /**
           * If `true`, the grid will have a fixed width based on the screen size.
          */
         "fixed"?: boolean;
     }
-    interface IonHeader {
+    interface SygHeader {
         /**
           * Describes the scroll effect that will be applied to the header `condense` only applies in iOS mode.  Typically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)
          */
@@ -4591,7 +4591,7 @@ declare namespace LocalJSX {
          */
         "translucent"?: boolean;
     }
-    interface IonImg {
+    interface SygImg {
         /**
           * This attribute defines the alternative text describing the image. Users will see this text displayed if the image URL is wrong, the image is not in one of the supported formats, or if the image is not yet downloaded.
          */
@@ -4613,7 +4613,7 @@ declare namespace LocalJSX {
          */
         "src"?: string;
     }
-    interface IonInfiniteScroll {
+    interface SygInfiniteScroll {
         /**
           * If `true`, the infinite scroll will be hidden and scroll event listeners will be removed.  Set this to true to disable the infinite scroll from actively trying to receive new data while scrolling. This is useful when it is known that there is no more data that can be added, and the infinite scroll is no longer needed.
          */
@@ -4631,17 +4631,17 @@ declare namespace LocalJSX {
          */
         "threshold"?: string;
     }
-    interface IonInfiniteScrollContent {
+    interface SygInfiniteScrollContent {
         /**
           * An animated SVG spinner that shows while loading.
          */
         "loadingSpinner"?: SpinnerTypes | null;
         /**
-          * Optional text to display while loading. `loadingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * Optional text to display while loading. `loadingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
-        "loadingText"?: string | IonicSafeString;
+        "loadingText"?: string | SygSafeString;
     }
-    interface IonInput {
+    interface SygInput {
         /**
           * If the value of the type attribute is `"file"`, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers.
          */
@@ -4779,7 +4779,7 @@ declare namespace LocalJSX {
          */
         "value"?: string | number | null;
     }
-    interface IonItem {
+    interface SygItem {
         /**
           * If `true`, a button tag will be rendered and the item will be tappable.
          */
@@ -4789,7 +4789,7 @@ declare namespace LocalJSX {
          */
         "color"?: Color;
         /**
-          * If `true`, a character counter will display the ratio of characters used and the total character limit. Only applies when the `maxlength` property is set on the inner `ion-input` or `ion-textarea`.
+          * If `true`, a character counter will display the ratio of characters used and the total character limit. Only applies when the `maxlength` property is set on the inner `syg-input` or `syg-textarea`.
          */
         "counter"?: boolean;
         /**
@@ -4849,7 +4849,7 @@ declare namespace LocalJSX {
          */
         "type"?: 'submit' | 'reset' | 'button';
     }
-    interface IonItemDivider {
+    interface SygItemDivider {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -4859,13 +4859,13 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
         /**
-          * When it's set to `true`, the item-divider will stay visible when it reaches the top of the viewport until the next `ion-item-divider` replaces it.  This feature relies in `position:sticky`: https://caniuse.com/#feat=css-sticky
+          * When it's set to `true`, the item-divider will stay visible when it reaches the top of the viewport until the next `syg-item-divider` replaces it.  This feature relies in `position:sticky`: https://caniuse.com/#feat=css-sticky
          */
         "sticky"?: boolean;
     }
-    interface IonItemGroup {
+    interface SygItemGroup {
     }
-    interface IonItemOption {
+    interface SygItemOption {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -4903,17 +4903,17 @@ declare namespace LocalJSX {
          */
         "type"?: 'submit' | 'reset' | 'button';
     }
-    interface IonItemOptions {
+    interface SygItemOptions {
         /**
           * Emitted when the item has been fully swiped.
          */
         "onIonSwipe"?: (event: CustomEvent<any>) => void;
         /**
-          * The side the option button should be on. Possible values: `"start"` and `"end"`. If you have multiple `ion-item-options`, a side must be provided for each.
+          * The side the option button should be on. Possible values: `"start"` and `"end"`. If you have multiple `syg-item-options`, a side must be provided for each.
          */
         "side"?: Side;
     }
-    interface IonItemSliding {
+    interface SygItemSliding {
         /**
           * If `true`, the user cannot interact with the sliding item.
          */
@@ -4923,7 +4923,7 @@ declare namespace LocalJSX {
          */
         "onIonDrag"?: (event: CustomEvent<any>) => void;
     }
-    interface IonLabel {
+    interface SygLabel {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -4945,7 +4945,7 @@ declare namespace LocalJSX {
          */
         "position"?: 'fixed' | 'stacked' | 'floating';
     }
-    interface IonList {
+    interface SygList {
         /**
           * If `true`, the list will have margin around it and rounded corners.
          */
@@ -4959,7 +4959,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonListHeader {
+    interface SygListHeader {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -4973,7 +4973,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonLoading {
+    interface SygLoading {
         /**
           * If `true`, the loading indicator will animate.
          */
@@ -5009,7 +5009,7 @@ declare namespace LocalJSX {
         /**
           * Optional text content to display in the loading indicator.
          */
-        "message"?: string | IonicSafeString;
+        "message"?: string | SygSafeString;
         /**
           * The mode determines which platform styles to use.
          */
@@ -5044,9 +5044,9 @@ declare namespace LocalJSX {
          */
         "translucent"?: boolean;
     }
-    interface IonMenu {
+    interface SygMenu {
         /**
-          * The `id` of the main content. When using a router this is typically `ion-router-outlet`. When not using a router, this is typically your main view's `ion-content`. This is not the id of the `ion-content` inside of your `ion-menu`.
+          * The `id` of the main content. When using a router this is typically `syg-router-outlet`. When not using a router, this is typically your main view's `syg-content`. This is not the id of the `syg-content` inside of your `syg-menu`.
          */
         "contentId"?: string;
         /**
@@ -5094,7 +5094,7 @@ declare namespace LocalJSX {
          */
         "type"?: string;
     }
-    interface IonMenuButton {
+    interface SygMenuButton {
         /**
           * Automatically hides the menu button when the corresponding menu is not active
          */
@@ -5120,17 +5120,17 @@ declare namespace LocalJSX {
          */
         "type"?: 'submit' | 'reset' | 'button';
     }
-    interface IonMenuToggle {
+    interface SygMenuToggle {
         /**
-          * Automatically hides the content when the corresponding menu is not active.  By default, it's `true`. Change it to `false` in order to keep `ion-menu-toggle` always visible regardless the state of the menu.
+          * Automatically hides the content when the corresponding menu is not active.  By default, it's `true`. Change it to `false` in order to keep `syg-menu-toggle` always visible regardless the state of the menu.
          */
         "autoHide"?: boolean;
         /**
-          * Optional property that maps to a Menu's `menuId` prop. Can also be `start` or `end` for the menu side. This is used to find the correct menu to toggle.  If this property is not used, `ion-menu-toggle` will toggle the first menu that is active.
+          * Optional property that maps to a Menu's `menuId` prop. Can also be `start` or `end` for the menu side. This is used to find the correct menu to toggle.  If this property is not used, `syg-menu-toggle` will toggle the first menu that is active.
          */
         "menu"?: string;
     }
-    interface IonModal {
+    interface SygModal {
         /**
           * If `true`, the modal will animate.
          */
@@ -5242,13 +5242,13 @@ declare namespace LocalJSX {
          */
         "trigger"?: string | undefined;
     }
-    interface IonNav {
+    interface SygNav {
         /**
           * If `true`, the nav should animate the transition of components.
          */
         "animated"?: boolean;
         /**
-          * By default `ion-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions.
+          * By default `syg-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions.
          */
         "animation"?: AnimationBuilder;
         "delegate"?: FrameworkDelegate;
@@ -5277,7 +5277,7 @@ declare namespace LocalJSX {
          */
         "swipeGesture"?: boolean;
     }
-    interface IonNavLink {
+    interface SygNavLink {
         /**
           * Component to navigate to. Only used if the `routerDirection` is `"forward"` or `"root"`.
          */
@@ -5295,7 +5295,7 @@ declare namespace LocalJSX {
          */
         "routerDirection"?: RouterDirection;
     }
-    interface IonNote {
+    interface SygNote {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -5305,7 +5305,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonPicker {
+    interface SygPicker {
         /**
           * If `true`, the picker will animate.
          */
@@ -5372,7 +5372,7 @@ declare namespace LocalJSX {
          */
         "showBackdrop"?: boolean;
     }
-    interface IonPickerColumn {
+    interface SygPickerColumn {
         /**
           * Picker column data
          */
@@ -5382,7 +5382,7 @@ declare namespace LocalJSX {
          */
         "onIonPickerColChange"?: (event: CustomEvent<PickerColumn>) => void;
     }
-    interface IonPopover {
+    interface SygPopover {
         /**
           * Describes how to align the popover content with the `reference` point.
          */
@@ -5400,7 +5400,7 @@ declare namespace LocalJSX {
          */
         "backdropDismiss"?: boolean;
         /**
-          * The component to display inside of the popover. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just slot your component inside of `ion-popover`.
+          * The component to display inside of the popover. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just slot your component inside of `syg-popover`.
          */
         "component"?: ComponentRef;
         /**
@@ -5506,7 +5506,7 @@ declare namespace LocalJSX {
          */
         "triggerAction"?: TriggerAction;
     }
-    interface IonProgressBar {
+    interface SygProgressBar {
         /**
           * If the buffer and value are smaller than 1, the buffer circles will show. The buffer should be between [0, 1].
          */
@@ -5532,7 +5532,7 @@ declare namespace LocalJSX {
          */
         "value"?: number;
     }
-    interface IonRadio {
+    interface SygRadio {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -5566,7 +5566,7 @@ declare namespace LocalJSX {
          */
         "value"?: any | null;
     }
-    interface IonRadioGroup {
+    interface SygRadioGroup {
         /**
           * If `true`, the radios can be deselected.
          */
@@ -5584,7 +5584,7 @@ declare namespace LocalJSX {
          */
         "value"?: any | null;
     }
-    interface IonRange {
+    interface SygRange {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -5658,7 +5658,7 @@ declare namespace LocalJSX {
          */
         "value"?: RangeValue;
     }
-    interface IonRefresher {
+    interface SygRefresher {
         /**
           * Time it takes to close the refresher. Does not apply when the refresher content uses a spinner, enabling the native refresher.
          */
@@ -5696,27 +5696,27 @@ declare namespace LocalJSX {
          */
         "snapbackDuration"?: string;
     }
-    interface IonRefresherContent {
+    interface SygRefresherContent {
         /**
           * A static icon or a spinner to display when you begin to pull down. A spinner name can be provided to gradually show tick marks when pulling down on iOS devices.
          */
         "pullingIcon"?: SpinnerTypes | string | null;
         /**
-          * The text you want to display when you begin to pull down. `pullingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * The text you want to display when you begin to pull down. `pullingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
-        "pullingText"?: string | IonicSafeString;
+        "pullingText"?: string | SygSafeString;
         /**
           * An animated SVG spinner that shows when refreshing begins
          */
         "refreshingSpinner"?: SpinnerTypes | null;
         /**
-          * The text you want to display when performing a refresh. `refreshingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * The text you want to display when performing a refresh. `refreshingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
-        "refreshingText"?: string | IonicSafeString;
+        "refreshingText"?: string | SygSafeString;
     }
-    interface IonReorder {
+    interface SygReorder {
     }
-    interface IonReorderGroup {
+    interface SygReorderGroup {
         /**
           * If `true`, the reorder will be hidden.
          */
@@ -5726,13 +5726,13 @@ declare namespace LocalJSX {
          */
         "onIonItemReorder"?: (event: CustomEvent<ItemReorderEventDetail>) => void;
     }
-    interface IonRippleEffect {
+    interface SygRippleEffect {
         /**
           * Sets the type of ripple-effect:  - `bounded`: the ripple effect expands from the user's click position - `unbounded`: the ripple effect expands from the center of the button and overflows the container.  NOTE: Surfaces for bounded ripples should have the overflow property set to hidden, while surfaces for unbounded ripples should have it set to visible.
          */
         "type"?: 'bounded' | 'unbounded';
     }
-    interface IonRoute {
+    interface SygRoute {
         /**
           * A navigation hook that is fired when the route tries to enter. Returning `true` allows the navigation to proceed, while returning `false` causes it to be cancelled. Returning a `NavigationHookOptions` object causes the router to redirect to the path specified.
          */
@@ -5742,7 +5742,7 @@ declare namespace LocalJSX {
          */
         "beforeLeave"?: NavigationHookCallback;
         /**
-          * Name of the component to load/select in the navigation outlet (`ion-tabs`, `ion-nav`) when the route matches.  The value of this property is not always the tagname of the component to load, in `ion-tabs` it actually refers to the name of the `ion-tab` to select.
+          * Name of the component to load/select in the navigation outlet (`syg-tabs`, `syg-nav`) when the route matches.  The value of this property is not always the tagname of the component to load, in `syg-tabs` it actually refers to the name of the `syg-tab` to select.
          */
         "component": string;
         /**
@@ -5750,7 +5750,7 @@ declare namespace LocalJSX {
          */
         "componentProps"?: {[key: string]: any};
         /**
-          * Used internally by `ion-router` to know when this route did change.
+          * Used internally by `syg-router` to know when this route did change.
          */
         "onIonRouteDataChanged"?: (event: CustomEvent<any>) => void;
         /**
@@ -5758,21 +5758,21 @@ declare namespace LocalJSX {
          */
         "url"?: string;
     }
-    interface IonRouteRedirect {
+    interface SygRouteRedirect {
         /**
           * A redirect route, redirects "from" a URL "to" another URL. This property is that "from" URL. It needs to be an exact match of the navigated URL in order to apply.  The path specified in this value is always an absolute path, even if the initial `/` slash is not specified.
          */
         "from": string;
         /**
-          * Internal event that fires when any value of this rule is added/removed from the DOM, or any of his public properties changes.  `ion-router` captures this event in order to update his internal registry of router rules.
+          * Internal event that fires when any value of this rule is added/removed from the DOM, or any of his public properties changes.  `syg-router` captures this event in order to update his internal registry of router rules.
          */
         "onIonRouteRedirectChanged"?: (event: CustomEvent<any>) => void;
         /**
-          * A redirect route, redirects "from" a URL "to" another URL. This property is that "to" URL. When the defined `ion-route-redirect` rule matches, the router will redirect to the path specified in this property.  The value of this property is always an absolute path inside the scope of routes defined in `ion-router` it can't be used with another router or to perform a redirection to a different domain.  Note that this is a virtual redirect, it will not cause a real browser refresh, again, it's a redirect inside the context of ion-router.  When this property is not specified or his value is `undefined` the whole redirect route is noop, even if the "from" value matches.
+          * A redirect route, redirects "from" a URL "to" another URL. This property is that "to" URL. When the defined `syg-route-redirect` rule matches, the router will redirect to the path specified in this property.  The value of this property is always an absolute path inside the scope of routes defined in `syg-router` it can't be used with another router or to perform a redirection to a different domain.  Note that this is a virtual redirect, it will not cause a real browser refresh, again, it's a redirect inside the context of syg-router.  When this property is not specified or his value is `undefined` the whole redirect route is noop, even if the "from" value matches.
          */
         "to": string | undefined | null;
     }
-    interface IonRouter {
+    interface SygRouter {
         /**
           * Emitted when the route had changed
          */
@@ -5782,7 +5782,7 @@ declare namespace LocalJSX {
          */
         "onIonRouteWillChange"?: (event: CustomEvent<RouterEventDetail>) => void;
         /**
-          * By default `ion-router` will match the routes at the root path ("/"). That can be changed when
+          * By default `syg-router` will match the routes at the root path ("/"). That can be changed when
          */
         "root"?: string;
         /**
@@ -5790,7 +5790,7 @@ declare namespace LocalJSX {
          */
         "useHash"?: boolean;
     }
-    interface IonRouterLink {
+    interface SygRouterLink {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -5816,13 +5816,13 @@ declare namespace LocalJSX {
          */
         "target"?: string | undefined;
     }
-    interface IonRouterOutlet {
+    interface SygRouterOutlet {
         /**
           * If `true`, the router-outlet should animate the transition of components.
          */
         "animated"?: boolean;
         /**
-          * By default `ion-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions.
+          * By default `syg-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions.
          */
         "animation"?: AnimationBuilder;
         "delegate"?: FrameworkDelegate;
@@ -5835,9 +5835,9 @@ declare namespace LocalJSX {
         "onIonNavWillLoad"?: (event: CustomEvent<void>) => void;
         "swipeHandler"?: SwipeGestureHandler;
     }
-    interface IonRow {
+    interface SygRow {
     }
-    interface IonSearchbar {
+    interface SygSearchbar {
         /**
           * If `true`, enable searchbar animation.
          */
@@ -5915,7 +5915,7 @@ declare namespace LocalJSX {
          */
         "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
-          * Set the input's placeholder. `placeholder` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
+          * Set the input's placeholder. `placeholder` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Sygic>` would become `&lt;Sygic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
         "placeholder"?: string;
         /**
@@ -5943,7 +5943,7 @@ declare namespace LocalJSX {
          */
         "value"?: string | null;
     }
-    interface IonSegment {
+    interface SygSegment {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -5957,7 +5957,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
         /**
-          * Emitted when the value property has changed and any dragging pointer has been released from `ion-segment`.
+          * Emitted when the value property has changed and any dragging pointer has been released from `syg-segment`.
          */
         "onIonChange"?: (event: CustomEvent<SegmentChangeEventDetail>) => void;
         /**
@@ -5973,7 +5973,7 @@ declare namespace LocalJSX {
          */
         "scrollable"?: boolean;
         /**
-          * If `true`, navigating to an `ion-segment-button` with the keyboard will focus and select the element. If `false`, keyboard navigation will only focus the `ion-segment-button` element.
+          * If `true`, navigating to an `syg-segment-button` with the keyboard will focus and select the element. If `false`, keyboard navigation will only focus the `syg-segment-button` element.
          */
         "selectOnFocus"?: boolean;
         /**
@@ -5985,7 +5985,7 @@ declare namespace LocalJSX {
          */
         "value"?: string | null;
     }
-    interface IonSegmentButton {
+    interface SygSegmentButton {
         /**
           * If `true`, the user cannot interact with the segment button.
          */
@@ -6007,7 +6007,7 @@ declare namespace LocalJSX {
          */
         "value"?: string;
     }
-    interface IonSelect {
+    interface SygSelect {
         /**
           * The text to display on the cancel button.
          */
@@ -6025,7 +6025,7 @@ declare namespace LocalJSX {
          */
         "interface"?: SelectInterface;
         /**
-          * Any additional options that the `alert`, `action-sheet` or `popover` interface can take. See the [ion-alert docs](../alert), the [ion-action-sheet docs](../action-sheet) and the [ion-popover docs](../popover) for the create options for each interface.  Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
+          * Any additional options that the `alert`, `action-sheet` or `popover` interface can take. See the [syg-alert docs](../alert), the [syg-action-sheet docs](../action-sheet) and the [syg-popover docs](../popover) for the create options for each interface.  Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
          */
         "interfaceOptions"?: any;
         /**
@@ -6077,9 +6077,9 @@ declare namespace LocalJSX {
          */
         "value"?: any | null;
     }
-    interface IonSelectOption {
+    interface SygSelectOption {
         /**
-          * If `true`, the user cannot interact with the select option. This property does not apply when `interface="action-sheet"` as `ion-action-sheet` does not allow for disabled buttons.
+          * If `true`, the user cannot interact with the select option. This property does not apply when `interface="action-sheet"` as `syg-action-sheet` does not allow for disabled buttons.
          */
         "disabled"?: boolean;
         /**
@@ -6087,7 +6087,7 @@ declare namespace LocalJSX {
          */
         "value"?: any | null;
     }
-    interface IonSelectPopover {
+    interface SygSelectPopover {
         /**
           * The header text of the popover
          */
@@ -6109,15 +6109,15 @@ declare namespace LocalJSX {
          */
         "subHeader"?: string;
     }
-    interface IonSkeletonText {
+    interface SygSkeletonText {
         /**
           * If `true`, the skeleton text will animate.
          */
         "animated"?: boolean;
     }
-    interface IonSlide {
+    interface SygSlide {
     }
-    interface IonSlides {
+    interface SygSlides {
         /**
           * The mode determines which platform styles to use.
          */
@@ -6199,7 +6199,7 @@ declare namespace LocalJSX {
          */
         "scrollbar"?: boolean;
     }
-    interface IonSpinner {
+    interface SygSpinner {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -6217,9 +6217,9 @@ declare namespace LocalJSX {
          */
         "paused"?: boolean;
     }
-    interface IonSplitPane {
+    interface SygSplitPane {
         /**
-          * The `id` of the main content. When using a router this is typically `ion-router-outlet`. When not using a router, this is typically your main view's `ion-content`. This is not the id of the `ion-content` inside of your `ion-menu`.
+          * The `id` of the main content. When using a router this is typically `syg-router-outlet`. When not using a router, this is typically your main view's `syg-content`. This is not the id of the `syg-content` inside of your `syg-menu`.
          */
         "contentId"?: string;
         /**
@@ -6235,7 +6235,7 @@ declare namespace LocalJSX {
          */
         "when"?: string | boolean;
     }
-    interface IonTab {
+    interface SygTab {
         "active"?: boolean;
         /**
           * The component to display inside of the tab.
@@ -6243,11 +6243,11 @@ declare namespace LocalJSX {
         "component"?: ComponentRef;
         "delegate"?: FrameworkDelegate;
         /**
-          * A tab id must be provided for each `ion-tab`. It's used internally to reference the selected tab or by the router to switch between them.
+          * A tab id must be provided for each `syg-tab`. It's used internally to reference the selected tab or by the router to switch between them.
          */
         "tab": string;
     }
-    interface IonTabBar {
+    interface SygTabBar {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -6266,7 +6266,7 @@ declare namespace LocalJSX {
          */
         "translucent"?: boolean;
     }
-    interface IonTabButton {
+    interface SygTabButton {
         /**
           * If `true`, the user cannot interact with the tab button.
          */
@@ -6300,7 +6300,7 @@ declare namespace LocalJSX {
          */
         "selected"?: boolean;
         /**
-          * A tab id must be provided for each `ion-tab`. It's used internally to reference the selected tab or by the router to switch between them.
+          * A tab id must be provided for each `syg-tab`. It's used internally to reference the selected tab or by the router to switch between them.
          */
         "tab"?: string;
         /**
@@ -6308,7 +6308,7 @@ declare namespace LocalJSX {
          */
         "target"?: string | undefined;
     }
-    interface IonTabs {
+    interface SygTabs {
         /**
           * Emitted when the navigation will load a component.
          */
@@ -6323,7 +6323,7 @@ declare namespace LocalJSX {
         "onIonTabsWillChange"?: (event: CustomEvent<{tab: string}>) => void;
         "useRouter"?: boolean;
     }
-    interface IonText {
+    interface SygText {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -6333,7 +6333,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonTextarea {
+    interface SygTextarea {
         /**
           * If `true`, the element height will increase based on the value.
          */
@@ -6443,9 +6443,9 @@ declare namespace LocalJSX {
          */
         "wrap"?: 'hard' | 'soft' | 'off';
     }
-    interface IonThumbnail {
+    interface SygThumbnail {
     }
-    interface IonTitle {
+    interface SygTitle {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -6459,7 +6459,7 @@ declare namespace LocalJSX {
          */
         "size"?: 'large' | 'small';
     }
-    interface IonToast {
+    interface SygToast {
         /**
           * If `true`, the toast will animate.
          */
@@ -6507,7 +6507,7 @@ declare namespace LocalJSX {
         /**
           * Message to be shown in the toast.
          */
-        "message"?: string | IonicSafeString;
+        "message"?: string | SygSafeString;
         /**
           * The mode determines which platform styles to use.
          */
@@ -6538,7 +6538,7 @@ declare namespace LocalJSX {
          */
         "translucent"?: boolean;
     }
-    interface IonToggle {
+    interface SygToggle {
         /**
           * If `true`, the toggle is selected.
          */
@@ -6580,7 +6580,7 @@ declare namespace LocalJSX {
          */
         "value"?: string | null;
     }
-    interface IonToolbar {
+    interface SygToolbar {
         /**
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
@@ -6590,7 +6590,7 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
-    interface IonVirtualScroll {
+    interface SygVirtualScroll {
         /**
           * The approximate width of each footer template's cell. This dimension is used to help determine how many cells should be created when initialized, and to help calculate the height of the scrollable area. This height value can only use `px` units. Note that the actual rendered size of each cell comes from the app's CSS, whereas this approximation is used to help calculate initial dimensions before the item has been rendered.
          */
@@ -6621,7 +6621,7 @@ declare namespace LocalJSX {
          */
         "headerHeight"?: HeaderHeightFn;
         /**
-          * An optional function that maps each item within their height. When this function is provides, heavy optimizations and fast path can be taked by `ion-virtual-scroll` leading to massive performance improvements.  This function allows to skip all DOM reads, which can be Doing so leads to massive performance
+          * An optional function that maps each item within their height. When this function is provides, heavy optimizations and fast path can be taked by `syg-virtual-scroll` leading to massive performance improvements.  This function allows to skip all DOM reads, which can be Doing so leads to massive performance
          */
         "itemHeight"?: ItemHeightFn;
         /**
@@ -6646,194 +6646,194 @@ declare namespace LocalJSX {
         "renderItem"?: (item: any, index: number) => any;
     }
     interface IntrinsicElements {
-        "ion-accordion": IonAccordion;
-        "ion-accordion-group": IonAccordionGroup;
-        "ion-action-sheet": IonActionSheet;
-        "ion-alert": IonAlert;
-        "ion-app": IonApp;
-        "ion-avatar": IonAvatar;
-        "ion-back-button": IonBackButton;
-        "ion-backdrop": IonBackdrop;
-        "ion-badge": IonBadge;
-        "ion-breadcrumb": IonBreadcrumb;
-        "ion-breadcrumbs": IonBreadcrumbs;
-        "ion-button": IonButton;
-        "ion-buttons": IonButtons;
-        "ion-card": IonCard;
-        "ion-card-content": IonCardContent;
-        "ion-card-header": IonCardHeader;
-        "ion-card-subtitle": IonCardSubtitle;
-        "ion-card-title": IonCardTitle;
-        "ion-checkbox": IonCheckbox;
-        "ion-chip": IonChip;
-        "ion-col": IonCol;
-        "ion-content": IonContent;
-        "ion-datetime": IonDatetime;
-        "ion-fab": IonFab;
-        "ion-fab-button": IonFabButton;
-        "ion-fab-list": IonFabList;
-        "ion-footer": IonFooter;
-        "ion-grid": IonGrid;
-        "ion-header": IonHeader;
-        "ion-img": IonImg;
-        "ion-infinite-scroll": IonInfiniteScroll;
-        "ion-infinite-scroll-content": IonInfiniteScrollContent;
-        "ion-input": IonInput;
-        "ion-item": IonItem;
-        "ion-item-divider": IonItemDivider;
-        "ion-item-group": IonItemGroup;
-        "ion-item-option": IonItemOption;
-        "ion-item-options": IonItemOptions;
-        "ion-item-sliding": IonItemSliding;
-        "ion-label": IonLabel;
-        "ion-list": IonList;
-        "ion-list-header": IonListHeader;
-        "ion-loading": IonLoading;
-        "ion-menu": IonMenu;
-        "ion-menu-button": IonMenuButton;
-        "ion-menu-toggle": IonMenuToggle;
-        "ion-modal": IonModal;
-        "ion-nav": IonNav;
-        "ion-nav-link": IonNavLink;
-        "ion-note": IonNote;
-        "ion-picker": IonPicker;
-        "ion-picker-column": IonPickerColumn;
-        "ion-popover": IonPopover;
-        "ion-progress-bar": IonProgressBar;
-        "ion-radio": IonRadio;
-        "ion-radio-group": IonRadioGroup;
-        "ion-range": IonRange;
-        "ion-refresher": IonRefresher;
-        "ion-refresher-content": IonRefresherContent;
-        "ion-reorder": IonReorder;
-        "ion-reorder-group": IonReorderGroup;
-        "ion-ripple-effect": IonRippleEffect;
-        "ion-route": IonRoute;
-        "ion-route-redirect": IonRouteRedirect;
-        "ion-router": IonRouter;
-        "ion-router-link": IonRouterLink;
-        "ion-router-outlet": IonRouterOutlet;
-        "ion-row": IonRow;
-        "ion-searchbar": IonSearchbar;
-        "ion-segment": IonSegment;
-        "ion-segment-button": IonSegmentButton;
-        "ion-select": IonSelect;
-        "ion-select-option": IonSelectOption;
-        "ion-select-popover": IonSelectPopover;
-        "ion-skeleton-text": IonSkeletonText;
-        "ion-slide": IonSlide;
-        "ion-slides": IonSlides;
-        "ion-spinner": IonSpinner;
-        "ion-split-pane": IonSplitPane;
-        "ion-tab": IonTab;
-        "ion-tab-bar": IonTabBar;
-        "ion-tab-button": IonTabButton;
-        "ion-tabs": IonTabs;
-        "ion-text": IonText;
-        "ion-textarea": IonTextarea;
-        "ion-thumbnail": IonThumbnail;
-        "ion-title": IonTitle;
-        "ion-toast": IonToast;
-        "ion-toggle": IonToggle;
-        "ion-toolbar": IonToolbar;
-        "ion-virtual-scroll": IonVirtualScroll;
+        "syg-accordion": SygAccordion;
+        "syg-accordion-group": SygAccordionGroup;
+        "syg-action-sheet": SygActionSheet;
+        "syg-alert": SygAlert;
+        "syg-app": SygApp;
+        "syg-avatar": SygAvatar;
+        "syg-back-button": SygBackButton;
+        "syg-backdrop": SygBackdrop;
+        "syg-badge": SygBadge;
+        "syg-breadcrumb": SygBreadcrumb;
+        "syg-breadcrumbs": SygBreadcrumbs;
+        "syg-button": SygButton;
+        "syg-buttons": SygButtons;
+        "syg-card": SygCard;
+        "syg-card-content": SygCardContent;
+        "syg-card-header": SygCardHeader;
+        "syg-card-subtitle": SygCardSubtitle;
+        "syg-card-title": SygCardTitle;
+        "syg-checkbox": SygCheckbox;
+        "syg-chip": SygChip;
+        "syg-col": SygCol;
+        "syg-content": SygContent;
+        "syg-datetime": SygDatetime;
+        "syg-fab": SygFab;
+        "syg-fab-button": SygFabButton;
+        "syg-fab-list": SygFabList;
+        "syg-footer": SygFooter;
+        "syg-grid": SygGrid;
+        "syg-header": SygHeader;
+        "syg-img": SygImg;
+        "syg-infinite-scroll": SygInfiniteScroll;
+        "syg-infinite-scroll-content": SygInfiniteScrollContent;
+        "syg-input": SygInput;
+        "syg-item": SygItem;
+        "syg-item-divider": SygItemDivider;
+        "syg-item-group": SygItemGroup;
+        "syg-item-option": SygItemOption;
+        "syg-item-options": SygItemOptions;
+        "syg-item-sliding": SygItemSliding;
+        "syg-label": SygLabel;
+        "syg-list": SygList;
+        "syg-list-header": SygListHeader;
+        "syg-loading": SygLoading;
+        "syg-menu": SygMenu;
+        "syg-menu-button": SygMenuButton;
+        "syg-menu-toggle": SygMenuToggle;
+        "syg-modal": SygModal;
+        "syg-nav": SygNav;
+        "syg-nav-link": SygNavLink;
+        "syg-note": SygNote;
+        "syg-picker": SygPicker;
+        "syg-picker-column": SygPickerColumn;
+        "syg-popover": SygPopover;
+        "syg-progress-bar": SygProgressBar;
+        "syg-radio": SygRadio;
+        "syg-radio-group": SygRadioGroup;
+        "syg-range": SygRange;
+        "syg-refresher": SygRefresher;
+        "syg-refresher-content": SygRefresherContent;
+        "syg-reorder": SygReorder;
+        "syg-reorder-group": SygReorderGroup;
+        "syg-ripple-effect": SygRippleEffect;
+        "syg-route": SygRoute;
+        "syg-route-redirect": SygRouteRedirect;
+        "syg-router": SygRouter;
+        "syg-router-link": SygRouterLink;
+        "syg-router-outlet": SygRouterOutlet;
+        "syg-row": SygRow;
+        "syg-searchbar": SygSearchbar;
+        "syg-segment": SygSegment;
+        "syg-segment-button": SygSegmentButton;
+        "syg-select": SygSelect;
+        "syg-select-option": SygSelectOption;
+        "syg-select-popover": SygSelectPopover;
+        "syg-skeleton-text": SygSkeletonText;
+        "syg-slide": SygSlide;
+        "syg-slides": SygSlides;
+        "syg-spinner": SygSpinner;
+        "syg-split-pane": SygSplitPane;
+        "syg-tab": SygTab;
+        "syg-tab-bar": SygTabBar;
+        "syg-tab-button": SygTabButton;
+        "syg-tabs": SygTabs;
+        "syg-text": SygText;
+        "syg-textarea": SygTextarea;
+        "syg-thumbnail": SygThumbnail;
+        "syg-title": SygTitle;
+        "syg-toast": SygToast;
+        "syg-toggle": SygToggle;
+        "syg-toolbar": SygToolbar;
+        "syg-virtual-scroll": SygVirtualScroll;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "ion-accordion": LocalJSX.IonAccordion & JSXBase.HTMLAttributes<HTMLIonAccordionElement>;
-            "ion-accordion-group": LocalJSX.IonAccordionGroup & JSXBase.HTMLAttributes<HTMLIonAccordionGroupElement>;
-            "ion-action-sheet": LocalJSX.IonActionSheet & JSXBase.HTMLAttributes<HTMLIonActionSheetElement>;
-            "ion-alert": LocalJSX.IonAlert & JSXBase.HTMLAttributes<HTMLIonAlertElement>;
-            "ion-app": LocalJSX.IonApp & JSXBase.HTMLAttributes<HTMLIonAppElement>;
-            "ion-avatar": LocalJSX.IonAvatar & JSXBase.HTMLAttributes<HTMLIonAvatarElement>;
-            "ion-back-button": LocalJSX.IonBackButton & JSXBase.HTMLAttributes<HTMLIonBackButtonElement>;
-            "ion-backdrop": LocalJSX.IonBackdrop & JSXBase.HTMLAttributes<HTMLIonBackdropElement>;
-            "ion-badge": LocalJSX.IonBadge & JSXBase.HTMLAttributes<HTMLIonBadgeElement>;
-            "ion-breadcrumb": LocalJSX.IonBreadcrumb & JSXBase.HTMLAttributes<HTMLIonBreadcrumbElement>;
-            "ion-breadcrumbs": LocalJSX.IonBreadcrumbs & JSXBase.HTMLAttributes<HTMLIonBreadcrumbsElement>;
-            "ion-button": LocalJSX.IonButton & JSXBase.HTMLAttributes<HTMLIonButtonElement>;
-            "ion-buttons": LocalJSX.IonButtons & JSXBase.HTMLAttributes<HTMLIonButtonsElement>;
-            "ion-card": LocalJSX.IonCard & JSXBase.HTMLAttributes<HTMLIonCardElement>;
-            "ion-card-content": LocalJSX.IonCardContent & JSXBase.HTMLAttributes<HTMLIonCardContentElement>;
-            "ion-card-header": LocalJSX.IonCardHeader & JSXBase.HTMLAttributes<HTMLIonCardHeaderElement>;
-            "ion-card-subtitle": LocalJSX.IonCardSubtitle & JSXBase.HTMLAttributes<HTMLIonCardSubtitleElement>;
-            "ion-card-title": LocalJSX.IonCardTitle & JSXBase.HTMLAttributes<HTMLIonCardTitleElement>;
-            "ion-checkbox": LocalJSX.IonCheckbox & JSXBase.HTMLAttributes<HTMLIonCheckboxElement>;
-            "ion-chip": LocalJSX.IonChip & JSXBase.HTMLAttributes<HTMLIonChipElement>;
-            "ion-col": LocalJSX.IonCol & JSXBase.HTMLAttributes<HTMLIonColElement>;
-            "ion-content": LocalJSX.IonContent & JSXBase.HTMLAttributes<HTMLIonContentElement>;
-            "ion-datetime": LocalJSX.IonDatetime & JSXBase.HTMLAttributes<HTMLIonDatetimeElement>;
-            "ion-fab": LocalJSX.IonFab & JSXBase.HTMLAttributes<HTMLIonFabElement>;
-            "ion-fab-button": LocalJSX.IonFabButton & JSXBase.HTMLAttributes<HTMLIonFabButtonElement>;
-            "ion-fab-list": LocalJSX.IonFabList & JSXBase.HTMLAttributes<HTMLIonFabListElement>;
-            "ion-footer": LocalJSX.IonFooter & JSXBase.HTMLAttributes<HTMLIonFooterElement>;
-            "ion-grid": LocalJSX.IonGrid & JSXBase.HTMLAttributes<HTMLIonGridElement>;
-            "ion-header": LocalJSX.IonHeader & JSXBase.HTMLAttributes<HTMLIonHeaderElement>;
-            "ion-img": LocalJSX.IonImg & JSXBase.HTMLAttributes<HTMLIonImgElement>;
-            "ion-infinite-scroll": LocalJSX.IonInfiniteScroll & JSXBase.HTMLAttributes<HTMLIonInfiniteScrollElement>;
-            "ion-infinite-scroll-content": LocalJSX.IonInfiniteScrollContent & JSXBase.HTMLAttributes<HTMLIonInfiniteScrollContentElement>;
-            "ion-input": LocalJSX.IonInput & JSXBase.HTMLAttributes<HTMLIonInputElement>;
-            "ion-item": LocalJSX.IonItem & JSXBase.HTMLAttributes<HTMLIonItemElement>;
-            "ion-item-divider": LocalJSX.IonItemDivider & JSXBase.HTMLAttributes<HTMLIonItemDividerElement>;
-            "ion-item-group": LocalJSX.IonItemGroup & JSXBase.HTMLAttributes<HTMLIonItemGroupElement>;
-            "ion-item-option": LocalJSX.IonItemOption & JSXBase.HTMLAttributes<HTMLIonItemOptionElement>;
-            "ion-item-options": LocalJSX.IonItemOptions & JSXBase.HTMLAttributes<HTMLIonItemOptionsElement>;
-            "ion-item-sliding": LocalJSX.IonItemSliding & JSXBase.HTMLAttributes<HTMLIonItemSlidingElement>;
-            "ion-label": LocalJSX.IonLabel & JSXBase.HTMLAttributes<HTMLIonLabelElement>;
-            "ion-list": LocalJSX.IonList & JSXBase.HTMLAttributes<HTMLIonListElement>;
-            "ion-list-header": LocalJSX.IonListHeader & JSXBase.HTMLAttributes<HTMLIonListHeaderElement>;
-            "ion-loading": LocalJSX.IonLoading & JSXBase.HTMLAttributes<HTMLIonLoadingElement>;
-            "ion-menu": LocalJSX.IonMenu & JSXBase.HTMLAttributes<HTMLIonMenuElement>;
-            "ion-menu-button": LocalJSX.IonMenuButton & JSXBase.HTMLAttributes<HTMLIonMenuButtonElement>;
-            "ion-menu-toggle": LocalJSX.IonMenuToggle & JSXBase.HTMLAttributes<HTMLIonMenuToggleElement>;
-            "ion-modal": LocalJSX.IonModal & JSXBase.HTMLAttributes<HTMLIonModalElement>;
-            "ion-nav": LocalJSX.IonNav & JSXBase.HTMLAttributes<HTMLIonNavElement>;
-            "ion-nav-link": LocalJSX.IonNavLink & JSXBase.HTMLAttributes<HTMLIonNavLinkElement>;
-            "ion-note": LocalJSX.IonNote & JSXBase.HTMLAttributes<HTMLIonNoteElement>;
-            "ion-picker": LocalJSX.IonPicker & JSXBase.HTMLAttributes<HTMLIonPickerElement>;
-            "ion-picker-column": LocalJSX.IonPickerColumn & JSXBase.HTMLAttributes<HTMLIonPickerColumnElement>;
-            "ion-popover": LocalJSX.IonPopover & JSXBase.HTMLAttributes<HTMLIonPopoverElement>;
-            "ion-progress-bar": LocalJSX.IonProgressBar & JSXBase.HTMLAttributes<HTMLIonProgressBarElement>;
-            "ion-radio": LocalJSX.IonRadio & JSXBase.HTMLAttributes<HTMLIonRadioElement>;
-            "ion-radio-group": LocalJSX.IonRadioGroup & JSXBase.HTMLAttributes<HTMLIonRadioGroupElement>;
-            "ion-range": LocalJSX.IonRange & JSXBase.HTMLAttributes<HTMLIonRangeElement>;
-            "ion-refresher": LocalJSX.IonRefresher & JSXBase.HTMLAttributes<HTMLIonRefresherElement>;
-            "ion-refresher-content": LocalJSX.IonRefresherContent & JSXBase.HTMLAttributes<HTMLIonRefresherContentElement>;
-            "ion-reorder": LocalJSX.IonReorder & JSXBase.HTMLAttributes<HTMLIonReorderElement>;
-            "ion-reorder-group": LocalJSX.IonReorderGroup & JSXBase.HTMLAttributes<HTMLIonReorderGroupElement>;
-            "ion-ripple-effect": LocalJSX.IonRippleEffect & JSXBase.HTMLAttributes<HTMLIonRippleEffectElement>;
-            "ion-route": LocalJSX.IonRoute & JSXBase.HTMLAttributes<HTMLIonRouteElement>;
-            "ion-route-redirect": LocalJSX.IonRouteRedirect & JSXBase.HTMLAttributes<HTMLIonRouteRedirectElement>;
-            "ion-router": LocalJSX.IonRouter & JSXBase.HTMLAttributes<HTMLIonRouterElement>;
-            "ion-router-link": LocalJSX.IonRouterLink & JSXBase.HTMLAttributes<HTMLIonRouterLinkElement>;
-            "ion-router-outlet": LocalJSX.IonRouterOutlet & JSXBase.HTMLAttributes<HTMLIonRouterOutletElement>;
-            "ion-row": LocalJSX.IonRow & JSXBase.HTMLAttributes<HTMLIonRowElement>;
-            "ion-searchbar": LocalJSX.IonSearchbar & JSXBase.HTMLAttributes<HTMLIonSearchbarElement>;
-            "ion-segment": LocalJSX.IonSegment & JSXBase.HTMLAttributes<HTMLIonSegmentElement>;
-            "ion-segment-button": LocalJSX.IonSegmentButton & JSXBase.HTMLAttributes<HTMLIonSegmentButtonElement>;
-            "ion-select": LocalJSX.IonSelect & JSXBase.HTMLAttributes<HTMLIonSelectElement>;
-            "ion-select-option": LocalJSX.IonSelectOption & JSXBase.HTMLAttributes<HTMLIonSelectOptionElement>;
-            "ion-select-popover": LocalJSX.IonSelectPopover & JSXBase.HTMLAttributes<HTMLIonSelectPopoverElement>;
-            "ion-skeleton-text": LocalJSX.IonSkeletonText & JSXBase.HTMLAttributes<HTMLIonSkeletonTextElement>;
-            "ion-slide": LocalJSX.IonSlide & JSXBase.HTMLAttributes<HTMLIonSlideElement>;
-            "ion-slides": LocalJSX.IonSlides & JSXBase.HTMLAttributes<HTMLIonSlidesElement>;
-            "ion-spinner": LocalJSX.IonSpinner & JSXBase.HTMLAttributes<HTMLIonSpinnerElement>;
-            "ion-split-pane": LocalJSX.IonSplitPane & JSXBase.HTMLAttributes<HTMLIonSplitPaneElement>;
-            "ion-tab": LocalJSX.IonTab & JSXBase.HTMLAttributes<HTMLIonTabElement>;
-            "ion-tab-bar": LocalJSX.IonTabBar & JSXBase.HTMLAttributes<HTMLIonTabBarElement>;
-            "ion-tab-button": LocalJSX.IonTabButton & JSXBase.HTMLAttributes<HTMLIonTabButtonElement>;
-            "ion-tabs": LocalJSX.IonTabs & JSXBase.HTMLAttributes<HTMLIonTabsElement>;
-            "ion-text": LocalJSX.IonText & JSXBase.HTMLAttributes<HTMLIonTextElement>;
-            "ion-textarea": LocalJSX.IonTextarea & JSXBase.HTMLAttributes<HTMLIonTextareaElement>;
-            "ion-thumbnail": LocalJSX.IonThumbnail & JSXBase.HTMLAttributes<HTMLIonThumbnailElement>;
-            "ion-title": LocalJSX.IonTitle & JSXBase.HTMLAttributes<HTMLIonTitleElement>;
-            "ion-toast": LocalJSX.IonToast & JSXBase.HTMLAttributes<HTMLIonToastElement>;
-            "ion-toggle": LocalJSX.IonToggle & JSXBase.HTMLAttributes<HTMLIonToggleElement>;
-            "ion-toolbar": LocalJSX.IonToolbar & JSXBase.HTMLAttributes<HTMLIonToolbarElement>;
-            "ion-virtual-scroll": LocalJSX.IonVirtualScroll & JSXBase.HTMLAttributes<HTMLIonVirtualScrollElement>;
+            "syg-accordion": LocalJSX.SygAccordion & JSXBase.HTMLAttributes<HTMLSygAccordionElement>;
+            "syg-accordion-group": LocalJSX.SygAccordionGroup & JSXBase.HTMLAttributes<HTMLSygAccordionGroupElement>;
+            "syg-action-sheet": LocalJSX.SygActionSheet & JSXBase.HTMLAttributes<HTMLSygActionSheetElement>;
+            "syg-alert": LocalJSX.SygAlert & JSXBase.HTMLAttributes<HTMLSygAlertElement>;
+            "syg-app": LocalJSX.SygApp & JSXBase.HTMLAttributes<HTMLSygAppElement>;
+            "syg-avatar": LocalJSX.SygAvatar & JSXBase.HTMLAttributes<HTMLSygAvatarElement>;
+            "syg-back-button": LocalJSX.SygBackButton & JSXBase.HTMLAttributes<HTMLSygBackButtonElement>;
+            "syg-backdrop": LocalJSX.SygBackdrop & JSXBase.HTMLAttributes<HTMLSygBackdropElement>;
+            "syg-badge": LocalJSX.SygBadge & JSXBase.HTMLAttributes<HTMLSygBadgeElement>;
+            "syg-breadcrumb": LocalJSX.SygBreadcrumb & JSXBase.HTMLAttributes<HTMLSygBreadcrumbElement>;
+            "syg-breadcrumbs": LocalJSX.SygBreadcrumbs & JSXBase.HTMLAttributes<HTMLSygBreadcrumbsElement>;
+            "syg-button": LocalJSX.SygButton & JSXBase.HTMLAttributes<HTMLSygButtonElement>;
+            "syg-buttons": LocalJSX.SygButtons & JSXBase.HTMLAttributes<HTMLSygButtonsElement>;
+            "syg-card": LocalJSX.SygCard & JSXBase.HTMLAttributes<HTMLSygCardElement>;
+            "syg-card-content": LocalJSX.SygCardContent & JSXBase.HTMLAttributes<HTMLSygCardContentElement>;
+            "syg-card-header": LocalJSX.SygCardHeader & JSXBase.HTMLAttributes<HTMLSygCardHeaderElement>;
+            "syg-card-subtitle": LocalJSX.SygCardSubtitle & JSXBase.HTMLAttributes<HTMLSygCardSubtitleElement>;
+            "syg-card-title": LocalJSX.SygCardTitle & JSXBase.HTMLAttributes<HTMLSygCardTitleElement>;
+            "syg-checkbox": LocalJSX.SygCheckbox & JSXBase.HTMLAttributes<HTMLSygCheckboxElement>;
+            "syg-chip": LocalJSX.SygChip & JSXBase.HTMLAttributes<HTMLSygChipElement>;
+            "syg-col": LocalJSX.SygCol & JSXBase.HTMLAttributes<HTMLSygColElement>;
+            "syg-content": LocalJSX.SygContent & JSXBase.HTMLAttributes<HTMLSygContentElement>;
+            "syg-datetime": LocalJSX.SygDatetime & JSXBase.HTMLAttributes<HTMLSygDatetimeElement>;
+            "syg-fab": LocalJSX.SygFab & JSXBase.HTMLAttributes<HTMLSygFabElement>;
+            "syg-fab-button": LocalJSX.SygFabButton & JSXBase.HTMLAttributes<HTMLSygFabButtonElement>;
+            "syg-fab-list": LocalJSX.SygFabList & JSXBase.HTMLAttributes<HTMLSygFabListElement>;
+            "syg-footer": LocalJSX.SygFooter & JSXBase.HTMLAttributes<HTMLSygFooterElement>;
+            "syg-grid": LocalJSX.SygGrid & JSXBase.HTMLAttributes<HTMLSygGridElement>;
+            "syg-header": LocalJSX.SygHeader & JSXBase.HTMLAttributes<HTMLSygHeaderElement>;
+            "syg-img": LocalJSX.SygImg & JSXBase.HTMLAttributes<HTMLSygImgElement>;
+            "syg-infinite-scroll": LocalJSX.SygInfiniteScroll & JSXBase.HTMLAttributes<HTMLSygInfiniteScrollElement>;
+            "syg-infinite-scroll-content": LocalJSX.SygInfiniteScrollContent & JSXBase.HTMLAttributes<HTMLSygInfiniteScrollContentElement>;
+            "syg-input": LocalJSX.SygInput & JSXBase.HTMLAttributes<HTMLSygInputElement>;
+            "syg-item": LocalJSX.SygItem & JSXBase.HTMLAttributes<HTMLSygItemElement>;
+            "syg-item-divider": LocalJSX.SygItemDivider & JSXBase.HTMLAttributes<HTMLSygItemDividerElement>;
+            "syg-item-group": LocalJSX.SygItemGroup & JSXBase.HTMLAttributes<HTMLSygItemGroupElement>;
+            "syg-item-option": LocalJSX.SygItemOption & JSXBase.HTMLAttributes<HTMLSygItemOptionElement>;
+            "syg-item-options": LocalJSX.SygItemOptions & JSXBase.HTMLAttributes<HTMLSygItemOptionsElement>;
+            "syg-item-sliding": LocalJSX.SygItemSliding & JSXBase.HTMLAttributes<HTMLSygItemSlidingElement>;
+            "syg-label": LocalJSX.SygLabel & JSXBase.HTMLAttributes<HTMLSygLabelElement>;
+            "syg-list": LocalJSX.SygList & JSXBase.HTMLAttributes<HTMLSygListElement>;
+            "syg-list-header": LocalJSX.SygListHeader & JSXBase.HTMLAttributes<HTMLSygListHeaderElement>;
+            "syg-loading": LocalJSX.SygLoading & JSXBase.HTMLAttributes<HTMLSygLoadingElement>;
+            "syg-menu": LocalJSX.SygMenu & JSXBase.HTMLAttributes<HTMLSygMenuElement>;
+            "syg-menu-button": LocalJSX.SygMenuButton & JSXBase.HTMLAttributes<HTMLSygMenuButtonElement>;
+            "syg-menu-toggle": LocalJSX.SygMenuToggle & JSXBase.HTMLAttributes<HTMLSygMenuToggleElement>;
+            "syg-modal": LocalJSX.SygModal & JSXBase.HTMLAttributes<HTMLSygModalElement>;
+            "syg-nav": LocalJSX.SygNav & JSXBase.HTMLAttributes<HTMLSygNavElement>;
+            "syg-nav-link": LocalJSX.SygNavLink & JSXBase.HTMLAttributes<HTMLSygNavLinkElement>;
+            "syg-note": LocalJSX.SygNote & JSXBase.HTMLAttributes<HTMLSygNoteElement>;
+            "syg-picker": LocalJSX.SygPicker & JSXBase.HTMLAttributes<HTMLSygPickerElement>;
+            "syg-picker-column": LocalJSX.SygPickerColumn & JSXBase.HTMLAttributes<HTMLSygPickerColumnElement>;
+            "syg-popover": LocalJSX.SygPopover & JSXBase.HTMLAttributes<HTMLSygPopoverElement>;
+            "syg-progress-bar": LocalJSX.SygProgressBar & JSXBase.HTMLAttributes<HTMLSygProgressBarElement>;
+            "syg-radio": LocalJSX.SygRadio & JSXBase.HTMLAttributes<HTMLSygRadioElement>;
+            "syg-radio-group": LocalJSX.SygRadioGroup & JSXBase.HTMLAttributes<HTMLSygRadioGroupElement>;
+            "syg-range": LocalJSX.SygRange & JSXBase.HTMLAttributes<HTMLSygRangeElement>;
+            "syg-refresher": LocalJSX.SygRefresher & JSXBase.HTMLAttributes<HTMLSygRefresherElement>;
+            "syg-refresher-content": LocalJSX.SygRefresherContent & JSXBase.HTMLAttributes<HTMLSygRefresherContentElement>;
+            "syg-reorder": LocalJSX.SygReorder & JSXBase.HTMLAttributes<HTMLSygReorderElement>;
+            "syg-reorder-group": LocalJSX.SygReorderGroup & JSXBase.HTMLAttributes<HTMLSygReorderGroupElement>;
+            "syg-ripple-effect": LocalJSX.SygRippleEffect & JSXBase.HTMLAttributes<HTMLSygRippleEffectElement>;
+            "syg-route": LocalJSX.SygRoute & JSXBase.HTMLAttributes<HTMLSygRouteElement>;
+            "syg-route-redirect": LocalJSX.SygRouteRedirect & JSXBase.HTMLAttributes<HTMLSygRouteRedirectElement>;
+            "syg-router": LocalJSX.SygRouter & JSXBase.HTMLAttributes<HTMLSygRouterElement>;
+            "syg-router-link": LocalJSX.SygRouterLink & JSXBase.HTMLAttributes<HTMLSygRouterLinkElement>;
+            "syg-router-outlet": LocalJSX.SygRouterOutlet & JSXBase.HTMLAttributes<HTMLSygRouterOutletElement>;
+            "syg-row": LocalJSX.SygRow & JSXBase.HTMLAttributes<HTMLSygRowElement>;
+            "syg-searchbar": LocalJSX.SygSearchbar & JSXBase.HTMLAttributes<HTMLSygSearchbarElement>;
+            "syg-segment": LocalJSX.SygSegment & JSXBase.HTMLAttributes<HTMLSygSegmentElement>;
+            "syg-segment-button": LocalJSX.SygSegmentButton & JSXBase.HTMLAttributes<HTMLSygSegmentButtonElement>;
+            "syg-select": LocalJSX.SygSelect & JSXBase.HTMLAttributes<HTMLSygSelectElement>;
+            "syg-select-option": LocalJSX.SygSelectOption & JSXBase.HTMLAttributes<HTMLSygSelectOptionElement>;
+            "syg-select-popover": LocalJSX.SygSelectPopover & JSXBase.HTMLAttributes<HTMLSygSelectPopoverElement>;
+            "syg-skeleton-text": LocalJSX.SygSkeletonText & JSXBase.HTMLAttributes<HTMLSygSkeletonTextElement>;
+            "syg-slide": LocalJSX.SygSlide & JSXBase.HTMLAttributes<HTMLSygSlideElement>;
+            "syg-slides": LocalJSX.SygSlides & JSXBase.HTMLAttributes<HTMLSygSlidesElement>;
+            "syg-spinner": LocalJSX.SygSpinner & JSXBase.HTMLAttributes<HTMLSygSpinnerElement>;
+            "syg-split-pane": LocalJSX.SygSplitPane & JSXBase.HTMLAttributes<HTMLSygSplitPaneElement>;
+            "syg-tab": LocalJSX.SygTab & JSXBase.HTMLAttributes<HTMLSygTabElement>;
+            "syg-tab-bar": LocalJSX.SygTabBar & JSXBase.HTMLAttributes<HTMLSygTabBarElement>;
+            "syg-tab-button": LocalJSX.SygTabButton & JSXBase.HTMLAttributes<HTMLSygTabButtonElement>;
+            "syg-tabs": LocalJSX.SygTabs & JSXBase.HTMLAttributes<HTMLSygTabsElement>;
+            "syg-text": LocalJSX.SygText & JSXBase.HTMLAttributes<HTMLSygTextElement>;
+            "syg-textarea": LocalJSX.SygTextarea & JSXBase.HTMLAttributes<HTMLSygTextareaElement>;
+            "syg-thumbnail": LocalJSX.SygThumbnail & JSXBase.HTMLAttributes<HTMLSygThumbnailElement>;
+            "syg-title": LocalJSX.SygTitle & JSXBase.HTMLAttributes<HTMLSygTitleElement>;
+            "syg-toast": LocalJSX.SygToast & JSXBase.HTMLAttributes<HTMLSygToastElement>;
+            "syg-toggle": LocalJSX.SygToggle & JSXBase.HTMLAttributes<HTMLSygToggleElement>;
+            "syg-toolbar": LocalJSX.SygToolbar & JSXBase.HTMLAttributes<HTMLSygToolbarElement>;
+            "syg-virtual-scroll": LocalJSX.SygVirtualScroll & JSXBase.HTMLAttributes<HTMLSygVirtualScrollElement>;
         }
     }
 }

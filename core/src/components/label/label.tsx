@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, StyleEventDetail } from '../../interface';
 import { createColorClasses } from '../../utils/theme';
 
@@ -8,7 +8,7 @@ import { createColorClasses } from '../../utils/theme';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-label',
+  tag: 'syg-label',
   styleUrls: {
     ios: 'label.ios.scss',
     md: 'label.md.scss'
@@ -47,7 +47,7 @@ export class Label implements ComponentInterface {
   @State() noAnimate = false;
 
   componentWillLoad() {
-    this.inRange = !!this.el.closest('ion-range');
+    this.inRange = !!this.el.closest('syg-range');
     this.noAnimate = (this.position === 'floating');
     this.emitStyle();
     this.emitColor();
@@ -76,7 +76,7 @@ export class Label implements ComponentInterface {
 
     this.ionColor.emit({
       'item-label-color': color !== undefined,
-      [`ion-color-${color}`]: color !== undefined
+      [`syg-color-${color}`]: color !== undefined
     });
   }
 
@@ -96,7 +96,7 @@ export class Label implements ComponentInterface {
 
   render() {
     const position = this.position;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={createColorClasses(this.color, {

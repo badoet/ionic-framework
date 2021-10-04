@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Host, Listen, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { SelectPopoverOption } from '../../interface';
 import { safeCall } from '../../utils/overlays';
 import { getClassMap } from '../../utils/theme';
@@ -9,7 +9,7 @@ import { getClassMap } from '../../utils/theme';
  * @internal
  */
 @Component({
-  tag: 'ion-select-popover',
+  tag: 'syg-select-popover',
   styleUrls: {
     ios: 'select-popover.ios.scss',
     md: 'select-popover.md.scss'
@@ -115,18 +115,18 @@ export class SelectPopover implements ComponentInterface {
   renderCheckboxOptions(options: SelectPopoverOption[]) {
     return (
       options.map(option =>
-        <ion-item class={getClassMap(option.cssClass)}>
-          <ion-checkbox
+        <syg-item class={getClassMap(option.cssClass)}>
+          <syg-checkbox
             slot="start"
             value={option.value}
             disabled={option.disabled}
             checked={option.checked}
           >
-          </ion-checkbox>
-          <ion-label>
+          </syg-checkbox>
+          <syg-label>
             {option.text}
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
       )
     )
   }
@@ -135,21 +135,21 @@ export class SelectPopover implements ComponentInterface {
     const checked = options.filter(o => o.checked).map(o => o.value)[0];
 
     return (
-      <ion-radio-group value={checked}>
+      <syg-radio-group value={checked}>
         {options.map(option =>
-          <ion-item class={getClassMap(option.cssClass)}>
-            <ion-label>
+          <syg-item class={getClassMap(option.cssClass)}>
+            <syg-label>
               {option.text}
-            </ion-label>
-            <ion-radio
+            </syg-label>
+            <syg-radio
               value={option.value}
               disabled={option.disabled}
               onClick={ev => this.rbClick(ev)}
             >
-            </ion-radio>
-          </ion-item>
+            </syg-radio>
+          </syg-item>
         )}
-      </ion-radio-group>
+      </syg-radio-group>
     )
   }
 
@@ -158,19 +158,19 @@ export class SelectPopover implements ComponentInterface {
     const hasSubHeaderOrMessage = subHeader !== undefined || message !== undefined;
 
     return (
-      <Host class={getIonMode(this)}>
-        <ion-list>
-          {header !== undefined && <ion-list-header>{header}</ion-list-header>}
+      <Host class={getSygMode(this)}>
+        <syg-list>
+          {header !== undefined && <syg-list-header>{header}</syg-list-header>}
           { hasSubHeaderOrMessage &&
-            <ion-item>
-              <ion-label class="ion-text-wrap">
+            <syg-item>
+              <syg-label class="syg-text-wrap">
                 {subHeader !== undefined && <h3>{subHeader}</h3>}
                 {message !== undefined && <p>{message}</p>}
-              </ion-label>
-            </ion-item>
+              </syg-label>
+            </syg-item>
           }
           {this.renderOptions(options)}
-        </ion-list>
+        </syg-list>
       </Host>
     );
   }

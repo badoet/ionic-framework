@@ -60,9 +60,9 @@ export class ActionSheetExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.presentActionSheet()}>Present Action Sheet</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={() => this.presentActionSheet()}>Present Action Sheet</syg-button>
+      </syg-content>
     ];
   }
 }

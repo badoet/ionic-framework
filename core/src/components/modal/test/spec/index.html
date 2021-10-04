@@ -11,9 +11,9 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   <script type="module">
-    import { modalController, createAnimation } from '../../../../dist/ionic/index.esm.js';
+    import { modalController, createAnimation } from '../../../../dist/syg/index.esm.js';
     window.modalController = modalController;
     window.createAnimation = createAnimation;
   </script>
@@ -22,11 +22,11 @@
     padding-top: 5px !important;
     height: 55px;
   }
-  #modal-header ion-title {
+  #modal-header syg-title {
     padding-top: 5px;
   }
 
-  #modal-header ion-note {
+  #modal-header syg-note {
     display: block;
     width: 100%;
     height: 15px;
@@ -35,7 +35,7 @@
     color: #111;
   }
 
-  ion-list ion-icon {
+  syg-list ion-icon {
     width: 100%;
     height: 100%;
   }
@@ -43,30 +43,30 @@
 </head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <div class="ion-page">
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-button id="card-modal" onclick="presentModal(document.querySelectorAll('.ion-page')[1])">
+    <div class="syg-page">
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-button id="card-modal" onclick="presentModal(document.querySelectorAll('.syg-page')[1])">
               <ion-icon name="add" slot="icon-only"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-          <ion-title>Favorites</ion-title>
-        </ion-toolbar>
-      </ion-header>
+            </syg-button>
+          </syg-buttons>
+          <syg-title>Favorites</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content>
-        <ion-item>
-          <ion-label>Use Custom Animation</ion-label>
-          <ion-toggle></ion-toggle>
-        </ion-item>
+      <syg-content>
+        <syg-item>
+          <syg-label>Use Custom Animation</syg-label>
+          <syg-toggle></syg-toggle>
+        </syg-item>
 
-        <ion-list id="list"></ion-list>
-      </ion-content>
+        <syg-list id="list"></syg-list>
+      </syg-content>
     </div>
-  </ion-app>
+  </syg-app>
 
   <script>
     window.addEventListener("ionModalDidDismiss", function (e) { console.log('DidDismiss', e) })
@@ -74,7 +74,7 @@
 
     const enterAnimation = (baseEl) => {
       const backdropAnimation = createAnimation()
-        .addElement(baseEl.querySelector('ion-backdrop'))
+        .addElement(baseEl.querySelector('syg-backdrop'))
         .fromTo('opacity', '0.01', '0.4');
 
       const wrapperAnimation = createAnimation()
@@ -93,7 +93,7 @@
 
     const leaveAnimation = (baseEl) => {
       const backdropAnimation = createAnimation()
-        .addElement(baseEl.querySelector('ion-backdrop'))
+        .addElement(baseEl.querySelector('syg-backdrop'))
         .fromTo('opacity', '0.4', '0.01');
 
       const wrapperAnimation = createAnimation()
@@ -409,13 +409,13 @@
     const list = document.querySelector('#list');
 
     const addFavorite = (p) => {
-      const item = document.createElement('ion-item');
+      const item = document.createElement('syg-item');
       item.innerHTML = `
-        <ion-avatar slot="start"><ion-icon name="person"></ion-icon></ion-avatar>
-        <ion-label>
+        <syg-avatar slot="start"><ion-icon name="person"></ion-icon></syg-avatar>
+        <syg-label>
           <h2>${p.name}</h2>
           <h3>${p.position}</h3>
-        </ion-label>
+        </syg-label>
       `;
       list.appendChild(item);
     }
@@ -455,40 +455,40 @@
       // create component to open
       const element = document.createElement('div');
       element.innerHTML = `
-      <ion-header id="modal-header">
-        <ion-note>Choose a contact to add to Favorites</ion-note>
-        <ion-toolbar>
-          <ion-title>Contacts</ion-title>
-          <ion-buttons slot="end">
-            <ion-button class="add">
+      <syg-header id="modal-header">
+        <syg-note>Choose a contact to add to Favorites</syg-note>
+        <syg-toolbar>
+          <syg-title>Contacts</syg-title>
+          <syg-buttons slot="end">
+            <syg-button class="add">
               <ion-icon name="add" slot="icon-only"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
+            </syg-button>
+          </syg-buttons>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content>
+        <syg-list>
           ${sortedGroups.map(group => {
-            return `<ion-item-divider sticky="true">
-                      <ion-label>
+            return `<syg-item-divider sticky="true">
+                      <syg-label>
                         ${group.letter}
-                      </ion-label>
-                    </ion-item-divider>
-                    ${group.contacts.map(item => `<ion-item onclick="handleAddFavorite('${item.email}')"><ion-label>${item.name}</ion-label></ion-item>`).join('')}
+                      </syg-label>
+                    </syg-item-divider>
+                    ${group.contacts.map(item => `<syg-item onclick="handleAddFavorite('${item.email}')"><syg-label>${item.name}</syg-label></syg-item>`).join('')}
                     `;
           }).join('')}
-        </ion-list>
-        <ion-button class="dismiss">Dismiss Modal</ion-button>
-      </ion-content>
+        </syg-list>
+        <syg-button class="dismiss">Dismiss Modal</syg-button>
+      </syg-content>
       `;
 
       // listen for close event
-      const button = element.querySelector('ion-button.dismiss');
+      const button = element.querySelector('syg-button.dismiss');
       button.addEventListener('click', () => {
         modalController.dismiss();
       });
 
-      const create = element.querySelector('ion-button.add');
+      const create = element.querySelector('syg-button.add');
       create.addEventListener('click', async () => {
         const topModal = await modalController.getTop();
 
@@ -496,7 +496,7 @@
       });
 
 
-      const toggle = document.querySelector('ion-toggle');
+      const toggle = document.querySelector('syg-toggle');
       // present the modal
       const modalElement = await modalController.create({
         presentingElement: presentingEl,

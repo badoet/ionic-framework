@@ -1,4 +1,4 @@
-# ion-refresher
+# syg-refresher
 
 The refresher provides pull-to-refresh functionality on a content component.
 The pull-to-refresh pattern lets a user pull down on a list of data using touch
@@ -16,13 +16,13 @@ Certain properties such as `pullMin` and `snapbackDuration` are not compatible b
 
 ### iOS Usage
 
-Using the iOS native `ion-refresher` requires setting the `pullingIcon` property on `ion-refresher-content` to the value of one of the available spinners. See the [Spinner Documentation](../spinner#properties) for accepted values. The `pullingIcon` defaults to the `lines` spinner on iOS. The spinner tick marks will be progressively shown as the user pulls down on the page.
+Using the iOS native `syg-refresher` requires setting the `pullingIcon` property on `syg-refresher-content` to the value of one of the available spinners. See the [Spinner Documentation](../spinner#properties) for accepted values. The `pullingIcon` defaults to the `lines` spinner on iOS. The spinner tick marks will be progressively shown as the user pulls down on the page.
 
-The iOS native `ion-refresher` relies on rubber band scrolling in order to work properly and is only compatible with iOS devices as a result. We provide a fallback refresher for apps running in iOS mode on devices that do not support rubber band scrolling.
+The iOS native `syg-refresher` relies on rubber band scrolling in order to work properly and is only compatible with iOS devices as a result. We provide a fallback refresher for apps running in iOS mode on devices that do not support rubber band scrolling.
 
 ### Android Usage
 
-Using the MD native `ion-refresher` requires setting the `pullingIcon` property on `ion-refresher-content` to the value of one of the available spinners. See the [ion-spinner Documentation](../spinner#properties) for accepted values. `pullingIcon` defaults to the `circular` spinner on MD.
+Using the MD native `syg-refresher` requires setting the `pullingIcon` property on `syg-refresher-content` to the value of one of the available spinners. See the [syg-spinner Documentation](../spinner#properties) for accepted values. `pullingIcon` defaults to the `circular` spinner on MD.
 
 ## Interfaces
 
@@ -54,30 +54,30 @@ interface RefresherCustomEvent extends CustomEvent {
 
 ```html
 <!-- Default Refresher -->
-<ion-content>
-  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+<syg-content>
+  <syg-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <syg-refresher-content></syg-refresher-content>
+  </syg-refresher>
+</syg-content>
 
 <!-- Custom Refresher Properties -->
-<ion-content>
-  <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+<syg-content>
+  <syg-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200">
+    <syg-refresher-content></syg-refresher-content>
+  </syg-refresher>
+</syg-content>
 
 <!-- Custom Refresher Content -->
-<ion-content>
-  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content
+<syg-content>
+  <syg-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <syg-refresher-content
       pullingIcon="chevron-down-circle-outline"
       pullingText="Pull to refresh"
       refreshingSpinner="circles"
       refreshingText="Refreshing...">
-    </ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+    </syg-refresher-content>
+  </syg-refresher>
+</syg-content>
 ```
 
 ```typescript
@@ -107,30 +107,30 @@ export class RefresherExample {
 
 ```html
 <!-- Default Refresher -->
-<ion-content>
-  <ion-refresher slot="fixed">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+<syg-content>
+  <syg-refresher slot="fixed">
+    <syg-refresher-content></syg-refresher-content>
+  </syg-refresher>
+</syg-content>
 
 <!-- Custom Refresher Properties -->
-<ion-content>
-  <ion-refresher slot="fixed" pull-factor="0.5" pull-min="100" pull-max="200">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+<syg-content>
+  <syg-refresher slot="fixed" pull-factor="0.5" pull-min="100" pull-max="200">
+    <syg-refresher-content></syg-refresher-content>
+  </syg-refresher>
+</syg-content>
 
 <!-- Custom Refresher Content -->
-<ion-content>
-  <ion-refresher slot="fixed">
-    <ion-refresher-content
+<syg-content>
+  <syg-refresher slot="fixed">
+    <syg-refresher-content
       pulling-icon="chevron-down-circle-outline"
       pulling-text="Pull to refresh"
       refreshing-spinner="circles"
       refreshing-text="Refreshing...">
-    </ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+    </syg-refresher-content>
+  </syg-refresher>
+</syg-content>
 ```
 
 
@@ -205,30 +205,30 @@ export class RefresherExample {
   render() {
     return [
       // Default Refresher
-      <ion-content>
-        <ion-refresher slot="fixed" onIonRefresh={(ev) => this.doRefresh(ev)}>
-          <ion-refresher-content></ion-refresher-content>
-        </ion-refresher>
-      </ion-content>,
+      <syg-content>
+        <syg-refresher slot="fixed" onIonRefresh={(ev) => this.doRefresh(ev)}>
+          <syg-refresher-content></syg-refresher-content>
+        </syg-refresher>
+      </syg-content>,
 
       // Custom Refresher Properties
-      <ion-content>
-        <ion-refresher slot="fixed" pullFactor={0.5} pullMin={100} pullMax={200}>
-          <ion-refresher-content></ion-refresher-content>
-        </ion-refresher>
-      </ion-content>,
+      <syg-content>
+        <syg-refresher slot="fixed" pullFactor={0.5} pullMin={100} pullMax={200}>
+          <syg-refresher-content></syg-refresher-content>
+        </syg-refresher>
+      </syg-content>,
 
       // Custom Refresher Content
-      <ion-content>
-        <ion-refresher slot="fixed" onIonRefresh={(ev) => this.doRefresh(ev)}>
-          <ion-refresher-content
+      <syg-content>
+        <syg-refresher slot="fixed" onIonRefresh={(ev) => this.doRefresh(ev)}>
+          <syg-refresher-content
             pullingIcon="chevron-down-circle-outline"
             pullingText="Pull to refresh"
             refreshingSpinner="circles"
             refreshingText="Refreshing...">
-          </ion-refresher-content>
-        </ion-refresher>
-      </ion-content>
+          </syg-refresher-content>
+        </syg-refresher>
+      </syg-content>
     ];
   }
 }
@@ -240,30 +240,30 @@ export class RefresherExample {
 ```html
 <template>
   <!-- Default Refresher -->
-  <ion-content>
-    <ion-refresher slot="fixed" @ionRefresh="doRefresh($event)">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
-  </ion-content>
+  <syg-content>
+    <syg-refresher slot="fixed" @ionRefresh="doRefresh($event)">
+      <syg-refresher-content></syg-refresher-content>
+    </syg-refresher>
+  </syg-content>
 
   <!-- Custom Refresher Properties -->
-  <ion-content>
-    <ion-refresher slot="fixed" pull-factor="0.5" pull-min="100" pull-max="200">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
-  </ion-content>
+  <syg-content>
+    <syg-refresher slot="fixed" pull-factor="0.5" pull-min="100" pull-max="200">
+      <syg-refresher-content></syg-refresher-content>
+    </syg-refresher>
+  </syg-content>
 
   <!-- Custom Refresher Content -->
-  <ion-content>
-    <ion-refresher slot="fixed" @ionRefresh="doRefresh($event)">
-      <ion-refresher-content
+  <syg-content>
+    <syg-refresher slot="fixed" @ionRefresh="doRefresh($event)">
+      <syg-refresher-content
         :pulling-icon="chevronDownCircleOutline"
         pulling-text="Pull to refresh"
         refreshing-spinner="circles"
         refreshing-text="Refreshing...">
-      </ion-refresher-content>
-    </ion-refresher>
-  </ion-content>
+      </syg-refresher-content>
+    </syg-refresher>
+  </syg-content>
 </template>
 
 <script lang="ts">

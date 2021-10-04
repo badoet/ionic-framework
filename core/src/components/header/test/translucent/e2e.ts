@@ -8,7 +8,7 @@ test('header: translucent', async () => {
   });
 
   const globalMode = await page.evaluate(() => document.documentElement.getAttribute('mode'));
-  await checkComponentModeClasses(await page.find('ion-header'), globalMode!, 'header-translucent');
+  await checkComponentModeClasses(await page.find('syg-header'), globalMode!, 'header-translucent');
 
   const compare = await page.compareScreenshot();
   expect(compare).toMatchScreenshot();

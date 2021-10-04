@@ -20,7 +20,7 @@ export class ToastExample {
     const toast = await toastController.create({
       header: 'Toast header',
       message: 'Click to Close',
-      icon: 'information-circle',
+      icon: 'informatsyg-circle',
       position: 'top',
       buttons: [
         {
@@ -47,10 +47,10 @@ export class ToastExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.presentToast()}>Present Toast</ion-button>
-        <ion-button onClick={() => this.presentToastWithOptions()}>Present Toast: Options</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={() => this.presentToast()}>Present Toast</syg-button>
+        <syg-button onClick={() => this.presentToastWithOptions()}>Present Toast: Options</syg-button>
+      </syg-content>
     ];
   }
 }

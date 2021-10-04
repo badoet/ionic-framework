@@ -1,4 +1,4 @@
-# ion-tab-bar
+# syg-tab-bar
 
 The tab bar is a UI component that contains a set of [tab buttons](../tab-button). A tab bar must be provided inside of [tabs](../tabs) to communicate with each [tab](../tab).
 
@@ -11,45 +11,45 @@ The tab bar is a UI component that contains a set of [tab buttons](../tab-button
 ### Angular
 
 ```html
-<ion-tabs>
+<syg-tabs>
   <!-- Tab bar -->
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="account">
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="account">
       <ion-icon name="person"></ion-icon>
-    </ion-tab-button>
-    <ion-tab-button tab="contact">
+    </syg-tab-button>
+    <syg-tab-button tab="contact">
       <ion-icon name="call"></ion-icon>
-    </ion-tab-button>
-    <ion-tab-button tab="settings">
+    </syg-tab-button>
+    <syg-tab-button tab="settings">
       <ion-icon name="settings"></ion-icon>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```
 
 
 ### Javascript
 
 ```html
-<ion-tabs>
+<syg-tabs>
   <!-- Tab views -->
-  <ion-tab tab="account"></ion-tab>
-  <ion-tab tab="contact"></ion-tab>
-  <ion-tab tab="settings"></ion-tab>
+  <syg-tab tab="account"></syg-tab>
+  <syg-tab tab="contact"></syg-tab>
+  <syg-tab tab="settings"></syg-tab>
 
   <!-- Tab bar -->
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="account">
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="account">
       <ion-icon name="person"></ion-icon>
-    </ion-tab-button>
-    <ion-tab-button tab="contact">
+    </syg-tab-button>
+    <syg-tab-button tab="contact">
       <ion-icon name="call"></ion-icon>
-    </ion-tab-button>
-    <ion-tab-button tab="settings">
+    </syg-tab-button>
+    <syg-tab-button tab="settings">
       <ion-icon name="settings"></ion-icon>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```
 
 
@@ -93,25 +93,25 @@ import { Component, h } from '@stencil/core';
 export class TabBarExample {
   render() {
     return [
-      <ion-tabs>
+      <syg-tabs>
         {/* Tab views */}
-        <ion-tab tab="account" component="page-account"></ion-tab>
-        <ion-tab tab="contact" component="page-contact"></ion-tab>
-        <ion-tab tab="settings" component="page-settings"></ion-tab>
+        <syg-tab tab="account" component="page-account"></syg-tab>
+        <syg-tab tab="contact" component="page-contact"></syg-tab>
+        <syg-tab tab="settings" component="page-settings"></syg-tab>
 
         {/* Tab bar */}
-        <ion-tab-bar slot="bottom">
-          <ion-tab-button tab="account">
+        <syg-tab-bar slot="bottom">
+          <syg-tab-button tab="account">
             <ion-icon name="person"></ion-icon>
-          </ion-tab-button>
-          <ion-tab-button tab="contact">
+          </syg-tab-button>
+          <syg-tab-button tab="contact">
             <ion-icon name="call"></ion-icon>
-          </ion-tab-button>
-          <ion-tab-button tab="settings">
+          </syg-tab-button>
+          <syg-tab-button tab="settings">
             <ion-icon name="settings"></ion-icon>
-          </ion-tab-button>
-        </ion-tab-bar>
-      </ion-tabs>
+          </syg-tab-button>
+        </syg-tab-bar>
+      </syg-tabs>
     ];
   }
 }
@@ -122,20 +122,20 @@ export class TabBarExample {
 
 ```html
 <template>
-  <ion-tabs>
+  <syg-tabs>
     <!-- Tab bar -->
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="account">
+    <syg-tab-bar slot="bottom">
+      <syg-tab-button tab="account">
         <ion-icon :icon="person"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="contact">
+      </syg-tab-button>
+      <syg-tab-button tab="contact">
         <ion-icon :icon="call"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="settings">
+      </syg-tab-button>
+      <syg-tab-button tab="settings">
         <ion-icon :icon="settings"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+      </syg-tab-button>
+    </syg-tab-bar>
+  </syg-tabs>
 </template>
 
 <script>

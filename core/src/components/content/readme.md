@@ -1,4 +1,4 @@
-# ion-content
+# syg-content
 
 The content component provides an easy to use content area with some useful methods
 to control the scrollable area. There should only be one content in a single
@@ -60,7 +60,7 @@ interface ScrollCustomEvent extends ScrollBaseCustomEvent {
 ### Angular
 
 ```html
-<ion-content
+<syg-content
   [scrollEvents]="true"
   (ionScrollStart)="logScrollStart()"
   (ionScroll)="logScrolling($event)"
@@ -70,24 +70,24 @@ interface ScrollCustomEvent extends ScrollBaseCustomEvent {
     <div slot="fixed">
       <h1>Fixed Content</h1>
     </div>
-</ion-content>
+</syg-content>
 ```
 
 
 ### Javascript
 
 ```html
-<ion-content>
+<syg-content>
   <h1>Main Content</h1>
 
   <div slot="fixed">
     <h1>Fixed Content</h1>
   </div>
-</ion-content>
+</syg-content>
 ```
 
 ```javascript
-var content = document.querySelector('ion-content');
+var content = document.querySelector('syg-content');
 content.scrollEvents = true;
 content.addEventListener('ionScrollStart', () => console.log('scroll start'));
 content.addEventListener('ionScroll', (ev) => console.log('scroll', ev.detail));
@@ -141,7 +141,7 @@ export class ContentExample {
 
   render() {
     return [
-      <ion-content
+      <syg-content
         scrollEvents={true}
         onIonScrollStart={() => this.logScrollStart()}
         onIonScroll={(ev) => this.logScrolling(ev)}
@@ -151,7 +151,7 @@ export class ContentExample {
           <div slot="fixed">
             <h1>Fixed Content</h1>
           </div>
-      </ion-content>
+      </syg-content>
     ];
   }
 }
@@ -162,7 +162,7 @@ export class ContentExample {
 
 ```html
 <template>
-  <ion-content
+  <syg-content
     :scroll-events="true"
     @ionScrollStart="logScrollStart()"
     @ionScroll="logScrolling($event)"
@@ -172,7 +172,7 @@ export class ContentExample {
       <div slot="fixed">
         <h1>Fixed Content</h1>
       </div>
-  </ion-content>
+  </syg-content>
 </template>
 
 <script>
@@ -215,7 +215,7 @@ export default defineComponent({
 
 Get the element where the actual scrolling takes place.
 This element can be used to subscribe to `scroll` events or manually modify
-`scrollTop`. However, it's recommended to use the API provided by `ion-content`:
+`scrollTop`. However, it's recommended to use the API provided by `syg-content`:
 
 i.e. Using `ionScroll`, `ionScrollStart`, `ionScrollEnd` for scrolling events
 and `scrollToPoint()` to scroll the content into a certain point.

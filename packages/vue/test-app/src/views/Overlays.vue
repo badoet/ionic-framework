@@ -2,9 +2,9 @@
   <ion-page data-pageid="overlays">
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Overlays</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -19,11 +19,11 @@
 
         <ion-item>
           <ion-label>Alert</ion-label>
-          <ion-radio value="alert" id="ion-alert"></ion-radio>
+          <ion-radio value="alert" id="syg-alert"></ion-radio>
         </ion-item>
         <ion-item>
           <ion-label>Action Sheet</ion-label>
-          <ion-radio value="action-sheet" id="ion-action-sheet"></ion-radio>
+          <ion-radio value="action-sheet" id="syg-action-sheet"></ion-radio>
         </ion-item>
         <ion-item>
           <ion-label>Loading</ion-label>
@@ -62,9 +62,9 @@
 
       <br />
 
-      <ion-button @click="present($event)" id="present-overlay">Present Overlay</ion-button>
+      <syg-button @click="present($event)" id="present-overlay">Present Overlay</syg-button>
 
-      <ion-button @click="changeLoadingProps()" id="change-loading-props">Quickly Change Loading Props</ion-button>
+      <syg-button @click="changeLoadingProps()" id="change-loading-props">Quickly Change Loading Props</syg-button>
 
       <br /><br />
 
@@ -73,20 +73,20 @@
       Modal onWillDismiss: <div id="willDismiss">{{ willDismiss }}</div><br />
       Modal onDidDismiss: <div id="didDismiss">{{ didDismiss }}</div><br />
 
-      <ion-action-sheet
+      <syg-action-sheet
         :is-open="isActionSheetOpen"
         :buttons="actionSheetButtons"
         @didDismiss="setActionSheetRef(false)"
       >
-      </ion-action-sheet>
+      </syg-action-sheet>
 
-      <ion-alert
+      <syg-alert
         :is-open="isAlertOpen"
         header="Alert!"
         :buttons="alertButtons"
         @didDismiss="setAlertRef(false)"
       >
-      </ion-alert>
+      </syg-alert>
 
       <ion-loading
         :is-open="isLoadingOpen"
@@ -251,12 +251,12 @@ export default defineComponent({
     }
 
     const openActionSheet = async () => {
-      const actionSheet = await actionSheetController.create({ cssClass: "ion-action-sheet-controller", buttons: actionSheetButtons });
+      const actionSheet = await actionSheetController.create({ cssClass: "syg-action-sheet-controller", buttons: actionSheetButtons });
       await actionSheet.present();
     }
 
     const openAlert = async () => {
-      const alert = await alertController.create({ cssClass: "ion-alert-controller", buttons: alertButtons, header: 'Alert!' });
+      const alert = await alertController.create({ cssClass: "syg-alert-controller", buttons: alertButtons, header: 'Alert!' });
       await alert.present();
     }
 

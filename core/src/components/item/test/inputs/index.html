@@ -9,188 +9,188 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Item inputs</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Item inputs</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding-vertical">
+    <syg-content class="syg-padding-vertical">
       <form onsubmit="return onSubmit(event)">
-        <ion-list class="basic">
-          <ion-item>
-            <ion-label>Simple item</ion-label>
-          </ion-item>
+        <syg-list class="basic">
+          <syg-item>
+            <syg-label>Simple item</syg-label>
+          </syg-item>
 
-          <ion-item id="item" button onclick="testClick(event)">
-            <ion-label>Item Button</ion-label>
-          </ion-item>
+          <syg-item id="item" button onclick="testClick(event)">
+            <syg-label>Item Button</syg-label>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>DateTime</ion-label>
-            <ion-datetime name="date" id="datetime" min="1994-03-14" max="2017-12-09" display-format="MM/DD/YYYY"></ion-datetime>
-          </ion-item>
+          <syg-item>
+            <syg-label>DateTime</syg-label>
+            <syg-datetime name="date" id="datetime" min="1994-03-14" max="2017-12-09" display-format="MM/DD/YYYY"></syg-datetime>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Select</ion-label>
-            <ion-select name="select" id="select" value="n64">
-              <ion-select-option value="">No Game Console</ion-select-option>
-              <ion-select-option value="nes">NES</ion-select-option>
-              <ion-select-option value="n64">Nintendo64</ion-select-option>
-              <ion-select-option value="ps">PlayStation</ion-select-option>
-              <ion-select-option value="genesis">Sega Genesis</ion-select-option>
-              <ion-select-option value="saturn">Sega Saturn</ion-select-option>
-              <ion-select-option value="snes">SNES</ion-select-option>
-            </ion-select>
-          </ion-item>
+          <syg-item>
+            <syg-label>Select</syg-label>
+            <syg-select name="select" id="select" value="n64">
+              <syg-select-option value="">No Game Console</syg-select-option>
+              <syg-select-option value="nes">NES</syg-select-option>
+              <syg-select-option value="n64">Nintendo64</syg-select-option>
+              <syg-select-option value="ps">PlayStation</syg-select-option>
+              <syg-select-option value="genesis">Sega Genesis</syg-select-option>
+              <syg-select-option value="saturn">Sega Saturn</syg-select-option>
+              <syg-select-option value="snes">SNES</syg-select-option>
+            </syg-select>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Toggle</ion-label>
-            <ion-toggle name="toggle" id="toggle" name="Actually" slot="end"></ion-toggle>
-          </ion-item>
+          <syg-item>
+            <syg-label>Toggle</syg-label>
+            <syg-toggle name="toggle" id="toggle" name="Actually" slot="end"></syg-toggle>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Input (text)</ion-label>
-            <ion-input name="input" id="text"></ion-input>
-          </ion-item>
+          <syg-item>
+            <syg-label>Input (text)</syg-label>
+            <syg-input name="input" id="text"></syg-input>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Input (placeholder)</ion-label>
-            <ion-input name="input2" id="placeholder" placeholder="Placeholder"></ion-input>
-          </ion-item>
+          <syg-item>
+            <syg-label>Input (placeholder)</syg-label>
+            <syg-input name="input2" id="placeholder" placeholder="Placeholder"></syg-input>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Checkbox</ion-label>
-            <ion-checkbox name="checkbox" id="checkbox" slot="start"></ion-checkbox>
-          </ion-item>
+          <syg-item>
+            <syg-label>Checkbox</syg-label>
+            <syg-checkbox name="checkbox" id="checkbox" slot="start"></syg-checkbox>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Range</ion-label>
-            <ion-range name="range" id="range" value="10"></ion-range>
-          </ion-item>
-        </ion-list>
+          <syg-item>
+            <syg-label>Range</syg-label>
+            <syg-range name="range" id="range" value="10"></syg-range>
+          </syg-item>
+        </syg-list>
 
-        <ion-button id="submit" type="submit">Submit</ion-button>
+        <syg-button id="submit" type="submit">Submit</syg-button>
         <p id="form-result"></p>
       </form>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Controls
-          </ion-label>
-        </ion-list-header>
-        <ion-item-divider>Value Controls</ion-item-divider>
+          </syg-label>
+        </syg-list-header>
+        <syg-item-divider>Value Controls</syg-item-divider>
 
-        <ion-item button onClick="toggleDisabled()" id="btnDisabled">
+        <syg-item button onClick="toggleDisabled()" id="btnDisabled">
           Toggle Disable
-        </ion-item>
-        <ion-item button onClick="setSomeValue()" id="btnSomeValue">
+        </syg-item>
+        <syg-item button onClick="setSomeValue()" id="btnSomeValue">
           Set some value
-        </ion-item>
-        <ion-item button onClick="setEmptyValue()" id="btnEmptyValue">
+        </syg-item>
+        <syg-item button onClick="setEmptyValue()" id="btnEmptyValue">
           Set empty value
-        </ion-item>
-        <ion-item button onClick="setNullValue()" id="btnNullValue">
+        </syg-item>
+        <syg-item button onClick="setNullValue()" id="btnNullValue">
           Set "null" value
-        </ion-item>
-        <ion-item button onClick="setUndefinedValue()" id="btnUndefinedValue">
+        </syg-item>
+        <syg-item button onClick="setUndefinedValue()" id="btnUndefinedValue">
           Set "undefined" value
-        </ion-item>
-        <ion-item-divider>Label Controls</ion-item-divider>
-        <ion-item button onClick="setLabelDefault()" id="btnLabelDefault">
+        </syg-item>
+        <syg-item-divider>Label Controls</syg-item-divider>
+        <syg-item button onClick="setLabelDefault()" id="btnLabelDefault">
           Default
-        </ion-item>
-        <ion-item button onClick="setLabelFloating()" id="btnLabelFloating">
+        </syg-item>
+        <syg-item button onClick="setLabelFloating()" id="btnLabelFloating">
           Floating
-        </ion-item>
-        <ion-item button onClick="setLabelStacked()" id="btnLabelStacked">
+        </syg-item>
+        <syg-item button onClick="setLabelStacked()" id="btnLabelStacked">
           Stacked
-        </ion-item>
-        <ion-item button onClick="setLabelFixed()" id="btnLabelFixed">
+        </syg-item>
+        <syg-item button onClick="setLabelFixed()" id="btnLabelFixed">
           Fixed
-        </ion-item>
-      </ion-list>
+        </syg-item>
+      </syg-list>
 
-      <ion-list-header>
-        <ion-label>
+      <syg-list-header>
+        <syg-label>
           Multiple inputs/clickables
-        </ion-label>
-      </ion-list-header>
-      <ion-list class="multiple">
-        <ion-item id="delayedInputItem">
-          <ion-label>Delayed input</ion-label>
-        </ion-item>
+        </syg-label>
+      </syg-list-header>
+      <syg-list class="multiple">
+        <syg-item id="delayedInputItem">
+          <syg-label>Delayed input</syg-label>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Multiple inputs</ion-label>
-          <ion-input placeholder="Input 1"></ion-input>
-          <ion-input placeholder="Input 2"></ion-input>
-          <ion-input placeholder="Input 3"></ion-input>
-        </ion-item>
+        <syg-item>
+          <syg-label>Multiple inputs</syg-label>
+          <syg-input placeholder="Input 1"></syg-input>
+          <syg-input placeholder="Input 2"></syg-input>
+          <syg-input placeholder="Input 3"></syg-input>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Multiple textareas</ion-label>
-          <ion-textarea placeholder="Textarea 1"></ion-textarea>
-          <ion-textarea placeholder="Textarea 2"></ion-textarea>
-          <ion-textarea placeholder="Textarea 3"></ion-textarea>
-        </ion-item>
+        <syg-item>
+          <syg-label>Multiple textareas</syg-label>
+          <syg-textarea placeholder="Textarea 1"></syg-textarea>
+          <syg-textarea placeholder="Textarea 2"></syg-textarea>
+          <syg-textarea placeholder="Textarea 3"></syg-textarea>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Multiple input/textareas</ion-label>
-          <ion-textarea placeholder="Textarea 1"></ion-textarea>
-          <ion-input placeholder="Input 2"></ion-input>
-          <ion-textarea placeholder="Textarea 3"></ion-textarea>
-        </ion-item>
+        <syg-item>
+          <syg-label>Multiple input/textareas</syg-label>
+          <syg-textarea placeholder="Textarea 1"></syg-textarea>
+          <syg-input placeholder="Input 2"></syg-input>
+          <syg-textarea placeholder="Textarea 3"></syg-textarea>
+        </syg-item>
 
-        <ion-item>
-          <ion-checkbox slot="start" id="checkbox-start"></ion-checkbox>
-          <ion-label>Multiple inputs w/ cover</ion-label>
-          <ion-datetime placeholder="startTime" display-format="HH:mm" id="datetime-end"></ion-datetime>
-          <ion-checkbox slot="end" id="checkbox-end"></ion-checkbox>
-        </ion-item>
+        <syg-item>
+          <syg-checkbox slot="start" id="checkbox-start"></syg-checkbox>
+          <syg-label>Multiple inputs w/ cover</syg-label>
+          <syg-datetime placeholder="startTime" display-format="HH:mm" id="datetime-end"></syg-datetime>
+          <syg-checkbox slot="end" id="checkbox-end"></syg-checkbox>
+        </syg-item>
 
-        <ion-item>
-          <ion-select slot="start" placeholder="month" id="select-start">
-            <ion-select-option value="1">January</ion-select-option>
-            <ion-select-option value="2">February</ion-select-option>
-            <ion-select-option value="3">March</ion-select-option>
-          </ion-select>
-          <ion-label>Input w/ clickable</ion-label>
-          <ion-button slot="end" id="button-end" onclick="setButtonColorRed()">Button</ion-button>
-        </ion-item>
+        <syg-item>
+          <syg-select slot="start" placeholder="month" id="select-start">
+            <syg-select-option value="1">January</syg-select-option>
+            <syg-select-option value="2">February</syg-select-option>
+            <syg-select-option value="3">March</syg-select-option>
+          </syg-select>
+          <syg-label>Input w/ clickable</syg-label>
+          <syg-button slot="end" id="button-end" onclick="setButtonColorRed()">Button</syg-button>
+        </syg-item>
 
-        <ion-item>
-          <ion-radio slot="start" id="radio-start"></ion-radio>
-          <ion-label>Input w/ cover + input</ion-label>
-          <ion-range value="45" id="range-end"></ion-range>
-        </ion-item>
+        <syg-item>
+          <syg-radio slot="start" id="radio-start"></syg-radio>
+          <syg-label>Input w/ cover + input</syg-label>
+          <syg-range value="45" id="range-end"></syg-range>
+        </syg-item>
 
-        <ion-item>
-          <ion-range value="60" id="range-start"></ion-range>
-          <ion-label>Multiple inputs w/o cover</ion-label>
-          <ion-toggle id="toggle-1-end"></ion-toggle>
-          <ion-toggle id="toggle-2-end"></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-range value="60" id="range-start"></syg-range>
+          <syg-label>Multiple inputs w/o cover</syg-label>
+          <syg-toggle id="toggle-1-end"></syg-toggle>
+          <syg-toggle id="toggle-2-end"></syg-toggle>
+        </syg-item>
 
-        <ion-item button id="clickableItem">
-          <ion-label>Clickable item</ion-label>
-          <ion-checkbox slot="end"></ion-checkbox>
-        </ion-item>
+        <syg-item button id="clickableItem">
+          <syg-label>Clickable item</syg-label>
+          <syg-checkbox slot="end"></syg-checkbox>
+        </syg-item>
 
-        <ion-item>
-          <ion-checkbox slot="start"></ion-checkbox>
-          <ion-label>Checkbox w/ disabled button</ion-label>
-          <ion-button slot="end" onclick="setButtonColorRed()" disabled>Button</ion-button>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-app>
+        <syg-item>
+          <syg-checkbox slot="start"></syg-checkbox>
+          <syg-label>Checkbox w/ disabled button</syg-label>
+          <syg-button slot="end" onclick="setButtonColorRed()" disabled>Button</syg-button>
+        </syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-app>
 
   <script>
     var ids = ['item', 'datetime', 'select', 'toggle', 'text', 'placeholder', 'checkbox', 'toggle', 'range'];
@@ -205,7 +205,7 @@
     });
 
     const delayedInputItem = document.querySelector('#delayedInputItem');
-    const delayedInput = document.createElement('ion-input');
+    const delayedInput = document.createElement('syg-input');
     delayedInput.type = 'number';
     delayedInput.value = 34;
 
@@ -213,7 +213,7 @@
       delayedInputItem.appendChild(delayedInput);
     }, 3000);
 
-    const inputs = document.querySelectorAll('ion-input, ion-textarea');
+    const inputs = document.querySelectorAll('syg-input, syg-textarea');
 
     for (var i = 0; i < inputs.length; i++) {
       const input = inputs[i];
@@ -278,7 +278,7 @@
     }
 
     function setLabelPosition(position) {
-      Array.from(document.querySelectorAll('ion-list.basic ion-label'))
+      Array.from(document.querySelectorAll('syg-list.basic syg-label'))
         .forEach(label => label.position = position);
     }
 

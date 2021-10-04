@@ -1,11 +1,11 @@
 import { Component, ComponentInterface, Element, Host, Prop, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { hostContext } from '../../utils/theme';
 
 @Component({
-  tag: 'ion-skeleton-text',
+  tag: 'syg-skeleton-text',
   styleUrl: 'skeleton-text.scss',
   shadow: true
 })
@@ -20,8 +20,8 @@ export class SkeletonText implements ComponentInterface {
 
   render() {
     const animated = this.animated && config.getBoolean('animated', true);
-    const inMedia = hostContext('ion-avatar', this.el) || hostContext('ion-thumbnail', this.el);
-    const mode = getIonMode(this);
+    const inMedia = hostContext('syg-avatar', this.el) || hostContext('syg-thumbnail', this.el);
+    const mode = getSygMode(this);
 
     return (
       <Host

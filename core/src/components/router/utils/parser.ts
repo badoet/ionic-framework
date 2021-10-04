@@ -12,8 +12,8 @@ const readProp = (el: HTMLElement, prop: string): string | null | undefined => {
 };
 
 export const readRedirects = (root: Element): RouteRedirect[] => {
-  return (Array.from(root.children) as HTMLIonRouteRedirectElement[])
-    .filter(el => el.tagName === 'ION-ROUTE-REDIRECT')
+  return (Array.from(root.children) as HTMLSygRouteRedirectElement[])
+    .filter(el => el.tagName === 'SYG-ROUTE-REDIRECT')
     .map(el => {
       const to = readProp(el, 'to');
       return {
@@ -28,8 +28,8 @@ export const readRoutes = (root: Element): RouteChain[] => {
 };
 
 export const readRouteNodes = (node: Element): RouteTree => {
-  return (Array.from(node.children) as HTMLIonRouteElement[])
-    .filter(el => el.tagName === 'ION-ROUTE' && el.component)
+  return (Array.from(node.children) as HTMLSygRouteElement[])
+    .filter(el => el.tagName === 'SYG-ROUTE' && el.component)
     .map(el => {
       const component = readProp(el, 'component') as string;
       return {

@@ -149,7 +149,7 @@ Style the `ion-activated` class based on the spec for that element:
 Setting the activated state on the `::after` pseudo-element allows the user to customize the activated state without knowing what the default opacity is set at. A user can customize in the following ways to have a solid red background on press, or they can leave out `--background-activated-opacity` and the button will use the default activated opacity to match the spec.
 
 ```css
-ion-button {
+syg-button {
   --background-activated: red;
   --background-activated-opacity: 1;
 }
@@ -192,7 +192,7 @@ render() {
 }
 ```
 
-> Note: if the class being added was for `ion-back-button` it would be `back-button-disabled`.
+> Note: if the class being added was for `syg-back-button` it would be `back-button-disabled`.
 
 #### CSS
 
@@ -212,7 +212,7 @@ TODO
 
 ### Focused
 
-The focused state should be enabled for elements with actions when tabbed to via the keyboard. This will only work inside of an `ion-app`. It usually changes the opacity or background of an element.
+The focused state should be enabled for elements with actions when tabbed to via the keyboard. This will only work inside of an `syg-app`. It usually changes the opacity or background of an element.
 
 > Make sure the component has the correct [component structure](#component-structure) before continuing.
 
@@ -266,7 +266,7 @@ Style the `ion-focused` class based on the spec for that element:
 Setting the focused state on the `::after` pseudo-element allows the user to customize the focused state without knowing what the default opacity is set at. A user can customize in the following ways to have a solid red background on focus, or they can leave out `--background-focused-opacity` and the button will use the default focus opacity to match the spec.
 
 ```css
-ion-button {
+syg-button {
   --background-focused: red;
   --background-focused-opacity: 1;
 }
@@ -315,7 +315,7 @@ Style the `:hover` based on the spec for that element:
 Setting the hover state on the `::after` pseudo-element allows the user to customize the hover state without knowing what the default opacity is set at. A user can customize in the following ways to have a solid red background on hover, or they can leave out `--background-hover-opacity` and the button will use the default hover opacity to match the spec.
 
 ```css
-ion-button {
+syg-button {
   --background-hover: red;
   --background-hover-opacity: 1;
 }
@@ -357,8 +357,8 @@ ion-ripple-effect {
 
 ### Example Components
 
-- [ion-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/button)
-- [ion-back-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/back-button)
+- [syg-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/button)
+- [syg-back-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/back-button)
 - [ion-menu-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/menu-button)
 
 ### References
@@ -645,7 +645,7 @@ Certain components can render an `<a>` or a `<button>` depending on the presence
 
 ### Example Components
 
-- [ion-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/button)
+- [syg-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/button)
 - [ion-card](https://github.com/ionic-team/ionic/tree/master/core/src/components/card)
 - [ion-fab-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/fab-button)
 - [ion-item-option](https://github.com/ionic-team/ionic/tree/master/core/src/components/item-option)
@@ -729,7 +729,7 @@ For example, if you wanted `transform-origin` to be RTL-aware, you would use the
 @include transform-origin(start, center);
 ```
 
-This would output `transform-origin: left center` in LTR mode and `transform-origin: right center` in RTL mode. 
+This would output `transform-origin: left center` in LTR mode and `transform-origin: right center` in RTL mode.
 
 These mixins depend on the `:host-context` pseudo-class when used inside of shadow components, which is not supported in WebKit. As a result, these mixins will not work in Safari for macOS and iOS when applied to shadow components.
 

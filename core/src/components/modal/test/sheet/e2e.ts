@@ -17,7 +17,7 @@ test('modal - open', async () => {
 
   await page.click('#sheet-modal');
 
-  const modal = await page.find('ion-modal');
+  const modal = await page.find('syg-modal');
   await modal.waitForVisible();
 
   screenshotCompares.push(await page.compareScreenshot());
@@ -29,7 +29,7 @@ test('modal - open', async () => {
 
   await page.click('#sheet-modal');
 
-  const modalAgain = await page.find('ion-modal');
+  const modalAgain = await page.find('syg-modal');
   await modalAgain.waitForVisible();
 
   screenshotCompares.push(await page.compareScreenshot());

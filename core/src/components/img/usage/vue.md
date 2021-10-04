@@ -1,13 +1,13 @@
 ```html
 <template>
-  <ion-list>
-    <ion-item v-for="item in items" :key="item.src">
-      <ion-thumbnail slot="start">
-        <ion-img :src="item.src"></ion-img>
-      </ion-thumbnail>
-      <ion-label>{{item.text}}</ion-label>
-    </ion-item>
-  </ion-list>
+  <syg-list>
+    <syg-item v-for="item in items" :key="item.src">
+      <syg-thumbnail slot="start">
+        <syg-img :src="item.src"></syg-img>
+      </syg-thumbnail>
+      <syg-label>{{item.text}}</syg-label>
+    </syg-item>
+  </syg-list>
 </template>
 
 <script>

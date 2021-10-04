@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Gesture, GestureDetail, Side } from '../../interface';
 import { isEndSide } from '../../utils/helpers';
 
@@ -24,29 +24,29 @@ const enum SlidingState {
   SwipeStart = 1 << 6,
 }
 
-let openSlidingItem: HTMLIonItemSlidingElement | undefined;
+let openSlidingItem: HTMLSygItemSlidingElement | undefined;
 
 @Component({
-  tag: 'ion-item-sliding',
+  tag: 'syg-item-sliding',
   styleUrl: 'item-sliding.scss'
 })
 export class ItemSliding implements ComponentInterface {
 
-  private item: HTMLIonItemElement | null = null;
+  private item: HTMLSygItemElement | null = null;
   private openAmount = 0;
   private initialOpenAmount = 0;
   private optsWidthRightSide = 0;
   private optsWidthLeftSide = 0;
   private sides = ItemSide.None;
   private tmr: number | undefined;
-  private leftOptions?: HTMLIonItemOptionsElement;
-  private rightOptions?: HTMLIonItemOptionsElement;
+  private leftOptions?: HTMLSygItemOptionsElement;
+  private rightOptions?: HTMLSygItemOptionsElement;
   private optsDirty = true;
   private gesture?: Gesture;
-  private closestContent: HTMLIonContentElement | null = null;
+  private closestContent: HTMLSygContentElement | null = null;
   private initialContentScrollY = true;
 
-  @Element() el!: HTMLIonItemSlidingElement;
+  @Element() el!: HTMLSygItemSlidingElement;
 
   @State() state: SlidingState = SlidingState.Disabled;
 
@@ -67,8 +67,8 @@ export class ItemSliding implements ComponentInterface {
   @Event() ionDrag!: EventEmitter;
 
   async connectedCallback() {
-    this.item = this.el.querySelector('ion-item');
-    this.closestContent = this.el.closest('ion-content');
+    this.item = this.el.querySelector('syg-item');
+    this.closestContent = this.el.closest('syg-content');
 
     await this.updateOptions();
 
@@ -189,12 +189,12 @@ export class ItemSliding implements ComponentInterface {
   }
 
    /**
-    * Given an optional side, return the ion-item-options element.
+    * Given an optional side, return the syg-item-options element.
     *
     * @param side This side of the options to get. If a side is not provided it will
     * return the first one available.
     */
-  private getOptions(side?: string): HTMLIonItemOptionsElement | undefined {
+  private getOptions(side?: string): HTMLSygItemOptionsElement | undefined {
     if (side === undefined) {
       return this.leftOptions || this.rightOptions;
     } else if (side === 'start') {
@@ -205,7 +205,7 @@ export class ItemSliding implements ComponentInterface {
   }
 
   private async updateOptions() {
-    const options = this.el.querySelectorAll('ion-item-options');
+    const options = this.el.querySelectorAll('syg-item-options');
 
     let sides = 0;
 
@@ -317,7 +317,7 @@ export class ItemSliding implements ComponentInterface {
   }
 
   private onEnd(gesture: GestureDetail) {
-    // Restore ion-content scrollY to initial value when gesture ends
+    // Restore syg-content scrollY to initial value when gesture ends
     this.restoreContentScrollY();
 
     const velocity = gesture.velocityX;
@@ -415,7 +415,7 @@ export class ItemSliding implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{

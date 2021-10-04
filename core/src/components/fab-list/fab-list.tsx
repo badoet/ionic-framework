@@ -1,15 +1,15 @@
 import { Component, ComponentInterface, Element, Host, Prop, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 @Component({
-  tag: 'ion-fab-list',
+  tag: 'syg-fab-list',
   styleUrl: 'fab-list.scss',
   shadow: true
 })
 export class FabList implements ComponentInterface {
 
-  @Element() el!: HTMLIonFabElement;
+  @Element() el!: HTMLSygFabElement;
 
   /**
    * If `true`, the fab list will show all fab buttons in the list.
@@ -18,7 +18,7 @@ export class FabList implements ComponentInterface {
 
   @Watch('activated')
   protected activatedChanged(activated: boolean) {
-    const fabs = Array.from(this.el.querySelectorAll('ion-fab-button'));
+    const fabs = Array.from(this.el.querySelectorAll('syg-fab-button'));
 
     // if showing the fabs add a timeout, else show immediately
     const timeout = activated ? 30 : 0;
@@ -33,7 +33,7 @@ export class FabList implements ComponentInterface {
   @Prop() side: 'start' | 'end' | 'top' | 'bottom' = 'bottom';
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{

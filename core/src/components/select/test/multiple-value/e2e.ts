@@ -11,7 +11,7 @@ test('select: multiple-value', async () => {
   const select = await page.find('#toppings');
   await select.click();
 
-  const alert = await page.find('ion-alert');
+  const alert = await page.find('syg-alert');
   await alert.waitForVisible();
   await page.waitForTimeout(250);
 

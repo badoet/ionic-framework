@@ -10,89 +10,89 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
 </head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Settings</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Settings</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Browse</ion-title>
-        <ion-buttons slot="end">
-          <ion-button>Cancel</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-searchbar></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Browse</syg-title>
+        <syg-buttons slot="end">
+          <syg-button>Cancel</syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+      <syg-toolbar>
+        <syg-searchbar></syg-searchbar>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-header>
-      <ion-toolbar class="hide-md">
-        <ion-title size="small">Choose a contact to add to Favorites</ion-title>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button default-href="#"></ion-back-button>
-        </ion-buttons>
-        <ion-title>Title</ion-title>
-        <ion-title class="hide-ios" size="small">Subtitle</ion-title>
-        <ion-buttons slot="end">
-          <ion-button><ion-icon slot="icon-only" name="search"></ion-icon></ion-button>
-          <ion-button><ion-icon slot="icon-only" name="menu"></ion-icon></ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-searchbar></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar class="hide-md">
+        <syg-title size="small">Choose a contact to add to Favorites</syg-title>
+      </syg-toolbar>
+      <syg-toolbar>
+        <syg-buttons slot="start">
+          <syg-back-button default-href="#"></syg-back-button>
+        </syg-buttons>
+        <syg-title>Title</syg-title>
+        <syg-title class="hide-ios" size="small">Subtitle</syg-title>
+        <syg-buttons slot="end">
+          <syg-button><ion-icon slot="icon-only" name="search"></ion-icon></syg-button>
+          <syg-button><ion-icon slot="icon-only" name="menu"></ion-icon></syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+      <syg-toolbar>
+        <syg-searchbar></syg-searchbar>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title size="small">Choose a contact to add to Favorites</ion-title>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-title>Contacts</ion-title>
-        <ion-buttons slot="end">
-          <ion-button>Cancel</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-searchbar></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title size="small">Choose a contact to add to Favorites</syg-title>
+      </syg-toolbar>
+      <syg-toolbar>
+        <syg-title>Contacts</syg-title>
+        <syg-buttons slot="end">
+          <syg-button>Cancel</syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+      <syg-toolbar>
+        <syg-searchbar></syg-searchbar>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-header>
-      <ion-toolbar color="secondary">
-        <ion-title size="small">
+    <syg-header>
+      <syg-toolbar color="secondary">
+        <syg-title size="small">
           Choose multiple contacts to add to your Favorites
           so this just goes on and on and on
-        </ion-title>
-      </ion-toolbar>
-      <ion-toolbar color="secondary">
-        <ion-buttons slot="start">
-          <ion-button>Groups</ion-button>
-        </ion-buttons>
-        <ion-title>Contacts</ion-title>
-        <ion-buttons slot="end">
-          <ion-button>Cancel</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-toolbar color="secondary">
-        <ion-searchbar></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+        </syg-title>
+      </syg-toolbar>
+      <syg-toolbar color="secondary">
+        <syg-buttons slot="start">
+          <syg-button>Groups</syg-button>
+        </syg-buttons>
+        <syg-title>Contacts</syg-title>
+        <syg-buttons slot="end">
+          <syg-button>Cancel</syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+      <syg-toolbar color="secondary">
+        <syg-searchbar></syg-searchbar>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content fullscreen>
+    <syg-content fullscreen>
 
-    </ion-content>
-  </ion-app>
+    </syg-content>
+  </syg-app>
 
   <style>
     .md .hide-md {
@@ -104,7 +104,7 @@
     }
 
     /* testing purposes only
-    ion-header {
+    syg-header {
       border-top: 1px solid red;
     } */
   </style>

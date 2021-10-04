@@ -1,14 +1,14 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, SpinnerConfig, SpinnerTypes } from '../../interface';
 import { createColorClasses } from '../../utils/theme';
 
 import { SPINNERS } from './spinner-configs';
 
 @Component({
-  tag: 'ion-spinner',
+  tag: 'syg-spinner',
   styleUrl: 'spinner.scss',
   shadow: true
 })
@@ -39,7 +39,7 @@ export class Spinner implements ComponentInterface {
 
   private getName(): SpinnerTypes {
     const spinnerName = this.name || config.get('spinner');
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     if (spinnerName) {
       return spinnerName;
     }
@@ -48,7 +48,7 @@ export class Spinner implements ComponentInterface {
 
   render() {
     const self = this;
-    const mode = getIonMode(self);
+    const mode = getSygMode(self);
     const spinnerName = self.getName();
     const spinner = SPINNERS[spinnerName] || SPINNERS['lines'];
     const duration = (typeof self.duration === 'number' && self.duration > 10 ? self.duration : spinner.dur);
@@ -83,7 +83,7 @@ export class Spinner implements ComponentInterface {
 
 const buildCircle = (spinner: SpinnerConfig, duration: number, index: number, total: number) => {
   const data = spinner.fn(duration, index, total);
-  data.style['animation-duration'] = duration + 'ms';
+  data.style['animatsyg-duration'] = duration + 'ms';
 
   return (
     <svg viewBox={data.viewBox || '0 0 64 64'} style={data.style}>
@@ -100,7 +100,7 @@ const buildCircle = (spinner: SpinnerConfig, duration: number, index: number, to
 
 const buildLine = (spinner: SpinnerConfig, duration: number, index: number, total: number) => {
   const data = spinner.fn(duration, index, total);
-  data.style['animation-duration'] = duration + 'ms';
+  data.style['animatsyg-duration'] = duration + 'ms';
 
   return (
     <svg viewBox={data.viewBox || '0 0 64 64'} style={data.style}>

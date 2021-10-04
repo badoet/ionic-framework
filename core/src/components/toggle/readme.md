@@ -1,4 +1,4 @@
-# ion-toggle
+# syg-toggle
 
 Toggles change the state of a single option. Toggles can be switched on or off by pressing or swiping them. They can also be checked programmatically by setting the `checked` property.
 
@@ -9,7 +9,7 @@ Toggles change the state of a single option. Toggles can be switched on or off b
 The background of the toggle track and handle can be customized using CSS variables. There are also variables for setting the background differently when the toggle is checked.
 
 ```css
-ion-toggle {
+syg-toggle {
   --background: #000;
   --background-checked: #7a49a5;
 
@@ -23,7 +23,7 @@ Because these variables set the `background` property, which is a shorthand, it 
 A more complex case may involve adding an image to the handle background.
 
 ```css
-ion-toggle {
+syg-toggle {
   --handle-background-checked: #fff url(/assets/power-icon.png) no-repeat center / contain;
 }
 ```
@@ -31,7 +31,7 @@ ion-toggle {
 Taking it a step further, we could use the `::before` or `::after` pseudo-elements to position text on top of the background.
 
 ```css
-ion-toggle::before {
+syg-toggle::before {
   position: absolute;
 
   top: 16px;
@@ -52,7 +52,7 @@ ion-toggle::before {
 Adjusting the width of the toggle **smaller** will result in a narrower track, with the handle remaining the default width. If desired, set `--handle-width` to make the handle narrower.
 
 ```css
-ion-toggle {
+syg-toggle {
   width: 40px;
 }
 ```
@@ -60,7 +60,7 @@ ion-toggle {
 Adjusting the width of the toggle **larger** will result in a wider track, with the handle remaining the default width. If desired, set `--handle-width` to make the handle wider.
 
 ```css
-ion-toggle {
+syg-toggle {
   width: 100px;
 }
 ```
@@ -70,7 +70,7 @@ ion-toggle {
 Adjusting the height of the toggle **smaller** than the default will result in the handle height auto-sizing itself to the track. In `ios` the handle is shorter than the track (`100% - 4px`) and in `md` the handle is taller than the track (`100% + 6px`).
 
 ```css
-ion-toggle {
+syg-toggle {
   height: 15px;
 }
 ```
@@ -80,7 +80,7 @@ ion-toggle {
 Adjusting the height of the toggle **larger** will keep the handle in the center at the default height. This can be modified by setting `--handle-height` which can be set to any amount but will not exceed the `--handle-max-height`.
 
 ```css
-ion-toggle {
+syg-toggle {
   height: 60px;
 }
 ```
@@ -94,7 +94,7 @@ The spacing refers to the horizontal gap between the handle and the track. By de
 To remove the **horizontal** spacing, set `--handle-spacing` to `0px`.
 
 ```css
-ion-toggle {
+syg-toggle {
   --handle-spacing: 0px;
 }
 ```
@@ -102,7 +102,7 @@ ion-toggle {
 Due to the handle having a fixed height, to remove the spacing on the top and bottom, set the height to 100%.
 
 ```css
-ion-toggle {
+syg-toggle {
   --handle-spacing: 0px;
   --handle-height: 100%;
 }
@@ -114,7 +114,7 @@ ion-toggle {
 The `--handle-border-radius` can be used to change the `border-radius` on the handle.
 
 ```css
-ion-toggle {
+syg-toggle {
   --handle-border-radius: 14px 4px 4px 14px;
 }
 ```
@@ -122,7 +122,7 @@ ion-toggle {
 To target the `border-radius` only when the toggle is checked, target `.toggle-checked`:
 
 ```css
-ion-toggle.toggle-checked {
+syg-toggle.toggle-checked {
   --handle-border-radius: 4px 14px 14px 4px;
 }
 ```
@@ -133,7 +133,7 @@ ion-toggle.toggle-checked {
 The `--handle-box-shadow` can be used to change the `box-shadow` on the handle.
 
 ```css
-ion-toggle {
+syg-toggle {
   --handle-box-shadow: 4px 0 2px 0 red;
 }
 ```
@@ -141,7 +141,7 @@ ion-toggle {
 To target the box shadow only when the toggle is checked, target `.toggle-checked`:
 
 ```css
-ion-toggle.toggle-checked {
+syg-toggle.toggle-checked {
   --handle-box-shadow: -4px 0 2px 0 red;
 }
 ```
@@ -154,7 +154,7 @@ See the section on [customizing overflow](#customizing-overflow) to allow the `b
 Setting `overflow` on the toggle will be inherited by the toggle handle. By default, overflow is set to `hidden` in `ios` only. The `box-shadow` will still appear cut off due to the `contain` css property. Set `contain` to `none` in order to overflow the toggle container.
 
 ```css
-ion-toggle {
+syg-toggle {
   --handle-box-shadow: 0 3px 12px rgba(255, 0, 0, 0.6), 0 3px 1px rgba(50, 70, 255, 0.6);
 
   overflow: visible;
@@ -195,38 +195,38 @@ interface ToggleCustomEvent<T = any> extends CustomEvent {
 
 ```html
 <!-- Default Toggle -->
-<ion-toggle></ion-toggle>
+<syg-toggle></syg-toggle>
 
 <!-- Disabled Toggle -->
-<ion-toggle disabled></ion-toggle>
+<syg-toggle disabled></syg-toggle>
 
 <!-- Checked Toggle -->
-<ion-toggle checked></ion-toggle>
+<syg-toggle checked></syg-toggle>
 
 <!-- Toggle Colors -->
-<ion-toggle color="primary"></ion-toggle>
-<ion-toggle color="secondary"></ion-toggle>
-<ion-toggle color="danger"></ion-toggle>
-<ion-toggle color="light"></ion-toggle>
-<ion-toggle color="dark"></ion-toggle>
+<syg-toggle color="primary"></syg-toggle>
+<syg-toggle color="secondary"></syg-toggle>
+<syg-toggle color="danger"></syg-toggle>
+<syg-toggle color="light"></syg-toggle>
+<syg-toggle color="dark"></syg-toggle>
 
 <!-- Toggles in a List -->
-<ion-list>
-  <ion-item>
-    <ion-label>Pepperoni</ion-label>
-    <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-  </ion-item>
+<syg-list>
+  <syg-item>
+    <syg-label>Pepperoni</syg-label>
+    <syg-toggle [(ngModel)]="pepperoni"></syg-toggle>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Sausage</ion-label>
-    <ion-toggle [(ngModel)]="sausage" disabled="true"></ion-toggle>
-  </ion-item>
+  <syg-item>
+    <syg-label>Sausage</syg-label>
+    <syg-toggle [(ngModel)]="sausage" disabled="true"></syg-toggle>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Mushrooms</ion-label>
-    <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Mushrooms</syg-label>
+    <syg-toggle [(ngModel)]="mushrooms"></syg-toggle>
+  </syg-item>
+</syg-list>
 ```
 
 
@@ -234,38 +234,38 @@ interface ToggleCustomEvent<T = any> extends CustomEvent {
 
 ```html
 <!-- Default Toggle -->
-<ion-toggle></ion-toggle>
+<syg-toggle></syg-toggle>
 
 <!-- Disabled Toggle -->
-<ion-toggle disabled></ion-toggle>
+<syg-toggle disabled></syg-toggle>
 
 <!-- Checked Toggle -->
-<ion-toggle checked></ion-toggle>
+<syg-toggle checked></syg-toggle>
 
 <!-- Toggle Colors -->
-<ion-toggle color="primary"></ion-toggle>
-<ion-toggle color="secondary"></ion-toggle>
-<ion-toggle color="danger"></ion-toggle>
-<ion-toggle color="light"></ion-toggle>
-<ion-toggle color="dark"></ion-toggle>
+<syg-toggle color="primary"></syg-toggle>
+<syg-toggle color="secondary"></syg-toggle>
+<syg-toggle color="danger"></syg-toggle>
+<syg-toggle color="light"></syg-toggle>
+<syg-toggle color="dark"></syg-toggle>
 
 <!-- Toggles in a List -->
-<ion-list>
-  <ion-item>
-    <ion-label>Pepperoni</ion-label>
-    <ion-toggle slot="end" value="pepperoni" checked></ion-toggle>
-  </ion-item>
+<syg-list>
+  <syg-item>
+    <syg-label>Pepperoni</syg-label>
+    <syg-toggle slot="end" value="pepperoni" checked></syg-toggle>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Sausage</ion-label>
-    <ion-toggle slot="end" value="sausage" disabled></ion-toggle>
-  </ion-item>
+  <syg-item>
+    <syg-label>Sausage</syg-label>
+    <syg-toggle slot="end" value="sausage" disabled></syg-toggle>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Mushrooms</ion-label>
-    <ion-toggle slot="end" value="mushrooms"></ion-toggle>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Mushrooms</syg-label>
+    <syg-toggle slot="end" value="mushrooms"></syg-toggle>
+  </syg-item>
+</syg-list>
 ```
 
 
@@ -346,38 +346,38 @@ export class ToggleExample {
   render() {
     return [
       // Default Toggle
-      <ion-toggle></ion-toggle>,
+      <syg-toggle></syg-toggle>,
 
       // Disabled Toggle
-      <ion-toggle disabled></ion-toggle>,
+      <syg-toggle disabled></syg-toggle>,
 
       // Checked Toggle
-      <ion-toggle checked></ion-toggle>,
+      <syg-toggle checked></syg-toggle>,
 
       // Toggle Colors
-      <ion-toggle color="primary"></ion-toggle>,
-      <ion-toggle color="secondary"></ion-toggle>,
-      <ion-toggle color="danger"></ion-toggle>,
-      <ion-toggle color="light"></ion-toggle>,
-      <ion-toggle color="dark"></ion-toggle>,
+      <syg-toggle color="primary"></syg-toggle>,
+      <syg-toggle color="secondary"></syg-toggle>,
+      <syg-toggle color="danger"></syg-toggle>,
+      <syg-toggle color="light"></syg-toggle>,
+      <syg-toggle color="dark"></syg-toggle>,
 
       // Toggles in a List
-      <ion-list>
-        <ion-item>
-          <ion-label>Pepperoni</ion-label>
-          <ion-toggle checked={this.pepperoni} onIonChange={(ev) => this.pepperoni = ev.detail.checked}></ion-toggle>
-        </ion-item>
+      <syg-list>
+        <syg-item>
+          <syg-label>Pepperoni</syg-label>
+          <syg-toggle checked={this.pepperoni} onIonChange={(ev) => this.pepperoni = ev.detail.checked}></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Sausage</ion-label>
-          <ion-toggle checked={this.sausage} onIonChange={(ev) => this.sausage = ev.detail.checked} disabled={true}></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Sausage</syg-label>
+          <syg-toggle checked={this.sausage} onIonChange={(ev) => this.sausage = ev.detail.checked} disabled={true}></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Mushrooms</ion-label>
-          <ion-toggle checked={this.mushrooms} onIonChange={(ev) => this.mushrooms = ev.detail.checked}></ion-toggle>
-        </ion-item>
-      </ion-list>,
+        <syg-item>
+          <syg-label>Mushrooms</syg-label>
+          <syg-toggle checked={this.mushrooms} onIonChange={(ev) => this.mushrooms = ev.detail.checked}></syg-toggle>
+        </syg-item>
+      </syg-list>,
 
       <div>
         Pepperoni: {this.pepperoni ? "true" : "false"}<br/>
@@ -395,51 +395,51 @@ export class ToggleExample {
 ```html
 <template>
   <!-- Default Toggle -->
-  <ion-toggle></ion-toggle>
+  <syg-toggle></syg-toggle>
 
   <!-- Disabled Toggle -->
-  <ion-toggle disabled></ion-toggle>
+  <syg-toggle disabled></syg-toggle>
 
   <!-- Checked Toggle -->
-  <ion-toggle checked></ion-toggle>
+  <syg-toggle checked></syg-toggle>
 
   <!-- Toggle Colors -->
-  <ion-toggle color="primary"></ion-toggle>
-  <ion-toggle color="secondary"></ion-toggle>
-  <ion-toggle color="danger"></ion-toggle>
-  <ion-toggle color="light"></ion-toggle>
-  <ion-toggle color="dark"></ion-toggle>
+  <syg-toggle color="primary"></syg-toggle>
+  <syg-toggle color="secondary"></syg-toggle>
+  <syg-toggle color="danger"></syg-toggle>
+  <syg-toggle color="light"></syg-toggle>
+  <syg-toggle color="dark"></syg-toggle>
 
   <!-- Toggles in a List -->
-  <ion-list>
-    <ion-item>
-      <ion-label>Pepperoni</ion-label>
-      <ion-toggle
+  <syg-list>
+    <syg-item>
+      <syg-label>Pepperoni</syg-label>
+      <syg-toggle
         @ionChange="toppings.value.push($event.target.value)"
         value="pepperoni"
         :checked="toppings.value.indexOf('pepperoni') !== -1">
-      </ion-toggle>
-    </ion-item>
+      </syg-toggle>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Sausage</ion-label>
-      <ion-toggle
+    <syg-item>
+      <syg-label>Sausage</syg-label>
+      <syg-toggle
         @ionChange="toppings.value.push($event.target.value)"
         value="sausage"
         :checked="toppings.value.indexOf('pepperoni') !== -1"
         disabled="true">
-      </ion-toggle>
-    </ion-item>
+      </syg-toggle>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Mushrooms</ion-label>
-      <ion-toggle
+    <syg-item>
+      <syg-label>Mushrooms</syg-label>
+      <syg-toggle
         @ionChange="toppings.value.push($event.target.value)"
         value="mushrooms"
         :checked="toppings.value.indexOf('pepperoni') !== -1">
-      </ion-toggle>
-    </ion-item>
-  </ion-list>
+      </syg-toggle>
+    </syg-item>
+  </syg-list>
 </template>
 
 <script>

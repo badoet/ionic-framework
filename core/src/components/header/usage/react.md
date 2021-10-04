@@ -18,7 +18,7 @@ export const HeaderExample: React.FC = () => (
     </IonHeader>
     
     {/*-- Header without a border --*/}
-    <IonHeader className="ion-no-border">
+    <IonHeader className="syg-no-border">
      <IonToolbar>
       <IonTitle>Header - No Border</IonTitle>
      </IonToolbar>

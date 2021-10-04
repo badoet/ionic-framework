@@ -1,19 +1,19 @@
 ```html
 <template>
-  <ion-fab vertical="bottom" horizontal="end">
-    <ion-fab-button>Share</ion-fab-button>
+  <syg-fab vertical="bottom" horizontal="end">
+    <syg-fab-button>Share</syg-fab-button>
 
-    <ion-fab-list side="top">
-      <ion-fab-button>Facebook</ion-fab-button>
-      <ion-fab-button>Twitter</ion-fab-button>
-      <ion-fab-button>Youtube</ion-fab-button>
-    </ion-fab-list>
+    <syg-fab-list side="top">
+      <syg-fab-button>Facebook</syg-fab-button>
+      <syg-fab-button>Twitter</syg-fab-button>
+      <syg-fab-button>Youtube</syg-fab-button>
+    </syg-fab-list>
 
-    <ion-fab-list side="start">
-      <ion-fab-button>Vimeo</ion-fab-button>
-    </ion-fab-list>
+    <syg-fab-list side="start">
+      <syg-fab-button>Vimeo</syg-fab-button>
+    </syg-fab-list>
 
-  </ion-fab>
+  </syg-fab>
 </template>
 
 <script>

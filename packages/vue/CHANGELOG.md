@@ -70,8 +70,8 @@ With the release of `@ionic/vue@0.5.0`, developers can now use overlay component
 <template>
   <ion-page>
     <ion-content>
-      <ion-button @click="setModalOpen">Open Modal</ion-button>
-      
+      <syg-button @click="setModalOpen">Open Modal</syg-button>
+
       <ion-modal
         css-class="my-modal-class"
         :is-open="isModalOpen"
@@ -84,10 +84,10 @@ With the release of `@ionic/vue@0.5.0`, developers can now use overlay component
 </template>
 
 <script lang="ts">
-import { 
-  IonButton, 
-  IonContent, 
-  IonModal, 
+import {
+  IonButton,
+  IonContent,
+  IonModal,
   IonPage
 } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
@@ -95,16 +95,16 @@ import { defineComponent, ref } from 'vue';
 export default defineComponent({
   name: 'Home',
   components: {
-    IonButton, 
-    IonContent, 
-    IonModal, 
+    IonButton,
+    IonContent,
+    IonModal,
     IonPage
   },
   setup() {
     const isModalOpen = ref(false);
     const setModalOpen = () => isModalOpen.value = true;
     const setModalClosed = () => isModalOpen.value = false;
-    
+
     return {
       isModalOpen,
       setModalOpen,

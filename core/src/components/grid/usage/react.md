@@ -6,44 +6,44 @@ export const GridExample: React.FC = () => (
   <IonContent>
     <IonGrid>
       <IonRow>
-        <IonCol>ion-col</IonCol>
-        <IonCol>ion-col</IonCol>
-        <IonCol>ion-col</IonCol>
-        <IonCol>ion-col</IonCol>
+        <IonCol>syg-col</IonCol>
+        <IonCol>syg-col</IonCol>
+        <IonCol>syg-col</IonCol>
+        <IonCol>syg-col</IonCol>
       </IonRow>
 
       <IonRow>
-        <IonCol size="6">ion-col size="6"</IonCol>
-        <IonCol>ion-col</IonCol>
-        <IonCol>ion-col</IonCol>
+        <IonCol size="6">syg-col size="6"</IonCol>
+        <IonCol>syg-col</IonCol>
+        <IonCol>syg-col</IonCol>
       </IonRow>
 
       <IonRow>
-        <IonCol size="3">ion-col size="3"</IonCol>
-        <IonCol>ion-col</IonCol>
-        <IonCol size="3">ion-col size="3"</IonCol>
+        <IonCol size="3">syg-col size="3"</IonCol>
+        <IonCol>syg-col</IonCol>
+        <IonCol size="3">syg-col size="3"</IonCol>
       </IonRow>
 
       <IonRow>
-        <IonCol size="3">ion-col size="3"</IonCol>
+        <IonCol size="3">syg-col size="3"</IonCol>
         <IonCol size="3" offset="3">
-          ion-col size="3" offset="3"
+          syg-col size="3" offset="3"
         </IonCol>
       </IonRow>
 
       <IonRow>
-        <IonCol>ion-col</IonCol>
+        <IonCol>syg-col</IonCol>
         <IonCol>
-          ion-col
+          syg-col
           <br />#
         </IonCol>
         <IonCol>
-          ion-col
+          syg-col
           <br />#
           <br />#
         </IonCol>
         <IonCol>
-          ion-col
+          syg-col
           <br />#
           <br />#
           <br />#
@@ -51,44 +51,44 @@ export const GridExample: React.FC = () => (
       </IonRow>
 
       <IonRow>
-        <IonCol className="ion-align-self-start">ion-col start</IonCol>
-        <IonCol className="ion-align-self-center">ion-col center</IonCol>
-        <IonCol className="ion-align-self-end">ion-col end</IonCol>
+        <IonCol className="syg-align-self-start">syg-col start</IonCol>
+        <IonCol className="syg-align-self-center">syg-col center</IonCol>
+        <IonCol className="syg-align-self-end">syg-col end</IonCol>
         <IonCol>
-          ion-col
+          syg-col
           <br />#
           <br />#
         </IonCol>
       </IonRow>
 
-      <IonRow className="ion-align-items-start">
-        <IonCol>start ion-col</IonCol>
-        <IonCol>start ion-col</IonCol>
-        <IonCol className="ion-align-self-end">start ion-col end</IonCol>
+      <IonRow className="syg-align-items-start">
+        <IonCol>start syg-col</IonCol>
+        <IonCol>start syg-col</IonCol>
+        <IonCol className="syg-align-self-end">start syg-col end</IonCol>
         <IonCol>
-          ion-col
+          syg-col
           <br />#
           <br />#
         </IonCol>
       </IonRow>
 
-      <IonRow className="ion-align-items-center">
-        <IonCol>center ion-col</IonCol>
-        <IonCol>center ion-col</IonCol>
-        <IonCol>center ion-col</IonCol>
+      <IonRow className="syg-align-items-center">
+        <IonCol>center syg-col</IonCol>
+        <IonCol>center syg-col</IonCol>
+        <IonCol>center syg-col</IonCol>
         <IonCol>
-          ion-col
+          syg-col
           <br />#
           <br />#
         </IonCol>
       </IonRow>
 
-      <IonRow className="ion-align-items-end">
-        <IonCol>end ion-col</IonCol>
-        <IonCol className="ion-align-self-start">end ion-col start</IonCol>
-        <IonCol>end ion-col</IonCol>
+      <IonRow className="syg-align-items-end">
+        <IonCol>end syg-col</IonCol>
+        <IonCol className="syg-align-self-start">end syg-col start</IonCol>
+        <IonCol>end syg-col</IonCol>
         <IonCol>
-          ion-col
+          syg-col
           <br />#
           <br />#
         </IonCol>
@@ -96,40 +96,40 @@ export const GridExample: React.FC = () => (
 
       <IonRow>
         <IonCol size="12" size-sm>
-          ion-col size="12" size-sm
+          syg-col size="12" size-sm
         </IonCol>
         <IonCol size="12" size-sm>
-          ion-col size="12" size-sm
+          syg-col size="12" size-sm
         </IonCol>
         <IonCol size="12" size-sm>
-          ion-col size="12" size-sm
+          syg-col size="12" size-sm
         </IonCol>
         <IonCol size="12" size-sm>
-          ion-col size="12" size-sm
+          syg-col size="12" size-sm
         </IonCol>
       </IonRow>
 
       <IonRow>
         <IonCol size="12" size-md>
-          ion-col size="12" size-md
+          syg-col size="12" size-md
         </IonCol>
         <IonCol size="12" size-md>
-          ion-col size="12" size-md
+          syg-col size="12" size-md
         </IonCol>
         <IonCol size="12" size-md>
-          ion-col size="12" size-md
+          syg-col size="12" size-md
         </IonCol>
         <IonCol size="12" size-md>
-          ion-col size="12" size-md
+          syg-col size="12" size-md
         </IonCol>
       </IonRow>
 
       <IonRow>
         <IonCol size="6" size-lg offset="3">
-          ion-col size="6" size-lg offset="3"
+          syg-col size="6" size-lg offset="3"
         </IonCol>
         <IonCol size="3" size-lg>
-          ion-col size="3" size-lg
+          syg-col size="3" size-lg
         </IonCol>
       </IonRow>
     </IonGrid>

@@ -7,7 +7,7 @@ import {
   chevronForward
 } from 'ionicons/icons';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, DatetimeChangeEventDetail, DatetimeParts, Mode, StyleEventDetail } from '../../interface';
 import { startFocusVisible } from '../../utils/focus-visible';
 import { getElementRoot, raf, renderHiddenInput } from '../../utils/helpers';
@@ -64,7 +64,7 @@ import {
  * @slot time-label - The label for the time selector in the datetime.
  */
 @Component({
-  tag: 'ion-datetime',
+  tag: 'syg-datetime',
   styleUrls: {
     ios: 'datetime.ios.scss',
     md: 'datetime.md.scss'
@@ -73,7 +73,7 @@ import {
 })
 export class Datetime implements ComponentInterface {
 
-  private inputId = `ion-dt-${datetimeIds++}`;
+  private inputId = `syg-dt-${datetimeIds++}`;
   private calendarBodyRef?: HTMLElement;
   private timeBaseRef?: HTMLElement;
   private timeHourRef?: HTMLElement;
@@ -119,7 +119,7 @@ export class Datetime implements ComponentInterface {
 
   private todayParts = parseDate(getToday())
 
-  @Element() el!: HTMLIonDatetimeElement;
+  @Element() el!: HTMLSygDatetimeElement;
 
   @State() isPresented = false;
 
@@ -271,7 +271,7 @@ export class Datetime implements ComponentInterface {
   }
 
   /**
-   * The locale to use for `ion-datetime`. This
+   * The locale to use for `syg-datetime`. This
    * impacts month and day name formatting.
    * The `'default'` value refers to the default
    * locale set by your device.
@@ -279,7 +279,7 @@ export class Datetime implements ComponentInterface {
   @Prop() locale = 'default';
 
   /**
-   * The first day of the week to use for `ion-datetime`. The
+   * The first day of the week to use for `syg-datetime`. The
    * default value is `0` and represents Sunday.
    */
   @Prop() firstDayOfWeek = 0;
@@ -310,7 +310,7 @@ export class Datetime implements ComponentInterface {
 
   /**
    * If `true`, the default "Cancel" and "OK" buttons
-   * will be rendered at the bottom of the `ion-datetime`
+   * will be rendered at the bottom of the `syg-datetime`
    * component. Developers can also use the `button` slot
    * if they want to customize these buttons. If custom
    * buttons are set in the `button` slot then the
@@ -320,7 +320,7 @@ export class Datetime implements ComponentInterface {
 
   /**
    * If `true`, a "Clear" button will be rendered alongside
-   * the default "Cancel" and "OK" buttons at the bottom of the `ion-datetime`
+   * the default "Cancel" and "OK" buttons at the bottom of the `syg-datetime`
    * component. Developers can also use the `button` slot
    * if they want to customize these buttons. If custom
    * buttons are set in the `button` slot then the
@@ -330,7 +330,7 @@ export class Datetime implements ComponentInterface {
 
   /**
    * If `true`, the default "Time" label will be rendered
-   * for the time selector of the `ion-datetime` component.
+   * for the time selector of the `syg-datetime` component.
    * Developers can also use the `time-label` slot
    * if they want to customize this label. If a custom
    * label is set in the `time-label` slot then the
@@ -339,14 +339,14 @@ export class Datetime implements ComponentInterface {
   @Prop() showDefaultTimeLabel = true;
 
   /**
-   * The hour cycle of the `ion-datetime`. If no value is set, this is
+   * The hour cycle of the `syg-datetime`. If no value is set, this is
    * specified by the current locale.
    */
   @Prop() hourCycle?: 'h23' | 'h12';
 
   /**
-   * If `cover`, the `ion-datetime` will expand to cover the full width of its container.
-   * If `fixed`, the `ion-datetime` will have a fixed width.
+   * If `cover`, the `syg-datetime` will expand to cover the full width of its container.
+   * If `fixed`, the `syg-datetime` will have a fixed width.
    */
   @Prop() size: 'cover' | 'fixed' = 'fixed';
 
@@ -428,7 +428,7 @@ export class Datetime implements ComponentInterface {
   }
 
   private closeParentOverlay = () => {
-    const popoverOrModal = this.el.closest('ion-modal, ion-popover') as HTMLIonModalElement | HTMLIonPopoverElement | null;
+    const popoverOrModal = this.el.closest('syg-modal, syg-popover') as HTMLSygModalElement | HTMLSygPopoverElement | null;
     if (popoverOrModal) {
       popoverOrModal.dismiss();
     }
@@ -479,8 +479,8 @@ export class Datetime implements ComponentInterface {
        * the inner day.
        */
       if (
-        record.oldValue?.includes('ion-focused') ||
-        !calendarBodyRef.classList.contains('ion-focused')
+        record.oldValue?.includes('syg-focused') ||
+        !calendarBodyRef.classList.contains('syg-focused')
       ) {
         return;
       }
@@ -628,7 +628,7 @@ export class Datetime implements ComponentInterface {
     const { calendarBodyRef } = this;
     if (!calendarBodyRef) { return; }
 
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     /**
      * For performance reasons, we only render 3
@@ -882,7 +882,7 @@ export class Datetime implements ComponentInterface {
     hiddenIO.observe(this.el);
 
     /**
-     * Datetime uses Ionic components that emit
+     * Datetime uses Sygic components that emit
      * ionFocus and ionBlur. These events are
      * composed meaning they will cross
      * the shadow dom boundary. We need to
@@ -903,7 +903,7 @@ export class Datetime implements ComponentInterface {
    * cancel that IO callback.
    */
   private initializeOverlayListener = () => {
-    const overlay = this.el.closest('ion-popover, ion-modal');
+    const overlay = this.el.closest('syg-popover, syg-modal');
     if (overlay === null) { return; }
 
     overlay.addEventListener('willPresent', () => {
@@ -1259,17 +1259,17 @@ export class Datetime implements ComponentInterface {
       <div class="datetime-footer">
         <div class="datetime-buttons">
           <div class={{
-            ['datetime-action-buttons']: true,
+            ['datetime-actsyg-buttons']: true,
             ['has-clear-button']: this.showClearButton
           }}>
             <slot name="buttons">
-              <ion-buttons>
-                <ion-button color={this.color} onClick={() => this.cancel(true)}>{this.cancelText}</ion-button>
+              <syg-buttons>
+                <syg-button color={this.color} onClick={() => this.cancel(true)}>{this.cancelText}</syg-button>
                 <div>
-                  {this.showClearButton && <ion-button color={this.color} onClick={() => clearButtonClick()}>{this.clearText}</ion-button>}
-                  <ion-button color={this.color} onClick={() => this.confirm(true)}>{this.doneText}</ion-button>
+                  {this.showClearButton && <syg-button color={this.color} onClick={() => clearButtonClick()}>{this.clearText}</syg-button>}
+                  <syg-button color={this.color} onClick={() => this.confirm(true)}>{this.doneText}</syg-button>
                 </div>
-              </ion-buttons>
+              </syg-buttons>
             </slot>
           </div>
         </div>
@@ -1346,24 +1346,24 @@ export class Datetime implements ComponentInterface {
     const collapsedIcon = mode === 'ios' ? chevronForward : caretDownSharp;
     return (
       <div class="calendar-header">
-        <div class="calendar-action-buttons">
+        <div class="calendar-actsyg-buttons">
           <div class="calendar-month-year">
-            <ion-item button detail={false} lines="none" onClick={() => this.toggleMonthAndYearView()}>
-              <ion-label>
+            <syg-item button detail={false} lines="none" onClick={() => this.toggleMonthAndYearView()}>
+              <syg-label>
                 {getMonthAndYear(this.locale, this.workingParts)} <ion-icon icon={this.showMonthAndYear ? expandedIcon : collapsedIcon} lazy={false}></ion-icon>
-              </ion-label>
-            </ion-item>
+              </syg-label>
+            </syg-item>
           </div>
 
           <div class="calendar-next-prev">
-            <ion-buttons>
-              <ion-button onClick={() => this.prevMonth()}>
+            <syg-buttons>
+              <syg-button onClick={() => this.prevMonth()}>
                 <ion-icon slot="icon-only" icon={chevronBack} lazy={false}></ion-icon>
-              </ion-button>
-              <ion-button onClick={() => this.nextMonth()}>
+              </syg-button>
+              <syg-button onClick={() => this.nextMonth()}>
                 <ion-icon slot="icon-only" icon={chevronForward} lazy={false}></ion-icon>
-              </ion-button>
-            </ion-buttons>
+              </syg-button>
+            </syg-buttons>
           </div>
         </div>
         <div class="calendar-days-of-week">
@@ -1431,7 +1431,7 @@ export class Datetime implements ComponentInterface {
 
   private renderCalendarBody() {
     return (
-      <div class="calendar-body ion-focusable" ref={el => this.calendarBodyRef = el} tabindex="0">
+      <div class="calendar-body syg-focusable" ref={el => this.calendarBodyRef = el} tabindex="0">
         {generateMonths(this.workingParts).map(({ month, year }) => {
           return this.renderMonth(month, year);
         })}
@@ -1478,7 +1478,7 @@ export class Datetime implements ComponentInterface {
           <div class="time-base" ref={el => this.timeBaseRef = el}>
             <div class="time-wrapper">
               <div
-                class="ion-focusable time-column time-column-hours"
+                class="syg-focusable time-column time-column-hours"
                 aria-label="Hours"
                 role="slider"
                 ref={el => this.timeHourRef = el}
@@ -1495,7 +1495,7 @@ export class Datetime implements ComponentInterface {
               </div>
               <div class="time-separator">:</div>
               <div
-                class="ion-focusable time-column time-column-minutes"
+                class="syg-focusable time-column time-column-minutes"
                 aria-label="Minutes"
                 role="slider"
                 ref={el => this.timeMinuteRef = el}
@@ -1513,7 +1513,7 @@ export class Datetime implements ComponentInterface {
             </div>
           </div>
           { !use24Hour && <div class="time-ampm">
-            <ion-segment
+            <syg-segment
               color={mode === 'md' ? this.color : undefined}
               value={this.workingParts.ampm}
               onIonChange={(ev: CustomEvent) => {
@@ -1540,9 +1540,9 @@ export class Datetime implements ComponentInterface {
                 ev.stopPropagation();
               }}
             >
-              <ion-segment-button disabled={!am} value="am">AM</ion-segment-button>
-              <ion-segment-button disabled={!pm} value="pm">PM</ion-segment-button>
-            </ion-segment>
+              <syg-segment-button disabled={!am} value="am">AM</syg-segment-button>
+              <syg-segment-button disabled={!pm} value="pm">PM</syg-segment-button>
+            </syg-segment>
           </div> }
         </div>
       </div>
@@ -1608,7 +1608,7 @@ export class Datetime implements ComponentInterface {
 
   render() {
     const { name, value, disabled, el, color, isPresented, readonly, showMonthAndYear, presentation, size } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const isMonthAndYearPresentation = presentation === 'year' || presentation === 'month' || presentation === 'month-year';
     const shouldShowMonthAndYear = showMonthAndYear || isMonthAndYearPresentation;
 
@@ -1626,7 +1626,7 @@ export class Datetime implements ComponentInterface {
             ['datetime-readonly']: readonly,
             ['datetime-disabled']: disabled,
             'show-month-and-year': shouldShowMonthAndYear,
-            [`datetime-presentation-${presentation}`]: true,
+            [`datetime-presentatsyg-${presentation}`]: true,
             [`datetime-size-${size}`]: true
           })
         }}

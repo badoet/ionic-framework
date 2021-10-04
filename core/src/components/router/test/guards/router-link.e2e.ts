@@ -15,7 +15,7 @@ test('router: guards - router-link - allow/allow', async () => {
 
   await checkUrl(page, '#/child/1');
 
-  const backButton = await page.$('ion-back-button');
+  const backButton = await page.$('syg-back-button');
   await backButton.click();
 
   await page.waitForChanges();
@@ -54,7 +54,7 @@ test('router: guards - router-link - redirect/allow', async () => {
 
   await checkUrl(page, '#/test');
 
-  const backButton = await page.$('ion-back-button');
+  const backButton = await page.$('syg-back-button');
   await backButton.click();
 
   await page.waitForChanges();
@@ -80,7 +80,7 @@ test('router: guards - router-link - allow/block', async () => {
 
   await checkUrl(page, '#/child/1');
 
-  const backButton = await page.$('ion-back-button');
+  const backButton = await page.$('syg-back-button');
   await backButton.click();
 
   await page.waitForChanges();
@@ -103,7 +103,7 @@ test('router: guards - router-link - allow/redirect', async () => {
 
   await checkUrl(page, '#/child/1');
 
-  const backButton = await page.$('ion-back-button');
+  const backButton = await page.$('syg-back-button');
   await backButton.click();
 
   await page.waitForChanges();
@@ -117,11 +117,11 @@ const checkUrl = async (page, url: string) => {
 }
 
 const setBeforeEnterHook = async (page, type: string) => {
-  const button = await page.$(`ion-radio-group#beforeEnter ion-radio[value=${type}]`);
+  const button = await page.$(`syg-radio-group#beforeEnter syg-radio[value=${type}]`);
   await button.click();
 }
 
 const setBeforeLeaveHook = async (page, type: string) => {
-  const button = await page.$(`ion-radio-group#beforeLeave ion-radio[value=${type}]`);
+  const button = await page.$(`syg-radio-group#beforeLeave syg-radio[value=${type}]`);
   await button.click();
 }

@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, CssClassMap, OverlayEventDetail, OverlayInterface, PickerAttributes, PickerButton, PickerColumn } from '../../interface';
 import { BACKDROP, dismiss, eventMethod, isCancel, prepareOverlay, present, safeCall } from '../../utils/overlays';
 import { getClassMap } from '../../utils/theme';
@@ -12,7 +12,7 @@ import { iosLeaveAnimation } from './animations/ios.leave';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-picker',
+  tag: 'syg-picker',
   styleUrls: {
     ios: 'picker.ios.scss',
     md: 'picker.md.scss'
@@ -23,7 +23,7 @@ export class Picker implements ComponentInterface, OverlayInterface {
   private durationTimeout: any;
   lastFocus?: HTMLElement;
 
-  @Element() el!: HTMLIonPickerElement;
+  @Element() el!: HTMLSygPickerElement;
 
   @State() presented = false;
 
@@ -219,7 +219,7 @@ export class Picker implements ComponentInterface, OverlayInterface {
 
   render() {
     const { htmlAttributes } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         aria-modal="true"
@@ -236,18 +236,18 @@ export class Picker implements ComponentInterface, OverlayInterface {
 
           ...getClassMap(this.cssClass)
         }}
-        onIonBackdropTap={this.onBackdropTap}
-        onIonPickerWillDismiss={this.dispatchCancelHandler}
+        onSygBackdropTap={this.onBackdropTap}
+        onSygPickerWillDismiss={this.dispatchCancelHandler}
       >
-        <ion-backdrop
+        <syg-backdrop
           visible={this.showBackdrop}
           tappable={this.backdropDismiss}
         >
-        </ion-backdrop>
+        </syg-backdrop>
 
         <div tabindex="0"></div>
 
-        <div class="picker-wrapper ion-overlay-wrapper" role="dialog">
+        <div class="picker-wrapper syg-overlay-wrapper" role="dialog">
           <div class="picker-toolbar">
             {this.buttons.map(b => (
               <div class={buttonWrapperClass(b)}>
@@ -265,7 +265,7 @@ export class Picker implements ComponentInterface, OverlayInterface {
           <div class="picker-columns">
             <div class="picker-above-highlight"></div>
               {this.presented && this.columns.map(c =>
-                <ion-picker-column col={c}></ion-picker-column>
+                <syg-picker-column col={c}></syg-picker-column>
               )}
             <div class="picker-below-highlight"></div>
           </div>
@@ -287,7 +287,7 @@ const buttonWrapperClass = (button: PickerButton): CssClassMap => {
 const buttonClass = (button: PickerButton): CssClassMap => {
   return {
     'picker-button': true,
-    'ion-activatable': true,
+    'syg-activatable': true,
     ...getClassMap(button.cssClass)
   };
 };

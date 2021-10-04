@@ -9,15 +9,15 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <script type="module">
-    import { pickerController } from '../../../../dist/ionic/index.esm.js';
+    import { pickerController } from '../../../../dist/syg/index.esm.js';
     window.pickerController = pickerController;
   </script>
 
 <body>
-  <ion-button onclick="openPicker()" id="single-column-button">Open Single Column Picker</ion-button>
-  <ion-button onclick="openPicker(2, 5, multiColumnOptions)" id="multiple-column-button">Open Multi Column Picker</ion-button>
+  <syg-button onclick="openPicker()" id="single-column-button">Open Single Column Picker</syg-button>
+  <syg-button onclick="openPicker(2, 5, multiColumnOptions)" id="multiple-column-button">Open Multi Column Picker</syg-button>
   <script>
     const defaultColumnOptions = [
       [

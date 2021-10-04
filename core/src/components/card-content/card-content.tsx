@@ -1,12 +1,12 @@
 import { Component, ComponentInterface, Host, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-card-content',
+  tag: 'syg-card-content',
   styleUrls: {
     ios: 'card-content.ios.scss',
     md: 'card-content.md.scss'
@@ -15,7 +15,7 @@ import { getIonMode } from '../../global/ionic-global';
 export class CardContent implements ComponentInterface {
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{

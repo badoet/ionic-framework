@@ -1,11 +1,11 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Listen, Method, Prop, Watch, forceUpdate, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AlertButton, AlertInput, AlertInputAttributes, AlertTextareaAttributes, AnimationBuilder, CssClassMap, OverlayEventDetail, OverlayInterface } from '../../interface';
 import { Gesture } from '../../utils/gesture';
 import { createButtonActiveGesture } from '../../utils/gesture/button-active';
 import { BACKDROP, dismiss, eventMethod, isCancel, prepareOverlay, present, safeCall } from '../../utils/overlays';
-import { IonicSafeString, sanitizeDOMString } from '../../utils/sanitization';
+import { SygSafeString, sanitizeDOMString } from '../../utils/sanitization';
 import { getClassMap } from '../../utils/theme';
 
 import { AlertAttributes } from './alert-interface';
@@ -18,7 +18,7 @@ import { mdLeaveAnimation } from './animations/md.leave';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-alert',
+  tag: 'syg-alert',
   styleUrls: {
     ios: 'alert.ios.scss',
     md: 'alert.md.scss'
@@ -37,7 +37,7 @@ export class Alert implements ComponentInterface, OverlayInterface {
   presented = false;
   lastFocus?: HTMLElement;
 
-  @Element() el!: HTMLIonAlertElement;
+  @Element() el!: HTMLSygAlertElement;
 
   /** @internal */
   @Prop() overlayIndex!: number;
@@ -77,12 +77,12 @@ export class Alert implements ComponentInterface, OverlayInterface {
    * The main message to be displayed in the alert.
    * `message` can accept either plaintext or HTML as a string.
    * To display characters normally reserved for HTML, they
-   * must be escaped. For example `<Ionic>` would become
-   * `&lt;Ionic&gt;`
+   * must be escaped. For example `<Sygic>` would become
+   * `&lt;Sygic&gt;`
    *
    * For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
    */
-  @Prop() message?: string | IonicSafeString;
+  @Prop() message?: string | SygSafeString;
 
   /**
    * Array of buttons to be added to the alert.
@@ -259,7 +259,7 @@ export class Alert implements ComponentInterface, OverlayInterface {
      * 2. App is running in MD mode
      * 3. A wrapper ref does not exist
      */
-    if (this.gesture || getIonMode(this) === 'md' || !this.wrapperEl) { return; }
+    if (this.gesture || getSygMode(this) === 'md' || !this.wrapperEl) { return; }
 
     this.gesture = createButtonActiveGesture(
       this.wrapperEl,
@@ -389,7 +389,7 @@ export class Alert implements ComponentInterface, OverlayInterface {
 
   private renderCheckbox() {
     const inputs = this.processedInputs;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     if (inputs.length === 0) {
       return null;
@@ -411,7 +411,7 @@ export class Alert implements ComponentInterface, OverlayInterface {
               'alert-tappable': true,
               'alert-checkbox': true,
               'alert-checkbox-button': true,
-              'ion-focusable': true,
+              'syg-focusable': true,
               'alert-checkbox-button-disabled': i.disabled || false
             }}
           >
@@ -423,7 +423,7 @@ export class Alert implements ComponentInterface, OverlayInterface {
                 {i.label}
               </div>
             </div>
-            {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+            {mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
           </button>
         ))}
       </div>
@@ -452,7 +452,7 @@ export class Alert implements ComponentInterface, OverlayInterface {
               'alert-radio-button': true,
               'alert-tappable': true,
               'alert-radio': true,
-              'ion-focusable': true,
+              'syg-focusable': true,
               'alert-radio-button-disabled': i.disabled || false
             }}
             role="radio"
@@ -536,7 +536,7 @@ export class Alert implements ComponentInterface, OverlayInterface {
 
   private renderAlertButtons() {
     const buttons = this.processedButtons;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const alertButtonGroupClass = {
       'alert-button-group': true,
       'alert-button-group-vertical': buttons.length > 2
@@ -548,7 +548,7 @@ export class Alert implements ComponentInterface, OverlayInterface {
             <span class="alert-button-inner">
               {button.text}
             </span>
-            {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+            {mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
           </button>
         )}
       </div>
@@ -557,7 +557,7 @@ export class Alert implements ComponentInterface, OverlayInterface {
 
   render() {
     const { overlayIndex, header, subHeader, htmlAttributes } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const hdrId = `alert-${overlayIndex}-hdr`;
     const subHdrId = `alert-${overlayIndex}-sub-hdr`;
     const msgId = `alert-${overlayIndex}-msg`;
@@ -577,15 +577,15 @@ export class Alert implements ComponentInterface, OverlayInterface {
           [mode]: true,
           'alert-translucent': this.translucent
         }}
-        onIonAlertWillDismiss={this.dispatchCancelHandler}
-        onIonBackdropTap={this.onBackdropTap}
+        onSygAlertWillDismiss={this.dispatchCancelHandler}
+        onSygBackdropTap={this.onBackdropTap}
       >
 
-        <ion-backdrop tappable={this.backdropDismiss}/>
+        <syg-backdrop tappable={this.backdropDismiss}/>
 
         <div tabindex="0"></div>
 
-        <div class="alert-wrapper ion-overlay-wrapper" ref={el => this.wrapperEl = el}>
+        <div class="alert-wrapper syg-overlay-wrapper" ref={el => this.wrapperEl = el}>
 
           <div class="alert-head">
             {header && <h2 id={hdrId} class="alert-title">{header}</h2>}
@@ -617,8 +617,8 @@ const inputClass = (input: AlertInput): CssClassMap => {
 const buttonClass = (button: AlertButton): CssClassMap => {
   return {
     'alert-button': true,
-    'ion-focusable': true,
-    'ion-activatable': true,
+    'syg-focusable': true,
+    'syg-activatable': true,
     [`alert-button-role-${button.role}`]: button.role !== undefined,
     ...getClassMap(button.cssClass)
   };

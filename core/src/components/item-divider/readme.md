@@ -1,4 +1,4 @@
-# ion-item-divider
+# syg-item-divider
 
 Item Dividers are block elements that can be used to separate items in a list. They are similar to list headers, but instead of being placed at the top of a list, they should go in between groups of items.
 
@@ -10,44 +10,44 @@ Item Dividers are block elements that can be used to separate items in a list. T
 ### Angular / javascript
 
 ```html
-<ion-item-divider>
-  <ion-label>
+<syg-item-divider>
+  <syg-label>
     Basic Item Divider
-  </ion-label>
-</ion-item-divider>
+  </syg-label>
+</syg-item-divider>
 
-<ion-item-divider color="secondary">
-  <ion-label>
+<syg-item-divider color="secondary">
+  <syg-label>
     Secondary Item Divider
-  </ion-label>
-</ion-item-divider>
+  </syg-label>
+</syg-item-divider>
 
 <!-- Item Dividers in a List -->
-<ion-list>
-  <ion-item-divider>
-    <ion-label>
+<syg-list>
+  <syg-item-divider>
+    <syg-label>
       Section A
-    </ion-label>
-  </ion-item-divider>
+    </syg-label>
+  </syg-item-divider>
 
-  <ion-item><ion-label>A1</ion-label></ion-item>
-  <ion-item><ion-label>A2</ion-label></ion-item>
-  <ion-item><ion-label>A3</ion-label></ion-item>
-  <ion-item><ion-label>A4</ion-label></ion-item>
-  <ion-item><ion-label>A5</ion-label></ion-item>
+  <syg-item><syg-label>A1</syg-label></syg-item>
+  <syg-item><syg-label>A2</syg-label></syg-item>
+  <syg-item><syg-label>A3</syg-label></syg-item>
+  <syg-item><syg-label>A4</syg-label></syg-item>
+  <syg-item><syg-label>A5</syg-label></syg-item>
 
-  <ion-item-divider>
-    <ion-label>
+  <syg-item-divider>
+    <syg-label>
       Section B
-    </ion-label>
-  </ion-item-divider>
+    </syg-label>
+  </syg-item-divider>
 
-  <ion-item><ion-label>B1</ion-label></ion-item>
-  <ion-item><ion-label>B2</ion-label></ion-item>
-  <ion-item><ion-label>B3</ion-label></ion-item>
-  <ion-item><ion-label>B4</ion-label></ion-item>
-  <ion-item><ion-label>B5</ion-label></ion-item>
-</ion-list>
+  <syg-item><syg-label>B1</syg-label></syg-item>
+  <syg-item><syg-label>B2</syg-label></syg-item>
+  <syg-item><syg-label>B3</syg-label></syg-item>
+  <syg-item><syg-label>B4</syg-label></syg-item>
+  <syg-item><syg-label>B5</syg-label></syg-item>
+</syg-list>
 ```
 
 
@@ -114,44 +114,44 @@ import { Component, h } from '@stencil/core';
 export class ItemDividerExample {
   render() {
     return [
-      <ion-item-divider>
-        <ion-label>
+      <syg-item-divider>
+        <syg-label>
           Basic Item Divider
-        </ion-label>
-      </ion-item-divider>,
+        </syg-label>
+      </syg-item-divider>,
 
-      <ion-item-divider color="secondary">
-        <ion-label>
+      <syg-item-divider color="secondary">
+        <syg-label>
           Secondary Item Divider
-        </ion-label>
-      </ion-item-divider>,
+        </syg-label>
+      </syg-item-divider>,
 
       //  Item Dividers in a List
-      <ion-list>
-        <ion-item-divider>
-          <ion-label>
+      <syg-list>
+        <syg-item-divider>
+          <syg-label>
             Section A
-          </ion-label>
-        </ion-item-divider>
+          </syg-label>
+        </syg-item-divider>
 
-        <ion-item><ion-label>A1</ion-label></ion-item>
-        <ion-item><ion-label>A2</ion-label></ion-item>
-        <ion-item><ion-label>A3</ion-label></ion-item>
-        <ion-item><ion-label>A4</ion-label></ion-item>
-        <ion-item><ion-label>A5</ion-label></ion-item>
+        <syg-item><syg-label>A1</syg-label></syg-item>
+        <syg-item><syg-label>A2</syg-label></syg-item>
+        <syg-item><syg-label>A3</syg-label></syg-item>
+        <syg-item><syg-label>A4</syg-label></syg-item>
+        <syg-item><syg-label>A5</syg-label></syg-item>
 
-        <ion-item-divider>
-          <ion-label>
+        <syg-item-divider>
+          <syg-label>
             Section B
-          </ion-label>
-        </ion-item-divider>
+          </syg-label>
+        </syg-item-divider>
 
-        <ion-item><ion-label>B1</ion-label></ion-item>
-        <ion-item><ion-label>B2</ion-label></ion-item>
-        <ion-item><ion-label>B3</ion-label></ion-item>
-        <ion-item><ion-label>B4</ion-label></ion-item>
-        <ion-item><ion-label>B5</ion-label></ion-item>
-      </ion-list>
+        <syg-item><syg-label>B1</syg-label></syg-item>
+        <syg-item><syg-label>B2</syg-label></syg-item>
+        <syg-item><syg-label>B3</syg-label></syg-item>
+        <syg-item><syg-label>B4</syg-label></syg-item>
+        <syg-item><syg-label>B5</syg-label></syg-item>
+      </syg-list>
     ];
   }
 }
@@ -162,44 +162,44 @@ export class ItemDividerExample {
 
 ```html
 <template>
-  <ion-item-divider>
-    <ion-label>
+  <syg-item-divider>
+    <syg-label>
       Basic Item Divider
-    </ion-label>
-  </ion-item-divider>
+    </syg-label>
+  </syg-item-divider>
 
-  <ion-item-divider color="secondary">
-    <ion-label>
+  <syg-item-divider color="secondary">
+    <syg-label>
       Secondary Item Divider
-    </ion-label>
-  </ion-item-divider>
+    </syg-label>
+  </syg-item-divider>
 
   <!-- Item Dividers in a List -->
-  <ion-list>
-    <ion-item-divider>
-      <ion-label>
+  <syg-list>
+    <syg-item-divider>
+      <syg-label>
         Section A
-      </ion-label>
-    </ion-item-divider>
+      </syg-label>
+    </syg-item-divider>
 
-    <ion-item><ion-label>A1</ion-label></ion-item>
-    <ion-item><ion-label>A2</ion-label></ion-item>
-    <ion-item><ion-label>A3</ion-label></ion-item>
-    <ion-item><ion-label>A4</ion-label></ion-item>
-    <ion-item><ion-label>A5</ion-label></ion-item>
+    <syg-item><syg-label>A1</syg-label></syg-item>
+    <syg-item><syg-label>A2</syg-label></syg-item>
+    <syg-item><syg-label>A3</syg-label></syg-item>
+    <syg-item><syg-label>A4</syg-label></syg-item>
+    <syg-item><syg-label>A5</syg-label></syg-item>
 
-    <ion-item-divider>
-      <ion-label>
+    <syg-item-divider>
+      <syg-label>
         Section B
-      </ion-label>
-    </ion-item-divider>
+      </syg-label>
+    </syg-item-divider>
 
-    <ion-item><ion-label>B1</ion-label></ion-item>
-    <ion-item><ion-label>B2</ion-label></ion-item>
-    <ion-item><ion-label>B3</ion-label></ion-item>
-    <ion-item><ion-label>B4</ion-label></ion-item>
-    <ion-item><ion-label>B5</ion-label></ion-item>
-  </ion-list>
+    <syg-item><syg-label>B1</syg-label></syg-item>
+    <syg-item><syg-label>B2</syg-label></syg-item>
+    <syg-item><syg-label>B3</syg-label></syg-item>
+    <syg-item><syg-label>B4</syg-label></syg-item>
+    <syg-item><syg-label>B5</syg-label></syg-item>
+  </syg-list>
 </template>
 
 <script>
@@ -220,7 +220,7 @@ export default defineComponent({
 | -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ----------- |
 | `color`  | `color`   | The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics). | `string \| undefined` | `undefined` |
 | `mode`   | `mode`    | The mode determines which platform styles to use.                                                                                                                                                                                                                      | `"ios" \| "md"`       | `undefined` |
-| `sticky` | `sticky`  | When it's set to `true`, the item-divider will stay visible when it reaches the top of the viewport until the next `ion-item-divider` replaces it.  This feature relies in `position:sticky`: https://caniuse.com/#feat=css-sticky                                     | `boolean`             | `false`     |
+| `sticky` | `sticky`  | When it's set to `true`, the item-divider will stay visible when it reaches the top of the viewport until the next `syg-item-divider` replaces it.  This feature relies in `position:sticky`: https://caniuse.com/#feat=css-sticky                                     | `boolean`             | `false`     |
 
 
 ## Slots

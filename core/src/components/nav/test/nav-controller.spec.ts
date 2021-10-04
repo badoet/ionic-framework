@@ -909,7 +909,7 @@ describe('NavController', () => {
     config.reset({ animated: false });
     const page = await newSpecPage({
       components: [Nav],
-      html: `<ion-nav></ion-nav>`,
+      html: `<syg-nav></syg-nav>`,
       autoApplyChanges: true,
       context: {
         config
@@ -969,7 +969,7 @@ describe('NavController', () => {
   // function mockNavController(): Promise<Nav> {
   //   const navI = new Nav() as any;
   //   navI.animated = false;
-  //   navI.el = win.document.createElement('ion-nav');
+  //   navI.el = win.document.createElement('syg-nav');
   //   navI.win = win;
   //   navI.queue = { write: (fn: any) => fn(), read: (fn: any) => fn() };
 

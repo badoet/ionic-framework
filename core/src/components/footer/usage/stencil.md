@@ -8,20 +8,20 @@ import { Component, h } from '@stencil/core';
 export class FooterExample {
   render() {
     return [
-      <ion-content></ion-content>,
+      <syg-content></syg-content>,
 
       // Footer without a border
-      <ion-footer class="ion-no-border">
-        <ion-toolbar>
-          <ion-title>Footer - No Border</ion-title>
-        </ion-toolbar>
-      </ion-footer>,
+      <syg-footer class="syg-no-border">
+        <syg-toolbar>
+          <syg-title>Footer - No Border</syg-title>
+        </syg-toolbar>
+      </syg-footer>,
 
-      <ion-footer>
-        <ion-toolbar>
-          <ion-title>Footer</ion-title>
-        </ion-toolbar>
-      </ion-footer>
+      <syg-footer>
+        <syg-toolbar>
+          <syg-title>Footer</syg-title>
+        </syg-toolbar>
+      </syg-footer>
     ];
   }
 }

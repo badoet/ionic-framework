@@ -1,7 +1,7 @@
 ```vue
 <template>
   <div>
-    <ion-button @click="openPicker">SHOW PICKER</ion-button>
+    <syg-button @click="openPicker">SHOW PICKER</syg-button>
     <p v-if="picked.animal">picked: {{ picked.animal.text }}</p>
   </div>
 </template>

@@ -8,7 +8,7 @@ test('footer: translucent', async () => {
   });
 
   const globalMode = await page.evaluate(() => document.documentElement.getAttribute('mode'));
-  await checkComponentModeClasses(await page.find('ion-footer'), globalMode!, 'footer-translucent');
+  await checkComponentModeClasses(await page.find('syg-footer'), globalMode!, 'footer-translucent');
 
   const compare = await page.compareScreenshot();
   expect(compare).toMatchScreenshot();

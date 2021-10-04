@@ -1,13 +1,13 @@
 import { h, defineComponent, shallowRef, VNode } from 'vue';
 import { defineCustomElement } from '../utils';
-import { IonApp as IonAppCmp } from '@ionic/core/components/ion-app.js';
+import { IonApp as IonAppCmp } from '@ionic/core/components/syg-app.js';
 
 const userComponents = shallowRef([]);
 export const IonApp = /*@__PURE__*/ defineComponent((_, { attrs, slots }) => {
-  defineCustomElement('ion-app', IonAppCmp);
+  defineCustomElement('syg-app', IonAppCmp);
   return () => {
     return h(
-      'ion-app',
+      'syg-app',
       {
         ...attrs
       },
@@ -24,7 +24,7 @@ export const IonApp = /*@__PURE__*/ defineComponent((_, { attrs, slots }) => {
  * will not work properly.
  *
  * `userComponents` renders teleported components as children
- * of `ion-app` within the current application context.
+ * of `syg-app` within the current application context.
  */
 export const addTeleportedUserComponent = (component: VNode) => {
   userComponents.value = [

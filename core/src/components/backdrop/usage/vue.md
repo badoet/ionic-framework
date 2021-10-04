@@ -1,23 +1,23 @@
 ```html
 <template>
   <!-- Default backdrop -->
-  <ion-backdrop></ion-backdrop>
+  <syg-backdrop></syg-backdrop>
 
   <!-- Backdrop that is not tappable -->
-  <ion-backdrop tappable="false"></ion-backdrop>
+  <syg-backdrop tappable="false"></syg-backdrop>
 
   <!-- Backdrop that is not visible -->
-  <ion-backdrop visible="false"></ion-backdrop>
+  <syg-backdrop visible="false"></syg-backdrop>
 
   <!-- Backdrop with propagation -->
-  <ion-backdrop stop-propagation="false"></ion-backdrop>
+  <syg-backdrop stop-propagation="false"></syg-backdrop>
 
   <!-- Backdrop that sets dynamic properties -->
-  <ion-backdrop
+  <syg-backdrop
     :tappable="enableBackdropDismiss"
     :visible="showBackdrop"
     :stop-propagation="shouldPropagate">
-  </ion-backdrop>
+  </syg-backdrop>
 </template>
 
 <script>

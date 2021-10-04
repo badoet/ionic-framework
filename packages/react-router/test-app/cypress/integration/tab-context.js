@@ -9,7 +9,7 @@ describe('Tab Context', () => {
     cy.visit(`http://localhost:${port}/tab-context`);
     cy.ionPageVisible('tab1');
     cy.get('div').contains('Page: tab1');
-    cy.ionNav('ion-button', 'Go to tab2');
+    cy.ionNav('syg-button', 'Go to tab2');
     cy.ionPageVisible('tab2');
     cy.get('div').contains('Page: tab2');
   });
@@ -18,7 +18,7 @@ describe('Tab Context', () => {
     cy.visit(`http://localhost:${port}/tab-context/tab2`);
     cy.ionPageVisible('tab2');
     cy.get('div').contains('Page: tab2');
-    cy.ionNav('ion-button', 'Go to tab1');
+    cy.ionNav('syg-button', 'Go to tab1');
     cy.ionPageVisible('tab1');
     cy.get('div').contains('Page: tab1');
   });

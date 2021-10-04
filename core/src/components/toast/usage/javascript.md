@@ -1,6 +1,6 @@
 ```javascript
 async function presentToast() {
-  const toast = document.createElement('ion-toast');
+  const toast = document.createElement('syg-toast');
   toast.message = 'Your settings have been saved.';
   toast.duration = 2000;
 
@@ -9,10 +9,10 @@ async function presentToast() {
 }
 
 async function presentToastWithOptions() {
-  const toast = document.createElement('ion-toast');
+  const toast = document.createElement('syg-toast');
   toast.header = 'Toast header';
   toast.message = 'Click to Close';
-  toast.icon = 'information-circle',
+  toast.icon = 'informatsyg-circle',
   toast.position = 'top';
   toast.buttons = [
     {

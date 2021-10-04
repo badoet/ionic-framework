@@ -191,10 +191,10 @@
 
 // Default Segment, In a Toolbar
 :host(.in-toolbar:not(.in-segment-color)) {
-  --background-checked: #{var(--ion-toolbar-segment-background-checked, $segment-button-ios-background-checked)};
-  --color: var(--ion-toolbar-segment-color, var(--ion-toolbar-color), initial);
-  --color-checked: var(--ion-toolbar-segment-color-checked, var(--ion-toolbar-color), initial);
-  --indicator-color: #{var(--ion-toolbar-segment-indicator-color, $segment-button-ios-indicator-color)};
+  --background-checked: #{var(--syg-toolbar-segment-background-checked, $segment-button-ios-background-checked)};
+  --color: var(--syg-toolbar-segment-color, var(--syg-toolbar-color), initial);
+  --color-checked: var(--syg-toolbar-segment-color-checked, var(--syg-toolbar-color), initial);
+  --indicator-color: #{var(--syg-toolbar-segment-indicator-color, $segment-button-ios-indicator-color)};
 }
 
 

@@ -9,7 +9,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   <style>
   :root {
     --ion-safe-area-bottom: 40px;
@@ -19,108 +19,108 @@
 
 <body>
 
-  <ion-app>
-    <ion-tabs>
+  <syg-app>
+    <syg-tabs>
 
-      <ion-tab tab="tab-one">
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Tab One</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
+      <syg-tab tab="tab-one">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Tab One</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content class="syg-padding">
           <h1>Tab One</h1>
-          <ion-button expand="block" onclick="updateBadgeCount()">Update Badge Count</ion-button>
-          <ion-button color="secondary" expand="block" onclick="updateBadgeColor()">Update Badge Color</ion-button>
+          <syg-button expand="block" onclick="updateBadgeCount()">Update Badge Count</syg-button>
+          <syg-button color="secondary" expand="block" onclick="updateBadgeColor()">Update Badge Color</syg-button>
 
-          <ion-fab slot="fixed" horizontal="end" vertical="bottom">
-            <ion-fab-button class="custom-white">
+          <syg-fab slot="fixed" horizontal="end" vertical="bottom">
+            <syg-fab-button class="custom-white">
               <ion-icon name="add"></ion-icon>
-            </ion-fab-button>
-          </ion-fab>
-        </ion-content>
-      </ion-tab>
+            </syg-fab-button>
+          </syg-fab>
+        </syg-content>
+      </syg-tab>
 
-      <ion-tab tab="schedule">
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Tab Two</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
+      <syg-tab tab="schedule">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Tab Two</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content class="syg-padding">
           <h1>Tab Two</h1>
-        </ion-content>
-      </ion-tab>
+        </syg-content>
+      </syg-tab>
 
-      <ion-tab tab="tab-three">
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Tab Three</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
+      <syg-tab tab="tab-three">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Tab Three</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content class="syg-padding">
           <h1>Tab Three</h1>
-        </ion-content>
-      </ion-tab>
+        </syg-content>
+      </syg-tab>
 
-      <ion-tab tab="hidden-tab">
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Hidden Tab</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
+      <syg-tab tab="hidden-tab">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Hidden Tab</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content class="syg-padding">
           <h1>Hidden Tab</h1>
-        </ion-content>
-      </ion-tab>
+        </syg-content>
+      </syg-tab>
 
-      <ion-tab tab="tab-four" component="page-one"></ion-tab>
+      <syg-tab tab="tab-four" component="page-one"></syg-tab>
 
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button href="" tab="tab-one" class="e2eTabOneButton">
-          <ion-label>Tab One</ion-label>
+      <syg-tab-bar slot="bottom">
+        <syg-tab-button href="" tab="tab-one" class="e2eTabOneButton">
+          <syg-label>Tab One</syg-label>
           <ion-icon name="star"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="schedule" class="e2eTabTwoButton">
-          <ion-label>Tab Two</ion-label>
+        <syg-tab-button tab="schedule" class="e2eTabTwoButton">
+          <syg-label>Tab Two</syg-label>
           <ion-icon name="globe"></ion-icon>
-          <ion-badge color="danger">6</ion-badge>
-        </ion-tab-button>
+          <syg-badge color="danger">6</syg-badge>
+        </syg-tab-button>
 
-        <ion-tab-button tab="tab-three" class="e2eTabThreeButton" disabled>
-          <ion-label>Tab Three</ion-label>
+        <syg-tab-button tab="tab-three" class="e2eTabThreeButton" disabled>
+          <syg-label>Tab Three</syg-label>
           <ion-icon name="logo-facebook"></ion-icon>
-          <ion-badge color="primary">6</ion-badge>
-        </ion-tab-button>
+          <syg-badge color="primary">6</syg-badge>
+        </syg-tab-button>
 
-        <ion-tab-button tab="hidden-tab" hidden>
-          <ion-label>Hidden</ion-label>
+        <syg-tab-button tab="hidden-tab" hidden>
+          <syg-label>Hidden</syg-label>
           <ion-icon name="alert"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="tab-four" class="e2eTabFourButton">
-          <ion-label>Tab Four</ion-label>
+        <syg-tab-button tab="tab-four" class="e2eTabFourButton">
+          <syg-label>Tab Four</syg-label>
           <ion-icon name="chatbox"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-      </ion-tab-bar>
-    </ion-tabs>
-  </ion-app>
+      </syg-tab-bar>
+    </syg-tabs>
+  </syg-app>
 
   <script>
 
     class PageOne extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-          <ion-header>
-            <ion-toolbar>
-              <ion-title>Page Four</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
+          <syg-header>
+            <syg-toolbar>
+              <syg-title>Page Four</syg-title>
+            </syg-toolbar>
+          </syg-header>
+          <syg-content class="syg-padding">
             Page Four
-          </ion-content>
+          </syg-content>
         `;
       }
     }

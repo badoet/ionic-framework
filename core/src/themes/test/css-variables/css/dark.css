@@ -64,8 +64,8 @@
 }
 
 .ios body {
-  --ion-background-color: #000000;
-  --ion-background-color-rgb: 0,0,0;
+  --syg-background-color: #000000;
+  --syg-background-color-rgb: 0,0,0;
 
   --ion-text-color: #ffffff;
   --ion-text-color-rgb: 255,255,255;
@@ -90,15 +90,15 @@
   --ion-color-step-900: #e6e6e6;
   --ion-color-step-950: #f2f2f2;
 
-  --ion-item-background: #1c1c1c;
+  --syg-item-background: #1c1c1c;
 
-  --ion-toolbar-background: #000;
-  --ion-toolbar-color: #fff;
+  --syg-toolbar-background: #000;
+  --syg-toolbar-color: #fff;
 }
 
 .md body {
-  --ion-background-color: #121212;
-  --ion-background-color-rgb: 18,18,18;
+  --syg-background-color: #121212;
+  --syg-background-color-rgb: 18,18,18;
 
   --ion-text-color: #ffffff;
   --ion-text-color-rgb: 255,255,255;
@@ -125,12 +125,12 @@
   --ion-color-step-900: #e7e7e7;
   --ion-color-step-950: #f3f3f3;
 
-  --ion-item-background: #1a1b1e;
+  --syg-item-background: #1a1b1e;
 }
 
-ion-modal.ios {
-  --ion-background-color: var(--ion-color-step-100);
-  --ion-toolbar-background: var(--ion-color-step-150);
-  --ion-toolbar-border-color: var(--ion-color-step-250);
-  --ion-item-background: var(--ion-color-step-150);
+syg-modal.ios {
+  --syg-background-color: var(--ion-color-step-100);
+  --syg-toolbar-background: var(--ion-color-step-150);
+  --syg-toolbar-border-color: var(--ion-color-step-250);
+  --syg-item-background: var(--ion-color-step-150);
 }

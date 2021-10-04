@@ -7,30 +7,30 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   </head>
   <body>
-    <ion-app>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Popover - Inline</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <syg-app>
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Popover - Inline</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content class="ion-padding">
-        <ion-button id="props" onclick="openPopover(event)">Open Popover via Props</ion-button>
-        <ion-button id="method" onclick="openPopoverMethod(event)">Open Popover via Present Method</ion-button>
+      <syg-content class="syg-padding">
+        <syg-button id="props" onclick="openPopover(event)">Open Popover via Props</syg-button>
+        <syg-button id="method" onclick="openPopoverMethod(event)">Open Popover via Present Method</syg-button>
 
-        <ion-popover>
-          <ion-content class="ion-padding">
+        <syg-popover>
+          <syg-content class="syg-padding">
             This is my inline popover content!
-          </ion-content>
-        </ion-popover>
-      </ion-content>
-    </ion-app>
+          </syg-content>
+        </syg-popover>
+      </syg-content>
+    </syg-app>
 
     <script>
-      const popover = document.querySelector('ion-popover');
+      const popover = document.querySelector('syg-popover');
       const openPopover = (ev) => {
         popover.isOpen = true;
         popover.event = ev;

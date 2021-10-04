@@ -1,68 +1,68 @@
 ```html
 <!-- Initial value -->
-<ion-datetime value="2012-12-15T13:47:20.789"></ion-datetime>
+<syg-datetime value="2012-12-15T13:47:20.789"></syg-datetime>
 
 <!-- Readonly -->
-<ion-datetime readonly></ion-datetime>
+<syg-datetime readonly></syg-datetime>
 
 <!-- Disabled -->
-<ion-datetime disabled></ion-datetime>
+<syg-datetime disabled></syg-datetime>
 
 <!-- Custom locale -->
-<ion-datetime locale="en-GB"></ion-datetime>
+<syg-datetime locale="en-GB"></syg-datetime>
 
 <!-- Max and min -->
-<ion-datetime min="1994-03-14" max="2012-12-09" value="2008-09-02"></ion-datetime>
+<syg-datetime min="1994-03-14" max="2012-12-09" value="2008-09-02"></syg-datetime>
 
 <!-- 15 minute increments -->
-<ion-datetime minuteValues="0,15,30,45"></ion-datetime>
+<syg-datetime minuteValues="0,15,30,45"></syg-datetime>
 
 <!-- Specific days/months/years --> 
-<ion-datetime monthValues="6,7,8" yearValues="2014,2015" dayValues="01,02,03,04,05,06,08,09,10,11,12,13,14"></ion-datetime>
+<syg-datetime monthValues="6,7,8" yearValues="2014,2015" dayValues="01,02,03,04,05,06,08,09,10,11,12,13,14"></syg-datetime>
 
 <!-- Selecting time, no date -->
-<ion-datetime presentation="time"></ion-datetime>
+<syg-datetime presentation="time"></syg-datetime>
 
 <!-- Selecting time first, date second -->
-<ion-datetime presentation="time-date"></ion-datetime>
+<syg-datetime presentation="time-date"></syg-datetime>
 
 <!-- Full width size -->
-<ion-datetime size="cover"></ion-datetime>
+<syg-datetime size="cover"></syg-datetime>
 
 <!-- Custom Hour Cycle -->
-<ion-datetime hourCycle="h23"></ion-datetime>
+<syg-datetime hourCycle="h23"></syg-datetime>
 
 <!-- Custom first day of week -->
-<ion-datetime [firstDayOfWeek]="1"></ion-datetime>
+<syg-datetime [firstDayOfWeek]="1"></syg-datetime>
 
 <!-- Custom title -->
-<ion-datetime>
+<syg-datetime>
   <div slot="title">My Custom Title</div>
-</ion-datetime>
+</syg-datetime>
 
 <!-- Clear button -->
-<ion-datetime [showClearButton]="true"></ion-datetime>
+<syg-datetime [showClearButton]="true"></syg-datetime>
 
 <!-- Datetime in overlay -->
-<ion-button id="open-modal">Open Datetime Modal</ion-button>
-<ion-modal trigger="open-modal">
+<syg-button id="open-modal">Open Datetime Modal</syg-button>
+<syg-modal trigger="open-modal">
   <ng-template>
-    <ion-content>
-      <ion-datetime></ion-datetime>
-    </ion-content>
+    <syg-content>
+      <syg-datetime></syg-datetime>
+    </syg-content>
   </ng-template>
-</ion-modal>
+</syg-modal>
 ```
 
 **component.html**
 ```html
 <!-- Custom buttons -->
-<ion-datetime>
-  <ion-buttons slot="buttons">
-    <ion-button (click)="confirm()">Good to go!</ion-button>
-    <ion-button (click)="reset()">Reset</ion-button>
-  </ion-buttons>
-</ion-datetime>
+<syg-datetime>
+  <syg-buttons slot="buttons">
+    <syg-button (click)="confirm()">Good to go!</syg-button>
+    <syg-button (click)="reset()">Reset</syg-button>
+  </syg-buttons>
+</syg-datetime>
 ```
 
 **component.ts**

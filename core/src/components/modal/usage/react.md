@@ -129,7 +129,7 @@ const Home: React.FC<HomePageProps> = ({ router }) => {
 
 ```
 
-In most scenarios, setting a ref on `IonRouterOutlet` and passing that ref's `current` value to `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `ion-modal` ref as the `presentingElement`.
+In most scenarios, setting a ref on `IonRouterOutlet` and passing that ref's `current` value to `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `syg-modal` ref as the `presentingElement`.
 
 ```tsx
 <IonModal

@@ -30,7 +30,7 @@ export class IonAccordionGroup {
 }
 export declare interface IonApp extends Components.IonApp {
 }
-@Component({ selector: "ion-app", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@Component({ selector: "syg-app", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
 export class IonApp {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -40,7 +40,7 @@ export class IonApp {
 }
 export declare interface IonAvatar extends Components.IonAvatar {
 }
-@Component({ selector: "ion-avatar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@Component({ selector: "syg-avatar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
 export class IonAvatar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -51,7 +51,7 @@ export class IonAvatar {
 export declare interface IonBackButton extends Components.IonBackButton {
 }
 @ProxyCmp({ inputs: ["color", "defaultHref", "disabled", "icon", "mode", "routerAnimation", "text", "type"] })
-@Component({ selector: "ion-back-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "defaultHref", "disabled", "icon", "mode", "routerAnimation", "text", "type"] })
+@Component({ selector: "syg-back-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "defaultHref", "disabled", "icon", "mode", "routerAnimation", "text", "type"] })
 export class IonBackButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -62,7 +62,7 @@ export class IonBackButton {
 export declare interface IonBackdrop extends Components.IonBackdrop {
 }
 @ProxyCmp({ inputs: ["stopPropagation", "tappable", "visible"] })
-@Component({ selector: "ion-backdrop", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["stopPropagation", "tappable", "visible"] })
+@Component({ selector: "syg-backdrop", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["stopPropagation", "tappable", "visible"] })
 export class IonBackdrop {
   ionBackdropTap!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -75,7 +75,7 @@ export class IonBackdrop {
 export declare interface IonBadge extends Components.IonBadge {
 }
 @ProxyCmp({ inputs: ["color", "mode"] })
-@Component({ selector: "ion-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode"] })
+@Component({ selector: "syg-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode"] })
 export class IonBadge {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -86,7 +86,7 @@ export class IonBadge {
 export declare interface IonBreadcrumb extends Components.IonBreadcrumb {
 }
 @ProxyCmp({ inputs: ["active", "color", "disabled", "download", "href", "mode", "rel", "routerAnimation", "routerDirection", "separator", "target"] })
-@Component({ selector: "ion-breadcrumb", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "color", "disabled", "download", "href", "mode", "rel", "routerAnimation", "routerDirection", "separator", "target"] })
+@Component({ selector: "syg-breadcrumb", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "color", "disabled", "download", "href", "mode", "rel", "routerAnimation", "routerDirection", "separator", "target"] })
 export class IonBreadcrumb {
   ionFocus!: EventEmitter<CustomEvent>;
   ionBlur!: EventEmitter<CustomEvent>;
@@ -100,7 +100,7 @@ export class IonBreadcrumb {
 export declare interface IonBreadcrumbs extends Components.IonBreadcrumbs {
 }
 @ProxyCmp({ inputs: ["color", "itemsAfterCollapse", "itemsBeforeCollapse", "maxItems", "mode"] })
-@Component({ selector: "ion-breadcrumbs", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "itemsAfterCollapse", "itemsBeforeCollapse", "maxItems", "mode"] })
+@Component({ selector: "syg-breadcrumbs", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "itemsAfterCollapse", "itemsBeforeCollapse", "maxItems", "mode"] })
 export class IonBreadcrumbs {
   ionCollapsedClick!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -113,7 +113,7 @@ export class IonBreadcrumbs {
 export declare interface IonButton extends Components.IonButton {
 }
 @ProxyCmp({ inputs: ["buttonType", "color", "disabled", "download", "expand", "fill", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] })
-@Component({ selector: "ion-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["buttonType", "color", "disabled", "download", "expand", "fill", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] })
+@Component({ selector: "syg-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["buttonType", "color", "disabled", "download", "expand", "fill", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] })
 export class IonButton {
   ionFocus!: EventEmitter<CustomEvent>;
   ionBlur!: EventEmitter<CustomEvent>;
@@ -127,7 +127,7 @@ export class IonButton {
 export declare interface IonButtons extends Components.IonButtons {
 }
 @ProxyCmp({ inputs: ["collapse"] })
-@Component({ selector: "ion-buttons", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapse"] })
+@Component({ selector: "syg-buttons", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapse"] })
 export class IonButtons {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

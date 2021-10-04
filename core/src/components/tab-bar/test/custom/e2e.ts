@@ -7,7 +7,7 @@ test('tab-bar: custom', async () => {
 
   const screenshotCompares = [];
 
-  const tabBar = await page.find('ion-tab-bar');
+  const tabBar = await page.find('syg-tab-bar');
   await tabBar.waitForVisible();
 
   screenshotCompares.push(await page.compareScreenshot('tab-bar: custom default'));

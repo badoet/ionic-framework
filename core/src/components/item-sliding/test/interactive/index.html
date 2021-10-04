@@ -9,13 +9,13 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-list></ion-list>
+  <syg-list></syg-list>
 
   <script>
-    let lists = document.getElementsByTagName('ion-list');
+    let lists = document.getElementsByTagName('syg-list');
       for (var i = 0; i < lists.length; i++) {
         for (var j = 0; j < 3; j++) {
           addSlidingItem(lists[i]);
@@ -23,20 +23,20 @@
       }
 
       function addSlidingItem(list) {
-        const slidingItem = document.createElement('ion-item-sliding');
+        const slidingItem = document.createElement('syg-item-sliding');
         slidingItem.innerHTML = `
-          <ion-item>
-            <ion-label>
+          <syg-item>
+            <syg-label>
               <h2>Item Options Both Sides</h2>
-            </ion-label>
-          </ion-item>
+            </syg-label>
+          </syg-item>
 
-          <ion-item-options side="end">
-            <ion-item-option color="danger" expandable onclick="remove(this)">
+          <syg-item-options side="end">
+            <syg-item-option color="danger" expandable onclick="remove(this)">
               <ion-icon name="trash"></ion-icon>
               Delete
-            </ion-item-option>
-          </ion-item-options>
+            </syg-item-option>
+          </syg-item-options>
         `;
 
 

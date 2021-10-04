@@ -1,6 +1,6 @@
 import { Build, Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 const SPLIT_PANE_MAIN = 'split-pane-main';
 const SPLIT_PANE_SIDE = 'split-pane-side';
@@ -14,7 +14,7 @@ const QUERY: { [key: string]: string } = {
 };
 
 @Component({
-  tag: 'ion-split-pane',
+  tag: 'syg-split-pane',
   styleUrls: {
     ios: 'split-pane.ios.scss',
     md: 'split-pane.md.scss'
@@ -30,10 +30,10 @@ export class SplitPane implements ComponentInterface {
 
   /**
    * The `id` of the main content. When using
-   * a router this is typically `ion-router-outlet`.
+   * a router this is typically `syg-router-outlet`.
    * When not using a router, this is typically
-   * your main view's `ion-content`. This is not the
-   * id of the `ion-content` inside of your `ion-menu`.
+   * your main view's `syg-content`. This is not the
+   * id of the `syg-content` inside of your `syg-menu`.
    */
   @Prop({ reflect: true }) contentId?: string;
 
@@ -64,7 +64,7 @@ export class SplitPane implements ComponentInterface {
     // TODO: connectedCallback is fired in CE build
     // before WC is defined. This needs to be fixed in Stencil.
     if (typeof (customElements as any) !== 'undefined') {
-      await customElements.whenDefined('ion-split-pane');
+      await customElements.whenDefined('syg-split-pane');
     }
     this.styleChildren();
     this.updateState();
@@ -157,7 +157,7 @@ export class SplitPane implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{

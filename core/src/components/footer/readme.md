@@ -1,7 +1,7 @@
-# ion-footer
+# syg-footer
 
 Footer is a root component of a page that sits at the bottom of the page.
-Footer can be a wrapper for ion-toolbar to make sure the content area is sized correctly.
+Footer can be a wrapper for syg-toolbar to make sure the content area is sized correctly.
 
 <!-- Auto Generated Below -->
 
@@ -11,20 +11,20 @@ Footer can be a wrapper for ion-toolbar to make sure the content area is sized c
 ### Angular / javascript
 
 ```html
-<ion-content></ion-content>
+<syg-content></syg-content>
 
 <!-- Footer without a border -->
-<ion-footer class="ion-no-border">
-  <ion-toolbar>
-    <ion-title>Footer - No Border</ion-title>
-  </ion-toolbar>
-</ion-footer>
+<syg-footer class="syg-no-border">
+  <syg-toolbar>
+    <syg-title>Footer - No Border</syg-title>
+  </syg-toolbar>
+</syg-footer>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>
-</ion-footer>
+<syg-footer>
+  <syg-toolbar>
+    <syg-title>Footer</syg-title>
+  </syg-toolbar>
+</syg-footer>
 ```
 
 
@@ -39,7 +39,7 @@ export const FooterExample: React.FC = () => (
     <IonContent />
     
     {/*-- Footer without a border --*/}
-    <IonFooter className="ion-no-border">
+    <IonFooter className="syg-no-border">
       <IonToolbar>
         <IonTitle>Footer - No Border</IonTitle>
       </IonToolbar>
@@ -67,20 +67,20 @@ import { Component, h } from '@stencil/core';
 export class FooterExample {
   render() {
     return [
-      <ion-content></ion-content>,
+      <syg-content></syg-content>,
 
       // Footer without a border
-      <ion-footer class="ion-no-border">
-        <ion-toolbar>
-          <ion-title>Footer - No Border</ion-title>
-        </ion-toolbar>
-      </ion-footer>,
+      <syg-footer class="syg-no-border">
+        <syg-toolbar>
+          <syg-title>Footer - No Border</syg-title>
+        </syg-toolbar>
+      </syg-footer>,
 
-      <ion-footer>
-        <ion-toolbar>
-          <ion-title>Footer</ion-title>
-        </ion-toolbar>
-      </ion-footer>
+      <syg-footer>
+        <syg-toolbar>
+          <syg-title>Footer</syg-title>
+        </syg-toolbar>
+      </syg-footer>
     ];
   }
 }
@@ -91,20 +91,20 @@ export class FooterExample {
 
 ```html
 <template>
-  <ion-content></ion-content>
+  <syg-content></syg-content>
   
   <!-- Footer without a border -->
-  <ion-footer class="ion-no-border">
-    <ion-toolbar>
-      <ion-title>Footer - No Border</ion-title>
-    </ion-toolbar>
-  </ion-footer>
+  <syg-footer class="syg-no-border">
+    <syg-toolbar>
+      <syg-title>Footer - No Border</syg-title>
+    </syg-toolbar>
+  </syg-footer>
   
-  <ion-footer>
-    <ion-toolbar>
-      <ion-title>Footer</ion-title>
-    </ion-toolbar>
-  </ion-footer>
+  <syg-footer>
+    <syg-toolbar>
+      <syg-title>Footer</syg-title>
+    </syg-toolbar>
+  </syg-footer>
 </template>
 
 <script>

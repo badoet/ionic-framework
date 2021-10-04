@@ -9,20 +9,20 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
 
-  <ion-content id="content">
-    <ion-list id="list"> </ion-list>
+  <syg-content id="content">
+    <syg-list id="list"> </syg-list>
 
-    <ion-infinite-scroll threshold="100px" id="infinite-scroll">
-      <ion-infinite-scroll-content
+    <syg-infinite-scroll threshold="100px" id="infinite-scroll">
+      <syg-infinite-scroll-content
         loading-spinner="bubbles"
         loading-text="Loading more data...">
-      </ion-infinite-scroll-content>
-    </ion-infinite-scroll>
-  </ion-content>
+      </syg-infinite-scroll-content>
+    </syg-infinite-scroll>
+  </syg-content>
 
   <script>
     let items = [];
@@ -44,7 +44,7 @@
     function render() {
       let html = '';
       for(let item of items) {
-        html += `<ion-item>${item}</ion-item>`;
+        html += `<syg-item>${item}</syg-item>`;
       }
       list.innerHTML = html;
     }

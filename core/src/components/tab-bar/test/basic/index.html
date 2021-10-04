@@ -8,198 +8,198 @@
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   <link rel="stylesheet" href="../../../../../css/ionic.bundle.css">
   <link rel="stylesheet" href="../../../../../scripts/testing/styles.css">
 </head>
 
 <body>
-  <ion-app>
-    <ion-content>
+  <syg-app>
+    <syg-content>
       <!-- Default -->
-      <ion-tab-bar selected-tab="1">
+      <syg-tab-bar selected-tab="1">
 
-        <ion-tab-button tab="1">
-          <ion-label>Recents</ion-label>
-        </ion-tab-button>
+        <syg-tab-button tab="1">
+          <syg-label>Recents</syg-label>
+        </syg-tab-button>
 
-        <ion-tab-button tab="2">
-          <ion-label>Favorites</ion-label>
-          <ion-badge>23</ion-badge>
-        </ion-tab-button>
+        <syg-tab-button tab="2">
+          <syg-label>Favorites</syg-label>
+          <syg-badge>23</syg-badge>
+        </syg-tab-button>
 
-        <ion-tab-button tab="3">
-          <ion-label>Settings</ion-label>
-        </ion-tab-button>
+        <syg-tab-button tab="3">
+          <syg-label>Settings</syg-label>
+        </syg-tab-button>
 
-      </ion-tab-bar>
+      </syg-tab-bar>
 
       <!-- Badges -->
-      <ion-tab-bar selected-tab="1">
-        <ion-tab-button tab="1">
+      <syg-tab-bar selected-tab="1">
+        <syg-tab-button tab="1">
           <ion-icon name="heart"></ion-icon>
-          <ion-label>Favorites</ion-label>
-          <ion-badge color="danger"></ion-badge>
-        </ion-tab-button>
+          <syg-label>Favorites</syg-label>
+          <syg-badge color="danger"></syg-badge>
+        </syg-tab-button>
 
-        <ion-tab-button tab="2">
+        <syg-tab-button tab="2">
           <ion-icon name="musical-note"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="3">
+        <syg-tab-button tab="3">
           <ion-icon name="today"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="4">
+        <syg-tab-button tab="4">
           <ion-icon name="calendar"></ion-icon>
-          <ion-badge color="danger">47</ion-badge>
-        </ion-tab-button>
-      </ion-tab-bar>
+          <syg-badge color="danger">47</syg-badge>
+        </syg-tab-button>
+      </syg-tab-bar>
 
-      <ion-tab-bar selected-tab="1">
-        <ion-tab-button tab="1">
+      <syg-tab-bar selected-tab="1">
+        <syg-tab-button tab="1">
           <ion-icon name="musical-note"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="2" layout="icon-bottom">
+        <syg-tab-button tab="2" layout="icon-bottom">
           <ion-icon name="heart"></ion-icon>
-          <ion-label>Favorites</ion-label>
-        </ion-tab-button>
+          <syg-label>Favorites</syg-label>
+        </syg-tab-button>
 
-        <ion-tab-button tab="3">
+        <syg-tab-button tab="3">
           <ion-icon name="today"></ion-icon>
-          <ion-badge color="danger">88</ion-badge>
-        </ion-tab-button>
+          <syg-badge color="danger">88</syg-badge>
+        </syg-tab-button>
 
-        <ion-tab-button tab="4">
+        <syg-tab-button tab="4">
           <ion-icon name="calendar"></ion-icon>
-        </ion-tab-button>
-      </ion-tab-bar>
+        </syg-tab-button>
+      </syg-tab-bar>
 
-      <ion-tab-bar selected-tab="1">
-        <ion-tab-button tab="1">
+      <syg-tab-bar selected-tab="1">
+        <syg-tab-button tab="1">
           <ion-icon name="heart"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="2">
+        <syg-tab-button tab="2">
           <ion-icon name="musical-note"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="3">
+        <syg-tab-button tab="3">
           <ion-icon name="today"></ion-icon>
-        </ion-tab-button>
-      </ion-tab-bar>
+        </syg-tab-button>
+      </syg-tab-bar>
 
 
       <!-- Icons on top of text -->
-      <ion-tab-bar color="secondary" selected-tab="1">
-        <ion-tab-button tab="1">
-          <ion-label>Location</ion-label>
+      <syg-tab-bar color="secondary" selected-tab="1">
+        <syg-tab-button tab="1">
+          <syg-label>Location</syg-label>
           <ion-icon name="navigate"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="2">
-          <ion-badge color="danger">44</ion-badge>
+        <syg-tab-button tab="2">
+          <syg-badge color="danger">44</syg-badge>
           <ion-icon name="heart"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="3">
-          <ion-label>Radio</ion-label>
+        <syg-tab-button tab="3">
+          <syg-label>Radio</syg-label>
           <ion-icon name="musical-notes"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-      </ion-tab-bar>
+      </syg-tab-bar>
 
 
       <!-- Icons below text -->
-      <ion-tab-bar color="dark" selected-tab="1">
-        <ion-tab-button tab="1" layout="icon-bottom">
-          <ion-label>Recents</ion-label>
+      <syg-tab-bar color="dark" selected-tab="1">
+        <syg-tab-button tab="1" layout="icon-bottom">
+          <syg-label>Recents</syg-label>
           <ion-icon name="call"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="2">
-          <ion-badge>16</ion-badge>
-          <ion-label>Favorites</ion-label>
+        <syg-tab-button tab="2">
+          <syg-badge>16</syg-badge>
+          <syg-label>Favorites</syg-label>
           <ion-icon name="heart"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="3" layout="icon-bottom">
-          <ion-label>Settings</ion-label>
+        <syg-tab-button tab="3" layout="icon-bottom">
+          <syg-label>Settings</syg-label>
           <ion-icon name="settings"></ion-icon>
-        </ion-tab-button>
-      </ion-tab-bar>
+        </syg-tab-button>
+      </syg-tab-bar>
 
 
       <!-- Icons right of text -->
-      <ion-tab-bar color="danger" selected-tab="1">
-        <ion-tab-button tab="1" layout="icon-end">
-          <ion-label>Recents</ion-label>
+      <syg-tab-bar color="danger" selected-tab="1">
+        <syg-tab-button tab="1" layout="icon-end">
+          <syg-label>Recents</syg-label>
           <ion-icon name="call"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="2" layout="icon-end">
-          <ion-label>Favorites</ion-label>
+        <syg-tab-button tab="2" layout="icon-end">
+          <syg-label>Favorites</syg-label>
           <ion-icon name="heart"></ion-icon>
-          <ion-badge color="dark">33</ion-badge>
-        </ion-tab-button>
+          <syg-badge color="dark">33</syg-badge>
+        </syg-tab-button>
 
-        <ion-tab-button tab="3" layout="icon-end">
-          <ion-label>Settings</ion-label>
+        <syg-tab-button tab="3" layout="icon-end">
+          <syg-label>Settings</syg-label>
           <ion-icon name="settings"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-      </ion-tab-bar>
+      </syg-tab-bar>
 
 
       <!-- Icons left of text -->
-      <ion-tab-bar color="light" selected-tab="1">
-        <ion-tab-button tab="1" layout="icon-start">
-          <ion-label>Recents</ion-label>
+      <syg-tab-bar color="light" selected-tab="1">
+        <syg-tab-button tab="1" layout="icon-start">
+          <syg-label>Recents</syg-label>
           <ion-icon name="call"></ion-icon>
-          <ion-badge color="danger">12</ion-badge>
-        </ion-tab-button>
+          <syg-badge color="danger">12</syg-badge>
+        </syg-tab-button>
 
-        <ion-tab-button tab="2" layout="icon-start">
-          <ion-label>Favorites</ion-label>
+        <syg-tab-button tab="2" layout="icon-start">
+          <syg-label>Favorites</syg-label>
           <ion-icon name="heart"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="3" layout="icon-start">
-          <ion-label>Settings</ion-label>
+        <syg-tab-button tab="3" layout="icon-start">
+          <syg-label>Settings</syg-label>
           <ion-icon name="settings"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-      </ion-tab-bar>
+      </syg-tab-bar>
 
 
       <!-- No icons -->
-      <ion-tab-bar color="primary" selected-tab="1">
-        <ion-tab-button tab="1" layout="icon-hide">
-          <ion-label>Recents</ion-label>
+      <syg-tab-bar color="primary" selected-tab="1">
+        <syg-tab-button tab="1" layout="icon-hide">
+          <syg-label>Recents</syg-label>
           <ion-icon name="call"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="2" layout="icon-hide">
-          <ion-label>Favorites</ion-label>
+        <syg-tab-button tab="2" layout="icon-hide">
+          <syg-label>Favorites</syg-label>
           <ion-icon name="heart"></ion-icon>
-        </ion-tab-button>
+        </syg-tab-button>
 
-        <ion-tab-button tab="3" layout="icon-hide">
-          <ion-label>Settings</ion-label>
+        <syg-tab-button tab="3" layout="icon-hide">
+          <syg-label>Settings</syg-label>
           <ion-icon name="settings"></ion-icon>
-          <ion-badge color="danger">2</ion-badge>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-content>
-  </ion-app>
+          <syg-badge color="danger">2</syg-badge>
+        </syg-tab-button>
+      </syg-tab-bar>
+    </syg-content>
+  </syg-app>
 
   <style>
-    ion-content {
+    syg-content {
       --background: #f6f6f6;
     }
 
-    ion-tab-bar {
+    syg-tab-bar {
       margin-bottom: 10px;
     }
 

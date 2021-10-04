@@ -9,152 +9,152 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Items as Links/Buttons</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Items as Links/Buttons</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-item href="#" onclick="testClick(event)">
-        <ion-label>a[ion-item]</ion-label>
-      </ion-item>
+    <syg-content id="content">
+      <syg-item href="#" onclick="testClick(event)">
+        <syg-label>a[syg-item]</syg-label>
+      </syg-item>
 
-      <ion-item class="custom ion-activated" href="#" onclick="testClick(event)">
-        <ion-label>a[ion-item].activated</ion-label>
-      </ion-item>
+      <syg-item class="custom syg-activated" href="#" onclick="testClick(event)">
+        <syg-label>a[syg-item].activated</syg-label>
+      </syg-item>
 
-      <ion-item class="custom-hover" href="#" onclick="testClick(event)">
-        <ion-label>custom hover</ion-label>
-      </ion-item>
+      <syg-item class="custom-hover" href="#" onclick="testClick(event)">
+        <syg-label>custom hover</syg-label>
+      </syg-item>
 
-      <ion-item color="secondary" href="#" onclick="testClick(event)">
-        <ion-label>a[ion-item] secondary</ion-label>
-      </ion-item>
+      <syg-item color="secondary" href="#" onclick="testClick(event)">
+        <syg-label>a[syg-item] secondary</syg-label>
+      </syg-item>
 
-      <ion-item button color="dark" id="attachClick">
-        <ion-label>button[ion-item]</ion-label>
-      </ion-item>
+      <syg-item button color="dark" id="attachClick">
+        <syg-label>button[syg-item]</syg-label>
+      </syg-item>
 
-      <ion-item button type="submit" id="attachClick">
-        <ion-label>button[ion-item] type="submit"</ion-label>
-      </ion-item>
+      <syg-item button type="submit" id="attachClick">
+        <syg-label>button[syg-item] type="submit"</syg-label>
+      </syg-item>
 
-      <ion-item button class="ion-activated" onClick="testClick(event)">
-        <ion-label>button[ion-item].activated</ion-label>
-      </ion-item>
+      <syg-item button class="syg-activated" onClick="testClick(event)">
+        <syg-label>button[syg-item].activated</syg-label>
+      </syg-item>
 
-      <ion-item button color="danger" onClick="testClick(event)">
-        <ion-label>button[ion-item] danger</ion-label>
-      </ion-item>
+      <syg-item button color="danger" onClick="testClick(event)">
+        <syg-label>button[syg-item] danger</syg-label>
+      </syg-item>
 
-      <ion-item button detail class="item-part">
-        <ion-label>
-          <h1>button[ion-item] detail</h1>
+      <syg-item button detail class="item-part">
+        <syg-label>
+          <h1>button[syg-item] detail</h1>
           <h2>Footnote</h2>
-        </ion-label>
-      </ion-item>
+        </syg-label>
+      </syg-item>
 
-      <ion-item button onclick="testClickOutsize(event)">
-        <ion-button slot="start" onclick="testClick(event)">Default</ion-button>
-        <ion-label>Inner Buttons</ion-label>
-        <ion-button fill="outline" slot="end" onclick="testClick(event)">Outline</ion-button>
-      </ion-item>
+      <syg-item button onclick="testClickOutsize(event)">
+        <syg-button slot="start" onclick="testClick(event)">Default</syg-button>
+        <syg-label>Inner Buttons</syg-label>
+        <syg-button fill="outline" slot="end" onclick="testClick(event)">Outline</syg-button>
+      </syg-item>
 
-      <ion-item button disabled>
-        <ion-button slot="start" onclick="testClick(event)">
+      <syg-item button disabled>
+        <syg-button slot="start" onclick="testClick(event)">
           <ion-icon slot="start" name="home"></ion-icon>
           Left Icon
-        </ion-button>
-        <ion-label>disabled left icon buttons</ion-label>
-        <ion-button fill="outline" slot="end" onclick="testClick(event)">
+        </syg-button>
+        <syg-label>disabled left icon buttons</syg-label>
+        <syg-button fill="outline" slot="end" onclick="testClick(event)">
           <ion-icon slot="start" name="star"></ion-icon>
           Left Icon
-        </ion-button>
-      </ion-item>
+        </syg-button>
+      </syg-item>
 
-      <ion-item>
-        <ion-button slot="start" onclick="testClick(event)">
+      <syg-item>
+        <syg-button slot="start" onclick="testClick(event)">
           Right Icon
           <ion-icon name="home" slot="end"></ion-icon>
-        </ion-button>
-        <ion-label>right icon buttons</ion-label>
-        <ion-button fill="outline" slot="end" onclick="testClick(event)">
+        </syg-button>
+        <syg-label>right icon buttons</syg-label>
+        <syg-button fill="outline" slot="end" onclick="testClick(event)">
           Right Icon
           <ion-icon name="star" slot="end"></ion-icon>
-        </ion-button>
-      </ion-item>
+        </syg-button>
+      </syg-item>
 
-      <ion-item>
-        <ion-button fill="clear" slot="start" size="default" onclick="testClick(event)">
+      <syg-item>
+        <syg-button fill="clear" slot="start" size="default" onclick="testClick(event)">
           <ion-icon slot="icon-only" name="navigate"></ion-icon>
-        </ion-button>
-        <ion-label>icon only buttons default</ion-label>
-        <ion-button fill="clear" slot="end" size="default" onclick="testClick(event)">
+        </syg-button>
+        <syg-label>icon only buttons default</syg-label>
+        <syg-button fill="clear" slot="end" size="default" onclick="testClick(event)">
           <ion-icon slot="icon-only" name="navigate"></ion-icon>
-        </ion-button>
-      </ion-item>
+        </syg-button>
+      </syg-item>
 
-      <ion-item disabled onclick="testClick(event)">
-        <ion-label>ion-item disabled right icon/text button large</ion-label>
-        <ion-button slot="end" size="large" onclick="testClick(event)">
+      <syg-item disabled onclick="testClick(event)">
+        <syg-label>syg-item disabled right icon/text button large</syg-label>
+        <syg-button slot="end" size="large" onclick="testClick(event)">
           <ion-icon slot="start" name="refresh"></ion-icon>
           Refresh
-        </ion-button>
-      </ion-item>
+        </syg-button>
+      </syg-item>
 
-      <ion-item>
-        <ion-button fill="clear" slot="start" size="small" onclick="testClick(event)">
+      <syg-item>
+        <syg-button fill="clear" slot="start" size="small" onclick="testClick(event)">
           <ion-icon slot="start" name="settings"></ion-icon>
           Settings
-        </ion-button>
-        <ion-label>ion-item left fill="clear" button small</ion-label>
-      </ion-item>
+        </syg-button>
+        <syg-label>syg-item left fill="clear" button small</syg-label>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>ion-item right fill="clear" button</ion-label>
-        <ion-button color="secondary" fill="clear" slot="end" onclick="testClick(event)">
+      <syg-item>
+        <syg-label>syg-item right fill="clear" button</syg-label>
+        <syg-button color="secondary" fill="clear" slot="end" onclick="testClick(event)">
           Edit
-        </ion-button>
-      </ion-item>
+        </syg-button>
+      </syg-item>
 
-      <ion-item>
-        <ion-label class="ion-text-wrap">
+      <syg-item>
+        <syg-label class="syg-text-wrap">
           This is multiline text that has a long description of about how the text is really long and a
           <a href="#" onclick="testClick(event)">link</a>.
-        </ion-label>
-        <ion-button fill="outline" slot="end" onclick="testClick(event)">View</ion-button>
-      </ion-item>
+        </syg-label>
+        <syg-button fill="outline" slot="end" onclick="testClick(event)">View</syg-button>
+      </syg-item>
 
-      <ion-item onclick="testClick(event)">
-        <ion-avatar slot="start">
+      <syg-item onclick="testClick(event)">
+        <syg-avatar slot="start">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-avatar>
-        <ion-label>
+        </syg-avatar>
+        <syg-label>
           <h3>Avatar Start</h3>
-        </ion-label>
-        <ion-badge slot="end">260k</ion-badge>
-      </ion-item>
+        </syg-label>
+        <syg-badge slot="end">260k</syg-badge>
+      </syg-item>
 
-      <ion-item onclick="testClickOutsize(event)">
+      <syg-item onclick="testClickOutsize(event)">
         <div>
-          <ion-button fill="clear" slot="end" onclick="testClick(event)">
+          <syg-button fill="clear" slot="end" onclick="testClick(event)">
             <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
-          </ion-button>
-          <ion-button fill="clear" slot="end" onclick="testClick(event)">
+          </syg-button>
+          <syg-button fill="clear" slot="end" onclick="testClick(event)">
             <ion-icon slot="icon-only" name="add-circle"></ion-icon>
-          </ion-button>
+          </syg-button>
         </div>
-      </ion-item>
+      </syg-item>
 
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <style>
     .custom {

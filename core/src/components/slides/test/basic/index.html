@@ -10,8 +10,8 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>  <style>
-    ion-slide {
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>  <style>
+    syg-slide {
       height: 200px !important;
     }
 
@@ -19,39 +19,39 @@
 </head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-content id="content">
-      <ion-slides style="background: black" id="slides" pager>
-        <ion-slide style="background: rgb(0, 200, 0); color: white;">
+    <syg-content id="content">
+      <syg-slides style="background: black" id="slides" pager>
+        <syg-slide style="background: rgb(0, 200, 0); color: white;">
           <h1>Slide 1</h1>
-        </ion-slide>
-        <ion-slide style="background: white; color: blue;">
+        </syg-slide>
+        <syg-slide style="background: white; color: blue;">
           <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide style="background: blue; color: white;">
+        </syg-slide>
+        <syg-slide style="background: blue; color: white;">
           <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
-      <ion-button expand="block" onclick="addSlide()">Add slide</ion-button>
-      <ion-button expand="block" onclick="removeSlide()">Remove slide</ion-button>
+        </syg-slide>
+      </syg-slides>
+      <syg-button expand="block" onclick="addSlide()">Add slide</syg-button>
+      <syg-button expand="block" onclick="removeSlide()">Remove slide</syg-button>
 
-      <ion-button expand="block" onclick="slidePrev()">Slide Prev</ion-button>
-      <ion-button expand="block" onclick="slideNext()">Slide Next</ion-button>
-      <ion-button expand="block" onclick="getActiveIndex()">Get Active Index</ion-button>
-      <ion-button expand="block" onclick="getPreviousIndex()">Get Previous Index</ion-button>
+      <syg-button expand="block" onclick="slidePrev()">Slide Prev</syg-button>
+      <syg-button expand="block" onclick="slideNext()">Slide Next</syg-button>
+      <syg-button expand="block" onclick="getActiveIndex()">Get Active Index</syg-button>
+      <syg-button expand="block" onclick="getPreviousIndex()">Get Previous Index</syg-button>
 
-      <ion-button expand="block" onclick="isEnd()">Is the End?</ion-button>
-      <ion-button expand="block" onclick="isBeginning()">Is the beginning?</ion-button>
+      <syg-button expand="block" onclick="isEnd()">Is the End?</syg-button>
+      <syg-button expand="block" onclick="isBeginning()">Is the beginning?</syg-button>
 
-      <ion-button expand="block" onclick="slideTo()">Slide to slide index 2</ion-button>
-      <ion-button expand="block" onclick="slideLength()">Get slide length</ion-button>
-      <ion-button expand="block" onclick="slideAutoPlay()">Start auto play</ion-button>
-      <ion-button expand="block" onclick="slideStopAutoPlay()">Stop auto play</ion-button>
-      <ion-button expand="block" onclick="setOptions()">Set options</ion-button>
-    </ion-content>
+      <syg-button expand="block" onclick="slideTo()">Slide to slide index 2</syg-button>
+      <syg-button expand="block" onclick="slideLength()">Get slide length</syg-button>
+      <syg-button expand="block" onclick="slideAutoPlay()">Start auto play</syg-button>
+      <syg-button expand="block" onclick="slideStopAutoPlay()">Stop auto play</syg-button>
+      <syg-button expand="block" onclick="setOptions()">Set options</syg-button>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
   <script>
     let slideCount = 4;
     const slides = document.getElementById('slides')
@@ -63,7 +63,7 @@
     }
 
     async function addSlide() {
-      const slide = document.createElement('ion-slide');
+      const slide = document.createElement('syg-slide');
       slide.style.background = 'white';
       slide.innerHTML = `<h1>Slide ${slideCount}</h1>`;
       slideCount++;

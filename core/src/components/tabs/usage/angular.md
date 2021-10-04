@@ -1,44 +1,44 @@
 ```html
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule">
+<syg-tabs>
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="schedule">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Schedule</ion-label>
-      <ion-badge>6</ion-badge>
-    </ion-tab-button>
+      <syg-label>Schedule</syg-label>
+      <syg-badge>6</syg-badge>
+    </syg-tab-button>
 
-    <ion-tab-button tab="speakers">
+    <syg-tab-button tab="speakers">
       <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Speakers</ion-label>
-    </ion-tab-button>
+      <syg-label>Speakers</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="map">
+    <syg-tab-button tab="map">
       <ion-icon name="map"></ion-icon>
-      <ion-label>Map</ion-label>
-    </ion-tab-button>
+      <syg-label>Map</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="about">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+    <syg-tab-button tab="about">
+      <ion-icon name="informatsyg-circle"></ion-icon>
+      <syg-label>About</syg-label>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```
 
 
 ### Router integration
 
-When used with Angular's router the `tab` property of the `ion-tab-button` should be a reference to the route path.
+When used with Angular's router the `tab` property of the `syg-tab-button` should be a reference to the route path.
 
 ```html
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule">
+<syg-tabs>
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="schedule">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Schedule</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+      <syg-label>Schedule</syg-label>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```
 
 ```typescript

@@ -8,18 +8,18 @@ import { NavOutlet, RouteID, RouteWrite, TabButtonClickEventDetail } from '../..
  * @slot bottom - Content is placed at the bottom of the screen.
  */
 @Component({
-  tag: 'ion-tabs',
+  tag: 'syg-tabs',
   styleUrl: 'tabs.scss',
   shadow: true
 })
 export class Tabs implements NavOutlet {
 
   private transitioning = false;
-  private leavingTab?: HTMLIonTabElement;
+  private leavingTab?: HTMLSygTabElement;
 
-  @Element() el!: HTMLIonTabsElement;
+  @Element() el!: HTMLSygTabsElement;
 
-  @State() selectedTab?: HTMLIonTabElement;
+  @State() selectedTab?: HTMLSygTabElement;
 
   /** @internal */
   @Prop({ mutable: true }) useRouter = false;
@@ -42,7 +42,7 @@ export class Tabs implements NavOutlet {
 
   async componentWillLoad() {
     if (!this.useRouter) {
-      this.useRouter = !!document.querySelector('ion-router') && !this.el.closest('[no-router]');
+      this.useRouter = !!document.querySelector('syg-router') && !this.el.closest('[no-router]');
     }
     if (!this.useRouter) {
       const tabs = this.tabs;
@@ -54,7 +54,7 @@ export class Tabs implements NavOutlet {
   }
 
   componentWillRender() {
-    const tabBar = this.el.querySelector('ion-tab-bar');
+    const tabBar = this.el.querySelector('syg-tab-bar');
     if (tabBar) {
       const tab = this.selectedTab ? this.selectedTab.tab : undefined;
       tabBar.selectedTab = tab;
@@ -67,7 +67,7 @@ export class Tabs implements NavOutlet {
    * @param tab The tab instance to select. If passed a string, it should be the value of the tab's `tab` property.
    */
   @Method()
-  async select(tab: string | HTMLIonTabElement): Promise<boolean> {
+  async select(tab: string | HTMLSygTabElement): Promise<boolean> {
     const selectedTab = getTab(this.tabs, tab);
     if (!this.shouldSwitch(selectedTab)) {
       return false;
@@ -85,7 +85,7 @@ export class Tabs implements NavOutlet {
    * @param tab The tab instance to select. If passed a string, it should be the value of the tab's `tab` property.
    */
   @Method()
-  async getTab(tab: string | HTMLIonTabElement): Promise<HTMLIonTabElement | undefined> {
+  async getTab(tab: string | HTMLSygTabElement): Promise<HTMLSygTabElement | undefined> {
     return getTab(this.tabs, tab);
   }
 
@@ -120,7 +120,7 @@ export class Tabs implements NavOutlet {
     return tabId !== undefined ? { id: tabId, element: this.selectedTab } : undefined;
   }
 
-  private setActive(selectedTab: HTMLIonTabElement): Promise<void> {
+  private setActive(selectedTab: HTMLSygTabElement): Promise<void> {
     if (this.transitioning) {
       return Promise.reject('transitioning already happening');
     }
@@ -153,7 +153,7 @@ export class Tabs implements NavOutlet {
 
   private notifyRouter() {
     if (this.useRouter) {
-      const router = document.querySelector('ion-router');
+      const router = document.querySelector('syg-router');
       if (router) {
         return router.navChanged('forward');
       }
@@ -161,19 +161,19 @@ export class Tabs implements NavOutlet {
     return Promise.resolve(false);
   }
 
-  private shouldSwitch(selectedTab: HTMLIonTabElement | undefined): selectedTab is HTMLIonTabElement {
+  private shouldSwitch(selectedTab: HTMLSygTabElement | undefined): selectedTab is HTMLSygTabElement {
     const leavingTab = this.selectedTab;
     return selectedTab !== undefined && selectedTab !== leavingTab && !this.transitioning;
   }
 
   private get tabs() {
-    return Array.from(this.el.querySelectorAll('ion-tab'));
+    return Array.from(this.el.querySelectorAll('syg-tab'));
   }
 
   private onTabClicked = (ev: CustomEvent<TabButtonClickEventDetail>) => {
     const { href, tab } = ev.detail;
     if (this.useRouter && href !== undefined) {
-      const router = document.querySelector('ion-router');
+      const router = document.querySelector('syg-router');
       if (router) {
         router.push(href);
       }
@@ -185,7 +185,7 @@ export class Tabs implements NavOutlet {
   render() {
     return (
       <Host
-        onIonTabButtonClick={this.onTabClicked}
+        onSygTabButtonClick={this.onTabClicked}
       >
         <slot name="top"></slot>
         <div class="tabs-inner">
@@ -197,7 +197,7 @@ export class Tabs implements NavOutlet {
   }
 }
 
-const getTab = (tabs: HTMLIonTabElement[], tab: string | HTMLIonTabElement): HTMLIonTabElement | undefined => {
+const getTab = (tabs: HTMLSygTabElement[], tab: string | HTMLSygTabElement): HTMLSygTabElement | undefined => {
   const tabEl = (typeof tab === 'string')
     ? tabs.find(t => t.tab === tab)
     : tab;

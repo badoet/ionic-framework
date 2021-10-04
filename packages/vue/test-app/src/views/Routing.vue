@@ -2,9 +2,9 @@
   <ion-page data-pageid="routing">
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Routing</ion-title>
       </ion-toolbar>
     </ion-header>

@@ -12,15 +12,15 @@
   --ion-color-light: #f4f5f8;
   --ion-color-light-rgb: 244, 245, 248;
 
-  --ion-toolbar-background: var(--ion-color-primary);
-  --ion-toolbar-color: var(--ion-color-light);
+  --syg-toolbar-background: var(--ion-color-primary);
+  --syg-toolbar-color: var(--ion-color-light);
 }
 
 .md body {
-  --ion-toolbar-segment-color: rgba(var(--ion-color-light-rgb), .7);
-  --ion-toolbar-segment-color-checked: var(--ion-color-light);
+  --syg-toolbar-segment-color: rgba(var(--ion-color-light-rgb), .7);
+  --syg-toolbar-segment-color-checked: var(--ion-color-light);
 }
 
 .ios body {
-  --ion-toolbar-segment-color-checked: var(--ion-color-primary);
+  --syg-toolbar-segment-color-checked: var(--ion-color-primary);
 }

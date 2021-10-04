@@ -1,6 +1,6 @@
 ```html
 <template>
-  <ion-button @click="presentActionSheet">Show Action Sheet</ion-button>
+  <syg-button @click="presentActionSheet">Show Action Sheet</syg-button>
 </template>
 
 <script>
@@ -21,7 +21,7 @@ export default defineComponent({
               text: 'Delete',
               role: 'destructive',
               icon: trash,
-              id: 'delete-button', 
+              id: 'delete-button',
               data: {
                 type: 'delete'
               },
@@ -32,7 +32,7 @@ export default defineComponent({
             {
               text: 'Share',
               icon: share,
-              data: 10,  
+              data: 10,
               handler: () => {
                 console.log('Share clicked')
               },
@@ -76,15 +76,15 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Action Sheet</ion-button>
-  <ion-action-sheet
+  <syg-button @click="setOpen(true)">Show Action Sheet</syg-button>
+  <syg-action-sheet
     :is-open="isOpenRef"
     header="Albums"
     css-class="my-custom-class"
     :buttons="buttons"
     @didDismiss="setOpen(false)"
   >
-  </ion-action-sheet>
+  </syg-action-sheet>
 </template>
 
 <script>
@@ -112,7 +112,7 @@ export default defineComponent({
       {
         text: 'Share',
         icon: share,
-        data: 10,  
+        data: 10,
         handler: () => {
           console.log('Share clicked')
         },
@@ -120,7 +120,7 @@ export default defineComponent({
       {
         text: 'Play (open modal)',
         icon: caretForwardCircle,
-        data: 'Data value',  
+        data: 'Data value',
         handler: () => {
           console.log('Play clicked')
         },
@@ -141,7 +141,7 @@ export default defineComponent({
         },
       },
     ];
-    
+
     return { buttons, isOpenRef, setOpen }
   }
 });

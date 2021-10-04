@@ -1,12 +1,12 @@
 import { Component, ComponentInterface, Element, Host, Listen, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 /**
  * @part icon - The icon of the reorder handle (uses ion-icon).
  */
 @Component({
-  tag: 'ion-reorder',
+  tag: 'syg-reorder',
   styleUrls: {
     ios: 'reorder.ios.scss',
     md: 'reorder.md.scss',
@@ -14,11 +14,11 @@ import { getIonMode } from '../../global/ionic-global';
   shadow: true
 })
 export class Reorder implements ComponentInterface {
-  @Element() el!: HTMLIonReorderElement;
+  @Element() el!: HTMLSygReorderElement;
 
   @Listen('click', { capture: true })
   onClick(ev: Event) {
-    const reorderGroup = this.el.closest('ion-reorder-group');
+    const reorderGroup = this.el.closest('syg-reorder-group');
 
     ev.preventDefault();
 
@@ -30,7 +30,7 @@ export class Reorder implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const reorderIcon = mode === 'ios' ? 'reorder-three-outline' : 'reorder-two-sharp';
     return (
       <Host class={mode}>

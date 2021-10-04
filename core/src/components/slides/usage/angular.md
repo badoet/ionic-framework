@@ -4,19 +4,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'slides-example',
   template: `
-    <ion-content>
-      <ion-slides pager="true" [options]="slideOpts">
-        <ion-slide>
+    <syg-content>
+      <syg-slides pager="true" [options]="slideOpts">
+        <syg-slide>
           <h1>Slide 1</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
-    </ion-content>
+        </syg-slide>
+      </syg-slides>
+    </syg-content>
   `
 })
 export class SlideExample {
@@ -32,7 +32,7 @@ export class SlideExample {
 
 ```css
 /* Without setting height the slides will take up the height of the slide's content */
-ion-slides {
+syg-slides {
   height: 100%;
 }
 ```

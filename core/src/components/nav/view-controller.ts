@@ -24,7 +24,7 @@ export class ViewController {
 
     if (!this.element) {
       const component = this.component;
-      this.element = await attachComponent(this.delegate, container, component, ['ion-page', 'ion-page-invisible'], this.params);
+      this.element = await attachComponent(this.delegate, container, component, ['syg-page', 'syg-page-invisible'], this.params);
     }
   }
 
@@ -96,7 +96,7 @@ export const convertToViews = (pages: NavComponentWithProps[]): ViewController[]
     }
     if ('component' in page) {
       /**
-       * TODO Ionic 6:
+       * TODO Sygic 6:
        * Consider switching to just using `undefined` here
        * as well as on the public interfaces and on
        * `NavComponentWithProps`. Previously `pages` was

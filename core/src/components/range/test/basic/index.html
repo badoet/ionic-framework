@@ -9,7 +9,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <style>
     .range-part::part(bar) {
       background: red;
@@ -50,148 +50,148 @@
     }
   </style>
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Range - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Range - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+    <syg-content id="content">
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Range color
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-range value="20" aria-label="Default Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range value="60" color="light" step="10" pin="true" aria-label="Light Pin Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range value="80" color="dark" step="10" snaps="true" pin="true" aria-label="Dark Pin Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range pin="true" color="secondary" value="86" aria-label="Secondary Dual Range">
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-range value="20" aria-label="Default Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range value="60" color="light" step="10" pin="true" aria-label="Light Pin Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range value="80" color="dark" step="10" snaps="true" pin="true" aria-label="Dark Pin Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range pin="true" color="secondary" value="86" aria-label="Secondary Dual Range">
             <ion-icon small name="sunny" slot="start"></ion-icon>
             <ion-icon name="sunny" slot="end"></ion-icon>
-          </ion-range>
-          <ion-range pin="true" color="danger" value="54" aria-label="Danger Dual Range">
+          </syg-range>
+          <syg-range pin="true" color="danger" value="54" aria-label="Danger Dual Range">
             <ion-icon small name="thermometer" slot="start"></ion-icon>
             <ion-icon name="thermometer" slot="end"></ion-icon>
-          </ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Stacked Label</ion-label>
-          <ion-range value="40">
-            <ion-label slot="start">Start</ion-label>
-            <ion-label slot="end">End</ion-label>
-          </ion-range>
-        </ion-item>
-      </ion-list>
+          </syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-label position="stacked">Stacked Label</syg-label>
+          <syg-range value="40">
+            <syg-label slot="start">Start</syg-label>
+            <syg-label slot="end">End</syg-label>
+          </syg-range>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Dynamic Value
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-range pin="true" step="0" color="secondary" id="progressValue" aria-label="Progress Range"></ion-range>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-range pin="true" step="0" color="secondary" id="progressValue" aria-label="Progress Range"></syg-range>
           <div id="progressValueResult" slot="end"></div>
-        </ion-item>
-        <ion-item>
-          <ion-range pin="true" color="danger" id="brightnessValue" aria-label="Brightness Range"></ion-range>
+        </syg-item>
+        <syg-item>
+          <syg-range pin="true" color="danger" id="brightnessValue" aria-label="Brightness Range"></syg-range>
           <div id="brightnessValueResult" slot="end"></div>
-        </ion-item>
-        <ion-item>
-          <ion-range pin="true" color="dark" id="contrastValue" aria-label="Contrast Range"></ion-range>
+        </syg-item>
+        <syg-item>
+          <syg-range pin="true" color="dark" id="contrastValue" aria-label="Contrast Range"></syg-range>
           <div id="contrastValueResult" slot="end"></div>
-        </ion-item>
-        <ion-button onclick="increaseRangeValues()">
+        </syg-item>
+        <syg-button onclick="increaseRangeValues()">
           Increase Values
-        </ion-button>
-      </ion-list>
+        </syg-button>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Mode
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-range value="50" mode="md" aria-label="Material Design Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range value="50" mode="ios" aria-label="iOS Range"></ion-range>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-range value="50" mode="md" aria-label="Material Design Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range value="50" mode="ios" aria-label="iOS Range"></syg-range>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Options
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-range class="range-part" min="-200" max="200" step="10" snaps="true" pin="true" dual-knobs="true" aria-label="Custom Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range pin="true" aria-label="Custom Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range min="-200" max="200" step="10" snaps="true" pin="true" aria-label="Custom Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range min="1000" max="2000" step="100" snaps="true" id="range" aria-label="Custom Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range min="1000" max="2000" step="100" snaps="true" ticks="false" aria-label="Custom Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range dual-knobs="true" id="multiKnob" aria-label="Custom Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range id="debounce" debounce="5000" aria-label="Custom Range"></ion-range>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-range class="range-part" min="-200" max="200" step="10" snaps="true" pin="true" dual-knobs="true" aria-label="Custom Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range pin="true" aria-label="Custom Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range min="-200" max="200" step="10" snaps="true" pin="true" aria-label="Custom Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range min="1000" max="2000" step="100" snaps="true" id="range" aria-label="Custom Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range min="1000" max="2000" step="100" snaps="true" ticks="false" aria-label="Custom Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range dual-knobs="true" id="multiKnob" aria-label="Custom Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range id="debounce" debounce="5000" aria-label="Custom Range"></syg-range>
+        </syg-item>
+      </syg-list>
 
-      <ion-button onclick="elTest()">Test</ion-button>
+      <syg-button onclick="elTest()">Test</syg-button>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Coupled sliders
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-range min="0" value="0" max="50" id="minRange" aria-label="Coupled Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range min="50" value="100" max="100" id="maxRange" aria-label="Coupled Range"></ion-range>
-        </ion-item>
-        <ion-item>
-          <ion-range min="0" value="50" max="100" id="targetRange" aria-label="Coupled Range"></ion-range>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-range min="0" value="0" max="50" id="minRange" aria-label="Coupled Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range min="50" value="100" max="100" id="maxRange" aria-label="Coupled Range"></syg-range>
+        </syg-item>
+        <syg-item>
+          <syg-range min="0" value="50" max="100" id="targetRange" aria-label="Coupled Range"></syg-range>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Custom pin label
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-range pin min="1" step="0.1" max="2" id="customLabel"></ion-range>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-range pin min="1" step="0.1" max="2" id="customLabel"></syg-range>
+        </syg-item>
+      </syg-list>
 
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     const progressValue = document.getElementById('progressValue');

@@ -27,7 +27,7 @@ export const testModal = async (
 
   await page.waitForSelector(selector);
 
-  let modal = await page.find('ion-modal');
+  let modal = await page.find('syg-modal');
   await modal.waitForVisible();
   await page.waitForTimeout(100);
 
@@ -43,7 +43,7 @@ export const testModal = async (
   screenshotCompares.push(await page.compareScreenshot('dismiss'));
 
   if (expectUnmount) {
-    modal = await page.find('ion-modal');
+    modal = await page.find('syg-modal');
     expect(modal).toBeNull();
   }
 

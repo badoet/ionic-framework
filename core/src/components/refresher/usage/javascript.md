@@ -1,27 +1,27 @@
 ```html
 <!-- Default Refresher -->
-<ion-content>
-  <ion-refresher slot="fixed">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+<syg-content>
+  <syg-refresher slot="fixed">
+    <syg-refresher-content></syg-refresher-content>
+  </syg-refresher>
+</syg-content>
 
 <!-- Custom Refresher Properties -->
-<ion-content>
-  <ion-refresher slot="fixed" pull-factor="0.5" pull-min="100" pull-max="200">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+<syg-content>
+  <syg-refresher slot="fixed" pull-factor="0.5" pull-min="100" pull-max="200">
+    <syg-refresher-content></syg-refresher-content>
+  </syg-refresher>
+</syg-content>
 
 <!-- Custom Refresher Content -->
-<ion-content>
-  <ion-refresher slot="fixed">
-    <ion-refresher-content
+<syg-content>
+  <syg-refresher slot="fixed">
+    <syg-refresher-content
       pulling-icon="chevron-down-circle-outline"
       pulling-text="Pull to refresh"
       refreshing-spinner="circles"
       refreshing-text="Refreshing...">
-    </ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+    </syg-refresher-content>
+  </syg-refresher>
+</syg-content>
 ```

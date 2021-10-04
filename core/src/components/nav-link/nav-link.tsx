@@ -5,7 +5,7 @@ import { AnimationBuilder, ComponentProps, NavComponent, RouterDirection } from 
 import { navLink } from './nav-link-utils';
 
 @Component({
-  tag: 'ion-nav-link'
+  tag: 'syg-nav-link'
 })
 export class NavLink implements ComponentInterface {
   @Element() el!: HTMLElement;

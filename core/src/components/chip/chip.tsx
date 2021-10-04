@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color } from '../../interface';
 import { createColorClasses } from '../../utils/theme';
 
@@ -8,7 +8,7 @@ import { createColorClasses } from '../../utils/theme';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-chip',
+  tag: 'syg-chip',
   styleUrls: {
     ios: 'chip.ios.scss',
     md: 'chip.md.scss'
@@ -34,7 +34,7 @@ export class Chip implements ComponentInterface {
   @Prop() disabled = false;
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     return (
       <Host
@@ -43,11 +43,11 @@ export class Chip implements ComponentInterface {
           [mode]: true,
           'chip-outline': this.outline,
           'chip-disabled': this.disabled,
-          'ion-activatable': true,
+          'syg-activatable': true,
         })}
       >
         <slot></slot>
-        {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+        {mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
       </Host>
     );
   }

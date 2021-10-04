@@ -6,7 +6,7 @@
 
 :host {
   --background: #{$action-sheet-ios-background-color};
-  --backdrop-opacity: var(--ion-backdrop-opacity, 0.4);
+  --backdrop-opacity: var(--syg-backdrop-opacity, 0.4);
   --button-background: #{$action-sheet-ios-button-background};
   --button-background-activated: #{$action-sheet-ios-button-background-activated};
   --button-background-activated-opacity: .08;

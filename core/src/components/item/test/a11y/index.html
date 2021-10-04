@@ -9,96 +9,96 @@
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
     <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   </head>
 
   <body>
     <main>
       <h1>Item</h1>
 
-      <ion-item>
-        <ion-label>Item with Input</ion-label>
-        <ion-input placeholder="Placeholder"></ion-input>
-      </ion-item>
+      <syg-item>
+        <syg-label>Item with Input</syg-label>
+        <syg-input placeholder="Placeholder"></syg-input>
+      </syg-item>
 
-      <ion-item disabled>
-        <ion-label>Item disabled with Input</ion-label>
-        <ion-input placeholder="Placeholder"></ion-input>
-      </ion-item>
+      <syg-item disabled>
+        <syg-label>Item disabled with Input</syg-label>
+        <syg-input placeholder="Placeholder"></syg-input>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Item with Input disabled</ion-label>
-        <ion-input placeholder="Placeholder" disabled></ion-input>
-      </ion-item>
-      
-      <ion-item>
-        <ion-label position="floating">Item with Select</ion-label>
-        <ion-select>
-          <ion-select-option value="">No Game Console</ion-select-option>
-          <ion-select-option value="nes">NES</ion-select-option>
-          <ion-select-option value="n64" selected>Nintendo64</ion-select-option>
-          <ion-select-option value="ps">PlayStation</ion-select-option>
-          <ion-select-option value="genesis">Sega Genesis</ion-select-option>
-          <ion-select-option value="saturn">Sega Saturn</ion-select-option>
-          <ion-select-option value="snes">SNES</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Item with Input disabled</syg-label>
+        <syg-input placeholder="Placeholder" disabled></syg-input>
+      </syg-item>
 
-      <ion-item disabled>
-        <ion-label position="floating">Item disabled with Select</ion-label>
-        <ion-select>
-          <ion-select-option value="">No Game Console</ion-select-option>
-          <ion-select-option value="nes">NES</ion-select-option>
-          <ion-select-option value="n64" selected>Nintendo64</ion-select-option>
-          <ion-select-option value="ps">PlayStation</ion-select-option>
-          <ion-select-option value="genesis">Sega Genesis</ion-select-option>
-          <ion-select-option value="saturn">Sega Saturn</ion-select-option>
-          <ion-select-option value="snes">SNES</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label position="floating">Item with Select</syg-label>
+        <syg-select>
+          <syg-select-option value="">No Game Console</syg-select-option>
+          <syg-select-option value="nes">NES</syg-select-option>
+          <syg-select-option value="n64" selected>Nintendo64</syg-select-option>
+          <syg-select-option value="ps">PlayStation</syg-select-option>
+          <syg-select-option value="genesis">Sega Genesis</syg-select-option>
+          <syg-select-option value="saturn">Sega Saturn</syg-select-option>
+          <syg-select-option value="snes">SNES</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label position="floating">Item with Select disabled</ion-label>
-        <ion-select disabled>
-          <ion-select-option value="">No Game Console</ion-select-option>
-          <ion-select-option value="nes">NES</ion-select-option>
-          <ion-select-option value="n64" selected>Nintendo64</ion-select-option>
-          <ion-select-option value="ps">PlayStation</ion-select-option>
-          <ion-select-option value="genesis">Sega Genesis</ion-select-option>
-          <ion-select-option value="saturn">Sega Saturn</ion-select-option>
-          <ion-select-option value="snes">SNES</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item disabled>
+        <syg-label position="floating">Item disabled with Select</syg-label>
+        <syg-select>
+          <syg-select-option value="">No Game Console</syg-select-option>
+          <syg-select-option value="nes">NES</syg-select-option>
+          <syg-select-option value="n64" selected>Nintendo64</syg-select-option>
+          <syg-select-option value="ps">PlayStation</syg-select-option>
+          <syg-select-option value="genesis">Sega Genesis</syg-select-option>
+          <syg-select-option value="saturn">Sega Saturn</syg-select-option>
+          <syg-select-option value="snes">SNES</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Item with Toggle</ion-label>
-        <ion-toggle slot="end"></ion-toggle>
-      </ion-item>
+      <syg-item>
+        <syg-label position="floating">Item with Select disabled</syg-label>
+        <syg-select disabled>
+          <syg-select-option value="">No Game Console</syg-select-option>
+          <syg-select-option value="nes">NES</syg-select-option>
+          <syg-select-option value="n64" selected>Nintendo64</syg-select-option>
+          <syg-select-option value="ps">PlayStation</syg-select-option>
+          <syg-select-option value="genesis">Sega Genesis</syg-select-option>
+          <syg-select-option value="saturn">Sega Saturn</syg-select-option>
+          <syg-select-option value="snes">SNES</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item disabled>
-        <ion-label>Item disabled with Toggle</ion-label>
-        <ion-toggle slot="end"></ion-toggle>
-      </ion-item>
+      <syg-item>
+        <syg-label>Item with Toggle</syg-label>
+        <syg-toggle slot="end"></syg-toggle>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Item with Toggle disabled</ion-label>
-        <ion-toggle slot="end" disabled></ion-toggle>
-      </ion-item>
+      <syg-item disabled>
+        <syg-label>Item disabled with Toggle</syg-label>
+        <syg-toggle slot="end"></syg-toggle>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Item with Radio</ion-label>
-        <ion-radio slot="start" value="biff"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Item with Toggle disabled</syg-label>
+        <syg-toggle slot="end" disabled></syg-toggle>
+      </syg-item>
 
-      <ion-item disabled>
-        <ion-label>Item disabled with Radio</ion-label>
-        <ion-radio slot="start" value="biff"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Item with Radio</syg-label>
+        <syg-radio slot="start" value="biff"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Item with Radio disabled</ion-label>
-        <ion-radio slot="start" value="biff" disabled></ion-radio>
-      </ion-item>
+      <syg-item disabled>
+        <syg-label>Item disabled with Radio</syg-label>
+        <syg-radio slot="start" value="biff"></syg-radio>
+      </syg-item>
+
+      <syg-item>
+        <syg-label>Item with Radio disabled</syg-label>
+        <syg-radio slot="start" value="biff" disabled></syg-radio>
+      </syg-item>
 
     </main>
   </body>

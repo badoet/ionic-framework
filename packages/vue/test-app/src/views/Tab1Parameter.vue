@@ -2,9 +2,9 @@
   <ion-page :data-pageid="'tab1' + $props.id">
     <ion-header>
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Tab 1 Child {{ $props.id }}</ion-title>
       </ion-toolbar>
     </ion-header>

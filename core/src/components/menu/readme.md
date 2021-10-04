@@ -1,4 +1,4 @@
-# ion-menu
+# syg-menu
 
 The Menu component is a navigation drawer that slides in from the side of the current view.
 By default, it slides in from the left, but the side can be overridden.
@@ -28,58 +28,58 @@ interface MenuCustomEvent<T = any> extends CustomEvent {
 ### Angular
 
 ```html
-<ion-menu side="start" menuId="first" contentId="main">
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Start Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
+<syg-menu side="start" menuId="first" contentId="main">
+  <syg-header>
+    <syg-toolbar color="primary">
+      <syg-title>Start Menu</syg-title>
+    </syg-toolbar>
+  </syg-header>
+  <syg-content>
+    <syg-list>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+    </syg-list>
+  </syg-content>
+</syg-menu>
 
-<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
-  <ion-header>
-    <ion-toolbar color="tertiary">
-      <ion-title>Custom Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
+<syg-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <syg-header>
+    <syg-toolbar color="tertiary">
+      <syg-title>Custom Menu</syg-title>
+    </syg-toolbar>
+  </syg-header>
+  <syg-content>
+    <syg-list>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+    </syg-list>
+  </syg-content>
+</syg-menu>
 
-<ion-menu side="end" type="push" contentId="main">
-  <ion-header>
-    <ion-toolbar color="danger">
-      <ion-title>End Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
+<syg-menu side="end" type="push" contentId="main">
+  <syg-header>
+    <syg-toolbar color="danger">
+      <syg-title>End Menu</syg-title>
+    </syg-toolbar>
+  </syg-header>
+  <syg-content>
+    <syg-list>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+      <syg-item>Menu Item</syg-item>
+    </syg-list>
+  </syg-content>
+</syg-menu>
 
-<ion-router-outlet id="main"></ion-router-outlet>
+<syg-router-outlet id="main"></syg-router-outlet>
 ```
 
 ```typescript
@@ -121,72 +121,72 @@ constructor(private menu: MenuController) { }
 ### Javascript
 
 ```html
-<ion-app>
-  <ion-menu side="start" menu-id="first" content-id="main">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+<syg-app>
+  <syg-menu side="start" menu-id="first" content-id="main">
+    <syg-header>
+      <syg-toolbar color="primary">
+        <syg-title>Start Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-menu>
 
-  <ion-menu side="start" menu-id="custom" class="my-custom-menu" content-id="main">
-    <ion-header>
-      <ion-toolbar color="tertiary">
-        <ion-title>Custom Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <syg-menu side="start" menu-id="custom" class="my-custom-menu" content-id="main">
+    <syg-header>
+      <syg-toolbar color="tertiary">
+        <syg-title>Custom Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-menu>
 
-  <ion-menu side="end" type="push" content-id="main">
-    <ion-header>
-      <ion-toolbar color="danger">
-        <ion-title>End Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <syg-menu side="end" type="push" content-id="main">
+    <syg-header>
+      <syg-toolbar color="danger">
+        <syg-title>End Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-menu>
 
-  <div class="ion-page" id="main">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <ion-button expand="block" onclick="openFirst()">Open Start Menu</ion-button>
-      <ion-button expand="block" onclick="openEnd()">Open End Menu</ion-button>
-      <ion-button expand="block" onclick="openCustom()">Open Custom Menu</ion-button>
-    </ion-content>
+  <div class="syg-page" id="main">
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Menu - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content class="syg-padding">
+      <syg-button expand="block" onclick="openFirst()">Open Start Menu</syg-button>
+      <syg-button expand="block" onclick="openEnd()">Open End Menu</syg-button>
+      <syg-button expand="block" onclick="openCustom()">Open Custom Menu</syg-button>
+    </syg-content>
   </div>
 
-</ion-app>
+</syg-app>
 ```
 
 ```javascript
@@ -311,63 +311,63 @@ export class MenuExample {
 
   render() {
     return [
-      <ion-menu side="start" menuId="first" contentId="main">
-        <ion-header>
-          <ion-toolbar color="primary">
-            <ion-title>Start Menu</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-          <ion-list>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-          </ion-list>
-        </ion-content>
-      </ion-menu>,
+      <syg-menu side="start" menuId="first" contentId="main">
+        <syg-header>
+          <syg-toolbar color="primary">
+            <syg-title>Start Menu</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
+          <syg-list>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+          </syg-list>
+        </syg-content>
+      </syg-menu>,
 
-      <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
-        <ion-header>
-          <ion-toolbar color="tertiary">
-            <ion-title>Custom Menu</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-          <ion-list>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-          </ion-list>
-        </ion-content>
-      </ion-menu>,
+      <syg-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+        <syg-header>
+          <syg-toolbar color="tertiary">
+            <syg-title>Custom Menu</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
+          <syg-list>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+          </syg-list>
+        </syg-content>
+      </syg-menu>,
 
-      <ion-menu side="end" type="push" contentId="main">
-        <ion-header>
-          <ion-toolbar color="danger">
-            <ion-title>End Menu</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-          <ion-list>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-            <ion-item>Menu Item</ion-item>
-          </ion-list>
-        </ion-content>
-      </ion-menu>,
+      <syg-menu side="end" type="push" contentId="main">
+        <syg-header>
+          <syg-toolbar color="danger">
+            <syg-title>End Menu</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
+          <syg-list>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+            <syg-item>Menu Item</syg-item>
+          </syg-list>
+        </syg-content>
+      </syg-menu>,
 
       // A router outlet can be placed here instead
-      <ion-content id="main">
-        <ion-button expand="block" onClick={() => this.openFirst()}>Open Start Menu</ion-button>
-        <ion-button expand="block" onClick={() => this.openEnd()}>Open End Menu</ion-button>
-        <ion-button expand="block" onClick={() => this.openCustom()}>Open Custom Menu</ion-button>
-      </ion-content>
+      <syg-content id="main">
+        <syg-button expand="block" onClick={() => this.openFirst()}>Open Start Menu</syg-button>
+        <syg-button expand="block" onClick={() => this.openEnd()}>Open End Menu</syg-button>
+        <syg-button expand="block" onClick={() => this.openCustom()}>Open Custom Menu</syg-button>
+      </syg-content>
     ];
   }
 }
@@ -384,58 +384,58 @@ export class MenuExample {
 
 ```html
 <template>
-  <ion-menu side="start" menu-id="first" content-id="main">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <syg-menu side="start" menu-id="first" content-id="main">
+    <syg-header>
+      <syg-toolbar color="primary">
+        <syg-title>Start Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-menu>
 
-  <ion-menu side="start" menu-id="custom" class="my-custom-menu" content-id="main">
-    <ion-header>
-      <ion-toolbar color="tertiary">
-        <ion-title>Custom Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <syg-menu side="start" menu-id="custom" class="my-custom-menu" content-id="main">
+    <syg-header>
+      <syg-toolbar color="tertiary">
+        <syg-title>Custom Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-menu>
 
-  <ion-menu side="end" type="push" content-id="main">
-    <ion-header>
-      <ion-toolbar color="danger">
-        <ion-title>End Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <syg-menu side="end" type="push" content-id="main">
+    <syg-header>
+      <syg-toolbar color="danger">
+        <syg-title>End Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+        <syg-item>Menu Item</syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-menu>
 
-  <ion-router-outlet id="main"></ion-router-outlet>
+  <syg-router-outlet id="main"></syg-router-outlet>
 </template>
 <style>
 .my-custom-menu {
@@ -491,7 +491,7 @@ export default defineComponent({
 
 | Property       | Attribute        | Description                                                                                                                                                                                                                            | Type                  | Default     |
 | -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ----------- |
-| `contentId`    | `content-id`     | The `id` of the main content. When using a router this is typically `ion-router-outlet`. When not using a router, this is typically your main view's `ion-content`. This is not the id of the `ion-content` inside of your `ion-menu`. | `string \| undefined` | `undefined` |
+| `contentId`    | `content-id`     | The `id` of the main content. When using a router this is typically `syg-router-outlet`. When not using a router, this is typically your main view's `syg-content`. This is not the id of the `syg-content` inside of your `syg-menu`. | `string \| undefined` | `undefined` |
 | `disabled`     | `disabled`       | If `true`, the menu is disabled.                                                                                                                                                                                                       | `boolean`             | `false`     |
 | `maxEdgeStart` | `max-edge-start` | The edge threshold for dragging the menu open. If a drag/swipe happens over this value, the menu is not triggered.                                                                                                                     | `number`              | `50`        |
 | `menuId`       | `menu-id`        | An id for the menu.                                                                                                                                                                                                                    | `string \| undefined` | `undefined` |
@@ -528,7 +528,7 @@ Type: `Promise<boolean>`
 Returns `true` is the menu is active.
 
 A menu is active when it can be opened or closed, meaning it's enabled
-and it's not part of a `ion-split-pane`.
+and it's not part of a `syg-split-pane`.
 
 #### Returns
 
@@ -605,13 +605,13 @@ Type: `Promise<boolean>`
 
 ### Depends on
 
-- [ion-backdrop](../backdrop)
+- [syg-backdrop](../backdrop)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-menu --> ion-backdrop
-  style ion-menu fill:#f9f,stroke:#333,stroke-width:4px
+  syg-menu --> syg-backdrop
+  style syg-menu fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

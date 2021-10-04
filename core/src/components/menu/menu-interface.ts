@@ -1,7 +1,7 @@
 import { Animation, Side } from '../../interface';
 
 export interface MenuI {
-  el: HTMLIonMenuElement;
+  el: HTMLSygMenuElement;
   side: Side;
   menuId?: string;
   disabled: boolean;
@@ -30,8 +30,8 @@ export interface MenuControllerI {
   _unregister(menu: MenuI): void;
   _setActiveMenu(menu: MenuI): void;
 
-  getMenus(): Promise<HTMLIonMenuElement[]>;
-  getOpenSync(): HTMLIonMenuElement | undefined;
+  getMenus(): Promise<HTMLSygMenuElement[]>;
+  getOpenSync(): HTMLSygMenuElement | undefined;
 }
 
 export interface MenuChangeEventDetail {
@@ -41,5 +41,5 @@ export interface MenuChangeEventDetail {
 
 export interface MenuCustomEvent<T = any> extends CustomEvent {
   detail: T;
-  target: HTMLIonMenuElement;
+  target: HTMLSygMenuElement;
 }

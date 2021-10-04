@@ -1,4 +1,4 @@
-# ion-back-button
+# syg-back-button
 
 The back button navigates back in the app's history upon click. It is smart enough to know what to render based on the mode and when to show based on the navigation stack.
 
@@ -14,53 +14,53 @@ To change what is displayed in the back button, use the `text` and `icon` proper
 
 ```html
 <!-- Default back button -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button></syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 
 <!-- Back button with a default href -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="home"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button defaultHref="home"></syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 
 <!-- Back button with custom text and icon -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button
           [text]="buttonText"
           [icon]="buttonIcon">
-      </ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+      </syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 
 <!-- Back button with no text and custom icon -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button text="" icon="add"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button text="" icon="add"></syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 
 <!-- Danger back button next to a menu button -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-      <ion-back-button color="danger"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-menu-button></syg-menu-button>
+      <syg-back-button color="danger"></syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 ```
 
 
@@ -68,50 +68,50 @@ To change what is displayed in the back button, use the `text` and `icon` proper
 
 ```html
 <!-- Default back button -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button></syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 
 <!-- Back button with a default href -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button default-href="home"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button default-href="home"></syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 
 <!-- Back button with custom text and icon -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button text="Volver" icon="close"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button text="Volver" icon="close"></syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 
 <!-- Back button with no text and custom icon -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button text="" icon="add"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button text="" icon="add"></syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 
 <!-- Danger back button next to a menu button -->
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-      <ion-back-button color="danger"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-menu-button></syg-menu-button>
+      <syg-back-button color="danger"></syg-back-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
 ```
 
 
@@ -189,53 +189,53 @@ export class BackButtonExample {
 
     return [
       // Default back button
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>,
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-back-button></syg-back-button>
+          </syg-buttons>
+        </syg-toolbar>
+      </syg-header>,
 
       // Back button with a default href
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-back-button defaultHref="home"></ion-back-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>,
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-back-button defaultHref="home"></syg-back-button>
+          </syg-buttons>
+        </syg-toolbar>
+      </syg-header>,
 
       // Back button with custom text and icon
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-back-button
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-back-button
               text={buttonText}
               icon={buttonIcon}>
-            </ion-back-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>,
+            </syg-back-button>
+          </syg-buttons>
+        </syg-toolbar>
+      </syg-header>,
 
       // Back button with no text and custom icon
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-back-button text="" icon="add"></ion-back-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>,
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-back-button text="" icon="add"></syg-back-button>
+          </syg-buttons>
+        </syg-toolbar>
+      </syg-header>,
 
       // Danger back button next to a menu button
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-            <ion-back-button color="danger"></ion-back-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-menu-button></syg-menu-button>
+            <syg-back-button color="danger"></syg-back-button>
+          </syg-buttons>
+        </syg-toolbar>
+      </syg-header>
     ];
   }
 }
@@ -247,53 +247,53 @@ export class BackButtonExample {
 ```html
 <template>
   <!-- Default back button -->
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  <syg-header>
+    <syg-toolbar>
+      <syg-buttons slot="start">
+        <syg-back-button></syg-back-button>
+      </syg-buttons>
+    </syg-toolbar>
+  </syg-header>
 
   <!-- Back button with a default href -->
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button default-href="home"></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  <syg-header>
+    <syg-toolbar>
+      <syg-buttons slot="start">
+        <syg-back-button default-href="home"></syg-back-button>
+      </syg-buttons>
+    </syg-toolbar>
+  </syg-header>
 
   <!-- Back button with custom text and icon -->
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button
+  <syg-header>
+    <syg-toolbar>
+      <syg-buttons slot="start">
+        <syg-back-button
             :text="buttonText"
             :icon="buttonIcon">
-        </ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+        </syg-back-button>
+      </syg-buttons>
+    </syg-toolbar>
+  </syg-header>
 
   <!-- Back button with no text and custom icon -->
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button text="" icon="add"></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  <syg-header>
+    <syg-toolbar>
+      <syg-buttons slot="start">
+        <syg-back-button text="" icon="add"></syg-back-button>
+      </syg-buttons>
+    </syg-toolbar>
+  </syg-header>
 
   <!-- Danger back button next to a menu button -->
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-        <ion-back-button color="danger"></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  <syg-header>
+    <syg-toolbar>
+      <syg-buttons slot="start">
+        <syg-menu-button></syg-menu-button>
+        <syg-back-button color="danger"></syg-back-button>
+      </syg-buttons>
+    </syg-toolbar>
+  </syg-header>
 </template>
 
 <script>
@@ -374,14 +374,14 @@ export default defineComponent({
 ### Depends on
 
 - ion-icon
-- [ion-ripple-effect](../ripple-effect)
+- [syg-ripple-effect](../ripple-effect)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-back-button --> ion-icon
-  ion-back-button --> ion-ripple-effect
-  style ion-back-button fill:#f9f,stroke:#333,stroke-width:4px
+  syg-back-button --> ion-icon
+  syg-back-button --> syg-ripple-effect
+  style syg-back-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

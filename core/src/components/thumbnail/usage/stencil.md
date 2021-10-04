@@ -8,16 +8,16 @@ import { Component, h } from '@stencil/core';
 export class ThumbnailExample {
   render() {
     return [
-      <ion-thumbnail>
+      <syg-thumbnail>
         <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
-      </ion-thumbnail>,
+      </syg-thumbnail>,
 
-      <ion-item>
-        <ion-thumbnail slot="start">
+      <syg-item>
+        <syg-thumbnail slot="start">
           <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
-        </ion-thumbnail>
-        <ion-label>Item Thumbnail</ion-label>
-      </ion-item>
+        </syg-thumbnail>
+        <syg-label>Item Thumbnail</syg-label>
+      </syg-item>
     ];
   }
 }

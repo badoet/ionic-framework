@@ -53,7 +53,7 @@
 }
 
 :host(.modal-interactive) .modal-wrapper,
-:host(.modal-interactive) ion-backdrop {
+:host(.modal-interactive) syg-backdrop {
   pointer-events: auto;
 }
 

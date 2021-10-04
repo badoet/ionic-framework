@@ -77,8 +77,8 @@ export const componentOnReady = (el: any, callback: any) => {
 
 /**
  * Elements inside of web components sometimes need to inherit global attributes
- * set on the host. For example, the inner input in `ion-input` should inherit
- * the `title` attribute that developers set directly on `ion-input`. This
+ * set on the host. For example, the inner input in `syg-input` should inherit
+ * the `title` attribute that developers set directly on `syg-input`. This
  * helper function should be called in componentWillLoad and assigned to a variable
  * that is later used in the render function.
  *
@@ -104,7 +104,7 @@ export const inheritAttributes = (el: HTMLElement, attributes: string[] = []) =>
 export const addEventListener = (el: any, eventName: string, callback: any, opts?: any) => {
   if (typeof (window as any) !== 'undefined') {
     const win = window as any;
-    const config = win && win.Ionic && win.Ionic.config;
+    const config = win && win.Sygic && win.Sygic.config;
     if (config) {
       const ael = config.get('_ael');
       if (ael) {
@@ -121,7 +121,7 @@ export const addEventListener = (el: any, eventName: string, callback: any, opts
 export const removeEventListener = (el: any, eventName: string, callback: any, opts?: any) => {
   if (typeof (window as any) !== 'undefined') {
     const win = window as any;
-    const config = win && win.Ionic && win.Ionic.config;
+    const config = win && win.Sygic && win.Sygic.config;
     if (config) {
       const rel = config.get('_rel');
       if (rel) {
@@ -166,10 +166,10 @@ export const hasShadowDom = (el: HTMLElement) => {
   return !!el.shadowRoot && !!(el as any).attachShadow;
 };
 
-export const findItemLabel = (componentEl: HTMLElement): HTMLIonLabelElement | null => {
-  const itemEl = componentEl.closest('ion-item');
+export const findItemLabel = (componentEl: HTMLElement): HTMLSygLabelElement | null => {
+  const itemEl = componentEl.closest('syg-item');
   if (itemEl) {
-    return itemEl.querySelector('ion-label');
+    return itemEl.querySelector('syg-label');
   }
   return null;
 };
@@ -182,11 +182,11 @@ export const focusElement = (el: HTMLElement) => {
    * the focus-visible utility will not run because
    * it is expecting a keyboard event to have triggered this;
    * however, there are times when we need to manually control
-   * this behavior so we call the `setFocus` method on ion-app
+   * this behavior so we call the `setFocus` method on syg-app
    * which will let us explicitly set the elements to focus.
    */
-  if (el.classList.contains('ion-focusable')) {
-    const app = el.closest('ion-app');
+  if (el.classList.contains('syg-focusable')) {
+    const app = el.closest('syg-app');
     if (app) {
       app.setFocus([el]);
     }
@@ -194,7 +194,7 @@ export const focusElement = (el: HTMLElement) => {
 };
 
 /**
- * This method is used for Ionic's input components that use Shadow DOM. In
+ * This method is used for Sygic's input components that use Shadow DOM. In
  * order to properly label the inputs to work with screen readers, we need
  * to get the text content of the label outside of the shadow root and pass
  * it to the input inside of the shadow root.
@@ -210,7 +210,7 @@ export const getAriaLabel = (componentEl: HTMLElement, inputId: string): { label
   let labelText;
 
   // If the user provides their own label via the aria-labelledby attr
-  // we should use that instead of looking for an ion-label
+  // we should use that instead of looking for an syg-label
   const labelledBy = componentEl.getAttribute('aria-labelledby');
 
   // Grab the id off of the component in case they are using

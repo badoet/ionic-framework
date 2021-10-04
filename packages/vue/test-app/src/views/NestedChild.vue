@@ -2,9 +2,9 @@
   <ion-page data-pageid="nestedchild">
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Nested Child</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -17,8 +17,8 @@
       </ion-header>
 
       <div class="ion-padding">
-        <ion-button router-link="/tabs/tab1" id="nested-tabs">Tab 1</ion-button>
-        <ion-button router-link="/nested/two" id="nested-child-two">Nested Child Two</ion-button>
+        <syg-button router-link="/tabs/tab1" id="nested-tabs">Tab 1</syg-button>
+        <syg-button router-link="/nested/two" id="nested-child-two">Nested Child Two</syg-button>
       </div>
     </ion-content>
   </ion-page>

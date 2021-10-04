@@ -2,26 +2,26 @@
 
 ```html
 <template>
-  <ion-breadcrumbs>
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs>
+    <syg-breadcrumb href="#">
       Home
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 </template>
 
 <script>
@@ -38,26 +38,26 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-breadcrumbs color="secondary">
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs color="secondary">
+    <syg-breadcrumb href="#">
       Home
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 </template>
 
 <script>
@@ -75,52 +75,52 @@ export default defineComponent({
 ```html
 <template>
   <!-- Icon start -->
-  <ion-breadcrumbs>
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs>
+    <syg-breadcrumb href="#">
       <ion-icon slot="start" :icon="home"></ion-icon>
       Home
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#files">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#files">
       <ion-icon slot="start" :icon="folder"></ion-icon>
       Files
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#projects">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#projects">
       <ion-icon slot="start" :icon="folder"></ion-icon>
       Projects
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#user-research">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#user-research">
       <ion-icon slot="start" :icon="folder"></ion-icon>
       User Research
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       <ion-icon slot="start" :icon="document"></ion-icon>
       Survey.txt
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 
   <!-- Icon end -->
-  <ion-breadcrumbs>
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs>
+    <syg-breadcrumb href="#">
       Home
       <ion-icon slot="end" :icon="home"></ion-icon>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#files">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#files">
       Files
       <ion-icon slot="end" :icon="folder"></ion-icon>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#projects">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#projects">
       Projects
       <ion-icon slot="end" :icon="folder"></ion-icon>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#user-research">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#user-research">
       User Research
       <ion-icon slot="end" :icon="folder"></ion-icon>
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       Survey.txt
       <ion-icon slot="end" :icon="document"></ion-icon>
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 </template>
 
 <script>
@@ -142,58 +142,58 @@ export default defineComponent({
 ```html
 <template>
   <!-- Custom separator text -->
-  <ion-breadcrumbs>
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs>
+    <syg-breadcrumb href="#">
       Home
       <span slot="separator">|</span>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
       <span slot="separator">|</span>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
       <span slot="separator">|</span>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
       <span slot="separator">|</span>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
       <span slot="separator">|</span>
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 
   <!-- Custom separator icon -->
-  <ion-breadcrumbs>
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs>
+    <syg-breadcrumb href="#">
       Home
       <ion-icon slot="separator" :icon="arrowForward"></ion-icon>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
       <ion-icon slot="separator" :icon="arrowForward"></ion-icon>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
       <ion-icon slot="separator" :icon="arrowForward"></ion-icon>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
       <ion-icon slot="separator" :icon="arrowForward"></ion-icon>
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
       <ion-icon slot="separator" :icon="arrowForward"></ion-icon>
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 </template>
 
 <script>
@@ -215,26 +215,26 @@ export default defineComponent({
 ```html
 <template>
   <!-- Max Items -->
-  <ion-breadcrumbs :max-items="4">
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs :max-items="4">
+    <syg-breadcrumb href="#">
       Home
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 </template>
 
 <script>
@@ -252,70 +252,70 @@ export default defineComponent({
 ```html
 <template>
   <!-- Items before collapse -->
-  <ion-breadcrumbs :max-items="4" :items-before-collapse="2">
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs :max-items="4" :items-before-collapse="2">
+    <syg-breadcrumb href="#">
       Home
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 
   <!-- Items after collapse -->
-  <ion-breadcrumbs :max-items="4" :items-after-collapse="3">
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs :max-items="4" :items-after-collapse="3">
+    <syg-breadcrumb href="#">
       Home
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 
   <!-- Items before and after collapse -->
-  <ion-breadcrumbs :max-items="4" :items-before-collapse="0" :items-after-collapse="3">
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs :max-items="4" :items-before-collapse="0" :items-after-collapse="3">
+    <syg-breadcrumb href="#">
       Home
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 </template>
 
 <script>
@@ -332,26 +332,26 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-breadcrumbs :max-items="maxBreadcrumbs" @ionCollapsedClick="expandBreadcrumbs()">
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs :max-items="maxBreadcrumbs" @ionCollapsedClick="expandBreadcrumbs()">
+    <syg-breadcrumb href="#">
       Home
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 </template>
 
 <script>
@@ -379,26 +379,26 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-breadcrumbs :max-items="4" @ionCollapsedClick="presentPopover($event)">
-    <ion-breadcrumb href="#">
+  <syg-breadcrumbs :max-items="4" @ionCollapsedClick="presentPopover($event)">
+    <syg-breadcrumb href="#">
       Home
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#electronics">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#electronics">
       Electronics
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#photography">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#photography">
       Photography
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#cameras">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#cameras">
       Cameras
-    </ion-breadcrumb>
-    <ion-breadcrumb href="#film">
+    </syg-breadcrumb>
+    <syg-breadcrumb href="#film">
       Film
-    </ion-breadcrumb>
-    <ion-breadcrumb>
+    </syg-breadcrumb>
+    <syg-breadcrumb>
       35 mm
-    </ion-breadcrumb>
-  </ion-breadcrumbs>
+    </syg-breadcrumb>
+  </syg-breadcrumbs>
 </template>
 
 <script>
@@ -426,13 +426,13 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-content>
-    <ion-list>
-      <ion-item v-for="breadcrumb in $props.collapsedBreadcrumbs" :href="breadcrumb.href">
-        <ion-label>{{ breadcrumb.textContent }}</ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+  <syg-content>
+    <syg-list>
+      <syg-item v-for="breadcrumb in $props.collapsedBreadcrumbs" :href="breadcrumb.href">
+        <syg-label>{{ breadcrumb.textContent }}</syg-label>
+      </syg-item>
+    </syg-list>
+  </syg-content>
 </template>
 
 <script>

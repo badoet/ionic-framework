@@ -10,19 +10,19 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   <script type="module">
     const forceCSSAnimations = new URLSearchParams(window.location.search).get('ionic:_forceCSSAnimations');
     if (forceCSSAnimations) {
       Element.prototype.animate = null;
     }
-    
-    import { createAnimation } from '../../../../dist/ionic/index.esm.js';
+
+    import { createAnimation } from '../../../../dist/syg/index.esm.js';
 
     const squareA = document.querySelector('.square-a');
-    
+
     const rootAnimation = createAnimation();
-    
+
     rootAnimation
       .addElement(squareA)
       .duration(1000)
@@ -33,19 +33,19 @@
       .beforeClearStyles(['padding-bottom'])
       .beforeAddRead(() => {
         const ev = new CustomEvent('beforeRead');
-        squareA.dispatchEvent(ev); 
+        squareA.dispatchEvent(ev);
       })
       .beforeAddWrite(() => {
         const ev = new CustomEvent('beforeWrite');
-        squareA.dispatchEvent(ev); 
+        squareA.dispatchEvent(ev);
       })
       .afterAddRead(() => {
         const ev = new CustomEvent('afterRead');
-        squareA.dispatchEvent(ev); 
+        squareA.dispatchEvent(ev);
       })
       .afterAddWrite(() => {
         const ev = new CustomEvent('afterWrite');
-        squareA.dispatchEvent(ev); 
+        squareA.dispatchEvent(ev);
       })
       .afterAddClass(['hello-world'])
       .afterRemoveClass(['test-class'])
@@ -59,27 +59,27 @@
       ])
       .onFinish(() => {
         const ev = new CustomEvent('ionAnimationFinished');
-        squareA.dispatchEvent(ev); 
+        squareA.dispatchEvent(ev);
       });
-      
+
     document.querySelector('.play').addEventListener('click', () => {
       rootAnimation.play();
     });
-    
+
     document.querySelector('.pause').addEventListener('click', () => {
       rootAnimation.pause();
     });
-    
+
     document.querySelector('.stop').addEventListener('click', () => {
       rootAnimation.stop();
     });
-    
+
     document.querySelector('.destroy').addEventListener('click', () => {
       rootAnimation.destroy();
     });
-    
+
   </script>
-  
+
   <style>
     .square {
       width: 100px;
@@ -95,26 +95,26 @@
   </head>
 
 <body
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Animations</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    
-    <ion-content>
-      <div class="ion-padding">
-        <ion-button class="play">Play</ion-button>
-        <ion-button class="pause">Pause</ion-button>
-        <ion-button class="stop">Stop</ion-button>
-        <ion-button class="destroy">Destroy</ion-button>
-        
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Animations</syg-title>
+      </syg-toolbar>
+    </syg-header>
+
+    <syg-content>
+      <div class="syg-padding">
+        <syg-button class="play">Play</syg-button>
+        <syg-button class="pause">Pause</syg-button>
+        <syg-button class="stop">Stop</syg-button>
+        <syg-button class="destroy">Destroy</syg-button>
+
         <div class="square square-a hello-world" style="padding-bottom: 20px">
           Hello
         </div>
       </div>
-    </ion-content>
-  </ion-app>
+    </syg-content>
+  </syg-app>
 </body>
 
 </html>

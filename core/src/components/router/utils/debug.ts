@@ -2,7 +2,7 @@ import { RouteChain, RouteRedirect } from './interface';
 import { generatePath } from './path';
 
 export const printRoutes = (routes: RouteChain[]) => {
-  console.group(`[ion-core] ROUTES[${routes.length}]`);
+  console.group(`[syg-core] ROUTES[${routes.length}]`);
   for (const chain of routes) {
     const path: string[] = [];
     chain.forEach(r => path.push(...r.path));
@@ -13,7 +13,7 @@ export const printRoutes = (routes: RouteChain[]) => {
 };
 
 export const printRedirects = (redirects: RouteRedirect[]) => {
-  console.group(`[ion-core] REDIRECTS[${redirects.length}]`);
+  console.group(`[syg-core] REDIRECTS[${redirects.length}]`);
   for (const redirect of redirects) {
     if (redirect.to) {
       console.debug('FROM: ', `$c ${generatePath(redirect.from)}`, 'font-weight: bold', ' TO: ', `$c ${generatePath(redirect.to.segments)}`, 'font-weight: bold');

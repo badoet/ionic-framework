@@ -13,7 +13,7 @@ test('alert: focus trap', async () => {
   await page.click('#multipleButtons');
   await page.waitForSelector('#multipleButtons');
 
-  let alert = await page.find('ion-alert');
+  let alert = await page.find('syg-alert');
 
   expect(alert).not.toBe(null);
   await alert.waitForVisible();
@@ -111,12 +111,12 @@ test('alert: htmlAttributes', async () => {
   await page.click('#basic');
   await page.waitForSelector('#basic');
 
-  let alert = await page.find('ion-alert');
+  let alert = await page.find('syg-alert');
 
   expect(alert).not.toBe(null);
   await alert.waitForVisible();
 
-  const attribute = await page.evaluate((el) => document.querySelector('ion-alert').getAttribute('data-testid'));
+  const attribute = await page.evaluate((el) => document.querySelector('syg-alert').getAttribute('data-testid'));
 
   expect(attribute).toEqual('basic-alert');
 });

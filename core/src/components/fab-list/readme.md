@@ -1,6 +1,6 @@
-# ion-fab-list
+# syg-fab-list
 
-The `ion-fab-list` element is a container for multiple fab buttons. This collection of fab buttons contains actions related to the main fab button and is flung out on click. To specify what side the buttons should appear on, set the `side` property to 'start', 'end', 'top', 'bottom'
+The `syg-fab-list` element is a container for multiple fab buttons. This collection of fab buttons contains actions related to the main fab button and is flung out on click. To specify what side the buttons should appear on, set the `side` property to 'start', 'end', 'top', 'bottom'
 
 <!-- Auto Generated Below -->
 
@@ -10,56 +10,56 @@ The `ion-fab-list` element is a container for multiple fab buttons. This collect
 ### Angular / javascript
 
 ```html
-<ion-fab vertical="center" horizontal="center">
-  <ion-fab-button>Share</ion-fab-button>
-  <ion-fab-list side="top">
-    <ion-fab-button>
+<syg-fab vertical="center" horizontal="center">
+  <syg-fab-button>Share</syg-fab-button>
+  <syg-fab-list side="top">
+    <syg-fab-button>
       <ion-icon name="logo-facebook"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
+    </syg-fab-button>
+    <syg-fab-button>
       <ion-icon name="logo-twitter"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
+    </syg-fab-button>
+    <syg-fab-button>
       <ion-icon name="logo-youtube"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
+    </syg-fab-button>
+  </syg-fab-list>
 
-  <ion-fab-list side="end">
-    <ion-fab-button>
+  <syg-fab-list side="end">
+    <syg-fab-button>
       <ion-icon name="logo-pwa"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
+    </syg-fab-button>
+    <syg-fab-button>
       <ion-icon name="logo-npm"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
+    </syg-fab-button>
+    <syg-fab-button>
       <ion-icon name="logo-ionic"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
+    </syg-fab-button>
+  </syg-fab-list>
 
-  <ion-fab-list side="bottom">
-    <ion-fab-button>
+  <syg-fab-list side="bottom">
+    <syg-fab-button>
       <ion-icon name="logo-github"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
+    </syg-fab-button>
+    <syg-fab-button>
       <ion-icon name="logo-javascript"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
+    </syg-fab-button>
+    <syg-fab-button>
       <ion-icon name="logo-angular"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
+    </syg-fab-button>
+  </syg-fab-list>
 
-  <ion-fab-list side="start">
-    <ion-fab-button>
+  <syg-fab-list side="start">
+    <syg-fab-button>
       <ion-icon name="logo-vimeo"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
+    </syg-fab-button>
+    <syg-fab-button>
       <ion-icon name="logo-chrome"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
+    </syg-fab-button>
+    <syg-fab-button>
       <ion-icon name="logo-react"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
-</ion-fab>
+    </syg-fab-button>
+  </syg-fab-list>
+</syg-fab>
 ```
 
 
@@ -140,56 +140,56 @@ import { Component, h } from '@stencil/core';
 export class FabListExample {
   render() {
     return [
-      <ion-fab vertical="center" horizontal="center">
-        <ion-fab-button>Share</ion-fab-button>
-        <ion-fab-list side="top">
-          <ion-fab-button>
+      <syg-fab vertical="center" horizontal="center">
+        <syg-fab-button>Share</syg-fab-button>
+        <syg-fab-list side="top">
+          <syg-fab-button>
             <ion-icon name="logo-facebook"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button>
+          </syg-fab-button>
+          <syg-fab-button>
             <ion-icon name="logo-twitter"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button>
+          </syg-fab-button>
+          <syg-fab-button>
             <ion-icon name="logo-youtube"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
+          </syg-fab-button>
+        </syg-fab-list>
 
-        <ion-fab-list side="end">
-          <ion-fab-button>
+        <syg-fab-list side="end">
+          <syg-fab-button>
             <ion-icon name="logo-pwa"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button>
+          </syg-fab-button>
+          <syg-fab-button>
             <ion-icon name="logo-npm"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button>
+          </syg-fab-button>
+          <syg-fab-button>
             <ion-icon name="logo-ionic"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
+          </syg-fab-button>
+        </syg-fab-list>
 
-        <ion-fab-list side="bottom">
-          <ion-fab-button>
+        <syg-fab-list side="bottom">
+          <syg-fab-button>
             <ion-icon name="logo-github"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button>
+          </syg-fab-button>
+          <syg-fab-button>
             <ion-icon name="logo-javascript"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button>
+          </syg-fab-button>
+          <syg-fab-button>
             <ion-icon name="logo-angular"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
+          </syg-fab-button>
+        </syg-fab-list>
 
-        <ion-fab-list side="start">
-          <ion-fab-button>
+        <syg-fab-list side="start">
+          <syg-fab-button>
             <ion-icon name="logo-vimeo"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button>
+          </syg-fab-button>
+          <syg-fab-button>
             <ion-icon name="logo-chrome"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button>
+          </syg-fab-button>
+          <syg-fab-button>
             <ion-icon name="logo-react"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-      </ion-fab>
+          </syg-fab-button>
+        </syg-fab-list>
+      </syg-fab>
     ];
   }
 }
@@ -200,20 +200,20 @@ export class FabListExample {
 
 ```html
 <template>
-  <ion-fab vertical="bottom" horizontal="end">
-    <ion-fab-button>Share</ion-fab-button>
+  <syg-fab vertical="bottom" horizontal="end">
+    <syg-fab-button>Share</syg-fab-button>
 
-    <ion-fab-list side="top">
-      <ion-fab-button>Facebook</ion-fab-button>
-      <ion-fab-button>Twitter</ion-fab-button>
-      <ion-fab-button>Youtube</ion-fab-button>
-    </ion-fab-list>
+    <syg-fab-list side="top">
+      <syg-fab-button>Facebook</syg-fab-button>
+      <syg-fab-button>Twitter</syg-fab-button>
+      <syg-fab-button>Youtube</syg-fab-button>
+    </syg-fab-list>
 
-    <ion-fab-list side="start">
-      <ion-fab-button>Vimeo</ion-fab-button>
-    </ion-fab-list>
+    <syg-fab-list side="start">
+      <syg-fab-button>Vimeo</syg-fab-button>
+    </syg-fab-list>
 
-  </ion-fab>
+  </syg-fab>
 </template>
 
 <script>

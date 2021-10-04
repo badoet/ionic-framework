@@ -6,7 +6,7 @@ test('locale', async () => {
   });
 
   const screenshotCompares = [];
-  const datetime = await page.find('ion-datetime');
+  const datetime = await page.find('syg-datetime');
 
   screenshotCompares.push(await page.compareScreenshot());
 

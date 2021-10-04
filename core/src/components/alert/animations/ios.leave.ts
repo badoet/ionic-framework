@@ -10,7 +10,7 @@ export const iosLeaveAnimation = (baseEl: HTMLElement): Animation => {
   const wrapperAnimation = createAnimation();
 
   backdropAnimation
-    .addElement(baseEl.querySelector('ion-backdrop')!)
+    .addElement(baseEl.querySelector('syg-backdrop')!)
     .fromTo('opacity', 'var(--backdrop-opacity)', 0);
 
   wrapperAnimation

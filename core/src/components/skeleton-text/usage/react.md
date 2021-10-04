@@ -30,7 +30,7 @@ export const SkeletonTextExample: React.FC = () => {
     <IonContent>
       {data ? (
         <>
-          <div className="ion-padding">
+          <div className="syg-padding">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est. Cras iaculis pulvinar
             arcu non vehicula. Fusce at quam a eros malesuada condimentum. Aliquam tincidunt tincidunt
             vehicula.
@@ -74,7 +74,7 @@ export const SkeletonTextExample: React.FC = () => {
         </>
       ) : (
         <>
-          <div className="ion-padding custom-skeleton">
+          <div className="syg-padding custom-skeleton">
             <IonSkeletonText animated style={{ width: '60%' }} />
             <IonSkeletonText animated />
             <IonSkeletonText animated style={{ width: '88%' }} />
@@ -144,11 +144,11 @@ export const SkeletonTextExample: React.FC = () => {
 
 ```css
 /* Custom Skeleton Line Height and Margin */
-.custom-skeleton ion-skeleton-text {
+.custom-skeleton syg-skeleton-text {
   line-height: 13px;
 }
 
-.custom-skeleton ion-skeleton-text:last-child {
+.custom-skeleton syg-skeleton-text:last-child {
   margin-bottom: 5px;
 }
 ```

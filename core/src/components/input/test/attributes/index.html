@@ -9,68 +9,68 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Input - Attributes</ion-title>
-        <ion-buttons slot="primary">
-          <ion-button>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Input - Attributes</syg-title>
+        <syg-buttons slot="primary">
+          <syg-button>
             <ion-icon slot="icon-only" name="menu"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+          </syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
-      <ion-list>
-        <ion-label id="itemless">My Label</ion-label>
-        <ion-input aria-labelledby="itemless"></ion-input>
+    <syg-content>
+      <syg-list>
+        <syg-label id="itemless">My Label</syg-label>
+        <syg-input aria-labelledby="itemless"></syg-input>
 
-        <ion-item>
-          <ion-label position="stacked">Number</ion-label>
-          <ion-input id="input1" type="number" placeholder="Placeholder" value="1234" name="holaa" min="0" max="10000" step="2" autocomplete="on"
-            autocorrect="on" autocapitalize="on" spellcheck="true" maxlength="4" disabled readonly></ion-input>
-        </ion-item>
+        <syg-item>
+          <syg-label position="stacked">Number</syg-label>
+          <syg-input id="input1" type="number" placeholder="Placeholder" value="1234" name="holaa" min="0" max="10000" step="2" autocomplete="on"
+            autocorrect="on" autocapitalize="on" spellcheck="true" maxlength="4" disabled readonly></syg-input>
+        </syg-item>
 
-        <ion-item id="custom">
-          <ion-label position="stacked">Text</ion-label>
-          <ion-input id="input2" type="text" placeholder="my placeholder" value="test"></ion-input>
-        </ion-item>
+        <syg-item id="custom">
+          <syg-label position="stacked">Text</syg-label>
+          <syg-input id="input2" type="text" placeholder="my placeholder" value="test"></syg-input>
+        </syg-item>
 
-        <ion-item>
-          <ion-label id="myLabel" stacked>Default</ion-label>
-          <ion-input id="input3" value="inputs"></ion-input>
-        </ion-item>
+        <syg-item>
+          <syg-label id="myLabel" stacked>Default</syg-label>
+          <syg-input id="input3" value="inputs"></syg-input>
+        </syg-item>
 
-        <ion-item>
-          <ion-input id="input4" placeholder="No Label" aria-label="input4"></ion-input>
-        </ion-item>
+        <syg-item>
+          <syg-input id="input4" placeholder="No Label" aria-label="input4"></syg-input>
+        </syg-item>
 
-        <ion-list>
-          <ion-item>
+        <syg-list>
+          <syg-item>
             Number Test&nbsp;
             <span id="numberInputResult"></span>
-          </ion-item>
-          <ion-item>
+          </syg-item>
+          <syg-item>
             Text Test&nbsp;
             <span id="textInputResult"></span>
-          </ion-item>
-          <ion-item>
+          </syg-item>
+          <syg-item>
             Default Test&nbsp;
             <span id="defaultInputResult"></span>
-          </ion-item>
-          <ion-item>
+          </syg-item>
+          <syg-item>
             No Label Test&nbsp;
             <span id="noLabelInputResult"></span>
-          </ion-item>
-        </ion-list>
+          </syg-item>
+        </syg-list>
 
-      </ion-list>
-    </ion-content>
+      </syg-list>
+    </syg-content>
 
     <script>
       var numberInput = checkInput('input1');
@@ -90,7 +90,7 @@
         var resultEl = document.getElementById(resultId);
         resultEl.innerHTML = result ? 'passed' : 'FAILED';
 
-        var itemEl = resultEl.closest('ion-item');
+        var itemEl = resultEl.closest('syg-item');
         itemEl.color = result ? 'secondary' : 'danger';
       }
 
@@ -166,7 +166,7 @@
       }
 
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

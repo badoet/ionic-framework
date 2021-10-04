@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Host, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 @Component({
-  tag: 'ion-thumbnail',
+  tag: 'syg-thumbnail',
   styleUrl: 'thumbnail.scss',
   shadow: true
 })
@@ -11,7 +11,7 @@ export class Thumbnail implements ComponentInterface {
 
   render() {
     return (
-      <Host class={getIonMode(this)}>
+      <Host class={getSygMode(this)}>
         <slot></slot>
       </Host>
     );

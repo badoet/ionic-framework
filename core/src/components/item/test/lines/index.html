@@ -9,227 +9,227 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Item Lines</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Item Lines</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-list-header>
-        <ion-label>Header</ion-label>
-      </ion-list-header>
-
-      <!-- Default -->
-      <ion-item>
-        <ion-label>Default Item Lines</ion-label>
-      </ion-item>
-
-      <!-- Lines Inset -->
-      <ion-item lines="inset">
-        <ion-label>Item Lines Inset</ion-label>
-      </ion-item>
-
-      <!-- Lines Full -->
-      <ion-item lines="full">
-        <ion-label>Item Lines Full</ion-label>
-      </ion-item>
+    <syg-content id="content">
+      <syg-list-header>
+        <syg-label>Header</syg-label>
+      </syg-list-header>
 
       <!-- Default -->
-      <ion-item>
-        <ion-icon name="star" slot="start"></ion-icon>
-        <ion-label>Default Item Lines</ion-label>
-        <ion-icon name="information-circle" slot="end"></ion-icon>
-      </ion-item>
+      <syg-item>
+        <syg-label>Default Item Lines</syg-label>
+      </syg-item>
 
       <!-- Lines Inset -->
-      <ion-item lines="inset">
-        <ion-icon name="star" slot="start"></ion-icon>
-        <ion-label>Item Lines Inset</ion-label>
-        <ion-icon name="information-circle" slot="end"></ion-icon>
-      </ion-item>
+      <syg-item lines="inset">
+        <syg-label>Item Lines Inset</syg-label>
+      </syg-item>
 
       <!-- Lines Full -->
-      <ion-item lines="full">
+      <syg-item lines="full">
+        <syg-label>Item Lines Full</syg-label>
+      </syg-item>
+
+      <!-- Default -->
+      <syg-item>
         <ion-icon name="star" slot="start"></ion-icon>
-        <ion-label>Item Lines Full</ion-label>
-        <ion-icon name="information-circle" slot="end"></ion-icon>
-      </ion-item>
+        <syg-label>Default Item Lines</syg-label>
+        <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+      </syg-item>
+
+      <!-- Lines Inset -->
+      <syg-item lines="inset">
+        <ion-icon name="star" slot="start"></ion-icon>
+        <syg-label>Item Lines Inset</syg-label>
+        <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+      </syg-item>
+
+      <!-- Lines Full -->
+      <syg-item lines="full">
+        <ion-icon name="star" slot="start"></ion-icon>
+        <syg-label>Item Lines Full</syg-label>
+        <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+      </syg-item>
 
       <!-- Lines None -->
-      <ion-item lines="none">
+      <syg-item lines="none">
         <ion-icon name="star" slot="start"></ion-icon>
-        <ion-label>Item Lines None</ion-label>
-        <ion-icon name="information-circle" slot="end"></ion-icon>
-      </ion-item>
+        <syg-label>Item Lines None</syg-label>
+        <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+      </syg-item>
 
       <!-- List Lines Full -->
-      <ion-list lines="full">
-        <ion-list-header>
-          <ion-label>
+      <syg-list lines="full">
+        <syg-list-header>
+          <syg-label>
             List Full Lines
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-label>Item</ion-label>
-        </ion-item>
-        <ion-item lines="inset">
-          <ion-label>Item Inset</ion-label>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-label>Item None</ion-label>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-label>Item</syg-label>
+        </syg-item>
+        <syg-item lines="inset">
+          <syg-label>Item Inset</syg-label>
+        </syg-item>
+        <syg-item lines="none">
+          <syg-label>Item None</syg-label>
+        </syg-item>
+      </syg-list>
 
-      <ion-list lines="inset">
-        <ion-list-header>
-          <ion-label>
+      <syg-list lines="inset">
+        <syg-list-header>
+          <syg-label>
             List Inset Lines
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-label>Item</ion-label>
-        </ion-item>
-        <ion-item lines="full">
-          <ion-label>Item Full</ion-label>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-label>Item None</ion-label>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-label>Item</syg-label>
+        </syg-item>
+        <syg-item lines="full">
+          <syg-label>Item Full</syg-label>
+        </syg-item>
+        <syg-item lines="none">
+          <syg-label>Item None</syg-label>
+        </syg-item>
+      </syg-list>
 
-      <ion-list lines="none">
-        <ion-list-header>
-          <ion-label>
+      <syg-list lines="none">
+        <syg-list-header>
+          <syg-label>
             List No Lines
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-label>Item</ion-label>
-        </ion-item>
-        <ion-item lines="full">
-          <ion-label>Item Full</ion-label>
-        </ion-item>
-        <ion-item lines="inset">
-          <ion-label>Item Inset</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Item</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Item</ion-label>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-label>Item</syg-label>
+        </syg-item>
+        <syg-item lines="full">
+          <syg-label>Item Full</syg-label>
+        </syg-item>
+        <syg-item lines="inset">
+          <syg-label>Item Inset</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Item</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Item</syg-label>
+        </syg-item>
+      </syg-list>
 
       <h2>Colors</h2>
 
       <!-- Default -->
-      <ion-item color="secondary">
-        <ion-label>Item</ion-label>
-      </ion-item>
+      <syg-item color="secondary">
+        <syg-label>Item</syg-label>
+      </syg-item>
 
       <!-- Lines Inset -->
-      <ion-item color="secondary" lines="inset">
-        <ion-label>Item Lines Inset</ion-label>
-      </ion-item>
+      <syg-item color="secondary" lines="inset">
+        <syg-label>Item Lines Inset</syg-label>
+      </syg-item>
 
       <!-- Lines Full -->
-      <ion-item color="secondary" lines="full">
-        <ion-label>Item Lines Full</ion-label>
-      </ion-item>
+      <syg-item color="secondary" lines="full">
+        <syg-label>Item Lines Full</syg-label>
+      </syg-item>
 
       <!-- Default -->
-      <ion-item color="danger">
+      <syg-item color="danger">
         <ion-icon name="star" slot="start"></ion-icon>
-        <ion-label>Item</ion-label>
-        <ion-icon name="information-circle" slot="end"></ion-icon>
-      </ion-item>
+        <syg-label>Item</syg-label>
+        <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+      </syg-item>
 
       <!-- Lines Inset -->
-      <ion-item color="danger" lines="inset">
+      <syg-item color="danger" lines="inset">
         <ion-icon name="star" slot="start"></ion-icon>
-        <ion-label>Item Lines Inset</ion-label>
-        <ion-icon name="information-circle" slot="end"></ion-icon>
-      </ion-item>
+        <syg-label>Item Lines Inset</syg-label>
+        <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+      </syg-item>
 
       <!-- Lines Full -->
-      <ion-item color="danger" lines="full">
+      <syg-item color="danger" lines="full">
         <ion-icon name="star" slot="start"></ion-icon>
-        <ion-label>Item Lines Full</ion-label>
-        <ion-icon name="information-circle" slot="end"></ion-icon>
-      </ion-item>
+        <syg-label>Item Lines Full</syg-label>
+        <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+      </syg-item>
 
       <!-- Lines None -->
-      <ion-item color="danger" lines="none">
+      <syg-item color="danger" lines="none">
         <ion-icon name="star" slot="start"></ion-icon>
-        <ion-label>Item Lines None</ion-label>
-        <ion-icon name="information-circle" slot="end"></ion-icon>
-      </ion-item>
+        <syg-label>Item Lines None</syg-label>
+        <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+      </syg-item>
 
       <!-- List Lines Full -->
-      <ion-list lines="full">
-        <ion-list-header>
-          <ion-label>
+      <syg-list lines="full">
+        <syg-list-header>
+          <syg-label>
             List Full Lines
-          </ion-label>
-        </ion-list-header>
-        <ion-item color="light">
-          <ion-label>Item</ion-label>
-        </ion-item>
-        <ion-item color="light">
-          <ion-label>Item</ion-label>
-        </ion-item>
-        <ion-item color="light" lines="inset">
-          <ion-label>Item Inset</ion-label>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item color="light">
+          <syg-label>Item</syg-label>
+        </syg-item>
+        <syg-item color="light">
+          <syg-label>Item</syg-label>
+        </syg-item>
+        <syg-item color="light" lines="inset">
+          <syg-label>Item Inset</syg-label>
+        </syg-item>
+      </syg-list>
 
-      <ion-list lines="inset">
-        <ion-list-header>
-          <ion-label>
+      <syg-list lines="inset">
+        <syg-list-header>
+          <syg-label>
             List Inset Lines
-          </ion-label>
-        </ion-list-header>
-        <ion-item color="dark">
-          <ion-label>Item</ion-label>
-        </ion-item>
-        <ion-item color="dark" lines="full">
-          <ion-label>Item Full</ion-label>
-        </ion-item>
-        <ion-item color="dark">
-          <ion-label>Item</ion-label>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item color="dark">
+          <syg-label>Item</syg-label>
+        </syg-item>
+        <syg-item color="dark" lines="full">
+          <syg-label>Item Full</syg-label>
+        </syg-item>
+        <syg-item color="dark">
+          <syg-label>Item</syg-label>
+        </syg-item>
+      </syg-list>
 
-      <ion-list lines="none">
-        <ion-list-header>
-          <ion-label>
+      <syg-list lines="none">
+        <syg-list-header>
+          <syg-label>
             List No Lines
-          </ion-label>
-        </ion-list-header>
-        <ion-item color="tertiary">
-          <ion-label>Item</ion-label>
-        </ion-item>
-        <ion-item color="tertiary" lines="full">
-          <ion-label>Item Full</ion-label>
-        </ion-item>
-        <ion-item color="tertiary" lines="inset">
-          <ion-label>Item Inset</ion-label>
-        </ion-item>
-        <ion-item color="tertiary">
-          <ion-label>Item</ion-label>
-        </ion-item>
-        <ion-item color="tertiary">
-          <ion-label>Item</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-app>
+          </syg-label>
+        </syg-list-header>
+        <syg-item color="tertiary">
+          <syg-label>Item</syg-label>
+        </syg-item>
+        <syg-item color="tertiary" lines="full">
+          <syg-label>Item Full</syg-label>
+        </syg-item>
+        <syg-item color="tertiary" lines="inset">
+          <syg-label>Item Inset</syg-label>
+        </syg-item>
+        <syg-item color="tertiary">
+          <syg-label>Item</syg-label>
+        </syg-item>
+        <syg-item color="tertiary">
+          <syg-label>Item</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-app>
   <script>
     function testClick(ev) {
       console.log('CLICK!', ev.target.tagName, ev.target.textContent.trim());

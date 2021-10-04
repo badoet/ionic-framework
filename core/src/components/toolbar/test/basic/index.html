@@ -9,42 +9,42 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Toolbar</ion-title>
-      </ion-toolbar>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar color="primary">
+        <syg-title>Toolbar</syg-title>
+      </syg-toolbar>
 
-      <ion-toolbar color="primary">
-        <ion-buttons slot="secondary">
-          <ion-button>
+      <syg-toolbar color="primary">
+        <syg-buttons slot="secondary">
+          <syg-button>
             <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-          </ion-button>
-          <ion-button>
+          </syg-button>
+          <syg-button>
             <ion-icon slot="icon-only" name="search"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-buttons slot="primary">
-          <ion-button color="secondary">
+          </syg-button>
+        </syg-buttons>
+        <syg-buttons slot="primary">
+          <syg-button color="secondary">
             <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-title>Subheader</ion-title>
-      </ion-toolbar>
-    </ion-header>
+          </syg-button>
+        </syg-buttons>
+        <syg-title>Subheader</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content" fullscreen="true">
-      <ion-card color="secondary">
-        <ion-card-header>
+    <syg-content id="content" fullscreen="true">
+      <syg-card color="secondary">
+        <syg-card-header>
           Card Header
-        </ion-card-header>
-        <ion-card-content>
-          <ion-card-title>
+        </syg-card-header>
+        <syg-card-content>
+          <syg-card-title>
             Title
-          </ion-card-title>
+          </syg-card-title>
           Some normal text in content.
           <h3>h3 in content</h3>
           <p>
@@ -53,17 +53,17 @@
           <p>
             Another paragraph in content.
           </p>
-        </ion-card-content>
-      </ion-card>
+        </syg-card-content>
+      </syg-card>
 
-      <ion-card class="rainbow-content">
-        <ion-card-header>
+      <syg-card class="rainbow-content">
+        <syg-card-header>
           Custom CSS Card Header
-        </ion-card-header>
-        <ion-card-content>
-          <ion-card-title>
+        </syg-card-header>
+        <syg-card-content>
+          <syg-card-title>
             Custom CSS Title
-          </ion-card-title>
+          </syg-card-title>
           Some normal text in content.
           <h3>h3 in content</h3>
           <p>
@@ -72,17 +72,17 @@
           <p>
             Another paragraph in content.
           </p>
-        </ion-card-content>
-      </ion-card>
+        </syg-card-content>
+      </syg-card>
 
-      <ion-card color="primary">
-        <ion-card-header>
+      <syg-card color="primary">
+        <syg-card-header>
           Card Header
-        </ion-card-header>
-        <ion-card-content>
-          <ion-card-title>
+        </syg-card-header>
+        <syg-card-content>
+          <syg-card-title>
             Title
-          </ion-card-title>
+          </syg-card-title>
           Some normal text in content.
           <h3>h3 in content</h3>
           <p>
@@ -91,40 +91,40 @@
           <p>
             Another paragraph in content.
           </p>
-        </ion-card-content>
-      </ion-card>
+        </syg-card-content>
+      </syg-card>
 
-      <ion-list id="dynamicList">
-      </ion-list>
+      <syg-list id="dynamicList">
+      </syg-list>
 
-    </ion-content>
+    </syg-content>
 
-    <ion-footer>
-      <ion-toolbar>
-        <ion-buttons slot="primary">
-          <ion-button>
+    <syg-footer>
+      <syg-toolbar>
+        <syg-buttons slot="primary">
+          <syg-button>
             <ion-icon slot="icon-only" name="search"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-searchbar>
-        </ion-searchbar>
-      </ion-toolbar>
+          </syg-button>
+        </syg-buttons>
+        <syg-searchbar>
+        </syg-searchbar>
+      </syg-toolbar>
 
-      <ion-toolbar>
-        <ion-title>
+      <syg-toolbar>
+        <syg-title>
           Footer
-        </ion-title>
-      </ion-toolbar>
-    </ion-footer>
-  </ion-app>
+        </syg-title>
+      </syg-toolbar>
+    </syg-footer>
+  </syg-app>
 
   <style>
     .rainbow-content {
       background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
       color: white;
     }
-    .rainbow-content ion-card-header,
-    .rainbow-content ion-card-title {
+    .rainbow-content syg-card-header,
+    .rainbow-content syg-card-title {
       color: white;
     }
   </style>
@@ -138,7 +138,7 @@
 
     let html = '';
     for (let item of items) {
-      html += `<ion-item>${item}</ion-item>`;
+      html += `<syg-item>${item}</syg-item>`;
     }
     list.innerHTML = html;
   </script>

@@ -9,57 +9,57 @@ export class LabelExample {
   render() {
     return [
       // Default Label
-      <ion-label>Label</ion-label>,
+      <syg-label>Label</syg-label>,
 
       // Label Colors
-      <ion-label color="primary">Primary Label</ion-label>,
-      <ion-label color="secondary">Secondary Label</ion-label>,
-      <ion-label color="danger">Danger Label</ion-label>,
-      <ion-label color="light">Light Label</ion-label>,
-      <ion-label color="dark">Dark Label</ion-label>,
+      <syg-label color="primary">Primary Label</syg-label>,
+      <syg-label color="secondary">Secondary Label</syg-label>,
+      <syg-label color="danger">Danger Label</syg-label>,
+      <syg-label color="light">Light Label</syg-label>,
+      <syg-label color="dark">Dark Label</syg-label>,
 
       // Item Labels
-      <ion-item>
-        <ion-label>Default Item</ion-label>
-      </ion-item>,
+      <syg-item>
+        <syg-label>Default Item</syg-label>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label class="ion-text-wrap">
+      <syg-item>
+        <syg-label class="syg-text-wrap">
           Multi-line text that should wrap when it is too long
           to fit on one line in the item.
-        </ion-label>
-      </ion-item>,
+        </syg-label>
+      </syg-item>,
 
       // Input Labels
-      <ion-item>
-        <ion-label>Default Input</ion-label>
-        <ion-input></ion-input>
-      </ion-item>,
+      <syg-item>
+        <syg-label>Default Input</syg-label>
+        <syg-input></syg-input>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label position="fixed">Fixed</ion-label>
-        <ion-input></ion-input>
-      </ion-item>,
+      <syg-item>
+        <syg-label position="fixed">Fixed</syg-label>
+        <syg-input></syg-input>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label position="floating">Floating</ion-label>
-        <ion-input></ion-input>
-      </ion-item>,
+      <syg-item>
+        <syg-label position="floating">Floating</syg-label>
+        <syg-input></syg-input>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label position="stacked">Stacked</ion-label>
-        <ion-input></ion-input>
-      </ion-item>,
+      <syg-item>
+        <syg-label position="stacked">Stacked</syg-label>
+        <syg-input></syg-input>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label>Toggle</ion-label>
-        <ion-toggle slot="end" checked={true}></ion-toggle>
-      </ion-item>,
+      <syg-item>
+        <syg-label>Toggle</syg-label>
+        <syg-toggle slot="end" checked={true}></syg-toggle>
+      </syg-item>,
 
-      <ion-item>
-        <ion-checkbox slot="start" checked={true}></ion-checkbox>
-        <ion-label>Checkbox</ion-label>
-      </ion-item>
+      <syg-item>
+        <syg-checkbox slot="start" checked={true}></syg-checkbox>
+        <syg-label>Checkbox</syg-label>
+      </syg-item>
     ];
   }
 }

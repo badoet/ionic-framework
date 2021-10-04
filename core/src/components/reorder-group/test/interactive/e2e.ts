@@ -12,36 +12,36 @@ test('reorder: interactive', async () => {
   const compares = [];
   compares.push(await page.compareScreenshot('reorder: interactive before move'));
 
-  const items = await page.$$('ion-reorder');
+  const items = await page.$$('syg-reorder');
   const getItemId = await getElementProperty(items[0], 'id');
   expect(getItemId).toEqual('item-0');
 
   await moveItem(getItemId, page, 'down', 1);
 
-  const itemsAfterFirstMove = await page.$$('ion-reorder');
+  const itemsAfterFirstMove = await page.$$('syg-reorder');
   expect(await getElementProperty(itemsAfterFirstMove[0], 'id')).toEqual('item-1');
 
   await moveItem(getItemId, page, 'up', 1);
 
-  const itemsAfterSecondMove = await page.$$('ion-reorder');
+  const itemsAfterSecondMove = await page.$$('syg-reorder');
   expect(await getElementProperty(itemsAfterSecondMove[0], 'id')).toEqual('item-0');
 
   compares.push(await page.compareScreenshot('reorder: interactive after move; before shadow move'));
 
-  const shadowDomList = await queryDeep(page, 'test-reorder-list-shadow-dom', 'ion-list');
+  const shadowDomList = await queryDeep(page, 'test-reorder-list-shadow-dom', 'syg-list');
 
-  const itemsInShadowRoot = await shadowDomList.$$('ion-reorder');
+  const itemsInShadowRoot = await shadowDomList.$$('syg-reorder');
   const getShadowItemId = await getElementProperty(itemsInShadowRoot[0], 'id');
   expect(getShadowItemId).toEqual('item-0');
 
-  await moveItem(getShadowItemId, page, 'down', 1, 'test-reorder-list-shadow-dom', 'ion-list');
+  await moveItem(getShadowItemId, page, 'down', 1, 'test-reorder-list-shadow-dom', 'syg-list');
 
-  const itemsInShadowRootAfterFirstMove = await shadowDomList.$$('ion-reorder');
+  const itemsInShadowRootAfterFirstMove = await shadowDomList.$$('syg-reorder');
   expect(await getElementProperty(itemsInShadowRootAfterFirstMove[0], 'id')).toEqual('item-1');
 
-  await moveItem(getShadowItemId, page, 'up', 1, 'test-reorder-list-shadow-dom', 'ion-list');
+  await moveItem(getShadowItemId, page, 'up', 1, 'test-reorder-list-shadow-dom', 'syg-list');
 
-  const itemsInShadowRootAfterSecondMove = await shadowDomList.$$('ion-reorder');
+  const itemsInShadowRootAfterSecondMove = await shadowDomList.$$('syg-reorder');
   expect(await getElementProperty(itemsInShadowRootAfterSecondMove[0], 'id')).toEqual('item-0');
 
   compares.push(await page.compareScreenshot('reorder: interactive after shadow move'));

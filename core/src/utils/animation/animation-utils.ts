@@ -13,7 +13,7 @@ export const processKeyframes = (keyframes: AnimationKeyFrames) => {
         const value = keyframe[key];
 
         if (key === 'easing') {
-          const newKey = 'animation-timing-function';
+          const newKey = 'animatsyg-timing-function';
           keyframe[newKey] = value;
           delete keyframe[key];
         } else {
@@ -106,7 +106,7 @@ export const generateKeyframeName = (keyframeRules: string) => {
   if (index < 0) {
     index = (keyframeIds.push(keyframeRules) - 1);
   }
-  return `ion-animation-${index}`;
+  return `syg-animatsyg-${index}`;
 };
 
 export const getStyleContainer = (element: HTMLElement) => {

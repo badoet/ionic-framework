@@ -4,10 +4,10 @@ test('modal: inline', async () => {
   const page = await newE2EPage({ url: '/src/components/modal/test/inline?ionic:_testing=true' });
   const screenshotCompares = [];
 
-  await page.click('ion-button');
-  await page.waitForSelector('ion-modal');
+  await page.click('syg-button');
+  await page.waitForSelector('syg-modal');
 
-  let modal = await page.find('ion-modal');
+  let modal = await page.find('syg-modal');
 
   expect(modal).not.toBe(null);
   await modal.waitForVisible();
@@ -19,13 +19,13 @@ test('modal: inline', async () => {
 
   screenshotCompares.push(await page.compareScreenshot('dismiss'));
 
-  modal = await page.find('ion-modal');
+  modal = await page.find('syg-modal');
   expect(modal).not.toBe(null);
 
-  await page.click('ion-button');
-  await page.waitForSelector('ion-modal');
+  await page.click('syg-button');
+  await page.waitForSelector('syg-modal');
 
-  let modalAgain = await page.find('ion-modal');
+  let modalAgain = await page.find('syg-modal');
 
   expect(modalAgain).not.toBe(null);
   await modalAgain.waitForVisible();

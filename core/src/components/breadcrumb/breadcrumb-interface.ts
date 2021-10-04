@@ -1,9 +1,9 @@
 export interface BreadcrumbCollapsedClickEventDetail {
   ionShadowTarget?: HTMLElement;
-  collapsedBreadcrumbs?: HTMLIonBreadcrumbElement[];
+  collapsedBreadcrumbs?: HTMLSygBreadcrumbElement[];
 }
 
 export interface BreadcrumbCustomEvent extends CustomEvent {
   detail: BreadcrumbCollapsedClickEventDetail;
-  target: HTMLIonBreadcrumbElement;
+  target: HTMLSygBreadcrumbElement;
 }

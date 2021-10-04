@@ -9,25 +9,25 @@ export class BadgeExample {
   render() {
     return [
       // Default
-      <ion-badge>99</ion-badge>,
+      <syg-badge>99</syg-badge>,
 
       // Colors
-      <ion-badge color="primary">11</ion-badge>,
-      <ion-badge color="secondary">22</ion-badge>,
-      <ion-badge color="tertiary">33</ion-badge>,
-      <ion-badge color="success">44</ion-badge>,
-      <ion-badge color="warning">55</ion-badge>,
-      <ion-badge color="danger">66</ion-badge>,
-      <ion-badge color="light">77</ion-badge>,
-      <ion-badge color="medium">88</ion-badge>,
-      <ion-badge color="dark">99</ion-badge>,
+      <syg-badge color="primary">11</syg-badge>,
+      <syg-badge color="secondary">22</syg-badge>,
+      <syg-badge color="tertiary">33</syg-badge>,
+      <syg-badge color="success">44</syg-badge>,
+      <syg-badge color="warning">55</syg-badge>,
+      <syg-badge color="danger">66</syg-badge>,
+      <syg-badge color="light">77</syg-badge>,
+      <syg-badge color="medium">88</syg-badge>,
+      <syg-badge color="dark">99</syg-badge>,
 
       // Item with badge on left and right
-      <ion-item>
-        <ion-badge slot="start">11</ion-badge>
-        <ion-label>My Item</ion-label>
-        <ion-badge slot="end">22</ion-badge>
-      </ion-item>
+      <syg-item>
+        <syg-badge slot="start">11</syg-badge>
+        <syg-label>My Item</syg-label>
+        <syg-badge slot="end">22</syg-badge>
+      </syg-item>
     ];
   }
 }

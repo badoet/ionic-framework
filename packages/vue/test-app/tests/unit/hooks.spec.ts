@@ -5,7 +5,7 @@ import { waitForRouter } from './utils';
 
 const App = {
   components: { IonApp, IonRouterOutlet },
-  template: '<ion-app><ion-router-outlet /></ion-app>',
+  template: '<syg-app><ion-router-outlet /></syg-app>',
 }
 
 const BasePage = {

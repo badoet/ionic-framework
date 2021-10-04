@@ -1,18 +1,18 @@
 import { Component, ComponentInterface, Element, Host, Prop, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { SpinnerTypes } from '../../interface';
 import { isPlatform } from '../../utils/platform';
-import { IonicSafeString, sanitizeDOMString } from '../../utils/sanitization';
+import { SygSafeString, sanitizeDOMString } from '../../utils/sanitization';
 import { SPINNERS } from '../spinner/spinner-configs';
 
 @Component({
-  tag: 'ion-refresher-content'
+  tag: 'syg-refresher-content'
 })
 export class RefresherContent implements ComponentInterface {
 
-  @Element() el!: HTMLIonRefresherContentElement;
+  @Element() el!: HTMLSygRefresherContentElement;
 
   /**
    * A static icon or a spinner to display when you begin to pull down.
@@ -25,12 +25,12 @@ export class RefresherContent implements ComponentInterface {
    * The text you want to display when you begin to pull down.
    * `pullingText` can accept either plaintext or HTML as a string.
    * To display characters normally reserved for HTML, they
-   * must be escaped. For example `<Ionic>` would become
-   * `&lt;Ionic&gt;`
+   * must be escaped. For example `<Sygic>` would become
+   * `&lt;Sygic&gt;`
    *
    * For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
    */
-  @Prop() pullingText?: string | IonicSafeString;
+  @Prop() pullingText?: string | SygSafeString;
 
   /**
    * An animated SVG spinner that shows when refreshing begins
@@ -41,16 +41,16 @@ export class RefresherContent implements ComponentInterface {
    * The text you want to display when performing a refresh.
    * `refreshingText` can accept either plaintext or HTML as a string.
    * To display characters normally reserved for HTML, they
-   * must be escaped. For example `<Ionic>` would become
-   * `&lt;Ionic&gt;`
+   * must be escaped. For example `<Sygic>` would become
+   * `&lt;Sygic&gt;`
    *
    * For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
    */
-  @Prop() refreshingText?: string | IonicSafeString;
+  @Prop() refreshingText?: string | SygSafeString;
 
   componentWillLoad() {
     if (this.pullingIcon === undefined) {
-      const mode = getIonMode(this);
+      const mode = getSygMode(this);
       const overflowRefresher = (this.el.style as any).webkitOverflowScrolling !== undefined ? 'lines' : 'arrow-down';
       this.pullingIcon = config.get(
         'refreshingIcon',
@@ -58,7 +58,7 @@ export class RefresherContent implements ComponentInterface {
       );
     }
     if (this.refreshingSpinner === undefined) {
-      const mode = getIonMode(this);
+      const mode = getSygMode(this);
       this.refreshingSpinner = config.get(
         'refreshingSpinner',
         config.get('spinner', mode === 'ios' ? 'lines' : 'circular')
@@ -69,7 +69,7 @@ export class RefresherContent implements ComponentInterface {
   render() {
     const pullingIcon = this.pullingIcon;
     const hasSpinner = pullingIcon != null && SPINNERS[pullingIcon] as any !== undefined;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     return (
       <Host class={mode}>
@@ -77,7 +77,7 @@ export class RefresherContent implements ComponentInterface {
           {this.pullingIcon && hasSpinner &&
             <div class="refresher-pulling-icon">
               <div class="spinner-arrow-container">
-                <ion-spinner name={this.pullingIcon as SpinnerTypes} paused></ion-spinner>
+                <syg-spinner name={this.pullingIcon as SpinnerTypes} paused></syg-spinner>
                 {mode === 'md' && this.pullingIcon === 'circular' &&
                   <div class="arrow-container">
                     <ion-icon name="caret-back-sharp"></ion-icon>
@@ -98,7 +98,7 @@ export class RefresherContent implements ComponentInterface {
         <div class="refresher-refreshing">
           {this.refreshingSpinner &&
             <div class="refresher-refreshing-icon">
-              <ion-spinner name={this.refreshingSpinner}></ion-spinner>
+              <syg-spinner name={this.refreshingSpinner}></syg-spinner>
             </div>
           }
           {this.refreshingText &&

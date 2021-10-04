@@ -1,4 +1,4 @@
-# ion-picker-column
+# syg-picker-column
 
 
 

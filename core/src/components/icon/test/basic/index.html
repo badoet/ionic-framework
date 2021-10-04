@@ -9,117 +9,117 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Icon - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Icon - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-list>
-        <ion-item>
+    <syg-content id="content">
+      <syg-list>
+        <syg-item>
           <ion-icon name="home" id="dynamicColor" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             <code>
               name="home"
             </code>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item>
+        <syg-item>
           <ion-icon name="home" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             <code>
               name="home"
             </code>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item>
+        <syg-item>
           <ion-icon id="dynamicHomeIcon" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             <code>
               id="dynamicHomeIcon"
             </code>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item>
+        <syg-item>
           <ion-icon name="STAR" slot="end"></ion-icon>
-          <ion-label>
+          <syg-label>
             <code>
               name="STAR"
             </code>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item>
+        <syg-item>
           <ion-icon icon="home" color="primary" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             <code>
               icon="home"
             </code>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item>
+        <syg-item>
           <ion-icon name="logo-twitter" color="secondary" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             <code>
               name="logo-twitter"
             </code>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item>
+        <syg-item>
           <ion-icon ios="logo-apple" md="logo-android" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             <code>
               ios="logo-apple" md="logo-android"
             </code>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item>
+        <syg-item>
           <ion-icon name="color-filter" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             <code>
               name="color-filter"
             </code>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item>
+        <syg-item>
           <ion-icon slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             <code>
               name="null"
             </code>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item detail="true">
-          <ion-label>
+        <syg-item detail="true">
+          <syg-label>
             <code>
-              ion-item w/ [detail="true"] attr. text text text text text text
+              syg-item w/ [detail="true"] attr. text text text text text text
             </code>
-          </ion-label>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-item>
+      </syg-list>
 
       <p>
-        <ion-button onclick="updateIcon()">
+        <syg-button onclick="updateIcon()">
           <ion-icon slot="start" id="dynamicBtnIcon"></ion-icon>
           Update icon
-        </ion-button>
+        </syg-button>
       </p>
 
-    </ion-content>
+    </syg-content>
 
 
     <style>
@@ -131,7 +131,7 @@
 
     </style>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     var dynamicColor = document.getElementById('dynamicColor');

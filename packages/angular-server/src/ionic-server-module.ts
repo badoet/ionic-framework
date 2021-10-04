@@ -24,8 +24,8 @@ export function hydrateIonicComponents(doc: any, appId: any) {
       clientHydrateAnnotations: false,
       excludeComponents: [
         // overlays
-        'ion-action-sheet',
-        'ion-alert',
+        'syg-action-sheet',
+        'syg-alert',
         'ion-loading',
         'ion-modal',
         'ion-picker',

@@ -46,7 +46,7 @@
   @include transform(rotate(180deg), translate3d(0, -9px, 0));
 }
 
-:host-context(ion-item.ion-focused) .select-icon,
+:host-context(syg-item.ion-focused) .select-icon,
 :host-context(.item-has-focus) .select-icon {
   color: var(--highlight-color-focused);
 

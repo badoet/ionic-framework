@@ -8,44 +8,44 @@ import { Component, h } from '@stencil/core';
 export class ItemDividerExample {
   render() {
     return [
-      <ion-item-divider>
-        <ion-label>
+      <syg-item-divider>
+        <syg-label>
           Basic Item Divider
-        </ion-label>
-      </ion-item-divider>,
+        </syg-label>
+      </syg-item-divider>,
 
-      <ion-item-divider color="secondary">
-        <ion-label>
+      <syg-item-divider color="secondary">
+        <syg-label>
           Secondary Item Divider
-        </ion-label>
-      </ion-item-divider>,
+        </syg-label>
+      </syg-item-divider>,
 
       //  Item Dividers in a List
-      <ion-list>
-        <ion-item-divider>
-          <ion-label>
+      <syg-list>
+        <syg-item-divider>
+          <syg-label>
             Section A
-          </ion-label>
-        </ion-item-divider>
+          </syg-label>
+        </syg-item-divider>
 
-        <ion-item><ion-label>A1</ion-label></ion-item>
-        <ion-item><ion-label>A2</ion-label></ion-item>
-        <ion-item><ion-label>A3</ion-label></ion-item>
-        <ion-item><ion-label>A4</ion-label></ion-item>
-        <ion-item><ion-label>A5</ion-label></ion-item>
+        <syg-item><syg-label>A1</syg-label></syg-item>
+        <syg-item><syg-label>A2</syg-label></syg-item>
+        <syg-item><syg-label>A3</syg-label></syg-item>
+        <syg-item><syg-label>A4</syg-label></syg-item>
+        <syg-item><syg-label>A5</syg-label></syg-item>
 
-        <ion-item-divider>
-          <ion-label>
+        <syg-item-divider>
+          <syg-label>
             Section B
-          </ion-label>
-        </ion-item-divider>
+          </syg-label>
+        </syg-item-divider>
 
-        <ion-item><ion-label>B1</ion-label></ion-item>
-        <ion-item><ion-label>B2</ion-label></ion-item>
-        <ion-item><ion-label>B3</ion-label></ion-item>
-        <ion-item><ion-label>B4</ion-label></ion-item>
-        <ion-item><ion-label>B5</ion-label></ion-item>
-      </ion-list>
+        <syg-item><syg-label>B1</syg-label></syg-item>
+        <syg-item><syg-label>B2</syg-label></syg-item>
+        <syg-item><syg-label>B3</syg-label></syg-item>
+        <syg-item><syg-label>B4</syg-label></syg-item>
+        <syg-item><syg-label>B5</syg-label></syg-item>
+      </syg-list>
     ];
   }
 }

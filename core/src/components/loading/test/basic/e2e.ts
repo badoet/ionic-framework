@@ -13,7 +13,7 @@ test('loading: focus trap', async () => {
   await page.click('#html-content-loading');
   await page.waitForSelector('#html-content-loading');
 
-  let loading = await page.find('ion-loading');
+  let loading = await page.find('syg-loading');
 
   expect(loading).not.toBe(null);
   await loading.waitForVisible();
@@ -102,12 +102,12 @@ test('loading: htmlAttributes', async () => {
   await page.click('#basic-loading');
   await page.waitForSelector('#basic-loading');
 
-  let alert = await page.find('ion-loading');
+  let alert = await page.find('syg-loading');
 
   expect(alert).not.toBe(null);
   await alert.waitForVisible();
 
-  const attribute = await page.evaluate((el) => document.querySelector('ion-loading').getAttribute('data-testid'));
+  const attribute = await page.evaluate((el) => document.querySelector('syg-loading').getAttribute('data-testid'));
 
   expect(attribute).toEqual('basic-loading');
 });

@@ -8,9 +8,9 @@ import { isPlatform } from '../../utils/platform';
 // -----------------------------
 type RefresherAnimationType = 'scale' | 'translate';
 
-export const getRefresherAnimationType = (contentEl: HTMLIonContentElement): RefresherAnimationType => {
+export const getRefresherAnimationType = (contentEl: HTMLSygContentElement): RefresherAnimationType => {
   const previousSibling = contentEl.previousElementSibling;
-  const hasHeader = previousSibling !== null && previousSibling.tagName === 'ION-HEADER';
+  const hasHeader = previousSibling !== null && previousSibling.tagName === 'SYG-HEADER';
 
   return hasHeader ? 'translate' : 'scale';
 };
@@ -20,7 +20,7 @@ export const createPullingAnimation = (type: RefresherAnimationType, pullingSpin
 };
 
 const createBaseAnimation = (pullingRefresherIcon: HTMLElement) => {
-  const spinner = pullingRefresherIcon.querySelector('ion-spinner') as HTMLElement;
+  const spinner = pullingRefresherIcon.querySelector('syg-spinner') as HTMLElement;
   const circle = spinner!.shadowRoot!.querySelector('circle') as any;
   const spinnerArrowContainer = pullingRefresherIcon.querySelector('.spinner-arrow-container') as HTMLElement;
   const arrowContainer = pullingRefresherIcon!.querySelector('.arrow-container');
@@ -91,7 +91,7 @@ const createScaleAnimation = (pullingRefresherIcon: HTMLElement, refresherEl: HT
    * because at this point the DOM has not updated,
    * so the refresher icon is still hidden with
    * display: none.
-   * The `ion-refresher` container height
+   * The `syg-refresher` container height
    * is roughly the amount we need to offset
    * the icon by when pulling down.
    */
@@ -112,7 +112,7 @@ const createTranslateAnimation = (pullingRefresherIcon: HTMLElement, refresherEl
    * because at this point the DOM has not updated,
    * so the refresher icon is still hidden with
    * display: none.
-   * The `ion-refresher` container height
+   * The `syg-refresher` container height
    * is roughly the amount we need to offset
    * the icon by when pulling down.
    */
@@ -171,7 +171,7 @@ export const handleScrollWhileRefreshing = (
 ) => {
   writeTask(() => {
     // If user pulls down quickly, the spinner should spin faster
-    spinner.style.setProperty('--refreshing-rotation-duration', (lastVelocityY >= 1.0) ? '0.5s' : '2s');
+    spinner.style.setProperty('--refreshing-rotatsyg-duration', (lastVelocityY >= 1.0) ? '0.5s' : '2s');
     spinner.style.setProperty('opacity', '1');
   });
 };
@@ -197,14 +197,14 @@ export const translateElement = (el?: HTMLElement, value?: string, duration = 20
 // Utils
 // -----------------------------
 
-export const shouldUseNativeRefresher = async (referenceEl: HTMLIonRefresherElement, mode: string) => {
-  const refresherContent = referenceEl.querySelector('ion-refresher-content');
+export const shouldUseNativeRefresher = async (referenceEl: HTMLSygRefresherElement, mode: string) => {
+  const refresherContent = referenceEl.querySelector('syg-refresher-content');
   if (!refresherContent) { return Promise.resolve(false); }
 
   await new Promise(resolve => componentOnReady(refresherContent, resolve));
 
-  const pullingSpinner = referenceEl.querySelector('ion-refresher-content .refresher-pulling ion-spinner');
-  const refreshingSpinner = referenceEl.querySelector('ion-refresher-content .refresher-refreshing ion-spinner');
+  const pullingSpinner = referenceEl.querySelector('syg-refresher-content .refresher-pulling syg-spinner');
+  const refreshingSpinner = referenceEl.querySelector('syg-refresher-content .refresher-refreshing syg-spinner');
 
   return (
     pullingSpinner !== null &&

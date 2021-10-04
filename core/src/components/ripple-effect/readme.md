@@ -1,8 +1,8 @@
-# ion-ripple-effect
+# syg-ripple-effect
 
-The ripple effect component adds the [Material Design ink ripple interaction effect](https://material.io/develop/web/components/ripples/). This component can only be used inside of an `<ion-app>` and can be added to any component.
+The ripple effect component adds the [Material Design ink ripple interaction effect](https://material.io/develop/web/components/ripples/). This component can only be used inside of an `<syg-app>` and can be added to any component.
 
-It's important to note that the parent should have [relative positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/position) because the ripple effect is absolutely positioned and will cover the closest parent with relative positioning. The parent element should also be given the `ion-activatable` class, which tells the ripple effect that the element is clickable.
+It's important to note that the parent should have [relative positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/position) because the ripple effect is absolutely positioned and will cover the closest parent with relative positioning. The parent element should also be given the `syg-activatable` class, which tells the ripple effect that the element is clickable.
 
 The default type, `"bounded"`, will expand the ripple effect from the click position outwards. To add a ripple effect that always starts in the center of the element and expands in a circle, add an `"unbounded"` type. It's recommended to add `overflow: hidden` to the parent element to avoid the ripple overflowing its container, especially with an unbounded ripple.
 
@@ -14,29 +14,29 @@ The default type, `"bounded"`, will expand the ripple effect from the click posi
 ### Angular / javascript
 
 ```html
-<ion-app>
-  <ion-content>
-    <div class="ion-activatable ripple-parent">
+<syg-app>
+  <syg-content>
+    <div class="syg-activatable ripple-parent">
       A plain div with a bounded ripple effect
-      <ion-ripple-effect></ion-ripple-effect>
+      <syg-ripple-effect></syg-ripple-effect>
     </div>
 
-    <button class="ion-activatable ripple-parent">
+    <button class="syg-activatable ripple-parent">
       A button with a bounded ripple effect
-      <ion-ripple-effect></ion-ripple-effect>
+      <syg-ripple-effect></syg-ripple-effect>
     </button>
 
-    <div class="ion-activatable ripple-parent">
+    <div class="syg-activatable ripple-parent">
       A plain div with an unbounded ripple effect
-      <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+      <syg-ripple-effect type="unbounded"></syg-ripple-effect>
     </div>
 
-    <button class="ion-activatable ripple-parent">
+    <button class="syg-activatable ripple-parent">
       A button with an unbounded ripple effect
-      <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+      <syg-ripple-effect type="unbounded"></syg-ripple-effect>
     </button>
-  </ion-content>
-</ion-app>
+  </syg-content>
+</syg-app>
 ```
 
 ```css
@@ -57,22 +57,22 @@ import './RippleEffectExample.css';
 export const RippleExample: React.FC = () => (
   <IonApp>
    <IonContent>
-      <div className="ion-activatable ripple-parent">
+      <div className="syg-activatable ripple-parent">
         A plain div with a bounded ripple effect
         <IonRippleEffect></IonRippleEffect>
       </div>
 
-      <button className="ion-activatable ripple-parent">
+      <button className="syg-activatable ripple-parent">
         A button with a bounded ripple effect
         <IonRippleEffect></IonRippleEffect>
       </button>
 
-      <div className="ion-activatable ripple-parent">
+      <div className="syg-activatable ripple-parent">
         A plain div with an unbounded ripple effect
         <IonRippleEffect type="unbounded"></IonRippleEffect>
       </div>
 
-      <button className="ion-activatable ripple-parent">
+      <button className="syg-activatable ripple-parent">
         A button with an unbounded ripple effect
         <IonRippleEffect type="unbounded"></IonRippleEffect>
       </button>
@@ -101,29 +101,29 @@ import { Component, h } from '@stencil/core';
 export class RippleEffectExample {
   render() {
     return [
-      <ion-app>
-        <ion-content>
-          <div class="ion-activatable ripple-parent">
+      <syg-app>
+        <syg-content>
+          <div class="syg-activatable ripple-parent">
             A plain div with a bounded ripple effect
-            <ion-ripple-effect></ion-ripple-effect>
+            <syg-ripple-effect></syg-ripple-effect>
           </div>
 
-          <button class="ion-activatable ripple-parent">
+          <button class="syg-activatable ripple-parent">
             A button with a bounded ripple effect
-            <ion-ripple-effect></ion-ripple-effect>
+            <syg-ripple-effect></syg-ripple-effect>
           </button>
 
-          <div class="ion-activatable ripple-parent">
+          <div class="syg-activatable ripple-parent">
             A plain div with an unbounded ripple effect
-            <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+            <syg-ripple-effect type="unbounded"></syg-ripple-effect>
           </div>
 
-          <button class="ion-activatable ripple-parent">
+          <button class="syg-activatable ripple-parent">
             A button with an unbounded ripple effect
-            <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+            <syg-ripple-effect type="unbounded"></syg-ripple-effect>
           </button>
-        </ion-content>
-      </ion-app>
+        </syg-content>
+      </syg-app>
     ];
   }
 }
@@ -141,29 +141,29 @@ export class RippleEffectExample {
 
 ```html
 <template>
-  <ion-app>
-    <ion-content>
-      <div class="ion-activatable ripple-parent">
+  <syg-app>
+    <syg-content>
+      <div class="syg-activatable ripple-parent">
         A plain div with a bounded ripple effect
-        <ion-ripple-effect></ion-ripple-effect>
+        <syg-ripple-effect></syg-ripple-effect>
       </div>
 
-      <button class="ion-activatable ripple-parent">
+      <button class="syg-activatable ripple-parent">
         A button with a bounded ripple effect
-        <ion-ripple-effect></ion-ripple-effect>
+        <syg-ripple-effect></syg-ripple-effect>
       </button>
 
-      <div class="ion-activatable ripple-parent">
+      <div class="syg-activatable ripple-parent">
         A plain div with an unbounded ripple effect
-        <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+        <syg-ripple-effect type="unbounded"></syg-ripple-effect>
       </div>
 
-      <button class="ion-activatable ripple-parent">
+      <button class="syg-activatable ripple-parent">
         A button with an unbounded ripple effect
-        <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+        <syg-ripple-effect type="unbounded"></syg-ripple-effect>
       </button>
-    </ion-content>
-  </ion-app>
+    </syg-content>
+  </syg-app>
 </template>
 
 <style>
@@ -209,37 +209,37 @@ Type: `Promise<() => void>`
 
 ### Used by
 
- - [ion-action-sheet](../action-sheet)
- - [ion-alert](../alert)
- - [ion-back-button](../back-button)
- - [ion-button](../button)
- - [ion-card](../card)
- - [ion-chip](../chip)
- - [ion-fab-button](../fab-button)
- - [ion-item](../item)
- - [ion-item-option](../item-option)
- - [ion-menu-button](../menu-button)
- - [ion-segment-button](../segment-button)
- - [ion-tab-button](../tab-button)
- - [ion-toast](../toast)
+ - [syg-action-sheet](../action-sheet)
+ - [syg-alert](../alert)
+ - [syg-back-button](../back-button)
+ - [syg-button](../button)
+ - [syg-card](../card)
+ - [syg-chip](../chip)
+ - [syg-fab-button](../fab-button)
+ - [syg-item](../item)
+ - [syg-item-option](../item-option)
+ - [syg-menu-button](../menu-button)
+ - [syg-segment-button](../segment-button)
+ - [syg-tab-button](../tab-button)
+ - [syg-toast](../toast)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-action-sheet --> ion-ripple-effect
-  ion-alert --> ion-ripple-effect
-  ion-back-button --> ion-ripple-effect
-  ion-button --> ion-ripple-effect
-  ion-card --> ion-ripple-effect
-  ion-chip --> ion-ripple-effect
-  ion-fab-button --> ion-ripple-effect
-  ion-item --> ion-ripple-effect
-  ion-item-option --> ion-ripple-effect
-  ion-menu-button --> ion-ripple-effect
-  ion-segment-button --> ion-ripple-effect
-  ion-tab-button --> ion-ripple-effect
-  ion-toast --> ion-ripple-effect
-  style ion-ripple-effect fill:#f9f,stroke:#333,stroke-width:4px
+  syg-action-sheet --> syg-ripple-effect
+  syg-alert --> syg-ripple-effect
+  syg-back-button --> syg-ripple-effect
+  syg-button --> syg-ripple-effect
+  syg-card --> syg-ripple-effect
+  syg-chip --> syg-ripple-effect
+  syg-fab-button --> syg-ripple-effect
+  syg-item --> syg-ripple-effect
+  syg-item-option --> syg-ripple-effect
+  syg-menu-button --> syg-ripple-effect
+  syg-segment-button --> syg-ripple-effect
+  syg-tab-button --> syg-ripple-effect
+  syg-toast --> syg-ripple-effect
+  style syg-ripple-effect fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

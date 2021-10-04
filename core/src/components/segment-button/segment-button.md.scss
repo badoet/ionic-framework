@@ -100,11 +100,11 @@
 // --------------------------------------------------
 
 :host(.in-toolbar:not(.in-segment-color)) {
-  --background: #{var(--ion-toolbar-segment-background, $segment-button-md-background)};
-  --background-checked: #{var(--ion-toolbar-segment-background-checked, $segment-button-md-background-checked)};
-  --color: #{var(--ion-toolbar-segment-color, $segment-button-md-text-color)};
-  --color-checked: #{var(--ion-toolbar-segment-color-checked, $segment-button-md-text-color-checked)};
-  --indicator-color: #{var(--ion-toolbar-segment-color-checked, var(--color-checked))};
+  --background: #{var(--syg-toolbar-segment-background, $segment-button-md-background)};
+  --background-checked: #{var(--syg-toolbar-segment-background-checked, $segment-button-md-background-checked)};
+  --color: #{var(--syg-toolbar-segment-color, $segment-button-md-text-color)};
+  --color-checked: #{var(--syg-toolbar-segment-color-checked, $segment-button-md-text-color-checked)};
+  --indicator-color: #{var(--syg-toolbar-segment-color-checked, var(--color-checked))};
 }
 
 
@@ -193,7 +193,7 @@
 // Segment button indicator color should use the background checked variable with
 // a fallback to the default value of --indicator-color
 :host(.in-toolbar:not(.in-segment-color)) .segment-button-indicator-background {
-  background: #{var(--ion-toolbar-segment-indicator-color, var(--indicator-color))};
+  background: #{var(--syg-toolbar-segment-indicator-color, var(--indicator-color))};
 }
 
 // Do not use the global or local CSS variable if the toolbar has a color

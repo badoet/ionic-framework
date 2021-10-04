@@ -1,335 +1,335 @@
 ```html
 <!-- Default Item -->
-<ion-item>
-  <ion-label>
+<syg-item>
+  <syg-label>
     Item
-  </ion-label>
-</ion-item>
+  </syg-label>
+</syg-item>
 
 <!-- Item as a Button -->
-<ion-item button (click)="buttonClick()">
-  <ion-label>
+<syg-item button (click)="buttonClick()">
+  <syg-label>
     Button Item
-  </ion-label>
-</ion-item>
+  </syg-label>
+</syg-item>
 
 <!-- Item as an Anchor -->
-<ion-item href="https://www.ionicframework.com">
-  <ion-label>
+<syg-item href="https://www.ionicframework.com">
+  <syg-label>
     Anchor Item
-  </ion-label>
-</ion-item>
+  </syg-label>
+</syg-item>
 
-<ion-item color="secondary">
-  <ion-label>
+<syg-item color="secondary">
+  <syg-label>
     Secondary Color Item
-  </ion-label>
-</ion-item>
+  </syg-label>
+</syg-item>
 ```
 
 ### Detail Arrows
 
 ```html
-<ion-item detail>
-  <ion-label>
+<syg-item detail>
+  <syg-label>
     Standard Item with Detail Arrow
-  </ion-label>
-</ion-item>
+  </syg-label>
+</syg-item>
 
-<ion-item button (click)="buttonClick()" detail>
-  <ion-label>
+<syg-item button (click)="buttonClick()" detail>
+  <syg-label>
     Button Item with Detail Arrow
-  </ion-label>
-</ion-item>
+  </syg-label>
+</syg-item>
 
-<ion-item detail="false" href="https://www.ionicframework.com">
-  <ion-label>
+<syg-item detail="false" href="https://www.ionicframework.com">
+  <syg-label>
     Anchor Item with no Detail Arrow
-  </ion-label>
-</ion-item>
+  </syg-label>
+</syg-item>
 ```
 
 ### List Items
 
 ```html
-<ion-list>
-  <ion-item>
-    <ion-label>
+<syg-list>
+  <syg-item>
+    <syg-label>
       Item
-    </ion-label>
-  </ion-item>
+    </syg-label>
+  </syg-item>
 
-  <ion-item lines="none">
-    <ion-label>
+  <syg-item lines="none">
+    <syg-label>
       No Lines Item
-    </ion-label>
-  </ion-item>
+    </syg-label>
+  </syg-item>
 
-  <ion-item>
-    <ion-label class="ion-text-wrap">
+  <syg-item>
+    <syg-label class="syg-text-wrap">
     Multiline text that should wrap when it is too long
     to fit on one line in the item.
-    </ion-label>
-  </ion-item>
+    </syg-label>
+  </syg-item>
 
-  <ion-item>
-    <ion-label class="ion-text-wrap">
-      <ion-text color="primary">
+  <syg-item>
+    <syg-label class="syg-text-wrap">
+      <syg-text color="primary">
         <h3>H3 Primary Title</h3>
-      </ion-text>
+      </syg-text>
       <p>Paragraph line 1</p>
-      <ion-text color="secondary">
+      <syg-text color="secondary">
         <p>Paragraph line 2 secondary</p>
-      </ion-text>
-    </ion-label>
-  </ion-item>
+      </syg-text>
+    </syg-label>
+  </syg-item>
 
-  <ion-item lines="full">
-    <ion-label>
+  <syg-item lines="full">
+    <syg-label>
       Item with Full Lines
-    </ion-label>
-  </ion-item>
+    </syg-label>
+  </syg-item>
 
-</ion-list>
+</syg-list>
 ```
 
 ### Item Lines
 
 ```html
 <!-- Item Inset Lines -->
-<ion-item lines="inset">
-  <ion-label>Item Lines Inset</ion-label>
-</ion-item>
+<syg-item lines="inset">
+  <syg-label>Item Lines Inset</syg-label>
+</syg-item>
 
 <!-- Item Full Lines -->
-<ion-item lines="full">
-  <ion-label>Item Lines Full</ion-label>
-</ion-item>
+<syg-item lines="full">
+  <syg-label>Item Lines Full</syg-label>
+</syg-item>
 
 <!-- Item None Lines -->
-<ion-item lines="none">
-  <ion-label>Item Lines None</ion-label>
-</ion-item>
+<syg-item lines="none">
+  <syg-label>Item Lines None</syg-label>
+</syg-item>
 
 <!-- List Full Lines -->
-<ion-list lines="full">
-  <ion-item>
-    <ion-label>Full Lines Item 1</ion-label>
-  </ion-item>
+<syg-list lines="full">
+  <syg-item>
+    <syg-label>Full Lines Item 1</syg-label>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Full Lines Item 2</ion-label>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Full Lines Item 2</syg-label>
+  </syg-item>
+</syg-list>
 
 <!-- List Inset Lines -->
-<ion-list lines="inset">
-  <ion-item>
-    <ion-label>Inset Lines Item 1</ion-label>
-  </ion-item>
+<syg-list lines="inset">
+  <syg-item>
+    <syg-label>Inset Lines Item 1</syg-label>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Inset Lines Item 2</ion-label>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Inset Lines Item 2</syg-label>
+  </syg-item>
+</syg-list>
 
 <!-- List No Lines -->
-<ion-list lines="none">
-  <ion-item>
-    <ion-label>No lines Item 1</ion-label>
-  </ion-item>
+<syg-list lines="none">
+  <syg-item>
+    <syg-label>No lines Item 1</syg-label>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>No lines Item 2</ion-label>
-  </ion-item>
+  <syg-item>
+    <syg-label>No lines Item 2</syg-label>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>No lines Item 3</ion-label>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>No lines Item 3</syg-label>
+  </syg-item>
+</syg-list>
 ```
 
 
 ### Media Items
 
 ```html
-<ion-item button (click)="testClick()">
-  <ion-avatar slot="start">
+<syg-item button (click)="testClick()">
+  <syg-avatar slot="start">
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-  </ion-avatar>
-  <ion-label>
+  </syg-avatar>
+  <syg-label>
     Avatar Start, Button Item
-  </ion-label>
-</ion-item>
+  </syg-label>
+</syg-item>
 
-<ion-item href="#">
-  <ion-label>
+<syg-item href="#">
+  <syg-label>
     Thumbnail End, Anchor Item
-  </ion-label>
-  <ion-thumbnail slot="end">
+  </syg-label>
+  <syg-thumbnail slot="end">
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-  </ion-thumbnail>
-</ion-item>
+  </syg-thumbnail>
+</syg-item>
 
-<ion-item>
-  <ion-thumbnail slot="start">
+<syg-item>
+  <syg-thumbnail slot="start">
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-  </ion-thumbnail>
-  <ion-label>
+  </syg-thumbnail>
+  <syg-label>
     <h2>H2 Title Text</h2>
     <p>Button on right</p>
-  </ion-label>
-  <ion-button fill="outline" slot="end">View</ion-button>
-</ion-item>
+  </syg-label>
+  <syg-button fill="outline" slot="end">View</syg-button>
+</syg-item>
 
-<ion-item button (click)="testClick()">
-  <ion-thumbnail slot="start">
+<syg-item button (click)="testClick()">
+  <syg-thumbnail slot="start">
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-  </ion-thumbnail>
-  <ion-label>
+  </syg-thumbnail>
+  <syg-label>
     <h3>H3 Title Text</h3>
     <p>Icon on right</p>
-  </ion-label>
+  </syg-label>
   <ion-icon name="close-circle" slot="end"></ion-icon>
-</ion-item>
+</syg-item>
 ```
 
 ### Buttons in Items
 
 ```html
-<ion-item>
-  <ion-button slot="start">
+<syg-item>
+  <syg-button slot="start">
     Start
-  </ion-button>
-  <ion-label>Button Start/End</ion-label>
-  <ion-button slot="end">
+  </syg-button>
+  <syg-label>Button Start/End</syg-label>
+  <syg-button slot="end">
     End
-  </ion-button>
-</ion-item>
+  </syg-button>
+</syg-item>
 
-<ion-item>
-  <ion-button slot="start">
+<syg-item>
+  <syg-button slot="start">
     Start Icon
     <ion-icon name="home" slot="end"></ion-icon>
-  </ion-button>
-  <ion-label>Buttons with Icons</ion-label>
-  <ion-button slot="end">
+  </syg-button>
+  <syg-label>Buttons with Icons</syg-label>
+  <syg-button slot="end">
     <ion-icon name="star" slot="end"></ion-icon>
     End Icon
-  </ion-button>
-</ion-item>
+  </syg-button>
+</syg-item>
 
-<ion-item>
-  <ion-button slot="start">
+<syg-item>
+  <syg-button slot="start">
     <ion-icon slot="icon-only" name="navigate"></ion-icon>
-  </ion-button>
-  <ion-label>Icon only Buttons</ion-label>
-  <ion-button slot="end">
+  </syg-button>
+  <syg-label>Icon only Buttons</syg-label>
+  <syg-button slot="end">
     <ion-icon slot="icon-only" name="star"></ion-icon>
-  </ion-button>
-</ion-item>
+  </syg-button>
+</syg-item>
 ```
 
 ### Icons in Items
 
 ```html
-<ion-item>
-  <ion-label>
+<syg-item>
+  <syg-label>
     Icon End
-  </ion-label>
-  <ion-icon name="information-circle" slot="end"></ion-icon>
-</ion-item>
+  </syg-label>
+  <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+</syg-item>
 
-<ion-item>
-  <ion-label>
+<syg-item>
+  <syg-label>
     Large Icon End
-  </ion-label>
-  <ion-icon name="information-circle" size="large" slot="end"></ion-icon>
-</ion-item>
+  </syg-label>
+  <ion-icon name="informatsyg-circle" size="large" slot="end"></ion-icon>
+</syg-item>
 
-<ion-item>
-  <ion-label>
+<syg-item>
+  <syg-label>
     Small Icon End
-  </ion-label>
-  <ion-icon name="information-circle" size="small" slot="end"></ion-icon>
-</ion-item>
+  </syg-label>
+  <ion-icon name="informatsyg-circle" size="small" slot="end"></ion-icon>
+</syg-item>
 
-<ion-item>
+<syg-item>
   <ion-icon name="star" slot="start"></ion-icon>
-  <ion-label>
+  <syg-label>
     Icon Start
-  </ion-label>
-</ion-item>
+  </syg-label>
+</syg-item>
 
-<ion-item>
-  <ion-label>
+<syg-item>
+  <syg-label>
     Two Icons End
-  </ion-label>
+  </syg-label>
   <ion-icon name="checkmark-circle" slot="end"></ion-icon>
   <ion-icon name="shuffle" slot="end"></ion-icon>
-</ion-item>
+</syg-item>
 ```
 
 ### Item Inputs
 
 ```html
-<ion-item>
-  <ion-label position="floating">Datetime</ion-label>
-  <ion-datetime></ion-datetime>
-</ion-item>
+<syg-item>
+  <syg-label position="floating">Datetime</syg-label>
+  <syg-datetime></syg-datetime>
+</syg-item>
 
-<ion-item>
-  <ion-label position="floating">Select</ion-label>
-  <ion-select>
-    <ion-select-option value="">No Game Console</ion-select-option>
-    <ion-select-option value="nes">NES</ion-select-option>
-    <ion-select-option value="n64" selected>Nintendo64</ion-select-option>
-    <ion-select-option value="ps">PlayStation</ion-select-option>
-    <ion-select-option value="genesis">Sega Genesis</ion-select-option>
-    <ion-select-option value="saturn">Sega Saturn</ion-select-option>
-    <ion-select-option value="snes">SNES</ion-select-option>
-  </ion-select>
-</ion-item>
+<syg-item>
+  <syg-label position="floating">Select</syg-label>
+  <syg-select>
+    <syg-select-option value="">No Game Console</syg-select-option>
+    <syg-select-option value="nes">NES</syg-select-option>
+    <syg-select-option value="n64" selected>Nintendo64</syg-select-option>
+    <syg-select-option value="ps">PlayStation</syg-select-option>
+    <syg-select-option value="genesis">Sega Genesis</syg-select-option>
+    <syg-select-option value="saturn">Sega Saturn</syg-select-option>
+    <syg-select-option value="snes">SNES</syg-select-option>
+  </syg-select>
+</syg-item>
 
-<ion-item>
-  <ion-label>Toggle</ion-label>
-  <ion-toggle slot="end"></ion-toggle>
-</ion-item>
+<syg-item>
+  <syg-label>Toggle</syg-label>
+  <syg-toggle slot="end"></syg-toggle>
+</syg-item>
 
-<ion-item>
-  <ion-label position="floating">Floating Input</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="floating">Floating Input</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label>Input (placeholder)</ion-label>
-  <ion-input placeholder="Placeholder"></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label>Input (placeholder)</syg-label>
+  <syg-input placeholder="Placeholder"></syg-input>
+</syg-item>
 
-<ion-item fill="solid">
-  <ion-label position="floating">Input (Fill: Solid)</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item fill="solid">
+  <syg-label position="floating">Input (Fill: Solid)</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item fill="outline">
-  <ion-label position="floating">Input (Fill: Outline)</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item fill="outline">
+  <syg-label position="floating">Input (Fill: Outline)</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label>Helper and Error Text</ion-label>
-  <ion-input></ion-input>
-  <ion-note slot="helper">Helper Text</ion-note>
-  <ion-note slot="error">Error Text</ion-note>
-</ion-item>
+<syg-item>
+  <syg-label>Helper and Error Text</syg-label>
+  <syg-input></syg-input>
+  <syg-note slot="helper">Helper Text</syg-note>
+  <syg-note slot="error">Error Text</syg-note>
+</syg-item>
 
-<ion-item>
-  <ion-label>Checkbox</ion-label>
-  <ion-checkbox slot="start"></ion-checkbox>
-</ion-item>
+<syg-item>
+  <syg-label>Checkbox</syg-label>
+  <syg-checkbox slot="start"></syg-checkbox>
+</syg-item>
 
-<ion-item>
-  <ion-label>Range</ion-label>
-  <ion-range></ion-range>
-</ion-item>
+<syg-item>
+  <syg-label>Range</syg-label>
+  <syg-range></syg-range>
+</syg-item>
 ```

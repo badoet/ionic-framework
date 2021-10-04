@@ -1,7 +1,7 @@
 import { createAnimation } from '../animation';
-import { processKeyframes } from '../animation-utils';
+import { processKeyframes } from '../animatsyg-utils';
 import { getTimeGivenProgression } from '../cubic-bezier';
-import { Animation } from '../animation-interface';
+import { Animation } from '../animatsyg-interface';
 
 describe('Animation Class', () => {
 
@@ -91,8 +91,8 @@ describe('Animation Class', () => {
       ]);
 
       expect(processedKeyframes).toEqual([
-        { 'border-radius': '0px', 'animation-timing-function': 'ease-in', offset: 0 },
-        { 'border-radius': '4px', 'animation-timing-function': 'ease-out', offset: 1 }
+        { 'border-radius': '0px', 'animatsyg-timing-function': 'ease-in', offset: 0 },
+        { 'border-radius': '4px', 'animatsyg-timing-function': 'ease-out', offset: 1 }
       ]);
     });
 

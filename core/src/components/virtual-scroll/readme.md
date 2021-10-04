@@ -1,4 +1,4 @@
-# ion-virtual-scroll
+# syg-virtual-scroll
 
 Virtual Scroll displays a virtual, "infinite" list. An array of records
 is passed to the virtual scroll containing the data to create templates
@@ -7,7 +7,7 @@ consist of items, headers, and footers. For performance reasons, not every recor
 in the list is rendered at once; instead a small subset of records (enough to fill the viewport)
 are rendered and reused as the user scrolls.
 
-This guide will go over the recommended virtual scrolling packages for each framework integration as well as documentation for the deprecated `ion-virtual-scroll` component for Ionic Angular. We recommend using the framework-specific solutions listed below, but the `ion-virtual-scroll` documentation is available below for developers who are still using that component.
+This guide will go over the recommended virtual scrolling packages for each framework integration as well as documentation for the deprecated `syg-virtual-scroll` component for Ionic Angular. We recommend using the framework-specific solutions listed below, but the `syg-virtual-scroll` documentation is available below for developers who are still using that component.
 
 ## Angular
 
@@ -23,7 +23,7 @@ For virtual scrolling options in Ionic Vue, please see [Vue Virtual Scroll Guide
 
 ------
 
-The following documentation applies to the `ion-virtual-scroll` component.
+The following documentation applies to the `syg-virtual-scroll` component.
 
 ## Approximate Widths and Heights
 
@@ -44,11 +44,11 @@ slightly different heights between platforms, which is perfectly fine.
 ## Images Within Virtual Scroll
 
 HTTP requests, image decoding, and image rendering can cause jank while
-scrolling. In order to better control images, Ionic provides `<ion-img>`
+scrolling. In order to better control images, Ionic provides `<syg-img>`
 to manage HTTP requests and image rendering. While scrolling through items
-quickly, `<ion-img>` knows when and when not to make requests, when and
+quickly, `<syg-img>` knows when and when not to make requests, when and
 when not to render images, and only loads the images that are viewable
-after scrolling. [Read more about `ion-img`.](../img)
+after scrolling. [Read more about `syg-img`.](../img)
 
 It's also important for app developers to ensure image sizes are locked in,
 and after images have fully loaded they do not change size and affect any
@@ -56,11 +56,11 @@ other element sizes. Simply put, to ensure rendering bugs are not introduced,
 it's vital that elements within a virtual item does not dynamically change.
 
 For virtual scrolling, the natural effects of the `<img>` are not desirable
-features. We recommend using the `<ion-img>` component over the native
+features. We recommend using the `<syg-img>` component over the native
 `<img>` element because when an `<img>` element is added to the DOM, it
 immediately makes a HTTP request for the image file. Additionally, `<img>`
 renders whenever it wants which could be while the user is scrolling. However,
-`<ion-img>` is governed by the containing `ion-content` and does not render
+`<syg-img>` is governed by the containing `syg-content` and does not render
 images while scrolling quickly.
 
 
@@ -82,11 +82,11 @@ change its dimensions or location. The best way to ensure size and location
 does not change, it's recommended each virtual item has locked in its size
 via CSS.
 
-### Use `ion-img` for images
+### Use `syg-img` for images
 
 When including images within Virtual Scroll, be sure to use
-[`ion-img`](../img) rather than the standard `<img>` HTML element.
-With `ion-img`, images are lazy loaded so only the viewable ones are
+[`syg-img`](../img) rather than the standard `<img>` HTML element.
+With `syg-img`, images are lazy loaded so only the viewable ones are
 rendered, and HTTP requests are efficiently controlled while scrolling.
 
 ### Set Approximate Widths and Heights
@@ -122,19 +122,19 @@ dataset, so please make sure they're performant.
 ### Angular
 
 ```html
-<ion-content>
-  <ion-virtual-scroll [items]="items" approxItemHeight="320px">
-    <ion-card *virtualItem="let item; let itemBounds = bounds;">
+<syg-content>
+  <syg-virtual-scroll [items]="items" approxItemHeight="320px">
+    <syg-card *virtualItem="let item; let itemBounds = bounds;">
       <div>
-        <ion-img [src]="item.imgSrc" [height]="item.imgHeight" [alt]="item.name"></ion-img>
+        <syg-img [src]="item.imgSrc" [height]="item.imgHeight" [alt]="item.name"></syg-img>
       </div>
-    <ion-card-header>
-      <ion-card-title>{{ item.name }}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>{{ item.content }}</ion-card-content>
-    </ion-card>
-  </ion-virtual-scroll>
-</ion-content>
+    <syg-card-header>
+      <syg-card-title>{{ item.name }}</syg-card-title>
+    </syg-card-header>
+    <syg-card-content>{{ item.content }}</syg-card-content>
+    </syg-card>
+  </syg-virtual-scroll>
+</syg-content>
 ```
 
 ```typescript
@@ -188,15 +188,15 @@ let rotateImg = 0;
 
 ### Basic
 
-The array of records should be passed to the `items` property on the `ion-virtual-scroll` element.
-The data given to the `items` property must be an array. An item template with the `*virtualItem` property is required in the `ion-virtual-scroll`. The `*virtualItem` property can be added to any element.
+The array of records should be passed to the `items` property on the `syg-virtual-scroll` element.
+The data given to the `items` property must be an array. An item template with the `*virtualItem` property is required in the `syg-virtual-scroll`. The `*virtualItem` property can be added to any element.
 
 ```html
-<ion-virtual-scroll [items]="items">
-  <ion-item *virtualItem="let item">
+<syg-virtual-scroll [items]="items">
+  <syg-item *virtualItem="let item">
     {{ item }}
-  </ion-item>
-</ion-virtual-scroll>
+  </syg-item>
+</syg-virtual-scroll>
 ```
 
 ### Section Headers and Footers
@@ -210,21 +210,21 @@ and what data to provide to the template. The custom function should
 return `null` if a template shouldn't be created.
 
 ```html
-<ion-virtual-scroll [items]="items" [headerFn]="myHeaderFn">
-  <ion-item-divider *virtualHeader="let header">
+<syg-virtual-scroll [items]="items" [headerFn]="myHeaderFn">
+  <syg-item-divider *virtualHeader="let header">
     {{ header }}
-  </ion-item-divider>
-  <ion-item *virtualItem="let item">
+  </syg-item-divider>
+  <syg-item *virtualItem="let item">
     Item: {{ item }}
-  </ion-item>
-</ion-virtual-scroll>
+  </syg-item>
+</syg-virtual-scroll>
 ```
 
 Below is an example of a custom function called on every record. It
 gets passed the individual record, the record's index number,
 and the entire array of records. In this example, after every 20
 records a header will be inserted. So between the 19th and 20th records,
-between the 39th and 40th, and so on, a `<ion-item-divider>` will
+between the 39th and 40th, and so on, a `<syg-item-divider>` will
 be created and the template's data will come from the function's
 returned data.
 
@@ -246,13 +246,13 @@ each custom component's implementation and internals can be quite different, wra
 within a `<div>` is a safe way to make sure dimensions are measured correctly.
 
 ```html
-<ion-virtual-scroll [items]="items">
+<syg-virtual-scroll [items]="items">
   <div *virtualItem="let item">
     <my-custom-item [item]="item">
       {{ item }}
     </my-custom-item>
   </div>
-</ion-virtual-scroll>
+</syg-virtual-scroll>
 ```
 
 
@@ -268,7 +268,7 @@ within a `<div>` is a safe way to make sure dimensions are measured correctly.
 | `footerHeight`       | --                     | An optional function that maps each item footer within their height.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `((item: any, index: number) => number) \| undefined`                                    | `undefined` |
 | `headerFn`           | --                     | Section headers and the data used within its given template can be dynamically created by passing a function to `headerFn`. For example, a large list of contacts usually has dividers between each letter in the alphabet. App's can provide their own custom `headerFn` which is called with each record within the dataset. The logic within the header function can decide if the header template should be used, and what data to give to the header template. The function must return `null` if a header cell shouldn't be created.             | `((item: any, index: number, items: any[]) => string \| null \| undefined) \| undefined` | `undefined` |
 | `headerHeight`       | --                     | An optional function that maps each item header within their height.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `((item: any, index: number) => number) \| undefined`                                    | `undefined` |
-| `itemHeight`         | --                     | An optional function that maps each item within their height. When this function is provides, heavy optimizations and fast path can be taked by `ion-virtual-scroll` leading to massive performance improvements.  This function allows to skip all DOM reads, which can be Doing so leads to massive performance                                                                                                                                                                                                                                      | `((item: any, index: number) => number) \| undefined`                                    | `undefined` |
+| `itemHeight`         | --                     | An optional function that maps each item within their height. When this function is provides, heavy optimizations and fast path can be taked by `syg-virtual-scroll` leading to massive performance improvements.  This function allows to skip all DOM reads, which can be Doing so leads to massive performance                                                                                                                                                                                                                                      | `((item: any, index: number) => number) \| undefined`                                    | `undefined` |
 | `items`              | --                     | The data that builds the templates within the virtual scroll. It's important to note that when this data has changed, then the entire virtual scroll is reset, which is an expensive operation and should be avoided if possible.                                                                                                                                                                                                                                                                                                                      | `any[] \| undefined`                                                                     | `undefined` |
 | `nodeRender`         | --                     | NOTE: only Vanilla JS API.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `((el: HTMLElement \| null, cell: Cell, domIndex: number) => HTMLElement) \| undefined`  | `undefined` |
 | `renderFooter`       | --                     | NOTE: only JSX API for stencil.  Provide a render function for the footer to be rendered. Returns a JSX virtual-dom.                                                                                                                                                                                                                                                                                                                                                                                                                                   | `((item: any, index: number) => any) \| undefined`                                       | `undefined` |

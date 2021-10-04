@@ -10,7 +10,7 @@ export const mdEnterAnimation = (baseEl: HTMLElement): Animation => {
   const wrapperAnimation = createAnimation();
 
   backdropAnimation
-    .addElement(baseEl.querySelector('ion-backdrop')!)
+    .addElement(baseEl.querySelector('syg-backdrop')!)
     .fromTo('opacity', 0.01, 'var(--backdrop-opacity)')
     .beforeStyles({
       'pointer-events': 'none'

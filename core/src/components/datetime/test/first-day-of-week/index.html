@@ -8,7 +8,7 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
     <style>
       .grid {
         display: grid;
@@ -32,36 +32,36 @@
         }
       }
 
-      ion-datetime {
+      syg-datetime {
         box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.25), 0px 8px 16px rgba(0, 0, 0, 0.25);
         border-radius: 8px;
       }
     </style>
   </head>
   <body>
-    <ion-app>
-      <ion-header translucent="true">
-        <ion-toolbar>
-          <ion-title>Datetime - First day of week</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
+    <syg-app>
+      <syg-header translucent="true">
+        <syg-toolbar>
+          <syg-title>Datetime - First day of week</syg-title>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content class="syg-padding">
         <div class="grid">
           <div class="grid-item">
             <h2>Default</h2>
-            <ion-datetime first-day-of-week="1"></ion-datetime>
-            <ion-button onclick="increase()">Increase firstDayOfWeek</ion-button>
+            <syg-datetime first-day-of-week="1"></syg-datetime>
+            <syg-button onclick="increase()">Increase firstDayOfWeek</syg-button>
             <div>
               <span>FirstDayOfWeek: <span id="start-of-week">1</span></span>
             </div>
           </div>
         </div>
-      </ion-content>
-    </ion-app>
+      </syg-content>
+    </syg-app>
   </body>
   <script>
     function increase() {
-      const datetime = document.querySelector('ion-datetime');
+      const datetime = document.querySelector('syg-datetime');
       datetime.firstDayOfWeek = datetime.firstDayOfWeek + 1;
 
       const span = document.getElementById('start-of-week');

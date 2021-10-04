@@ -1,4 +1,4 @@
-import { IonicSafeString, sanitizeDOMString } from "..";
+import { SygSafeString, sanitizeDOMString } from "..";
 
 describe('sanitizeDOMString', () => {
   it('disable sanitizer', () => {
@@ -8,7 +8,7 @@ describe('sanitizeDOMString', () => {
   })
 
   it('bypass sanitizer', () => {
-    expect(sanitizeDOMString(new IonicSafeString('<img src="x" onerror="alert(document.cookie);">')))
+    expect(sanitizeDOMString(new SygSafeString('<img src="x" onerror="alert(document.cookie);">')))
       .toEqual('<img src="x" onerror="alert(document.cookie);">');
   });
 
@@ -48,13 +48,13 @@ describe('sanitizeDOMString', () => {
   });
 
   it('sanitizeDOMString', () => {
-    expect(sanitizeDOMString('<ion-item><ion-label>Hello!</ion-label><ion-button onclick="alert(document.cookie);">Click me</ion-button>'))
-      .toEqual('<ion-item><ion-label>Hello!</ion-label><ion-button>Click me</ion-button></ion-item>');
+    expect(sanitizeDOMString('<syg-item><syg-label>Hello!</syg-label><syg-button onclick="alert(document.cookie);">Click me</syg-button>'))
+      .toEqual('<syg-item><syg-label>Hello!</syg-label><syg-button>Click me</syg-button></syg-item>');
   });
 });
 
 const enableSanitizer = (enable: boolean = true) => {
-  window.Ionic = {};
-  window.Ionic.config = {};
-  window.Ionic.config.sanitizerEnabled = enable;
+  window.Sygic = {};
+  window.Sygic.config = {};
+  window.Sygic.config.sanitizerEnabled = enable;
 }

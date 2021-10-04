@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, h, readTask } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { ActionSheetAttributes, ActionSheetButton, AnimationBuilder, CssClassMap, OverlayEventDetail, OverlayInterface } from '../../interface';
 import { Gesture } from '../../utils/gesture';
 import { createButtonActiveGesture } from '../../utils/gesture/button-active';
@@ -16,7 +16,7 @@ import { mdLeaveAnimation } from './animations/md.leave';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-action-sheet',
+  tag: 'syg-action-sheet',
   styleUrls: {
     ios: 'action-sheet.ios.scss',
     md: 'action-sheet.md.scss'
@@ -32,7 +32,7 @@ export class ActionSheet implements ComponentInterface, OverlayInterface {
   private groupEl?: HTMLElement;
   private gesture?: Gesture;
 
-  @Element() el!: HTMLIonActionSheetElement;
+  @Element() el!: HTMLSygActionSheetElement;
 
   /** @internal */
   @Prop() overlayIndex!: number;
@@ -218,7 +218,7 @@ export class ActionSheet implements ComponentInterface, OverlayInterface {
      * 3. A wrapper ref does not exist
      */
     const { groupEl, wrapperEl } = this;
-    if (this.gesture || getIonMode(this) === 'md' || !wrapperEl || !groupEl) { return; }
+    if (this.gesture || getSygMode(this) === 'md' || !wrapperEl || !groupEl) { return; }
 
     readTask(() => {
       const isScrollable = groupEl.scrollHeight > groupEl.clientHeight;
@@ -234,7 +234,7 @@ export class ActionSheet implements ComponentInterface, OverlayInterface {
 
   render() {
     const { htmlAttributes } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const allButtons = this.getButtons();
     const cancelButton = allButtons.find(b => b.role === 'cancel');
     const buttons = allButtons.filter(b => b.role !== 'cancel');
@@ -254,14 +254,14 @@ export class ActionSheet implements ComponentInterface, OverlayInterface {
           ...getClassMap(this.cssClass),
           'action-sheet-translucent': this.translucent
         }}
-        onIonActionSheetWillDismiss={this.dispatchCancelHandler}
-        onIonBackdropTap={this.onBackdropTap}
+        onSygActionSheetWillDismiss={this.dispatchCancelHandler}
+        onSygBackdropTap={this.onBackdropTap}
       >
-        <ion-backdrop tappable={this.backdropDismiss}/>
+        <syg-backdrop tappable={this.backdropDismiss}/>
 
         <div tabindex="0"></div>
 
-        <div class="action-sheet-wrapper ion-overlay-wrapper" role="dialog" ref={el => this.wrapperEl = el}>
+        <div class="action-sheet-wrapper syg-overlay-wrapper" role="dialog" ref={el => this.wrapperEl = el}>
           <div class="action-sheet-container">
             <div class="action-sheet-group" ref={el => this.groupEl = el}>
               {this.header !== undefined &&
@@ -279,7 +279,7 @@ export class ActionSheet implements ComponentInterface, OverlayInterface {
                     {b.icon && <ion-icon icon={b.icon} lazy={false} class="action-sheet-icon" />}
                     {b.text}
                   </span>
-                  {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+                  {mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
                 </button>
               )}
             </div>
@@ -300,7 +300,7 @@ export class ActionSheet implements ComponentInterface, OverlayInterface {
                       />}
                     {cancelButton.text}
                   </span>
-                  {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+                  {mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
                 </button>
               </div>
             }
@@ -316,8 +316,8 @@ export class ActionSheet implements ComponentInterface, OverlayInterface {
 const buttonClass = (button: ActionSheetButton): CssClassMap => {
   return {
     'action-sheet-button': true,
-    'ion-activatable': true,
-    'ion-focusable': true,
+    'syg-activatable': true,
+    'syg-focusable': true,
     [`action-sheet-${button.role}`]: button.role !== undefined,
     ...getClassMap(button.cssClass),
   };

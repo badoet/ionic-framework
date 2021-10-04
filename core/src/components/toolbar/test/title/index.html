@@ -9,8 +9,8 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
-  
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
+
   <style>
     .more, .create {
       --dimension: 28px;
@@ -21,16 +21,16 @@
     .more {
       --background: #e9e9ea;
     }
-    
+
     .create {
       --background: #3777ff;
       --color: white !important;
     }
-    
+
     .create ion-icon {
       transform: scale(0.9);
     }
-    
+
     .main-toolbar {
       --background: rgba(0, 0, 0, 0.05);
     }
@@ -38,12 +38,12 @@
 </head>
 
 <body>
-  <ion-app>
-    <ion-nav root="page-one"></ion-nav>
-  </ion-app>
+  <syg-app>
+    <syg-nav root="page-one"></syg-nav>
+  </syg-app>
 
   <style>
-    ion-item {
+    syg-item {
       --padding-start: 10px;
     }
 
@@ -62,89 +62,89 @@
         let html = '';
         for (let i = 0; i < 100; i++) {
           html += `
-            <ion-nav-link component="page-three">
-              <ion-item button>
-                <ion-badge slot="start" class="item-badge ion-align-self-start">&nbsp;</ion-badge>
-                <ion-label>
+            <syg-nav-link component="page-three">
+              <syg-item button>
+                <syg-badge slot="start" class="item-badge syg-align-self-start">&nbsp;</syg-badge>
+                <syg-label>
                   <h2>Heading ${i}</h2>
                   <h3>Smaller heading ${i}</h2>
                   <p>Paragraph ${i}</p>
-                </ion-label>
-      
-              </ion-item>
-            </ion-nav-link>
+                </syg-label>
+
+              </syg-item>
+            </syg-nav-link>
           `;
         }
         return html;
       }
-      
+
       connectedCallback() {
-  
+
         this.innerHTML = `
-          <ion-header class="main-header" translucent>
-            <ion-toolbar class="main-toolbar">
-              <ion-segment>
-                <ion-segment-button value="all">
+          <syg-header class="main-header" translucent>
+            <syg-toolbar class="main-toolbar">
+              <syg-segment>
+                <syg-segment-button value="all">
                   All
-                </ion-segment-button>
-                <ion-segment-button value="favorites">
+                </syg-segment-button>
+                <syg-segment-button value="favorites">
                   Favorites
-                </ion-segment-button>
-              </ion-segment>
-            </ion-toolbar>
-            
-            <ion-toolbar class="main-toolbar">
-              <ion-segment>
-                <ion-segment-button value="all">
+                </syg-segment-button>
+              </syg-segment>
+            </syg-toolbar>
+
+            <syg-toolbar class="main-toolbar">
+              <syg-segment>
+                <syg-segment-button value="all">
                   All
-                </ion-segment-button>
-                <ion-segment-button value="favorites">
+                </syg-segment-button>
+                <syg-segment-button value="favorites">
                   Favorites
-                </ion-segment-button>
-              </ion-segment>
-            </ion-toolbar>
-          
-            <ion-toolbar class="main-toolbar">    
-              <ion-buttons collapse>
-                <ion-back-button default-href="/"></ion-back-button>
-              </ion-buttons>  
-              <ion-title>Page Two</ion-title>  
-              <ion-buttons slot="end">
-                <ion-button>Hello Page 2</ion-button>
-              </ion-buttons>              
-            </ion-toolbar>
-          </ion-header>
-        
-          <ion-content id="content" class="main-content" fullscreen>
-            <ion-header collapse="condense">              
-              <ion-toolbar>      
-                <ion-title size="large">Page Two</ion-title>
-              </ion-toolbar>
-              <ion-toolbar>
-                <ion-searchbar></ion-searchbar>
-              </ion-toolbar>
-            </ion-header>
-          
-            <ion-list id="dynamicList">${this.generateList()}</ion-list>
-          </ion-content>
+                </syg-segment-button>
+              </syg-segment>
+            </syg-toolbar>
+
+            <syg-toolbar class="main-toolbar">
+              <syg-buttons collapse>
+                <syg-back-button default-href="/"></syg-back-button>
+              </syg-buttons>
+              <syg-title>Page Two</syg-title>
+              <syg-buttons slot="end">
+                <syg-button>Hello Page 2</syg-button>
+              </syg-buttons>
+            </syg-toolbar>
+          </syg-header>
+
+          <syg-content id="content" class="main-content" fullscreen>
+            <syg-header collapse="condense">
+              <syg-toolbar>
+                <syg-title size="large">Page Two</syg-title>
+              </syg-toolbar>
+              <syg-toolbar>
+                <syg-searchbar></syg-searchbar>
+              </syg-toolbar>
+            </syg-header>
+
+            <syg-list id="dynamicList">${this.generateList()}</syg-list>
+          </syg-content>
         `;
       }
     }
-        
+
     class PageThree extends HTMLElement {
       generateList() {
         let html = '';
         for (let i = 0; i < 100; i++) {
           html += `
-            <ion-item button color="dark">
-              <ion-badge slot="start" class="item-badge ion-align-self-start">&nbsp;</ion-badge>
-              <ion-label>
+            <syg-item button color="dark">
+              <syg-badge slot="start" class="item-badge syg-align-self-start">&nbsp;</syg-badge>
+              <syg-label>
                 <h2>Heading ${i}</h2>
                 <h3>Smaller heading ${i}</h2>
                 <p>Paragraph ${i}</p>
-              </ion-label>
-    
-            </ion-item>
+              </syg-label>
+
+            </syg-item>
           `;
         }
         return html;
@@ -152,27 +152,27 @@
 
       connectedCallback() {
         this.innerHTML = `
-          <ion-header class="three-header" color="dark" translucent>
-            <ion-toolbar color="dark">    
-              <ion-buttons>
-                <ion-back-button default-href="/" text="Page Two"></ion-back-button>
-              </ion-buttons>  
-              <ion-title>Page Three</ion-title>  
-              <ion-buttons slot="end" collapse>
-                <ion-button>Hello Page 3</ion-button>
-              </ion-buttons>              
-            </ion-toolbar>            
-          </ion-header>
-        
-          <ion-content id="content" class="three-content" fullscreen color="dark">
-            <ion-header collapse="condense" color="dark">              
-              <ion-toolbar color="dark">      
-                <ion-title size="large">Page Three</ion-title>
-              </ion-toolbar>
-            </ion-header>
-          
-            <ion-list id="dynamicList">${this.generateList()}</ion-list>
-          </ion-content>
+          <syg-header class="three-header" color="dark" translucent>
+            <syg-toolbar color="dark">
+              <syg-buttons>
+                <syg-back-button default-href="/" text="Page Two"></syg-back-button>
+              </syg-buttons>
+              <syg-title>Page Three</syg-title>
+              <syg-buttons slot="end" collapse>
+                <syg-button>Hello Page 3</syg-button>
+              </syg-buttons>
+            </syg-toolbar>
+          </syg-header>
+
+          <syg-content id="content" class="three-content" fullscreen color="dark">
+            <syg-header collapse="condense" color="dark">
+              <syg-toolbar color="dark">
+                <syg-title size="large">Page Three</syg-title>
+              </syg-toolbar>
+            </syg-header>
+
+            <syg-list id="dynamicList">${this.generateList()}</syg-list>
+          </syg-content>
         `;
       }
     }

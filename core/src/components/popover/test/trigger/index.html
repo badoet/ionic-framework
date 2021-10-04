@@ -7,7 +7,7 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
     <style>
       .grid {
         display: grid;
@@ -32,83 +32,83 @@
     </style>
   </head>
   <body>
-    <ion-app>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Popover - Triggers</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <syg-app>
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Popover - Triggers</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content class="ion-padding">
+      <syg-content class="syg-padding">
         <div class="grid">
           <div class="grid-item">
             <h2>Left Click</h2>
-            <ion-button id="left-click-trigger">Trigger</ion-button>
-            <ion-popover
+            <syg-button id="left-click-trigger">Trigger</syg-button>
+            <syg-popover
               class="left-click-popover"
               trigger="left-click-trigger"
             >
-              <ion-content class="ion-padding">
+              <syg-content class="syg-padding">
                 Popover Content
-              </ion-content>
-            </ion-popover>
+              </syg-content>
+            </syg-popover>
           </div>
           <div class="grid-item">
             <h2>Right Click</h2>
-            <ion-button id="right-click-trigger">Trigger</ion-button>
-            <ion-popover
+            <syg-button id="right-click-trigger">Trigger</syg-button>
+            <syg-popover
               class="right-click-popover"
               trigger="right-click-trigger"
               trigger-action="context-menu"
             >
-              <ion-content class="ion-padding">
+              <syg-content class="syg-padding">
                 Popover Content
-              </ion-content>
-            </ion-popover>
+              </syg-content>
+            </syg-popover>
           </div>
           <div class="grid-item">
             <h2>Hover</h2>
-            <ion-button id="hover-trigger">Trigger</ion-button>
-            <ion-popover
+            <syg-button id="hover-trigger">Trigger</syg-button>
+            <syg-popover
               class="hover-popover"
               trigger="hover-trigger"
               trigger-action="hover"
             >
-              <ion-content class="ion-padding">
+              <syg-content class="syg-padding">
                 Popover Content
-              </ion-content>
-            </ion-popover>
+              </syg-content>
+            </syg-popover>
           </div>
           <div class="grid-item">
             <h2>Dismiss On Select</h2>
-            <ion-button id="nested-click-trigger">Trigger</ion-button>
-            <ion-popover
+            <syg-button id="nested-click-trigger">Trigger</syg-button>
+            <syg-popover
               class="nested-click-popover"
               trigger="nested-click-trigger"
               dismiss-on-select="true"
             >
-              <ion-content>
+              <syg-content>
                 Popover Content
-                <ion-item button id="nested-click-trigger-two">
-                  <ion-label>Trigger</ion-label>
-                </ion-item>
-                <ion-item button id="other-button">
-                  <ion-label>Other Button</ion-label>
-                </ion-item>
-                <ion-popover
+                <syg-item button id="nested-click-trigger-two">
+                  <syg-label>Trigger</syg-label>
+                </syg-item>
+                <syg-item button id="other-button">
+                  <syg-label>Other Button</syg-label>
+                </syg-item>
+                <syg-popover
                   class="nested-click-popover-two"
                   side="right"
                   trigger="nested-click-trigger-two"
                 >
-                  <ion-content class="ion-padding">
+                  <syg-content class="syg-padding">
                     Inner Popover Content
-                  </ion-content>
-                </ion-popover>
-              </ion-content>
-            </ion-popover>
+                  </syg-content>
+                </syg-popover>
+              </syg-content>
+            </syg-popover>
           </div>
         </div>
-      </ion-content>
-    </ion-app>
+      </syg-content>
+    </syg-app>
   </body>
 </html>

@@ -3,9 +3,9 @@
  * in an untrusted string
  */
 
-export const sanitizeDOMString = (untrustedString: IonicSafeString | string | undefined): string | undefined => {
+export const sanitizeDOMString = (untrustedString: SygSafeString | string | undefined): string | undefined => {
   try {
-    if (untrustedString instanceof IonicSafeString) { return untrustedString.value; }
+    if (untrustedString instanceof SygSafeString) { return untrustedString.value; }
     if (!isSanitizerEnabled() || typeof untrustedString !== 'string' || untrustedString === '') { return untrustedString; }
 
     /**
@@ -125,7 +125,7 @@ const getElementChildren = (el: any) => {
 
 const isSanitizerEnabled = (): boolean => {
   const win = window as any;
-  const config = win && win.Ionic && win.Ionic.config;
+  const config = win && win.Sygic && win.Sygic.config;
   if (config) {
     if (config.get) {
       return config.get('sanitizerEnabled', true);
@@ -139,6 +139,6 @@ const isSanitizerEnabled = (): boolean => {
 const allowedAttributes = ['class', 'id', 'href', 'src', 'name', 'slot'];
 const blockedTags = ['script', 'style', 'iframe', 'meta', 'link', 'object', 'embed'];
 
-export class IonicSafeString {
+export class SygSafeString {
   constructor(public value: string) {}
 }

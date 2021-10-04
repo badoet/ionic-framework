@@ -1,4 +1,4 @@
-# ion-list
+# syg-list
 
 Lists are made up of multiple rows of items which can contain text, buttons, toggles,
 icons, thumbnails, and much more. Lists generally contain items with similar data content, such as images and text.
@@ -15,64 +15,64 @@ Lists support several interactions including swiping items to reveal options, dr
 
 ```html
 <!-- List of Text Items -->
-<ion-list>
-  <ion-item>
-    <ion-label>Pokémon Yellow</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>Mega Man X</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>The Legend of Zelda</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>Pac-Man</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>Super Mario World</ion-label>
-  </ion-item>
-</ion-list>
+<syg-list>
+  <syg-item>
+    <syg-label>Pokémon Yellow</syg-label>
+  </syg-item>
+  <syg-item>
+    <syg-label>Mega Man X</syg-label>
+  </syg-item>
+  <syg-item>
+    <syg-label>The Legend of Zelda</syg-label>
+  </syg-item>
+  <syg-item>
+    <syg-label>Pac-Man</syg-label>
+  </syg-item>
+  <syg-item>
+    <syg-label>Super Mario World</syg-label>
+  </syg-item>
+</syg-list>
 
 <!-- List of Input Items -->
-<ion-list>
-  <ion-item>
-    <ion-label>Input</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Toggle</ion-label>
-    <ion-toggle slot="end"></ion-toggle>
-  </ion-item>
-  <ion-item>
-    <ion-label>Radio</ion-label>
-    <ion-radio slot="end"></ion-radio>
-  </ion-item>
-  <ion-item>
-    <ion-label>Checkbox</ion-label>
-    <ion-checkbox slot="start"></ion-checkbox>
-  </ion-item>
-</ion-list>
+<syg-list>
+  <syg-item>
+    <syg-label>Input</syg-label>
+    <syg-input></syg-input>
+  </syg-item>
+  <syg-item>
+    <syg-label>Toggle</syg-label>
+    <syg-toggle slot="end"></syg-toggle>
+  </syg-item>
+  <syg-item>
+    <syg-label>Radio</syg-label>
+    <syg-radio slot="end"></syg-radio>
+  </syg-item>
+  <syg-item>
+    <syg-label>Checkbox</syg-label>
+    <syg-checkbox slot="start"></syg-checkbox>
+  </syg-item>
+</syg-list>
 
 <!-- List of Sliding Items -->
-<ion-list>
-  <ion-item-sliding>
-    <ion-item>
-      <ion-label>Item</ion-label>
-    </ion-item>
-    <ion-item-options side="end">
-      <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
+<syg-list>
+  <syg-item-sliding>
+    <syg-item>
+      <syg-label>Item</syg-label>
+    </syg-item>
+    <syg-item-options side="end">
+      <syg-item-option (click)="unread(item)">Unread</syg-item-option>
+    </syg-item-options>
+  </syg-item-sliding>
 
-  <ion-item-sliding>
-    <ion-item>
-      <ion-label>Item</ion-label>
-    </ion-item>
-    <ion-item-options side="end">
-      <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
-</ion-list>
+  <syg-item-sliding>
+    <syg-item>
+      <syg-label>Item</syg-label>
+    </syg-item>
+    <syg-item-options side="end">
+      <syg-item-option (click)="unread(item)">Unread</syg-item-option>
+    </syg-item-options>
+  </syg-item-sliding>
+</syg-list>
 ```
 
 
@@ -80,64 +80,64 @@ Lists support several interactions including swiping items to reveal options, dr
 
 ```html
 <!-- List of Text Items -->
-<ion-list>
-  <ion-item>
-    <ion-label>Pokémon Yellow</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>Mega Man X</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>The Legend of Zelda</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>Pac-Man</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>Super Mario World</ion-label>
-  </ion-item>
-</ion-list>
+<syg-list>
+  <syg-item>
+    <syg-label>Pokémon Yellow</syg-label>
+  </syg-item>
+  <syg-item>
+    <syg-label>Mega Man X</syg-label>
+  </syg-item>
+  <syg-item>
+    <syg-label>The Legend of Zelda</syg-label>
+  </syg-item>
+  <syg-item>
+    <syg-label>Pac-Man</syg-label>
+  </syg-item>
+  <syg-item>
+    <syg-label>Super Mario World</syg-label>
+  </syg-item>
+</syg-list>
 
 <!-- List of Input Items -->
-<ion-list>
-  <ion-item>
-    <ion-label>Input</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Toggle</ion-label>
-    <ion-toggle slot="end"></ion-toggle>
-  </ion-item>
-  <ion-item>
-    <ion-label>Radio</ion-label>
-    <ion-radio slot="end"></ion-radio>
-  </ion-item>
-  <ion-item>
-    <ion-label>Checkbox</ion-label>
-    <ion-checkbox slot="start"></ion-checkbox>
-  </ion-item>
-</ion-list>
+<syg-list>
+  <syg-item>
+    <syg-label>Input</syg-label>
+    <syg-input></syg-input>
+  </syg-item>
+  <syg-item>
+    <syg-label>Toggle</syg-label>
+    <syg-toggle slot="end"></syg-toggle>
+  </syg-item>
+  <syg-item>
+    <syg-label>Radio</syg-label>
+    <syg-radio slot="end"></syg-radio>
+  </syg-item>
+  <syg-item>
+    <syg-label>Checkbox</syg-label>
+    <syg-checkbox slot="start"></syg-checkbox>
+  </syg-item>
+</syg-list>
 
 <!-- List of Sliding Items -->
-<ion-list>
-  <ion-item-sliding>
-    <ion-item>
-      <ion-label>Item</ion-label>
-    </ion-item>
-    <ion-item-options side="end">
-      <ion-item-option onClick="unread(item)">Unread</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
+<syg-list>
+  <syg-item-sliding>
+    <syg-item>
+      <syg-label>Item</syg-label>
+    </syg-item>
+    <syg-item-options side="end">
+      <syg-item-option onClick="unread(item)">Unread</syg-item-option>
+    </syg-item-options>
+  </syg-item-sliding>
 
-  <ion-item-sliding>
-    <ion-item>
-      <ion-label>Item</ion-label>
-    </ion-item>
-    <ion-item-options side="end">
-      <ion-item-option onClick="unread(item)">Unread</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
-</ion-list>
+  <syg-item-sliding>
+    <syg-item>
+      <syg-label>Item</syg-label>
+    </syg-item>
+    <syg-item-options side="end">
+      <syg-item-option onClick="unread(item)">Unread</syg-item-option>
+    </syg-item-options>
+  </syg-item-sliding>
+</syg-list>
 ```
 
 
@@ -230,64 +230,64 @@ export class ListExample {
   render() {
     return [
       // List of Text Items
-      <ion-list>
-        <ion-item>
-          <ion-label>Pokémon Yellow</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Mega Man X</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>The Legend of Zelda</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Pac-Man</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Super Mario World</ion-label>
-        </ion-item>
-      </ion-list>,
+      <syg-list>
+        <syg-item>
+          <syg-label>Pokémon Yellow</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Mega Man X</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>The Legend of Zelda</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Pac-Man</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Super Mario World</syg-label>
+        </syg-item>
+      </syg-list>,
 
       // List of Input Items
-      <ion-list>
-        <ion-item>
-          <ion-label>Input</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Toggle</ion-label>
-          <ion-toggle slot="end"></ion-toggle>
-        </ion-item>
-        <ion-item>
-          <ion-label>Radio</ion-label>
-          <ion-radio slot="end"></ion-radio>
-        </ion-item>
-        <ion-item>
-          <ion-label>Checkbox</ion-label>
-          <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-      </ion-list>,
+      <syg-list>
+        <syg-item>
+          <syg-label>Input</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label>Toggle</syg-label>
+          <syg-toggle slot="end"></syg-toggle>
+        </syg-item>
+        <syg-item>
+          <syg-label>Radio</syg-label>
+          <syg-radio slot="end"></syg-radio>
+        </syg-item>
+        <syg-item>
+          <syg-label>Checkbox</syg-label>
+          <syg-checkbox slot="start"></syg-checkbox>
+        </syg-item>
+      </syg-list>,
 
       // List of Sliding Items
-      <ion-list>
-        <ion-item-sliding>
-          <ion-item>
-            <ion-label>Item</ion-label>
-          </ion-item>
-          <ion-item-options side="end">
-            <ion-item-option onClick={(ev) => this.unread(ev)}>Unread</ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>
+      <syg-list>
+        <syg-item-sliding>
+          <syg-item>
+            <syg-label>Item</syg-label>
+          </syg-item>
+          <syg-item-options side="end">
+            <syg-item-option onClick={(ev) => this.unread(ev)}>Unread</syg-item-option>
+          </syg-item-options>
+        </syg-item-sliding>
 
-        <ion-item-sliding>
-          <ion-item>
-            <ion-label>Item</ion-label>
-          </ion-item>
-          <ion-item-options side="end">
-            <ion-item-option onClick={(ev) => this.unread(ev)}>Unread</ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>
-      </ion-list>
+        <syg-item-sliding>
+          <syg-item>
+            <syg-label>Item</syg-label>
+          </syg-item>
+          <syg-item-options side="end">
+            <syg-item-option onClick={(ev) => this.unread(ev)}>Unread</syg-item-option>
+          </syg-item-options>
+        </syg-item-sliding>
+      </syg-list>
     ];
   }
 }
@@ -299,64 +299,64 @@ export class ListExample {
 ```html
 <template>
   <!-- List of Text Items -->
-  <ion-list>
-    <ion-item>
-      <ion-label>Pokémon Yellow</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Mega Man X</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>The Legend of Zelda</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Pac-Man</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Super Mario World</ion-label>
-    </ion-item>
-  </ion-list>
+  <syg-list>
+    <syg-item>
+      <syg-label>Pokémon Yellow</syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-label>Mega Man X</syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-label>The Legend of Zelda</syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-label>Pac-Man</syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-label>Super Mario World</syg-label>
+    </syg-item>
+  </syg-list>
 
   <!-- List of Input Items -->
-  <ion-list>
-    <ion-item>
-      <ion-label>Input</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Toggle</ion-label>
-      <ion-toggle slot="end"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Radio</ion-label>
-      <ion-radio slot="end"></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Checkbox</ion-label>
-      <ion-checkbox slot="start"></ion-checkbox>
-    </ion-item>
-  </ion-list>
+  <syg-list>
+    <syg-item>
+      <syg-label>Input</syg-label>
+      <syg-input></syg-input>
+    </syg-item>
+    <syg-item>
+      <syg-label>Toggle</syg-label>
+      <syg-toggle slot="end"></syg-toggle>
+    </syg-item>
+    <syg-item>
+      <syg-label>Radio</syg-label>
+      <syg-radio slot="end"></syg-radio>
+    </syg-item>
+    <syg-item>
+      <syg-label>Checkbox</syg-label>
+      <syg-checkbox slot="start"></syg-checkbox>
+    </syg-item>
+  </syg-list>
 
   <!-- List of Sliding Items -->
-  <ion-list>
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Item</ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option @click="unread(item)">Unread</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
+  <syg-list>
+    <syg-item-sliding>
+      <syg-item>
+        <syg-label>Item</syg-label>
+      </syg-item>
+      <syg-item-options side="end">
+        <syg-item-option @click="unread(item)">Unread</syg-item-option>
+      </syg-item-options>
+    </syg-item-sliding>
 
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Item</ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option @click="unread(item)">Unread</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
+    <syg-item-sliding>
+      <syg-item>
+        <syg-label>Item</syg-label>
+      </syg-item>
+      <syg-item-options side="end">
+        <syg-item-option @click="unread(item)">Unread</syg-item-option>
+      </syg-item-options>
+    </syg-item-sliding>
+  </syg-list>
 </template>
 
 <script>
@@ -406,10 +406,10 @@ export default defineComponent({
 
 ### `closeSlidingItems() => Promise<boolean>`
 
-If `ion-item-sliding` are used inside the list, this method closes
+If `syg-item-sliding` are used inside the list, this method closes
 any open sliding item.
 
-Returns `true` if an actual `ion-item-sliding` is closed.
+Returns `true` if an actual `syg-item-sliding` is closed.
 
 #### Returns
 
@@ -422,13 +422,13 @@ Type: `Promise<boolean>`
 
 ### Used by
 
- - ion-select-popover
+ - syg-select-popover
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-select-popover --> ion-list
-  style ion-list fill:#f9f,stroke:#333,stroke-width:4px
+  syg-select-popover --> syg-list
+  style syg-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

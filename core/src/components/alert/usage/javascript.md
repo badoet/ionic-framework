@@ -1,6 +1,6 @@
 ```javascript
 function presentAlert() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Alert';
   alert.subHeader = 'Subtitle';
@@ -15,7 +15,7 @@ function presentAlert() {
 }
 
 function presentAlertMultipleButtons() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Alert';
   alert.subHeader = 'Subtitle';
@@ -27,7 +27,7 @@ function presentAlertMultipleButtons() {
 }
 
 function presentAlertConfirm() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Confirm!';
   alert.message = 'Message <strong>text</strong>!!!';
@@ -54,7 +54,7 @@ function presentAlertConfirm() {
 }
 
 function presentAlertPrompt() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Prompt!';
   alert.inputs = [
@@ -134,7 +134,7 @@ function presentAlertPrompt() {
 }
 
 function presentAlertRadio() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Radio';
   alert.inputs = [
@@ -208,7 +208,7 @@ function presentAlertRadio() {
 }
 
 function presentAlertCheckbox() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Checkbox';
   alert.inputs = [

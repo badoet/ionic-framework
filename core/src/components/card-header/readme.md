@@ -1,6 +1,6 @@
-# ion-card-header
+# syg-card-header
 
-`ion-card-header` is a header component for `ion-card`.
+`syg-card-header` is a header component for `syg-card`.
 
 
 <!-- Auto Generated Below -->

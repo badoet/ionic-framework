@@ -7,7 +7,7 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
     <style>
       .grid {
         display: grid;
@@ -32,45 +32,45 @@
     </style>
   </head>
   <body>
-    <ion-app>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Popover - Reference</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <syg-app>
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Popover - Reference</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content class="ion-padding">
+      <syg-content class="syg-padding">
         <div class="grid">
           <div class="grid-item">
             <h2>Event</h2>
-            <ion-button id="event-trigger">Trigger</ion-button>
-            <ion-popover
+            <syg-button id="event-trigger">Trigger</syg-button>
+            <syg-popover
               reference="event"
               class="event-popover"
               trigger="event-trigger"
               alignment="start"
             >
-              <ion-content class="ion-padding">
+              <syg-content class="syg-padding">
                 Popover Content
-              </ion-content>
-            </ion-popover>
+              </syg-content>
+            </syg-popover>
           </div>
           <div class="grid-item">
             <h2>Trigger</h2>
-            <ion-button id="trigger-trigger">Trigger</ion-button>
-            <ion-popover
+            <syg-button id="trigger-trigger">Trigger</syg-button>
+            <syg-popover
               reference="trigger"
               class="trigger-popover"
               trigger="trigger-trigger"
               alignment="start"
             >
-              <ion-content class="ion-padding">
+              <syg-content class="syg-padding">
                 Popover Content
-              </ion-content>
-            </ion-popover>
+              </syg-content>
+            </syg-popover>
           </div>
         </div>
-      </ion-content>
-    </ion-app>
+      </syg-content>
+    </syg-app>
   </body>
 </html>

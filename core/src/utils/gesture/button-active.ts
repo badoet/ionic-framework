@@ -33,7 +33,7 @@ export const createButtonActiveGesture = (
     }
 
     const buttonToModify = currentTouchedButton;
-    writeTask(() => buttonToModify.classList.add('ion-activated'));
+    writeTask(() => buttonToModify.classList.add('syg-activated'));
     hapticFeedbackFn();
   };
 
@@ -41,7 +41,7 @@ export const createButtonActiveGesture = (
     if (!currentTouchedButton) { return; }
 
     const buttonToModify = currentTouchedButton;
-    writeTask(() => buttonToModify.classList.remove('ion-activated'));
+    writeTask(() => buttonToModify.classList.remove('syg-activated'));
 
     /**
      * Clicking on one button, but releasing on another button

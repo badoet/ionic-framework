@@ -48,7 +48,7 @@
   @include margin(3px, null, null, null);
 }
 
-:host(.toolbar-searchbar) ::slotted(ion-back-button) {
+:host(.toolbar-searchbar) ::slotted(syg-back-button) {
   height: 38px;
 }
 
@@ -56,7 +56,7 @@
 // iOS Toolbar Slot Placement
 // --------------------------------------------------
 
-::slotted(ion-buttons) {
+::slotted(syg-buttons) {
   min-height: 38px;
 }
 

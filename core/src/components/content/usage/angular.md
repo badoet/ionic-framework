@@ -1,5 +1,5 @@
 ```html
-<ion-content
+<syg-content
   [scrollEvents]="true"
   (ionScrollStart)="logScrollStart()"
   (ionScroll)="logScrolling($event)"
@@ -9,6 +9,6 @@
     <div slot="fixed">
       <h1>Fixed Content</h1>
     </div>
-</ion-content>
+</syg-content>
 ```
 

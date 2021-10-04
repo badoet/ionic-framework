@@ -126,8 +126,8 @@
 // iOS Slotted Toggle
 // --------------------------------------------------
 
-::slotted(ion-toggle[slot="start"]),
-::slotted(ion-toggle[slot="end"]) {
+::slotted(syg-toggle[slot="start"]),
+::slotted(syg-toggle[slot="end"]) {
   @include margin(0);
 }
 
@@ -158,18 +158,18 @@
 // iOS Item Avatar & Thumbnail
 // --------------------------------------------------
 
-::slotted(ion-avatar) {
+::slotted(syg-avatar) {
   width: $item-ios-avatar-width;
   height: $item-ios-avatar-height;
 }
 
-::slotted(ion-thumbnail) {
+::slotted(syg-thumbnail) {
   width: $item-ios-thumbnail-width;
   height: $item-ios-thumbnail-height;
 }
 
-::slotted(ion-avatar[slot="end"]),
-::slotted(ion-thumbnail[slot="end"]) {
+::slotted(syg-avatar[slot="end"]),
+::slotted(syg-thumbnail[slot="end"]) {
   @include margin(($item-ios-padding-end / 2));
 }
 
@@ -177,8 +177,8 @@
 // iOS Radio / Toggle Item Label
 // -----------------------------------------
 
-:host(.item-radio) ::slotted(ion-label),
-:host(.item-toggle) ::slotted(ion-label) {
+:host(.item-radio) ::slotted(syg-label),
+:host(.item-toggle) ::slotted(syg-label) {
   @include margin-horizontal(0px, null);
 }
 
@@ -195,7 +195,7 @@
 // iOS Slotted Label
 // --------------------------------------------------
 
-::slotted(ion-label) {
+::slotted(syg-label) {
   @include margin(10px, 8px, 10px, 0);
 }
 
@@ -208,9 +208,9 @@
   --min-height: 68px;
 }
 
-// TODO: refactor, ion-item and ion-textarea have the same CSS
-:host(.item-label-stacked) ::slotted(ion-select),
-:host(.item-label-floating) ::slotted(ion-select) {
+// TODO: refactor, syg-item and syg-textarea have the same CSS
+:host(.item-label-stacked) ::slotted(syg-select),
+:host(.item-label-floating) ::slotted(syg-select) {
   --padding-top: 8px;
   --padding-bottom: 8px;
   --padding-start: 0px;
@@ -220,8 +220,8 @@
 // iOS Fixed Labels
 // --------------------------------------------------
 
-:host(.item-label-fixed) ::slotted(ion-select),
-:host(.item-label-fixed) ::slotted(ion-datetime) {
+:host(.item-label-fixed) ::slotted(syg-select),
+:host(.item-label-fixed) ::slotted(syg-datetime) {
   --padding-start: 0;
 }
 
@@ -254,7 +254,7 @@
 // iOS Textarea After Label
 // --------------------------------------------------
 
-// .label-ios + ion-textarea .native-textarea,
+// .label-ios + syg-textarea .native-textarea,
 // .label-ios + .input + .cloned-input {
 //   @include margin-horizontal($textarea-ios-by-label-margin-start, null);
 

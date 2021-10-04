@@ -12,7 +12,7 @@ test('select: basic', async () => {
   let select = await page.find('#gender');
   await select.click();
 
-  let alert = await page.find('ion-alert');
+  let alert = await page.find('syg-alert');
   await alert.waitForVisible();
   await page.waitForTimeout(250);
 
@@ -24,7 +24,7 @@ test('select: basic', async () => {
   select = await page.find('#skittles');
   await select.click();
 
-  let actionSheet = await page.find('ion-action-sheet');
+  let actionSheet = await page.find('syg-action-sheet');
   await actionSheet.waitForVisible();
   await page.waitForTimeout(250);
 
@@ -36,7 +36,7 @@ test('select: basic', async () => {
   select = await page.find('#customAlertSelect');
   await select.click();
 
-  alert = await page.find('ion-alert');
+  alert = await page.find('syg-alert');
   await alert.waitForVisible();
   await page.waitForTimeout(250);
 
@@ -48,7 +48,7 @@ test('select: basic', async () => {
   select = await page.find('#customPopoverSelect');
   await select.click();
 
-  let popover = await page.find('ion-popover');
+  let popover = await page.find('syg-popover');
   await popover.waitForVisible();
   await page.waitForTimeout(250);
 
@@ -56,27 +56,27 @@ test('select: basic', async () => {
 
   // select has no value, so first option should be focused by default
   const popoverOption1 = await popover.find('.select-interface-option:first-child');
-  expect(popoverOption1).toHaveClass('ion-focused');
+  expect(popoverOption1).toHaveClass('syg-focused');
 
   let popoverOption2 = await popover.find('.select-interface-option:nth-child(2)');
   await popoverOption2.click();
   await page.waitForTimeout(500);
 
   await select.click();
-  popover = await page.find('ion-popover');
+  popover = await page.find('syg-popover');
   await popover.waitForVisible();
   await page.waitForTimeout(250);
 
   popoverOption2 = await popover.find('.select-interface-option:nth-child(2)');
-  expect(popoverOption2).toHaveClass('ion-focused');
-  
+  expect(popoverOption2).toHaveClass('syg-focused');
+
   await popover.callMethod('dismiss');
 
   // Custom Action Sheet Select
   select = await page.find('#customActionSheetSelect');
   await select.click();
 
-  actionSheet = await page.find('ion-action-sheet');
+  actionSheet = await page.find('syg-action-sheet');
   await actionSheet.waitForVisible();
   await page.waitForTimeout(250);
 

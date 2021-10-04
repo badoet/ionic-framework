@@ -6,19 +6,19 @@ it('should correctly provide the collapsed breadcrumbs in the event payload', as
   const page = await newSpecPage({
     components: [Breadcrumbs, Breadcrumb],
     html: `
-      <ion-breadcrumbs max-items="2" items-before-collapse="1" items-after-collapse="1">
-        <ion-breadcrumb>First</ion-breadcrumb>
-        <ion-breadcrumb>Second</ion-breadcrumb>
-        <ion-breadcrumb>Third</ion-breadcrumb>
-        <ion-breadcrumb>Fourth</ion-breadcrumb>
-        <ion-breadcrumb>Fifth</ion-breadcrumb>
-      </ion-breadcrumbs>
+      <syg-breadcrumbs max-items="2" items-before-collapse="1" items-after-collapse="1">
+        <syg-breadcrumb>First</syg-breadcrumb>
+        <syg-breadcrumb>Second</syg-breadcrumb>
+        <syg-breadcrumb>Third</syg-breadcrumb>
+        <syg-breadcrumb>Fourth</syg-breadcrumb>
+        <syg-breadcrumb>Fifth</syg-breadcrumb>
+      </syg-breadcrumbs>
     `
   });
 
   const onCollapsedClick = jest.fn((ev) => ev);
-  const breadcrumbs = page.body.querySelector('ion-breadcrumbs');
-  const breadcrumb = page.body.querySelectorAll('ion-breadcrumb');
+  const breadcrumbs = page.body.querySelector('syg-breadcrumbs');
+  const breadcrumb = page.body.querySelectorAll('syg-breadcrumb');
 
   breadcrumbs.addEventListener('ionCollapsedClick', onCollapsedClick);
 

@@ -2,9 +2,9 @@
   <ion-page data-pageid="folder">
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons slot="start">
+        <syg-buttons slot="start">
           <ion-menu-button></ion-menu-button>
-        </ion-buttons>
+        </syg-buttons>
         <ion-title>{{ $props.id }}</ion-title>
       </ion-toolbar>
     </ion-header>

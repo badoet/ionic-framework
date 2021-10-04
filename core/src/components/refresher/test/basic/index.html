@@ -9,30 +9,30 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Pull To Refresh</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Pull To Refresh</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
-      <ion-refresher id="refresher" slot="fixed">
-        <ion-refresher-content
+    <syg-content>
+      <syg-refresher id="refresher" slot="fixed">
+        <syg-refresher-content
           pulling-icon="arrow-down-outline"
           pulling-text="Pull to refresh..."
           refreshing-text="Refreshing..."
           refreshing-spinner="circles">
-        </ion-refresher-content>
-      </ion-refresher>
+        </syg-refresher-content>
+      </syg-refresher>
 
-      <ion-list id="list"></ion-list>
-    </ion-content>
-  </ion-app>
-  <ion-menu-controller></ion-menu-controller>
+      <syg-list id="list"></syg-list>
+    </syg-content>
+  </syg-app>
+  <syg-menu-controller></syg-menu-controller>
 
   <script>
 
@@ -53,7 +53,7 @@
     function render() {
       let html = '';
       for (let item of items) {
-        html += `<ion-item button>${item}</ion-item>`;
+        html += `<syg-item button>${item}</syg-item>`;
       }
       list.innerHTML = html;
     }

@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Listen, Prop, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { TabBarChangedEventDetail, TabButtonClickEventDetail, TabButtonLayout } from '../../interface';
 import { AnchorInterface } from '../../utils/element-interface';
 
@@ -11,7 +11,7 @@ import { AnchorInterface } from '../../utils/element-interface';
  * @part native - The native HTML anchor element that wraps all child elements.
  */
 @Component({
-  tag: 'ion-tab-button',
+  tag: 'syg-tab-button',
   styleUrls: {
     ios: 'tab-button.ios.scss',
     md: 'tab-button.md.scss'
@@ -59,7 +59,7 @@ export class TabButton implements ComponentInterface, AnchorInterface {
   @Prop({ mutable: true }) selected = false;
 
   /**
-   * A tab id must be provided for each `ion-tab`. It's used internally to reference
+   * A tab id must be provided for each `syg-tab`. It's used internally to reference
    * the selected tab or by the router to switch between them.
    */
   @Prop() tab?: string;
@@ -107,7 +107,7 @@ export class TabButton implements ComponentInterface, AnchorInterface {
   }
 
   private get hasLabel() {
-    return !!this.el.querySelector('ion-label');
+    return !!this.el.querySelector('syg-label');
   }
 
   private get hasIcon() {
@@ -138,7 +138,7 @@ export class TabButton implements ComponentInterface, AnchorInterface {
 
   render() {
     const { disabled, hasIcon, hasLabel, tabIndex, href, rel, target, layout, selected, tab } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const attrs = {
       download: this.download,
       href,
@@ -163,16 +163,16 @@ export class TabButton implements ComponentInterface, AnchorInterface {
           'tab-has-label-only': hasLabel && !hasIcon,
           'tab-has-icon-only': hasIcon && !hasLabel,
           [`tab-layout-${layout}`]: true,
-          'ion-activatable': true,
-          'ion-selectable': true,
-          'ion-focusable': true
+          'syg-activatable': true,
+          'syg-selectable': true,
+          'syg-focusable': true
         }}
       >
         <a {...attrs} tabIndex={-1} class="button-native" part="native">
           <span class="button-inner">
             <slot></slot>
           </span>
-          {mode === 'md' && <ion-ripple-effect type="unbounded"></ion-ripple-effect>}
+          {mode === 'md' && <syg-ripple-effect type="unbounded"></syg-ripple-effect>}
         </a>
       </Host>
     );

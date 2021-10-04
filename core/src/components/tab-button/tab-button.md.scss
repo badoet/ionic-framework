@@ -42,7 +42,7 @@
 // Material Design Tab Button: Badge
 // --------------------------------------------------------------
 
-::slotted(ion-badge) {
+::slotted(syg-badge) {
   @include border-radius($tab-button-md-badge-border-radius);
   @include padding($tab-button-md-badge-padding-top, $tab-button-md-badge-padding-end, $tab-button-md-badge-padding-bottom, $tab-button-md-badge-padding-start);
   @include position(8px, null, null, calc(50% + 6px));
@@ -54,7 +54,7 @@
   font-weight: normal;
 }
 
-::slotted(ion-badge:empty) {
+::slotted(syg-badge:empty) {
   display: block;
 
   min-width: $tab-button-md-badge-size-empty;
@@ -81,7 +81,7 @@
 // --------------------------------------------------------------
 
 // Badge
-:host(.tab-layout-icon-bottom) ::slotted(ion-badge) {
+:host(.tab-layout-icon-bottom) ::slotted(syg-badge) {
   @include position(8px, null, null, 70%);
 }
 
@@ -100,8 +100,8 @@
 // --------------------------------------------------------------
 
 // Badge
-:host(.tab-layout-icon-start) ::slotted(ion-badge),
-:host(.tab-layout-icon-end) ::slotted(ion-badge) {
+:host(.tab-layout-icon-start) ::slotted(syg-badge),
+:host(.tab-layout-icon-end) ::slotted(syg-badge) {
   @include position(16px, null, null, 80%);
 }
 
@@ -120,8 +120,8 @@
 // --------------------------------------------------------------
 
 // Badge
-:host(.tab-layout-icon-hide) ::slotted(ion-badge),
-:host(.tab-has-label-only) ::slotted(ion-badge) {
+:host(.tab-layout-icon-hide) ::slotted(syg-badge),
+:host(.tab-has-label-only) ::slotted(syg-badge) {
   @include position(16px, null, null, 70%);
 }
 
@@ -136,8 +136,8 @@
 // --------------------------------------------------------------
 
 // Badge
-:host(.tab-layout-label-hide) ::slotted(ion-badge),
-:host(.tab-has-icon-only) ::slotted(ion-badge) {
+:host(.tab-layout-label-hide) ::slotted(syg-badge),
+:host(.tab-has-icon-only) ::slotted(syg-badge) {
   @include position(16px, null, null, null);
 }
 

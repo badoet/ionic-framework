@@ -10,85 +10,85 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-content id="content">
-      <ion-slides>
-        <ion-slide>
+    <syg-content id="content">
+      <syg-slides>
+        <syg-slide>
           <h1>Default Slides</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
+        </syg-slide>
+      </syg-slides>
 
-      <ion-slides pager>
-        <ion-slide>
+      <syg-slides pager>
+        <syg-slide>
           <h1>Bullet Pagination</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
+        </syg-slide>
+      </syg-slides>
 
-      <ion-slides pager class="custom-bullets">
-        <ion-slide>
+      <syg-slides pager class="custom-bullets">
+        <syg-slide>
           <h1>Custom Bullet Pagination</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
+        </syg-slide>
+      </syg-slides>
 
-      <ion-slides pager class="progressbar-pagination">
-        <ion-slide>
+      <syg-slides pager class="progressbar-pagination">
+        <syg-slide>
           <h1>Progress Pagination</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
+        </syg-slide>
+      </syg-slides>
 
-      <ion-slides pager class="progressbar-pagination custom-progressbar">
-        <ion-slide>
+      <syg-slides pager class="progressbar-pagination custom-progressbar">
+        <syg-slide>
           <h1>Custom Progress Pagination</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
+        </syg-slide>
+      </syg-slides>
 
-      <ion-slides pager class="fraction-pagination">
-        <ion-slide>
+      <syg-slides pager class="fraction-pagination">
+        <syg-slide>
           <h1>Fraction Pagination</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide>
+        </syg-slide>
+        <syg-slide>
           <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
-    </ion-content>
-  </ion-app>
+        </syg-slide>
+      </syg-slides>
+    </syg-content>
+  </syg-app>
 
   <script>
     var progressSlides = document.getElementsByClassName('progressbar-pagination');
@@ -116,12 +116,12 @@
   </script>
 
   <style>
-    ion-slides {
+    syg-slides {
       border-bottom: 1px solid #e5e5e5;
       margin-bottom: 20px;
     }
 
-    ion-slide {
+    syg-slide {
       height: 100px !important;
     }
 

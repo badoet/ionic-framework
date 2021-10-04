@@ -1,7 +1,7 @@
-# ion-header
+# syg-header
 
 Header is a parent component that holds the toolbar component.
-It's important to note that ion-header needs to be the one of the three root elements of a page
+It's important to note that syg-header needs to be the one of the three root elements of a page
 
 
 
@@ -13,33 +13,33 @@ It's important to note that ion-header needs to be the one of the three root ele
 ### Angular / javascript
 
 ```html
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>My Navigation Bar</ion-title>
-  </ion-toolbar>
+<syg-header>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button></syg-back-button>
+    </syg-buttons>
+    <syg-title>My Navigation Bar</syg-title>
+  </syg-toolbar>
 
-  <ion-toolbar>
-    <ion-title>Subheader</ion-title>
-  </ion-toolbar>
-</ion-header>
+  <syg-toolbar>
+    <syg-title>Subheader</syg-title>
+  </syg-toolbar>
+</syg-header>
 
 <!-- Header without a border -->
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-title>Header - No Border</ion-title>
-  </ion-toolbar>
-</ion-header>
+<syg-header class="syg-no-border">
+  <syg-toolbar>
+    <syg-title>Header - No Border</syg-title>
+  </syg-toolbar>
+</syg-header>
 
-<ion-content>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">My Navigation Bar</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<syg-content>
+  <syg-header collapse="condense">
+    <syg-toolbar>
+      <syg-title size="large">My Navigation Bar</syg-title>
+    </syg-toolbar>
+  </syg-header>
+</syg-content>
 ```
 
 
@@ -65,7 +65,7 @@ export const HeaderExample: React.FC = () => (
     </IonHeader>
     
     {/*-- Header without a border --*/}
-    <IonHeader className="ion-no-border">
+    <IonHeader className="syg-no-border">
      <IonToolbar>
       <IonTitle>Header - No Border</IonTitle>
      </IonToolbar>
@@ -95,33 +95,33 @@ import { Component, h } from '@stencil/core';
 export class HeaderExample {
   render() {
     return [
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-          </ion-buttons>
-          <ion-title>My Navigation Bar</ion-title>
-        </ion-toolbar>
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-back-button></syg-back-button>
+          </syg-buttons>
+          <syg-title>My Navigation Bar</syg-title>
+        </syg-toolbar>
 
-        <ion-toolbar>
-          <ion-title>Subheader</ion-title>
-        </ion-toolbar>
-      </ion-header>,
+        <syg-toolbar>
+          <syg-title>Subheader</syg-title>
+        </syg-toolbar>
+      </syg-header>,
 
       // Header without a border
-      <ion-header class="ion-no-border">
-        <ion-toolbar>
-          <ion-title>Header - No Border</ion-title>
-        </ion-toolbar>
-      </ion-header>,
+      <syg-header class="syg-no-border">
+        <syg-toolbar>
+          <syg-title>Header - No Border</syg-title>
+        </syg-toolbar>
+      </syg-header>,
 
-      <ion-content>
-        <ion-header collapse="condense">
-          <ion-toolbar>
-            <ion-title size="large">My Navigation Bar</ion-title>
-          </ion-toolbar>
-        </ion-header>
-      </ion-content>
+      <syg-content>
+        <syg-header collapse="condense">
+          <syg-toolbar>
+            <syg-title size="large">My Navigation Bar</syg-title>
+          </syg-toolbar>
+        </syg-header>
+      </syg-content>
     ];
   }
 }
@@ -132,33 +132,33 @@ export class HeaderExample {
 
 ```html
 <template>
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-      <ion-title>My Navigation Bar</ion-title>
-    </ion-toolbar>
+  <syg-header>
+    <syg-toolbar>
+      <syg-buttons slot="start">
+        <syg-back-button></syg-back-button>
+      </syg-buttons>
+      <syg-title>My Navigation Bar</syg-title>
+    </syg-toolbar>
   
-    <ion-toolbar>
-      <ion-title>Subheader</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <syg-toolbar>
+      <syg-title>Subheader</syg-title>
+    </syg-toolbar>
+  </syg-header>
   
   <!-- Header without a border -->
-  <ion-header class="ion-no-border">
-    <ion-toolbar>
-      <ion-title>Header - No Border</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <syg-header class="syg-no-border">
+    <syg-toolbar>
+      <syg-title>Header - No Border</syg-title>
+    </syg-toolbar>
+  </syg-header>
   
-  <ion-content>
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">My Navigation Bar</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </ion-content>
+  <syg-content>
+    <syg-header collapse="condense">
+      <syg-toolbar>
+        <syg-title size="large">My Navigation Bar</syg-title>
+      </syg-toolbar>
+    </syg-header>
+  </syg-content>
 </template>
 
 <script>

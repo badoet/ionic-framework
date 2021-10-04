@@ -1,51 +1,51 @@
 ```html
 <template>
   <!-- Default Toggle -->
-  <ion-toggle></ion-toggle>
+  <syg-toggle></syg-toggle>
 
   <!-- Disabled Toggle -->
-  <ion-toggle disabled></ion-toggle>
+  <syg-toggle disabled></syg-toggle>
 
   <!-- Checked Toggle -->
-  <ion-toggle checked></ion-toggle>
+  <syg-toggle checked></syg-toggle>
 
   <!-- Toggle Colors -->
-  <ion-toggle color="primary"></ion-toggle>
-  <ion-toggle color="secondary"></ion-toggle>
-  <ion-toggle color="danger"></ion-toggle>
-  <ion-toggle color="light"></ion-toggle>
-  <ion-toggle color="dark"></ion-toggle>
+  <syg-toggle color="primary"></syg-toggle>
+  <syg-toggle color="secondary"></syg-toggle>
+  <syg-toggle color="danger"></syg-toggle>
+  <syg-toggle color="light"></syg-toggle>
+  <syg-toggle color="dark"></syg-toggle>
 
   <!-- Toggles in a List -->
-  <ion-list>
-    <ion-item>
-      <ion-label>Pepperoni</ion-label>
-      <ion-toggle
+  <syg-list>
+    <syg-item>
+      <syg-label>Pepperoni</syg-label>
+      <syg-toggle
         @ionChange="toppings.value.push($event.target.value)"
         value="pepperoni"
         :checked="toppings.value.indexOf('pepperoni') !== -1">
-      </ion-toggle>
-    </ion-item>
+      </syg-toggle>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Sausage</ion-label>
-      <ion-toggle
+    <syg-item>
+      <syg-label>Sausage</syg-label>
+      <syg-toggle
         @ionChange="toppings.value.push($event.target.value)"
         value="sausage"
         :checked="toppings.value.indexOf('pepperoni') !== -1"
         disabled="true">
-      </ion-toggle>
-    </ion-item>
+      </syg-toggle>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Mushrooms</ion-label>
-      <ion-toggle
+    <syg-item>
+      <syg-label>Mushrooms</syg-label>
+      <syg-toggle
         @ionChange="toppings.value.push($event.target.value)"
         value="mushrooms"
         :checked="toppings.value.indexOf('pepperoni') !== -1">
-      </ion-toggle>
-    </ion-item>
-  </ion-list>
+      </syg-toggle>
+    </syg-item>
+  </syg-list>
 </template>
 
 <script>

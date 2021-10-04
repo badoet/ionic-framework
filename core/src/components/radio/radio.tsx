@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, StyleEventDetail } from '../../interface';
 import { addEventListener, getAriaLabel, removeEventListener } from '../../utils/helpers';
 import { createColorClasses, hostContext } from '../../utils/theme';
@@ -12,7 +12,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
  * @part mark - The checkmark or dot used to indicate the checked state.
  */
 @Component({
-  tag: 'ion-radio',
+  tag: 'syg-radio',
   styleUrls: {
     ios: 'radio.ios.scss',
     md: 'radio.md.scss'
@@ -20,10 +20,10 @@ import { createColorClasses, hostContext } from '../../utils/theme';
   shadow: true
 })
 export class Radio implements ComponentInterface {
-  private inputId = `ion-rb-${radioButtonIds++}`;
-  private radioGroup: HTMLIonRadioGroupElement | null = null;
+  private inputId = `syg-rb-${radioButtonIds++}`;
+  private radioGroup: HTMLSygRadioGroupElement | null = null;
 
-  @Element() el!: HTMLIonRadioElement;
+  @Element() el!: HTMLSygRadioElement;
 
   /**
    * If `true`, the radio is selected.
@@ -93,7 +93,7 @@ export class Radio implements ComponentInterface {
     if (this.value === undefined) {
       this.value = this.inputId;
     }
-    const radioGroup = this.radioGroup = this.el.closest('ion-radio-group');
+    const radioGroup = this.radioGroup = this.el.closest('syg-radio-group');
     if (radioGroup) {
       this.updateState();
       addEventListener(radioGroup, 'ionChange', this.updateState);
@@ -138,7 +138,7 @@ export class Radio implements ComponentInterface {
 
   render() {
     const { inputId, disabled, checked, color, el, buttonTabindex } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const { label, labelId, labelText } = getAriaLabel(el, inputId);
 
     return (
@@ -152,7 +152,7 @@ export class Radio implements ComponentInterface {
         onBlur={this.onBlur}
         class={createColorClasses(color, {
           [mode]: true,
-          'in-item': hostContext('ion-item', el),
+          'in-item': hostContext('syg-item', el),
           'interactive': true,
           'radio-checked': checked,
           'radio-disabled': disabled,

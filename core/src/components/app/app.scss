@@ -1,5 +1,5 @@
 
-html.plt-mobile ion-app {
+html.plt-mobile syg-app {
   user-select: none;
 }
 
@@ -9,10 +9,10 @@ html.plt-mobile ion-app {
  * contenteditable to not be selectable,
  * even though inputs and textareas are selectable.
  */
-html.plt-mobile ion-app [contenteditable] {
+html.plt-mobile syg-app [contenteditable] {
   user-select: text;
 }
 
-ion-app.force-statusbar-padding {
+syg-app.force-statusbar-padding {
   --ion-safe-area-top: 20px;
 }

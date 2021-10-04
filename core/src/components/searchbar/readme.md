@@ -1,4 +1,4 @@
-# ion-searchbar
+# syg-searchbar
 
 Searchbars represent a text field that can be used to search through a collection. They can be displayed inside of a toolbar or the main content.
 
@@ -12,7 +12,7 @@ By default, tapping the input will cause the keyboard to appear with a magnifyin
 
 ### iOS
 
-By default, tapping the input will cause the keyboard to appear with the text "return" on a gray submit button. You can optionally set the `inputmode` property to `"search"`, which will change the text from "return" to "go", and change the button color from gray to blue. Alternatively, you can wrap the `ion-searchbar` in a `form` element with an `action` property. This will cause the keyboard to appear with a blue submit button that says "search".
+By default, tapping the input will cause the keyboard to appear with the text "return" on a gray submit button. You can optionally set the `inputmode` property to `"search"`, which will change the text from "return" to "go", and change the button color from gray to blue. Alternatively, you can wrap the `syg-searchbar` in a `form` element with an `action` property. This will cause the keyboard to appear with a blue submit button that says "search".
 
 ## Interfaces
 
@@ -44,48 +44,48 @@ interface SearchbarCustomEvent extends CustomEvent {
 
 ```html
 <!-- Default Searchbar -->
-<ion-searchbar></ion-searchbar>
+<syg-searchbar></syg-searchbar>
 
 <!-- Searchbar with cancel button always shown -->
-<ion-searchbar showCancelButton="always"></ion-searchbar>
+<syg-searchbar showCancelButton="always"></syg-searchbar>
 
 <!-- Searchbar with cancel button never shown -->
-<ion-searchbar showCancelButton="never"></ion-searchbar>
+<syg-searchbar showCancelButton="never"></syg-searchbar>
 
 <!-- Searchbar with cancel button shown on focus -->
-<ion-searchbar showCancelButton="focus"></ion-searchbar>
+<syg-searchbar showCancelButton="focus"></syg-searchbar>
 
 <!-- Searchbar with danger color -->
-<ion-searchbar color="danger"></ion-searchbar>
+<syg-searchbar color="danger"></syg-searchbar>
 
 <!-- Searchbar with value -->
-<ion-searchbar value="Ionic"></ion-searchbar>
+<syg-searchbar value="Ionic"></syg-searchbar>
 
 <!-- Searchbar with telephone type -->
-<ion-searchbar type="tel"></ion-searchbar>
+<syg-searchbar type="tel"></syg-searchbar>
 
 <!-- Searchbar with numeric inputmode -->
-<ion-searchbar inputmode="numeric"></ion-searchbar>
+<syg-searchbar inputmode="numeric"></syg-searchbar>
 
 <!-- Searchbar disabled -->
-<ion-searchbar disabled="true"></ion-searchbar>
+<syg-searchbar disabled="true"></syg-searchbar>
 
 <!-- Searchbar with a cancel button and custom cancel button text -->
-<ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>
+<syg-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel"></syg-searchbar>
 
 <!-- Searchbar with a custom debounce -->
-<ion-searchbar debounce="500"></ion-searchbar>
+<syg-searchbar debounce="500"></syg-searchbar>
 
 <!-- Animated Searchbar -->
-<ion-searchbar animated></ion-searchbar>
+<syg-searchbar animated></syg-searchbar>
 
 <!-- Searchbar with a placeholder -->
-<ion-searchbar placeholder="Filter Schedules"></ion-searchbar>
+<syg-searchbar placeholder="Filter Schedules"></syg-searchbar>
 
 <!-- Searchbar in a Toolbar -->
-<ion-toolbar>
-  <ion-searchbar></ion-searchbar>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-searchbar></syg-searchbar>
+</syg-toolbar>
 ```
 
 
@@ -93,48 +93,48 @@ interface SearchbarCustomEvent extends CustomEvent {
 
 ```html
 <!-- Default Searchbar -->
-<ion-searchbar></ion-searchbar>
+<syg-searchbar></syg-searchbar>
 
 <!-- Searchbar with cancel button always shown -->
-<ion-searchbar show-cancel-button="always"></ion-searchbar>
+<syg-searchbar show-cancel-button="always"></syg-searchbar>
 
 <!-- Searchbar with cancel button never shown -->
-<ion-searchbar show-cancel-button="never"></ion-searchbar>
+<syg-searchbar show-cancel-button="never"></syg-searchbar>
 
 <!-- Searchbar with cancel button shown on focus -->
-<ion-searchbar show-cancel-button="focus"></ion-searchbar>
+<syg-searchbar show-cancel-button="focus"></syg-searchbar>
 
 <!-- Searchbar with danger color -->
-<ion-searchbar color="danger"></ion-searchbar>
+<syg-searchbar color="danger"></syg-searchbar>
 
 <!-- Searchbar with value -->
-<ion-searchbar value="Ionic"></ion-searchbar>
+<syg-searchbar value="Ionic"></syg-searchbar>
 
 <!-- Searchbar with telephone type -->
-<ion-searchbar type="tel"></ion-searchbar>
+<syg-searchbar type="tel"></syg-searchbar>
 
 <!-- Searchbar with numeric inputmode -->
-<ion-searchbar inputmode="numeric"></ion-searchbar>
+<syg-searchbar inputmode="numeric"></syg-searchbar>
 
 <!-- Searchbar disabled -->
-<ion-searchbar disabled="true"></ion-searchbar>
+<syg-searchbar disabled="true"></syg-searchbar>
 
 <!-- Searchbar with a cancel button and custom cancel button text -->
-<ion-searchbar show-cancel-button="focus" cancel-button-text="Custom Cancel"></ion-searchbar>
+<syg-searchbar show-cancel-button="focus" cancel-button-text="Custom Cancel"></syg-searchbar>
 
 <!-- Searchbar with a custom debounce -->
-<ion-searchbar debounce="500"></ion-searchbar>
+<syg-searchbar debounce="500"></syg-searchbar>
 
 <!-- Animated Searchbar -->
-<ion-searchbar animated></ion-searchbar>
+<syg-searchbar animated></syg-searchbar>
 
 <!-- Searchbar with a placeholder -->
-<ion-searchbar placeholder="Filter Schedules"></ion-searchbar>
+<syg-searchbar placeholder="Filter Schedules"></syg-searchbar>
 
 <!-- Searchbar in a Toolbar -->
-<ion-toolbar>
-  <ion-searchbar></ion-searchbar>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-searchbar></syg-searchbar>
+</syg-toolbar>
 ```
 
 
@@ -220,48 +220,48 @@ export class SearchbarExample {
   render() {
     return [
        // Default Searchbar
-      <ion-searchbar></ion-searchbar>,
+      <syg-searchbar></syg-searchbar>,
 
       // Searchbar with cancel button always shown
-      <ion-searchbar showCancelButton="always"></ion-searchbar>,
+      <syg-searchbar showCancelButton="always"></syg-searchbar>,
 
       // Searchbar with cancel button never shown
-      <ion-searchbar showCancelButton="never"></ion-searchbar>,
+      <syg-searchbar showCancelButton="never"></syg-searchbar>,
 
       // Searchbar with cancel button shown on focus
-      <ion-searchbar showCancelButton="focus"></ion-searchbar>,
+      <syg-searchbar showCancelButton="focus"></syg-searchbar>,
 
       // Searchbar with danger color
-      <ion-searchbar color="danger"></ion-searchbar>,
+      <syg-searchbar color="danger"></syg-searchbar>,
 
       // Searchbar with value
-      <ion-searchbar value="Ionic"></ion-searchbar>,
+      <syg-searchbar value="Ionic"></syg-searchbar>,
 
       // Searchbar with telephone type
-      <ion-searchbar type="tel"></ion-searchbar>,
+      <syg-searchbar type="tel"></syg-searchbar>,
 
       // Searchbar with numeric inputmode
-      <ion-searchbar inputmode="numeric"></ion-searchbar>,
+      <syg-searchbar inputmode="numeric"></syg-searchbar>,
 
       // Searchbar disabled
-      <ion-searchbar disabled={true}></ion-searchbar>,
+      <syg-searchbar disabled={true}></syg-searchbar>,
 
       // Searchbar with a cancel button and custom cancel button text
-      <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>,
+      <syg-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel"></syg-searchbar>,
 
       // Searchbar with a custom debounce
-      <ion-searchbar debounce={500}></ion-searchbar>,
+      <syg-searchbar debounce={500}></syg-searchbar>,
 
       // Animated Searchbar
-      <ion-searchbar animated={true}></ion-searchbar>,
+      <syg-searchbar animated={true}></syg-searchbar>,
 
       // Searchbar with a placeholder
-      <ion-searchbar placeholder="Filter Schedules"></ion-searchbar>,
+      <syg-searchbar placeholder="Filter Schedules"></syg-searchbar>,
 
       // Searchbar in a Toolbar
-      <ion-toolbar>
-        <ion-searchbar></ion-searchbar>
-      </ion-toolbar>
+      <syg-toolbar>
+        <syg-searchbar></syg-searchbar>
+      </syg-toolbar>
     ];
   }
 }
@@ -273,48 +273,48 @@ export class SearchbarExample {
 ```html
 <template>
   <!-- Default Searchbar -->
-  <ion-searchbar></ion-searchbar>
+  <syg-searchbar></syg-searchbar>
 
   <!-- Searchbar with cancel button always shown -->
-  <ion-searchbar show-cancel-button="always"></ion-searchbar>
+  <syg-searchbar show-cancel-button="always"></syg-searchbar>
 
   <!-- Searchbar with cancel button never shown -->
-  <ion-searchbar show-cancel-button="never"></ion-searchbar>
+  <syg-searchbar show-cancel-button="never"></syg-searchbar>
 
   <!-- Searchbar with cancel button shown on focus -->
-  <ion-searchbar show-cancel-button="focus"></ion-searchbar>
+  <syg-searchbar show-cancel-button="focus"></syg-searchbar>
 
   <!-- Searchbar with danger color -->
-  <ion-searchbar color="danger"></ion-searchbar>
+  <syg-searchbar color="danger"></syg-searchbar>
 
   <!-- Searchbar with value -->
-  <ion-searchbar value="Ionic"></ion-searchbar>
+  <syg-searchbar value="Ionic"></syg-searchbar>
 
   <!-- Searchbar with telephone type -->
-  <ion-searchbar type="tel"></ion-searchbar>
+  <syg-searchbar type="tel"></syg-searchbar>
 
   <!-- Searchbar with numeric inputmode -->
-  <ion-searchbar inputmode="numeric"></ion-searchbar>
+  <syg-searchbar inputmode="numeric"></syg-searchbar>
 
   <!-- Searchbar disabled -->
-  <ion-searchbar disabled="true"></ion-searchbar>
+  <syg-searchbar disabled="true"></syg-searchbar>
 
   <!-- Searchbar with a cancel button and custom cancel button text -->
-  <ion-searchbar show-cancel-button="focus" cancel-button-text="Custom Cancel"></ion-searchbar>
+  <syg-searchbar show-cancel-button="focus" cancel-button-text="Custom Cancel"></syg-searchbar>
 
   <!-- Searchbar with a custom debounce -->
-  <ion-searchbar debounce="500"></ion-searchbar>
+  <syg-searchbar debounce="500"></syg-searchbar>
 
   <!-- Animated Searchbar -->
-  <ion-searchbar animated></ion-searchbar>
+  <syg-searchbar animated></syg-searchbar>
 
   <!-- Searchbar with a placeholder -->
-  <ion-searchbar placeholder="Filter Schedules"></ion-searchbar>
+  <syg-searchbar placeholder="Filter Schedules"></syg-searchbar>
 
   <!-- Searchbar in a Toolbar -->
-  <ion-toolbar>
-    <ion-searchbar></ion-searchbar>
-  </ion-toolbar>
+  <syg-toolbar>
+    <syg-searchbar></syg-searchbar>
+  </syg-toolbar>
 </template>
 
 <script>
@@ -334,7 +334,7 @@ export default defineComponent({
 | Property           | Attribute            | Description                                                                                                                                                                                                                                                                                                          | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Default                                                      |
 | ------------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | `animated`         | `animated`           | If `true`, enable searchbar animation.                                                                                                                                                                                                                                                                               | `boolean`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `false`                                                      |
-| `autocomplete`     | `autocomplete`       | Set the input's autocomplete property.                                                                                                                                                                                                                                                                               | `"on" \| "off" \| "name" \| "honorific-prefix" \| "given-name" \| "additional-name" \| "family-name" \| "honorific-suffix" \| "nickname" \| "email" \| "username" \| "new-password" \| "current-password" \| "one-time-code" \| "organization-title" \| "organization" \| "street-address" \| "address-line1" \| "address-line2" \| "address-line3" \| "address-level4" \| "address-level3" \| "address-level2" \| "address-level1" \| "country" \| "country-name" \| "postal-code" \| "cc-name" \| "cc-given-name" \| "cc-additional-name" \| "cc-family-name" \| "cc-number" \| "cc-exp" \| "cc-exp-month" \| "cc-exp-year" \| "cc-csc" \| "cc-type" \| "transaction-currency" \| "transaction-amount" \| "language" \| "bday" \| "bday-day" \| "bday-month" \| "bday-year" \| "sex" \| "tel" \| "tel-country-code" \| "tel-national" \| "tel-area-code" \| "tel-local" \| "tel-extension" \| "impp" \| "url" \| "photo"` | `'off'`                                                      |
+| `autocomplete`     | `autocomplete`       | Set the input's autocomplete property.                                                                                                                                                                                                                                                                               | `"on" \| "off" \| "name" \| "honorific-prefix" \| "given-name" \| "additional-name" \| "family-name" \| "honorific-suffix" \| "nickname" \| "email" \| "username" \| "new-password" \| "current-password" \| "one-time-code" \| "organizatsyg-title" \| "organization" \| "street-address" \| "address-line1" \| "address-line2" \| "address-line3" \| "address-level4" \| "address-level3" \| "address-level2" \| "address-level1" \| "country" \| "country-name" \| "postal-code" \| "cc-name" \| "cc-given-name" \| "cc-additional-name" \| "cc-family-name" \| "cc-number" \| "cc-exp" \| "cc-exp-month" \| "cc-exp-year" \| "cc-csc" \| "cc-type" \| "transaction-currency" \| "transaction-amount" \| "language" \| "bday" \| "bday-day" \| "bday-month" \| "bday-year" \| "sex" \| "tel" \| "tel-country-code" \| "tel-national" \| "tel-area-code" \| "tel-local" \| "tel-extension" \| "impp" \| "url" \| "photo"` | `'off'`                                                      |
 | `autocorrect`      | `autocorrect`        | Set the input's autocorrect property.                                                                                                                                                                                                                                                                                | `"off" \| "on"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `'off'`                                                      |
 | `cancelButtonIcon` | `cancel-button-icon` | Set the cancel button icon. Only applies to `md` mode. Defaults to `"arrow-back-sharp"`.                                                                                                                                                                                                                             | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | `config.get('backButtonIcon', 'arrow-back-sharp') as string` |
 | `cancelButtonText` | `cancel-button-text` | Set the the cancel button text. Only applies to `ios` mode.                                                                                                                                                                                                                                                          | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | `'Cancel'`                                                   |
@@ -380,7 +380,7 @@ Type: `Promise<HTMLInputElement>`
 
 ### `setFocus() => Promise<void>`
 
-Sets focus on the specified `ion-searchbar`. Use this method instead of the global
+Sets focus on the specified `syg-searchbar`. Use this method instead of the global
 `input.focus()`.
 
 #### Returns
@@ -416,8 +416,8 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  ion-searchbar --> ion-icon
-  style ion-searchbar fill:#f9f,stroke:#333,stroke-width:4px
+  syg-searchbar --> ion-icon
+  style syg-searchbar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

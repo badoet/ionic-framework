@@ -8,27 +8,27 @@ import { Component, h } from '@stencil/core';
 export class FabButtonExample {
   render() {
     return [
-      <ion-content>
+      <syg-content>
 
         {/* Fixed Floating Action Button that does not scroll with the content */}
-        <ion-fab slot="fixed">
-          <ion-fab-button>Button</ion-fab-button>
-        </ion-fab>
+        <syg-fab slot="fixed">
+          <syg-fab-button>Button</syg-fab-button>
+        </syg-fab>
 
         {/* Default Floating Action Button that scrolls with the content */}
-        <ion-fab-button>Default</ion-fab-button>
+        <syg-fab-button>Default</syg-fab-button>
 
         {/* Mini */}
-        <ion-fab-button size="small">Mini</ion-fab-button>
+        <syg-fab-button size="small">Mini</syg-fab-button>
 
         {/* Colors */}
-        <ion-fab-button color="primary">Primary</ion-fab-button>
-        <ion-fab-button color="secondary">Secondary</ion-fab-button>
-        <ion-fab-button color="danger">Danger</ion-fab-button>
-        <ion-fab-button color="light">Light</ion-fab-button>
-        <ion-fab-button color="dark">Dark</ion-fab-button>
+        <syg-fab-button color="primary">Primary</syg-fab-button>
+        <syg-fab-button color="secondary">Secondary</syg-fab-button>
+        <syg-fab-button color="danger">Danger</syg-fab-button>
+        <syg-fab-button color="light">Light</syg-fab-button>
+        <syg-fab-button color="dark">Dark</syg-fab-button>
 
-      </ion-content>
+      </syg-content>
     ];
   }
 }

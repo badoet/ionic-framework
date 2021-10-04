@@ -4,12 +4,12 @@ const fs = require('fs');
 function generateOverlays() {
   const components = [
     {
-      tag: 'ion-action-sheet',
+      tag: 'syg-action-sheet',
       controller: 'actionSheetController',
       name: 'IonActionSheet'
     },
     {
-      tag: 'ion-alert',
+      tag: 'syg-alert',
       controller: 'alertController',
       name: 'IonAlert'
     },

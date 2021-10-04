@@ -1,32 +1,32 @@
 **Tabs.vue**
 ```html
 <template>
-  <ion-page>
-    <ion-tabs @ionTabsWillChange="beforeTabChange" @ionTabsDidChange="afterTabChange">
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="schedule" href="/tabs/schedule">
+  <syg-page>
+    <syg-tabs @ionTabsWillChange="beforeTabChange" @ionTabsDidChange="afterTabChange">
+      <syg-tab-bar slot="bottom">
+        <syg-tab-button tab="schedule" href="/tabs/schedule">
           <ion-icon :icon="calendar"></ion-icon>
-          <ion-label>Schedule</ion-label>
-          <ion-badge>6</ion-badge>
-        </ion-tab-button>
-  
-        <ion-tab-button tab="speakers" href="/tabs/speakers">
+          <syg-label>Schedule</syg-label>
+          <syg-badge>6</syg-badge>
+        </syg-tab-button>
+
+        <syg-tab-button tab="speakers" href="/tabs/speakers">
           <ion-icon :icon="personCircle"></ion-icon>
-          <ion-label>Speakers</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
-  </ion-page>
+          <syg-label>Speakers</syg-label>
+        </syg-tab-button>
+      </syg-tab-bar>
+    </syg-tabs>
+  </syg-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import { 
-  IonIcon, 
-  IonLabel, 
+import {
+  IonIcon,
+  IonLabel,
   IonPage,
-  IonTabBar, 
-  IonTabButton, 
+  IonTabBar,
+  IonTabButton,
   IonTabs
 } from '@ionic/vue';
 import { calendar, personCircle } from 'ionicons/icons';
@@ -54,15 +54,15 @@ export default defineComponent({
 **Schedule.vue**
 ```html
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Schedule</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    
-    <ion-content class="ion-padding">Schedule Tab</ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Schedule</syg-title>
+      </syg-toolbar>
+    </syg-header>
+
+    <syg-content class="syg-padding">Schedule Tab</syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -84,15 +84,15 @@ export default defineComponent({
 **Speakers.vue**
 ```html
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Speakers</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    
-    <ion-content class="ion-padding">Speakers Tab</ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Speakers</syg-title>
+      </syg-toolbar>
+    </syg-header>
+
+    <syg-content class="syg-padding">Speakers Tab</syg-content>
+  </syg-page>
 </template>
 
 <script>

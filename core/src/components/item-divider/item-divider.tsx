@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color } from '../../interface';
 import { createColorClasses } from '../../utils/theme';
 
@@ -12,7 +12,7 @@ import { createColorClasses } from '../../utils/theme';
  * @slot end - Content is placed to the right of the divider text in LTR, and to the left in RTL.
  */
 @Component({
-  tag: 'ion-item-divider',
+  tag: 'syg-item-divider',
   styleUrls: {
     ios: 'item-divider.ios.scss',
     md: 'item-divider.md.scss'
@@ -32,7 +32,7 @@ export class ItemDivider implements ComponentInterface {
 
   /**
    * When it's set to `true`, the item-divider will stay visible when it reaches the top
-   * of the viewport until the next `ion-item-divider` replaces it.
+   * of the viewport until the next `syg-item-divider` replaces it.
    *
    * This feature relies in `position:sticky`:
    * https://caniuse.com/#feat=css-sticky
@@ -40,7 +40,7 @@ export class ItemDivider implements ComponentInterface {
   @Prop() sticky = false;
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={createColorClasses(this.color, {

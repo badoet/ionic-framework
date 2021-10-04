@@ -1,11 +1,11 @@
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="openToast">Open Toast</ion-button>
-      <ion-button @click="openToastOptions">Open Toast: Options</ion-button>
-    </ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="openToast">Open Toast</syg-button>
+      <syg-button @click="openToastOptions">Open Toast: Options</syg-button>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -61,14 +61,14 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Toast</ion-button>
-  <ion-toast
+  <syg-button @click="setOpen(true)">Show Toast</syg-button>
+  <syg-toast
     :is-open="isOpenRef"
     message="Your settings have been saved."
     :duration="2000"
     @didDismiss="setOpen(false)"
   >
-  </ion-toast>
+  </syg-toast>
 </template>
 
 <script>

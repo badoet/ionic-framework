@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="closeModal()" id="close-modal">
+    <syg-buttons slot="start">
+      <syg-button (click)="closeModal()" id="close-modal">
         Close
-      </ion-button>
-    </ion-buttons>
+      </syg-button>
+    </syg-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +18,7 @@
   <p>ionViewWillLeave: <span id="ionViewWillLeave">{{willLeave}}</span></p>
   <p>ionViewDidLeave: <span id="ionViewDidLeave">{{didLeave}}</span></p>
   <p *ngIf="!!nav">
-    <ion-button (click)="push()" class="push-page">Push page</ion-button>
-    <ion-button (click)="pop()" class="pop-page">Pop page</ion-button>
+    <syg-button (click)="push()" class="push-page">Push page</syg-button>
+    <syg-button (click)="pop()" class="pop-page">Pop page</syg-button>
   </p>
 </ion-content>

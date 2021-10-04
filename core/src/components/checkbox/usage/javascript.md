@@ -1,35 +1,35 @@
 ```html
 <!-- Default Checkbox -->
-<ion-checkbox></ion-checkbox>
+<syg-checkbox></syg-checkbox>
 
 <!-- Disabled Checkbox -->
-<ion-checkbox disabled></ion-checkbox>
+<syg-checkbox disabled></syg-checkbox>
 
 <!-- Checked Checkbox -->
-<ion-checkbox checked></ion-checkbox>
+<syg-checkbox checked></syg-checkbox>
 
 <!-- Checkbox Colors -->
-<ion-checkbox color="primary"></ion-checkbox>
-<ion-checkbox color="secondary"></ion-checkbox>
-<ion-checkbox color="danger"></ion-checkbox>
-<ion-checkbox color="light"></ion-checkbox>
-<ion-checkbox color="dark"></ion-checkbox>
+<syg-checkbox color="primary"></syg-checkbox>
+<syg-checkbox color="secondary"></syg-checkbox>
+<syg-checkbox color="danger"></syg-checkbox>
+<syg-checkbox color="light"></syg-checkbox>
+<syg-checkbox color="dark"></syg-checkbox>
 
 <!-- Checkboxes in a List -->
-<ion-list>
-  <ion-item>
-    <ion-label>Pepperoni</ion-label>
-    <ion-checkbox slot="end" value="pepperoni" checked></ion-checkbox>
-  </ion-item>
+<syg-list>
+  <syg-item>
+    <syg-label>Pepperoni</syg-label>
+    <syg-checkbox slot="end" value="pepperoni" checked></syg-checkbox>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Sausage</ion-label>
-    <ion-checkbox slot="end" value="sausage" disabled></ion-checkbox>
-  </ion-item>
+  <syg-item>
+    <syg-label>Sausage</syg-label>
+    <syg-checkbox slot="end" value="sausage" disabled></syg-checkbox>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Mushrooms</ion-label>
-    <ion-checkbox slot="end" value="mushrooms"></ion-checkbox>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Mushrooms</syg-label>
+    <syg-checkbox slot="end" value="mushrooms"></syg-checkbox>
+  </syg-item>
+</syg-list>
 ```

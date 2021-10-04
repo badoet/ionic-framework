@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { ActionSheetButton, ActionSheetOptions, AlertInput, AlertOptions, CssClassMap, OverlaySelect, PopoverOptions, SelectChangeEventDetail, SelectInterface, SelectPopoverOption, StyleEventDetail } from '../../interface';
 import { findItemLabel, focusElement, getAriaLabel, renderHiddenInput } from '../../utils/helpers';
 import { actionSheetController, alertController, popoverController } from '../../utils/overlays';
@@ -17,7 +17,7 @@ import { SelectCompareFn } from './select-interface';
  * @part icon - The select icon container.
  */
 @Component({
-  tag: 'ion-select',
+  tag: 'syg-select',
   styleUrls: {
     ios: 'select.ios.scss',
     md: 'select.md.scss'
@@ -26,13 +26,13 @@ import { SelectCompareFn } from './select-interface';
 })
 export class Select implements ComponentInterface {
 
-  private inputId = `ion-sel-${selectIds++}`;
+  private inputId = `syg-sel-${selectIds++}`;
   private overlay?: OverlaySelect;
   private didInit = false;
   private focusEl?: HTMLButtonElement;
   private mutationO?: MutationObserver;
 
-  @Element() el!: HTMLIonSelectElement;
+  @Element() el!: HTMLSygSelectElement;
 
   @State() isExpanded = false;
 
@@ -78,9 +78,9 @@ export class Select implements ComponentInterface {
 
   /**
    * Any additional options that the `alert`, `action-sheet` or `popover` interface
-   * can take. See the [ion-alert docs](../alert), the
-   * [ion-action-sheet docs](../action-sheet) and the
-   * [ion-popover docs](../popover) for the
+   * can take. See the [syg-alert docs](../alert), the
+   * [syg-action-sheet docs](../action-sheet) and the
+   * [syg-popover docs](../popover) for the
    * create options for each interface.
    *
    * Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
@@ -144,7 +144,7 @@ export class Select implements ComponentInterface {
     this.updateOverlayOptions();
     this.emitStyle();
 
-    this.mutationO = watchForOptions<HTMLIonSelectOptionElement>(this.el, 'ion-select-option', async () => {
+    this.mutationO = watchForOptions<HTMLSygSelectOptionElement>(this.el, 'syg-select-option', async () => {
       this.updateOverlayOptions();
     });
   }
@@ -162,7 +162,7 @@ export class Select implements ComponentInterface {
 
   /**
    * Open the select overlay. The overlay is either an alert, action sheet, or popover,
-   * depending on the `interface` property on the `ion-select`.
+   * depending on the `interface` property on the `syg-select`.
    *
    * @param event The user interface event that called the open.
    */
@@ -227,7 +227,7 @@ export class Select implements ComponentInterface {
         overlay.buttons = this.createActionSheetButtons(childOpts, value);
         break;
       case 'popover':
-        const popover = overlay.querySelector('ion-select-popover');
+        const popover = overlay.querySelector('syg-select-popover');
         if (popover) {
           popover.options = this.createPopoverOptions(childOpts, value);
         }
@@ -239,7 +239,7 @@ export class Select implements ComponentInterface {
     }
   }
 
-  private createActionSheetButtons(data: HTMLIonSelectOptionElement[], selectValue: any): ActionSheetButton[] {
+  private createActionSheetButtons(data: HTMLSygSelectOptionElement[], selectValue: any): ActionSheetButton[] {
     const actionSheetButtons = data.map(option => {
       const value = getOptionValue(option);
 
@@ -269,7 +269,7 @@ export class Select implements ComponentInterface {
     return actionSheetButtons;
   }
 
-  private createAlertInputs(data: HTMLIonSelectOptionElement[], inputType: 'checkbox' | 'radio', selectValue: any): AlertInput[] {
+  private createAlertInputs(data: HTMLSygSelectOptionElement[], inputType: 'checkbox' | 'radio', selectValue: any): AlertInput[] {
     const alertInputs = data.map(option => {
       const value = getOptionValue(option);
 
@@ -290,7 +290,7 @@ export class Select implements ComponentInterface {
     return alertInputs;
   }
 
-  private createPopoverOptions(data: HTMLIonSelectOptionElement[], selectValue: any): SelectPopoverOption[] {
+  private createPopoverOptions(data: HTMLSygSelectOptionElement[], selectValue: any): SelectPopoverOption[] {
     const popoverOptions = data.map(option => {
       const value = getOptionValue(option);
 
@@ -318,7 +318,7 @@ export class Select implements ComponentInterface {
 
   private async openPopover(ev: UIEvent) {
     const interfaceOptions = this.interfaceOptions;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const showBackdrop = mode === 'md' ? false : true;
     const multiple = this.multiple;
     const value = this.value;
@@ -326,7 +326,7 @@ export class Select implements ComponentInterface {
     let event: Event | CustomEvent = ev;
     let size = 'auto';
 
-    const item = this.el.closest('ion-item');
+    const item = this.el.closest('syg-item');
 
     // If the select is inside of an item containing a floating
     // or stacked label then the popover should take up the
@@ -349,7 +349,7 @@ export class Select implements ComponentInterface {
       showBackdrop,
       ...interfaceOptions,
 
-      component: 'ion-select-popover',
+      component: 'syg-select-popover',
       cssClass: ['select-popover', interfaceOptions.cssClass],
       componentProps: {
         header: interfaceOptions.header,
@@ -364,7 +364,7 @@ export class Select implements ComponentInterface {
   }
 
   private async openActionSheet() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const interfaceOptions = this.interfaceOptions;
     const actionSheetOpts: ActionSheetOptions = {
       mode,
@@ -382,7 +382,7 @@ export class Select implements ComponentInterface {
 
     const interfaceOptions = this.interfaceOptions;
     const inputType = (this.multiple ? 'checkbox' : 'radio');
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     const alertOpts: AlertOptions = {
       mode,
@@ -431,7 +431,7 @@ export class Select implements ComponentInterface {
   }
 
   private get childOpts() {
-    return Array.from(this.el.querySelectorAll('ion-select-option'));
+    return Array.from(this.el.querySelectorAll('syg-select-option'));
   }
 
   private getText(): string {
@@ -475,7 +475,7 @@ export class Select implements ComponentInterface {
 
   render() {
     const { disabled, el, inputId, isExpanded, name, placeholder, value } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const { labelText, labelId } = getAriaLabel(el, inputId);
 
     renderHiddenInput(true, el, name, parseValue(value), disabled);
@@ -513,7 +513,7 @@ export class Select implements ComponentInterface {
         aria-label={displayLabel}
         class={{
           [mode]: true,
-          'in-item': hostContext('ion-item', el),
+          'in-item': hostContext('syg-item', el),
           'select-disabled': disabled,
           'select-expanded': isExpanded
         }}
@@ -554,7 +554,7 @@ const isOptionSelected = (currentValue: any[] | any, compareValue: any, compareW
   }
 };
 
-const getOptionValue = (el: HTMLIonSelectOptionElement) => {
+const getOptionValue = (el: HTMLSygSelectOptionElement) => {
   const value = el.value;
   return (value === undefined)
     ? el.textContent || ''
@@ -581,7 +581,7 @@ const compareOptions = (currentValue: any, compareValue: any, compareWith?: stri
   }
 };
 
-const generateText = (opts: HTMLIonSelectOptionElement[], value: any | any[], compareWith?: string | SelectCompareFn | null) => {
+const generateText = (opts: HTMLSygSelectOptionElement[], value: any | any[], compareWith?: string | SelectCompareFn | null) => {
   if (value === undefined) {
     return '';
   }
@@ -595,7 +595,7 @@ const generateText = (opts: HTMLIonSelectOptionElement[], value: any | any[], co
   }
 };
 
-const textForValue = (opts: HTMLIonSelectOptionElement[], value: any, compareWith?: string | SelectCompareFn | null): string | null => {
+const textForValue = (opts: HTMLSygSelectOptionElement[], value: any, compareWith?: string | SelectCompareFn | null): string | null => {
   const selectOpt = opts.find(opt => {
     return compareOptions(getOptionValue(opt), value, compareWith);
   });

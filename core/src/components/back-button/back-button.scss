@@ -247,5 +247,5 @@ ion-icon {
 // --------------------------------------------------
 
 :host(.in-toolbar:not(.in-toolbar-color)) {
-  color: #{var(--ion-toolbar-color, var(--color))};
+  color: #{var(--syg-toolbar-color, var(--color))};
 }

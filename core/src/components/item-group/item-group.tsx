@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Host, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 @Component({
-  tag: 'ion-item-group',
+  tag: 'syg-item-group',
   styleUrls: {
     ios: 'item-group.ios.scss',
     md: 'item-group.md.scss'
@@ -12,7 +12,7 @@ import { getIonMode } from '../../global/ionic-global';
 export class ItemGroup implements ComponentInterface {
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         role="group"

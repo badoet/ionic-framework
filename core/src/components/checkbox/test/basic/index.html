@@ -9,108 +9,108 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <style>
-    ion-checkbox.checkbox-part::part(mark) {
+    syg-checkbox.checkbox-part::part(mark) {
       transform: scale(.5);
       transform-origin: center;
     }
   </style>
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Checkbox - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Checkbox - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-item onClick="clickItem()">
-        <ion-label>Clickable Item</ion-label>
-        <ion-checkbox></ion-checkbox>
-      </ion-item>
+    <syg-content id="content">
+      <syg-item onClick="clickItem()">
+        <syg-label>Clickable Item</syg-label>
+        <syg-checkbox></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Default</ion-label>
-        <ion-checkbox checked></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Default</syg-label>
+        <syg-checkbox checked></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Primary</ion-label>
-        <ion-checkbox checked color="primary" slot="end"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Primary</syg-label>
+        <syg-checkbox checked color="primary" slot="end"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Secondary</ion-label>
-        <ion-checkbox disabled checked color="secondary"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Secondary</syg-label>
+        <syg-checkbox disabled checked color="secondary"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Tertiary</ion-label>
-        <ion-checkbox checked color="tertiary"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Tertiary</syg-label>
+        <syg-checkbox checked color="tertiary"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Success</ion-label>
-        <ion-checkbox checked color="success"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Success</syg-label>
+        <syg-checkbox checked color="success"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Warning</ion-label>
-        <ion-checkbox checked color="warning"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Warning</syg-label>
+        <syg-checkbox checked color="warning"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Dark</ion-label>
-        <ion-checkbox checked color="dark" style="--size: 100px;"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Dark</syg-label>
+        <syg-checkbox checked color="dark" style="--size: 100px;"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Danger</ion-label>
-        <ion-checkbox checked color="danger" slot="start"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Danger</syg-label>
+        <syg-checkbox checked color="danger" slot="start"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Light</ion-label>
-        <ion-checkbox checked color="light" slot="start"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Light</syg-label>
+        <syg-checkbox checked color="light" slot="start"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Medium</ion-label>
-        <ion-checkbox checked color="medium" slot="start"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Medium</syg-label>
+        <syg-checkbox checked color="medium" slot="start"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Dark</ion-label>
-        <ion-checkbox checked color="dark" slot="start" style="--size: 100px;"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Dark</syg-label>
+        <syg-checkbox checked color="dark" slot="start" style="--size: 100px;"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Checkmark width</ion-label>
-        <ion-checkbox checked color="dark" slot="start" style="--checkmark-width: 7;"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Checkmark width</syg-label>
+        <syg-checkbox checked color="dark" slot="start" style="--checkmark-width: 7;"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Checkmark ::part</ion-label>
-        <ion-checkbox checked color="dark" slot="start" class="checkbox-part"></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Checkmark ::part</syg-label>
+        <syg-checkbox checked color="dark" slot="start" class="checkbox-part"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Unchecked by Default</ion-label>
-        <ion-checkbox></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Unchecked by Default</syg-label>
+        <syg-checkbox></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Disabled</ion-label>
-        <ion-checkbox disabled></ion-checkbox>
-      </ion-item>
-    </ion-content>
+      <syg-item>
+        <syg-label>Disabled</syg-label>
+        <syg-checkbox disabled></syg-checkbox>
+      </syg-item>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
-    const inputs = document.querySelectorAll('ion-checkbox');
+    const inputs = document.querySelectorAll('syg-checkbox');
 
     for (var i = 0; i < inputs.length; i++) {
       const input = inputs[i];

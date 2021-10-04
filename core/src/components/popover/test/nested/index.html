@@ -9,7 +9,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <style>
   .grid {
     display: grid;
@@ -32,7 +32,7 @@
     margin-left: 5px;
   }
 
-  ion-item-divider {
+  syg-item-divider {
     min-height: 1px;
   }
 
@@ -173,8 +173,8 @@
       --ion-color-light-tint: #383a3e;
     }
     .ios body {
-      --ion-background-color: #000000;
-      --ion-background-color-rgb: 0,0,0;
+      --syg-background-color: #000000;
+      --syg-background-color-rgb: 0,0,0;
       --ion-text-color: #ffffff;
       --ion-text-color-rgb: 255,255,255;
       --ion-color-step-50: #0d0d0d;
@@ -196,13 +196,13 @@
       --ion-color-step-850: #d9d9d9;
       --ion-color-step-900: #e6e6e6;
       --ion-color-step-950: #f2f2f2;
-      --ion-toolbar-background: #0d0d0d;
-      --ion-item-background: #000000;
-      --ion-card-background: #1c1c1d;
+      --syg-toolbar-background: #0d0d0d;
+      --syg-item-background: #000000;
+      --syg-card-background: #1c1c1d;
     }
     .md body {
-      --ion-background-color: #121212;
-      --ion-background-color-rgb: 18,18,18;
+      --syg-background-color: #121212;
+      --syg-background-color-rgb: 18,18,18;
       --ion-text-color: #ffffff;
       --ion-text-color-rgb: 255,255,255;
       --ion-border-color: #222222;
@@ -225,130 +225,130 @@
       --ion-color-step-850: #dbdbdb;
       --ion-color-step-900: #e7e7e7;
       --ion-color-step-950: #f3f3f3;
-      --ion-item-background: #1e1e1e;
-      --ion-toolbar-background: #1f1f1f;
+      --syg-item-background: #1e1e1e;
+      --syg-toolbar-background: #1f1f1f;
       --ion-tab-bar-background: #1f1f1f;
-      --ion-card-background: #1e1e1e;
+      --syg-card-background: #1e1e1e;
     }
   }
   */
   </style>
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Popover - Nested</ion-title>
-        <ion-buttons slot="start">
-          <ion-button id="first-trigger">
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Popover - Nested</syg-title>
+        <syg-buttons slot="start">
+          <syg-button id="first-trigger">
             <ion-icon name="ellipsis-horizontal"></ion-icon>
-          </ion-button>
-          <ion-popover
+          </syg-button>
+          <syg-popover
           id="liam-was-here"
             animated="true"
             trigger="first-trigger"
             side="end"
           >
-            <ion-content>
-              <ion-list lines="none">
-                <ion-item button detail="false">
-                  <ion-label>Open</ion-label>
-                </ion-item>
-                <ion-item button detail id="open-with-popover">
-                  <ion-label>Open With</ion-label>
-                </ion-item>
+            <syg-content>
+              <syg-list lines="none">
+                <syg-item button detail="false">
+                  <syg-label>Open</syg-label>
+                </syg-item>
+                <syg-item button detail id="open-with-popover">
+                  <syg-label>Open With</syg-label>
+                </syg-item>
 
-                <ion-popover
+                <syg-popover
                   animated="true"
                   trigger-action="click"
                   trigger="open-with-popover"
                   side="end"
                 >
 
-                  <ion-list lines="none">
-                    <ion-item button detail="false">
-                      <ion-label>Preview (default)</ion-label>
-                    </ion-item>
+                  <syg-list lines="none">
+                    <syg-item button detail="false">
+                      <syg-label>Preview (default)</syg-label>
+                    </syg-item>
 
-                    <ion-item-divider></ion-item-divider>
+                    <syg-item-divider></syg-item-divider>
 
-                    <ion-item button detail="false">
-                      <ion-label>Figma</ion-label>
-                    </ion-item>
+                    <syg-item button detail="false">
+                      <syg-label>Figma</syg-label>
+                    </syg-item>
 
-                    <ion-item button detail="false">
-                      <ion-label>Nova</ion-label>
-                    </ion-item>
+                    <syg-item button detail="false">
+                      <syg-label>Nova</syg-label>
+                    </syg-item>
 
-                    <ion-item button detail="false">
-                      <ion-label>Sketch</ion-label>
-                    </ion-item>
-                  </ion-list>
-                </ion-popover>
+                    <syg-item button detail="false">
+                      <syg-label>Sketch</syg-label>
+                    </syg-item>
+                  </syg-list>
+                </syg-popover>
 
-                <ion-item-divider></ion-item-divider>
+                <syg-item-divider></syg-item-divider>
 
-                <ion-item button detail="false">
-                  <ion-label>Move to Trash</ion-label>
-                </ion-item>
+                <syg-item button detail="false">
+                  <syg-label>Move to Trash</syg-label>
+                </syg-item>
 
-                <ion-item-divider></ion-item-divider>
+                <syg-item-divider></syg-item-divider>
 
-                <ion-item button detail="false">
-                  <ion-label>Get Info</ion-label>
-                </ion-item>
+                <syg-item button detail="false">
+                  <syg-label>Get Info</syg-label>
+                </syg-item>
 
-                <ion-item button detail="false">
-                  <ion-label>Rename</ion-label>
-                </ion-item>
-                <ion-item button detail="false">
-                  <ion-label>Duplicate</ion-label>
-                </ion-item>
+                <syg-item button detail="false">
+                  <syg-label>Rename</syg-label>
+                </syg-item>
+                <syg-item button detail="false">
+                  <syg-label>Duplicate</syg-label>
+                </syg-item>
 
-                <ion-item-divider></ion-item-divider>
+                <syg-item-divider></syg-item-divider>
 
-                <ion-item button detail="false">
-                  <ion-label>Copy</ion-label>
-                </ion-item>
-                <ion-item button detail id="share-popover">
-                  <ion-label>Share</ion-label>
-                </ion-item>
+                <syg-item button detail="false">
+                  <syg-label>Copy</syg-label>
+                </syg-item>
+                <syg-item button detail id="share-popover">
+                  <syg-label>Share</syg-label>
+                </syg-item>
 
-                <ion-popover
+                <syg-popover
                   animated="true"
                   trigger-action="click"
                   trigger="share-popover"
                   side="end"
                 >
-                  <ion-list lines="none">
-                    <ion-item button detail="false">
-                      <ion-label>Share File</ion-label>
-                    </ion-item>
+                  <syg-list lines="none">
+                    <syg-item button detail="false">
+                      <syg-label>Share File</syg-label>
+                    </syg-item>
 
-                    <ion-item-divider></ion-item-divider>
+                    <syg-item-divider></syg-item-divider>
 
-                    <ion-item button detail="false">
-                      <ion-label>Mail</ion-label>
-                    </ion-item>
+                    <syg-item button detail="false">
+                      <syg-label>Mail</syg-label>
+                    </syg-item>
 
-                    <ion-item button detail="false">
-                      <ion-label>Messages</ion-label>
-                    </ion-item>
+                    <syg-item button detail="false">
+                      <syg-label>Messages</syg-label>
+                    </syg-item>
 
-                    <ion-item button detail="false">
-                      <ion-label>AirDrop</ion-label>
-                    </ion-item>
-                  </ion-list>
-                </ion-popover>
-              </ion-list>
-            </ion-content>
-          </ion-popover>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+                    <syg-item button detail="false">
+                      <syg-label>AirDrop</syg-label>
+                    </syg-item>
+                  </syg-list>
+                </syg-popover>
+              </syg-list>
+            </syg-content>
+          </syg-popover>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding">Click the icon above to see the nested menu.</ion-content>
+    <syg-content class="syg-padding">Click the icon above to see the nested menu.</syg-content>
 
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

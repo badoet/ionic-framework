@@ -9,34 +9,34 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Infinite Scroll - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Infinite Scroll - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding" id="content">
+    <syg-content class="syg-padding" id="content">
 
-      <ion-infinite-scroll threshold="100px" id="infinite-scroll" position="top">
-        <ion-infinite-scroll-content loading-spinner="bubbles" loading-text="Loading more data...">
-        </ion-infinite-scroll-content>
-      </ion-infinite-scroll>
+      <syg-infinite-scroll threshold="100px" id="infinite-scroll" position="top">
+        <syg-infinite-scroll-content loading-spinner="bubbles" loading-text="Loading more data...">
+        </syg-infinite-scroll-content>
+      </syg-infinite-scroll>
 
-      <ion-button onclick="toggleInfiniteScroll()" expand="block">
+      <syg-button onclick="toggleInfiniteScroll()" expand="block">
         Toggle InfiniteScroll
-      </ion-button>
+      </syg-button>
 
-      <ion-list id="list"></ion-list>
+      <syg-list id="list"></syg-list>
 
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     const list = document.getElementById('list');
@@ -57,7 +57,7 @@
 
     function appendItems() {
       for (var i = 0; i < 30; i++) {
-        const el = document.createElement('ion-item');
+        const el = document.createElement('syg-item');
         el.textContent = `${1 + i}`;
         list.prepend(el);
       }

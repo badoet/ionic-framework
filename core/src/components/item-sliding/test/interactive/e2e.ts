@@ -10,17 +10,17 @@ test('item-sliding: interactive', async () => {
   const compares = [];
   compares.push(await page.compareScreenshot());
 
-  const items = await page.$$('ion-item-sliding');
+  const items = await page.$$('syg-item-sliding');
   expect(items.length).toEqual(3);
 
   await slideAndDelete(items[0], page);
 
-  const itemsAfterFirstSlide = await page.$$('ion-item-sliding');
+  const itemsAfterFirstSlide = await page.$$('syg-item-sliding');
   expect(itemsAfterFirstSlide.length).toEqual(2);
 
   await slideAndDelete(items[1], page);
 
-  const itemsAfterSecondSlide = await page.$$('ion-item-sliding');
+  const itemsAfterSecondSlide = await page.$$('syg-item-sliding');
   expect(itemsAfterSecondSlide.length).toEqual(1);
 
   for (const compare of compares) {
@@ -41,7 +41,7 @@ const slideAndDelete = async (item: any, page: any) => {
 
 const deleteItemSliding = async (item: any, page: any, id: string) => {
   // Click the "delete" option
-  const options = await item.$$('ion-item-option');
+  const options = await item.$$('syg-item-option');
   await options[0].click();
 
   // Wait for element to be removed from DOM

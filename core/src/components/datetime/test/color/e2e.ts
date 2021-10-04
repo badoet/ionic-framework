@@ -9,8 +9,8 @@ test('color', async () => {
 
   screenshotCompares.push(await page.compareScreenshot());
 
-  const colorSelect = await page.find('ion-select');
-  const darkModeToggle = await page.find('ion-checkbox');
+  const colorSelect = await page.find('syg-select');
+  const darkModeToggle = await page.find('syg-checkbox');
 
   darkModeToggle.setProperty('checked', true);
   await page.waitForChanges();

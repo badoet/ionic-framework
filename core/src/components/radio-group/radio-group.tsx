@@ -1,16 +1,16 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Listen, Prop, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { RadioGroupChangeEventDetail } from '../../interface';
 
 @Component({
-  tag: 'ion-radio-group'
+  tag: 'syg-radio-group'
 })
 export class RadioGroup implements ComponentInterface {
 
-  private inputId = `ion-rg-${radioGroupIds++}`;
+  private inputId = `syg-rg-${radioGroupIds++}`;
   private labelId = `${this.inputId}-lbl`;
-  private label?: HTMLIonLabelElement | null;
+  private label?: HTMLSygLabelElement | null;
 
   @Element() el!: HTMLElement;
 
@@ -69,23 +69,23 @@ export class RadioGroup implements ComponentInterface {
   async connectedCallback() {
     // Get the list header if it exists and set the id
     // this is used to set aria-labelledby
-    const header = this.el.querySelector('ion-list-header') || this.el.querySelector('ion-item-divider');
+    const header = this.el.querySelector('syg-list-header') || this.el.querySelector('syg-item-divider');
     if (header) {
-      const label = this.label = header.querySelector('ion-label');
+      const label = this.label = header.querySelector('syg-label');
       if (label) {
         this.labelId = label.id = this.name + '-lbl';
       }
     }
   }
 
-  private getRadios(): HTMLIonRadioElement[] {
-    return Array.from(this.el.querySelectorAll('ion-radio'));
+  private getRadios(): HTMLSygRadioElement[] {
+    return Array.from(this.el.querySelectorAll('syg-radio'));
   }
 
   private onClick = (ev: Event) => {
     ev.preventDefault();
 
-    const selectedRadio = ev.target && (ev.target as HTMLElement).closest('ion-radio');
+    const selectedRadio = ev.target && (ev.target as HTMLElement).closest('syg-radio');
     if (selectedRadio) {
       const currentValue = this.value;
       const newValue = selectedRadio.value;
@@ -99,7 +99,7 @@ export class RadioGroup implements ComponentInterface {
 
   @Listen('keydown', { target: 'document' })
   onKeydown(ev: any) {
-    const inSelectPopover = !!this.el.closest('ion-select-popover');
+    const inSelectPopover = !!this.el.closest('syg-select-popover');
 
     if (ev.target && !this.el.contains(ev.target)) {
       return;
@@ -156,7 +156,7 @@ export class RadioGroup implements ComponentInterface {
 
   render() {
     const { label, labelId } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     return (
       <Host

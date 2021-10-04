@@ -19,7 +19,7 @@ export const testLoading = async (
     await page.click(selector);
     await page.waitForSelector(selector);
 
-    let loading = await page.find('ion-loading');
+    let loading = await page.find('syg-loading');
     expect(loading).not.toBeNull();
 
     await loading.waitForVisible();
@@ -31,7 +31,7 @@ export const testLoading = async (
 
     screenshotCompares.push(await page.compareScreenshot('dismiss'));
 
-    loading = await page.find('ion-loading');
+    loading = await page.find('syg-loading');
     expect(loading).toBeNull();
 
     for (const screenshotCompare of screenshotCompares) {

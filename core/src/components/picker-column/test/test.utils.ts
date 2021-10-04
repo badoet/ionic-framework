@@ -26,12 +26,12 @@ export const testPickerColumn = async (
     let colChangeCounter: any;
 
     // Expose an event callback method
-    const COL_CHANGE = 'onIonPickerColChange';
+    const COL_CHANGE = 'onSygPickerColChange';
     await page.exposeFunction(COL_CHANGE, () => {
       colChangeCounter.count += 1;
     });
 
-    const columns = await page.$$('ion-picker-column');
+    const columns = await page.$$('syg-picker-column');
     for (const column of Array.from(columns)) {
       colChangeCounter = { count: 0 };
 

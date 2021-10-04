@@ -1,13 +1,13 @@
 ```html
 <template>
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>{{ title }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">
+  <syg-header>
+    <syg-toolbar>
+      <syg-title>{{ title }}</syg-title>
+    </syg-toolbar>
+  </syg-header>
+  <syg-content class="syg-padding">
     {{ content }}
-  </ion-content>
+  </syg-content>
 </template>
 
 <script>
@@ -31,11 +31,11 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="openModal">Open Modal</ion-button>
-    </ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="openModal">Open Modal</syg-button>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -65,14 +65,14 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Modal</ion-button>
-  <ion-modal
+  <syg-button @click="setOpen(true)">Show Modal</syg-button>
+  <syg-modal
     :is-open="isOpenRef"
     css-class="my-custom-class"
     @didDismiss="setOpen(false)"
   >
     <Modal :data="data"></Modal>
-  </ion-modal>
+  </syg-modal>
 </template>
 
 <script>
@@ -92,7 +92,7 @@ export default defineComponent({
 </script>
 ```
 
-> If you need a wrapper element inside of your modal component, we recommend using an `<ion-page>` so that the component dimensions are still computed properly.
+> If you need a wrapper element inside of your modal component, we recommend using an `<syg-page>` so that the component dimensions are still computed properly.
 
 ### Card Modals
 
@@ -102,10 +102,10 @@ Modals in iOS mode have the ability to be presented in a card-style and swiped t
 
 ```html
 <template>
-  <ion-page>
-    <ion-content>
-      <ion-button @click="setOpen(true)">Show Modal</ion-button>
-      <ion-modal
+  <syg-page>
+    <syg-content>
+      <syg-button @click="setOpen(true)">Show Modal</syg-button>
+      <syg-modal
         :is-open="isOpenRef"
         css-class="my-custom-class"
         :swipe-to-close="true"
@@ -113,9 +113,9 @@ Modals in iOS mode have the ability to be presented in a card-style and swiped t
         @didDismiss="setOpen(false)"
       >
         <Modal :data="data"></Modal>
-      </ion-modal>
-    </ion-content>
-  </ion-page>
+      </syg-modal>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script lang="ts">
@@ -140,11 +140,11 @@ export default defineComponent({
 **Controller**
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="openModal()">Open Modal</ion-button>
-    </ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="openModal()">Open Modal</syg-button>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -171,19 +171,19 @@ export default {
 **Inline**
 ```html
 <template>
-  <ion-page>
-    <ion-content>
-      <ion-button @click="setOpen(true)">Show Modal</ion-button>
-      <ion-modal
+  <syg-page>
+    <syg-content>
+      <syg-button @click="setOpen(true)">Show Modal</syg-button>
+      <syg-modal
         :is-open="isOpenRef"
         :initial-breakpoint="0.5"
         :breakpoints="[0, 0.5, 1]"
         @didDismiss="setOpen(false)"
       >
         <Modal></Modal>
-      </ion-modal>
-    </ion-content>
-  </ion-page>
+      </syg-modal>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script lang="ts">

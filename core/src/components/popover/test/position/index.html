@@ -9,7 +9,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <style>
   .grid {
     display: grid;
@@ -32,7 +32,7 @@
     margin-left: 5px;
   }
 
-  ion-popover {
+  syg-popover {
     --width: 75px !important;
   }
 
@@ -44,19 +44,19 @@
   }
   </style>
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Popover - Position</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Popover - Position</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding" id="content">
+    <syg-content class="syg-padding" id="content">
       <div class="grid">
         <div class="grid-item">
           <h2>Top, Start</h2>
-          <ion-button id="top-start">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="top-start">Click to Open</syg-button>
+          <syg-popover
             class="top-start-popover"
             trigger="top-start"
             side="top"
@@ -64,13 +64,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Top, Center</h2>
-          <ion-button id="top-center">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="top-center">Click to Open</syg-button>
+          <syg-popover
             class="top-center-popover"
             trigger="top-center"
             side="top"
@@ -78,13 +78,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Top, End</h2>
-          <ion-button id="top-end">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="top-end">Click to Open</syg-button>
+          <syg-popover
             class="top-end-popover"
             trigger="top-end"
             side="top"
@@ -92,13 +92,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Right, Start</h2>
-          <ion-button id="right-start">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="right-start">Click to Open</syg-button>
+          <syg-popover
             class="right-start-popover"
             trigger="right-start"
             side="right"
@@ -106,13 +106,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Right, Center</h2>
-          <ion-button id="right-center">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="right-center">Click to Open</syg-button>
+          <syg-popover
             class="right-center-popover"
             trigger="right-center"
             side="right"
@@ -120,13 +120,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Right, End</h2>
-          <ion-button id="right-end">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="right-end">Click to Open</syg-button>
+          <syg-popover
             class="right-end-popover"
             trigger="right-end"
             side="right"
@@ -134,13 +134,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Bottom, Start</h2>
-          <ion-button id="bottom-start">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="bottom-start">Click to Open</syg-button>
+          <syg-popover
             class="bottom-start-popover"
             trigger="bottom-start"
             side="bottom"
@@ -148,13 +148,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Bottom, Center</h2>
-          <ion-button id="bottom-center">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="bottom-center">Click to Open</syg-button>
+          <syg-popover
             class="bottom-center-popover"
             trigger="bottom-center"
             side="bottom"
@@ -162,13 +162,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Bottom, End</h2>
-          <ion-button id="bottom-end">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="bottom-end">Click to Open</syg-button>
+          <syg-popover
             class="bottom-end-popover"
             trigger="bottom-end"
             side="bottom"
@@ -176,13 +176,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Left, Start</h2>
-          <ion-button id="left-start">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="left-start">Click to Open</syg-button>
+          <syg-popover
             class="left-start-popover"
             trigger="left-start"
             side="left"
@@ -190,13 +190,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Left, Center</h2>
-          <ion-button id="left-center">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="left-center">Click to Open</syg-button>
+          <syg-popover
             class="left-center-popover"
             trigger="left-center"
             side="left"
@@ -204,13 +204,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Left, End</h2>
-          <ion-button id="left-end">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="left-end">Click to Open</syg-button>
+          <syg-popover
             class="left-end-popover"
             trigger="left-end"
             side="left"
@@ -218,13 +218,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Start, Start</h2>
-          <ion-button id="start-start">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="start-start">Click to Open</syg-button>
+          <syg-popover
             class="start-start-popover"
             trigger="start-start"
             side="start"
@@ -232,13 +232,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Start, Center</h2>
-          <ion-button id="start-center">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="start-center">Click to Open</syg-button>
+          <syg-popover
             class="start-center-popover"
             trigger="start-center"
             side="start"
@@ -246,13 +246,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>Start, End</h2>
-          <ion-button id="start-end">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="start-end">Click to Open</syg-button>
+          <syg-popover
             class="start-end-popover"
             trigger="start-end"
             side="start"
@@ -260,13 +260,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>End, Start</h2>
-          <ion-button id="end-start">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="end-start">Click to Open</syg-button>
+          <syg-popover
             class="end-start-popover"
             trigger="end-start"
             side="end"
@@ -274,13 +274,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>End, Center</h2>
-          <ion-button id="end-center">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="end-center">Click to Open</syg-button>
+          <syg-popover
             class="end-center-popover"
             trigger="end-center"
             side="end"
@@ -288,13 +288,13 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
 
         <div class="grid-item">
           <h2>End, End</h2>
-          <ion-button id="end-end">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="end-end">Click to Open</syg-button>
+          <syg-popover
             class="end-end-popover"
             trigger="end-end"
             side="end"
@@ -302,12 +302,12 @@
             show-backdrop="true"
           >
            <list-page></list-page>
-          </ion-popover>
+          </syg-popover>
         </div>
       </div>
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
   class ListPage extends HTMLElement {
@@ -315,9 +315,9 @@
       super();
 
       this.innerHTML = `
-      <ion-content class="ion-padding">
+      <syg-content class="syg-padding">
         Hello
-      </ion-content>
+      </syg-content>
       `;
     }
   }

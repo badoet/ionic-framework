@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 @Component({
-  tag: 'ion-grid',
+  tag: 'syg-grid',
   styleUrl: 'grid.scss',
   shadow: true
 })
@@ -15,7 +15,7 @@ export class Grid implements ComponentInterface {
   @Prop() fixed = false;
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{

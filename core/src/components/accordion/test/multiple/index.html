@@ -8,7 +8,7 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
     <style>
       .grid {
         display: grid;
@@ -28,91 +28,91 @@
     </style>
   </head>
   <body>
-    <ion-app>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Accordion - Multiple</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <div class="grid ion-padding">
+    <syg-app>
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Accordion - Multiple</syg-title>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content>
+        <div class="grid syg-padding">
           <div class="grid-item">
             <h2>Multiple</h2>
-            <ion-accordion-group value="attractions" multiple="true">
-              <ion-accordion value="attractions">
-                <ion-item color="primary" slot="header" button detail="false">
+            <syg-accordion-group value="attractions" multiple="true">
+              <syg-accordion value="attractions">
+                <syg-item color="primary" slot="header" button detail="false">
                   <ion-icon slot="start" ios="film-outline" md="film"></ion-icon>
-                  <ion-label> Attractions</ion-label>
-                </ion-item>
-                <ion-list lines="none" slot="content">
-                  <ion-item>
-                    <ion-label>Movie Theaters</ion-label>
-                  </ion-item>
-                  <ion-item>
-                    <ion-label>Amusement Parks</ion-label>
-                  </ion-item>
-                  <ion-item>
-                    <ion-label>Mini Golf</ion-label>
-                  </ion-item>
-                </ion-list>
-              </ion-accordion>
-              <ion-accordion value="dining">
-                <ion-item color="warning" slot="header" button detail="false">
+                  <syg-label> Attractions</syg-label>
+                </syg-item>
+                <syg-list lines="none" slot="content">
+                  <syg-item>
+                    <syg-label>Movie Theaters</syg-label>
+                  </syg-item>
+                  <syg-item>
+                    <syg-label>Amusement Parks</syg-label>
+                  </syg-item>
+                  <syg-item>
+                    <syg-label>Mini Golf</syg-label>
+                  </syg-item>
+                </syg-list>
+              </syg-accordion>
+              <syg-accordion value="dining">
+                <syg-item color="warning" slot="header" button detail="false">
                   <ion-icon slot="start" name="pizza"></ion-icon>
-                  <ion-label>Dining</ion-label>
-                </ion-item>
-                <ion-list lines="none" slot="content">
-                  <ion-item>
-                    <ion-label>Breakfast & Brunch</ion-label>
-                  </ion-item>
-                  <ion-item>
-                    <ion-label>New American</ion-label>
-                  </ion-item>
-                  <ion-item>
-                    <ion-label>Sushi Bars</ion-label>
-                  </ion-item>
-                </ion-list>
-              </ion-accordion>
-              <ion-accordion value="games">
-                <ion-item color="danger" slot="header" button detail="false">
+                  <syg-label>Dining</syg-label>
+                </syg-item>
+                <syg-list lines="none" slot="content">
+                  <syg-item>
+                    <syg-label>Breakfast & Brunch</syg-label>
+                  </syg-item>
+                  <syg-item>
+                    <syg-label>New American</syg-label>
+                  </syg-item>
+                  <syg-item>
+                    <syg-label>Sushi Bars</syg-label>
+                  </syg-item>
+                </syg-list>
+              </syg-accordion>
+              <syg-accordion value="games">
+                <syg-item color="danger" slot="header" button detail="false">
                   <ion-icon slot="start" ios="game-controller-outline" md="game-controller"></ion-icon>
-                  <ion-label>Games</ion-label>
-                </ion-item>
+                  <syg-label>Games</syg-label>
+                </syg-item>
 
-                <ion-list lines="none" slot="content">
-                  <ion-item>
-                    <ion-label>Xbox</ion-label>
-                  </ion-item>
-                  <ion-item>
-                    <ion-label>Playstation</ion-label>
-                  </ion-item>
-                  <ion-item>
-                    <ion-label>Switch</ion-label>
-                  </ion-item>
-                </ion-list>
-              </ion-accordion>
-              <ion-accordion value="exercise">
-                <ion-item color="success" slot="header" button detail="false">
+                <syg-list lines="none" slot="content">
+                  <syg-item>
+                    <syg-label>Xbox</syg-label>
+                  </syg-item>
+                  <syg-item>
+                    <syg-label>Playstation</syg-label>
+                  </syg-item>
+                  <syg-item>
+                    <syg-label>Switch</syg-label>
+                  </syg-item>
+                </syg-list>
+              </syg-accordion>
+              <syg-accordion value="exercise">
+                <syg-item color="success" slot="header" button detail="false">
                   <ion-icon slot="start" ios="bicycle-outline" md="bicycle"></ion-icon>
-                  <ion-label>Exercise</ion-label>
-                </ion-item>
+                  <syg-label>Exercise</syg-label>
+                </syg-item>
 
-                <ion-list lines="none" slot="content">
-                  <ion-item>
-                    <ion-label>Jog</ion-label>
-                  </ion-item>
-                  <ion-item>
-                    <ion-label>Swim</ion-label>
-                  </ion-item>
-                  <ion-item>
-                    <ion-label>Nap</ion-label>
-                  </ion-item>
-                </ion-list>
-              </ion-accordion>
-            </ion-accordion-group>
+                <syg-list lines="none" slot="content">
+                  <syg-item>
+                    <syg-label>Jog</syg-label>
+                  </syg-item>
+                  <syg-item>
+                    <syg-label>Swim</syg-label>
+                  </syg-item>
+                  <syg-item>
+                    <syg-label>Nap</syg-label>
+                  </syg-item>
+                </syg-list>
+              </syg-accordion>
+            </syg-accordion-group>
           </div>
         </div>
-      </ion-content>
-    </ion-app>
+      </syg-content>
+    </syg-app>
   </body>
 </html>

@@ -1,38 +1,38 @@
-# ion-modal
+# syg-modal
 
 A Modal is a dialog that appears on top of the app's content, and must be dismissed by the app before interaction can resume. It is useful as a select component when there are a lot of options to choose from, or when filtering items in a list, as well as many other use cases.
 
 ## Presenting
 
-There are two ways to use `ion-modal`: inline or via the `modalController`. Each method comes with different considerations, so be sure to use the approach that best fits your use case.
+There are two ways to use `syg-modal`: inline or via the `modalController`. Each method comes with different considerations, so be sure to use the approach that best fits your use case.
 
 ## Inline Modals
 
-`ion-modal` can be used by writing the component directly in your template. This reduces the number of handlers you need to wire up in order to present the modal. See [Usage](#usage) for an example of how to write a modal inline. 
+`syg-modal` can be used by writing the component directly in your template. This reduces the number of handlers you need to wire up in order to present the modal. See [Usage](#usage) for an example of how to write a modal inline.
 
-When using `ion-modal` with Angular, React, or Vue, the component you pass in will be destroyed when the modal is dismissed. As this functionality is provided by the JavaScript framework, using `ion-modal` without a JavaScript framework will not destroy the component you passed in. If this is a needed functionality, we recommend using the `modalController` instead.
+When using `syg-modal` with Angular, React, or Vue, the component you pass in will be destroyed when the modal is dismissed. As this functionality is provided by the JavaScript framework, using `syg-modal` without a JavaScript framework will not destroy the component you passed in. If this is a needed functionality, we recommend using the `modalController` instead.
 
-### Angular 
+### Angular
 
 Since the component you passed in needs to be created when the modal is presented and destroyed when the modal is dismissed, we are unable to project the content using `<ng-content>` internally. Instead, we use `<ng-container>` which expects an `<ng-template>` to be passed in. As a result, when passing in your component you will need to wrap it in an `<ng-template>`:
 
 ```html
-<ion-modal [isOpen]="isModalOpen">
+<syg-modal [isOpen]="isModalOpen">
   <ng-template>
     <app-modal-content></app-modal-content>
   </ng-template>
-</ion-modal>
+</syg-modal>
 ```
 
 ### When to use
 
 Using a modal inline is useful when you do not want to explicitly wire up click events to open the modal. For example, you can use the `is-open` property to easily present or dismiss a modal based on some state in your application.
 
-If you need fine grained control over when the modal is presented and dismissed, we recommend you use the `modalController`. 
+If you need fine grained control over when the modal is presented and dismissed, we recommend you use the `modalController`.
 
 ## Controller Modals
 
-`ion-modal` can also be presented programmatically by using the `modalController` imported from Ionic Framework. This allows you to have complete control over when a modal is presented above and beyond the customization that inline modals give you. See [Usage](#usage) for an example of how to use the `modalController`.
+`syg-modal` can also be presented programmatically by using the `modalController` imported from Ionic Framework. This allows you to have complete control over when a modal is presented above and beyond the customization that inline modals give you. See [Usage](#usage) for an example of how to use the `modalController`.
 
 ### When to use
 
@@ -40,9 +40,9 @@ We typically recommend that you write your modals inline as it streamlines the a
 
 ## Card Modal
 
-Developers can create a card modal effect where the modal appears as a card stacked on top of your app's main content. To create a card modal, developers need to set the `presentingElement` property and the `swipeToClose` properties on `ion-modal`.
+Developers can create a card modal effect where the modal appears as a card stacked on top of your app's main content. To create a card modal, developers need to set the `presentingElement` property and the `swipeToClose` properties on `syg-modal`.
 
-The `presentingElement` property accepts a reference to the element that should display under your modal. This is typically a reference to `ion-router-outlet`.
+The `presentingElement` property accepts a reference to the element that should display under your modal. This is typically a reference to `syg-router-outlet`.
 
 The `swipeToClose` property can be used to control whether or not the card modal can be swiped to close.
 
@@ -50,13 +50,13 @@ See [Usage](#usage) for examples on how to use the sheet modal.
 
 ## Sheet Modal
 
-Developers can create a sheet modal effect similar to the drawer components available in maps applications. To create a sheet modal, developers need to set the `breakpoints` and `initialBreakpoint` properties on `ion-modal`.
+Developers can create a sheet modal effect similar to the drawer components available in maps applications. To create a sheet modal, developers need to set the `breakpoints` and `initialBreakpoint` properties on `syg-modal`.
 
 The `breakpoints` property accepts an array which states each breakpoint that the sheet can snap to when swiped. A `breakpoints` property of `[0, 0.5, 1]` would indicate that the sheet can be swiped to show 0% of the modal, 50% of the modal, and 100% of the modal. When the modal is swiped to 0%, the modal will be automatically dismissed.
 
 The `initialBreakpoint` property is required so that the sheet modal knows which breakpoint to start at when presenting. The `initalBreakpoint` value must also exist in the `breakpoints` array. Given a `breakpoints` value of `[0, 0.5, 1]`, an `initialBreakpoint` value of `0.5` would be valid as `0.5` is in the `breakpoints` array. An `initialBreakpoint` value of `0.25` would not be valid as `0.25` does not exist in the `breakpoints` array.
 
-The `backdropBreakpoint` property can be used to customize the point at which the `ion-backdrop` will begin to fade in. This is useful when creating interfaces that have content underneath the sheet that should remain interactive. A common use case is a sheet modal that overlays a map where the map is interactive until the sheet is fully expanded.
+The `backdropBreakpoint` property can be used to customize the point at which the `syg-backdrop` will begin to fade in. This is useful when creating interfaces that have content underneath the sheet that should remain interactive. A common use case is a sheet modal that overlays a map where the map is interactive until the sheet is fully expanded.
 
 See [Usage](#usage) for examples on how to use the sheet modal.
 
@@ -118,11 +118,11 @@ Any of the defined [CSS Custom Properties](#css-custom-properties) can be used t
 
 > If you are building an Ionic Angular app, the styles need to be added to a global stylesheet file. Read [Style Placement](#style-placement) in the Angular section below for more information.
 
-> `ion-modal` works under the assumption that stacked modals are the same size. As a result, each subsequent modal will have no box shadow and a backdrop opacity of `0`. This is to avoid the effect of shadows and backdrops getting darker with each added modal. This can be changed by setting the `--box-shadow` and `--backdrop-opacity` CSS variables:
-``` 
-ion-modal.stack-modal {
+> `syg-modal` works under the assumption that stacked modals are the same size. As a result, each subsequent modal will have no box shadow and a backdrop opacity of `0`. This is to avoid the effect of shadows and backdrops getting darker with each added modal. This can be changed by setting the `--box-shadow` and `--backdrop-opacity` CSS variables:
+```
+syg-modal.stack-modal {
   --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
-  --backdrop-opacity: var(--ion-backdrop-opacity, 0.32);
+  --backdrop-opacity: var(--syg-backdrop-opacity, 0.32);
 }
 ```
 
@@ -208,7 +208,7 @@ export class ModalPage {
 }
 ```
 
-> If you need a wrapper element inside of your modal component, we recommend using a `<div class="ion-page">` so that the component dimensions are still computed properly.
+> If you need a wrapper element inside of your modal component, we recommend using a `<div class="syg-page">` so that the component dimensions are still computed properly.
 
 ### Passing Data
 
@@ -306,7 +306,7 @@ Modals in iOS mode have the ability to be presented in a card-style and swiped t
 
 > Card style modals when running on iPhone-sized devices do not have backdrops. As a result, the `--backdrop-opacity` variable will not have any effect.
 
-If you are creating an application that uses `ion-tabs`, it is recommended that you get the parent `ion-router-outlet` using `this.routerOutlet.parentOutlet.nativeEl`, otherwise the tabbar will not scale down when the modal opens.
+If you are creating an application that uses `syg-tabs`, it is recommended that you get the parent `syg-router-outlet` using `this.routerOutlet.parentOutlet.nativeEl`, otherwise the tabbar will not scale down when the modal opens.
 
 ```javascript
 import { IonRouterOutlet } from '@ionic/angular';
@@ -324,7 +324,7 @@ async presentModal() {
 }
 ```
 
-In most scenarios, using the `ion-router-outlet` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `ion-modal` element as the `presentingElement`.
+In most scenarios, using the `syg-router-outlet` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `syg-modal` element as the `presentingElement`.
 
 ```javascript
 import { ModalController } from '@ionic/angular';
@@ -336,7 +336,7 @@ async presentModal() {
     component: ModalPage,
     cssClass: 'my-custom-class',
     swipeToClose: true,
-    presentingElement: await this.modalController.getTop() // Get the top-most ion-modal
+    presentingElement: await this.modalController.getTop() // Get the top-most syg-modal
   });
   return await modal.present();
 }
@@ -363,17 +363,17 @@ async presentModal() {
 
 **Inline**
 ```html
-<ion-modal [isOpen]="isModalOpen" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5, 1]">
+<syg-modal [isOpen]="isModalOpen" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5, 1]">
   <ng-template>
     <modal-page></modal-page>
   </ng-template>
-</ion-modal>
+</syg-modal>
 ```
 
 
 ### Style Placement
 
-In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Modal can be presented from within a page, the `ion-modal` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
+In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Modal can be presented from within a page, the `syg-modal` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
 
 
 ### Javascript
@@ -382,25 +382,25 @@ In Angular, the CSS of a specific page is scoped only to elements of that page. 
 customElements.define('modal-page', class extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Modal Header</ion-title>
-    <ion-buttons slot="primary">
-      <ion-button onClick="dismissModal()">
+<syg-header>
+  <syg-toolbar>
+    <syg-title>Modal Header</syg-title>
+    <syg-buttons slot="primary">
+      <syg-button onClick="dismissModal()">
         <ion-icon slot="icon-only" name="close"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-<ion-content class="ion-padding">
+      </syg-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
+<syg-content class="syg-padding">
   Modal Content
-</ion-content>`;
+</syg-content>`;
   }
 });
 
 function presentModal() {
   // create the modal with the `modal-page` component
-  const modalElement = document.createElement('ion-modal');
+  const modalElement = document.createElement('syg-modal');
   modalElement.component = 'modal-page';
   modalElement.cssClass = 'my-custom-class';
 
@@ -410,14 +410,14 @@ function presentModal() {
 }
 ```
 
-> If you need a wrapper element inside of your modal component, we recommend using a `<div class="ion-page">` so that the component dimensions are still computed properly.
+> If you need a wrapper element inside of your modal component, we recommend using a `<div class="syg-page">` so that the component dimensions are still computed properly.
 
 ### Passing Data
 
 During creation of a modal, data can be passed in through the `componentProps`. The previous example can be written to include data:
 
 ```javascript
-const modalElement = document.createElement('ion-modal');
+const modalElement = document.createElement('syg-modal');
 modalElement.component = 'modal-page';
 modalElement.cssClass = 'my-custom-class';
 modalElement.componentProps = {
@@ -432,7 +432,7 @@ To get the data passed into the `componentProps`, query for the modal in the `mo
 ```js
 customElements.define('modal-page', class extends HTMLElement {
   connectedCallback() {
-    const modalElement = document.querySelector('ion-modal');
+    const modalElement = document.querySelector('syg-modal');
     console.log(modalElement.componentProps.firstName);
 
     ...
@@ -468,27 +468,27 @@ Modals in iOS mode have the ability to be presented in a card-style and swiped t
 > Card style modals when running on iPhone-sized devices do not have backdrops. As a result, the `--backdrop-opacity` variable will not have any effect.
 
 ```javascript
-const modalElement = document.createElement('ion-modal');
+const modalElement = document.createElement('syg-modal');
 modalElement.component = 'modal-page';
 modalElement.cssClass = 'my-custom-class';
 modalElement.swipeToClose = true;
-modalElement.presentingElement = document.querySelector('ion-nav');
+modalElement.presentingElement = document.querySelector('syg-nav');
 ```
 
-In most scenarios, using the `ion-nav` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within a modal, you should pass in the top-most `ion-modal` element as the `presentingElement`.
+In most scenarios, using the `syg-nav` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within a modal, you should pass in the top-most `syg-modal` element as the `presentingElement`.
 
 ```javascript
-const modalElement = document.createElement('ion-modal');
+const modalElement = document.createElement('syg-modal');
 modalElement.component = 'modal-page';
 modalElement.cssClass = 'my-custom-class';
 modalElement.swipeToClose = true;
-modalElement.presentingElement = await modalController.getTop(); // Get the top-most ion-modal
+modalElement.presentingElement = await modalController.getTop(); // Get the top-most syg-modal
 ```
 
 ### Sheet Modals
 
 ```javascript
-const modalElement = document.createElement('ion-modal');
+const modalElement = document.createElement('syg-modal');
 modalElement.component = 'modal-page';
 modalElement.initialBreakpoint = 0.5;
 modalElement.breakpoints = [0, 0.5, 1];
@@ -498,7 +498,7 @@ modalElement.breakpoints = [0, 0.5, 1];
 ### React
 
 ```tsx
-/* Using with useIonModal Hook */ 
+/* Using with useIonModal Hook */
 
 import React, { useState } from 'react';
 import { IonButton, IonContent, IonPage, useIonModal } from '@ionic/react';
@@ -589,7 +589,7 @@ Modals in iOS mode have the ability to be presented in a card-style and swiped t
 ```tsx
 const App: React.FC = () => {
   const routerRef = useRef<HTMLIonRouterOutletElement | null>(null);
-  
+
   return (
     <IonApp>
       <IonReactRouter>
@@ -609,7 +609,7 @@ interface HomePageProps {
 
 const Home: React.FC<HomePageProps> = ({ router }) => {
   const [showModal, setShowModal] = useState(false);
-  
+
   return (
     <IonPage>
       <IonContent>
@@ -628,7 +628,7 @@ const Home: React.FC<HomePageProps> = ({ router }) => {
 
 ```
 
-In most scenarios, setting a ref on `IonRouterOutlet` and passing that ref's `current` value to `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `ion-modal` ref as the `presentingElement`.
+In most scenarios, setting a ref on `IonRouterOutlet` and passing that ref's `current` value to `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `syg-modal` ref as the `presentingElement`.
 
 ```tsx
 <IonModal
@@ -659,7 +659,7 @@ In most scenarios, setting a ref on `IonRouterOutlet` and passing that ref's `cu
 ```tsx
 const App: React.FC = () => {
   const routerRef = useRef<HTMLIonRouterOutletElement | null>(null);
-  
+
   return (
     <IonApp>
       <IonReactRouter>
@@ -675,7 +675,7 @@ const App: React.FC = () => {
 
 const Home: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
-  
+
   return (
     <IonPage>
       <IonContent>
@@ -726,23 +726,23 @@ import { Component, h } from '@stencil/core';
 export class PageModal {
   render() {
     return [
-      <ion-list>
-        <ion-item>
-          <ion-label>Documentation</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Feedback</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Settings</ion-label>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-item>
+          <syg-label>Documentation</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Feedback</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Settings</syg-label>
+        </syg-item>
+      </syg-list>
     ];
   }
 }
 ```
 
-> If you need a wrapper element inside of your modal component, we recommend using a `<div class="ion-page">` so that the component dimensions are still computed properly.
+> If you need a wrapper element inside of your modal component, we recommend using a `<div class="syg-page">` so that the component dimensions are still computed properly.
 
 ### Passing Data
 
@@ -791,7 +791,7 @@ export class ModalPage {
 
   dismiss(data?: any) {
     // dismiss the closest modal and optionally pass back data
-    (this.el.closest('ion-modal') as any).dismiss({
+    (this.el.closest('syg-modal') as any).dismiss({
       'dismissed': true
     });
   }
@@ -828,7 +828,7 @@ export class ModalExample {
       component: 'page-modal',
       cssClass: 'my-custom-class',
       swipeToClose: true,
-      presentingElement: this.el.closest('ion-router-outlet'),
+      presentingElement: this.el.closest('syg-router-outlet'),
     });
     await modal.present();
   }
@@ -836,7 +836,7 @@ export class ModalExample {
 }
 ```
 
-In most scenarios, using the `ion-router-outlet` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `ion-modal` element as the `presentingElement`.
+In most scenarios, using the `syg-router-outlet` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `syg-modal` element as the `presentingElement`.
 
 ```tsx
 async presentModal() {
@@ -844,7 +844,7 @@ async presentModal() {
     component: 'page-modal',
     cssClass: 'my-custom-class',
     swipeToClose: true,
-    presentingElement: await modalController.getTop() // Get the top-most ion-modal
+    presentingElement: await modalController.getTop() // Get the top-most syg-modal
   });
   await modal.present();
 }
@@ -871,7 +871,7 @@ export class ModalExample {
       component: 'page-modal',
       initialBreakpoint: 0.5,
       breakpoints: [0, 0.5, 1]
-      
+
     });
     await modal.present();
   }
@@ -891,13 +891,13 @@ export class ModalExample {
 
   render() {
     return [
-      <ion-modal
-        isOpen={isModalOpen} 
-        initialBreakpoint={0.5} 
+      <syg-modal
+        isOpen={isModalOpen}
+        initialBreakpoint={0.5}
         breakpoints={[0, 0.5, 1]}
       >
         <page-modal></page-modal>
-      <ion-modal>
+      <syg-modal>
     ]
   }
 }
@@ -908,14 +908,14 @@ export class ModalExample {
 
 ```html
 <template>
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>{{ title }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">
+  <syg-header>
+    <syg-toolbar>
+      <syg-title>{{ title }}</syg-title>
+    </syg-toolbar>
+  </syg-header>
+  <syg-content class="syg-padding">
     {{ content }}
-  </ion-content>
+  </syg-content>
 </template>
 
 <script>
@@ -939,11 +939,11 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="openModal">Open Modal</ion-button>
-    </ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="openModal">Open Modal</syg-button>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -973,14 +973,14 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Modal</ion-button>
-  <ion-modal
+  <syg-button @click="setOpen(true)">Show Modal</syg-button>
+  <syg-modal
     :is-open="isOpenRef"
     css-class="my-custom-class"
     @didDismiss="setOpen(false)"
   >
     <Modal :data="data"></Modal>
-  </ion-modal>
+  </syg-modal>
 </template>
 
 <script>
@@ -1000,7 +1000,7 @@ export default defineComponent({
 </script>
 ```
 
-> If you need a wrapper element inside of your modal component, we recommend using an `<ion-page>` so that the component dimensions are still computed properly.
+> If you need a wrapper element inside of your modal component, we recommend using an `<syg-page>` so that the component dimensions are still computed properly.
 
 ### Card Modals
 
@@ -1010,10 +1010,10 @@ Modals in iOS mode have the ability to be presented in a card-style and swiped t
 
 ```html
 <template>
-  <ion-page>
-    <ion-content>
-      <ion-button @click="setOpen(true)">Show Modal</ion-button>
-      <ion-modal
+  <syg-page>
+    <syg-content>
+      <syg-button @click="setOpen(true)">Show Modal</syg-button>
+      <syg-modal
         :is-open="isOpenRef"
         css-class="my-custom-class"
         :swipe-to-close="true"
@@ -1021,9 +1021,9 @@ Modals in iOS mode have the ability to be presented in a card-style and swiped t
         @didDismiss="setOpen(false)"
       >
         <Modal :data="data"></Modal>
-      </ion-modal>
-    </ion-content>
-  </ion-page>
+      </syg-modal>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script lang="ts">
@@ -1048,11 +1048,11 @@ export default defineComponent({
 **Controller**
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="openModal()">Open Modal</ion-button>
-    </ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="openModal()">Open Modal</syg-button>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -1079,19 +1079,19 @@ export default {
 **Inline**
 ```html
 <template>
-  <ion-page>
-    <ion-content>
-      <ion-button @click="setOpen(true)">Show Modal</ion-button>
-      <ion-modal
+  <syg-page>
+    <syg-content>
+      <syg-button @click="setOpen(true)">Show Modal</syg-button>
+      <syg-modal
         :is-open="isOpenRef"
         :initial-breakpoint="0.5"
         :breakpoints="[0, 0.5, 1]"
         @didDismiss="setOpen(false)"
       >
         <Modal></Modal>
-      </ion-modal>
-    </ion-content>
-  </ion-page>
+      </syg-modal>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script lang="ts">
@@ -1202,7 +1202,7 @@ Type: `Promise<void>`
 
 | Part         | Description                                                                      |
 | ------------ | -------------------------------------------------------------------------------- |
-| `"backdrop"` | The `ion-backdrop` element.                                                      |
+| `"backdrop"` | The `syg-backdrop` element.                                                      |
 | `"content"`  | The wrapper element for the default slot.                                        |
 | `"handle"`   | The handle that is displayed at the top of the sheet modal when `handle="true"`. |
 
@@ -1229,13 +1229,13 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [ion-backdrop](../backdrop)
+- [syg-backdrop](../backdrop)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-modal --> ion-backdrop
-  style ion-modal fill:#f9f,stroke:#333,stroke-width:4px
+  syg-modal --> syg-backdrop
+  style syg-modal fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

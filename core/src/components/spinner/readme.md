@@ -1,4 +1,4 @@
-# ion-spinner
+# syg-spinner
 
 The Spinner component provides a variety of animated SVG spinners. Spinners are visual indicators that the app is loading content or performing another process that the user needs to wait on.
 
@@ -15,28 +15,28 @@ The default spinner to use is based on the platform. The default spinner for `io
 
 ```html
 <!-- Default Spinner -->
-<ion-spinner></ion-spinner>
+<syg-spinner></syg-spinner>
 
 <!-- Lines -->
-<ion-spinner name="lines"></ion-spinner>
+<syg-spinner name="lines"></syg-spinner>
 
 <!-- Lines Small -->
-<ion-spinner name="lines-small"></ion-spinner>
+<syg-spinner name="lines-small"></syg-spinner>
 
 <!-- Dots -->
-<ion-spinner name="dots"></ion-spinner>
+<syg-spinner name="dots"></syg-spinner>
 
 <!-- Bubbles -->
-<ion-spinner name="bubbles"></ion-spinner>
+<syg-spinner name="bubbles"></syg-spinner>
 
 <!-- Circles -->
-<ion-spinner name="circles"></ion-spinner>
+<syg-spinner name="circles"></syg-spinner>
 
 <!-- Crescent -->
-<ion-spinner name="crescent"></ion-spinner>
+<syg-spinner name="crescent"></syg-spinner>
 
 <!-- Paused Default Spinner -->
-<ion-spinner paused></ion-spinner>
+<syg-spinner paused></syg-spinner>
 ```
 
 
@@ -89,28 +89,28 @@ export class SpinnerExample {
   render() {
     return [
       // Default Spinner
-      <ion-spinner></ion-spinner>,
+      <syg-spinner></syg-spinner>,
 
       // Lines
-      <ion-spinner name="lines"></ion-spinner>,
+      <syg-spinner name="lines"></syg-spinner>,
 
       // Lines Small
-      <ion-spinner name="lines-small"></ion-spinner>,
+      <syg-spinner name="lines-small"></syg-spinner>,
 
       // Dots
-      <ion-spinner name="dots"></ion-spinner>,
+      <syg-spinner name="dots"></syg-spinner>,
 
       // Bubbles
-      <ion-spinner name="bubbles"></ion-spinner>,
+      <syg-spinner name="bubbles"></syg-spinner>,
 
       // Circles
-      <ion-spinner name="circles"></ion-spinner>,
+      <syg-spinner name="circles"></syg-spinner>,
 
       // Crescent
-      <ion-spinner name="crescent"></ion-spinner>,
+      <syg-spinner name="crescent"></syg-spinner>,
 
       // Paused Default Spinner
-      <ion-spinner paused={true}></ion-spinner>
+      <syg-spinner paused={true}></syg-spinner>
     ];
   }
 }
@@ -122,28 +122,28 @@ export class SpinnerExample {
 ```html
 <template>
   <!-- Default Spinner -->
-  <ion-spinner></ion-spinner>
+  <syg-spinner></syg-spinner>
 
   <!-- Lines -->
-  <ion-spinner name="lines"></ion-spinner>
+  <syg-spinner name="lines"></syg-spinner>
 
   <!-- Lines Small -->
-  <ion-spinner name="lines-small"></ion-spinner>
+  <syg-spinner name="lines-small"></syg-spinner>
 
   <!-- Dots -->
-  <ion-spinner name="dots"></ion-spinner>
+  <syg-spinner name="dots"></syg-spinner>
 
   <!-- Bubbles -->
-  <ion-spinner name="bubbles"></ion-spinner>
+  <syg-spinner name="bubbles"></syg-spinner>
 
   <!-- Circles -->
-  <ion-spinner name="circles"></ion-spinner>
+  <syg-spinner name="circles"></syg-spinner>
 
   <!-- Crescent -->
-  <ion-spinner name="crescent"></ion-spinner>
+  <syg-spinner name="crescent"></syg-spinner>
 
   <!-- Paused Default Spinner -->
-  <ion-spinner paused></ion-spinner>
+  <syg-spinner paused></syg-spinner>
 </template>
 
 <script>
@@ -179,17 +179,17 @@ export default defineComponent({
 
 ### Used by
 
- - [ion-infinite-scroll-content](../infinite-scroll-content)
- - [ion-loading](../loading)
- - [ion-refresher-content](../refresher-content)
+ - [syg-infinite-scroll-content](../infinite-scroll-content)
+ - [syg-loading](../loading)
+ - [syg-refresher-content](../refresher-content)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-infinite-scroll-content --> ion-spinner
-  ion-loading --> ion-spinner
-  ion-refresher-content --> ion-spinner
-  style ion-spinner fill:#f9f,stroke:#333,stroke-width:4px
+  syg-infinite-scroll-content --> syg-spinner
+  syg-loading --> syg-spinner
+  syg-refresher-content --> syg-spinner
+  style syg-spinner fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

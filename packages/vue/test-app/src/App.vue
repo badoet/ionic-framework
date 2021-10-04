@@ -1,7 +1,7 @@
 <template>
-  <ion-app>
+  <syg-app>
     <ion-router-outlet />
-  </ion-app>
+  </syg-app>
 </template>
 
 <script lang="ts">

@@ -4,14 +4,14 @@ import { ComponentRef, FrameworkDelegate } from '../../interface';
 import { attachComponent } from '../../utils/framework-delegate';
 
 @Component({
-  tag: 'ion-tab',
+  tag: 'syg-tab',
   styleUrl: 'tab.scss',
   shadow: true
 })
 export class Tab implements ComponentInterface {
 
   private loaded = false;
-  @Element() el!: HTMLIonTabElement;
+  @Element() el!: HTMLSygTabElement;
 
   /** @internal */
   @Prop({ mutable: true }) active = false;
@@ -20,7 +20,7 @@ export class Tab implements ComponentInterface {
   @Prop() delegate?: FrameworkDelegate;
 
   /**
-   * A tab id must be provided for each `ion-tab`. It's used internally to reference
+   * A tab id must be provided for each `syg-tab`. It's used internally to reference
    * the selected tab or by the router to switch between them.
    */
   @Prop() tab!: string;
@@ -34,9 +34,9 @@ export class Tab implements ComponentInterface {
     if (Build.isDev) {
       if (this.component !== undefined && this.el.childElementCount > 0) {
         console.error('You can not use a lazy-loaded component in a tab and inlined content at the same time.' +
-      `- Remove the component attribute in: <ion-tab component="${this.component}">` +
+      `- Remove the component attribute in: <syg-tab component="${this.component}">` +
       ` or` +
-      `- Remove the embedded content inside the ion-tab: <ion-tab></ion-tab>`);
+      `- Remove the embedded content inside the syg-tab: <syg-tab></syg-tab>`);
       }
     }
     if (this.active) {
@@ -62,7 +62,7 @@ export class Tab implements ComponentInterface {
     if (!this.loaded && this.component != null) {
       this.loaded = true;
       try {
-        return attachComponent(this.delegate, this.el, this.component, ['ion-page']);
+        return attachComponent(this.delegate, this.el, this.component, ['syg-page']);
       } catch (e) {
         console.error(e);
       }
@@ -78,7 +78,7 @@ export class Tab implements ComponentInterface {
         aria-hidden={!active ? 'true' : null}
         aria-labelledby={`tab-button-${tab}`}
         class={{
-          'ion-page': component === undefined,
+          'syg-page': component === undefined,
           'tab-hidden': !active
         }}
       >

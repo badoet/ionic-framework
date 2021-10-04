@@ -123,16 +123,16 @@ export const queryDeep = async (page: E2EPage, ...selectors: string[]): Promise<
  * @param globalMode: string - the global mode as a fallback
  *
  * Examples:
- * await checkComponentModeClasses(await page.find('ion-card-content'), globalMode)
+ * await checkComponentModeClasses(await page.find('syg-card-content'), globalMode)
  * => expect(el).toHaveClass(`card-content-{mode}`);
  *
- * await checkComponentModeClasses(await page.find('ion-card-content'), globalMode, 'some-class')
+ * await checkComponentModeClasses(await page.find('syg-card-content'), globalMode, 'some-class')
  * => expect(el).toHaveClass(`some-class-{mode}`);
  */
 export const checkComponentModeClasses = async (el: E2EElement, globalMode: string, selector?: string) => {
   // If passed a selector to use, use that, else grab the nodeName
   // of the element and remove the ion prefix to get the class selector
-  const component = selector !== undefined ? selector : el.nodeName.toLowerCase().replace('ion-', '');
+  const component = selector !== undefined ? selector : el.nodeName.toLowerCase().replace('syg-', '');
 
   const mode = (await el.getProperty('mode')) || globalMode;
 

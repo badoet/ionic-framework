@@ -9,60 +9,60 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Card Header - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Card Header - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-card-header>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle class="custom-color">Custom Subtitle</ion-card-subtitle>
-        <ion-card-title class="custom-color">Custom Title</ion-card-title>
-        <ion-card-subtitle color="secondary" class="custom-color">Color Subtitle</ion-card-subtitle>
-        <ion-card-title color="danger" class="custom-color">Color Title</ion-card-title>
-      </ion-card-header>
+    <syg-content id="content">
+      <syg-card-header>
+        <syg-card-subtitle>Card Subtitle</syg-card-subtitle>
+        <syg-card-title>Card Title</syg-card-title>
+        <syg-card-subtitle class="custom-color">Custom Subtitle</syg-card-subtitle>
+        <syg-card-title class="custom-color">Custom Title</syg-card-title>
+        <syg-card-subtitle color="secondary" class="custom-color">Color Subtitle</syg-card-subtitle>
+        <syg-card-title color="danger" class="custom-color">Color Title</syg-card-title>
+      </syg-card-header>
 
-      <ion-card class="custom-background">
-        <ion-card-header class="custom-header">
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
+      <syg-card class="custom-background">
+        <syg-card-header class="custom-header">
+          <syg-card-subtitle>Card Subtitle</syg-card-subtitle>
+          <syg-card-title>Card Title</syg-card-title>
+        </syg-card-header>
+        <syg-card-content>
           This is Card Content
-        </ion-card-content>
-      </ion-card>
+        </syg-card-content>
+      </syg-card>
 
-      <ion-card class="custom-background">
-        <ion-card-header color="secondary">
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          Custom background, color=secondary on ion-card-header
-        </ion-card-content>
-      </ion-card>
+      <syg-card class="custom-background">
+        <syg-card-header color="secondary">
+          <syg-card-subtitle>Card Subtitle</syg-card-subtitle>
+          <syg-card-title>Card Title</syg-card-title>
+        </syg-card-header>
+        <syg-card-content>
+          Custom background, color=secondary on syg-card-header
+        </syg-card-content>
+      </syg-card>
 
-      <ion-card color="danger">
-        <ion-card-header>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          color=danger on ion-card-header
-        </ion-card-content>
-      </ion-card>
+      <syg-card color="danger">
+        <syg-card-header>
+          <syg-card-subtitle>Card Subtitle</syg-card-subtitle>
+          <syg-card-title>Card Title</syg-card-title>
+        </syg-card-header>
+        <syg-card-content>
+          color=danger on syg-card-header
+        </syg-card-content>
+      </syg-card>
 
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
   <style>
     .custom-background {
       --background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAARQAQMAAAA2ut43AAAABlBMVEXMzMz////TjRV2AAAEPUlEQVR42u3RMREAMBDDsPAn/eXhavOq87Ztu7u7+6eBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBf2hvgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgatgn4GBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGr7S0wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDBwFewzMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwcLW9BQYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBq6CfQYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgautrfAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAVbDPwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwNX2FhgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGLgK9hkYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBi42t4CAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDV8E+AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA1fbW2BgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYOAq2GdgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGDgansLDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMXAX7DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDFxtb4GBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGrYJ+BgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBq+0tMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwcBXsMzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMHC1vQUGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgaugn0GBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGjvYD5WuYrpZqdmcAAAAASUVORK5CYII=) center 50%;
@@ -78,7 +78,7 @@
     }
 
     body {
-      --ion-item-background: #1a1b1e;
+      --syg-item-background: #1a1b1e;
     }
 
   </style>

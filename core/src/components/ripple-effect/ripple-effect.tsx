@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Element, Host, Method, Prop, h, readTask, writeTask } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 @Component({
-  tag: 'ion-ripple-effect',
+  tag: 'syg-ripple-effect',
   styleUrl: 'ripple-effect.scss',
   shadow: true
 })
@@ -78,7 +78,7 @@ export class RippleEffect implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         role="presentation"

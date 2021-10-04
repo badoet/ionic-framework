@@ -9,55 +9,55 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Select - Conflict</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Select - Conflict</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
-      <ion-list>
+    <syg-content>
+      <syg-list>
 
-        <ion-item>
-          <ion-label>Alert</ion-label>
-          <ion-select id="alert" placeholder="Select One" interface="alert">
-            <ion-select-option class="s-unselected">Unselected</ion-select-option>
-            <ion-select-option class="s-zero">Zero</ion-select-option>
-            <ion-select-option class="s-empty">Empty String</ion-select-option>
-            <ion-select-option class="s-null">Null</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Alert</syg-label>
+          <syg-select id="alert" placeholder="Select One" interface="alert">
+            <syg-select-option class="s-unselected">Unselected</syg-select-option>
+            <syg-select-option class="s-zero">Zero</syg-select-option>
+            <syg-select-option class="s-empty">Empty String</syg-select-option>
+            <syg-select-option class="s-null">Null</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Action-sheet</ion-label>
-          <ion-select id="action" placeholder="Select One" interface="action-sheet">
-            <ion-select-option class="s-unselected">Unselected</ion-select-option>
-            <ion-select-option class="s-zero">Zero</ion-select-option>
-            <ion-select-option class="s-empty">Empty String</ion-select-option>
-            <ion-select-option class="s-null">Null</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>action-sheet</syg-label>
+          <syg-select id="action" placeholder="Select One" interface="action-sheet">
+            <syg-select-option class="s-unselected">Unselected</syg-select-option>
+            <syg-select-option class="s-zero">Zero</syg-select-option>
+            <syg-select-option class="s-empty">Empty String</syg-select-option>
+            <syg-select-option class="s-null">Null</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Popover</ion-label>
-          <ion-select id="popover" placeholder="Select One" interface="popover">
-            <ion-select-option class="s-unselected">Unselected</ion-select-option>
-            <ion-select-option class="s-zero">Zero</ion-select-option>
-            <ion-select-option class="s-empty">Empty String</ion-select-option>
-            <ion-select-option class="s-null">Null</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Popover</syg-label>
+          <syg-select id="popover" placeholder="Select One" interface="popover">
+            <syg-select-option class="s-unselected">Unselected</syg-select-option>
+            <syg-select-option class="s-zero">Zero</syg-select-option>
+            <syg-select-option class="s-empty">Empty String</syg-select-option>
+            <syg-select-option class="s-null">Null</syg-select-option>
+          </syg-select>
+        </syg-item>
 
         <span id="results"></span>
 
-      </ion-list>
+      </syg-list>
 
-    </ion-content>
+    </syg-content>
 
     <script>
       Array.from(document.querySelectorAll('.s-unselected')).forEach(s => s.value = undefined);
@@ -72,13 +72,13 @@
 
         document.getElementById('results').textContent = `
         Alert: ${alert}
-        Action-sheet: ${actionSheet}
+        action-sheet: ${actionSheet}
         Popover: ${popover}
         `;
       }
       document.addEventListener('ionChange', () => updateValues());
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

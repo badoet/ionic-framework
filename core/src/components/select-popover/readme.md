@@ -1,4 +1,4 @@
-# ion-select-popover
+# syg-select-popover
 
 The select popover is an internal component that is used to create the popover interface from a select component.
 

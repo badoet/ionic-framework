@@ -1,10 +1,10 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, LoadingAttributes, OverlayEventDetail, OverlayInterface, SpinnerTypes } from '../../interface';
 import { BACKDROP, dismiss, eventMethod, prepareOverlay, present } from '../../utils/overlays';
-import { IonicSafeString, sanitizeDOMString } from '../../utils/sanitization';
+import { SygSafeString, sanitizeDOMString } from '../../utils/sanitization';
 import { getClassMap } from '../../utils/theme';
 
 import { iosEnterAnimation } from './animations/ios.enter';
@@ -16,7 +16,7 @@ import { mdLeaveAnimation } from './animations/md.leave';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-loading',
+  tag: 'syg-loading',
   styleUrls: {
     ios: 'loading.ios.scss',
     md: 'loading.md.scss'
@@ -29,7 +29,7 @@ export class Loading implements ComponentInterface, OverlayInterface {
   presented = false;
   lastFocus?: HTMLElement;
 
-  @Element() el!: HTMLIonLoadingElement;
+  @Element() el!: HTMLSygLoadingElement;
 
   /** @internal */
   @Prop() overlayIndex!: number;
@@ -52,7 +52,7 @@ export class Loading implements ComponentInterface, OverlayInterface {
   /**
    * Optional text content to display in the loading indicator.
    */
-  @Prop() message?: string | IonicSafeString;
+  @Prop() message?: string | SygSafeString;
 
   /**
    * Additional classes to apply for custom CSS. If multiple classes are
@@ -123,7 +123,7 @@ export class Loading implements ComponentInterface, OverlayInterface {
 
   componentWillLoad() {
     if (this.spinner === undefined) {
-      const mode = getIonMode(this);
+      const mode = getSygMode(this);
       this.spinner = config.get(
         'loadingSpinner',
         config.get('spinner', mode === 'ios' ? 'lines' : 'crescent')
@@ -185,7 +185,7 @@ export class Loading implements ComponentInterface, OverlayInterface {
 
   render() {
     const { message, spinner, htmlAttributes } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         tabindex="-1"
@@ -193,21 +193,21 @@ export class Loading implements ComponentInterface, OverlayInterface {
         style={{
           zIndex: `${40000 + this.overlayIndex}`
         }}
-        onIonBackdropTap={this.onBackdropTap}
+        onSygBackdropTap={this.onBackdropTap}
         class={{
           ...getClassMap(this.cssClass),
           [mode]: true,
           'loading-translucent': this.translucent
         }}
       >
-        <ion-backdrop visible={this.showBackdrop} tappable={this.backdropDismiss} />
+        <syg-backdrop visible={this.showBackdrop} tappable={this.backdropDismiss} />
 
         <div tabindex="0"></div>
 
-        <div class="loading-wrapper ion-overlay-wrapper" role="dialog">
+        <div class="loading-wrapper syg-overlay-wrapper" role="dialog">
           {spinner && (
             <div class="loading-spinner">
-              <ion-spinner name={spinner} aria-hidden="true" />
+              <syg-spinner name={spinner} aria-hidden="true" />
             </div>
           )}
 

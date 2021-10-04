@@ -8,7 +8,7 @@ test(`animation:web: basic`, async () => {
 
   screenshotCompares.push(await page.compareScreenshot());
 
-  const ANIMATION_FINISHED = 'onIonAnimationFinished';
+  const ANIMATION_FINISHED = 'onSygAnimationFinished';
   const animationFinishedCount: any = { count: 0 };
   await page.exposeFunction(ANIMATION_FINISHED, () => {
     animationFinishedCount.count += 1;
@@ -33,7 +33,7 @@ test(`animation:css: basic`, async () => {
 
   screenshotCompares.push(await page.compareScreenshot());
 
-  const ANIMATION_FINISHED = 'onIonAnimationFinished';
+  const ANIMATION_FINISHED = 'onSygAnimationFinished';
   const animationFinishedCount: any = { count: 0 };
   await page.exposeFunction(ANIMATION_FINISHED, () => {
     animationFinishedCount.count += 1;

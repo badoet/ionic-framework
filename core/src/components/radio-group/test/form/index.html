@@ -9,60 +9,60 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Radio Group - Form</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Radio Group - Form</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="outer-content">
+    <syg-content class="outer-content">
       <form>
 
-        <ion-list>
+        <syg-list>
 
-          <ion-radio-group name="tannen" id="group" value="biff">
+          <syg-radio-group name="tannen" id="group" value="biff">
 
-            <ion-list-header>
-              <ion-label>Luckiest Man On Earth</ion-label>
-            </ion-list-header>
+            <syg-list-header>
+              <syg-label>Luckiest Man On Earth</syg-label>
+            </syg-list-header>
 
-            <ion-item>
-              <ion-label>Biff
+            <syg-item>
+              <syg-label>Biff
                 <span id="biff"></span>
-              </ion-label>
-              <ion-radio value="biff" slot="start"></ion-radio>
-            </ion-item>
+              </syg-label>
+              <syg-radio value="biff" slot="start"></syg-radio>
+            </syg-item>
 
-            <ion-item>
-              <ion-label>Griff
+            <syg-item>
+              <syg-label>Griff
                 <span id="griff"></span>
-              </ion-label>
-              <ion-radio value="griff" slot="start"></ion-radio>
-            </ion-item>
+              </syg-label>
+              <syg-radio value="griff" slot="start"></syg-radio>
+            </syg-item>
 
-            <ion-item>
-              <ion-label>Buford
+            <syg-item>
+              <syg-label>Buford
                 <span id="buford"></span>
-              </ion-label>
-              <ion-radio value="buford" slot="start"></ion-radio>
-            </ion-item>
+              </syg-label>
+              <syg-radio value="buford" slot="start"></syg-radio>
+            </syg-item>
 
-            <ion-item>
-              <ion-label>George</ion-label>
-              <ion-radio value="george" disabled slot="start"></ion-radio>
-            </ion-item>
+            <syg-item>
+              <syg-label>George</syg-label>
+              <syg-radio value="george" disabled slot="start"></syg-radio>
+            </syg-item>
 
-            <ion-item>
-              <ion-button type="submit">Submit</ion-button>
-            </ion-item>
+            <syg-item>
+              <syg-button type="submit">Submit</syg-button>
+            </syg-item>
 
-          </ion-radio-group>
+          </syg-radio-group>
 
-        </ion-list>
+        </syg-list>
 
       </form>
 
@@ -76,7 +76,7 @@
         <span id="changes">0</span>
       </p>
 
-    </ion-content>
+    </syg-content>
 
     <style>
       .outer-content {
@@ -111,7 +111,7 @@
       });
     </script>
 
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

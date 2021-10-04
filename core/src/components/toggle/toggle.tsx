@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, Gesture, GestureDetail, StyleEventDetail, ToggleChangeEventDetail } from '../../interface';
 import { getAriaLabel, renderHiddenInput } from '../../utils/helpers';
 import { hapticSelection } from '../../utils/native/haptic';
@@ -13,7 +13,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
  * @part handle - The toggle handle, or knob, used to change the checked state.
  */
 @Component({
-  tag: 'ion-toggle',
+  tag: 'syg-toggle',
   styleUrls: {
     ios: 'toggle.ios.scss',
     md: 'toggle.md.scss'
@@ -22,7 +22,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
 })
 export class Toggle implements ComponentInterface {
 
-  private inputId = `ion-tg-${toggleIds++}`;
+  private inputId = `syg-tg-${toggleIds++}`;
   private gesture?: Gesture;
   private focusEl?: HTMLElement;
   private lastDrag = 0;
@@ -179,7 +179,7 @@ export class Toggle implements ComponentInterface {
 
   render() {
     const { activated, color, checked, disabled, el, inputId, name } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const { label, labelId, labelText } = getAriaLabel(el, inputId);
     const value = this.getValue();
 
@@ -194,7 +194,7 @@ export class Toggle implements ComponentInterface {
         role="switch"
         class={createColorClasses(color, {
           [mode]: true,
-          'in-item': hostContext('ion-item', el),
+          'in-item': hostContext('syg-item', el),
           'toggle-activated': activated,
           'toggle-checked': checked,
           'toggle-disabled': disabled,

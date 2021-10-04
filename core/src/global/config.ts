@@ -1,18 +1,18 @@
-import { IonicConfig } from '../interface';
+import { SygicConfig } from '../interface';
 
 export class Config {
-  private m = new Map<keyof IonicConfig, any>();
+  private m = new Map<keyof SygicConfig, any>();
 
-  reset(configObj: IonicConfig) {
-    this.m = new Map<keyof IonicConfig, any>(Object.entries(configObj) as any);
+  reset(configObj: SygicConfig) {
+    this.m = new Map<keyof SygicConfig, any>(Object.entries(configObj) as any);
   }
 
-  get(key: keyof IonicConfig, fallback?: any): any {
+  get(key: keyof SygicConfig, fallback?: any): any {
     const value = this.m.get(key);
     return value !== undefined ? value : fallback;
   }
 
-  getBoolean(key: keyof IonicConfig, fallback = false): boolean {
+  getBoolean(key: keyof SygicConfig, fallback = false): boolean {
     const val = this.m.get(key);
     if (val === undefined) {
       return fallback;
@@ -23,12 +23,12 @@ export class Config {
     return !!val;
   }
 
-  getNumber(key: keyof IonicConfig, fallback?: number): number {
+  getNumber(key: keyof SygicConfig, fallback?: number): number {
     const val = parseFloat(this.m.get(key));
     return isNaN(val) ? (fallback !== undefined ? fallback : NaN) : val;
   }
 
-  set(key: keyof IonicConfig, value: any) {
+  set(key: keyof SygicConfig, value: any) {
     this.m.set(key, value);
   }
 }

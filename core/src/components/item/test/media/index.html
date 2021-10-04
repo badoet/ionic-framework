@@ -9,91 +9,91 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Item Media</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Item Media</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-item onclick="testClick(event)">
-        <ion-avatar slot="start">
+    <syg-content id="content">
+      <syg-item onclick="testClick(event)">
+        <syg-avatar slot="start">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-avatar>
-        <ion-label>
+        </syg-avatar>
+        <syg-label>
           Media/Avatar left, button.item
-        </ion-label>
-      </ion-item>
+        </syg-label>
+      </syg-item>
 
-      <ion-item href="#">
-        <ion-label>
+      <syg-item href="#">
+        <syg-label>
           Media/Avatar right, a.item
-        </ion-label>
-        <ion-avatar slot="end">
+        </syg-label>
+        <syg-avatar slot="end">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-avatar>
-      </ion-item>
+        </syg-avatar>
+      </syg-item>
 
-      <ion-item>
-        <ion-avatar slot="start">
+      <syg-item>
+        <syg-avatar slot="start">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-avatar>
-        <ion-label>
+        </syg-avatar>
+        <syg-label>
           Media/Avatar, right button
-        </ion-label>
-        <ion-button fill="outline" slot="end">View</ion-button>
-      </ion-item>
+        </syg-label>
+        <syg-button fill="outline" slot="end">View</syg-button>
+      </syg-item>
 
-      <ion-item href="#">
-        <ion-avatar slot="start">
+      <syg-item href="#">
+        <syg-avatar slot="start">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-avatar>
-        <ion-label>
+        </syg-avatar>
+        <syg-label>
           <h2>H2 Title Text</h2>
           <p>Paragraph text</p>
-        </ion-label>
-      </ion-item>
+        </syg-label>
+      </syg-item>
 
-      <ion-item href="#">
-        <ion-label>
+      <syg-item href="#">
+        <syg-label>
           Media/Thumbnail right side, a.item
-        </ion-label>
-        <ion-thumbnail slot="end">
+        </syg-label>
+        <syg-thumbnail slot="end">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-thumbnail>
-      </ion-item>
+        </syg-thumbnail>
+      </syg-item>
 
-      <ion-item>
-        <ion-thumbnail slot="start">
+      <syg-item>
+        <syg-thumbnail slot="start">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-thumbnail>
-        <ion-label>
+        </syg-thumbnail>
+        <syg-label>
           <h2>H2 Title Text</h2>
           <p>Button on right</p>
-        </ion-label>
-        <ion-button fill="outline" slot="end">View</ion-button>
-      </ion-item>
+        </syg-label>
+        <syg-button fill="outline" slot="end">View</syg-button>
+      </syg-item>
 
-      <ion-item onclick="testClick(event)">
-        <ion-thumbnail slot="start">
+      <syg-item onclick="testClick(event)">
+        <syg-thumbnail slot="start">
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-        </ion-thumbnail>
-        <ion-label>
+        </syg-thumbnail>
+        <syg-label>
           <h3>H3 Title Text</h3>
           <p>Icon on right</p>
           <p>Vertically align top</p>
           <p>button.item</p>
-        </ion-label>
+        </syg-label>
         <ion-icon name="close-circle" slot="end"></ion-icon>
-      </ion-item>
-    </ion-content>
+      </syg-item>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     function testClick(ev) {

@@ -8,7 +8,7 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
     <style>
       .grid {
         display: grid;
@@ -32,64 +32,64 @@
         }
       }
 
-      ion-datetime {
+      syg-datetime {
         box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.25), 0px 8px 16px rgba(0, 0, 0, 0.25);
         border-radius: 8px;
       }
     </style>
   </head>
   <body>
-    <ion-app>
-      <ion-header translucent="true">
-        <ion-toolbar>
-          <ion-title>Datetime - Presentation</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
+    <syg-app>
+      <syg-header translucent="true">
+        <syg-toolbar>
+          <syg-title>Datetime - Presentation</syg-title>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content class="syg-padding">
         <div class="grid">
           <div class="grid-item">
             <h2>date-time</h2>
-            <ion-datetime
+            <syg-datetime
               presentation="date-time"
-            ></ion-datetime>
+            ></syg-datetime>
           </div>
           <div class="grid-item">
             <h2>time-date</h2>
-            <ion-datetime
+            <syg-datetime
             presentation="time-date"
-          ></ion-datetime>
+          ></syg-datetime>
         </div>
         <div class="grid-item">
           <h2>time</h2>
-          <ion-datetime
+          <syg-datetime
             presentation="time"
-          ></ion-datetime>
+          ></syg-datetime>
         </div>
         <div class="grid-item">
           <h2>date</h2>
-          <ion-datetime
+          <syg-datetime
             presentation="date"
-          ></ion-datetime>
+          ></syg-datetime>
         </div>
         <div class="grid-item">
           <h2>month-year</h2>
-          <ion-datetime
+          <syg-datetime
             presentation="month-year"
-          ></ion-datetime>
+          ></syg-datetime>
         </div>
         <div class="grid-item">
           <h2>month</h2>
-          <ion-datetime
+          <syg-datetime
             presentation="month"
-          ></ion-datetime>
+          ></syg-datetime>
         </div>
         <div class="grid-item">
           <h2>year</h2>
-          <ion-datetime
+          <syg-datetime
             presentation="year"
-          ></ion-datetime>
+          ></syg-datetime>
         </div>
-      </ion-content>
-    </ion-app>
+      </syg-content>
+    </syg-app>
   </body>
 </html>

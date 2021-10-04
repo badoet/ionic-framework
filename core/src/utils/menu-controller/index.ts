@@ -34,7 +34,7 @@ const createMenuController = () => {
     return false;
   };
 
-  const enable = async (shouldEnable: boolean, menu?: string | null): Promise<HTMLIonMenuElement | undefined> => {
+  const enable = async (shouldEnable: boolean, menu?: string | null): Promise<HTMLSygMenuElement | undefined> => {
     const menuEl = await get(menu);
     if (menuEl) {
       menuEl.disabled = !shouldEnable;
@@ -42,7 +42,7 @@ const createMenuController = () => {
     return menuEl;
   };
 
-  const swipeGesture = async (shouldEnable: boolean, menu?: string | null): Promise<HTMLIonMenuElement | undefined> => {
+  const swipeGesture = async (shouldEnable: boolean, menu?: string | null): Promise<HTMLSygMenuElement | undefined> => {
     const menuEl = await get(menu);
     if (menuEl) {
       menuEl.swipeGesture = shouldEnable;
@@ -68,7 +68,7 @@ const createMenuController = () => {
     return false;
   };
 
-  const get = async (menu?: string | null): Promise<HTMLIonMenuElement | undefined> => {
+  const get = async (menu?: string | null): Promise<HTMLSygMenuElement | undefined> => {
     await waitUntilReady();
 
     if (menu === 'start' || menu === 'end') {
@@ -102,7 +102,7 @@ const createMenuController = () => {
   /**
    * Get the instance of the opened menu. Returns `null` if a menu is not found.
    */
-  const getOpen = async (): Promise<HTMLIonMenuElement | undefined> => {
+  const getOpen = async (): Promise<HTMLSygMenuElement | undefined> => {
     await waitUntilReady();
     return _getOpenSync();
   };
@@ -110,7 +110,7 @@ const createMenuController = () => {
   /**
    * Get all menu instances.
    */
-  const getMenus = async (): Promise<HTMLIonMenuElement[]> => {
+  const getMenus = async (): Promise<HTMLSygMenuElement[]> => {
     await waitUntilReady();
     return getMenusSync();
   };
@@ -177,11 +177,11 @@ const createMenuController = () => {
     return animation;
   };
 
-  const _getOpenSync = (): HTMLIonMenuElement | undefined => {
+  const _getOpenSync = (): HTMLSygMenuElement | undefined => {
     return find(m => m._isOpen);
   };
 
-  const getMenusSync = (): HTMLIonMenuElement[] => {
+  const getMenusSync = (): HTMLSygMenuElement[] => {
     return menus.map(menu => menu.el);
   };
 
@@ -189,7 +189,7 @@ const createMenuController = () => {
     return menus.some(menu => menu.isAnimating);
   };
 
-  const find = (predicate: (menu: MenuI) => boolean): HTMLIonMenuElement | undefined => {
+  const find = (predicate: (menu: MenuI) => boolean): HTMLSygMenuElement | undefined => {
     const instance = menus.find(predicate);
     if (instance !== undefined) {
       return instance.el;
@@ -199,7 +199,7 @@ const createMenuController = () => {
 
   const waitUntilReady = () => {
     return Promise.all(
-      Array.from(document.querySelectorAll('ion-menu'))
+      Array.from(document.querySelectorAll('syg-menu'))
         .map(menu => new Promise(resolve => componentOnReady(menu, resolve)))
     );
   };

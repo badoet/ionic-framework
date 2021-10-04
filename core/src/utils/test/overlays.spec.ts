@@ -8,11 +8,11 @@ describe('setRootAriaHidden()', () => {
     const page = await newSpecPage({
       components: [RouterOutlet],
       html: `
-        <ion-router-outlet></ion-router-outlet>
+        <syg-router-outlet></syg-router-outlet>
       `
     });
 
-    const routerOutlet = page.body.querySelector('ion-router-outlet');
+    const routerOutlet = page.body.querySelector('syg-router-outlet');
 
     expect(routerOutlet.hasAttribute('aria-hidden')).toEqual(false);
 
@@ -27,11 +27,11 @@ describe('setRootAriaHidden()', () => {
     const page = await newSpecPage({
       components: [Nav],
       html: `
-        <ion-nav></ion-nav>
+        <syg-nav></syg-nav>
       `
     });
 
-    const nav = page.body.querySelector('ion-nav');
+    const nav = page.body.querySelector('syg-nav');
 
     expect(nav.hasAttribute('aria-hidden')).toEqual(false);
 
@@ -46,12 +46,12 @@ describe('setRootAriaHidden()', () => {
     const page = await newSpecPage({
       components: [],
       html: `
-        <div id="ion-view-container-root"></div>
+        <div id="syg-view-container-root"></div>
         <div id="not-container-root"></div>
       `
     });
 
-    const containerRoot = page.body.querySelector('#ion-view-container-root');
+    const containerRoot = page.body.querySelector('#syg-view-container-root');
     const notContainerRoot = page.body.querySelector('#not-container-root');
 
     expect(containerRoot.hasAttribute('aria-hidden')).toEqual(false);

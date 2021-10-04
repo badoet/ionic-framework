@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color } from '../../interface';
 import { createColorClasses } from '../../utils/theme';
 
@@ -8,7 +8,7 @@ import { createColorClasses } from '../../utils/theme';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-card-subtitle',
+  tag: 'syg-card-subtitle',
   styleUrls: {
     ios: 'card-subtitle.ios.scss',
     md: 'card-subtitle.md.scss'
@@ -24,13 +24,13 @@ export class CardSubtitle implements ComponentInterface {
   @Prop({ reflect: true }) color?: Color;
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         role="heading"
         aria-level="3"
         class={createColorClasses(this.color, {
-          'ion-inherit-color': true,
+          'syg-inherit-color': true,
           [mode]: true
         })}
       >

@@ -9,119 +9,119 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Item Colors</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Item Colors</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-list>
-        <ion-item>
-          <ion-label>
+    <syg-content id="content">
+      <syg-list>
+        <syg-item>
+          <syg-label>
             <h1>Heading</h1>
             <p>Paragraph</p>
-            <ion-text color="secondary">
+            <syg-text color="secondary">
               <p>Secondary paragraph</p>
-            </ion-text>
-          </ion-label>
-        </ion-item>
+            </syg-text>
+          </syg-label>
+        </syg-item>
 
-        <ion-item button color="dark">
-          <ion-label>
+        <syg-item button color="dark">
+          <syg-label>
             <h1>Heading</h1>
             <p>Paragraph</p>
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item href="#" color="danger">
-          <ion-label>
-            a[ion-item] danger
-          </ion-label>
-        </ion-item>
+        <syg-item href="#" color="danger">
+          <syg-label>
+            a[syg-item] danger
+          </syg-label>
+        </syg-item>
 
-        <ion-item href="#" color="danger" class="ion-activated">
-          <ion-label>
-            a[ion-item].activated danger
-          </ion-label>
-        </ion-item>
+        <syg-item href="#" color="danger" class="syg-activated">
+          <syg-label>
+            a[syg-item].activated danger
+          </syg-label>
+        </syg-item>
 
-        <ion-item button onclick="testClick(event)" color="secondary">
-          <ion-label>
-            button[ion-item]
-          </ion-label>
-        </ion-item>
+        <syg-item button onclick="testClick(event)" color="secondary">
+          <syg-label>
+            button[syg-item]
+          </syg-label>
+        </syg-item>
 
-        <ion-item button onclick="testClick(event)" color="secondary" class="ion-activated">
-          <ion-label>
-            button[ion-item].activated secondary
-          </ion-label>
-        </ion-item>
+        <syg-item button onclick="testClick(event)" color="secondary" class="syg-activated">
+          <syg-label>
+            button[syg-item].activated secondary
+          </syg-label>
+        </syg-item>
 
-        <ion-item color="primary">
-          <ion-button slot="start" color="dark">Dark</ion-button>
-          <ion-label>
+        <syg-item color="primary">
+          <syg-button slot="start" color="dark">Dark</syg-button>
+          <syg-label>
             <h1>Heading</h1>
             <p>Normal paragraph</p>
-          </ion-label>
-          <ion-button slot="end" fill="outline">Outline</ion-button>
-        </ion-item>
+          </syg-label>
+          <syg-button slot="end" fill="outline">Outline</syg-button>
+        </syg-item>
 
-        <ion-item button onclick="testClick(event)" color="dark">
-          <ion-button slot="start">
+        <syg-item button onclick="testClick(event)" color="dark">
+          <syg-button slot="start">
             <ion-icon slot="start" name="home"></ion-icon>
             Left Icon
-          </ion-button>
-          <ion-label>
+          </syg-button>
+          <syg-label>
             left icon buttons
-            <ion-text color="primary">
+            <syg-text color="primary">
               <p>Primary paragraph</p>
-            </ion-text>
-          </ion-label>
-        </ion-item>
+            </syg-text>
+          </syg-label>
+        </syg-item>
 
-        <ion-item button onclick="testClick(event)" disabled color="dark">
-          <ion-button slot="start">
+        <syg-item button onclick="testClick(event)" disabled color="dark">
+          <syg-button slot="start">
             <ion-icon slot="start" name="home"></ion-icon>
             Left Icon
-          </ion-button>
-          <ion-label>
+          </syg-button>
+          <syg-label>
             disabled left icon buttons
-            <ion-text color="primary">
+            <syg-text color="primary">
               <p>Primary paragraph</p>
-            </ion-text>
-          </ion-label>
-        </ion-item>
+            </syg-text>
+          </syg-label>
+        </syg-item>
 
-        <ion-item color="light">
-          <ion-button slot="start">
+        <syg-item color="light">
+          <syg-button slot="start">
             Right Icon
             <ion-icon slot="end" name="home"></ion-icon>
-          </ion-button>
-          <ion-label>
+          </syg-button>
+          <syg-label>
             right icon buttons
-          </ion-label>
-          <ion-button slot="end" fill="outline">
+          </syg-label>
+          <syg-button slot="end" fill="outline">
             Right Icon
             <ion-icon slot="end" name="star"></ion-icon>
-          </ion-button>
-        </ion-item>
+          </syg-button>
+        </syg-item>
 
-        <ion-item href="#" disabled color="danger">
-          <ion-label>
-            a ion-item disabled right icon/text button large
+        <syg-item href="#" disabled color="danger">
+          <syg-label>
+            a syg-item disabled right icon/text button large
             <p>Default paragraph</p>
-          </ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-content>
+          </syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     function testClick(ev) {

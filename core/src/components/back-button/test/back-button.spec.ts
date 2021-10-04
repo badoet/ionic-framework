@@ -13,7 +13,7 @@ describe('back button', () => {
     setMode(() => mode);
     const { rootInstance } = await newSpecPage({
       components: [BackButton],
-      html: `<ion-back-button></ion-back-button>`
+      html: `<syg-back-button></syg-back-button>`
     })
     return rootInstance;
   };

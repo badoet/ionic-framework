@@ -9,9 +9,9 @@ test('accordion: multiple - open', async () => {
 
   screenshotCompares.push(await page.compareScreenshot());
 
-  const accordionGroup = await page.find('ion-accordion-group');
-  const diningAccordion = await page.find('ion-accordion[value="dining"] ion-item[slot="header"]');
-  const attractionsAccordion = await page.find('ion-accordion[value="attractions"] ion-item[slot="header"]');
+  const accordionGroup = await page.find('syg-accordion-group');
+  const diningAccordion = await page.find('syg-accordion[value="dining"] syg-item[slot="header"]');
+  const attractionsAccordion = await page.find('syg-accordion[value="attractions"] syg-item[slot="header"]');
 
   const groupValue = await accordionGroup.getProperty('value');
   expect(groupValue).toEqual('attractions');
@@ -38,8 +38,8 @@ test('accordion: multiple - close', async () => {
 
   screenshotCompares.push(await page.compareScreenshot());
 
-  const accordionGroup = await page.find('ion-accordion-group');
-  const attractionsAccordion = await page.find('ion-accordion[value="attractions"] ion-item[slot="header"]');
+  const accordionGroup = await page.find('syg-accordion-group');
+  const attractionsAccordion = await page.find('syg-accordion[value="attractions"] syg-item[slot="header"]');
 
   await attractionsAccordion.click();
   await page.waitForChanges();

@@ -8,7 +8,7 @@
   <link href="../../../../../css/core.css" rel="stylesheet">
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <style>
     .blueBackground {
       --background: blue;
@@ -17,24 +17,24 @@
 </head>
 
 <body>
-  <ion-app>
-    <ion-content id="contentWithBackground">
-      <ion-slides style="height: 200px;">
+  <syg-app>
+    <syg-content id="contentWithBackground">
+      <syg-slides style="height: 200px;">
 
-        <ion-slide>
-          <ion-content id="contentWithScrolling">
+        <syg-slide>
+          <syg-content id="contentWithScrolling">
             <div>
-              <ion-button id="scrollDownButton" onclick="scrollDown(event)">Scroll down</ion-button>
+              <syg-button id="scrollDownButton" onclick="scrollDown(event)">Scroll down</syg-button>
             </div>
             <div>
-              <ion-button id="changeBackgroundButton" onclick="changeBackground(event)" style="margin-top: 200px;">Change Background</ion-button>
+              <syg-button id="changeBackgroundButton" onclick="changeBackground(event)" style="margin-top: 200px;">Change Background</syg-button>
             </div>
-          </ion-content>
-        </ion-slide>
+          </syg-content>
+        </syg-slide>
 
-      </ion-slides>
-    </ion-content>
-  </ion-app>
+      </syg-slides>
+    </syg-content>
+  </syg-app>
   <script>
     const contentWithBackground = document.getElementById('contentWithBackground');
     const changeBackgroundButton = document.getElementById('changeBackgroundButton');

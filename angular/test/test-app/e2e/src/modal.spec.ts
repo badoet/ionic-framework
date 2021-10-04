@@ -4,7 +4,7 @@ describe('Modals', () => {
   })
 
   it('should open standalone modal and close', () => {
-    cy.get('#action-button').click();
+    cy.get('#actsyg-button').click();
 
     cy.get('ion-modal').should('exist').should('be.visible');
 
@@ -23,7 +23,7 @@ describe('Modals', () => {
   });
 
   it('should open nav modal and close', () => {
-    cy.get('#action-button-2').click();
+    cy.get('#actsyg-button-2').click();
 
     cy.get('ion-modal').should('exist').should('be.visible');
 

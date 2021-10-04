@@ -5,5 +5,5 @@ export interface RefresherEventDetail {
 
 export interface RefresherCustomEvent extends CustomEvent {
   detail: RefresherEventDetail;
-  target: HTMLIonRefresherElement;
+  target: HTMLSygRefresherElement;
 }

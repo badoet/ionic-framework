@@ -22,7 +22,7 @@ export const testToast = async (
 
     await page.waitForTimeout(250);
 
-    let toast = await page.find('ion-toast');
+    let toast = await page.find('syg-toast');
     await toast.waitForVisible();
 
     expect(toast).not.toBe(null);
@@ -35,7 +35,7 @@ export const testToast = async (
 
     screenshotCompares.push(await page.compareScreenshot('dismiss'));
 
-    toast = await page.find('ion-toast');
+    toast = await page.find('syg-toast');
     expect(toast).toBe(null);
 
     for (const screenshotCompare of screenshotCompares) {

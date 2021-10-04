@@ -9,7 +9,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <style>
   .grid {
     display: grid;
@@ -40,103 +40,103 @@
   </style>
 </head>
 <body>
-  <ion-app mode="ios">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Popover - Arrow</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app mode="ios">
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Popover - Arrow</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding" id="content">
+    <syg-content class="syg-padding" id="content">
       <div class="grid">
         <div class="grid-item">
           <h2>Top</h2>
-          <ion-button id="top-trigger">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="top-trigger">Click to Open</syg-button>
+          <syg-popover
             class="top-popover"
             trigger="top-trigger"
             side="top"
             size="cover"
           >
-            <ion-content class="ion-padding">
+            <syg-content class="syg-padding">
               Hello World
-            </ion-content>
-          </ion-popover>
+            </syg-content>
+          </syg-popover>
         </div>
         <div class="grid-item">
           <h2>Right</h2>
-          <ion-button id="right-trigger">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="right-trigger">Click to Open</syg-button>
+          <syg-popover
             class="right-popover"
             trigger="right-trigger"
             side="right"
             size="cover"
           >
-            <ion-content class="ion-padding">
+            <syg-content class="syg-padding">
               Hello World
-            </ion-content>
-          </ion-popover>
+            </syg-content>
+          </syg-popover>
         </div>
         <div class="grid-item">
           <h2>Bottom</h2>
-          <ion-button id="bottom-trigger">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="bottom-trigger">Click to Open</syg-button>
+          <syg-popover
             class="bottom-popover"
             trigger="bottom-trigger"
             side="bottom"
             size="cover"
           >
-            <ion-content class="ion-padding">
+            <syg-content class="syg-padding">
               Hello World
-            </ion-content>
-          </ion-popover>
+            </syg-content>
+          </syg-popover>
         </div>
         <div class="grid-item">
           <h2>Left</h2>
-          <ion-button id="left-trigger">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="left-trigger">Click to Open</syg-button>
+          <syg-popover
             class="left-popover"
             trigger="left-trigger"
             side="left"
             size="cover"
           >
-            <ion-content class="ion-padding">
+            <syg-content class="syg-padding">
               Hello World
-            </ion-content>
-          </ion-popover>
+            </syg-content>
+          </syg-popover>
         </div>
         <div class="grid-item">
           <h2>Start</h2>
-          <ion-button id="start-trigger">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="start-trigger">Click to Open</syg-button>
+          <syg-popover
             class="start-popover"
             trigger="start-trigger"
             side="start"
             size="cover"
           >
-            <ion-content class="ion-padding">
+            <syg-content class="syg-padding">
               Hello World
-            </ion-content>
-          </ion-popover>
+            </syg-content>
+          </syg-popover>
         </div>
         <div class="grid-item">
           <h2>End</h2>
-          <ion-button id="end-trigger">Click to Open</ion-button>
-          <ion-popover
+          <syg-button id="end-trigger">Click to Open</syg-button>
+          <syg-popover
             class="end-popover"
             trigger="end-trigger"
             side="end"
             size="cover"
           >
-            <ion-content class="ion-padding">
+            <syg-content class="syg-padding">
               Hello World
-            </ion-content>
-          </ion-popover>
+            </syg-content>
+          </syg-popover>
         </div>
       </div>
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
   class ListPage extends HTMLElement {
@@ -144,9 +144,9 @@
       super();
 
       this.innerHTML = `
-      <ion-content class="ion-padding">
+      <syg-content class="syg-padding">
         Hello
-      </ion-content>
+      </syg-content>
       `;
     }
   }

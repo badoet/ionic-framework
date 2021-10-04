@@ -1,7 +1,7 @@
 import { Build, Component, ComponentInterface, Element, Event, EventEmitter, Host, Listen, Method, Prop, State, Watch, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Animation, Gesture, GestureDetail, MenuChangeEventDetail, MenuI, Side } from '../../interface';
 import { getTimeGivenProgression } from '../../utils/animation/cubic-bezier';
 import { GESTURE_CONTROLLER } from '../../utils/gesture';
@@ -18,7 +18,7 @@ const mdEasingReverse = 'cubic-bezier(0.4, 0, 0.6, 1)';
  * @part backdrop - The backdrop that appears over the main content when the menu is open.
  */
 @Component({
-  tag: 'ion-menu',
+  tag: 'syg-menu',
   styleUrls: {
     ios: 'menu.ios.scss',
     md: 'menu.md.scss'
@@ -40,17 +40,17 @@ export class Menu implements ComponentInterface, MenuI {
   menuInnerEl?: HTMLElement;
   contentEl?: HTMLElement;
 
-  @Element() el!: HTMLIonMenuElement;
+  @Element() el!: HTMLSygMenuElement;
 
   @State() isPaneVisible = false;
   @State() isEndSide = false;
 
   /**
    * The `id` of the main content. When using
-   * a router this is typically `ion-router-outlet`.
+   * a router this is typically `syg-router-outlet`.
    * When not using a router, this is typically
-   * your main view's `ion-content`. This is not the
-   * id of the `ion-content` inside of your `ion-menu`.
+   * your main view's `syg-content`. This is not the
+   * id of the `syg-content` inside of your `syg-menu`.
    */
   @Prop({ reflect: true }) contentId?: string;
 
@@ -151,7 +151,7 @@ export class Menu implements ComponentInterface, MenuI {
     // TODO: connectedCallback is fired in CE build
     // before WC is defined. This needs to be fixed in Stencil.
     if (typeof (customElements as any) !== 'undefined') {
-      await customElements.whenDefined('ion-menu');
+      await customElements.whenDefined('syg-menu');
     }
 
     if (this.type === undefined) {
@@ -166,13 +166,13 @@ export class Menu implements ComponentInterface, MenuI {
     const el = this.el;
     const parent = el.parentNode as any;
     if (this.contentId === undefined) {
-      console.warn(`[DEPRECATED][ion-menu] Using the [main] attribute is deprecated, please use the "contentId" property instead:
+      console.warn(`[DEPRECATED][syg-menu] Using the [main] attribute is deprecated, please use the "contentId" property instead:
 BEFORE:
-  <ion-menu>...</ion-menu>
+  <syg-menu>...</syg-menu>
   <div main>...</div>
 
 AFTER:
-  <ion-menu contentId="main-content"></ion-menu>
+  <syg-menu contentId="main-content"></syg-menu>
   <div id="main-content">...</div>
 `);
     }
@@ -187,7 +187,7 @@ AFTER:
     }
 
     if (this.el.contains(content)) {
-      console.error(`Menu: "contentId" should refer to the main view's ion-content, not the ion-content inside of the ion-menu.`);
+      console.error(`Menu: "contentId" should refer to the main view's syg-content, not the syg-content inside of the syg-menu.`);
     }
 
     this.contentEl = content as HTMLElement;
@@ -269,7 +269,7 @@ AFTER:
    * Returns `true` is the menu is active.
    *
    * A menu is active when it can be opened or closed, meaning it's enabled
-   * and it's not part of a `ion-split-pane`.
+   * and it's not part of a `syg-split-pane`.
    */
   @Method()
   isActive(): Promise<boolean> {
@@ -350,7 +350,7 @@ AFTER:
 
   private async startAnimation(shouldOpen: boolean, animated: boolean): Promise<void> {
     const isReversed = !shouldOpen;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const easing = mode === 'ios' ? iosEasing : mdEasing;
     const easingReverse = mode === 'ios' ? iosEasingReverse : mdEasingReverse;
     const ani = (this.animation as Animation)!
@@ -379,7 +379,7 @@ AFTER:
 
   private canStart(detail: GestureDetail): boolean {
     // Do not allow swipe gesture if a modal is open
-    const isModalPresented = !!document.querySelector('ion-modal.show-modal');
+    const isModalPresented = !!document.querySelector('syg-modal.show-modal');
     if (isModalPresented || !this.canSwipe()) {
       return false;
     }
@@ -573,7 +573,7 @@ AFTER:
 
   render() {
     const { isEndSide, type, disabled, isPaneVisible } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     return (
       <Host
@@ -595,7 +595,7 @@ AFTER:
           <slot></slot>
         </div>
 
-        <ion-backdrop
+        <syg-backdrop
           ref={el => this.backdropEl = el}
           class="menu-backdrop"
           tappable={false}

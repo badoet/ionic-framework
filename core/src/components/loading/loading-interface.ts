@@ -1,11 +1,11 @@
 import { JSXBase } from '@stencil/core/internal';
 
 import { AnimationBuilder, Mode, SpinnerTypes } from '../../interface';
-import { IonicSafeString } from '../../utils/sanitization';
+import { SygSafeString } from '../../utils/sanitization';
 
 export interface LoadingOptions {
   spinner?: SpinnerTypes | null;
-  message?: string | IonicSafeString;
+  message?: string | SygSafeString;
   cssClass?: string | string[];
   showBackdrop?: boolean;
   duration?: number;

@@ -1,4 +1,4 @@
-# ion-backdrop
+# syg-backdrop
 
 Backdrops are full screen components that overlay other components. They are useful behind components that transition in on top of other content and can be used to dismiss that component.
 
@@ -12,23 +12,23 @@ Backdrops are full screen components that overlay other components. They are use
 
 ```html
 <!-- Default backdrop -->
-<ion-backdrop></ion-backdrop>
+<syg-backdrop></syg-backdrop>
 
 <!-- Backdrop that is not tappable -->
-<ion-backdrop tappable="false"></ion-backdrop>
+<syg-backdrop tappable="false"></syg-backdrop>
 
 <!-- Backdrop that is not visible -->
-<ion-backdrop visible="false"></ion-backdrop>
+<syg-backdrop visible="false"></syg-backdrop>
 
 <!-- Backdrop with propagation -->
-<ion-backdrop stopPropagation="false"></ion-backdrop>
+<syg-backdrop stopPropagation="false"></syg-backdrop>
 
 <!-- Backdrop that sets dynamic properties -->
-<ion-backdrop
+<syg-backdrop
   [tappable]="enableBackdropDismiss"
   [visible]="showBackdrop"
   [stopPropagation]="shouldPropagate">
-</ion-backdrop>
+</syg-backdrop>
 ```
 
 ```typescript
@@ -51,19 +51,19 @@ export class BackdropExample {
 
 ```html
 <!-- Default backdrop -->
-<ion-backdrop></ion-backdrop>
+<syg-backdrop></syg-backdrop>
 
 <!-- Backdrop that is not tappable -->
-<ion-backdrop tappable="false"></ion-backdrop>
+<syg-backdrop tappable="false"></syg-backdrop>
 
 <!-- Backdrop that is not visible -->
-<ion-backdrop visible="false"></ion-backdrop>
+<syg-backdrop visible="false"></syg-backdrop>
 
 <!-- Backdrop with propagation -->
-<ion-backdrop stop-propagation="false"></ion-backdrop>
+<syg-backdrop stop-propagation="false"></syg-backdrop>
 
 <!-- Backdrop that sets dynamic properties -->
-<ion-backdrop id="customBackdrop"></ion-backdrop>
+<syg-backdrop id="customBackdrop"></syg-backdrop>
 ```
 
 ```javascript
@@ -117,23 +117,23 @@ export class BackdropExample {
 
     return [
       // Default backdrop
-      <ion-backdrop></ion-backdrop>,
+      <syg-backdrop></syg-backdrop>,
 
       // Backdrop that is not tappable
-      <ion-backdrop tappable={false}></ion-backdrop>,
+      <syg-backdrop tappable={false}></syg-backdrop>,
 
       // Backdrop that is not visible
-      <ion-backdrop visible={false}></ion-backdrop>,
+      <syg-backdrop visible={false}></syg-backdrop>,
 
       // Backdrop with propagation
-      <ion-backdrop stopPropagation={false}></ion-backdrop>,
+      <syg-backdrop stopPropagation={false}></syg-backdrop>,
 
       // Backdrop that sets dynamic properties
-      <ion-backdrop
+      <syg-backdrop
         tappable={enableBackdropDismiss}
         visible={showBackdrop}
         stopPropagation={shouldPropagate}>
-      </ion-backdrop>
+      </syg-backdrop>
     ];
   }
 }
@@ -145,23 +145,23 @@ export class BackdropExample {
 ```html
 <template>
   <!-- Default backdrop -->
-  <ion-backdrop></ion-backdrop>
+  <syg-backdrop></syg-backdrop>
 
   <!-- Backdrop that is not tappable -->
-  <ion-backdrop tappable="false"></ion-backdrop>
+  <syg-backdrop tappable="false"></syg-backdrop>
 
   <!-- Backdrop that is not visible -->
-  <ion-backdrop visible="false"></ion-backdrop>
+  <syg-backdrop visible="false"></syg-backdrop>
 
   <!-- Backdrop with propagation -->
-  <ion-backdrop stop-propagation="false"></ion-backdrop>
+  <syg-backdrop stop-propagation="false"></syg-backdrop>
 
   <!-- Backdrop that sets dynamic properties -->
-  <ion-backdrop
+  <syg-backdrop
     :tappable="enableBackdropDismiss"
     :visible="showBackdrop"
     :stop-propagation="shouldPropagate">
-  </ion-backdrop>
+  </syg-backdrop>
 </template>
 
 <script>
@@ -203,25 +203,25 @@ export default defineComponent({
 
 ### Used by
 
- - [ion-action-sheet](../action-sheet)
- - [ion-alert](../alert)
- - [ion-loading](../loading)
- - [ion-menu](../menu)
- - [ion-modal](../modal)
- - [ion-picker](../picker)
- - [ion-popover](../popover)
+ - [syg-action-sheet](../action-sheet)
+ - [syg-alert](../alert)
+ - [syg-loading](../loading)
+ - [syg-menu](../menu)
+ - [syg-modal](../modal)
+ - [syg-picker](../picker)
+ - [syg-popover](../popover)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-action-sheet --> ion-backdrop
-  ion-alert --> ion-backdrop
-  ion-loading --> ion-backdrop
-  ion-menu --> ion-backdrop
-  ion-modal --> ion-backdrop
-  ion-picker --> ion-backdrop
-  ion-popover --> ion-backdrop
-  style ion-backdrop fill:#f9f,stroke:#333,stroke-width:4px
+  syg-action-sheet --> syg-backdrop
+  syg-alert --> syg-backdrop
+  syg-loading --> syg-backdrop
+  syg-menu --> syg-backdrop
+  syg-modal --> syg-backdrop
+  syg-picker --> syg-backdrop
+  syg-popover --> syg-backdrop
+  style syg-backdrop fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

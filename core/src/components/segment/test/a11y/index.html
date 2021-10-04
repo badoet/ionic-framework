@@ -9,25 +9,25 @@
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
     <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   </head>
 
   <body>
-    <ion-app>
-      <ion-content>
+    <syg-app>
+      <syg-content>
         <h1>Segment</h1>
-        <ion-segment aria-label="Tab Options" color="dark" select-on-focus>
-          <ion-segment-button value="bookmarks">
-            <ion-label>Bookmarks</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="reading-list">
-            <ion-label>Reading List</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="shared-links">
-            <ion-label>Shared Links</ion-label>
-          </ion-segment-button>
-        </ion-segment>
-      </ion-content>
-    </ion-app>
+        <syg-segment aria-label="Tab Options" color="dark" select-on-focus>
+          <syg-segment-button value="bookmarks">
+            <syg-label>Bookmarks</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="reading-list">
+            <syg-label>Reading List</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="shared-links">
+            <syg-label>Shared Links</syg-label>
+          </syg-segment-button>
+        </syg-segment>
+      </syg-content>
+    </syg-app>
   </body>
 </html>

@@ -20,7 +20,7 @@ export class ContentExample {
 
   render() {
     return [
-      <ion-content
+      <syg-content
         scrollEvents={true}
         onIonScrollStart={() => this.logScrollStart()}
         onIonScroll={(ev) => this.logScrolling(ev)}
@@ -30,7 +30,7 @@ export class ContentExample {
           <div slot="fixed">
             <h1>Fixed Content</h1>
           </div>
-      </ion-content>
+      </syg-content>
     ];
   }
 }

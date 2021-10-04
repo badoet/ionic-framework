@@ -1,5 +1,5 @@
 import { JSX } from '@ionic/core/components';
-import { IonBackButton as IonBackButtonCmp } from '@ionic/core/components/ion-back-button.js';
+import { IonBackButton as IonBackButtonCmp } from '@ionic/core/components/syg-back-button.js';
 import { IonRouterOutlet as IonRouterOutletCmp } from '@ionic/core/components/ion-router-outlet.js';
 import { IonTabBar as IonTabBarCmp } from '@ionic/core/components/ion-tab-bar.js';
 import { IonTabButton as IonTabButtonCmp } from '@ionic/core/components/ion-tab-button.js';
@@ -19,7 +19,7 @@ export const IonTabBarInner = /*@__PURE__*/ createReactComponent<
 export const IonBackButtonInner = /*@__PURE__*/ createReactComponent<
   Omit<JSX.IonBackButton, 'icon'>,
   HTMLIonBackButtonElement
->('ion-back-button', undefined, undefined, IonBackButtonCmp);
+>('syg-back-button', undefined, undefined, IonBackButtonCmp);
 export const IonRouterOutletInner = /*@__PURE__*/ createReactComponent<
   JSX.IonRouterOutlet & {
     setRef?: (val: HTMLIonRouterOutletElement) => void;

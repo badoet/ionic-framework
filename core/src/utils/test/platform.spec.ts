@@ -1,4 +1,4 @@
-import initialize from '../../global/ionic-global';
+import initialize from '../../global/syg-global';
 
 import { testUserAgent, getPlatforms, isPlatform } from '../platform';
 import { PlatformConfiguration, configureBrowser } from './platform.utils';

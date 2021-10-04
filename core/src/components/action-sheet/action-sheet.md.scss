@@ -6,7 +6,7 @@
 
 :host {
   --background: #{$action-sheet-md-background-color};
-  --backdrop-opacity: var(--ion-backdrop-opacity, 0.32);
+  --backdrop-opacity: var(--syg-backdrop-opacity, 0.32);
   --button-background: transparent;
   --button-background-selected: currentColor;
   --button-background-selected-opacity: 0;

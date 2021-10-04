@@ -14,7 +14,7 @@
             <ion-label>Tab {{ tab.id }}</ion-label>
           </ion-tab-button>
 
-          <ion-button id="add-tab" @click="addTab()">Add Tab</ion-button>
+          <syg-button id="add-tab" @click="addTab()">Add Tab</syg-button>
         </ion-tab-bar>
       </ion-tabs>
     </ion-content>

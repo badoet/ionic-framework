@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Gesture, GestureDetail, PickerColumn } from '../../interface';
 import { clamp } from '../../utils/helpers';
 import { hapticSelectionChanged, hapticSelectionEnd, hapticSelectionStart } from '../../utils/native/haptic';
@@ -9,7 +9,7 @@ import { hapticSelectionChanged, hapticSelectionEnd, hapticSelectionStart } from
  * @internal
  */
 @Component({
-  tag: 'ion-picker-column',
+  tag: 'syg-picker-column',
   styleUrls: {
     ios: 'picker-column.ios.scss',
     md: 'picker-column.md.scss'
@@ -51,7 +51,7 @@ export class PickerColumnCmp implements ComponentInterface {
     let pickerRotateFactor = 0;
     let pickerScaleFactor = 0.81;
 
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     if (mode === 'ios') {
       pickerRotateFactor = -0.46;
@@ -368,7 +368,7 @@ export class PickerColumnCmp implements ComponentInterface {
   render() {
     const col = this.col;
     const Button = 'button' as any;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{

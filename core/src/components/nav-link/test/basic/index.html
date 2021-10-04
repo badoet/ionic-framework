@@ -9,12 +9,12 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body onload="loadFirstPage()">
-  <ion-app>
-    <ion-nav></ion-nav>
-  </ion-app>
+  <syg-app>
+    <syg-nav></syg-nav>
+  </syg-app>
   <style>
     f {
       display: block;
@@ -37,17 +37,17 @@
     async connectedCallback() {
       this.innerHTML = `
 
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Page One</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Page One</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content class="syg-padding">
           <h1>Page One</h1>
-          <ion-nav-link router-direction="forward" component="page-two">
-            <ion-button class="next">Go to Page Two</ion-button>
-          </ion-nav-link>
-        </ion-content>
+          <syg-nav-link router-direction="forward" component="page-two">
+            <syg-button class="next">Go to Page Two</syg-button>
+          </syg-nav-link>
+        </syg-content>
       `;
     }
   }
@@ -56,20 +56,20 @@
     async connectedCallback() {
       this.innerHTML = `
 
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Page Two</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Page Two</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content class="syg-padding">
           <h1>Page Two</h1>
-          <ion-nav-link router-direction="forward" component="page-three">
-            <ion-button class="next">Go to Page Three</ion-button>
-          </ion-nav-link>
-          <ion-nav-link router-direction="back">
-            <ion-button class="back">Go Back</ion-button>
-          </ion-nav-link>
-        </ion-content>
+          <syg-nav-link router-direction="forward" component="page-three">
+            <syg-button class="next">Go to Page Three</syg-button>
+          </syg-nav-link>
+          <syg-nav-link router-direction="back">
+            <syg-button class="back">Go Back</syg-button>
+          </syg-nav-link>
+        </syg-content>
       `;
     }
   }
@@ -78,17 +78,17 @@
     async connectedCallback() {
       this.innerHTML = `
 
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Page Three</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Page Three</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content class="syg-padding">
           <h1>Page Three</h1>
-          <ion-nav-link router-direction="back">
-            <ion-button class="back">Go Back</ion-button>
-          </ion-nav-link>
-        </ion-content>
+          <syg-nav-link router-direction="back">
+            <syg-button class="back">Go Back</syg-button>
+          </syg-nav-link>
+        </syg-content>
       `;
     }
   }
@@ -98,7 +98,7 @@
   customElements.define('page-three', ThirdPage);
 
   async function loadFirstPage() {
-    const nav = document.querySelector('ion-nav');
+    const nav = document.querySelector('syg-nav');
     await nav.setRoot('page-one');
   }
 </script>

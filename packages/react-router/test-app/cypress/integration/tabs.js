@@ -2,7 +2,7 @@ const port = 3000;
 
 describe('Tabs', () => {
   // Verifies fix for https://github.com/ionic-team/ionic-framework/issues/23101
-  it('should return to previous tab instance when using the ion-back-button', () => {
+  it('should return to previous tab instance when using the syg-back-button', () => {
     cy.visit(`http://localhost:${port}/tabs/tab1`);
 
     cy.get('#tabs-secondary').click();

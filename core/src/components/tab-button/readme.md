@@ -1,4 +1,4 @@
-# ion-tab-button
+# syg-tab-button
 
 A tab button is a UI component that is placed inside of a [tab bar](../tab-bar). The tab button can specify the layout of the icon and label and connect to a [tab view](../tab).
 
@@ -13,77 +13,77 @@ See the [tabs documentation](../tabs) for more details on configuring tabs.
 ### Angular
 
 ```html
-<ion-tabs>
+<syg-tabs>
   <!-- Tab bar -->
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule">
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="schedule">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Schedule</ion-label>
-    </ion-tab-button>
+      <syg-label>Schedule</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="speakers">
+    <syg-tab-button tab="speakers">
       <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Speakers</ion-label>
-    </ion-tab-button>
+      <syg-label>Speakers</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="map">
+    <syg-tab-button tab="map">
       <ion-icon name="map"></ion-icon>
-      <ion-label>Map</ion-label>
-    </ion-tab-button>
+      <syg-label>Map</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="about">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+    <syg-tab-button tab="about">
+      <ion-icon name="informatsyg-circle"></ion-icon>
+      <syg-label>About</syg-label>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```
 
 
 ### Javascript
 
 ```html
-<ion-tabs>
+<syg-tabs>
   <!-- Tab views -->
-  <ion-tab tab="schedule">
-    <ion-router-outlet name="schedule"></ion-router-outlet>
-  </ion-tab>
+  <syg-tab tab="schedule">
+    <syg-router-outlet name="schedule"></syg-router-outlet>
+  </syg-tab>
 
-  <ion-tab tab="speakers">
-    <ion-router-outlet name="speakers"></ion-router-outlet>
-  </ion-tab>
+  <syg-tab tab="speakers">
+    <syg-router-outlet name="speakers"></syg-router-outlet>
+  </syg-tab>
 
-  <ion-tab tab="map">
-    <ion-router-outlet name="map"></ion-router-outlet>
-  </ion-tab>
+  <syg-tab tab="map">
+    <syg-router-outlet name="map"></syg-router-outlet>
+  </syg-tab>
 
-  <ion-tab tab="about">
-    <ion-router-outlet name="about"></ion-router-outlet>
-  </ion-tab>
+  <syg-tab tab="about">
+    <syg-router-outlet name="about"></syg-router-outlet>
+  </syg-tab>
 
   <!-- Tab bar -->
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule" href="/app/tabs/(schedule:schedule)">
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="schedule" href="/app/tabs/(schedule:schedule)">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Schedule</ion-label>
-    </ion-tab-button>
+      <syg-label>Schedule</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="speakers" href="/app/tabs/(speakers:speakers)">
+    <syg-tab-button tab="speakers" href="/app/tabs/(speakers:speakers)">
       <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Speakers</ion-label>
-    </ion-tab-button>
+      <syg-label>Speakers</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="map" href="/app/tabs/(map:map)">
+    <syg-tab-button tab="map" href="/app/tabs/(map:map)">
       <ion-icon name="map"></ion-icon>
-      <ion-label>Map</ion-label>
-    </ion-tab-button>
+      <syg-label>Map</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="about" href="/app/tabs/(about:about)">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+    <syg-tab-button tab="about" href="/app/tabs/(about:about)">
+      <ion-icon name="informatsyg-circle"></ion-icon>
+      <syg-label>About</syg-label>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```
 
 
@@ -137,47 +137,47 @@ import { Component, h } from '@stencil/core';
 export class TabButtonExample {
   render() {
     return [
-      <ion-tabs>
+      <syg-tabs>
         {/* Tab views */}
-        <ion-tab tab="schedule">
-          <ion-router-outlet name="schedule"></ion-router-outlet>
-        </ion-tab>
+        <syg-tab tab="schedule">
+          <syg-router-outlet name="schedule"></syg-router-outlet>
+        </syg-tab>
 
-        <ion-tab tab="speakers">
-          <ion-router-outlet name="speakers"></ion-router-outlet>
-        </ion-tab>
+        <syg-tab tab="speakers">
+          <syg-router-outlet name="speakers"></syg-router-outlet>
+        </syg-tab>
 
-        <ion-tab tab="map">
-          <ion-router-outlet name="map"></ion-router-outlet>
-        </ion-tab>
+        <syg-tab tab="map">
+          <syg-router-outlet name="map"></syg-router-outlet>
+        </syg-tab>
 
-        <ion-tab tab="about">
-          <ion-router-outlet name="about"></ion-router-outlet>
-        </ion-tab>
+        <syg-tab tab="about">
+          <syg-router-outlet name="about"></syg-router-outlet>
+        </syg-tab>
 
         {/* Tab bar */}
-        <ion-tab-bar slot="bottom">
-          <ion-tab-button tab="schedule" href="/app/tabs/(schedule:schedule)">
+        <syg-tab-bar slot="bottom">
+          <syg-tab-button tab="schedule" href="/app/tabs/(schedule:schedule)">
             <ion-icon name="calendar"></ion-icon>
-            <ion-label>Schedule</ion-label>
-          </ion-tab-button>
+            <syg-label>Schedule</syg-label>
+          </syg-tab-button>
 
-          <ion-tab-button tab="speakers" href="/app/tabs/(speakers:speakers)">
+          <syg-tab-button tab="speakers" href="/app/tabs/(speakers:speakers)">
             <ion-icon name="person-circle"></ion-icon>
-            <ion-label>Speakers</ion-label>
-          </ion-tab-button>
+            <syg-label>Speakers</syg-label>
+          </syg-tab-button>
 
-          <ion-tab-button tab="map" href="/app/tabs/(map:map)">
+          <syg-tab-button tab="map" href="/app/tabs/(map:map)">
             <ion-icon name="map"></ion-icon>
-            <ion-label>Map</ion-label>
-          </ion-tab-button>
+            <syg-label>Map</syg-label>
+          </syg-tab-button>
 
-          <ion-tab-button tab="about" href="/app/tabs/(about:about)">
-            <ion-icon name="information-circle"></ion-icon>
-            <ion-label>About</ion-label>
-          </ion-tab-button>
-        </ion-tab-bar>
-      </ion-tabs>
+          <syg-tab-button tab="about" href="/app/tabs/(about:about)">
+            <ion-icon name="informatsyg-circle"></ion-icon>
+            <syg-label>About</syg-label>
+          </syg-tab-button>
+        </syg-tab-bar>
+      </syg-tabs>
     ];
   }
 }
@@ -188,38 +188,38 @@ export class TabButtonExample {
 
 ```html
 <template>
-  <ion-tabs>
+  <syg-tabs>
     <!-- Tab bar -->
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="schedule" href="/tabs/schedule">
+    <syg-tab-bar slot="bottom">
+      <syg-tab-button tab="schedule" href="/tabs/schedule">
         <ion-icon :icon="calendar"></ion-icon>
-        <ion-label>Schedule</ion-label>
-      </ion-tab-button>
+        <syg-label>Schedule</syg-label>
+      </syg-tab-button>
 
-      <ion-tab-button tab="speakers" href="/tabs/speakers">
+      <syg-tab-button tab="speakers" href="/tabs/speakers">
         <ion-icon :icon="person-circle"></ion-icon>
-        <ion-label>Speakers</ion-label>
-      </ion-tab-button>
+        <syg-label>Speakers</syg-label>
+      </syg-tab-button>
 
-      <ion-tab-button tab="map" href="/tabs/map">
+      <syg-tab-button tab="map" href="/tabs/map">
         <ion-icon :icon="map"></ion-icon>
-        <ion-label>Map</ion-label>
-      </ion-tab-button>
+        <syg-label>Map</syg-label>
+      </syg-tab-button>
 
-      <ion-tab-button tab="about" href="/tabs/about">
+      <syg-tab-button tab="about" href="/tabs/about">
         <ion-icon :icon="informationCircle"></ion-icon>
-        <ion-label>About</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+        <syg-label>About</syg-label>
+      </syg-tab-button>
+    </syg-tab-bar>
+  </syg-tabs>
 </template>
 
 <script>
-import { 
-  IonIcon, 
-  IonLabel, 
-  IonTabBar, 
-  IonTabButton, 
+import {
+  IonIcon,
+  IonLabel,
+  IonTabBar,
+  IonTabButton,
   IonTabs
 } from '@ionic/vue';
 import { calendar, informationCircle, map, personCircle } from 'ionicons/icons';
@@ -227,10 +227,10 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   components: {
-    IonIcon, 
-    IonLabel, 
-    IonTabBar, 
-    IonTabButton, 
+    IonIcon,
+    IonLabel,
+    IonTabBar,
+    IonTabButton,
     IonTabs
   },
   setup() {
@@ -253,7 +253,7 @@ export default defineComponent({
 | `mode`     | `mode`     | The mode determines which platform styles to use.                                                                                                                                                                                                                                         | `"ios" \| "md"`                                                                                         | `undefined` |
 | `rel`      | `rel`      | Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).                                                                                                    | `string \| undefined`                                                                                   | `undefined` |
 | `selected` | `selected` | The selected tab component                                                                                                                                                                                                                                                                | `boolean`                                                                                               | `false`     |
-| `tab`      | `tab`      | A tab id must be provided for each `ion-tab`. It's used internally to reference the selected tab or by the router to switch between them.                                                                                                                                                 | `string \| undefined`                                                                                   | `undefined` |
+| `tab`      | `tab`      | A tab id must be provided for each `syg-tab`. It's used internally to reference the selected tab or by the router to switch between them.                                                                                                                                                 | `string \| undefined`                                                                                   | `undefined` |
 | `target`   | `target`   | Specifies where to display the linked URL. Only applies when an `href` is provided. Special keywords: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.                                                                                                                                       | `string \| undefined`                                                                                   | `undefined` |
 
 
@@ -285,13 +285,13 @@ export default defineComponent({
 
 ### Depends on
 
-- [ion-ripple-effect](../ripple-effect)
+- [syg-ripple-effect](../ripple-effect)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-tab-button --> ion-ripple-effect
-  style ion-tab-button fill:#f9f,stroke:#333,stroke-width:4px
+  syg-tab-button --> syg-ripple-effect
+  style syg-tab-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

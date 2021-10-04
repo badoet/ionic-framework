@@ -5,7 +5,7 @@
 // iOS Toolbar Default Button
 // --------------------------------------------------
 
-::slotted(*) ion-button {
+::slotted(*) syg-button {
   --padding-start: 5px;
   --padding-end: 5px;
 
@@ -17,7 +17,7 @@
   font-weight: 400;
 }
 
-::slotted(*) ion-button:not(.button-round) {
+::slotted(*) syg-button:not(.button-round) {
   --border-radius: #{$toolbar-ios-button-border-radius};
 }
 

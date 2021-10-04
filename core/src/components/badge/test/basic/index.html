@@ -9,121 +9,121 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Badge - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Badge - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+    <syg-content id="content">
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Badges Right
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-label>Default Badge</ion-label>
-          <ion-badge slot="end">00</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Primary Badge</ion-label>
-          <ion-badge slot="end" color="primary">11</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Secondary Badge</ion-label>
-          <ion-badge slot="end" color="secondary">22</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Tertiary Badge</ion-label>
-          <ion-badge slot="end" color="tertiary">33</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Success Badge</ion-label>
-          <ion-badge slot="end" color="success">44</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Warning Badge</ion-label>
-          <ion-badge slot="end" color="warning">55</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Danger Badge</ion-label>
-          <ion-badge slot="end" color="danger">66</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Light Badge</ion-label>
-          <ion-badge slot="end" color="light">77</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Medium Badge</ion-label>
-          <ion-badge slot="end" color="medium">88</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Dark Badge</ion-label>
-          <ion-badge slot="end" color="dark">99</ion-badge>
-        </ion-item>
-        <ion-item onclick="toggleColor()">
-          <ion-badge id="toggleColor" slot="end" color="primary">primary</ion-badge>
-          <ion-label>Dynamic Badge Color (toggle)</ion-label>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-label>Default Badge</syg-label>
+          <syg-badge slot="end">00</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Primary Badge</syg-label>
+          <syg-badge slot="end" color="primary">11</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Secondary Badge</syg-label>
+          <syg-badge slot="end" color="secondary">22</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Tertiary Badge</syg-label>
+          <syg-badge slot="end" color="tertiary">33</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Success Badge</syg-label>
+          <syg-badge slot="end" color="success">44</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Warning Badge</syg-label>
+          <syg-badge slot="end" color="warning">55</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Danger Badge</syg-label>
+          <syg-badge slot="end" color="danger">66</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Light Badge</syg-label>
+          <syg-badge slot="end" color="light">77</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Medium Badge</syg-label>
+          <syg-badge slot="end" color="medium">88</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Dark Badge</syg-label>
+          <syg-badge slot="end" color="dark">99</syg-badge>
+        </syg-item>
+        <syg-item onclick="toggleColor()">
+          <syg-badge id="toggleColor" slot="end" color="primary">primary</syg-badge>
+          <syg-label>Dynamic Badge Color (toggle)</syg-label>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Badges Left
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-label>Default Badge</ion-label>
-          <ion-badge slot="start">00</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Primary Badge</ion-label>
-          <ion-badge slot="start" color="primary">11</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Secondary Badge</ion-label>
-          <ion-badge slot="start" color="secondary">22</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Tertiary Badge</ion-label>
-          <ion-badge slot="start" color="tertiary">33</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Success Badge</ion-label>
-          <ion-badge slot="start" color="success">44</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Warning Badge</ion-label>
-          <ion-badge slot="start" color="warning">55</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Danger Badge</ion-label>
-          <ion-badge slot="start" color="danger">66</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Light Badge</ion-label>
-          <ion-badge slot="start" color="light">77</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Medium Badge</ion-label>
-          <ion-badge slot="start" color="medium">88</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Dark Badge</ion-label>
-          <ion-badge slot="start" color="dark">99</ion-badge>
-        </ion-item>
-      </ion-list>
-    </ion-content>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-label>Default Badge</syg-label>
+          <syg-badge slot="start">00</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Primary Badge</syg-label>
+          <syg-badge slot="start" color="primary">11</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Secondary Badge</syg-label>
+          <syg-badge slot="start" color="secondary">22</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Tertiary Badge</syg-label>
+          <syg-badge slot="start" color="tertiary">33</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Success Badge</syg-label>
+          <syg-badge slot="start" color="success">44</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Warning Badge</syg-label>
+          <syg-badge slot="start" color="warning">55</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Danger Badge</syg-label>
+          <syg-badge slot="start" color="danger">66</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Light Badge</syg-label>
+          <syg-badge slot="start" color="light">77</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Medium Badge</syg-label>
+          <syg-badge slot="start" color="medium">88</syg-badge>
+        </syg-item>
+        <syg-item>
+          <syg-label>Dark Badge</syg-label>
+          <syg-badge slot="start" color="dark">99</syg-badge>
+        </syg-item>
+      </syg-list>
+    </syg-content>
 
 
-  </ion-app>
+  </syg-app>
 
   <script>
     const badge = document.querySelector('#toggleColor');

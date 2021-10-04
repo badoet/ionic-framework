@@ -1,6 +1,6 @@
-# ion-text
+# syg-text
 
-The text component is a simple component that can be used to style the text color of any element. The `ion-text` element should wrap the element in order to change the text color of that element.
+The text component is a simple component that can be used to style the text color of any element. The `syg-text` element should wrap the element in order to change the text color of that element.
 
 
 <!-- Auto Generated Below -->
@@ -11,32 +11,32 @@ The text component is a simple component that can be used to style the text colo
 ### Javascript
 
 ```html
-<ion-text color="secondary">
+<syg-text color="secondary">
   <h1>H1: The quick brown fox jumps over the lazy dog</h1>
-</ion-text>
+</syg-text>
 
-<ion-text color="primary">
+<syg-text color="primary">
   <h2>H2: The quick brown fox jumps over the lazy dog</h2>
-</ion-text>
+</syg-text>
 
-<ion-text color="light">
+<syg-text color="light">
   <h3>H3: The quick brown fox jumps over the lazy dog</h3>
-</ion-text>
+</syg-text>
 
-<ion-text color="danger">
+<syg-text color="danger">
   <h4 >H4: The quick brown fox jumps over the lazy dog</h4>
-</ion-text>
+</syg-text>
 
-<ion-text color="dark">
+<syg-text color="dark">
   <h5>H5: The quick brown fox jumps over the lazy dog</h5>
-</ion-text>
+</syg-text>
 
 <p>
   I saw a werewolf with a Chinese menu in his hand.
-  Walking through the <ion-text color="danger"><sub>streets</sub></ion-text> of Soho in the rain.
-  He <ion-text color="primary"><i>was</i></ion-text> looking for a place called Lee Ho Fook's.
-  Gonna get a <ion-text color="secondary"><a>big dish of beef chow mein.</a></ion-text>
-  <ion-text color="danger"><ion-icon name="cut"></ion-icon></ion-text>
+  Walking through the <syg-text color="danger"><sub>streets</sub></syg-text> of Soho in the rain.
+  He <syg-text color="primary"><i>was</i></syg-text> looking for a place called Lee Ho Fook's.
+  Gonna get a <syg-text color="secondary"><a>big dish of beef chow mein.</a></syg-text>
+  <syg-text color="danger"><ion-icon name="cut"></ion-icon></syg-text>
 </p>
 ```
 

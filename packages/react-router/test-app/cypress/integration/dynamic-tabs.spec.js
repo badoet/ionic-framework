@@ -14,7 +14,7 @@ describe('Dynamic Tabs', () => {
   it('/dynamic-tabs > Add Tab 2 Button Click > Tab2 Tab, Tab2 should be visible', () => {
     cy.visit(`http://localhost:${port}/dynamic-tabs`);
     cy.ionPageVisible('Tab1');
-    cy.get('ion-button').contains('Add Tab 2').click();
+    cy.get('syg-button').contains('Add Tab 2').click();
     cy.ionTabClick('Tab 2');
     cy.ionPageVisible('Tab2');
   });

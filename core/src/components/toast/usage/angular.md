@@ -23,7 +23,7 @@ export class ToastExample {
     const toast = await this.toastController.create({
       header: 'Toast header',
       message: 'Click to Close',
-      icon: 'information-circle',
+      icon: 'informatsyg-circle',
       position: 'top',
       buttons: [
         {

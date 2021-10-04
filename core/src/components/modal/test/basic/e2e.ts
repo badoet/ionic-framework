@@ -14,7 +14,7 @@ test('modal: focus trap', async () => {
   await page.click('#basic-modal');
   await page.waitForSelector('#basic-modal');
 
-  let modal = await page.find('ion-modal');
+  let modal = await page.find('syg-modal');
   expect(modal).not.toBe(null);
 
   await ionModalDidPresent.next();
@@ -45,7 +45,7 @@ test('modal: return focus', async () => {
   await page.click('#basic-modal');
   await page.waitForSelector('#basic-modal');
 
-  let modal = await page.find('ion-modal');
+  let modal = await page.find('syg-modal');
   expect(modal).not.toBe(null);
 
   await ionModalDidPresent.next()
@@ -75,12 +75,12 @@ test('modal: htmlAttributes', async () => {
   await page.click('#basic-modal');
   await page.waitForSelector('#basic-modal');
 
-  let alert = await page.find('ion-modal');
+  let alert = await page.find('syg-modal');
 
   expect(alert).not.toBe(null);
   await alert.waitForVisible();
 
-  const attribute = await page.evaluate((el) => document.querySelector('ion-modal').getAttribute('data-testid'));
+  const attribute = await page.evaluate((el) => document.querySelector('syg-modal').getAttribute('data-testid'));
 
   expect(attribute).toEqual('basic-modal');
 });

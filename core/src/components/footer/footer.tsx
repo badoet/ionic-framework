@@ -1,12 +1,12 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-footer',
+  tag: 'syg-footer',
   styleUrls: {
     ios: 'footer.ios.scss',
     md: 'footer.md.scss'
@@ -25,7 +25,7 @@ export class Footer implements ComponentInterface {
   @Prop() translucent = false;
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const translucent = this.translucent;
     return (
       <Host

@@ -5,5 +5,5 @@ export interface InputChangeEventDetail {
 
 export interface InputCustomEvent extends CustomEvent {
   detail: InputChangeEventDetail;
-  target: HTMLIonInputElement;
+  target: HTMLSygInputElement;
 }

@@ -9,48 +9,48 @@ export class SearchbarExample {
   render() {
     return [
        // Default Searchbar
-      <ion-searchbar></ion-searchbar>,
+      <syg-searchbar></syg-searchbar>,
 
       // Searchbar with cancel button always shown
-      <ion-searchbar showCancelButton="always"></ion-searchbar>,
+      <syg-searchbar showCancelButton="always"></syg-searchbar>,
 
       // Searchbar with cancel button never shown
-      <ion-searchbar showCancelButton="never"></ion-searchbar>,
+      <syg-searchbar showCancelButton="never"></syg-searchbar>,
 
       // Searchbar with cancel button shown on focus
-      <ion-searchbar showCancelButton="focus"></ion-searchbar>,
+      <syg-searchbar showCancelButton="focus"></syg-searchbar>,
 
       // Searchbar with danger color
-      <ion-searchbar color="danger"></ion-searchbar>,
+      <syg-searchbar color="danger"></syg-searchbar>,
 
       // Searchbar with value
-      <ion-searchbar value="Ionic"></ion-searchbar>,
+      <syg-searchbar value="Ionic"></syg-searchbar>,
 
       // Searchbar with telephone type
-      <ion-searchbar type="tel"></ion-searchbar>,
+      <syg-searchbar type="tel"></syg-searchbar>,
 
       // Searchbar with numeric inputmode
-      <ion-searchbar inputmode="numeric"></ion-searchbar>,
+      <syg-searchbar inputmode="numeric"></syg-searchbar>,
 
       // Searchbar disabled
-      <ion-searchbar disabled={true}></ion-searchbar>,
+      <syg-searchbar disabled={true}></syg-searchbar>,
 
       // Searchbar with a cancel button and custom cancel button text
-      <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>,
+      <syg-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel"></syg-searchbar>,
 
       // Searchbar with a custom debounce
-      <ion-searchbar debounce={500}></ion-searchbar>,
+      <syg-searchbar debounce={500}></syg-searchbar>,
 
       // Animated Searchbar
-      <ion-searchbar animated={true}></ion-searchbar>,
+      <syg-searchbar animated={true}></syg-searchbar>,
 
       // Searchbar with a placeholder
-      <ion-searchbar placeholder="Filter Schedules"></ion-searchbar>,
+      <syg-searchbar placeholder="Filter Schedules"></syg-searchbar>,
 
       // Searchbar in a Toolbar
-      <ion-toolbar>
-        <ion-searchbar></ion-searchbar>
-      </ion-toolbar>
+      <syg-toolbar>
+        <syg-searchbar></syg-searchbar>
+      </syg-toolbar>
     ];
   }
 }

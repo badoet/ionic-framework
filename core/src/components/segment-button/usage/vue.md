@@ -1,140 +1,140 @@
 ```html
 <template>
   <!-- Segment buttons with text and click listener -->
-  <ion-segment @ionChange="segmentChanged($event)">
-    <ion-segment-button>
-      <ion-label>Friends</ion-label>
-    </ion-segment-button>
-    <ion-segment-button>
-      <ion-label>Enemies</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment @ionChange="segmentChanged($event)">
+    <syg-segment-button>
+      <syg-label>Friends</syg-label>
+    </syg-segment-button>
+    <syg-segment-button>
+      <syg-label>Enemies</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 
   <!-- Segment buttons with the first checked and the last disabled -->
-  <ion-segment value="paid">
-    <ion-segment-button value="paid">
-      <ion-label>Paid</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="free">
-      <ion-label>Free</ion-label>
-    </ion-segment-button>
-    <ion-segment-button disabled value="top">
-      <ion-label>Top</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment value="paid">
+    <syg-segment-button value="paid">
+      <syg-label>Paid</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="free">
+      <syg-label>Free</syg-label>
+    </syg-segment-button>
+    <syg-segment-button disabled value="top">
+      <syg-label>Top</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 
   <!-- Segment buttons with values and icons -->
-  <ion-segment>
-    <ion-segment-button value="camera">
+  <syg-segment>
+    <syg-segment-button value="camera">
       <ion-icon :icon="camera"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="bookmark">
+    </syg-segment-button>
+    <syg-segment-button value="bookmark">
       <ion-icon :icon="bookmark"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
+    </syg-segment-button>
+  </syg-segment>
 
   <!-- Segment with a value that checks the last button -->
-  <ion-segment value="shared">
-    <ion-segment-button value="bookmarks">
-      <ion-label>Bookmarks</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="reading">
-      <ion-label>Reading List</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="shared">
-      <ion-label>Shared Links</ion-label>
-    </ion-segment-button>
-  </ion-segment>
-  
+  <syg-segment value="shared">
+    <syg-segment-button value="bookmarks">
+      <syg-label>Bookmarks</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="reading">
+      <syg-label>Reading List</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="shared">
+      <syg-label>Shared Links</syg-label>
+    </syg-segment-button>
+  </syg-segment>
+
   <!-- Label only -->
-  <ion-segment value="1">
-    <ion-segment-button value="1">
-      <ion-label>Item One</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="2">
-      <ion-label>Item Two</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="3">
-      <ion-label>Item Three</ion-label>
-    </ion-segment-button>
-  </ion-segment>
-  
+  <syg-segment value="1">
+    <syg-segment-button value="1">
+      <syg-label>Item One</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="2">
+      <syg-label>Item Two</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="3">
+      <syg-label>Item Three</syg-label>
+    </syg-segment-button>
+  </syg-segment>
+
   <!-- Icon only -->
-  <ion-segment value="heart">
-    <ion-segment-button value="call">
+  <syg-segment value="heart">
+    <syg-segment-button value="call">
       <ion-icon :icon="call"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="heart">
+    </syg-segment-button>
+    <syg-segment-button value="heart">
       <ion-icon :icon="heart"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="pin">
+    </syg-segment-button>
+    <syg-segment-button value="pin">
       <ion-icon :icon="pin"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
-  
+    </syg-segment-button>
+  </syg-segment>
+
   <!-- Icon top -->
-  <ion-segment value="2">
-    <ion-segment-button value="1">
-      <ion-label>Item One</ion-label>
+  <syg-segment value="2">
+    <syg-segment-button value="1">
+      <syg-label>Item One</syg-label>
       <ion-icon :icon="call"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="2">
-      <ion-label>Item Two</ion-label>
+    </syg-segment-button>
+    <syg-segment-button value="2">
+      <syg-label>Item Two</syg-label>
       <ion-icon :icon="heart"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="3">
-      <ion-label>Item Three</ion-label>
+    </syg-segment-button>
+    <syg-segment-button value="3">
+      <syg-label>Item Three</syg-label>
       <ion-icon :icon="pin"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
-  
+    </syg-segment-button>
+  </syg-segment>
+
   <!-- Icon bottom -->
-  <ion-segment value="1">
-    <ion-segment-button value="1" layout="icon-bottom">
+  <syg-segment value="1">
+    <syg-segment-button value="1" layout="icon-bottom">
       <ion-icon :icon="call"></ion-icon>
-      <ion-label>Item One</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="2" layout="icon-bottom">
+      <syg-label>Item One</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="2" layout="icon-bottom">
       <ion-icon :icon="heart"></ion-icon>
-      <ion-label>Item Two</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="3" layout="icon-bottom">
+      <syg-label>Item Two</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="3" layout="icon-bottom">
       <ion-icon :icon="pin"></ion-icon>
-      <ion-label>Item Three</ion-label>
-    </ion-segment-button>
-  </ion-segment>
-  
+      <syg-label>Item Three</syg-label>
+    </syg-segment-button>
+  </syg-segment>
+
   <!-- Icon start -->
-  <ion-segment value="1">
-    <ion-segment-button value="1" layout="icon-start">
-      <ion-label>Item One</ion-label>
+  <syg-segment value="1">
+    <syg-segment-button value="1" layout="icon-start">
+      <syg-label>Item One</syg-label>
       <ion-icon :icon="call"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="2" layout="icon-start">
-      <ion-label>Item Two</ion-label>
+    </syg-segment-button>
+    <syg-segment-button value="2" layout="icon-start">
+      <syg-label>Item Two</syg-label>
       <ion-icon :icon="heart"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="3" layout="icon-start">
-      <ion-label>Item Three</ion-label>
+    </syg-segment-button>
+    <syg-segment-button value="3" layout="icon-start">
+      <syg-label>Item Three</syg-label>
       <ion-icon :icon="pin"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
-  
+    </syg-segment-button>
+  </syg-segment>
+
   <!-- Icon end -->
-  <ion-segment value="1">
-    <ion-segment-button value="1" layout="icon-end">
+  <syg-segment value="1">
+    <syg-segment-button value="1" layout="icon-end">
       <ion-icon :icon="call"></ion-icon>
-      <ion-label>Item One</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="2" disabled layout="icon-end">
+      <syg-label>Item One</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="2" disabled layout="icon-end">
       <ion-icon :icon="heart"></ion-icon>
-      <ion-label>Item Two</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="3" layout="icon-end">
+      <syg-label>Item Two</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="3" layout="icon-end">
       <ion-icon :icon="pin"></ion-icon>
-      <ion-label>Item Three</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+      <syg-label>Item Three</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 </template>
 
 <script lang="ts">
@@ -150,11 +150,11 @@ export default defineComponent({
     }
   }
   setup() {
-    return { 
-      bookmark, 
-      call, 
-      camera, 
-      heart, 
+    return {
+      bookmark,
+      call,
+      camera,
+      heart,
       pin
     }
   }

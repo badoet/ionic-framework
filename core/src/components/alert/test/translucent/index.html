@@ -9,49 +9,49 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <script type="module">
-    import { alertController } from '../../../../dist/ionic/index.esm.js';
+    import { alertController } from '../../../../dist/syg/index.esm.js';
     window.alertController = alertController;
   </script>
-  
+
 <body>
-  <ion-app>
+  <syg-app>
 
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Alert - Translucent</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Alert - Translucent</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content class="ion-padding">
+      <syg-content class="syg-padding">
 
-        <ion-button expand="block" onclick="presentAlert()">Alert</ion-button>
-        <ion-button expand="block" color="secondary" onclick="presentAlertLongMessage()">Alert Long Message</ion-button>
-        <ion-button expand="block" color="danger" onclick="presentAlertMultipleButtons()">Multiple Buttons (>2)</ion-button>
-        <ion-button expand="block" color="light" onclick="presentAlertNoMessage()">Alert No Message</ion-button>
+        <syg-button expand="block" onclick="presentAlert()">Alert</syg-button>
+        <syg-button expand="block" color="secondary" onclick="presentAlertLongMessage()">Alert Long Message</syg-button>
+        <syg-button expand="block" color="danger" onclick="presentAlertMultipleButtons()">Multiple Buttons (>2)</syg-button>
+        <syg-button expand="block" color="light" onclick="presentAlertNoMessage()">Alert No Message</syg-button>
 
-        <ion-grid>
-          <ion-row>
-            <ion-col size="4"><f class="red"></f></ion-col>
-            <ion-col size="4"><f class="green"></f></ion-col>
-            <ion-col size="4"><f class="blue"></f></ion-col>
-            <ion-col size="4"><f class="yellow"></f></ion-col>
-            <ion-col size="4"><f class="pink"></f></ion-col>
-            <ion-col size="4"><f class="purple"></f></ion-col>
-            <ion-col size="4"><f class="black"></f></ion-col>
-            <ion-col size="4"><f class="fuchsia"></f></ion-col>
-            <ion-col size="4"><f class="orange"></f></ion-col>
-          </ion-row>
-        </ion-grid>
+        <syg-grid>
+          <syg-row>
+            <syg-col size="4"><f class="red"></f></syg-col>
+            <syg-col size="4"><f class="green"></f></syg-col>
+            <syg-col size="4"><f class="blue"></f></syg-col>
+            <syg-col size="4"><f class="yellow"></f></syg-col>
+            <syg-col size="4"><f class="pink"></f></syg-col>
+            <syg-col size="4"><f class="purple"></f></syg-col>
+            <syg-col size="4"><f class="black"></f></syg-col>
+            <syg-col size="4"><f class="fuchsia"></f></syg-col>
+            <syg-col size="4"><f class="orange"></f></syg-col>
+          </syg-row>
+        </syg-grid>
 
-        <ion-button expand="block" color="dark" onclick="presentAlertConfirm()">Confirm</ion-button>
-        <ion-button expand="block" color="primary" onclick="presentAlertPrompt()">Prompt</ion-button>
-        <ion-button expand="block" color="secondary" onclick="presentAlertRadio()">Radio</ion-button>
-        <ion-button expand="block" color="danger" onclick="presentAlertCheckbox()">Checkbox</ion-button>
-      </ion-content>
+        <syg-button expand="block" color="dark" onclick="presentAlertConfirm()">Confirm</syg-button>
+        <syg-button expand="block" color="primary" onclick="presentAlertPrompt()">Prompt</syg-button>
+        <syg-button expand="block" color="secondary" onclick="presentAlertRadio()">Radio</syg-button>
+        <syg-button expand="block" color="danger" onclick="presentAlertCheckbox()">Checkbox</syg-button>
+      </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     async function openAlert(opts) {
@@ -189,7 +189,7 @@
             label: 'Radio 1',
             value: 'value1',
             checked: true
-           
+
           },
           {
             type: 'radio',

@@ -10,138 +10,138 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
 </head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Item - Alignment</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Item - Alignment</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
-      <ion-list>
-        <ion-list-header>Leading Icons</ion-list-header>
-        <ion-item>
+    <syg-content>
+      <syg-list>
+        <syg-list-header>Leading Icons</syg-list-header>
+        <syg-item>
           <ion-icon slot="start" name="time"></ion-icon>
-          <ion-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></ion-datetime>
-        </ion-item>
-        <ion-item>
+          <syg-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></syg-datetime>
+        </syg-item>
+        <syg-item>
           <ion-icon slot="start" name="radio-button-off"></ion-icon>
-          <ion-input placeholder="Choose Starting Point"></ion-input>
-        </ion-item>
-        <ion-item>
+          <syg-input placeholder="Choose Starting Point"></syg-input>
+        </syg-item>
+        <syg-item>
           <ion-icon slot="start" name="pin"></ion-icon>
-          <ion-select placeholder="Choose Really Really Long Destination Here">
-            <ion-select-option>Madison, WI</ion-select-option>
-            <ion-select-option>Atlanta, GA</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+          <syg-select placeholder="Choose Really Really Long Destination Here">
+            <syg-select-option>Madison, WI</syg-select-option>
+            <syg-select-option>Atlanta, GA</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>Default Labels</ion-list-header>
-        <ion-item>
-          <ion-label>Time</ion-label>
-          <ion-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></ion-datetime>
-        </ion-item>
-        <ion-item>
-          <ion-label>From</ion-label>
-          <ion-input placeholder="Choose Starting Point"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Destination</ion-label>
-          <ion-select placeholder="Choose Really Really Long Destination Here">
-            <ion-select-option>Madison, WI</ion-select-option>
-            <ion-select-option>Atlanta, GA</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-list-header>Default Labels</syg-list-header>
+        <syg-item>
+          <syg-label>Time</syg-label>
+          <syg-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></syg-datetime>
+        </syg-item>
+        <syg-item>
+          <syg-label>From</syg-label>
+          <syg-input placeholder="Choose Starting Point"></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label>Destination</syg-label>
+          <syg-select placeholder="Choose Really Really Long Destination Here">
+            <syg-select-option>Madison, WI</syg-select-option>
+            <syg-select-option>Atlanta, GA</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>Fixed Labels</ion-list-header>
-        <ion-item>
-          <ion-label position="fixed">Time</ion-label>
-          <ion-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></ion-datetime>
-        </ion-item>
-        <ion-item>
-          <ion-label position="fixed">From</ion-label>
-          <ion-input placeholder="Choose Starting Point"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="fixed">Destination</ion-label>
-          <ion-select placeholder="Choose Really Really Long Destination Here">
-            <ion-select-option>Madison, WI</ion-select-option>
-            <ion-select-option>Atlanta, GA</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-list-header>Fixed Labels</syg-list-header>
+        <syg-item>
+          <syg-label position="fixed">Time</syg-label>
+          <syg-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></syg-datetime>
+        </syg-item>
+        <syg-item>
+          <syg-label position="fixed">From</syg-label>
+          <syg-input placeholder="Choose Starting Point"></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label position="fixed">Destination</syg-label>
+          <syg-select placeholder="Choose Really Really Long Destination Here">
+            <syg-select-option>Madison, WI</syg-select-option>
+            <syg-select-option>Atlanta, GA</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>Floating Labels</ion-list-header>
-        <ion-item>
-          <ion-label position="floating">Time</ion-label>
-          <ion-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a"></ion-datetime>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">From</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Destination</ion-label>
-          <ion-select>
-            <ion-select-option>Madison, WI</ion-select-option>
-            <ion-select-option>Atlanta, GA</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-list-header>Floating Labels</syg-list-header>
+        <syg-item>
+          <syg-label position="floating">Time</syg-label>
+          <syg-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a"></syg-datetime>
+        </syg-item>
+        <syg-item>
+          <syg-label position="floating">From</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label position="floating">Destination</syg-label>
+          <syg-select>
+            <syg-select-option>Madison, WI</syg-select-option>
+            <syg-select-option>Atlanta, GA</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>Stacked Labels</ion-list-header>
-        <ion-item>
-          <ion-label position="stacked">Time</ion-label>
-          <ion-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></ion-datetime>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">From</ion-label>
-          <ion-input placeholder="Choose Starting Point"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Destination</ion-label>
-          <ion-select placeholder="Choose Really Really Long Destination Here">
-            <ion-select-option>Madison, WI</ion-select-option>
-            <ion-select-option>Atlanta, GA</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-list-header>Stacked Labels</syg-list-header>
+        <syg-item>
+          <syg-label position="stacked">Time</syg-label>
+          <syg-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></syg-datetime>
+        </syg-item>
+        <syg-item>
+          <syg-label position="stacked">From</syg-label>
+          <syg-input placeholder="Choose Starting Point"></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label position="stacked">Destination</syg-label>
+          <syg-select placeholder="Choose Really Really Long Destination Here">
+            <syg-select-option>Madison, WI</syg-select-option>
+            <syg-select-option>Atlanta, GA</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>End Labels</ion-list-header>
-        <ion-item>
-          <ion-label slot="end">Time</ion-label>
-          <ion-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></ion-datetime>
-        </ion-item>
-        <ion-item>
-          <ion-label slot="end">From</ion-label>
-          <ion-input placeholder="Choose Starting Point"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label slot="end">Destination</ion-label>
-          <ion-select placeholder="Choose Really Really Long Destination Here">
-            <ion-select-option>Madison, WI</ion-select-option>
-            <ion-select-option>Atlanta, GA</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-list-header>End Labels</syg-list-header>
+        <syg-item>
+          <syg-label slot="end">Time</syg-label>
+          <syg-datetime display-format="DDDD MMMM D YYYY hh:mm:ss a" value="2019-10-01T15:43:40.394Z"></syg-datetime>
+        </syg-item>
+        <syg-item>
+          <syg-label slot="end">From</syg-label>
+          <syg-input placeholder="Choose Starting Point"></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label slot="end">Destination</syg-label>
+          <syg-select placeholder="Choose Really Really Long Destination Here">
+            <syg-select-option>Madison, WI</syg-select-option>
+            <syg-select-option>Atlanta, GA</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-    </ion-content>
-  </ion-app>
+    </syg-content>
+  </syg-app>
 
   <style>
-    ion-item {
+    syg-item {
       --border-width: 0;
       --inner-border-width: 0;
       --background: #ddd;

@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Listen, Method, Prop, forceUpdate, h, readTask } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, ScrollBaseDetail, ScrollDetail } from '../../interface';
 import { isPlatform } from '../../utils/platform';
 import { createColorClasses, hostContext } from '../../utils/theme';
@@ -13,7 +13,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
  * @part scroll - The scrollable container of the content.
  */
 @Component({
-  tag: 'ion-content',
+  tag: 'syg-content',
   styleUrl: 'content.scss',
   shadow: true
 })
@@ -50,7 +50,7 @@ export class Content implements ComponentInterface {
     isScrolling: true,
   };
 
-  @Element() el!: HTMLIonContentElement;
+  @Element() el!: HTMLSygContentElement;
 
   /**
    * The color to use from your application's color palette.
@@ -106,7 +106,7 @@ export class Content implements ComponentInterface {
   @Event() ionScrollEnd!: EventEmitter<ScrollBaseDetail>;
 
   connectedCallback() {
-    this.isMainContent = this.el.closest('ion-menu, ion-popover, ion-modal') === null;
+    this.isMainContent = this.el.closest('syg-menu, syg-popover, syg-modal') === null;
   }
 
   disconnectedCallback() {
@@ -128,7 +128,7 @@ export class Content implements ComponentInterface {
 
   private shouldForceOverscroll() {
     const { forceOverscroll } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return forceOverscroll === undefined
       ? mode === 'ios' && isPlatform('ios')
       : forceOverscroll;
@@ -177,7 +177,7 @@ export class Content implements ComponentInterface {
   /**
    * Get the element where the actual scrolling takes place.
    * This element can be used to subscribe to `scroll` events or manually modify
-   * `scrollTop`. However, it's recommended to use the API provided by `ion-content`:
+   * `scrollTop`. However, it's recommended to use the API provided by `syg-content`:
    *
    * i.e. Using `ionScroll`, `ionScrollStart`, `ionScrollEnd` for scrolling events
    * and `scrollToPoint()` to scroll the content into a certain point.
@@ -309,7 +309,7 @@ export class Content implements ComponentInterface {
 
   render() {
     const { isMainContent, scrollX, scrollY } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const forceOverscroll = this.shouldForceOverscroll();
     const transitionShadow = mode === 'ios';
     const TagType = isMainContent ? 'main' : 'div' as any;
@@ -320,7 +320,7 @@ export class Content implements ComponentInterface {
       <Host
         class={createColorClasses(this.color, {
           [mode]: true,
-          'content-sizing': hostContext('ion-popover', this.el),
+          'content-sizing': hostContext('syg-popover', this.el),
           'overscroll': forceOverscroll,
         })}
         style={{
@@ -344,9 +344,9 @@ export class Content implements ComponentInterface {
         </TagType>
 
         {transitionShadow ? (
-          <div class="transition-effect">
-            <div class="transition-cover"></div>
-            <div class="transition-shadow"></div>
+          <div class="transitsyg-effect">
+            <div class="transitsyg-cover"></div>
+            <div class="transitsyg-shadow"></div>
           </div>
         ) : null}
 
@@ -369,11 +369,11 @@ const getParentElement = (el: any) => {
 };
 
 const getPageElement = (el: HTMLElement) => {
-  const tabs = el.closest('ion-tabs');
+  const tabs = el.closest('syg-tabs');
   if (tabs) {
     return tabs;
   }
-  const page = el.closest('ion-app,ion-page,.ion-page,page-inner');
+  const page = el.closest('syg-app,syg-page,.syg-page,page-inner');
   if (page) {
     return page;
   }

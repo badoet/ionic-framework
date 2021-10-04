@@ -1,13 +1,13 @@
-# ion-tabs
+# syg-tabs
 
 Tabs are a top level navigation component to implement a tab-based navigation.
 The component is a container of individual [Tab](../tab/) components.
 
-The `ion-tabs` component does not have any styling and works as a router outlet in order to handle navigation. It does not provide any UI feedback or mechanism to switch between tabs. In order to do so, an `ion-tab-bar` should be provided as a direct child of `ion-tabs`.
+The `syg-tabs` component does not have any styling and works as a router outlet in order to handle navigation. It does not provide any UI feedback or mechanism to switch between tabs. In order to do so, an `syg-tab-bar` should be provided as a direct child of `syg-tabs`.
 
-Both `ion-tabs` and `ion-tab-bar` can be used as standalone elements. They don’t depend on each other to work, but they are usually used together in order to implement a tab-based navigation that behaves like a native app.
+Both `syg-tabs` and `syg-tab-bar` can be used as standalone elements. They don’t depend on each other to work, but they are usually used together in order to implement a tab-based navigation that behaves like a native app.
 
-The `ion-tab-bar` needs a slot defined in order to be projected to the right place in an `ion-tabs` component.
+The `syg-tab-bar` needs a slot defined in order to be projected to the right place in an `syg-tabs` component.
 
 ## Interfaces
 
@@ -31,46 +31,46 @@ interface TabsCustomEvent extends CustomEvent {
 ### Angular
 
 ```html
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule">
+<syg-tabs>
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="schedule">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Schedule</ion-label>
-      <ion-badge>6</ion-badge>
-    </ion-tab-button>
+      <syg-label>Schedule</syg-label>
+      <syg-badge>6</syg-badge>
+    </syg-tab-button>
 
-    <ion-tab-button tab="speakers">
+    <syg-tab-button tab="speakers">
       <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Speakers</ion-label>
-    </ion-tab-button>
+      <syg-label>Speakers</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="map">
+    <syg-tab-button tab="map">
       <ion-icon name="map"></ion-icon>
-      <ion-label>Map</ion-label>
-    </ion-tab-button>
+      <syg-label>Map</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="about">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+    <syg-tab-button tab="about">
+      <ion-icon name="informatsyg-circle"></ion-icon>
+      <syg-label>About</syg-label>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```
 
 
 ### Router integration
 
-When used with Angular's router the `tab` property of the `ion-tab-button` should be a reference to the route path.
+When used with Angular's router the `tab` property of the `syg-tab-button` should be a reference to the route path.
 
 ```html
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule">
+<syg-tabs>
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="schedule">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Schedule</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+      <syg-label>Schedule</syg-label>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```
 
 ```typescript
@@ -105,84 +105,84 @@ const routes: Routes = [
 ### Javascript
 
 ```html
-<ion-tabs>
+<syg-tabs>
 
-  <ion-tab tab="tab-schedule">
-    <ion-nav></ion-nav>
-  </ion-tab>
+  <syg-tab tab="tab-schedule">
+    <syg-nav></syg-nav>
+  </syg-tab>
 
-  <ion-tab tab="tab-speaker">
-    <ion-nav></ion-nav>
-  </ion-tab>
+  <syg-tab tab="tab-speaker">
+    <syg-nav></syg-nav>
+  </syg-tab>
 
-  <ion-tab tab="tab-map" component="page-map">
-    <ion-nav></ion-nav>
-  </ion-tab>
+  <syg-tab tab="tab-map" component="page-map">
+    <syg-nav></syg-nav>
+  </syg-tab>
 
-  <ion-tab tab="tab-about" component="page-about">
-    <ion-nav></ion-nav>
-  </ion-tab>
+  <syg-tab tab="tab-about" component="page-about">
+    <syg-nav></syg-nav>
+  </syg-tab>
 
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab-schedule">
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="tab-schedule">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Schedule</ion-label>
-      <ion-badge>6</ion-badge>
-    </ion-tab-button>
+      <syg-label>Schedule</syg-label>
+      <syg-badge>6</syg-badge>
+    </syg-tab-button>
 
-    <ion-tab-button tab="tab-speaker">
+    <syg-tab-button tab="tab-speaker">
       <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Speakers</ion-label>
-    </ion-tab-button>
+      <syg-label>Speakers</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="tab-map">
+    <syg-tab-button tab="tab-map">
       <ion-icon name="map"></ion-icon>
-      <ion-label>Map</ion-label>
-    </ion-tab-button>
+      <syg-label>Map</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="tab-about">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
+    <syg-tab-button tab="tab-about">
+      <ion-icon name="informatsyg-circle"></ion-icon>
+      <syg-label>About</syg-label>
+    </syg-tab-button>
+  </syg-tab-bar>
 
-</ion-tabs>
+</syg-tabs>
 ```
 
 
 ### Activating Tabs
 
-Each `ion-tab-button` will activate one of the tabs when pressed. In order to link the `ion-tab-button` to the `ion-tab` container, a matching `tab` property should be set on each component.
+Each `syg-tab-button` will activate one of the tabs when pressed. In order to link the `syg-tab-button` to the `syg-tab` container, a matching `tab` property should be set on each component.
 
 ```html
-<ion-tab tab="settings">
+<syg-tab tab="settings">
   ...
-</ion-tab>
+</syg-tab>
 
-<ion-tab-button tab="settings">
+<syg-tab-button tab="settings">
   ...
-</ion-tab-button>
+</syg-tab-button>
 ```
 
-The `ion-tab-button` and `ion-tab` above are linked by the common `tab` property.
+The `syg-tab-button` and `syg-tab` above are linked by the common `tab` property.
 
-The `tab` property identifies each tab, and it has to be unique within the `ion-tabs`. It's important to always set the `tab` property on the `ion-tab` and `ion-tab-button`, even if one component is not used.
+The `tab` property identifies each tab, and it has to be unique within the `syg-tabs`. It's important to always set the `tab` property on the `syg-tab` and `syg-tab-button`, even if one component is not used.
 
 
 ### Router integration
 
-When used with Ionic's router (`ion-router`) the `tab` property of the `ion-tab` matches the `component` property of an `ion-route`.
+When used with Ionic's router (`syg-router`) the `tab` property of the `syg-tab` matches the `component` property of an `syg-route`.
 
-The following route within the scope of an `ion-tabs` outlet:
+The following route within the scope of an `syg-tabs` outlet:
 
 ```html
-<ion-route url="/settings-page" component="settings"></ion-route>
+<syg-route url="/settings-page" component="settings"></syg-route>
 ```
 
 will match the following tab:
 
 ```html
-<ion-tab tab="settings" component="settings-component"></ion-tab>
+<syg-tab tab="settings" component="settings-component"></syg-tab>
 ```
 
 
@@ -235,47 +235,47 @@ import { Component, h } from '@stencil/core';
 export class TabsExample {
   render() {
     return [
-     <ion-tabs>
-      <ion-tab tab="tab-schedule">
-        <ion-nav></ion-nav>
-      </ion-tab>
+     <syg-tabs>
+      <syg-tab tab="tab-schedule">
+        <syg-nav></syg-nav>
+      </syg-tab>
 
-      <ion-tab tab="tab-speaker">
-        <ion-nav></ion-nav>
-      </ion-tab>
+      <syg-tab tab="tab-speaker">
+        <syg-nav></syg-nav>
+      </syg-tab>
 
-      <ion-tab tab="tab-map" component="page-map">
-        <ion-nav></ion-nav>
-      </ion-tab>
+      <syg-tab tab="tab-map" component="page-map">
+        <syg-nav></syg-nav>
+      </syg-tab>
 
-      <ion-tab tab="tab-about" component="page-about">
-        <ion-nav></ion-nav>
-      </ion-tab>
+      <syg-tab tab="tab-about" component="page-about">
+        <syg-nav></syg-nav>
+      </syg-tab>
 
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="tab-schedule">
+      <syg-tab-bar slot="bottom">
+        <syg-tab-button tab="tab-schedule">
           <ion-icon name="calendar"></ion-icon>
-          <ion-label>Schedule</ion-label>
-          <ion-badge>6</ion-badge>
-        </ion-tab-button>
+          <syg-label>Schedule</syg-label>
+          <syg-badge>6</syg-badge>
+        </syg-tab-button>
 
-        <ion-tab-button tab="tab-speaker">
+        <syg-tab-button tab="tab-speaker">
           <ion-icon name="person-circle"></ion-icon>
-          <ion-label>Speakers</ion-label>
-        </ion-tab-button>
+          <syg-label>Speakers</syg-label>
+        </syg-tab-button>
 
-        <ion-tab-button tab="tab-map">
+        <syg-tab-button tab="tab-map">
           <ion-icon name="map"></ion-icon>
-          <ion-label>Map</ion-label>
-        </ion-tab-button>
+          <syg-label>Map</syg-label>
+        </syg-tab-button>
 
-        <ion-tab-button tab="tab-about">
-          <ion-icon name="information-circle"></ion-icon>
-          <ion-label>About</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
+        <syg-tab-button tab="tab-about">
+          <ion-icon name="informatsyg-circle"></ion-icon>
+          <syg-label>About</syg-label>
+        </syg-tab-button>
+      </syg-tab-bar>
 
-    </ion-tabs>
+    </syg-tabs>
     ];
   }
 }
@@ -284,37 +284,37 @@ export class TabsExample {
 
 ### Activating Tabs
 
-Each `ion-tab-button` will activate one of the tabs when pressed. In order to link the `ion-tab-button` to the `ion-tab` container, a matching `tab` property should be set on each component.
+Each `syg-tab-button` will activate one of the tabs when pressed. In order to link the `syg-tab-button` to the `syg-tab` container, a matching `tab` property should be set on each component.
 
 ```jsx
-<ion-tab tab="settings">
+<syg-tab tab="settings">
   ...
-</ion-tab>
+</syg-tab>
 
-<ion-tab-button tab="settings">
+<syg-tab-button tab="settings">
   ...
-</ion-tab-button>
+</syg-tab-button>
 ```
 
-The `ion-tab-button` and `ion-tab` above are linked by the common `tab` property.
+The `syg-tab-button` and `syg-tab` above are linked by the common `tab` property.
 
-The `tab` property identifies each tab, and it has to be unique within the `ion-tabs`. It's important to always set the `tab` property on the `ion-tab` and `ion-tab-button`, even if one component is not used.
+The `tab` property identifies each tab, and it has to be unique within the `syg-tabs`. It's important to always set the `tab` property on the `syg-tab` and `syg-tab-button`, even if one component is not used.
 
 
 ### Router integration
 
-When used with Ionic's router (`ion-router`) the `tab` property of the `ion-tab` matches the `component` property of an `ion-route`.
+When used with Ionic's router (`syg-router`) the `tab` property of the `syg-tab` matches the `component` property of an `syg-route`.
 
-The following route within the scope of an `ion-tabs` outlet:
+The following route within the scope of an `syg-tabs` outlet:
 
 ```tsx
-<ion-route url="/settings-page" component="settings"></ion-route>
+<syg-route url="/settings-page" component="settings"></syg-route>
 ```
 
 will match the following tab:
 
 ```tsx
-<ion-tab tab="settings" component="settings-component"></ion-tab>
+<syg-tab tab="settings" component="settings-component"></syg-tab>
 ```
 
 
@@ -323,32 +323,32 @@ will match the following tab:
 **Tabs.vue**
 ```html
 <template>
-  <ion-page>
-    <ion-tabs @ionTabsWillChange="beforeTabChange" @ionTabsDidChange="afterTabChange">
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="schedule" href="/tabs/schedule">
+  <syg-page>
+    <syg-tabs @ionTabsWillChange="beforeTabChange" @ionTabsDidChange="afterTabChange">
+      <syg-tab-bar slot="bottom">
+        <syg-tab-button tab="schedule" href="/tabs/schedule">
           <ion-icon :icon="calendar"></ion-icon>
-          <ion-label>Schedule</ion-label>
-          <ion-badge>6</ion-badge>
-        </ion-tab-button>
-  
-        <ion-tab-button tab="speakers" href="/tabs/speakers">
+          <syg-label>Schedule</syg-label>
+          <syg-badge>6</syg-badge>
+        </syg-tab-button>
+
+        <syg-tab-button tab="speakers" href="/tabs/speakers">
           <ion-icon :icon="personCircle"></ion-icon>
-          <ion-label>Speakers</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
-  </ion-page>
+          <syg-label>Speakers</syg-label>
+        </syg-tab-button>
+      </syg-tab-bar>
+    </syg-tabs>
+  </syg-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import { 
-  IonIcon, 
-  IonLabel, 
+import {
+  IonIcon,
+  IonLabel,
   IonPage,
-  IonTabBar, 
-  IonTabButton, 
+  IonTabBar,
+  IonTabButton,
   IonTabs
 } from '@ionic/vue';
 import { calendar, personCircle } from 'ionicons/icons';
@@ -376,15 +376,15 @@ export default defineComponent({
 **Schedule.vue**
 ```html
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Schedule</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    
-    <ion-content class="ion-padding">Schedule Tab</ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Schedule</syg-title>
+      </syg-toolbar>
+    </syg-header>
+
+    <syg-content class="syg-padding">Schedule Tab</syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -406,15 +406,15 @@ export default defineComponent({
 **Speakers.vue**
 ```html
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Speakers</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    
-    <ion-content class="ion-padding">Speakers Tab</ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Speakers</syg-title>
+      </syg-toolbar>
+    </syg-header>
+
+    <syg-content class="syg-padding">Speakers Tab</syg-content>
+  </syg-page>
 </template>
 
 <script>

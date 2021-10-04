@@ -1,4 +1,4 @@
-# ion-note
+# syg-note
 
 Notes are text elements generally used as subtitles that provide more information. Notes are styled to appear grey by default. Notes can be used in an item as metadata text.
 
@@ -12,27 +12,27 @@ Notes are text elements generally used as subtitles that provide more informatio
 
 ```html
 <!-- Default Note -->
-<ion-note>Default Note</ion-note>
+<syg-note>Default Note</syg-note>
 
 <!-- Note Colors -->
-<ion-note color="primary">Primary Note</ion-note>
-<ion-note color="secondary">Secondary Note</ion-note>
-<ion-note color="danger">Danger Note</ion-note>
-<ion-note color="light">Light Note</ion-note>
-<ion-note color="dark">Dark Note</ion-note>
+<syg-note color="primary">Primary Note</syg-note>
+<syg-note color="secondary">Secondary Note</syg-note>
+<syg-note color="danger">Danger Note</syg-note>
+<syg-note color="light">Light Note</syg-note>
+<syg-note color="dark">Dark Note</syg-note>
 
 <!-- Notes in a List -->
-<ion-list>
-  <ion-item>
-    <ion-label>Note (End)</ion-label>
-    <ion-note slot="end">On</ion-note>
-  </ion-item>
+<syg-list>
+  <syg-item>
+    <syg-label>Note (End)</syg-label>
+    <syg-note slot="end">On</syg-note>
+  </syg-item>
 
-  <ion-item>
-    <ion-note slot="start">Off</ion-note>
-    <ion-label>Note (Start)</ion-label>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-note slot="start">Off</syg-note>
+    <syg-label>Note (Start)</syg-label>
+  </syg-item>
+</syg-list>
 ```
 
 
@@ -84,27 +84,27 @@ export class NoteExample {
   render() {
     return [
       // Default Note
-      <ion-note>Default Note</ion-note>,
+      <syg-note>Default Note</syg-note>,
 
       // Note Colors
-      <ion-note color="primary">Primary Note</ion-note>,
-      <ion-note color="secondary">Secondary Note</ion-note>,
-      <ion-note color="danger">Danger Note</ion-note>,
-      <ion-note color="light">Light Note</ion-note>,
-      <ion-note color="dark">Dark Note</ion-note>,
+      <syg-note color="primary">Primary Note</syg-note>,
+      <syg-note color="secondary">Secondary Note</syg-note>,
+      <syg-note color="danger">Danger Note</syg-note>,
+      <syg-note color="light">Light Note</syg-note>,
+      <syg-note color="dark">Dark Note</syg-note>,
 
       // Notes in a List
-      <ion-list>
-        <ion-item>
-          <ion-label>Note (End)</ion-label>
-          <ion-note slot="end">On</ion-note>
-        </ion-item>
+      <syg-list>
+        <syg-item>
+          <syg-label>Note (End)</syg-label>
+          <syg-note slot="end">On</syg-note>
+        </syg-item>
 
-        <ion-item>
-          <ion-note slot="start">Off</ion-note>
-          <ion-label>Note (Start)</ion-label>
-        </ion-item>
-      </ion-list>
+        <syg-item>
+          <syg-note slot="start">Off</syg-note>
+          <syg-label>Note (Start)</syg-label>
+        </syg-item>
+      </syg-list>
     ];
   }
 }
@@ -116,27 +116,27 @@ export class NoteExample {
 ```html
 <template>
   <!-- Default Note -->
-  <ion-note>Default Note</ion-note>
+  <syg-note>Default Note</syg-note>
 
   <!-- Note Colors -->
-  <ion-note color="primary">Primary Note</ion-note>
-  <ion-note color="secondary">Secondary Note</ion-note>
-  <ion-note color="danger">Danger Note</ion-note>
-  <ion-note color="light">Light Note</ion-note>
-  <ion-note color="dark">Dark Note</ion-note>
+  <syg-note color="primary">Primary Note</syg-note>
+  <syg-note color="secondary">Secondary Note</syg-note>
+  <syg-note color="danger">Danger Note</syg-note>
+  <syg-note color="light">Light Note</syg-note>
+  <syg-note color="dark">Dark Note</syg-note>
 
   <!-- Notes in a List -->
-  <ion-list>
-    <ion-item>
-      <ion-label>Note (End)</ion-label>
-      <ion-note slot="end">On</ion-note>
-    </ion-item>
+  <syg-list>
+    <syg-item>
+      <syg-label>Note (End)</syg-label>
+      <syg-note slot="end">On</syg-note>
+    </syg-item>
 
-    <ion-item>
-      <ion-note slot="start">Off</ion-note>
-      <ion-label>Note (Start)</ion-label>
-    </ion-item>
-  </ion-list>
+    <syg-item>
+      <syg-note slot="start">Off</syg-note>
+      <syg-label>Note (Start)</syg-label>
+    </syg-item>
+  </syg-list>
 </template>
 
 <script>
@@ -170,13 +170,13 @@ export default defineComponent({
 
 ### Used by
 
- - [ion-item](../item)
+ - [syg-item](../item)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-item --> ion-note
-  style ion-note fill:#f9f,stroke:#333,stroke-width:4px
+  syg-item --> syg-note
+  style syg-note fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

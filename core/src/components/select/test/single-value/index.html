@@ -9,139 +9,139 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Select Item: Single Value</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Select Item: Single Value</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="outer-content">
-      <ion-item>
-        <ion-label position="stacked">Gender</ion-label>
-        <ion-select id="gender">
-          <ion-select-option value="f">Female</ion-select-option>
-          <ion-select-option value="m">Male</ion-select-option>
-        </ion-select>
-      </ion-item>
+    <syg-content class="outer-content">
+      <syg-item>
+        <syg-label position="stacked">Gender</syg-label>
+        <syg-select id="gender">
+          <syg-select-option value="f">Female</syg-select-option>
+          <syg-select-option value="m">Male</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Popover</ion-label>
-        <ion-select interface="popover">
-          <ion-select-option value="select">Select</ion-select-option>
-          <ion-select-option value="action">Action Sheet</ion-select-option>
-          <ion-select-option value="popover">Popover</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Popover</syg-label>
+        <syg-select interface="popover">
+          <syg-select-option value="select">Select</syg-select-option>
+          <syg-select-option value="action">Action Sheet</syg-select-option>
+          <syg-select-option value="popover">Popover</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Gaming</ion-label>
-        <ion-select id="gaming">
-          <ion-select-option value="nes">NES</ion-select-option>
-          <ion-select-option value="n64">Nintendo64</ion-select-option>
-          <ion-select-option value="ps">PlayStation</ion-select-option>
-          <ion-select-option value="genesis">Sega Genesis</ion-select-option>
-          <ion-select-option value="saturn">Sega Saturn</ion-select-option>
-          <ion-select-option value="snes">SNES</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Gaming</syg-label>
+        <syg-select id="gaming">
+          <syg-select-option value="nes">NES</syg-select-option>
+          <syg-select-option value="n64">Nintendo64</syg-select-option>
+          <syg-select-option value="ps">PlayStation</syg-select-option>
+          <syg-select-option value="genesis">Sega Genesis</syg-select-option>
+          <syg-select-option value="saturn">Sega Saturn</syg-select-option>
+          <syg-select-option value="snes">SNES</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label position="floating">Operating System</ion-label>
-        <ion-select id="os">
-          <ion-select-option value="dos">DOS</ion-select-option>
-          <ion-select-option value="lunix">Linux</ion-select-option>
-          <ion-select-option value="mac7">Mac OS 7</ion-select-option>
-          <ion-select-option value="mac8">Mac OS 8</ion-select-option>
-          <ion-select-option value="win3.1">Windows 3.1</ion-select-option>
-          <ion-select-option value="win95">Windows 95</ion-select-option>
-          <ion-select-option value="win98">Windows 98</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label position="floating">Operating System</syg-label>
+        <syg-select id="os">
+          <syg-select-option value="dos">DOS</syg-select-option>
+          <syg-select-option value="lunix">Linux</syg-select-option>
+          <syg-select-option value="mac7">Mac OS 7</syg-select-option>
+          <syg-select-option value="mac8">Mac OS 8</syg-select-option>
+          <syg-select-option value="win3.1">Windows 3.1</syg-select-option>
+          <syg-select-option value="win95">Windows 95</syg-select-option>
+          <syg-select-option value="win98">Windows 98</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Notifications</ion-label>
-        <ion-select id="notifications">
-          <ion-select-option value="enable">Enable</ion-select-option>
-          <ion-select-option value="mute">Mute</ion-select-option>
-          <ion-select-option value="mute_week">Mute for a week</ion-select-option>
-          <ion-select-option value="mute_year" (ionSelect)="notificationSelect($event)">Mute for a year</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Notifications</syg-label>
+        <syg-select id="notifications">
+          <syg-select-option value="enable">Enable</syg-select-option>
+          <syg-select-option value="mute">Mute</syg-select-option>
+          <syg-select-option value="mute_week">Mute for a week</syg-select-option>
+          <syg-select-option value="mute_year" (ionSelect)="notificationSelect($event)">Mute for a year</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Edit</ion-label>
-        <ion-select>
-          <ion-select-option value="add_reaction">Add Reaction</ion-select-option>
-          <ion-select-option value="copy_text">Copy Text</ion-select-option>
-          <ion-select-option value="share_text">Share Text</ion-select-option>
-          <ion-select-option value="copy_link">Copy Link to Message</ion-select-option>
-          <ion-select-option value="remind_me">Remind Me</ion-select-option>
-          <ion-select-option value="pin_file">Pin File</ion-select-option>
-          <ion-select-option value="star_file">Star File</ion-select-option>
-          <ion-select-option value="mark_unread">Mark Unread</ion-select-option>
-          <ion-select-option value="edit_title">Edit Title</ion-select-option>
-          <ion-select-option value="save_image">Save Image</ion-select-option>
-          <ion-select-option value="copy_image">Copy Image</ion-select-option>
-          <ion-select-option value="delete_file">Delete File</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Edit</syg-label>
+        <syg-select>
+          <syg-select-option value="add_reaction">Add Reaction</syg-select-option>
+          <syg-select-option value="copy_text">Copy Text</syg-select-option>
+          <syg-select-option value="share_text">Share Text</syg-select-option>
+          <syg-select-option value="copy_link">Copy Link to Message</syg-select-option>
+          <syg-select-option value="remind_me">Remind Me</syg-select-option>
+          <syg-select-option value="pin_file">Pin File</syg-select-option>
+          <syg-select-option value="star_file">Star File</syg-select-option>
+          <syg-select-option value="mark_unread">Mark Unread</syg-select-option>
+          <syg-select-option value="edit_title">Edit Title</syg-select-option>
+          <syg-select-option value="save_image">Save Image</syg-select-option>
+          <syg-select-option value="copy_image">Copy Image</syg-select-option>
+          <syg-select-option value="delete_file">Delete File</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Music</ion-label>
-        <ion-select id="music" placeholder="Select Music">
-          <ion-select-option>Alice in Chains</ion-select-option>
-          <ion-select-option>Green Day</ion-select-option>
-          <ion-select-option>Nirvana</ion-select-option>
-          <ion-select-option>Pearl Jam</ion-select-option>
-          <ion-select-option>Smashing Pumpkins</ion-select-option>
-          <ion-select-option>Soundgarden</ion-select-option>
-          <ion-select-option (ionSelect)="musicSelect($event)">Stone Temple Pilots</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Music</syg-label>
+        <syg-select id="music" placeholder="Select Music">
+          <syg-select-option>Alice in Chains</syg-select-option>
+          <syg-select-option>Green Day</syg-select-option>
+          <syg-select-option>Nirvana</syg-select-option>
+          <syg-select-option>Pearl Jam</syg-select-option>
+          <syg-select-option>Smashing Pumpkins</syg-select-option>
+          <syg-select-option>Soundgarden</syg-select-option>
+          <syg-select-option (ionSelect)="musicSelect($event)">Stone Temple Pilots</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Date</ion-label>
-        <ion-select id="month">
-          <ion-select-option value="01">January</ion-select-option>
-          <ion-select-option value="02">February</ion-select-option>
-          <ion-select-option value="03">March</ion-select-option>
-          <ion-select-option value="04">April</ion-select-option>
-          <ion-select-option value="05">May</ion-select-option>
-          <ion-select-option value="06">June</ion-select-option>
-          <ion-select-option value="07">July</ion-select-option>
-          <ion-select-option value="08">August</ion-select-option>
-          <ion-select-option value="09">September</ion-select-option>
-          <ion-select-option value="10">October</ion-select-option>
-          <ion-select-option value="11">November</ion-select-option>
-          <ion-select-option value="12">December</ion-select-option>
-        </ion-select>
-        <ion-select id="year">
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Date</syg-label>
+        <syg-select id="month">
+          <syg-select-option value="01">January</syg-select-option>
+          <syg-select-option value="02">February</syg-select-option>
+          <syg-select-option value="03">March</syg-select-option>
+          <syg-select-option value="04">April</syg-select-option>
+          <syg-select-option value="05">May</syg-select-option>
+          <syg-select-option value="06">June</syg-select-option>
+          <syg-select-option value="07">July</syg-select-option>
+          <syg-select-option value="08">August</syg-select-option>
+          <syg-select-option value="09">September</syg-select-option>
+          <syg-select-option value="10">October</syg-select-option>
+          <syg-select-option value="11">November</syg-select-option>
+          <syg-select-option value="12">December</syg-select-option>
+        </syg-select>
+        <syg-select id="year">
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Statuses</ion-label>
-        <ion-select id="status" value="selected">
-          <ion-select-option value="selected">Selected</ion-select-option>
-          <ion-select-option value="default">Default</ion-select-option>
-          <ion-select-option value="disabled" disabled="true">Disabled</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Statuses</syg-label>
+        <syg-select id="status" value="selected">
+          <syg-select-option value="selected">Selected</syg-select-option>
+          <syg-select-option value="default">Default</syg-select-option>
+          <syg-select-option value="disabled" disabled="true">Disabled</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Currency</ion-label>
-        <ion-select id="currency">
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Currency</syg-label>
+        <syg-select id="currency">
+        </syg-select>
+      </syg-item>
 
-      <ion-button onclick="resetGender()">Reset Gender</ion-button>
+      <syg-button onclick="resetGender()">Reset Gender</syg-button>
 
-      <p aria-hidden="true" class="ion-padding">
+      <p aria-hidden="true" class="syg-padding">
         <code>gender: <span id="genderResult"></span></code>
         <br>
         <code>gaming: <span id="gamingResult"></span></code>
@@ -159,7 +159,7 @@
         <code>currency: <span id="currencyResult"></span></code>
         <br>
       </p>
-    </ion-content>
+    </syg-content>
 
     <style>
       .outer-content {
@@ -168,8 +168,8 @@
     </style>
 
     <script>
-      customElements.whenDefined('ion-select-option').then(async () => {
-        let selects = document.querySelectorAll('ion-select');
+      customElements.whenDefined('syg-select-option').then(async () => {
+        let selects = document.querySelectorAll('syg-select');
         selects.forEach(function (select) {
           select.addEventListener("ionChange", function () {
             setResults(select);
@@ -199,7 +199,7 @@
         var years = [1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999];
 
         for (var i = 0; i < years.length; i++) {
-          var option = document.createElement('ion-select-option');
+          var option = document.createElement('syg-select-option');
           option.value = option.innerHTML = years[i];
 
           year.appendChild(option);
@@ -238,7 +238,7 @@
         var currency = document.getElementById('currency');
 
         for (var i = 0; i < currencies.length; i++) {
-          var option = document.createElement('ion-select-option');
+          var option = document.createElement('syg-select-option');
           option.value = currencies[i];
           option.innerHTML = `${currencies[i].symbol} (${currencies[i].code}) ${currencies[i].name}`;
 
@@ -261,7 +261,7 @@
         gender.value = null;
       }
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

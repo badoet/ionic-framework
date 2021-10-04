@@ -28,7 +28,7 @@ export const mdLeaveAnimation = (
   const root = getElementRoot(baseEl);
   const { wrapperAnimation, backdropAnimation } = currentBreakpoint !== undefined ? createSheetLeaveAnimation(opts) : createLeaveAnimation();
 
-  backdropAnimation.addElement(root.querySelector('ion-backdrop')!);
+  backdropAnimation.addElement(root.querySelector('syg-backdrop')!);
   wrapperAnimation.addElement(root.querySelector('.modal-wrapper')!);
 
   return createAnimation()

@@ -1,282 +1,282 @@
 ```html
 <template>
   <!-- Basic -->
-  <ion-accordion-group>
-    <ion-accordion value="colors">
-      <ion-item slot="header">
-        <ion-label>Colors</ion-label>
-      </ion-item>
+  <syg-accordion-group>
+    <syg-accordion value="colors">
+      <syg-item slot="header">
+        <syg-label>Colors</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Red</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Green</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Blue</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="shapes">
-      <ion-item slot="header">
-        <ion-label>Shapes</ion-label>
-      </ion-item>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Red</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Green</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Blue</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="shapes">
+      <syg-item slot="header">
+        <syg-label>Shapes</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Circle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Triangle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Square</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="numbers">
-      <ion-item slot="header">
-        <ion-label>Numbers</ion-label>
-      </ion-item>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Circle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Triangle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Square</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="numbers">
+      <syg-item slot="header">
+        <syg-label>Numbers</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>1</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>2</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>3</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-  </ion-accordion-group>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>1</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>2</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>3</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+  </syg-accordion-group>
 
   <!-- Custom Icon -->
-  <ion-accordion-group>
-    <ion-accordion value="colors" :toggle-icon="arrowDownCircle">
-      <ion-item slot="header">
-        <ion-label>Colors</ion-label>
-      </ion-item>
+  <syg-accordion-group>
+    <syg-accordion value="colors" :toggle-icon="arrowDownCircle">
+      <syg-item slot="header">
+        <syg-label>Colors</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Red</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Green</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Blue</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="shapes" :toggle-icon="arrowDownCircle">
-      <ion-item slot="header">
-        <ion-label>Shapes</ion-label>
-      </ion-item>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Red</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Green</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Blue</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="shapes" :toggle-icon="arrowDownCircle">
+      <syg-item slot="header">
+        <syg-label>Shapes</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Circle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Triangle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Square</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="numbers" :toggle-icon="arrowDownCircle">
-      <ion-item slot="header">
-        <ion-label>Numbers</ion-label>
-      </ion-item>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Circle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Triangle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Square</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="numbers" :toggle-icon="arrowDownCircle">
+      <syg-item slot="header">
+        <syg-label>Numbers</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>1</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>2</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>3</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-  </ion-accordion-group>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>1</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>2</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>3</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+  </syg-accordion-group>
 
   <!-- Open Accordion -->
-  <ion-accordion-group value="colors">
-    <ion-accordion value="colors">
-      <ion-item slot="header">
-        <ion-label>Colors</ion-label>
-      </ion-item>
+  <syg-accordion-group value="colors">
+    <syg-accordion value="colors">
+      <syg-item slot="header">
+        <syg-label>Colors</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Red</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Green</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Blue</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="shapes">
-      <ion-item slot="header">
-        <ion-label>Shapes</ion-label>
-      </ion-item>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Red</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Green</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Blue</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="shapes">
+      <syg-item slot="header">
+        <syg-label>Shapes</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Circle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Triangle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Square</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="numbers">
-      <ion-item slot="header">
-        <ion-label>Numbers</ion-label>
-      </ion-item>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Circle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Triangle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Square</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="numbers">
+      <syg-item slot="header">
+        <syg-label>Numbers</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>1</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>2</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>3</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-  </ion-accordion-group>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>1</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>2</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>3</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+  </syg-accordion-group>
 
   <!-- Multiple Accordions -->
-  <ion-accordion-group :multiple="true" :value="['colors', 'numbers']">
-    <ion-accordion value="colors">
-      <ion-item slot="header">
-        <ion-label>Colors</ion-label>
-      </ion-item>
+  <syg-accordion-group :multiple="true" :value="['colors', 'numbers']">
+    <syg-accordion value="colors">
+      <syg-item slot="header">
+        <syg-label>Colors</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Red</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Green</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Blue</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="shapes">
-      <ion-item slot="header">
-        <ion-label>Shapes</ion-label>
-      </ion-item>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Red</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Green</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Blue</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="shapes">
+      <syg-item slot="header">
+        <syg-label>Shapes</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Circle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Triangle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Square</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="numbers">
-      <ion-item slot="header">
-        <ion-label>Numbers</ion-label>
-      </ion-item>
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Circle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Triangle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Square</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="numbers">
+      <syg-item slot="header">
+        <syg-label>Numbers</syg-label>
+      </syg-item>
 
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>1</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>2</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>3</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-  </ion-accordion-group>
-  
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>1</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>2</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>3</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+  </syg-accordion-group>
+
   <!-- Getting and setting the state of the accordion group -->
-  <ion-accordion-group value="numbers" ref="accordionGroup">
-    <ion-accordion value="colors">
-      <ion-item slot="header">
-        <ion-label>Colors</ion-label>
-      </ion-item>
-  
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Red</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Green</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Blue</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="shapes">
-      <ion-item slot="header">
-        <ion-label>Shapes</ion-label>
-      </ion-item>
-  
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>Circle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Triangle</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Square</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-    <ion-accordion value="numbers">
-      <ion-item slot="header">
-        <ion-label>Numbers</ion-label>
-      </ion-item>
-  
-      <ion-list slot="content">
-        <ion-item>
-          <ion-label>1</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>2</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>3</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-accordion>
-  </ion-accordion-group>
-  
-  <ion-button @click="logAccordionValue()">Log Value of Accordion Group</ion-button>
-  <ion-button @click="closeAccordion()">Close All Accordions</ion-button>
+  <syg-accordion-group value="numbers" ref="accordionGroup">
+    <syg-accordion value="colors">
+      <syg-item slot="header">
+        <syg-label>Colors</syg-label>
+      </syg-item>
+
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Red</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Green</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Blue</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="shapes">
+      <syg-item slot="header">
+        <syg-label>Shapes</syg-label>
+      </syg-item>
+
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>Circle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Triangle</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Square</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+    <syg-accordion value="numbers">
+      <syg-item slot="header">
+        <syg-label>Numbers</syg-label>
+      </syg-item>
+
+      <syg-list slot="content">
+        <syg-item>
+          <syg-label>1</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>2</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>3</syg-label>
+        </syg-item>
+      </syg-list>
+    </syg-accordion>
+  </syg-accordion-group>
+
+  <syg-button @click="logAccordionValue()">Log Value of Accordion Group</syg-button>
+  <syg-button @click="closeAccordion()">Close All Accordions</syg-button>
 </template>
 
 <script>

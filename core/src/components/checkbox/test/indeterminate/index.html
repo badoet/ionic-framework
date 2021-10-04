@@ -10,25 +10,25 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body onLoad="onLoad()">
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Checkbox - Indeterminate</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Checkbox - Indeterminate</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-list-header>
-        <ion-label>
+    <syg-content id="content">
+      <syg-list-header>
+        <syg-label>
           Native
-        </ion-label>
-      </ion-list-header>
+        </syg-label>
+      </syg-list-header>
 
-      <div class="ion-padding-start">
+      <div class="syg-padding-start">
         <!-- Default to unchecked -->
         <label for="unchecked">Unchecked</label>
         <input name="unchecked" id="unchecked" type="checkbox">
@@ -50,76 +50,76 @@
         <br>
       </div>
 
-      <ion-list-header>
-        <ion-label>
+      <syg-list-header>
+        <syg-label>
           Ionic
-        </ion-label>
-      </ion-list-header>
-      <ion-item>
-        <ion-label>Unchecked</ion-label>
-        <ion-checkbox slot="end"></ion-checkbox>
-      </ion-item>
+        </syg-label>
+      </syg-list-header>
+      <syg-item>
+        <syg-label>Unchecked</syg-label>
+        <syg-checkbox slot="end"></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Checked</ion-label>
-        <ion-checkbox slot="end" checked></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Checked</syg-label>
+        <syg-checkbox slot="end" checked></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Indeterminate</ion-label>
-        <ion-checkbox slot="end" indeterminate></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Indeterminate</syg-label>
+        <syg-checkbox slot="end" indeterminate></syg-checkbox>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Checked / Indeterminate</ion-label>
-        <ion-checkbox slot="end" checked indeterminate></ion-checkbox>
-      </ion-item>
+      <syg-item>
+        <syg-label>Checked / Indeterminate</syg-label>
+        <syg-checkbox slot="end" checked indeterminate></syg-checkbox>
+      </syg-item>
 
-      <ion-list-header>
-        <ion-label>
+      <syg-list-header>
+        <syg-label>
           Colors
-        </ion-label>
-      </ion-list-header>
-      <div class="ion-padding-start">
-        <ion-checkbox aria-label="Default Indeterminate" indeterminate></ion-checkbox>
-        <ion-checkbox aria-label="Secondary Indeterminate" indeterminate color="secondary"></ion-checkbox>
-        <ion-checkbox aria-label="Tertiary Indeterminate" indeterminate color="tertiary"></ion-checkbox>
-        <ion-checkbox aria-label="Success Indeterminate" indeterminate color="success"></ion-checkbox>
-        <ion-checkbox aria-label="Warning Indeterminate" indeterminate color="warning"></ion-checkbox>
-        <ion-checkbox aria-label="Danger Indeterminate" indeterminate color="danger"></ion-checkbox>
-        <ion-checkbox aria-label="Dark Indeterminate" indeterminate color="dark"></ion-checkbox>
-        <ion-checkbox aria-label="Medium Indeterminate" indeterminate color="medium"></ion-checkbox>
-        <ion-checkbox aria-label="Light Indeterminate" indeterminate color="light"></ion-checkbox>
+        </syg-label>
+      </syg-list-header>
+      <div class="syg-padding-start">
+        <syg-checkbox aria-label="Default Indeterminate" indeterminate></syg-checkbox>
+        <syg-checkbox aria-label="Secondary Indeterminate" indeterminate color="secondary"></syg-checkbox>
+        <syg-checkbox aria-label="Tertiary Indeterminate" indeterminate color="tertiary"></syg-checkbox>
+        <syg-checkbox aria-label="Success Indeterminate" indeterminate color="success"></syg-checkbox>
+        <syg-checkbox aria-label="Warning Indeterminate" indeterminate color="warning"></syg-checkbox>
+        <syg-checkbox aria-label="Danger Indeterminate" indeterminate color="danger"></syg-checkbox>
+        <syg-checkbox aria-label="Dark Indeterminate" indeterminate color="dark"></syg-checkbox>
+        <syg-checkbox aria-label="Medium Indeterminate" indeterminate color="medium"></syg-checkbox>
+        <syg-checkbox aria-label="Light Indeterminate" indeterminate color="light"></syg-checkbox>
       </div>
 
-      <ion-list-header>
-        <ion-label>
+      <syg-list-header>
+        <syg-label>
           Parent
-        </ion-label>
-      </ion-list-header>
+        </syg-label>
+      </syg-list-header>
 
       <ul>
         <li>
-          <ion-checkbox aria-labelledby="tall-label-0" indeterminate></ion-checkbox>
+          <syg-checkbox aria-labelledby="tall-label-0" indeterminate></syg-checkbox>
           <label id="tall-label-0">Tall Things</label>
           <ul>
             <li>
-              <ion-checkbox aria-labelledby="tall-label-1" checked></ion-checkbox>
+              <syg-checkbox aria-labelledby="tall-label-1" checked></syg-checkbox>
               <label id="tall-label-1">Skyscrapers</label>
             </li>
             <li>
-              <ion-checkbox aria-labelledby="tall-label-2"></ion-checkbox>
+              <syg-checkbox aria-labelledby="tall-label-2"></syg-checkbox>
               <label id="tall-label-2">Trees</label>
             </li>
             <li>
-              <ion-checkbox aria-labelledby="tall-label-3"></ion-checkbox>
+              <syg-checkbox aria-labelledby="tall-label-3"></syg-checkbox>
               <label id="tall-label-3">Giants</label>
             </li>
           </ul>
         </li>
       </ul>
-    </ion-content>
-  </ion-app>
+    </syg-content>
+  </syg-app>
 
   <style>
     ul {
@@ -148,7 +148,7 @@
     }
 
     function onLoad() {
-      var checkboxes = document.getElementsByTagName("ion-checkbox");
+      var checkboxes = document.getElementsByTagName("syg-checkbox");
 
       for (var i = 0; i < checkboxes.length; i++) {
         var checkbox = checkboxes[i];
@@ -203,7 +203,7 @@
     }
 
     function getChildren() {
-      return document.querySelectorAll("ion-checkbox[name^=tall-]");
+      return document.querySelectorAll("syg-checkbox[name^=tall-]");
     }
   </script>
 </body>

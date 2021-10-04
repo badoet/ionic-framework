@@ -1,14 +1,14 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Method, Prop, Watch, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Animation, AnimationBuilder, ComponentProps, ComponentRef, FrameworkDelegate, Gesture, NavOutlet, RouteID, RouteWrite, RouterDirection, RouterOutletOptions, SwipeGestureHandler } from '../../interface';
 import { getTimeGivenProgression } from '../../utils/animation/cubic-bezier';
 import { attachComponent, detachComponent } from '../../utils/framework-delegate';
 import { transition } from '../../utils/transition';
 
 @Component({
-  tag: 'ion-router-outlet',
+  tag: 'syg-router-outlet',
   styleUrl: 'route-outlet.scss',
   shadow: true
 })
@@ -26,7 +26,7 @@ export class RouterOutlet implements ComponentInterface, NavOutlet {
   /**
    * The mode determines which platform styles to use.
    */
-  @Prop({ mutable: true }) mode = getIonMode(this);
+  @Prop({ mutable: true }) mode = getSygMode(this);
 
   /** @internal */
   @Prop() delegate?: FrameworkDelegate;
@@ -37,7 +37,7 @@ export class RouterOutlet implements ComponentInterface, NavOutlet {
   @Prop() animated = true;
 
   /**
-   * By default `ion-nav` animates transition between pages based in the mode (ios or material design).
+   * By default `syg-nav` animates transition between pages based in the mode (ios or material design).
    * However, this property allows to create custom transition using `AnimateBuilder` functions.
    */
   @Prop() animation?: AnimationBuilder;
@@ -166,7 +166,7 @@ export class RouterOutlet implements ComponentInterface, NavOutlet {
 
     // attach entering view to DOM
     const leavingEl = this.activeEl;
-    const enteringEl = await attachComponent(this.delegate, this.el, component, ['ion-page', 'ion-page-invisible'], params);
+    const enteringEl = await attachComponent(this.delegate, this.el, component, ['syg-page', 'syg-page-invisible'], params);
 
     this.activeComponent = component;
     this.activeEl = enteringEl;

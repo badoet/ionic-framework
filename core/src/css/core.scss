@@ -18,15 +18,15 @@ html {
 }
 
 body {
-  background: var(--ion-background-color);
+  background: var(--syg-background-color);
 }
 
 body.backdrop-no-scroll {
   overflow: hidden;
 }
 
-// TODO: Block scrolling in ion-content, breaks inside ion-modal
-// body.backdrop-no-scroll .ion-page > ion-content {
+// TODO: Block scrolling in ion-content, breaks inside syg-modal
+// body.backdrop-no-scroll .syg-page > ion-content {
 //   --overflow: hidden;
 // }
 
@@ -39,9 +39,9 @@ body.backdrop-no-scroll {
  * Footer also needs this. We do not adjust the bottom
  * padding though because of the safe area.
  */
-html.ios ion-modal.modal-card ion-header ion-toolbar:first-of-type,
-html.ios ion-modal.modal-sheet ion-header ion-toolbar:first-of-type,
-html.ios ion-modal ion-footer ion-toolbar:first-of-type {
+html.ios syg-modal.modal-card syg-header syg-toolbar:first-of-type,
+html.ios syg-modal.modal-sheet syg-header syg-toolbar:first-of-type,
+html.ios syg-modal syg-footer syg-toolbar:first-of-type {
   padding-top: 6px;
 }
 
@@ -50,8 +50,8 @@ html.ios ion-modal ion-footer ion-toolbar:first-of-type {
 * bottom of the header. We accomplish this by targeting
 * the last toolbar in the header.
 */
-html.ios ion-modal.modal-card ion-header ion-toolbar:last-of-type,
-html.ios ion-modal.modal-sheet ion-header ion-toolbar:last-of-type {
+html.ios syg-modal.modal-card syg-header syg-toolbar:last-of-type,
+html.ios syg-modal.modal-sheet syg-header syg-toolbar:last-of-type {
   padding-bottom: 6px;
 }
 
@@ -60,19 +60,19 @@ html.ios ion-modal.modal-sheet ion-header ion-toolbar:last-of-type {
 * of toolbars while accounting for
 * safe area values when in landscape.
 */
-html.ios ion-modal ion-toolbar {
+html.ios syg-modal syg-toolbar {
   padding-right: calc(var(--ion-safe-area-right) + 8px);
   padding-left: calc(var(--ion-safe-area-left) + 8px);
 }
 
 /**
- * .ion-page needs to explicitly set
+ * .syg-page needs to explicitly set
  * the border radius in WebKit otherwise
  * modals will not show border radius properly.
  * Do not use inherit as that will not
  * work with shadow dom in this case.
  */
-html.ios ion-modal .ion-page {
+html.ios syg-modal .syg-page {
   border-radius: 10px 10px 0 0;
 }
 
@@ -81,7 +81,7 @@ html.ios ion-modal .ion-page {
  * should only have backdrop on first instance.
  */
 @media screen and (min-width: 768px) {
-  html.ios ion-modal.modal-card:first-of-type {
+  html.ios syg-modal.modal-card:first-of-type {
     --backdrop-opacity: 0.18;
   }
 }
@@ -117,7 +117,7 @@ html.ios ion-modal .ion-page {
 // Page Container Structure
 // --------------------------------------------------
 
-.ion-page {
+.syg-page {
   @include position(0, 0, 0, 0);
 
   display: flex;
@@ -131,34 +131,34 @@ html.ios ion-modal .ion-page {
   z-index: $z-index-page-container;
 }
 
-.split-pane-visible > .ion-page.split-pane-main {
+.split-pane-visible > .syg-page.split-pane-main {
   position: relative;
 }
 
-ion-route,
-ion-route-redirect,
-ion-router,
-ion-select-option,
-ion-nav-controller,
-ion-menu-controller,
-ion-action-sheet-controller,
-ion-alert-controller,
-ion-loading-controller,
-ion-modal-controller,
-ion-picker-controller,
-ion-popover-controller,
-ion-toast-controller,
-.ion-page-hidden,
+syg-route,
+syg-route-redirect,
+syg-router,
+syg-select-option,
+syg-nav-controller,
+syg-menu-controller,
+syg-action-sheet-controller,
+syg-alert-controller,
+syg-loading-controller,
+syg-modal-controller,
+syg-picker-controller,
+syg-popover-controller,
+syg-toast-controller,
+.syg-page-hidden,
 [hidden] {
   /* stylelint-disable-next-line declaration-no-important */
   display: none !important;
 }
 
-.ion-page-invisible {
+.syg-page-invisible {
   opacity: 0;
 }
 
-.can-go-back > ion-header ion-back-button {
+.can-go-back > syg-header syg-back-button {
   display: block;
 }
 
@@ -199,8 +199,8 @@ html.plt-ios.plt-hybrid, html.plt-ios.plt-pwa {
 // Global Card Styles
 // --------------------------------------------------
 
-ion-card.ion-color .ion-inherit-color,
-ion-card-header.ion-color .ion-inherit-color {
+syg-card.ion-color .ion-inherit-color,
+syg-card-header.ion-color .ion-inherit-color {
   color: inherit;
 }
 
@@ -243,39 +243,39 @@ ion-card-header.ion-color .ion-inherit-color {
 }
 
 // Accordion Styles
-ion-accordion-group.accordion-group-expand-inset ion-accordion:first-of-type {
+syg-accordion-group.accordion-group-expand-inset syg-accordion:first-of-type {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-ion-accordion-group.accordion-group-expand-inset ion-accordion:last-of-type {
+syg-accordion-group.accordion-group-expand-inset syg-accordion:last-of-type {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-ion-accordion-group ion-accordion:last-of-type ion-item {
+syg-accordion-group syg-accordion:last-of-type syg-item {
   --border-width: 0px;
 }
 
-ion-accordion.accordion-animated .ion-accordion-toggle-icon {
+syg-accordion.accordion-animated .syg-accordion-toggle-icon {
   transition: 300ms transform cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  ion-accordion .ion-accordion-toggle-icon {
+  syg-accordion .syg-accordion-toggle-icon {
     /* stylelint-disable declaration-no-important */
     transition: none !important;
   }
 }
 
-ion-accordion.accordion-expanding .ion-accordion-toggle-icon,
-ion-accordion.accordion-expanded .ion-accordion-toggle-icon {
+syg-accordion.accordion-expanding .syg-accordion-toggle-icon,
+syg-accordion.accordion-expanded .syg-accordion-toggle-icon {
   transform: rotate(180deg);
 }
-ion-accordion-group.accordion-group-expand-inset.md ion-accordion.accordion-previous ion-item[slot="header"] {
+syg-accordion-group.accordion-group-expand-inset.md syg-accordion.accordion-previous syg-item[slot="header"] {
   --border-width: 0px;
   --inner-border-width: 0px;
 }
 
-ion-accordion-group.accordion-group-expand-inset.md ion-accordion.accordion-expanding:first-of-type,
-ion-accordion-group.accordion-group-expand-inset.md ion-accordion.accordion-expanded:first-of-type {
+syg-accordion-group.accordion-group-expand-inset.md syg-accordion.accordion-expanding:first-of-type,
+syg-accordion-group.accordion-group-expand-inset.md syg-accordion.accordion-expanded:first-of-type {
   margin-top: 0;
 }

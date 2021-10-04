@@ -9,34 +9,34 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Ionic CDN demo</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Ionic CDN demo</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
+    <syg-content>
 
-      <ion-virtual-scroll id="virtual">
+      <syg-virtual-scroll id="virtual">
         <template>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>Card Header</ion-card-title>
-            </ion-card-header>
-            <ion-card-content class="content"></ion-card-content>
-          </ion-card>
+          <syg-card>
+            <syg-card-header>
+              <syg-card-title>Card Header</syg-card-title>
+            </syg-card-header>
+            <syg-card-content class="content"></syg-card-content>
+          </syg-card>
         </template>
-      </ion-virtual-scroll>
+      </syg-virtual-scroll>
 
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     const virtual = document.getElementById('virtual');
@@ -55,7 +55,7 @@
 
     function renderHeader(el, item) {
       if (!el) {
-        el = document.createElement('ion-item-divider');
+        el = document.createElement('syg-item-divider');
       }
       el.textContent = item;
       return el;

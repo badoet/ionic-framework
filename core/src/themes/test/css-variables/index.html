@@ -11,7 +11,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   <link id="theme" href="/src/themes/test/css-variables/css/default.css" rel="stylesheet">
 
   <style>
@@ -31,20 +31,20 @@
       align-items: center;
     }
 
-    .right-container ion-select {
+    .right-container syg-select {
       padding-top: 0;
       padding-bottom: 0;
     }
 
-    ion-fab-button {
+    syg-fab-button {
       display: inline-block;
     }
 
-    ion-segment {
+    syg-segment {
       margin-bottom: 8px;
     }
 
-    ion-toolbar ion-segment {
+    syg-toolbar syg-segment {
       margin-bottom: 0;
     }
 
@@ -52,544 +52,544 @@
       font-size: 48px;
     }
 
-    ion-breadcrumbs,
-    ion-progress-bar {
+    syg-breadcrumbs,
+    syg-progress-bar {
       margin-bottom: 10px;
     }
   </style>
 </head>
 
 <body>
-  <ion-app>
-    <ion-tabs>
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="list">
-          <ion-label>Lists</ion-label>
+  <syg-app>
+    <syg-tabs>
+      <syg-tab-bar slot="bottom">
+        <syg-tab-button tab="list">
+          <syg-label>Lists</syg-label>
           <ion-icon name="list"></ion-icon>
-        </ion-tab-button>
-        <ion-tab-button tab="colors">
-          <ion-label>Colors</ion-label>
+        </syg-tab-button>
+        <syg-tab-button tab="colors">
+          <syg-label>Colors</syg-label>
           <ion-icon name="brush"></ion-icon>
-        </ion-tab-button>
-        <ion-tab-button tab="overlays">
-          <ion-label>Overlays</ion-label>
+        </syg-tab-button>
+        <syg-tab-button tab="overlays">
+          <syg-label>Overlays</syg-label>
           <ion-icon ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-        </ion-tab-button>
-      </ion-tab-bar>
+        </syg-tab-button>
+      </syg-tab-bar>
 
-      <ion-tab tab="list">
-        <ion-header>
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-back-button default-href="/"></ion-back-button>
-              <ion-menu-button auto-hide="false"></ion-menu-button>
-              <ion-button>Default</ion-button>
-              <ion-button fill="solid">Solid</ion-button>
-              <ion-button fill="clear">Clear</ion-button>
-              <ion-button fill="outline">Outline</ion-button>
-            </ion-buttons>
+      <syg-tab tab="list">
+        <syg-header>
+          <syg-toolbar>
+            <syg-buttons slot="start">
+              <syg-back-button default-href="/"></syg-back-button>
+              <syg-menu-button auto-hide="false"></syg-menu-button>
+              <syg-button>Default</syg-button>
+              <syg-button fill="solid">Solid</syg-button>
+              <syg-button fill="clear">Clear</syg-button>
+              <syg-button fill="outline">Outline</syg-button>
+            </syg-buttons>
 
-            <ion-title>Lists</ion-title>
+            <syg-title>Lists</syg-title>
 
-            <ion-buttons slot="primary">
-              <ion-back-button color="secondary" default-href="/"></ion-back-button>
-              <ion-menu-button color="secondary" auto-hide="false"></ion-menu-button>
-              <ion-button color="secondary">Default</ion-button>
-              <ion-button color="secondary" fill="solid">Solid</ion-button>
-              <ion-button color="secondary" fill="clear">Clear</ion-button>
-              <ion-button color="secondary" fill="outline">Outline</ion-button>
-            </ion-buttons>
-          </ion-toolbar>
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-back-button class="ion-focused" default-href="/"></ion-back-button>
-              <ion-menu-button class="ion-focused" auto-hide="false"></ion-menu-button>
-              <ion-button class="ion-focused">Default</ion-button>
-              <ion-button class="ion-focused" fill="solid">Solid</ion-button>
-              <ion-button class="ion-focused" fill="clear">Clear</ion-button>
-              <ion-button class="ion-focused" fill="outline">Outline</ion-button>
-            </ion-buttons>
+            <syg-buttons slot="primary">
+              <syg-back-button color="secondary" default-href="/"></syg-back-button>
+              <syg-menu-button color="secondary" auto-hide="false"></syg-menu-button>
+              <syg-button color="secondary">Default</syg-button>
+              <syg-button color="secondary" fill="solid">Solid</syg-button>
+              <syg-button color="secondary" fill="clear">Clear</syg-button>
+              <syg-button color="secondary" fill="outline">Outline</syg-button>
+            </syg-buttons>
+          </syg-toolbar>
+          <syg-toolbar>
+            <syg-buttons slot="start">
+              <syg-back-button class="syg-focused" default-href="/"></syg-back-button>
+              <syg-menu-button class="syg-focused" auto-hide="false"></syg-menu-button>
+              <syg-button class="syg-focused">Default</syg-button>
+              <syg-button class="syg-focused" fill="solid">Solid</syg-button>
+              <syg-button class="syg-focused" fill="clear">Clear</syg-button>
+              <syg-button class="syg-focused" fill="outline">Outline</syg-button>
+            </syg-buttons>
 
-            <ion-title>Lists</ion-title>
+            <syg-title>Lists</syg-title>
 
-            <ion-buttons slot="primary">
-              <ion-back-button color="secondary" class="ion-focused" default-href="/"></ion-back-button>
-              <ion-menu-button color="secondary" class="ion-focused" auto-hide="false"></ion-menu-button>
-              <ion-button color="secondary" class="ion-focused">Default</ion-button>
-              <ion-button color="secondary" class="ion-focused" fill="solid">Solid</ion-button>
-              <ion-button color="secondary" class="ion-focused" fill="clear">Clear</ion-button>
-              <ion-button color="secondary" class="ion-focused" fill="outline">Outline</ion-button>
-            </ion-buttons>
-          </ion-toolbar>
-          <ion-toolbar>
-            <ion-segment value="default" class="theme-picker">
-              <ion-segment-button value="default">
-                <ion-label>Default</ion-label>
-              </ion-segment-button>
-              <ion-segment-button value="oceanic">
-                <ion-label>Oceanic</ion-label>
-              </ion-segment-button>
-              <ion-segment-button value="vibrant">
-                <ion-label>Vibrant</ion-label>
-              </ion-segment-button>
-              <ion-segment-button value="dark">
-                <ion-label>Dark</ion-label>
-              </ion-segment-button>
-              <ion-segment-button value="toolbar">
-                <ion-label>Toolbar</ion-label>
-              </ion-segment-button>
-              <ion-segment-button disabled>
-                  <ion-label>Disabled</ion-label>
-              </ion-segment-button>
-            </ion-segment>
-          </ion-toolbar>
-        </ion-header>
+            <syg-buttons slot="primary">
+              <syg-back-button color="secondary" class="syg-focused" default-href="/"></syg-back-button>
+              <syg-menu-button color="secondary" class="syg-focused" auto-hide="false"></syg-menu-button>
+              <syg-button color="secondary" class="syg-focused">Default</syg-button>
+              <syg-button color="secondary" class="syg-focused" fill="solid">Solid</syg-button>
+              <syg-button color="secondary" class="syg-focused" fill="clear">Clear</syg-button>
+              <syg-button color="secondary" class="syg-focused" fill="outline">Outline</syg-button>
+            </syg-buttons>
+          </syg-toolbar>
+          <syg-toolbar>
+            <syg-segment value="default" class="theme-picker">
+              <syg-segment-button value="default">
+                <syg-label>Default</syg-label>
+              </syg-segment-button>
+              <syg-segment-button value="oceanic">
+                <syg-label>Oceanic</syg-label>
+              </syg-segment-button>
+              <syg-segment-button value="vibrant">
+                <syg-label>Vibrant</syg-label>
+              </syg-segment-button>
+              <syg-segment-button value="dark">
+                <syg-label>Dark</syg-label>
+              </syg-segment-button>
+              <syg-segment-button value="toolbar">
+                <syg-label>Toolbar</syg-label>
+              </syg-segment-button>
+              <syg-segment-button disabled>
+                  <syg-label>Disabled</syg-label>
+              </syg-segment-button>
+            </syg-segment>
+          </syg-toolbar>
+        </syg-header>
 
-        <ion-content class="ion-padding">
-          <ion-breadcrumbs max-items="6" items-before-collapse="3" items-after-collapse="3">
-            <ion-breadcrumb href="#">
+        <syg-content class="syg-padding">
+          <syg-breadcrumbs max-items="6" items-before-collapse="3" items-after-collapse="3">
+            <syg-breadcrumb href="#">
               <ion-icon slot="start" name="home"></ion-icon>
               Home
-            </ion-breadcrumb>
-            <ion-breadcrumb href="#documents" class="ion-focused">
+            </syg-breadcrumb>
+            <syg-breadcrumb href="#documents" class="syg-focused">
               <ion-icon slot="start" name="folder"></ion-icon>
               Documents
-            </ion-breadcrumb>
-            <ion-breadcrumb href="#folders">
+            </syg-breadcrumb>
+            <syg-breadcrumb href="#folders">
               <ion-icon slot="start" name="folder"></ion-icon>
               Folders
-            </ion-breadcrumb>
-            <ion-breadcrumb href="#files">
+            </syg-breadcrumb>
+            <syg-breadcrumb href="#files">
               <ion-icon slot="start" name="folder"></ion-icon>
               Files
-            </ion-breadcrumb>
-            <ion-breadcrumb href="#projects">
+            </syg-breadcrumb>
+            <syg-breadcrumb href="#projects">
               <ion-icon slot="start" name="folder"></ion-icon>
               Projects
-            </ion-breadcrumb>
-            <ion-breadcrumb href="#user-research">
+            </syg-breadcrumb>
+            <syg-breadcrumb href="#user-research">
               <ion-icon slot="start" name="folder"></ion-icon>
               User Research
-            </ion-breadcrumb>
-            <ion-breadcrumb>
+            </syg-breadcrumb>
+            <syg-breadcrumb>
               <ion-icon slot="start" name="document"></ion-icon>
               Survey.txt
-            </ion-breadcrumb>
-          </ion-breadcrumbs>
+            </syg-breadcrumb>
+          </syg-breadcrumbs>
 
           <div class="wrapper">
             <section>
-              <ion-card>
-                <ion-card-header>
-                  <ion-card-title>Card Header</ion-card-title>
-                </ion-card-header>
+              <syg-card>
+                <syg-card-header>
+                  <syg-card-title>Card Header</syg-card-title>
+                </syg-card-header>
 
-                <ion-card-content>
+                <syg-card-content>
                   Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a
                   week in the woods.
                   Wash your spirit clean.
-                </ion-card-content>
-              </ion-card>
-              <ion-card>
-                <ion-item>
+                </syg-card-content>
+              </syg-card>
+              <syg-card>
+                <syg-item>
                   <ion-icon name="pin" slot="start"></ion-icon>
-                  ion-item in a card, icon left, button right
-                  <ion-button fill="outline" slot="end">View</ion-button>
-                </ion-item>
+                  syg-item in a card, icon left, button right
+                  <syg-button fill="outline" slot="end">View</syg-button>
+                </syg-item>
 
-                <ion-card-content>
-                  This is content, without any paragraph or header tags, within an ion-card-content element.
-                </ion-card-content>
-              </ion-card>
+                <syg-card-content>
+                  This is content, without any paragraph or header tags, within an syg-card-content element.
+                </syg-card-content>
+              </syg-card>
 
-              <ion-card>
-                <ion-item href="#" class="ion-activated">
+              <syg-card>
+                <syg-item href="#" class="syg-activated">
                   <ion-icon name="wifi" slot="start"></ion-icon>
                   Card Link Item 1 activated
-                </ion-item>
+                </syg-item>
 
-                <ion-item href="#">
+                <syg-item href="#">
                   <ion-icon name="wine" slot="start"></ion-icon>
                   Card Link Item 2
-                </ion-item>
+                </syg-item>
 
-                <ion-item button class="ion-activated">
+                <syg-item button class="syg-activated">
                   <ion-icon name="warning" slot="start"></ion-icon>
                   Card Button Item 1 activated
-                </ion-item>
+                </syg-item>
 
-                <ion-item button class="ion-focused">
+                <syg-item button class="syg-focused">
                   <ion-icon name="walk" slot="start"></ion-icon>
                   Card Button Item 2 focused
-                </ion-item>
-              </ion-card>
+                </syg-item>
+              </syg-card>
 
-              <ion-card>
-                <ion-card-content>
-                  <ion-item fill="solid">
+              <syg-card>
+                <syg-card-content>
+                  <syg-item fill="solid">
                     <ion-icon slot="start" name="calendar-clear-outline"></ion-icon>
-                    <ion-label position="floating">Standard</ion-label>
-                    <ion-input value="Has Initial Value"></ion-input>
-                    <ion-note slot="error">Error Text</ion-note>
-                  </ion-item>
+                    <syg-label position="floating">Standard</syg-label>
+                    <syg-input value="Has Initial Value"></syg-input>
+                    <syg-note slot="error">Error Text</syg-note>
+                  </syg-item>
 
-                  <ion-item fill="outline">
-                    <ion-label position="floating">Standard</ion-label>
+                  <syg-item fill="outline">
+                    <syg-label position="floating">Standard</syg-label>
                     <ion-icon slot="end" name="trash"></ion-icon>
-                    <ion-input></ion-input>
-                    <ion-note slot="error">Helper Text</ion-note>
-                  </ion-item>
-                </ion-card-content>
-              </ion-card>
+                    <syg-input></syg-input>
+                    <syg-note slot="error">Helper Text</syg-note>
+                  </syg-item>
+                </syg-card-content>
+              </syg-card>
             </section>
 
             <section>
-              <ion-list>
-                <ion-item button>
-                  <ion-label>Pokémon Yellow</ion-label>
-                  <ion-note slot="end">Note</ion-note>
-                </ion-item>
-                <ion-item button>
-                  <ion-label>Super Metroid</ion-label>
-                  <ion-note slot="end">Note</ion-note>
-                </ion-item>
-                <ion-item href="#">
-                  <ion-label>Mega Man X</ion-label>
-                  <ion-note slot="end">Note</ion-note>
-                </ion-item>
-                <ion-item href="#" class="ion-activated">
-                  <ion-label>The Legend of Zelda</ion-label>
-                  <ion-note slot="end">Note</ion-note>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Pac-Man</ion-label>
-                  <ion-note slot="end">Note</ion-note>
-                </ion-item>
-                <ion-item>
-                  <ion-label>
+              <syg-list>
+                <syg-item button>
+                  <syg-label>Pokémon Yellow</syg-label>
+                  <syg-note slot="end">Note</syg-note>
+                </syg-item>
+                <syg-item button>
+                  <syg-label>Super Metroid</syg-label>
+                  <syg-note slot="end">Note</syg-note>
+                </syg-item>
+                <syg-item href="#">
+                  <syg-label>Mega Man X</syg-label>
+                  <syg-note slot="end">Note</syg-note>
+                </syg-item>
+                <syg-item href="#" class="syg-activated">
+                  <syg-label>The Legend of Zelda</syg-label>
+                  <syg-note slot="end">Note</syg-note>
+                </syg-item>
+                <syg-item>
+                  <syg-label>Pac-Man</syg-label>
+                  <syg-note slot="end">Note</syg-note>
+                </syg-item>
+                <syg-item>
+                  <syg-label>
                     <h2>Super Mario World</h2>
                     <p>Featuring Luigi</p>
-                  </ion-label>
-                  <ion-note slot="end">Note</ion-note>
-                </ion-item>
-                <ion-item>
-                  <ion-label>
+                  </syg-label>
+                  <syg-note slot="end">Note</syg-note>
+                </syg-item>
+                <syg-item>
+                  <syg-label>
                     <h2>Street Fighter II</h2>
                     <p>The Sequel</p>
-                  </ion-label>
-                  <ion-note slot="end">Note</ion-note>
-                </ion-item>
-                <ion-item-divider>Sliding Items</ion-item-divider>
-                <ion-item-sliding>
-                  <ion-item>
-                    <ion-label>Half Life</ion-label>
-                  </ion-item>
-                  <ion-item-options>
-                    <ion-item-option>More</ion-item-option>
-                  </ion-item-options>
-                </ion-item-sliding>
-                <ion-item-sliding>
-                  <ion-item color="secondary">
-                    <ion-label>Final Fantasy VII</ion-label>
-                  </ion-item>
-                  <ion-item-options>
-                    <ion-item-option>More</ion-item-option>
-                  </ion-item-options>
-                </ion-item-sliding>
-                <ion-item-sliding>
-                  <ion-item>
-                    <ion-label>Tetris</ion-label>
-                  </ion-item>
-                  <ion-item-options>
-                    <ion-item-option>More</ion-item-option>
-                  </ion-item-options>
-                </ion-item-sliding>
-                <ion-item-sliding>
-                  <ion-item>
-                    <ion-label>Donkey Kong III</ion-label>
-                  </ion-item>
-                  <ion-item-options>
-                    <ion-item-option>More</ion-item-option>
-                  </ion-item-options>
-                </ion-item-sliding>
-                <ion-item-sliding>
-                  <ion-item>
-                    <ion-label>Goldeneye 007</ion-label>
-                  </ion-item>
-                  <ion-item-options>
-                    <ion-item-option disabled="true">More</ion-item-option>
-                  </ion-item-options>
-                </ion-item-sliding>
-              </ion-list>
+                  </syg-label>
+                  <syg-note slot="end">Note</syg-note>
+                </syg-item>
+                <syg-item-divider>Sliding Items</syg-item-divider>
+                <syg-item-sliding>
+                  <syg-item>
+                    <syg-label>Half Life</syg-label>
+                  </syg-item>
+                  <syg-item-options>
+                    <syg-item-option>More</syg-item-option>
+                  </syg-item-options>
+                </syg-item-sliding>
+                <syg-item-sliding>
+                  <syg-item color="secondary">
+                    <syg-label>Final Fantasy VII</syg-label>
+                  </syg-item>
+                  <syg-item-options>
+                    <syg-item-option>More</syg-item-option>
+                  </syg-item-options>
+                </syg-item-sliding>
+                <syg-item-sliding>
+                  <syg-item>
+                    <syg-label>Tetris</syg-label>
+                  </syg-item>
+                  <syg-item-options>
+                    <syg-item-option>More</syg-item-option>
+                  </syg-item-options>
+                </syg-item-sliding>
+                <syg-item-sliding>
+                  <syg-item>
+                    <syg-label>Donkey Kong III</syg-label>
+                  </syg-item>
+                  <syg-item-options>
+                    <syg-item-option>More</syg-item-option>
+                  </syg-item-options>
+                </syg-item-sliding>
+                <syg-item-sliding>
+                  <syg-item>
+                    <syg-label>Goldeneye 007</syg-label>
+                  </syg-item>
+                  <syg-item-options>
+                    <syg-item-option disabled="true">More</syg-item-option>
+                  </syg-item-options>
+                </syg-item-sliding>
+              </syg-list>
             </section>
 
             <section>
-              <ion-list>
-                <ion-radio-group id="fruitRadio" value="grape">
-                  <ion-item-divider>
-                    <ion-label>Fruits</ion-label>
-                  </ion-item-divider>
-                  <ion-item>
-                    <ion-label>Apple</ion-label>
-                    <ion-radio slot="start" value="apple"></ion-radio>
-                  </ion-item>
+              <syg-list>
+                <syg-radio-group id="fruitRadio" value="grape">
+                  <syg-item-divider>
+                    <syg-label>Fruits</syg-label>
+                  </syg-item-divider>
+                  <syg-item>
+                    <syg-label>Apple</syg-label>
+                    <syg-radio slot="start" value="apple"></syg-radio>
+                  </syg-item>
 
-                  <ion-item>
-                    <ion-label>Grape, checked, disabled</ion-label>
-                    <ion-radio slot="start" id="grapeChecked" value="grape" disabled></ion-radio>
-                  </ion-item>
+                  <syg-item>
+                    <syg-label>Grape, checked, disabled</syg-label>
+                    <syg-radio slot="start" id="grapeChecked" value="grape" disabled></syg-radio>
+                  </syg-item>
 
-                  <ion-item>
-                    <ion-label>Cherry</ion-label>
-                    <ion-radio slot="start" color="danger" value="cherry"></ion-radio>
-                  </ion-item>
-                </ion-radio-group>
-              </ion-list>
+                  <syg-item>
+                    <syg-label>Cherry</syg-label>
+                    <syg-radio slot="start" color="danger" value="cherry"></syg-radio>
+                  </syg-item>
+                </syg-radio-group>
+              </syg-list>
 
-              <ion-list>
-                <ion-radio-group id="fruitRadio" value="lettuce">
-                  <ion-item-divider>
-                    <ion-label>Veggies</ion-label>
-                  </ion-item-divider>
-                  <ion-item>
-                    <ion-label>Celery</ion-label>
-                    <ion-radio color="tertiary" slot="start" value="celery"></ion-radio>
-                  </ion-item>
+              <syg-list>
+                <syg-radio-group id="fruitRadio" value="lettuce">
+                  <syg-item-divider>
+                    <syg-label>Veggies</syg-label>
+                  </syg-item-divider>
+                  <syg-item>
+                    <syg-label>Celery</syg-label>
+                    <syg-radio color="tertiary" slot="start" value="celery"></syg-radio>
+                  </syg-item>
 
-                  <ion-item>
-                    <ion-label>Lettuce, checked, disabled</ion-label>
-                    <ion-radio color="tertiary" slot="start" value="lettuce" disabled></ion-radio>
-                  </ion-item>
+                  <syg-item>
+                    <syg-label>Lettuce, checked, disabled</syg-label>
+                    <syg-radio color="tertiary" slot="start" value="lettuce" disabled></syg-radio>
+                  </syg-item>
 
-                  <ion-item>
-                    <ion-label>Onion</ion-label>
-                    <ion-radio color="tertiary" slot="start" value="onion"></ion-radio>
-                  </ion-item>
-                </ion-radio-group>
-              </ion-list>
+                  <syg-item>
+                    <syg-label>Onion</syg-label>
+                    <syg-radio color="tertiary" slot="start" value="onion"></syg-radio>
+                  </syg-item>
+                </syg-radio-group>
+              </syg-list>
 
-              <ion-list>
-                <ion-item>
-                  <ion-range value="20"></ion-range>
-                </ion-item>
+              <syg-list>
+                <syg-item>
+                  <syg-range value="20"></syg-range>
+                </syg-item>
 
-                <ion-item>
-                  <ion-range color="success" value="20"></ion-range>
-                </ion-item>
+                <syg-item>
+                  <syg-range color="success" value="20"></syg-range>
+                </syg-item>
 
-                <ion-item>
-                  <ion-range color="warning" value="20"></ion-range>
-                </ion-item>
+                <syg-item>
+                  <syg-range color="warning" value="20"></syg-range>
+                </syg-item>
 
-                <ion-item>
-                  <ion-range color="danger" value="20"></ion-range>
-                </ion-item>
-              </ion-list>
+                <syg-item>
+                  <syg-range color="danger" value="20"></syg-range>
+                </syg-item>
+              </syg-list>
 
             </section>
 
             <section>
-              <ion-list>
-                <ion-item>
-                  <ion-label>Default</ion-label>
-                  <ion-checkbox slot="end" checked></ion-checkbox>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Primary</ion-label>
-                  <ion-checkbox slot="end" color="primary" checked></ion-checkbox>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Secondary</ion-label>
-                  <ion-checkbox slot="end" color="secondary" checked></ion-checkbox>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Warning</ion-label>
-                  <ion-checkbox slot="end" color="warning" checked></ion-checkbox>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Danger</ion-label>
-                  <ion-checkbox slot="end" color="danger" checked></ion-checkbox>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Light</ion-label>
-                  <ion-checkbox slot="end" color="light" checked></ion-checkbox>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Dark</ion-label>
-                  <ion-checkbox slot="end" color="dark" checked></ion-checkbox>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Unchecked by Default</ion-label>
-                  <ion-checkbox slot="end"></ion-checkbox>
-                </ion-item>
-                <ion-item>
-                  <ion-label>Disabled</ion-label>
-                  <ion-checkbox slot="end" disabled></ion-checkbox>
-                </ion-item>
+              <syg-list>
+                <syg-item>
+                  <syg-label>Default</syg-label>
+                  <syg-checkbox slot="end" checked></syg-checkbox>
+                </syg-item>
+                <syg-item>
+                  <syg-label>Primary</syg-label>
+                  <syg-checkbox slot="end" color="primary" checked></syg-checkbox>
+                </syg-item>
+                <syg-item>
+                  <syg-label>Secondary</syg-label>
+                  <syg-checkbox slot="end" color="secondary" checked></syg-checkbox>
+                </syg-item>
+                <syg-item>
+                  <syg-label>Warning</syg-label>
+                  <syg-checkbox slot="end" color="warning" checked></syg-checkbox>
+                </syg-item>
+                <syg-item>
+                  <syg-label>Danger</syg-label>
+                  <syg-checkbox slot="end" color="danger" checked></syg-checkbox>
+                </syg-item>
+                <syg-item>
+                  <syg-label>Light</syg-label>
+                  <syg-checkbox slot="end" color="light" checked></syg-checkbox>
+                </syg-item>
+                <syg-item>
+                  <syg-label>Dark</syg-label>
+                  <syg-checkbox slot="end" color="dark" checked></syg-checkbox>
+                </syg-item>
+                <syg-item>
+                  <syg-label>Unchecked by Default</syg-label>
+                  <syg-checkbox slot="end"></syg-checkbox>
+                </syg-item>
+                <syg-item>
+                  <syg-label>Disabled</syg-label>
+                  <syg-checkbox slot="end" disabled></syg-checkbox>
+                </syg-item>
 
-                <ion-item>
-                  <ion-toggle slot="start"></ion-toggle>
-                  <ion-label>Blueberry</ion-label>
-                </ion-item>
+                <syg-item>
+                  <syg-toggle slot="start"></syg-toggle>
+                  <syg-label>Blueberry</syg-label>
+                </syg-item>
 
-                <ion-item>
-                  <ion-toggle color="success" slot="start" checked></ion-toggle>
-                  <ion-label>Lettuce</ion-label>
-                </ion-item>
+                <syg-item>
+                  <syg-toggle color="success" slot="start" checked></syg-toggle>
+                  <syg-label>Lettuce</syg-label>
+                </syg-item>
 
-                <ion-item>
-                  <ion-toggle color="danger" slot="start" checked></ion-toggle>
-                  <ion-label>Apple</ion-label>
-                </ion-item>
+                <syg-item>
+                  <syg-toggle color="danger" slot="start" checked></syg-toggle>
+                  <syg-label>Apple</syg-label>
+                </syg-item>
 
-                <ion-item>
-                  <ion-toggle color="tertiary" slot="start" checked></ion-toggle>
-                  <ion-label>Radish</ion-label>
-                </ion-item>
+                <syg-item>
+                  <syg-toggle color="tertiary" slot="start" checked></syg-toggle>
+                  <syg-label>Radish</syg-label>
+                </syg-item>
 
-                <ion-item>
-                  <ion-toggle color="dark" slot="start" checked></ion-toggle>
-                  <ion-label>Blackberry</ion-label>
-                </ion-item>
-              </ion-list>
+                <syg-item>
+                  <syg-toggle color="dark" slot="start" checked></syg-toggle>
+                  <syg-label>Blackberry</syg-label>
+                </syg-item>
+              </syg-list>
             </section>
           </div>
-        </ion-content>
-      </ion-tab>
+        </syg-content>
+      </syg-tab>
 
-      <ion-tab tab="colors">
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Colors</ion-title>
+      <syg-tab tab="colors">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Colors</syg-title>
             <div slot="end" class="right-container">
-              <ion-label>Select a Theme:</ion-label>
-              <ion-select interface="popover" class="theme-picker">
-                <ion-select-option value="default" selected>Default</ion-select-option>
-                <ion-select-option value="oceanic">Oceanic</ion-select-option>
-                <ion-select-option value="vibrant">Vibrant</ion-select-option>
-                <ion-select-option value="dark">Dark</ion-select-option>
-              </ion-select>
+              <syg-label>Select a Theme:</syg-label>
+              <syg-select interface="popover" class="theme-picker">
+                <syg-select-option value="default" selected>Default</syg-select-option>
+                <syg-select-option value="oceanic">Oceanic</syg-select-option>
+                <syg-select-option value="vibrant">Vibrant</syg-select-option>
+                <syg-select-option value="dark">Dark</syg-select-option>
+              </syg-select>
             </div>
-          </ion-toolbar>
-        </ion-header>
+          </syg-toolbar>
+        </syg-header>
 
-        <ion-content class="ion-padding">
+        <syg-content class="syg-padding">
           <div class="wrapper">
             <section>
               <p>
-                <ion-button color="primary">Primary</ion-button>
-                <ion-button color="secondary">Secondary</ion-button>
-                <ion-button color="tertiary">Tertiary</ion-button>
-                <ion-button fill="outline" color="success">Success Outline</ion-button>
-                <ion-button fill="clear" color="warning">Warning Clear</ion-button>
-                <ion-button color="danger">Danger</ion-button>
-                <ion-button color="light">Light</ion-button>
-                <ion-button color="dark">Dark</ion-button>
-                <ion-button expand="block" fill="outline" color="medium">Medium Outline</ion-button>
-                <ion-button expand="full" fill="clear" color="dark">Dark Clear</ion-button>
+                <syg-button color="primary">Primary</syg-button>
+                <syg-button color="secondary">Secondary</syg-button>
+                <syg-button color="tertiary">Tertiary</syg-button>
+                <syg-button fill="outline" color="success">Success Outline</syg-button>
+                <syg-button fill="clear" color="warning">Warning Clear</syg-button>
+                <syg-button color="danger">Danger</syg-button>
+                <syg-button color="light">Light</syg-button>
+                <syg-button color="dark">Dark</syg-button>
+                <syg-button expand="block" fill="outline" color="medium">Medium Outline</syg-button>
+                <syg-button expand="full" fill="clear" color="dark">Dark Clear</syg-button>
               </p>
 
               <p>
-                <ion-button class="ion-focused" color="primary">Primary</ion-button>
-                <ion-button class="ion-focused" color="secondary">Secondary</ion-button>
-                <ion-button class="ion-focused" color="tertiary">Tertiary</ion-button>
-                <ion-button class="ion-focused" fill="outline" color="success">Success Outline</ion-button>
-                <ion-button class="ion-focused" fill="clear" color="warning">Warning Clear</ion-button>
-                <ion-button class="ion-focused" color="danger">Danger</ion-button>
-                <ion-button class="ion-focused" color="light">Light</ion-button>
-                <ion-button class="ion-focused" color="dark">Dark</ion-button>
-                <ion-button class="ion-focused" expand="block" fill="outline" color="medium">Medium Outline</ion-button>
-                <ion-button class="ion-focused" expand="full" fill="clear" color="dark">Dark Clear</ion-button>
+                <syg-button class="syg-focused" color="primary">Primary</syg-button>
+                <syg-button class="syg-focused" color="secondary">Secondary</syg-button>
+                <syg-button class="syg-focused" color="tertiary">Tertiary</syg-button>
+                <syg-button class="syg-focused" fill="outline" color="success">Success Outline</syg-button>
+                <syg-button class="syg-focused" fill="clear" color="warning">Warning Clear</syg-button>
+                <syg-button class="syg-focused" color="danger">Danger</syg-button>
+                <syg-button class="syg-focused" color="light">Light</syg-button>
+                <syg-button class="syg-focused" color="dark">Dark</syg-button>
+                <syg-button class="syg-focused" expand="block" fill="outline" color="medium">Medium Outline</syg-button>
+                <syg-button class="syg-focused" expand="full" fill="clear" color="dark">Dark Clear</syg-button>
               </p>
 
               <p>
-                <ion-button class="ion-activated" color="primary">Primary</ion-button>
-                <ion-button class="ion-activated" color="secondary">Secondary</ion-button>
-                <ion-button class="ion-activated" color="tertiary">Tertiary</ion-button>
-                <ion-button class="ion-activated" fill="outline" color="success">Success Outline</ion-button>
-                <ion-button class="ion-activated" fill="clear" color="warning">Warning Clear</ion-button>
-                <ion-button class="ion-activated" color="danger">Danger</ion-button>
-                <ion-button class="ion-activated" color="light">Light</ion-button>
-                <ion-button class="ion-activated" expand="block" fill="outline" color="medium">Medium Outline</ion-button>
-                <ion-button class="ion-activated" expand="full" fill="clear" color="dark">Dark Clear</ion-button>
+                <syg-button class="syg-activated" color="primary">Primary</syg-button>
+                <syg-button class="syg-activated" color="secondary">Secondary</syg-button>
+                <syg-button class="syg-activated" color="tertiary">Tertiary</syg-button>
+                <syg-button class="syg-activated" fill="outline" color="success">Success Outline</syg-button>
+                <syg-button class="syg-activated" fill="clear" color="warning">Warning Clear</syg-button>
+                <syg-button class="syg-activated" color="danger">Danger</syg-button>
+                <syg-button class="syg-activated" color="light">Light</syg-button>
+                <syg-button class="syg-activated" expand="block" fill="outline" color="medium">Medium Outline</syg-button>
+                <syg-button class="syg-activated" expand="full" fill="clear" color="dark">Dark Clear</syg-button>
               </p>
             </section>
 
             <section>
               <p>
-                <ion-button>Default</ion-button>
-                <ion-button>
+                <syg-button>Default</syg-button>
+                <syg-button>
                   <ion-icon slot="icon-only" name="star"></ion-icon>
-                </ion-button>
-                <ion-button>
+                </syg-button>
+                <syg-button>
                   <ion-icon slot="start" name="pin"></ion-icon>Map
-                </ion-button>
-                <ion-button shape="round">Round</ion-button>
-                <ion-button fill="outline">Outline</ion-button>
-                <ion-button fill="clear">Clear</ion-button>
-                <ion-button fill="outline" expand="full">Full Outline</ion-button>
-                <ion-button fill="clear" expand="block">Block Clear</ion-button>
+                </syg-button>
+                <syg-button shape="round">Round</syg-button>
+                <syg-button fill="outline">Outline</syg-button>
+                <syg-button fill="clear">Clear</syg-button>
+                <syg-button fill="outline" expand="full">Full Outline</syg-button>
+                <syg-button fill="clear" expand="block">Block Clear</syg-button>
               </p>
 
               <p>
-                <ion-fab-button>
+                <syg-fab-button>
                   <ion-icon name="logo-facebook"></ion-icon>
-                </ion-fab-button>
-                <ion-fab-button size="small">
+                </syg-fab-button>
+                <syg-fab-button size="small">
                   <ion-icon name="logo-twitter"></ion-icon>
-                </ion-fab-button>
-                <ion-fab-button color="secondary">
+                </syg-fab-button>
+                <syg-fab-button color="secondary">
                   <ion-icon name="logo-vimeo"></ion-icon>
-                </ion-fab-button>
-                <ion-fab-button color="tertiary">
+                </syg-fab-button>
+                <syg-fab-button color="tertiary">
                   <ion-icon name="logo-instagram"></ion-icon>
-                </ion-fab-button>
+                </syg-fab-button>
               </p>
 
               <p>
-                <ion-chip>
-                  <ion-label>Default</ion-label>
-                </ion-chip>
-                <ion-chip color="primary">
-                  <ion-label>Primary</ion-label>
-                </ion-chip>
-                <ion-chip color="secondary">
-                  <ion-label>Secondary</ion-label>
-                </ion-chip>
-                <ion-chip color="tertiary">
-                  <ion-label>Tertiary</ion-label>
-                </ion-chip>
-                <ion-chip color="success">
-                  <ion-label>Success</ion-label>
-                </ion-chip>
-                <ion-chip color="warning">
-                  <ion-label>Warning</ion-label>
-                </ion-chip>
-                <ion-chip color="danger">
-                  <ion-label>Danger</ion-label>
-                </ion-chip>
-                <ion-chip color="light">
-                  <ion-label>Light</ion-label>
-                </ion-chip>
-                <ion-chip color="medium">
-                  <ion-label>Medium</ion-label>
-                </ion-chip>
-                <ion-chip color="dark">
-                  <ion-label>Dark</ion-label>
-                </ion-chip>
+                <syg-chip>
+                  <syg-label>Default</syg-label>
+                </syg-chip>
+                <syg-chip color="primary">
+                  <syg-label>Primary</syg-label>
+                </syg-chip>
+                <syg-chip color="secondary">
+                  <syg-label>Secondary</syg-label>
+                </syg-chip>
+                <syg-chip color="tertiary">
+                  <syg-label>Tertiary</syg-label>
+                </syg-chip>
+                <syg-chip color="success">
+                  <syg-label>Success</syg-label>
+                </syg-chip>
+                <syg-chip color="warning">
+                  <syg-label>Warning</syg-label>
+                </syg-chip>
+                <syg-chip color="danger">
+                  <syg-label>Danger</syg-label>
+                </syg-chip>
+                <syg-chip color="light">
+                  <syg-label>Light</syg-label>
+                </syg-chip>
+                <syg-chip color="medium">
+                  <syg-label>Medium</syg-label>
+                </syg-chip>
+                <syg-chip color="dark">
+                  <syg-label>Dark</syg-label>
+                </syg-chip>
               </p>
 
               <p>
-                <ion-badge></ion-badge>
-                <ion-badge color="primary">11</ion-badge>
-                <ion-badge color="secondary">22</ion-badge>
-                <ion-badge color="tertiary">33</ion-badge>
-                <ion-badge color="success">44</ion-badge>
-                <ion-badge color="warning">55</ion-badge>
-                <ion-badge color="danger">66</ion-badge>
-                <ion-badge color="light">77</ion-badge>
-                <ion-badge color="medium">88</ion-badge>
-                <ion-badge color="dark">99</ion-badge>
+                <syg-badge></syg-badge>
+                <syg-badge color="primary">11</syg-badge>
+                <syg-badge color="secondary">22</syg-badge>
+                <syg-badge color="tertiary">33</syg-badge>
+                <syg-badge color="success">44</syg-badge>
+                <syg-badge color="warning">55</syg-badge>
+                <syg-badge color="danger">66</syg-badge>
+                <syg-badge color="light">77</syg-badge>
+                <syg-badge color="medium">88</syg-badge>
+                <syg-badge color="dark">99</syg-badge>
               </p>
 
               <p class="icon-section">
@@ -625,346 +625,346 @@
               </p>
 
               <p>
-                <ion-breadcrumbs color="primary" max-items="4">
-                  <ion-breadcrumb href="#" class="ion-focused">
+                <syg-breadcrumbs color="primary" max-items="4">
+                  <syg-breadcrumb href="#" class="syg-focused">
                     Home
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#electronics">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#electronics">
                     Electronics
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#photography">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#photography">
                     Photography
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#cameras">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#cameras">
                     Cameras
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#film">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#film">
                     Film
-                  </ion-breadcrumb>
-                  <ion-breadcrumb>
+                  </syg-breadcrumb>
+                  <syg-breadcrumb>
                     35 mm
-                  </ion-breadcrumb>
-                </ion-breadcrumbs>
+                  </syg-breadcrumb>
+                </syg-breadcrumbs>
 
-                <ion-breadcrumbs color="secondary" max-items="4">
-                  <ion-breadcrumb href="#" class="ion-focused">
+                <syg-breadcrumbs color="secondary" max-items="4">
+                  <syg-breadcrumb href="#" class="syg-focused">
                     Home
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#electronics">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#electronics">
                     Electronics
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#photography">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#photography">
                     Photography
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#cameras">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#cameras">
                     Cameras
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#film">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#film">
                     Film
-                  </ion-breadcrumb>
-                  <ion-breadcrumb>
+                  </syg-breadcrumb>
+                  <syg-breadcrumb>
                     35 mm
-                  </ion-breadcrumb>
-                </ion-breadcrumbs>
+                  </syg-breadcrumb>
+                </syg-breadcrumbs>
 
-                <ion-breadcrumbs color="danger" max-items="4">
-                  <ion-breadcrumb href="#" class="ion-focused">
+                <syg-breadcrumbs color="danger" max-items="4">
+                  <syg-breadcrumb href="#" class="syg-focused">
                     Home
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#electronics">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#electronics">
                     Electronics
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#photography">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#photography">
                     Photography
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#cameras">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#cameras">
                     Cameras
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#film">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#film">
                     Film
-                  </ion-breadcrumb>
-                  <ion-breadcrumb>
+                  </syg-breadcrumb>
+                  <syg-breadcrumb>
                     35 mm
-                  </ion-breadcrumb>
-                </ion-breadcrumbs>
+                  </syg-breadcrumb>
+                </syg-breadcrumbs>
 
-                <ion-breadcrumbs color="warning" max-items="4">
-                  <ion-breadcrumb href="#" class="ion-focused">
+                <syg-breadcrumbs color="warning" max-items="4">
+                  <syg-breadcrumb href="#" class="syg-focused">
                     Home
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#electronics">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#electronics">
                     Electronics
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#photography">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#photography">
                     Photography
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#cameras">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#cameras">
                     Cameras
-                  </ion-breadcrumb>
-                  <ion-breadcrumb href="#film">
+                  </syg-breadcrumb>
+                  <syg-breadcrumb href="#film">
                     Film
-                  </ion-breadcrumb>
-                  <ion-breadcrumb>
+                  </syg-breadcrumb>
+                  <syg-breadcrumb>
                     35 mm
-                  </ion-breadcrumb>
-                </ion-breadcrumbs>
+                  </syg-breadcrumb>
+                </syg-breadcrumbs>
               </p>
             </section>
 
             <section>
               <p>
-                <ion-searchbar></ion-searchbar>
-                <ion-searchbar color="primary"></ion-searchbar>
-                <ion-searchbar color="tertiary"></ion-searchbar>
-                <ion-searchbar color="warning"></ion-searchbar>
-                <ion-searchbar color="light"></ion-searchbar>
-                <ion-searchbar color="dark"></ion-searchbar>
+                <syg-searchbar></syg-searchbar>
+                <syg-searchbar color="primary"></syg-searchbar>
+                <syg-searchbar color="tertiary"></syg-searchbar>
+                <syg-searchbar color="warning"></syg-searchbar>
+                <syg-searchbar color="light"></syg-searchbar>
+                <syg-searchbar color="dark"></syg-searchbar>
               </p>
               <p>
-                <ion-segment value="all">
-                  <ion-segment-button value="all">All</ion-segment-button>
-                  <ion-segment-button value="favorites">Favorites</ion-segment-button>
-                </ion-segment>
+                <syg-segment value="all">
+                  <syg-segment-button value="all">All</syg-segment-button>
+                  <syg-segment-button value="favorites">Favorites</syg-segment-button>
+                </syg-segment>
 
-                <ion-segment color="primary" value="all">
-                  <ion-segment-button value="all">All</ion-segment-button>
-                  <ion-segment-button value="favorites">Favorites</ion-segment-button>
-                </ion-segment>
+                <syg-segment color="primary" value="all">
+                  <syg-segment-button value="all">All</syg-segment-button>
+                  <syg-segment-button value="favorites">Favorites</syg-segment-button>
+                </syg-segment>
 
-                <ion-segment color="secondary" value="all">
-                  <ion-segment-button value="all">All</ion-segment-button>
-                  <ion-segment-button value="favorites">Favorites</ion-segment-button>
-                </ion-segment>
+                <syg-segment color="secondary" value="all">
+                  <syg-segment-button value="all">All</syg-segment-button>
+                  <syg-segment-button value="favorites">Favorites</syg-segment-button>
+                </syg-segment>
 
-                <ion-segment color="success" value="all">
-                  <ion-segment-button value="all">All</ion-segment-button>
-                  <ion-segment-button value="favorites">Favorites</ion-segment-button>
-                </ion-segment>
+                <syg-segment color="success" value="all">
+                  <syg-segment-button value="all">All</syg-segment-button>
+                  <syg-segment-button value="favorites">Favorites</syg-segment-button>
+                </syg-segment>
 
-                <ion-segment color="light" value="all">
-                  <ion-segment-button value="all">All</ion-segment-button>
-                  <ion-segment-button value="favorites">Favorites</ion-segment-button>
-                </ion-segment>
+                <syg-segment color="light" value="all">
+                  <syg-segment-button value="all">All</syg-segment-button>
+                  <syg-segment-button value="favorites">Favorites</syg-segment-button>
+                </syg-segment>
 
-                <ion-segment color="medium" value="all">
-                  <ion-segment-button value="all">All</ion-segment-button>
-                  <ion-segment-button value="favorites">Favorites</ion-segment-button>
-                </ion-segment>
+                <syg-segment color="medium" value="all">
+                  <syg-segment-button value="all">All</syg-segment-button>
+                  <syg-segment-button value="favorites">Favorites</syg-segment-button>
+                </syg-segment>
 
               </p>
             </section>
 
             <section>
               <p>
-                <ion-toolbar>
-                  <ion-buttons slot="start">
-                    <ion-button color="danger">
+                <syg-toolbar>
+                  <syg-buttons slot="start">
+                    <syg-button color="danger">
                       <ion-icon slot="icon-only" name="add"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-title>Toolbar</ion-title>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-title>Toolbar</syg-title>
+                </syg-toolbar>
 
-                <ion-toolbar color="primary">
-                  <ion-buttons slot="start">
-                    <ion-button color="danger">
+                <syg-toolbar color="primary">
+                  <syg-buttons slot="start">
+                    <syg-button color="danger">
                       <ion-icon slot="icon-only" name="add"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-segment value="favorites">
-                    <ion-segment-button value="all">All</ion-segment-button>
-                    <ion-segment-button value="favorites">Favorites</ion-segment-button>
-                  </ion-segment>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-segment value="favorites">
+                    <syg-segment-button value="all">All</syg-segment-button>
+                    <syg-segment-button value="favorites">Favorites</syg-segment-button>
+                  </syg-segment>
+                </syg-toolbar>
 
-                <ion-toolbar color="secondary">
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                <syg-toolbar color="secondary">
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-searchbar></ion-searchbar>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-searchbar></syg-searchbar>
+                </syg-toolbar>
 
-                <ion-toolbar color="tertiary">
-                  <ion-buttons slot="start">
-                    <ion-button color="danger">
+                <syg-toolbar color="tertiary">
+                  <syg-buttons slot="start">
+                    <syg-button color="danger">
                       <ion-icon slot="icon-only" name="add"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-title>Tertiary</ion-title>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-title>Tertiary</syg-title>
+                </syg-toolbar>
 
-                <ion-toolbar color="success">
-                  <ion-buttons slot="start">
-                    <ion-button color="danger">
+                <syg-toolbar color="success">
+                  <syg-buttons slot="start">
+                    <syg-button color="danger">
                       <ion-icon slot="icon-only" name="add"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-title>Success</ion-title>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-title>Success</syg-title>
+                </syg-toolbar>
 
-                <ion-toolbar color="warning">
-                  <ion-buttons slot="start">
-                    <ion-button color="danger">
+                <syg-toolbar color="warning">
+                  <syg-buttons slot="start">
+                    <syg-button color="danger">
                       <ion-icon slot="icon-only" name="add"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-title>Warning</ion-title>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-title>Warning</syg-title>
+                </syg-toolbar>
 
-                <ion-toolbar color="danger">
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                <syg-toolbar color="danger">
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-searchbar></ion-searchbar>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-searchbar></syg-searchbar>
+                </syg-toolbar>
 
-                <ion-toolbar color="light">
-                  <ion-buttons slot="start">
-                    <ion-button color="danger">
+                <syg-toolbar color="light">
+                  <syg-buttons slot="start">
+                    <syg-button color="danger">
                       <ion-icon slot="icon-only" name="add"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-segment value="favorites">
-                    <ion-segment-button value="all">All</ion-segment-button>
-                    <ion-segment-button value="favorites">Favorites</ion-segment-button>
-                  </ion-segment>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-segment value="favorites">
+                    <syg-segment-button value="all">All</syg-segment-button>
+                    <syg-segment-button value="favorites">Favorites</syg-segment-button>
+                  </syg-segment>
+                </syg-toolbar>
 
-                <ion-toolbar color="medium">
-                  <ion-buttons slot="start">
-                    <ion-button color="danger">
+                <syg-toolbar color="medium">
+                  <syg-buttons slot="start">
+                    <syg-button color="danger">
                       <ion-icon slot="icon-only" name="add"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-title>Medium</ion-title>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-title>Medium</syg-title>
+                </syg-toolbar>
 
-                <ion-toolbar color="dark">
-                  <ion-buttons slot="start">
-                    <ion-button color="danger">
+                <syg-toolbar color="dark">
+                  <syg-buttons slot="start">
+                    <syg-button color="danger">
                       <ion-icon slot="icon-only" name="add"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-buttons slot="primary">
-                    <ion-button>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-buttons slot="primary">
+                    <syg-button>
                       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-title>Dark</ion-title>
-                </ion-toolbar>
+                    </syg-button>
+                  </syg-buttons>
+                  <syg-title>Dark</syg-title>
+                </syg-toolbar>
               </p>
 
               <p>
-                <ion-progress-bar value="0.5"></ion-progress-bar>
-                <ion-progress-bar value="0.5" color="secondary"></ion-progress-bar>
-                <ion-progress-bar value="0.5" color="tertiary"></ion-progress-bar>
-                <ion-progress-bar type="indeterminate" color="danger"></ion-progress-bar>
-                <ion-progress-bar type="indeterminate" color="warning"></ion-progress-bar>
-                <ion-progress-bar value="0.2" buffer="0.3" color="success"></ion-progress-bar>
-                <ion-progress-bar value="0.5" color="light"></ion-progress-bar>
-                <ion-progress-bar value="0.5" color="medium"></ion-progress-bar>
-                <ion-progress-bar value="0.2" buffer="0.3" color="dark"></ion-progress-bar>
+                <syg-progress-bar value="0.5"></syg-progress-bar>
+                <syg-progress-bar value="0.5" color="secondary"></syg-progress-bar>
+                <syg-progress-bar value="0.5" color="tertiary"></syg-progress-bar>
+                <syg-progress-bar type="indeterminate" color="danger"></syg-progress-bar>
+                <syg-progress-bar type="indeterminate" color="warning"></syg-progress-bar>
+                <syg-progress-bar value="0.2" buffer="0.3" color="success"></syg-progress-bar>
+                <syg-progress-bar value="0.5" color="light"></syg-progress-bar>
+                <syg-progress-bar value="0.5" color="medium"></syg-progress-bar>
+                <syg-progress-bar value="0.2" buffer="0.3" color="dark"></syg-progress-bar>
               </p>
             </section>
           </div>
-        </ion-content>
-      </ion-tab>
+        </syg-content>
+      </syg-tab>
 
-      <ion-tab tab="overlays">
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Overlays</ion-title>
+      <syg-tab tab="overlays">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Overlays</syg-title>
             <div slot="end" class="right-container">
-              <ion-label>Select a Theme:</ion-label>
-              <ion-select interface="popover" class="theme-picker">
-                <ion-select-option value="default" selected>Default</ion-select-option>
-                <ion-select-option value="oceanic">Oceanic</ion-select-option>
-                <ion-select-option value="vibrant">Vibrant</ion-select-option>
-                <ion-select-option value="dark">Dark</ion-select-option>
-              </ion-select>
+              <syg-label>Select a Theme:</syg-label>
+              <syg-select interface="popover" class="theme-picker">
+                <syg-select-option value="default" selected>Default</syg-select-option>
+                <syg-select-option value="oceanic">Oceanic</syg-select-option>
+                <syg-select-option value="vibrant">Vibrant</syg-select-option>
+                <syg-select-option value="dark">Dark</syg-select-option>
+              </syg-select>
             </div>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
           <div class="wrapper">
             <!-- <section> -->
-            <ion-list>
-              <ion-item button onClick="presentAlert()">
-                <ion-label>Present Alert</ion-label>
-              </ion-item>
-              <ion-item button onClick="presentActionSheet()">
-                <ion-label>Present Action Sheet</ion-label>
-              </ion-item>
-              <ion-item button onClick="presentLoading()">
-                <ion-label>Present Loading</ion-label>
-              </ion-item>
-              <ion-item button onClick="presentModal()">
-                <ion-label>Present Modal</ion-label>
-              </ion-item>
-              <ion-item button onClick="presentPopover(event)">
-                <ion-label>Present Popover</ion-label>
-              </ion-item>
-              <ion-item button onClick="presentToast()">
-                <ion-label>Present Toast</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>Datetime</ion-label>
-                <ion-datetime></ion-datetime>
-              </ion-item>
-              <ion-item>
-                <ion-label>Select</ion-label>
-                <ion-select>
-                  <ion-select-option>1</ion-select-option>
-                  <ion-select-option>2</ion-select-option>
-                  <ion-select-option>3</ion-select-option>
-                </ion-select>
-              </ion-item>
-            </ion-list>
+            <syg-list>
+              <syg-item button onClick="presentAlert()">
+                <syg-label>Present Alert</syg-label>
+              </syg-item>
+              <syg-item button onClick="presentActionSheet()">
+                <syg-label>Present Action Sheet</syg-label>
+              </syg-item>
+              <syg-item button onClick="presentLoading()">
+                <syg-label>Present Loading</syg-label>
+              </syg-item>
+              <syg-item button onClick="presentModal()">
+                <syg-label>Present Modal</syg-label>
+              </syg-item>
+              <syg-item button onClick="presentPopover(event)">
+                <syg-label>Present Popover</syg-label>
+              </syg-item>
+              <syg-item button onClick="presentToast()">
+                <syg-label>Present Toast</syg-label>
+              </syg-item>
+              <syg-item>
+                <syg-label>Datetime</syg-label>
+                <syg-datetime></syg-datetime>
+              </syg-item>
+              <syg-item>
+                <syg-label>Select</syg-label>
+                <syg-select>
+                  <syg-select-option>1</syg-select-option>
+                  <syg-select-option>2</syg-select-option>
+                  <syg-select-option>3</syg-select-option>
+                </syg-select>
+              </syg-item>
+            </syg-list>
             <!-- </section> -->
           </div>
-        </ion-content>
-      </ion-tab>
-    </ion-tabs>
-  </ion-app>
+        </syg-content>
+      </syg-tab>
+    </syg-tabs>
+  </syg-app>
 
   <script>
     const selects = document.querySelectorAll('.theme-picker');
@@ -996,7 +996,7 @@
     }
 
     async function presentAlert() {
-      const alert = Object.assign(document.createElement('ion-alert'), {
+      const alert = Object.assign(document.createElement('syg-alert'), {
         header: 'Alert',
         subHeader: 'Subtitle',
         message: 'This is an alert message.',
@@ -1007,7 +1007,7 @@
     }
 
     async function presentActionSheet() {
-      const actionSheet = Object.assign(document.createElement('ion-action-sheet'), {
+      const actionSheet = Object.assign(document.createElement('syg-action-sheet'), {
         header: "Albums",
         buttons: [{
           text: 'Delete',
@@ -1048,7 +1048,7 @@
     }
 
     async function presentLoading() {
-      const loading = Object.assign(document.createElement('ion-loading'), {
+      const loading = Object.assign(document.createElement('syg-loading'), {
         message: 'Hellooo',
         duration: 2000
       });
@@ -1066,49 +1066,49 @@
       // create component to open
       const element = document.createElement('div');
       element.innerHTML = `
-      <ion-header translucent="true">
-        <ion-toolbar>
-          <ion-title>Super Modal</ion-title>
-          <ion-buttons slot="start">
-            <ion-button class="dismiss">Close</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content fullscreen="true">
-        <ion-header collapse="condense">
-          <ion-toolbar>
-            <ion-title size="large">Super Modal</ion-title>
-          </ion-toolbar>
-        </ion-header>
+      <syg-header translucent="true">
+        <syg-toolbar>
+          <syg-title>Super Modal</syg-title>
+          <syg-buttons slot="start">
+            <syg-button class="dismiss">Close</syg-button>
+          </syg-buttons>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content fullscreen="true">
+        <syg-header collapse="condense">
+          <syg-toolbar>
+            <syg-title size="large">Super Modal</syg-title>
+          </syg-toolbar>
+        </syg-header>
 
         <br />
 
         <div>
-          <ion-list>
-            <ion-item>
-              <ion-label>Item A</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-label>Item B</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-label>Item C</ion-label>
-            </ion-item>
-          </ion-list>
+          <syg-list>
+            <syg-item>
+              <syg-label>Item A</syg-label>
+            </syg-item>
+            <syg-item>
+              <syg-label>Item B</syg-label>
+            </syg-item>
+            <syg-item>
+              <syg-label>Item C</syg-label>
+            </syg-item>
+          </syg-list>
         </div>
-      </ion-content>
+      </syg-content>
       `;
 
 
       // present the modal
-      const modalElement = Object.assign(document.createElement('ion-modal'), {
+      const modalElement = Object.assign(document.createElement('syg-modal'), {
         component: element,
         swipeToClose: true,
-        presentingElement: document.querySelector('ion-tabs')
+        presentingElement: document.querySelector('syg-tabs')
       });
 
       // listen for close event
-      const button = element.querySelector('ion-button');
+      const button = element.querySelector('syg-button');
       button.addEventListener('click', () => {
         modalElement.dismiss();
       });
@@ -1122,7 +1122,7 @@
     }
 
     async function presentPopover(event) {
-      const popoverElement = Object.assign(document.createElement('ion-popover'), {
+      const popoverElement = Object.assign(document.createElement('syg-popover'), {
         component: 'profile-page',
         event: event
       });
@@ -1137,19 +1137,19 @@
 
       connectedCallback() {
         this.innerHTML = `
-          <ion-content>
-            <ion-list>
-              <ion-list-header>
-                <ion-label>
+          <syg-content>
+            <syg-list>
+              <syg-list-header>
+                <syg-label>
                   Ionic
-                </ion-label>
-              </ion-list-header>
-              <ion-item><ion-label>Item 0</ion-label></ion-item>
-              <ion-item><ion-label>Item 1</ion-label></ion-item>
-              <ion-item><ion-label>Item 2</ion-label></ion-item>
-              <ion-item><ion-label>Item 3</ion-label></ion-item>
-            </ion-list>
-          </ion-content>
+                </syg-label>
+              </syg-list-header>
+              <syg-item><syg-label>Item 0</syg-label></syg-item>
+              <syg-item><syg-label>Item 1</syg-label></syg-item>
+              <syg-item><syg-label>Item 2</syg-label></syg-item>
+              <syg-item><syg-label>Item 3</syg-label></syg-item>
+            </syg-list>
+          </syg-content>
         `;
       }
     }
@@ -1157,7 +1157,7 @@
     customElements.define('profile-page', ProfilePage);
 
     async function presentToast() {
-      const toast = Object.assign(document.createElement('ion-toast'), {
+      const toast = Object.assign(document.createElement('syg-toast'), {
         message: 'Hello world!',
         buttons: [
           { text: 'Close', role: 'close' }

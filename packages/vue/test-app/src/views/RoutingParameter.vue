@@ -2,9 +2,9 @@
   <ion-page :data-pageid="'routingparameter-' + $props.id">
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Routing Parameter</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -16,10 +16,10 @@
         </ion-toolbar>
       </ion-header>
 
-      <ion-button id="parameter-view" :router-link="'/routing/' + $route.params.id + '/view'">Go to Single View</ion-button>
+      <syg-button id="parameter-view" :router-link="'/routing/' + $route.params.id + '/view'">Go to Single View</syg-button>
 
-      <ion-button router-link="/routing/abc">Go to Parameter Page ABC</ion-button>
-      <ion-button router-link="/routing/xyz">Go to Parameter Page XYZ</ion-button>
+      <syg-button router-link="/routing/abc">Go to Parameter Page ABC</syg-button>
+      <syg-button router-link="/routing/xyz">Go to Parameter Page XYZ</syg-button>
 
       <div class="ion-padding" id="parameter-value">
         {{ $props.id }}

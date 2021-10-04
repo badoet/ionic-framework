@@ -1,4 +1,4 @@
-# ion-skeleton-text
+# syg-skeleton-text
 
 Skeleton Text is a component for rendering placeholder content. The element will render a gray block at the specified width.
 
@@ -13,21 +13,21 @@ Skeleton Text is a component for rendering placeholder content. The element will
 ```html
 <!-- Data to display after skeleton screen -->
 <div *ngIf="data">
-  <div class="ion-padding">
+  <div class="syg-padding">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est. Cras iaculis pulvinar arcu non vehicula. Fusce at quam a eros malesuada condimentum. Aliquam tincidunt tincidunt vehicula.
   </div>
 
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
+  <syg-list>
+    <syg-list-header>
+      <syg-label>
         Data
-      </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-avatar slot="start">
+      </syg-label>
+    </syg-list-header>
+    <syg-item>
+      <syg-avatar slot="start">
         <img src="./avatar.svg">
-      </ion-avatar>
-      <ion-label>
+      </syg-avatar>
+      <syg-label>
         <h3>
           {{ data.heading }}
         </h3>
@@ -37,13 +37,13 @@ Skeleton Text is a component for rendering placeholder content. The element will
         <p>
           {{ data.para2 }}
         </p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail slot="start">
+      </syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-thumbnail slot="start">
         <img src="./thumbnail.svg">
-      </ion-thumbnail>
-      <ion-label>
+      </syg-thumbnail>
+      <syg-label>
         <h3>
           {{ data.heading }}
         </h3>
@@ -53,11 +53,11 @@ Skeleton Text is a component for rendering placeholder content. The element will
         <p>
           {{ data.para2 }}
         </p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
+      </syg-label>
+    </syg-item>
+    <syg-item>
       <ion-icon name="call" slot="start"></ion-icon>
-      <ion-label>
+      <syg-label>
         <h3>
           {{ data.heading }}
         </h3>
@@ -67,84 +67,84 @@ Skeleton Text is a component for rendering placeholder content. The element will
         <p>
           {{ data.para2 }}
         </p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+      </syg-label>
+    </syg-item>
+  </syg-list>
 </div>
 
 <!-- Skeleton screen -->
 <div *ngIf="!data">
-  <div class="ion-padding custom-skeleton">
-    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-    <ion-skeleton-text animated></ion-skeleton-text>
-    <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
-    <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
-    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+  <div class="syg-padding custom-skeleton">
+    <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
+    <syg-skeleton-text animated></syg-skeleton-text>
+    <syg-skeleton-text animated style="width: 88%"></syg-skeleton-text>
+    <syg-skeleton-text animated style="width: 70%"></syg-skeleton-text>
+    <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
   </div>
 
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
-        <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
-      </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-skeleton-text animated></ion-skeleton-text>
-      </ion-avatar>
-      <ion-label>
+  <syg-list>
+    <syg-list-header>
+      <syg-label>
+        <syg-skeleton-text animated style="width: 20%"></syg-skeleton-text>
+      </syg-label>
+    </syg-list-header>
+    <syg-item>
+      <syg-avatar slot="start">
+        <syg-skeleton-text animated></syg-skeleton-text>
+      </syg-avatar>
+      <syg-label>
         <h3>
-          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 50%"></syg-skeleton-text>
         </h3>
         <p>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 80%"></syg-skeleton-text>
         </p>
         <p>
-          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
         </p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <ion-skeleton-text animated></ion-skeleton-text>
-      </ion-thumbnail>
-      <ion-label>
+      </syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-thumbnail slot="start">
+        <syg-skeleton-text animated></syg-skeleton-text>
+      </syg-thumbnail>
+      <syg-label>
         <h3>
-          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 50%"></syg-skeleton-text>
         </h3>
         <p>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 80%"></syg-skeleton-text>
         </p>
         <p>
-          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
         </p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
-      <ion-label>
+      </syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-skeleton-text animated style="width: 27px; height: 27px" slot="start"></syg-skeleton-text>
+      <syg-label>
         <h3>
-          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 50%"></syg-skeleton-text>
         </h3>
         <p>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 80%"></syg-skeleton-text>
         </p>
         <p>
-          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
         </p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+      </syg-label>
+    </syg-item>
+  </syg-list>
 </div>
 ```
 
 ```css
 /* Custom Skeleton Line Height and Margin */
-.custom-skeleton ion-skeleton-text {
+.custom-skeleton syg-skeleton-text {
   line-height: 13px;
 }
 
-.custom-skeleton ion-skeleton-text:last-child {
+.custom-skeleton syg-skeleton-text:last-child {
   margin-bottom: 5px;
 }
 ```
@@ -180,21 +180,21 @@ export class SkeletonTextExample {
 ```html
 <!-- Data to display after skeleton screen -->
 <div id="data">
-  <div class="ion-padding">
+  <div class="syg-padding">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est. Cras iaculis pulvinar arcu non vehicula. Fusce at quam a eros malesuada condimentum. Aliquam tincidunt tincidunt vehicula.
   </div>
 
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
+  <syg-list>
+    <syg-list-header>
+      <syg-label>
         Data
-      </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-avatar slot="start">
+      </syg-label>
+    </syg-list-header>
+    <syg-item>
+      <syg-avatar slot="start">
         <img src="./avatar.svg">
-      </ion-avatar>
-      <ion-label>
+      </syg-avatar>
+      <syg-label>
         <h3>
           Normal text
         </h3>
@@ -204,13 +204,13 @@ export class SkeletonTextExample {
         <p>
           adipiscing elit.
         </p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail slot="start">
+      </syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-thumbnail slot="start">
         <img src="./thumbnail.svg">
-      </ion-thumbnail>
-      <ion-label>
+      </syg-thumbnail>
+      <syg-label>
         <h3>
           Normal text
         </h3>
@@ -220,11 +220,11 @@ export class SkeletonTextExample {
         <p>
           adipiscing elit.
         </p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
+      </syg-label>
+    </syg-item>
+    <syg-item>
       <ion-icon name="call" slot="start"></ion-icon>
-      <ion-label>
+      <syg-label>
         <h3>
           Normal text
         </h3>
@@ -234,74 +234,74 @@ export class SkeletonTextExample {
         <p>
           adipiscing elit.
         </p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+      </syg-label>
+    </syg-item>
+  </syg-list>
 </div>
 
 <!-- Skeleton screen -->
 <div id="skeleton">
-  <div class="ion-padding custom-skeleton">
-    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-    <ion-skeleton-text animated></ion-skeleton-text>
-    <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
-    <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
-    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+  <div class="syg-padding custom-skeleton">
+    <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
+    <syg-skeleton-text animated></syg-skeleton-text>
+    <syg-skeleton-text animated style="width: 88%"></syg-skeleton-text>
+    <syg-skeleton-text animated style="width: 70%"></syg-skeleton-text>
+    <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
   </div>
 
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
-        <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
-      </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-skeleton-text animated></ion-skeleton-text>
-      </ion-avatar>
-      <ion-label>
+  <syg-list>
+    <syg-list-header>
+      <syg-label>
+        <syg-skeleton-text animated style="width: 20%"></syg-skeleton-text>
+      </syg-label>
+    </syg-list-header>
+    <syg-item>
+      <syg-avatar slot="start">
+        <syg-skeleton-text animated></syg-skeleton-text>
+      </syg-avatar>
+      <syg-label>
         <h3>
-          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 50%"></syg-skeleton-text>
         </h3>
         <p>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 80%"></syg-skeleton-text>
         </p>
         <p>
-          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
         </p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <ion-skeleton-text animated></ion-skeleton-text>
-      </ion-thumbnail>
-      <ion-label>
+      </syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-thumbnail slot="start">
+        <syg-skeleton-text animated></syg-skeleton-text>
+      </syg-thumbnail>
+      <syg-label>
         <h3>
-          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 50%"></syg-skeleton-text>
         </h3>
         <p>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 80%"></syg-skeleton-text>
         </p>
         <p>
-          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
         </p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
-      <ion-label>
+      </syg-label>
+    </syg-item>
+    <syg-item>
+      <syg-skeleton-text animated style="width: 27px; height: 27px" slot="start"></syg-skeleton-text>
+      <syg-label>
         <h3>
-          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 50%"></syg-skeleton-text>
         </h3>
         <p>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 80%"></syg-skeleton-text>
         </p>
         <p>
-          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
         </p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+      </syg-label>
+    </syg-item>
+  </syg-list>
 </div>
 ```
 
@@ -311,11 +311,11 @@ export class SkeletonTextExample {
 }
 
 /* Custom Skeleton Line Height and Margin */
-.custom-skeleton ion-skeleton-text {
+.custom-skeleton syg-skeleton-text {
   line-height: 13px;
 }
 
-.custom-skeleton ion-skeleton-text:last-child {
+.custom-skeleton syg-skeleton-text:last-child {
   margin-bottom: 5px;
 }
 ```
@@ -367,7 +367,7 @@ export const SkeletonTextExample: React.FC = () => {
     <IonContent>
       {data ? (
         <>
-          <div className="ion-padding">
+          <div className="syg-padding">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est. Cras iaculis pulvinar
             arcu non vehicula. Fusce at quam a eros malesuada condimentum. Aliquam tincidunt tincidunt
             vehicula.
@@ -411,7 +411,7 @@ export const SkeletonTextExample: React.FC = () => {
         </>
       ) : (
         <>
-          <div className="ion-padding custom-skeleton">
+          <div className="syg-padding custom-skeleton">
             <IonSkeletonText animated style={{ width: '60%' }} />
             <IonSkeletonText animated />
             <IonSkeletonText animated style={{ width: '88%' }} />
@@ -481,11 +481,11 @@ export const SkeletonTextExample: React.FC = () => {
 
 ```css
 /* Custom Skeleton Line Height and Margin */
-.custom-skeleton ion-skeleton-text {
+.custom-skeleton syg-skeleton-text {
   line-height: 13px;
 }
 
-.custom-skeleton ion-skeleton-text:last-child {
+.custom-skeleton syg-skeleton-text:last-child {
   margin-bottom: 5px;
 }
 ```
@@ -517,91 +517,91 @@ export class SkeletonTextExample {
   // Render skeleton screen when there is no data
   renderSkeletonScreen() {
     return [
-      <ion-content>
-        <div class="ion-padding custom-skeleton">
-          <ion-skeleton-text animated style={{ 'width': '60%' }}></ion-skeleton-text>
-          <ion-skeleton-text animated></ion-skeleton-text>
-          <ion-skeleton-text animated style={{ 'width': '88%' }}></ion-skeleton-text>
-          <ion-skeleton-text animated style={{ 'width': '70%' }}></ion-skeleton-text>
-          <ion-skeleton-text animated style={{ 'width': '60%' }}></ion-skeleton-text>
+      <syg-content>
+        <div class="syg-padding custom-skeleton">
+          <syg-skeleton-text animated style={{ 'width': '60%' }}></syg-skeleton-text>
+          <syg-skeleton-text animated></syg-skeleton-text>
+          <syg-skeleton-text animated style={{ 'width': '88%' }}></syg-skeleton-text>
+          <syg-skeleton-text animated style={{ 'width': '70%' }}></syg-skeleton-text>
+          <syg-skeleton-text animated style={{ 'width': '60%' }}></syg-skeleton-text>
         </div>
 
-        <ion-list>
-          <ion-list-header>
-            <ion-label>
-              <ion-skeleton-text animated style={{ 'width': '20%' }}></ion-skeleton-text>
-            </ion-label>
-          </ion-list-header>
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-skeleton-text animated></ion-skeleton-text>
-            </ion-avatar>
-            <ion-label>
+        <syg-list>
+          <syg-list-header>
+            <syg-label>
+              <syg-skeleton-text animated style={{ 'width': '20%' }}></syg-skeleton-text>
+            </syg-label>
+          </syg-list-header>
+          <syg-item>
+            <syg-avatar slot="start">
+              <syg-skeleton-text animated></syg-skeleton-text>
+            </syg-avatar>
+            <syg-label>
               <h3>
-                <ion-skeleton-text animated style={{ 'width': '50%' }}></ion-skeleton-text>
+                <syg-skeleton-text animated style={{ 'width': '50%' }}></syg-skeleton-text>
               </h3>
               <p>
-                <ion-skeleton-text animated style={{ 'width': '80%' }}></ion-skeleton-text>
+                <syg-skeleton-text animated style={{ 'width': '80%' }}></syg-skeleton-text>
               </p>
               <p>
-                <ion-skeleton-text animated style={{ 'width': '60%' }}></ion-skeleton-text>
+                <syg-skeleton-text animated style={{ 'width': '60%' }}></syg-skeleton-text>
               </p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-skeleton-text animated></ion-skeleton-text>
-            </ion-thumbnail>
-            <ion-label>
+            </syg-label>
+          </syg-item>
+          <syg-item>
+            <syg-thumbnail slot="start">
+              <syg-skeleton-text animated></syg-skeleton-text>
+            </syg-thumbnail>
+            <syg-label>
               <h3>
-                <ion-skeleton-text animated style={{ 'width': '50%' }}></ion-skeleton-text>
+                <syg-skeleton-text animated style={{ 'width': '50%' }}></syg-skeleton-text>
               </h3>
               <p>
-                <ion-skeleton-text animated style={{ 'width': '80%' }}></ion-skeleton-text>
+                <syg-skeleton-text animated style={{ 'width': '80%' }}></syg-skeleton-text>
               </p>
               <p>
-                <ion-skeleton-text animated style={{ 'width': '60%' }}></ion-skeleton-text>
+                <syg-skeleton-text animated style={{ 'width': '60%' }}></syg-skeleton-text>
               </p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-skeleton-text animated style={{ 'width': '27p', 'height': '27px' }} slot="start"></ion-skeleton-text>
-            <ion-label>
+            </syg-label>
+          </syg-item>
+          <syg-item>
+            <syg-skeleton-text animated style={{ 'width': '27p', 'height': '27px' }} slot="start"></syg-skeleton-text>
+            <syg-label>
               <h3>
-                <ion-skeleton-text animated style={{ 'width': '50%' }}></ion-skeleton-text>
+                <syg-skeleton-text animated style={{ 'width': '50%' }}></syg-skeleton-text>
               </h3>
               <p>
-                <ion-skeleton-text animated style={{ 'width': '80%' }}></ion-skeleton-text>
+                <syg-skeleton-text animated style={{ 'width': '80%' }}></syg-skeleton-text>
               </p>
               <p>
-                <ion-skeleton-text animated style={{ 'width': '60%' }}></ion-skeleton-text>
+                <syg-skeleton-text animated style={{ 'width': '60%' }}></syg-skeleton-text>
               </p>
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
+            </syg-label>
+          </syg-item>
+        </syg-list>
+      </syg-content>
     ];
   }
 
   // Render the elements with data
   renderDataScreen() {
     return [
-      <ion-content>
-        <div class="ion-padding">
+      <syg-content>
+        <div class="syg-padding">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est. Cras iaculis pulvinar arcu non vehicula. Fusce at quam a eros malesuada condimentum. Aliquam tincidunt tincidunt vehicula.
         </div>
 
-        <ion-list>
-          <ion-list-header>
-            <ion-label>
+        <syg-list>
+          <syg-list-header>
+            <syg-label>
               Data
-            </ion-label>
-          </ion-list-header>
-          <ion-item>
-            <ion-avatar slot="start">
+            </syg-label>
+          </syg-list-header>
+          <syg-item>
+            <syg-avatar slot="start">
               <img src="./avatar.svg"/>
-            </ion-avatar>
-            <ion-label>
+            </syg-avatar>
+            <syg-label>
               <h3>
                 { this.data.heading }
               </h3>
@@ -611,13 +611,13 @@ export class SkeletonTextExample {
               <p>
                 { this.data.para2 }
               </p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-thumbnail slot="start">
+            </syg-label>
+          </syg-item>
+          <syg-item>
+            <syg-thumbnail slot="start">
               <img src="./thumbnail.svg"/>
-            </ion-thumbnail>
-            <ion-label>
+            </syg-thumbnail>
+            <syg-label>
               <h3>
                 { this.data.heading }
               </h3>
@@ -627,11 +627,11 @@ export class SkeletonTextExample {
               <p>
                 { this.data.para2 }
               </p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
+            </syg-label>
+          </syg-item>
+          <syg-item>
             <ion-icon name="call" slot="start"></ion-icon>
-            <ion-label>
+            <syg-label>
               <h3>
                 { this.data.heading }
               </h3>
@@ -641,10 +641,10 @@ export class SkeletonTextExample {
               <p>
                 { this.data.para2 }
               </p>
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
+            </syg-label>
+          </syg-item>
+        </syg-list>
+      </syg-content>
     ];
   }
 
@@ -660,11 +660,11 @@ export class SkeletonTextExample {
 
 ```css
 /* Custom Skeleton Line Height and Margin */
-.custom-skeleton ion-skeleton-text {
+.custom-skeleton syg-skeleton-text {
   line-height: 13px;
 }
 
-.custom-skeleton ion-skeleton-text:last-child {
+.custom-skeleton syg-skeleton-text:last-child {
   margin-bottom: 5px;
 }
 ```
@@ -676,21 +676,21 @@ export class SkeletonTextExample {
 <template>
   <!-- Data to display after skeleton screen -->
   <div v-if="data">
-    <div class="ion-padding">
+    <div class="syg-padding">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est. Cras iaculis pulvinar arcu non vehicula. Fusce at quam a eros malesuada condimentum. Aliquam tincidunt tincidunt vehicula.
     </div>
 
-    <ion-list>
-      <ion-list-header>
-        <ion-label>
+    <syg-list>
+      <syg-list-header>
+        <syg-label>
           Data
-        </ion-label>
-      </ion-list-header>
-      <ion-item>
-        <ion-avatar slot="start">
+        </syg-label>
+      </syg-list-header>
+      <syg-item>
+        <syg-avatar slot="start">
           <img src="./avatar.svg">
-        </ion-avatar>
-        <ion-label>
+        </syg-avatar>
+        <syg-label>
           <h3>
             {{ data.heading }}
           </h3>
@@ -700,13 +700,13 @@ export class SkeletonTextExample {
           <p>
             {{ data.para2 }}
           </p>
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail slot="start">
+        </syg-label>
+      </syg-item>
+      <syg-item>
+        <syg-thumbnail slot="start">
           <img src="./thumbnail.svg">
-        </ion-thumbnail>
-        <ion-label>
+        </syg-thumbnail>
+        <syg-label>
           <h3>
             {{ data.heading }}
           </h3>
@@ -716,11 +716,11 @@ export class SkeletonTextExample {
           <p>
             {{ data.para2 }}
           </p>
-        </ion-label>
-      </ion-item>
-      <ion-item>
+        </syg-label>
+      </syg-item>
+      <syg-item>
         <ion-icon :icon="call" slot="start"></ion-icon>
-        <ion-label>
+        <syg-label>
           <h3>
             {{ data.heading }}
           </h3>
@@ -730,95 +730,95 @@ export class SkeletonTextExample {
           <p>
             {{ data.para2 }}
           </p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
+        </syg-label>
+      </syg-item>
+    </syg-list>
   </div>
 
   <!-- Skeleton screen -->
   <div v-if="!data">
-    <div class="ion-padding custom-skeleton">
-      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-      <ion-skeleton-text animated></ion-skeleton-text>
-      <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
-      <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
-      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+    <div class="syg-padding custom-skeleton">
+      <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
+      <syg-skeleton-text animated></syg-skeleton-text>
+      <syg-skeleton-text animated style="width: 88%"></syg-skeleton-text>
+      <syg-skeleton-text animated style="width: 70%"></syg-skeleton-text>
+      <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
     </div>
 
-    <ion-list>
-      <ion-list-header>
-        <ion-label>
-          <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
-        </ion-label>
-      </ion-list-header>
-      <ion-item>
-        <ion-avatar slot="start">
-          <ion-skeleton-text animated></ion-skeleton-text>
-        </ion-avatar>
-        <ion-label>
+    <syg-list>
+      <syg-list-header>
+        <syg-label>
+          <syg-skeleton-text animated style="width: 20%"></syg-skeleton-text>
+        </syg-label>
+      </syg-list-header>
+      <syg-item>
+        <syg-avatar slot="start">
+          <syg-skeleton-text animated></syg-skeleton-text>
+        </syg-avatar>
+        <syg-label>
           <h3>
-            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+            <syg-skeleton-text animated style="width: 50%"></syg-skeleton-text>
           </h3>
           <p>
-            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+            <syg-skeleton-text animated style="width: 80%"></syg-skeleton-text>
           </p>
           <p>
-            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
           </p>
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <ion-skeleton-text animated></ion-skeleton-text>
-        </ion-thumbnail>
-        <ion-label>
+        </syg-label>
+      </syg-item>
+      <syg-item>
+        <syg-thumbnail slot="start">
+          <syg-skeleton-text animated></syg-skeleton-text>
+        </syg-thumbnail>
+        <syg-label>
           <h3>
-            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+            <syg-skeleton-text animated style="width: 50%"></syg-skeleton-text>
           </h3>
           <p>
-            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+            <syg-skeleton-text animated style="width: 80%"></syg-skeleton-text>
           </p>
           <p>
-            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
           </p>
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
-        <ion-label>
+        </syg-label>
+      </syg-item>
+      <syg-item>
+        <syg-skeleton-text animated style="width: 27px; height: 27px" slot="start"></syg-skeleton-text>
+        <syg-label>
           <h3>
-            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+            <syg-skeleton-text animated style="width: 50%"></syg-skeleton-text>
           </h3>
           <p>
-            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+            <syg-skeleton-text animated style="width: 80%"></syg-skeleton-text>
           </p>
           <p>
-            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            <syg-skeleton-text animated style="width: 60%"></syg-skeleton-text>
           </p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
+        </syg-label>
+      </syg-item>
+    </syg-list>
   </div>
 </template>
 
 <style>
   /* Custom Skeleton Line Height and Margin */
-  .custom-skeleton ion-skeleton-text {
+  .custom-skeleton syg-skeleton-text {
     line-height: 13px;
   }
 
-  .custom-skeleton ion-skeleton-text:last-child {
+  .custom-skeleton syg-skeleton-text:last-child {
     margin-bottom: 5px;
   }
 </style>
 
 <script>
-import { 
+import {
   IonAvatar,
   IonIcon,
-  IonItem, 
-  IonLabel, 
-  IonList, 
+  IonItem,
+  IonLabel,
+  IonList,
   IonListHeader,
   IonSkeletonText,
   IonThumbnail
@@ -830,16 +830,16 @@ export default defineComponent({
   components: {
     IonAvatar,
     IonIcon,
-    IonItem, 
-    IonLabel, 
-    IonList, 
+    IonItem,
+    IonLabel,
+    IonList,
     IonListHeader,
     IonSkeletonText,
     IonThumbnail
   },
   setup() {
     const data = ref();
-    
+
     setTimeout(() => {
       data.value = {
         'heading': 'Normal text',
@@ -847,7 +847,7 @@ export default defineComponent({
         'para2': 'adipiscing elit.'
       };
     }, 5000);
-    
+
     return { data }
   }
 });

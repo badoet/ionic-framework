@@ -2,9 +2,9 @@
   <ion-page data-pageid="home">
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons slot="start">
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Test App</ion-title>
       </ion-toolbar>
     </ion-header>

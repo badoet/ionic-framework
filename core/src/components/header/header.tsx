@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Host, Prop, h, writeTask } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { inheritAttributes } from '../../utils/helpers';
 
 import { cloneElement, createHeaderIndex, handleContentScroll, handleToolbarIntersection, setHeaderActive, setToolbarBackgroundOpacity } from './header.utils';
@@ -9,7 +9,7 @@ import { cloneElement, createHeaderIndex, handleContentScroll, handleToolbarInte
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-header',
+  tag: 'syg-header',
   styleUrls: {
     ios: 'header.ios.scss',
     md: 'header.md.scss'
@@ -64,18 +64,18 @@ export class Header implements ComponentInterface {
 
     // Determine if the header can collapse
     const hasCollapse = this.collapse === 'condense';
-    const canCollapse = (hasCollapse && getIonMode(this) === 'ios') ? hasCollapse : false;
+    const canCollapse = (hasCollapse && getSygMode(this) === 'ios') ? hasCollapse : false;
     if (!canCollapse && this.collapsibleHeaderInitialized) {
       this.destroyCollapsibleHeader();
     } else if (canCollapse && !this.collapsibleHeaderInitialized) {
-      const pageEl = this.el.closest('ion-app,ion-page,.ion-page,page-inner');
-      const contentEl = (pageEl) ? pageEl.querySelector('ion-content') : null;
+      const pageEl = this.el.closest('syg-app,syg-page,.syg-page,page-inner');
+      const contentEl = (pageEl) ? pageEl.querySelector('syg-content') : null;
 
       // Cloned elements are always needed in iOS transition
       writeTask(() => {
-        const title = cloneElement('ion-title') as HTMLIonTitleElement;
+        const title = cloneElement('syg-title') as HTMLSygTitleElement;
         title.size = 'large';
-        cloneElement('ion-back-button');
+        cloneElement('syg-back-button');
       });
 
       await this.setupCollapsibleHeader(contentEl, pageEl);
@@ -99,13 +99,13 @@ export class Header implements ComponentInterface {
     }
   }
 
-  private async setupCollapsibleHeader(contentEl: HTMLIonContentElement | null, pageEl: Element | null) {
-    if (!contentEl || !pageEl) { console.error('ion-header requires a content to collapse, make sure there is an ion-content.'); return; }
+  private async setupCollapsibleHeader(contentEl: HTMLSygContentElement | null, pageEl: Element | null) {
+    if (!contentEl || !pageEl) { console.error('syg-header requires a content to collapse, make sure there is an syg-content.'); return; }
     if (typeof (IntersectionObserver as any) === 'undefined') { return; }
 
     this.scrollEl = await contentEl.getScrollElement();
 
-    const headers = pageEl.querySelectorAll('ion-header');
+    const headers = pageEl.querySelectorAll('syg-header');
     this.collapsibleMainHeader = Array.from(headers).find((header: any) => header.collapse !== 'condense') as HTMLElement | undefined;
 
     if (!this.collapsibleMainHeader) { return; }
@@ -123,7 +123,7 @@ export class Header implements ComponentInterface {
 
     /**
      * Handle interaction between toolbar collapse and
-     * showing/hiding content in the primary ion-header
+     * showing/hiding content in the primary syg-header
      * as well as progressively showing/hiding the main header
      * border as the top-most toolbar collapses or expands.
      */
@@ -151,7 +151,7 @@ export class Header implements ComponentInterface {
 
   render() {
     const { translucent, inheritedAttributes } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const collapse = this.collapse || 'none';
 
     return (

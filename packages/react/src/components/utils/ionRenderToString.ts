@@ -11,8 +11,8 @@ export async function ionRenderToString(
       clientHydrateAnnotations: false,
       excludeComponents: [
         // overlays
-        'ion-action-sheet',
-        'ion-alert',
+        'syg-action-sheet',
+        'syg-alert',
         'ion-loading',
         'ion-modal',
         'ion-picker',

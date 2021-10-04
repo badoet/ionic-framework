@@ -9,100 +9,100 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
-    <ion-menu side="start" class="e2eLeftMenu" content-id="main">
+  <syg-app>
+    <syg-menu side="start" class="e2eLeftMenu" content-id="main">
 
-      <ion-header>
-        <ion-toolbar color="secondary">
-          <ion-title>Left Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header>
+        <syg-toolbar color="secondary">
+          <syg-title>Left Menu</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content>
-        <ion-list>
-          <ion-item>Open end Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-          <ion-item>Close Menu</ion-item>
-        </ion-list>
-      </ion-content>
+      <syg-content>
+        <syg-list>
+          <syg-item>Open end Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+          <syg-item>Close Menu</syg-item>
+        </syg-list>
+      </syg-content>
 
-      <ion-footer>
-        <ion-toolbar color="secondary">
-          <ion-title>Footer</ion-title>
-        </ion-toolbar>
-      </ion-footer>
+      <syg-footer>
+        <syg-toolbar color="secondary">
+          <syg-title>Footer</syg-title>
+        </syg-toolbar>
+      </syg-footer>
 
-    </ion-menu>
+    </syg-menu>
 
-    <ion-menu side="end">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Hola</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <syg-menu side="end">
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Hola</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content class="ion-padding">
+      <syg-content class="syg-padding">
         hola macho
-      </ion-content>
-    </ion-menu>
+      </syg-content>
+    </syg-menu>
 
-    <div class="ion-page" id="main">
+    <div class="syg-page" id="main">
 
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-menu-toggle>
-              <ion-button>
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-menu-toggle>
+              <syg-button>
                 <ion-icon slot="icon-only" name="menu"></ion-icon>
-              </ion-button>
-            </ion-menu-toggle>
-          </ion-buttons>
-          <ion-title>Menu Toggle - Basic</ion-title>
-        </ion-toolbar>
-      </ion-header>
+              </syg-button>
+            </syg-menu-toggle>
+          </syg-buttons>
+          <syg-title>Menu Toggle - Basic</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content class="ion-padding">
+      <syg-content class="syg-padding">
         <div>
-          <ion-button onclick="openDefault()">Menu Button Will Open Default</ion-button>
+          <syg-button onclick="openDefault()">Menu Button Will Open Default</syg-button>
         </div>
         <div>
-          <ion-button onclick="openStart()">Menu Button Will Open start</ion-button>
+          <syg-button onclick="openStart()">Menu Button Will Open start</syg-button>
         </div>
         <div>
-          <ion-button onclick="openEnd()">Menu Button Will Open end</ion-button>
+          <syg-button onclick="openEnd()">Menu Button Will Open end</syg-button>
         </div>
-      </ion-content>
+      </syg-content>
 
 
-  </ion-app>
-  <ion-menu-controller></ion-menu-controller>
+  </syg-app>
+  <syg-menu-controller></syg-menu-controller>
 
   <script>
 
     function openDefault() {
-      const menuButton = document.querySelector('ion-menu-toggle');
+      const menuButton = document.querySelector('syg-menu-toggle');
       menuButton.menu = null;
     }
 
     function openStart() {
-      const menuButton = document.querySelector('ion-menu-toggle');
+      const menuButton = document.querySelector('syg-menu-toggle');
       menuButton.menu = 'start';
     }
 
     function openEnd() {
-      const menuButton = document.querySelector('ion-menu-toggle');
+      const menuButton = document.querySelector('syg-menu-toggle');
       menuButton.menu = 'end';
     }
   </script>

@@ -146,14 +146,14 @@ export const createAnimation = (animationId?: string): Animation => {
 
       raf(() => {
         elementsArray.forEach(element => {
-          removeStyleProperty(element, 'animation-name');
-          removeStyleProperty(element, 'animation-duration');
-          removeStyleProperty(element, 'animation-timing-function');
-          removeStyleProperty(element, 'animation-iteration-count');
-          removeStyleProperty(element, 'animation-delay');
-          removeStyleProperty(element, 'animation-play-state');
-          removeStyleProperty(element, 'animation-fill-mode');
-          removeStyleProperty(element, 'animation-direction');
+          removeStyleProperty(element, 'animatsyg-name');
+          removeStyleProperty(element, 'animatsyg-duration');
+          removeStyleProperty(element, 'animatsyg-timing-function');
+          removeStyleProperty(element, 'animatsyg-iteratsyg-count');
+          removeStyleProperty(element, 'animatsyg-delay');
+          removeStyleProperty(element, 'animatsyg-play-state');
+          removeStyleProperty(element, 'animatsyg-fill-mode');
+          removeStyleProperty(element, 'animatsyg-direction');
         });
       });
     }
@@ -535,25 +535,25 @@ export const createAnimation = (animationId?: string): Animation => {
         const stylesheet = createKeyframeStylesheet(keyframeName, keyframeRules, element);
         stylesheets.push(stylesheet);
 
-        setStyleProperty(element, 'animation-duration', `${getDuration()}ms`);
-        setStyleProperty(element, 'animation-timing-function', getEasing());
-        setStyleProperty(element, 'animation-delay', `${getDelay()}ms`);
-        setStyleProperty(element, 'animation-fill-mode', getFill());
-        setStyleProperty(element, 'animation-direction', getDirection());
+        setStyleProperty(element, 'animatsyg-duration', `${getDuration()}ms`);
+        setStyleProperty(element, 'animatsyg-timing-function', getEasing());
+        setStyleProperty(element, 'animatsyg-delay', `${getDelay()}ms`);
+        setStyleProperty(element, 'animatsyg-fill-mode', getFill());
+        setStyleProperty(element, 'animatsyg-direction', getDirection());
 
         const iterationsCount = (getIterations() === Infinity)
           ? 'infinite'
           : getIterations().toString();
 
-        setStyleProperty(element, 'animation-iteration-count', iterationsCount);
-        setStyleProperty(element, 'animation-play-state', 'paused');
+        setStyleProperty(element, 'animatsyg-iteratsyg-count', iterationsCount);
+        setStyleProperty(element, 'animatsyg-play-state', 'paused');
 
         if (toggleAnimationName) {
-          setStyleProperty(element, 'animation-name', `${stylesheet.id}-alt`);
+          setStyleProperty(element, 'animatsyg-name', `${stylesheet.id}-alt`);
         }
 
         raf(() => {
-          setStyleProperty(element, 'animation-name', stylesheet.id || null);
+          setStyleProperty(element, 'animatsyg-name', stylesheet.id || null);
         });
       }
     });
@@ -611,8 +611,8 @@ export const createAnimation = (animationId?: string): Animation => {
 
       elements.forEach(element => {
         if (_keyframes.length > 0) {
-          setStyleProperty(element, 'animation-delay', animationDuration);
-          setStyleProperty(element, 'animation-play-state', 'paused');
+          setStyleProperty(element, 'animatsyg-delay', animationDuration);
+          setStyleProperty(element, 'animatsyg-play-state', 'paused');
         }
       });
     }
@@ -638,25 +638,25 @@ export const createAnimation = (animationId?: string): Animation => {
   const updateCSSAnimation = (toggleAnimationName = true, step?: number) => {
     raf(() => {
       elements.forEach(element => {
-        setStyleProperty(element, 'animation-name', keyframeName || null);
-        setStyleProperty(element, 'animation-duration', `${getDuration()}ms`);
-        setStyleProperty(element, 'animation-timing-function', getEasing());
-        setStyleProperty(element, 'animation-delay', (step !== undefined) ? `-${step! * getDuration()}ms` : `${getDelay()}ms`);
-        setStyleProperty(element, 'animation-fill-mode', getFill() || null);
-        setStyleProperty(element, 'animation-direction', getDirection() || null);
+        setStyleProperty(element, 'animatsyg-name', keyframeName || null);
+        setStyleProperty(element, 'animatsyg-duration', `${getDuration()}ms`);
+        setStyleProperty(element, 'animatsyg-timing-function', getEasing());
+        setStyleProperty(element, 'animatsyg-delay', (step !== undefined) ? `-${step! * getDuration()}ms` : `${getDelay()}ms`);
+        setStyleProperty(element, 'animatsyg-fill-mode', getFill() || null);
+        setStyleProperty(element, 'animatsyg-direction', getDirection() || null);
 
         const iterationsCount = (getIterations() === Infinity)
           ? 'infinite'
           : getIterations().toString();
 
-        setStyleProperty(element, 'animation-iteration-count', iterationsCount);
+        setStyleProperty(element, 'animatsyg-iteratsyg-count', iterationsCount);
 
         if (toggleAnimationName) {
-          setStyleProperty(element, 'animation-name', `${keyframeName}-alt`);
+          setStyleProperty(element, 'animatsyg-name', `${keyframeName}-alt`);
         }
 
         raf(() => {
-          setStyleProperty(element, 'animation-name', keyframeName || null);
+          setStyleProperty(element, 'animatsyg-name', keyframeName || null);
         });
       });
     });
@@ -767,7 +767,7 @@ export const createAnimation = (animationId?: string): Animation => {
         });
       } else {
         elements.forEach(element => {
-          setStyleProperty(element, 'animation-play-state', 'paused');
+          setStyleProperty(element, 'animatsyg-play-state', 'paused');
         });
       }
     }
@@ -800,7 +800,7 @@ export const createAnimation = (animationId?: string): Animation => {
     raf(() => {
       elements.forEach(element => {
         if (_keyframes.length > 0) {
-          setStyleProperty(element, 'animation-play-state', 'running');
+          setStyleProperty(element, 'animatsyg-play-state', 'running');
         }
       });
     });
@@ -849,9 +849,9 @@ export const createAnimation = (animationId?: string): Animation => {
 
   const clearCSSAnimationPlayState = () => {
     elements.forEach(element => {
-      removeStyleProperty(element, 'animation-duration');
-      removeStyleProperty(element, 'animation-delay');
-      removeStyleProperty(element, 'animation-play-state');
+      removeStyleProperty(element, 'animatsyg-duration');
+      removeStyleProperty(element, 'animatsyg-delay');
+      removeStyleProperty(element, 'animatsyg-play-state');
     });
   };
 

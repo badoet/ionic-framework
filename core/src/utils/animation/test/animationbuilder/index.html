@@ -9,7 +9,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>  <script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>  <script>
     const forceCSSAnimations = new URLSearchParams(window.location.search).get('ionic:_forceCSSAnimations');
     if (forceCSSAnimations) {
       Element.prototype.animate = null;
@@ -18,81 +18,81 @@
     class PageRoot extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-back-button></ion-back-button>
-              </ion-buttons>
-              <ion-title>Root</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
+          <syg-header>
+            <syg-toolbar>
+              <syg-buttons slot="start">
+                <syg-back-button></syg-back-button>
+              </syg-buttons>
+              <syg-title>Root</syg-title>
+            </syg-toolbar>
+          </syg-header>
+          <syg-content class="syg-padding">
             <h1>Root</h1>
             <div>
-              <ion-nav-link router-direction="forward" component="page-one">
-                <ion-button class="next">Go to Page One</ion-button>
-              </ion-nav-link>
+              <syg-nav-link router-direction="forward" component="page-one">
+                <syg-button class="next">Go to Page One</syg-button>
+              </syg-nav-link>
             </div>
-          </ion-content>
+          </syg-content>
         `;
       }
     }
     class PageOne extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-back-button></ion-back-button>
-              </ion-buttons>
-              <ion-title>Page One</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
+          <syg-header>
+            <syg-toolbar>
+              <syg-buttons slot="start">
+                <syg-back-button></syg-back-button>
+              </syg-buttons>
+              <syg-title>Page One</syg-title>
+            </syg-toolbar>
+          </syg-header>
+          <syg-content class="syg-padding">
             <h1>Page One</h1>
-            <ion-nav-link router-direction="forward" component="page-two">
-              <ion-button class="next">Go to Page Two</ion-button>
-            </ion-nav-link>
-          </ion-content>
+            <syg-nav-link router-direction="forward" component="page-two">
+              <syg-button class="next">Go to Page Two</syg-button>
+            </syg-nav-link>
+          </syg-content>
         `;
       }
     }
     class PageTwo extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-back-button></ion-back-button>
-              </ion-buttons>
-              <ion-title>Page Two</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
+          <syg-header>
+            <syg-toolbar>
+              <syg-buttons slot="start">
+                <syg-back-button></syg-back-button>
+              </syg-buttons>
+              <syg-title>Page Two</syg-title>
+            </syg-toolbar>
+          </syg-header>
+          <syg-content class="syg-padding">
             <h1>Page Two</h1>
             <div>
-              <ion-nav-link router-direction="forward" component="page-three">
-                <ion-button class="next">Go to Page Three</ion-button>
-              </ion-nav-link>
+              <syg-nav-link router-direction="forward" component="page-three">
+                <syg-button class="next">Go to Page Three</syg-button>
+              </syg-nav-link>
             </div>
-          </ion-content>
+          </syg-content>
         `;
       }
     }
     class PageThree extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-back-button></ion-back-button>
-              </ion-buttons>
-              <ion-title>Page Three</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
+          <syg-header>
+            <syg-toolbar>
+              <syg-buttons slot="start">
+                <syg-back-button></syg-back-button>
+              </syg-buttons>
+              <syg-title>Page Three</syg-title>
+            </syg-toolbar>
+          </syg-header>
+          <syg-content class="syg-padding">
             <h1>Page Three</h1>
-          </ion-content>
+          </syg-content>
         `;
       }
     }
@@ -102,11 +102,11 @@
     customElements.define('page-three', PageThree);
 
     const getIonPageElement = (element) => {
-      if (element.classList.contains('ion-page')) {
+      if (element.classList.contains('syg-page')) {
         return element;
       }
 
-      const ionPage = element.querySelector(':scope > .ion-page, :scope > ion-nav, :scope > ion-tabs');
+      const ionPage = element.querySelector(':scope > .syg-page, :scope > syg-nav, :scope > syg-tabs');
       if (ionPage) {
         return ionPage;
       }
@@ -117,15 +117,15 @@
 </head>
 
 <body>
-  <ion-app>
-    <ion-router>
-      <ion-route url="/" component="page-root"></ion-route>
-      <ion-route url="/page-one" component="page-one"></ion-route>
-      <ion-route url="/page-two" component="page-two"></ion-route>
-      <ion-route url="/page-three" component="page-three"></ion-route>
-    </ion-router>
-    <ion-nav></ion-nav>
-  </ion-app>
+  <syg-app>
+    <syg-router>
+      <syg-route url="/" component="page-root"></syg-route>
+      <syg-route url="/page-one" component="page-one"></syg-route>
+      <syg-route url="/page-two" component="page-two"></syg-route>
+      <syg-route url="/page-three" component="page-three"></syg-route>
+    </syg-router>
+    <syg-nav></syg-nav>
+  </syg-app>
 </body>
 
 </html>

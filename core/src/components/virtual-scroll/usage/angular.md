@@ -1,17 +1,17 @@
 ```html
-<ion-content>
-  <ion-virtual-scroll [items]="items" approxItemHeight="320px">
-    <ion-card *virtualItem="let item; let itemBounds = bounds;">
+<syg-content>
+  <syg-virtual-scroll [items]="items" approxItemHeight="320px">
+    <syg-card *virtualItem="let item; let itemBounds = bounds;">
       <div>
-        <ion-img [src]="item.imgSrc" [height]="item.imgHeight" [alt]="item.name"></ion-img>
+        <syg-img [src]="item.imgSrc" [height]="item.imgHeight" [alt]="item.name"></syg-img>
       </div>
-    <ion-card-header>
-      <ion-card-title>{{ item.name }}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>{{ item.content }}</ion-card-content>
-    </ion-card>
-  </ion-virtual-scroll>
-</ion-content>
+    <syg-card-header>
+      <syg-card-title>{{ item.name }}</syg-card-title>
+    </syg-card-header>
+    <syg-card-content>{{ item.content }}</syg-card-content>
+    </syg-card>
+  </syg-virtual-scroll>
+</syg-content>
 ```
 
 ```typescript
@@ -65,15 +65,15 @@ let rotateImg = 0;
 
 ### Basic
 
-The array of records should be passed to the `items` property on the `ion-virtual-scroll` element.
-The data given to the `items` property must be an array. An item template with the `*virtualItem` property is required in the `ion-virtual-scroll`. The `*virtualItem` property can be added to any element.
+The array of records should be passed to the `items` property on the `syg-virtual-scroll` element.
+The data given to the `items` property must be an array. An item template with the `*virtualItem` property is required in the `syg-virtual-scroll`. The `*virtualItem` property can be added to any element.
 
 ```html
-<ion-virtual-scroll [items]="items">
-  <ion-item *virtualItem="let item">
+<syg-virtual-scroll [items]="items">
+  <syg-item *virtualItem="let item">
     {{ item }}
-  </ion-item>
-</ion-virtual-scroll>
+  </syg-item>
+</syg-virtual-scroll>
 ```
 
 ### Section Headers and Footers
@@ -87,21 +87,21 @@ and what data to provide to the template. The custom function should
 return `null` if a template shouldn't be created.
 
 ```html
-<ion-virtual-scroll [items]="items" [headerFn]="myHeaderFn">
-  <ion-item-divider *virtualHeader="let header">
+<syg-virtual-scroll [items]="items" [headerFn]="myHeaderFn">
+  <syg-item-divider *virtualHeader="let header">
     {{ header }}
-  </ion-item-divider>
-  <ion-item *virtualItem="let item">
+  </syg-item-divider>
+  <syg-item *virtualItem="let item">
     Item: {{ item }}
-  </ion-item>
-</ion-virtual-scroll>
+  </syg-item>
+</syg-virtual-scroll>
 ```
 
 Below is an example of a custom function called on every record. It
 gets passed the individual record, the record's index number,
 and the entire array of records. In this example, after every 20
 records a header will be inserted. So between the 19th and 20th records,
-between the 39th and 40th, and so on, a `<ion-item-divider>` will
+between the 39th and 40th, and so on, a `<syg-item-divider>` will
 be created and the template's data will come from the function's
 returned data.
 
@@ -123,11 +123,11 @@ each custom component's implementation and internals can be quite different, wra
 within a `<div>` is a safe way to make sure dimensions are measured correctly.
 
 ```html
-<ion-virtual-scroll [items]="items">
+<syg-virtual-scroll [items]="items">
   <div *virtualItem="let item">
     <my-custom-item [item]="item">
       {{ item }}
     </my-custom-item>
   </div>
-</ion-virtual-scroll>
+</syg-virtual-scroll>
 ```

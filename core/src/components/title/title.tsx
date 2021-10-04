@@ -1,11 +1,11 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, StyleEventDetail } from '../../interface';
 import { createColorClasses } from '../../utils/theme';
 
 @Component({
-  tag: 'ion-title',
+  tag: 'syg-title',
   styleUrls: {
     'ios': 'title.ios.scss',
     'md': 'title.md.scss'
@@ -56,7 +56,7 @@ export class ToolbarTitle implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const size = this.getSize();
 
     return (

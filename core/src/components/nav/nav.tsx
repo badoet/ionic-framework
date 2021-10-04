@@ -1,7 +1,7 @@
 import { Build, Component, Element, Event, EventEmitter, Method, Prop, Watch, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Animation, AnimationBuilder, ComponentProps, FrameworkDelegate, Gesture, NavComponent, NavComponentWithProps, NavOptions, NavOutlet, NavResult, RouteID, RouteWrite, RouterDirection, TransitionDoneFn, TransitionInstruction, ViewController } from '../../interface';
 import { getTimeGivenProgression } from '../../utils/animation/cubic-bezier';
 import { assert } from '../../utils/helpers';
@@ -11,7 +11,7 @@ import { LIFECYCLE_DID_LEAVE, LIFECYCLE_WILL_LEAVE, LIFECYCLE_WILL_UNLOAD } from
 import { VIEW_STATE_ATTACHED, VIEW_STATE_DESTROYED, VIEW_STATE_NEW, convertToViews, matches } from './view-controller';
 
 @Component({
-  tag: 'ion-nav',
+  tag: 'syg-nav',
   styleUrl: 'nav.scss',
   shadow: true
 })
@@ -48,7 +48,7 @@ export class Nav implements NavOutlet {
   @Prop() animated = true;
 
   /**
-   * By default `ion-nav` animates transition between pages based in the mode (ios or material design).
+   * By default `syg-nav` animates transition between pages based in the mode (ios or material design).
    * However, this property allows to create custom transition using `AnimateBuilder` functions.
    */
   @Prop() animation?: AnimationBuilder;
@@ -71,7 +71,7 @@ export class Nav implements NavOutlet {
         this.setRoot(this.root, this.rootParams);
       } else if (isDev) {
         console.warn(
-          '<ion-nav> does not support a root attribute when using ion-router.'
+          '<syg-nav> does not support a root attribute when using syg-router.'
         );
       }
     }
@@ -93,11 +93,11 @@ export class Nav implements NavOutlet {
 
   componentWillLoad() {
     this.useRouter =
-      !!document.querySelector('ion-router') &&
+      !!document.querySelector('syg-router') &&
       !this.el.closest('[no-router]');
 
     if (this.swipeGesture === undefined) {
-      const mode = getIonMode(this);
+      const mode = getSygMode(this);
       this.swipeGesture = config.getBoolean(
         'swipeBackEnabled',
         mode === 'ios'
@@ -531,10 +531,10 @@ export class Nav implements NavOutlet {
      * If using router, check to see if navigation hooks
      * will allow us to perform this transition. This
      * is required in order for hooks to work with
-     * the ion-back-button or swipe to go back.
+     * the syg-back-button or swipe to go back.
      */
     if (ti.opts && ti.opts.updateURL !== false && this.useRouter) {
-      const router = document.querySelector('ion-router');
+      const router = document.querySelector('syg-router');
       if (router) {
         const canTransition = await router.canTransition();
         if (canTransition === false) {
@@ -579,7 +579,7 @@ export class Nav implements NavOutlet {
     ti.resolve!(result.hasCompleted);
 
     if (ti.opts!.updateURL !== false && this.useRouter) {
-      const router = document.querySelector('ion-router');
+      const router = document.querySelector('syg-router');
       if (router) {
         const direction = result.direction === 'back' ? 'back' : 'forward';
         router.navChanged(direction);
@@ -865,7 +865,7 @@ export class Nav implements NavOutlet {
     const progressCallback = opts.progressAnimation
       ? (ani: Animation | undefined) => this.sbAni = ani
       : undefined;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const enteringEl = enteringView.element!;
     const leavingEl = leavingView && leavingView.element!;
     const animationOpts: TransitionOptions = {

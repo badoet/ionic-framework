@@ -29,7 +29,7 @@ describe('Tabs', () => {
       // When you call find on tab above it changes the value of tab
       // so we need to redefine it
       tab = getSelectedTab();
-      tab.find('ion-back-button').should('be.visible');
+      tab.find('syg-back-button').should('be.visible');
 
       cy.get('#tab-button-contact').click();
       testTabTitle('Tab 2 - Page 1');
@@ -42,7 +42,7 @@ describe('Tabs', () => {
       testState(3, 'account');
 
       tab = getSelectedTab();
-      tab.find('ion-back-button').should('be.visible');
+      tab.find('syg-back-button').should('be.visible');
 
       cy.get('#tab-button-account').click();
       testTabTitle('Tab 1 - Page 1');
@@ -64,7 +64,7 @@ describe('Tabs', () => {
       testTabTitle('Tab 1 - Page 2 (1)');
       testState(3, 'account');
 
-      cy.get('ion-back-button').click();
+      cy.get('syg-back-button').click();
       testTabTitle('Tab 1 - Page 1');
       cy.testStack('ion-tabs ion-router-outlet', ['app-tabs-tab1', 'app-tabs-tab2']);
       testState(3, 'account');
@@ -122,14 +122,14 @@ describe('Tabs', () => {
       testTabTitle('Tab 3 - Page 1');
     });
 
-    it('should use ion-back-button defaultHref', () => {
+    it('should use syg-back-button defaultHref', () => {
       let tab = getSelectedTab();
       tab.find('#goto-tab3-page2').click();
       testTabTitle('Tab 3 - Page 2');
       cy.testStack('ion-tabs ion-router-outlet', ['app-tabs-tab1', 'app-tabs-tab3-nested']);
 
       tab = getSelectedTab();
-      tab.find('ion-back-button').click();
+      tab.find('syg-back-button').click();
       testTabTitle('Tab 3 - Page 1');
       cy.testStack('ion-tabs ion-router-outlet', ['app-tabs-tab1', 'app-tabs-tab3']);
     });
@@ -226,7 +226,7 @@ describe('Tabs', () => {
 
     it('should only display the back-button when there is a page in the stack', () => {
       let tab = getSelectedTab();
-      tab.find('ion-back-button').should('not.be.visible');
+      tab.find('syg-back-button').should('not.be.visible');
       testTabTitle('Tab 1 - Page 2 (1)');
       cy.testStack('ion-tabs ion-router-outlet', ['app-tabs-tab1-nested']);
 
@@ -235,7 +235,7 @@ describe('Tabs', () => {
 
       tab.find('#goto-tab1-page2').click();
       tab = testTabTitle('Tab 1 - Page 2 (1)');
-      tab.find('ion-back-button').should('be.visible');
+      tab.find('syg-back-button').should('be.visible');
     });
 
     it('should not reuse the same page', () => {
@@ -253,12 +253,12 @@ describe('Tabs', () => {
       ]);
 
       tab = getSelectedTab();
-      tab.find('ion-back-button').click();
+      tab.find('syg-back-button').click();
       tab = testTabTitle('Tab 1 - Page 2 (2)');
-      tab.find('ion-back-button').click();
+      tab.find('syg-back-button').click();
       tab = testTabTitle('Tab 1 - Page 2 (1)');
 
-      tab.find('ion-back-button').should('not.be.visible');
+      tab.find('syg-back-button').should('not.be.visible');
 
       cy.testStack('ion-tabs ion-router-outlet', ['app-tabs-tab1-nested']);
     });
@@ -278,7 +278,7 @@ describe('Tabs', () => {
       cy.testStack('ion-tabs ion-router-outlet', ['app-tabs-tab3', 'app-tabs-tab1-nested']);
 
       tab = testTabTitle('Tab 1 - Page 2 (1)');
-      tab.find('ion-back-button').should('not.be.visible');
+      tab.find('syg-back-button').should('not.be.visible');
     });
   })
 
@@ -293,7 +293,7 @@ describe('Tabs', () => {
       cy.testStack('app-nested-outlet ion-router-outlet', ['app-nested-outlet-page']);
 
       const nestedOutlet = cy.get('app-nested-outlet');
-      nestedOutlet.find('ion-back-button').click();
+      nestedOutlet.find('syg-back-button').click();
 
       testTabTitle('Tab 2 - Page 1');
     });

@@ -13,7 +13,7 @@ export type ScrollCallback = (detail?: ScrollDetail) => boolean | void;
 
 export interface ScrollBaseCustomEvent extends CustomEvent {
   detail: ScrollBaseDetail;
-  target: HTMLIonContentElement;
+  target: HTMLSygContentElement;
 }
 
 export interface ScrollCustomEvent extends ScrollBaseCustomEvent {

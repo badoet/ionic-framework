@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, ComponentProps, ComponentRef, FrameworkDelegate, OverlayEventDetail, PopoverAttributes, PopoverInterface, PopoverSize, PositionAlign, PositionReference, PositionSide, TriggerAction } from '../../interface';
 import { CoreDelegate, attachComponent, detachComponent } from '../../utils/framework-delegate';
 import { addEventListener, raf } from '../../utils/helpers';
@@ -20,12 +20,12 @@ import { configureDismissInteraction, configureKeyboardInteraction, configureTri
  *
  * @slot - Content is placed inside of the `.popover-content` element.
  *
- * @part backdrop - The `ion-backdrop` element.
+ * @part backdrop - The `syg-backdrop` element.
  * @part arrow - The arrow that points to the reference element. Only applies on `ios` mode.
  * @part content - The wrapper element for the default slot.
  */
 @Component({
-  tag: 'ion-popover',
+  tag: 'syg-popover',
   styleUrls: {
     ios: 'popover.ios.scss',
     md: 'popover.md.scss'
@@ -36,7 +36,7 @@ export class Popover implements ComponentInterface, PopoverInterface {
 
   private usersElement?: HTMLElement;
   private triggerEl?: HTMLElement | null;
-  private parentPopover: HTMLIonPopoverElement | null = null;
+  private parentPopover: HTMLSygPopoverElement | null = null;
   private popoverIndex = popoverIds++;
   private popoverId?: string;
   private coreDelegate: FrameworkDelegate = CoreDelegate();
@@ -54,7 +54,7 @@ export class Popover implements ComponentInterface, PopoverInterface {
 
   @State() presented = false;
 
-  @Element() el!: HTMLIonPopoverElement;
+  @Element() el!: HTMLSygPopoverElement;
 
   /** @internal */
   @Prop() delegate?: FrameworkDelegate;
@@ -76,7 +76,7 @@ export class Popover implements ComponentInterface, PopoverInterface {
    * The component to display inside of the popover.
    * You only need to use this if you are not using
    * a JavaScript framework. Otherwise, you can just
-   * slot your component inside of `ion-popover`.
+   * slot your component inside of `syg-popover`.
    */
   @Prop() component?: ComponentRef;
 
@@ -273,9 +273,9 @@ export class Popover implements ComponentInterface, PopoverInterface {
      * If user has custom ID set then we should
      * not assign the default incrementing ID.
      */
-    this.popoverId = (this.el.hasAttribute('id')) ? this.el.getAttribute('id')! : `ion-popover-${this.popoverIndex}`;
+    this.popoverId = (this.el.hasAttribute('id')) ? this.el.getAttribute('id')! : `syg-popover-${this.popoverIndex}`;
 
-    this.parentPopover = this.el.closest(`ion-popover:not(#${this.popoverId})`) as HTMLIonPopoverElement | null;
+    this.parentPopover = this.el.closest(`syg-popover:not(#${this.popoverId})`) as HTMLSygPopoverElement | null;
   }
 
   componentDidLoad() {
@@ -338,12 +338,12 @@ export class Popover implements ComponentInterface, PopoverInterface {
      * we potentially need to use the coreDelegate
      * so that this works in vanilla JS apps.
      * If a user has already placed the overlay
-     * as a direct descendant of ion-app or
+     * as a direct descendant of syg-app or
      * the body, then we can assume that
      * the overlay is already in the correct place.
      */
     const parentEl = this.el.parentNode as HTMLElement | null;
-    const inline = this.inline = parentEl !== null && parentEl.tagName !== 'ION-APP' && parentEl.tagName !== 'BODY';
+    const inline = this.inline = parentEl !== null && parentEl.tagName !== 'SYG-APP' && parentEl.tagName !== 'BODY';
     const delegate = this.workingDelegate = (inline) ? this.delegate || this.coreDelegate : this.delegate
 
     return { inline, delegate }
@@ -466,7 +466,7 @@ export class Popover implements ComponentInterface, PopoverInterface {
    * @internal
    */
   @Method()
-  async getParentPopover(): Promise<HTMLIonPopoverElement | null> {
+  async getParentPopover(): Promise<HTMLSygPopoverElement | null> {
     return this.parentPopover;
   }
 
@@ -546,7 +546,7 @@ export class Popover implements ComponentInterface, PopoverInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const { onLifecycle, popoverId, parentPopover, dismissOnSelect, presented, side, arrow, htmlAttributes } = this;
     const desktop = isPlatform('desktop');
     const enableArrow = arrow && !parentPopover && !desktop;
@@ -571,17 +571,17 @@ export class Popover implements ComponentInterface, PopoverInterface {
           [`popover-side-${side}`]: true,
           'popover-nested': !!parentPopover
         }}
-        onIonPopoverDidPresent={onLifecycle}
-        onIonPopoverWillPresent={onLifecycle}
-        onIonPopoverWillDismiss={onLifecycle}
-        onIonPopoverDidDismiss={onLifecycle}
-        onIonDismiss={this.onDismiss}
-        onIonBackdropTap={this.onBackdropTap}
+        onSygPopoverDidPresent={onLifecycle}
+        onSygPopoverWillPresent={onLifecycle}
+        onSygPopoverWillDismiss={onLifecycle}
+        onSygPopoverDidDismiss={onLifecycle}
+        onSygDismiss={this.onDismiss}
+        onSygBackdropTap={this.onBackdropTap}
       >
-        {!parentPopover && <ion-backdrop tappable={this.backdropDismiss} visible={this.showBackdrop} part="backdrop" />}
+        {!parentPopover && <syg-backdrop tappable={this.backdropDismiss} visible={this.showBackdrop} part="backdrop" />}
 
         <div
-          class="popover-wrapper ion-overlay-wrapper"
+          class="popover-wrapper syg-overlay-wrapper"
           onClick={dismissOnSelect ? () => this.dismiss() : undefined}
         >
           {enableArrow && <div class="popover-arrow" part="arrow"></div>}

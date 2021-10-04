@@ -2,9 +2,9 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Slides</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -23,8 +23,8 @@
       </ion-slides>
 
       <div class="ion-padding">
-        <ion-button expand="block" @click="slidePrevious">Previous</ion-button>
-        <ion-button expand="block" @click="slideNext">Next</ion-button>
+        <syg-button expand="block" @click="slidePrevious">Previous</syg-button>
+        <syg-button expand="block" @click="slideNext">Next</syg-button>
 
         <br>
 

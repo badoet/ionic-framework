@@ -37,10 +37,10 @@ export class LoadingExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.presentLoading()}>Present Loading</ion-button>
-        <ion-button onClick={() => this.presentLoadingWithOptions()}>Present Loading: Options</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={() => this.presentLoading()}>Present Loading</syg-button>
+        <syg-button onClick={() => this.presentLoadingWithOptions()}>Present Loading: Options</syg-button>
+      </syg-content>
     ];
   }
 }

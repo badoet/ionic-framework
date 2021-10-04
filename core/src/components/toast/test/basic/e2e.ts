@@ -28,7 +28,7 @@ test('toast: basic, custom close text', async () => {
 });
 
 test('toast: basic, custom buttons', async () => {
-  await testToast(DIRECTORY, '#custom-action-buttons-toast');
+  await testToast(DIRECTORY, '#custom-actsyg-buttons-toast');
 });
 
 test('toast: basic, translucent', async () => {
@@ -80,7 +80,7 @@ test('toast:rtl: basic, custom close text', async () => {
 });
 
 test('toast:rtl: basic, custom buttons', async () => {
-  await testToast(DIRECTORY, '#custom-action-buttons-toast');
+  await testToast(DIRECTORY, '#custom-actsyg-buttons-toast');
 });
 
 test('toast:rtl: basic, translucent', async () => {
@@ -111,12 +111,12 @@ test('toast: htmlAttributes', async () => {
   await page.click('#show-bottom-toast');
   await page.waitForSelector('#show-bottom-toast');
 
-  let toast = await page.find('ion-toast');
+  let toast = await page.find('syg-toast');
 
   expect(toast).not.toBe(null);
   await toast.waitForVisible();
 
-  const attribute = await page.evaluate((el) => document.querySelector('ion-toast').getAttribute('data-testid'));
+  const attribute = await page.evaluate((el) => document.querySelector('syg-toast').getAttribute('data-testid'));
 
   expect(attribute).toEqual('basic-toast');
 });

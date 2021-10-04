@@ -1,12 +1,12 @@
 import { JSXBase } from '@stencil/core/internal';
 
 import { AnimationBuilder, Mode, TextFieldTypes } from '../../interface';
-import { IonicSafeString } from '../../utils/sanitization';
+import { SygSafeString } from '../../utils/sanitization';
 
 export interface AlertOptions {
   header?: string;
   subHeader?: string;
-  message?: string | IonicSafeString;
+  message?: string | SygSafeString;
   cssClass?: string | string[];
   inputs?: AlertInput[];
   buttons?: (AlertButton | string)[];

@@ -1,26 +1,26 @@
 ```html
-<ion-router>
-  <ion-route component="page-tabs">
-    <ion-route url="/schedule" component="tab-schedule">
-      <ion-route component="page-schedule"></ion-route>
-      <ion-route url="/session/:sessionId" component="page-session"></ion-route>
-    </ion-route>
+<syg-router>
+  <syg-route component="page-tabs">
+    <syg-route url="/schedule" component="tab-schedule">
+      <syg-route component="page-schedule"></syg-route>
+      <syg-route url="/session/:sessionId" component="page-session"></syg-route>
+    </syg-route>
 
-    <ion-route url="/speakers" component="tab-speaker">
-      <ion-route component="page-speaker-list"></ion-route>
-      <ion-route url="/session/:sessionId" component="page-session"></ion-route>
-      <ion-route url="/:speakerId" component="page-speaker-detail"></ion-route>
-    </ion-route>
+    <syg-route url="/speakers" component="tab-speaker">
+      <syg-route component="page-speaker-list"></syg-route>
+      <syg-route url="/session/:sessionId" component="page-session"></syg-route>
+      <syg-route url="/:speakerId" component="page-speaker-detail"></syg-route>
+    </syg-route>
 
-    <ion-route url="/map" component="page-map"></ion-route>
-    <ion-route url="/about" component="page-about"></ion-route>
-  </ion-route>
+    <syg-route url="/map" component="page-map"></syg-route>
+    <syg-route url="/about" component="page-about"></syg-route>
+  </syg-route>
 
-  <ion-route url="/tutorial" component="page-tutorial"></ion-route>
-  <ion-route url="/login" component="page-login"></ion-route>
-  <ion-route url="/account" component="page-account"></ion-route>
-  <ion-route url="/signup" component="page-signup"></ion-route>
-  <ion-route url="/support" component="page-support"></ion-route>
-</ion-router>
+  <syg-route url="/tutorial" component="page-tutorial"></syg-route>
+  <syg-route url="/login" component="page-login"></syg-route>
+  <syg-route url="/account" component="page-account"></syg-route>
+  <syg-route url="/signup" component="page-signup"></syg-route>
+  <syg-route url="/support" component="page-support"></syg-route>
+</syg-router>
 
 ```

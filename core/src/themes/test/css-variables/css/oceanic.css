@@ -75,7 +75,7 @@
   --ion-color-dark-tint: #343d46;
 
   /* Component Colors */
-  --ion-backdrop-color: #1b2b34;
+  --syg-backdrop-color: #1b2b34;
   --ion-overlay-background-color: #142129;
 
   --ion-border-color: #1b2b34;
@@ -86,12 +86,12 @@
   --ion-tab-bar-color: #a7adba;
   --ion-tab-bar-color-selected: #549ee7;
 
-  --ion-toolbar-background: #343d46;
-  --ion-toolbar-color: #a7adba;
+  --syg-toolbar-background: #343d46;
+  --syg-toolbar-color: #a7adba;
 
   /* Background, Text, Step Colors */
-  --ion-background-color: #1b2b34;
-  --ion-background-color-rgb: 27,43,52;
+  --syg-background-color: #1b2b34;
+  --syg-background-color-rgb: 27,43,52;
 
   --ion-text-color: #fff;
   --ion-text-color-rgb: 255,255,255;

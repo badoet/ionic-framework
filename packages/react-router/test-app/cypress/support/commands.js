@@ -111,7 +111,7 @@ Cypress.Commands.add('ionBackClick', (pageId) => {
   cy.get(`div.ion-page[data-pageid=${pageId}]`)
     .should('be.visible', true)
     // .should('have.length', 1)
-    .find('ion-back-button')
+    .find('syg-back-button')
     .click();
 });
 

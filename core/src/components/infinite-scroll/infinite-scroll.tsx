@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h, readTask, writeTask } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 @Component({
-  tag: 'ion-infinite-scroll',
+  tag: 'syg-infinite-scroll',
   styleUrl: 'infinite-scroll.scss'
 })
 export class InfiniteScroll implements ComponentInterface {
@@ -77,9 +77,9 @@ export class InfiniteScroll implements ComponentInterface {
   @Event() ionInfinite!: EventEmitter<void>;
 
   async connectedCallback() {
-    const contentEl = this.el.closest('ion-content');
+    const contentEl = this.el.closest('syg-content');
     if (!contentEl) {
-      console.error('<ion-infinite-scroll> must be used inside an <ion-content>');
+      console.error('<syg-infinite-scroll> must be used inside an <syg-content>');
       return;
     }
     this.scrollEl = await contentEl.getScrollElement();
@@ -216,7 +216,7 @@ export class InfiniteScroll implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const disabled = this.disabled;
     return (
       <Host

@@ -9,125 +9,125 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Searchbar - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Searchbar - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <h5 class="ion-padding-start ion-padding-top"> Search - Default </h5>
-      <ion-searchbar id="basic" value="test" type="tel" show-cancel-button="focus" debounce="500">
-      </ion-searchbar>
+    <syg-content id="content">
+      <h5 class="syg-padding-start syg-padding-top"> Search - Default </h5>
+      <syg-searchbar id="basic" value="test" type="tel" show-cancel-button="focus" debounce="500">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - No Cancel Button </h5>
-      <ion-searchbar class="red-box" id="noCancel" value="after view" autocorrect="off" autocomplete="off" spellcheck="true" type="text" show-cancel-button="never">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - No Cancel Button </h5>
+      <syg-searchbar class="red-box" id="noCancel" value="after view" autocorrect="off" autocomplete="off" spellcheck="true" type="text" show-cancel-button="never">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Always Show Cancel Button</h5>
-      <ion-searchbar id="noCancel" value="after view" animated="true" show-cancel-button="always">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Always Show Cancel Button</h5>
+      <syg-searchbar id="noCancel" value="after view" animated="true" show-cancel-button="always">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Never Show Cancel Button</h5>
-      <ion-searchbar id="noCancel" value="after view" animated="true" show-cancel-button="never">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Never Show Cancel Button</h5>
+      <syg-searchbar id="noCancel" value="after view" animated="true" show-cancel-button="never">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Show Cancel Button on Focus</h5>
-      <ion-searchbar id="noCancel" value="after view" animated="true" show-cancel-button="focus">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Show Cancel Button on Focus</h5>
+      <syg-searchbar id="noCancel" value="after view" animated="true" show-cancel-button="focus">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Cancel Button set to false</h5>
-      <ion-searchbar id="noCancel" value="after view" autocorrect="off" autocomplete="off" spellcheck="true" type="text" show-cancel-button="never">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Cancel Button set to false</h5>
+      <syg-searchbar id="noCancel" value="after view" autocorrect="off" autocomplete="off" spellcheck="true" type="text" show-cancel-button="never">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Cancel Button set to true</h5>
-      <ion-searchbar id="noCancel" value="after view" autocorrect="off" autocomplete="off" spellcheck="true" type="text" show-cancel-button="focus">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Cancel Button set to true</h5>
+      <syg-searchbar id="noCancel" value="after view" autocorrect="off" autocomplete="off" spellcheck="true" type="text" show-cancel-button="focus">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - No Clear Button </h5>
-      <ion-searchbar id="noCancel" value="after view" type="text" show-clear-button="never">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - No Clear Button </h5>
+      <syg-searchbar id="noCancel" value="after view" type="text" show-clear-button="never">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Always Show  Clear Button </h5>
-      <ion-searchbar id="noCancel" value="after view" type="text" show-clear-button="always">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Always Show  Clear Button </h5>
+      <syg-searchbar id="noCancel" value="after view" type="text" show-clear-button="always">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Input mode set to numeric</h5>
-      <ion-searchbar id="noCancel" value="after view" inputmode="numeric" autocorrect="off" autocomplete="off" spellcheck="true" type="text" show-cancel-button="focus">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Input mode set to numeric</h5>
+      <syg-searchbar id="noCancel" value="after view" inputmode="numeric" autocorrect="off" autocomplete="off" spellcheck="true" type="text" show-cancel-button="focus">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Disabled </h5>
-      <ion-searchbar id="disabled" value="disabled" type="text" disabled="true">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Disabled </h5>
+      <syg-searchbar id="disabled" value="disabled" type="text" disabled="true">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Danger </h5>
-      <ion-searchbar color="danger" show-cancel-button="focus">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Danger </h5>
+      <syg-searchbar color="danger" show-cancel-button="focus">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Custom Search Icon </h5>
-      <ion-searchbar search-icon="home" show-cancel-button="focus" debounce="500">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Custom Search Icon </h5>
+      <syg-searchbar search-icon="home" show-cancel-button="focus" debounce="500">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Animated </h5>
-      <ion-searchbar animated="true" show-cancel-button="focus" debounce="500">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Animated </h5>
+      <syg-searchbar animated="true" show-cancel-button="focus" debounce="500">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Custom Placeholder </h5>
-      <ion-searchbar id="dynamicProp" value="33" autocorrect="on" show-cancel-button="focus" autocomplete="on" spellcheck="false"
+      <h5 class="syg-padding-start syg-padding-top"> Search - Custom Placeholder </h5>
+      <syg-searchbar id="dynamicProp" value="33" autocorrect="on" show-cancel-button="focus" autocomplete="on" spellcheck="false"
         type="number" placeholder="Filter Schedules">
-      </ion-searchbar>
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Custom Cancel Button Danger </h5>
-      <ion-searchbar show-cancel-button="focus" cancel-button-text="Really Long Cancel" color="danger">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Custom Cancel Button Danger </h5>
+      <syg-searchbar show-cancel-button="focus" cancel-button-text="Really Long Cancel" color="danger">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Custom Cancel Button Icon through property</h5>
-      <ion-searchbar show-cancel-button="focus" cancel-button-icon="rewind">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Custom Cancel Button Icon through property</h5>
+      <syg-searchbar show-cancel-button="focus" cancel-button-icon="rewind">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Value passed </h5>
-      <ion-searchbar value="mysearch" cancel-button-text="Really Long Cancel" color="dark" show-cancel-button="focus">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Value passed </h5>
+      <syg-searchbar value="mysearch" cancel-button-text="Really Long Cancel" color="dark" show-cancel-button="focus">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Mode iOS</h5>
-      <ion-searchbar mode="ios" animated="true" show-cancel-button="focus" placeholder="Search">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Mode iOS</h5>
+      <syg-searchbar mode="ios" animated="true" show-cancel-button="focus" placeholder="Search">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Mode MD</h5>
-      <ion-searchbar mode="md" animated="true" show-cancel-button="focus" placeholder="Search">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Mode MD</h5>
+      <syg-searchbar mode="md" animated="true" show-cancel-button="focus" placeholder="Search">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - DebounceTime </h5>
-      <ion-searchbar autocorrect="on" show-cancel-button="focus" autocomplete="on" spellcheck="true" type="text" debounce="5000"
+      <h5 class="syg-padding-start syg-padding-top"> Search - DebounceTime </h5>
+      <syg-searchbar autocorrect="on" show-cancel-button="focus" autocomplete="on" spellcheck="true" type="text" debounce="5000"
         placeholder="Check the log">
-      </ion-searchbar>
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - Animated and No Cancel</h5>
-      <ion-searchbar id="dynamicAttr" placeholder="Search" animated="true" show-cancel-button="never">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - Animated and No Cancel</h5>
+      <syg-searchbar id="dynamicAttr" placeholder="Search" animated="true" show-cancel-button="never">
+      </syg-searchbar>
 
-      <h5 class="ion-padding-start ion-padding-top"> Search - HTML Placeholder Treated As Text </h5>
-      <ion-searchbar mode="ios" animated="true" show-cancel-button="focus" placeholder="<ion-button>Hello</ion-button>">
-      </ion-searchbar>
+      <h5 class="syg-padding-start syg-padding-top"> Search - HTML Placeholder Treated As Text </h5>
+      <syg-searchbar mode="ios" animated="true" show-cancel-button="focus" placeholder="<syg-button>Hello</syg-button>">
+      </syg-searchbar>
 
-      <p class="ion-padding">
-        <ion-button expand="block" (click)="changeValue()">Change Value</ion-button>
+      <p class="syg-padding">
+        <syg-button expand="block" (click)="changeValue()">Change Value</syg-button>
       </p>
 
-      <div class="ion-padding-horizontal">
-        <ion-button expand="block" onClick="toggleProp()">Toggle Property</ion-button>
+      <div class="syg-padding-horizontal">
+        <syg-button expand="block" onClick="toggleProp()">Toggle Property</syg-button>
       </div>
-      <div class="ion-padding">
-        <ion-button expand="block" color="secondary" onClick="toggleAttr()">Toggle Attribute</ion-button>
+      <div class="syg-padding">
+        <syg-button expand="block" color="secondary" onClick="toggleAttr()">Toggle Attribute</syg-button>
       </div>
 
-      <div class="ion-padding-horizontal">
-        <ion-button expand="block" color="secondary" onClick="toggleDisabled()">Toggle disabled</ion-button>
+      <div class="syg-padding-horizontal">
+        <syg-button expand="block" color="secondary" onClick="toggleDisabled()">Toggle disabled</syg-button>
       </div>
 
       <style>
@@ -212,9 +212,9 @@
           console.log(ev);
         });
       </script>
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

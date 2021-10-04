@@ -4,7 +4,7 @@
 // iOS Header
 // --------------------------------------------------
 
-.header-ios ion-toolbar:last-of-type {
+.header-ios syg-toolbar:last-of-type {
   --border-width: 0 0 #{$hairlines-width};
 }
 
@@ -16,7 +16,7 @@
 
     backdrop-filter: $header-ios-translucent-filter;
   }
-  .header-translucent-ios ion-toolbar {
+  .header-translucent-ios syg-toolbar {
     --opacity: .8;
   }
 
@@ -29,7 +29,7 @@
   }
 }
 
-.header-ios.ion-no-border ion-toolbar:last-of-type {
+.header-ios.ion-no-border syg-toolbar:last-of-type {
   --border-width: 0;
 }
 
@@ -39,12 +39,12 @@
   z-index: 9;
 }
 
-.header-collapse-condense ion-toolbar {
+.header-collapse-condense syg-toolbar {
   position: sticky;
   top: 0;
 }
 
-.header-collapse-condense ion-toolbar:first-of-type {
+.header-collapse-condense syg-toolbar:first-of-type {
   padding-top: 7px;
 
   z-index: 1;
@@ -54,30 +54,30 @@
  * Large title toolbar should just use the content background
  * since it needs to blend in with the header above it.
  */
-.header-collapse-condense ion-toolbar {
-  --background: var(--ion-background-color, #fff);
+.header-collapse-condense syg-toolbar {
+  --background: var(--syg-background-color, #fff);
 
   z-index: 0;
 }
 
-.header-collapse-condense ion-toolbar:last-of-type {
+.header-collapse-condense syg-toolbar:last-of-type {
   --border-width: 0px;
 }
 
-.header-collapse-condense ion-toolbar ion-searchbar {
+.header-collapse-condense syg-toolbar ion-searchbar {
   height: 48px;
 
   padding-top: 0px;
   padding-bottom: 13px;
 }
 
-.header-collapse-main ion-toolbar.in-toolbar ion-title,
-.header-collapse-main ion-toolbar.in-toolbar ion-buttons {
+.header-collapse-main syg-toolbar.in-toolbar ion-title,
+.header-collapse-main syg-toolbar.in-toolbar syg-buttons {
   transition: all 0.2s ease-in-out;
 }
 
-.header-collapse-condense-inactive:not(.header-collapse-condense) ion-toolbar.in-toolbar ion-title,
-.header-collapse-condense-inactive:not(.header-collapse-condense) ion-toolbar.in-toolbar ion-buttons.buttons-collapse {
+.header-collapse-condense-inactive:not(.header-collapse-condense) syg-toolbar.in-toolbar ion-title,
+.header-collapse-condense-inactive:not(.header-collapse-condense) syg-toolbar.in-toolbar syg-buttons.buttons-collapse {
   opacity: 0;
   pointer-events: none;
 }
@@ -88,7 +88,7 @@
  * while rubber-banding causes the scroll position
  * to jump to the top
  */
-.header-collapse-condense-inactive.header-collapse-condense ion-toolbar.in-toolbar ion-title,
-.header-collapse-condense-inactive.header-collapse-condense ion-toolbar.in-toolbar ion-buttons.buttons-collapse {
+.header-collapse-condense-inactive.header-collapse-condense syg-toolbar.in-toolbar ion-title,
+.header-collapse-condense-inactive.header-collapse-condense syg-toolbar.in-toolbar syg-buttons.buttons-collapse {
   visibility: hidden;
 }

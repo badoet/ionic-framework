@@ -13,7 +13,7 @@ export const mdLeaveAnimation = (baseEl: HTMLElement): Animation => {
   const wrapperAnimation = createAnimation();
 
   backdropAnimation
-    .addElement(root.querySelector('ion-backdrop')!)
+    .addElement(root.querySelector('syg-backdrop')!)
     .fromTo('opacity', 'var(--backdrop-opacity)', 0);
 
   wrapperAnimation

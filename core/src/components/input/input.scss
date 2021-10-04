@@ -49,7 +49,7 @@
   z-index: $z-index-item-input;
 }
 
-:host-context(ion-item:not(.item-label)) {
+:host-context(syg-item:not(.item-label)) {
   --padding-start: 0;
 }
 

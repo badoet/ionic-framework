@@ -178,7 +178,7 @@ describe('Routing', () => {
   });
 
   // Verifies fix for https://github.com/ionic-team/ionic-framework/issues/22528
-  it('should not show ion-back-button when replacing to root page', () => {
+  it('should not show syg-back-button when replacing to root page', () => {
     cy.visit('http://localhost:8080');
 
     cy.routerPush('/navigation');
@@ -290,7 +290,7 @@ describe('Routing', () => {
     cy.ionPageDoesNotExist('inputs');
   })
 
-  it('should properly go back using ion-back-button after using router.go()', () => {
+  it('should properly go back using syg-back-button after using router.go()', () => {
     cy.visit('http://localhost:8080');
 
     cy.routerPush('/routing');

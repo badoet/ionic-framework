@@ -5,7 +5,7 @@ export { RadioValueAccessor } from './directives/control-value-accessors/radio-v
 export { SelectValueAccessor } from './directives/control-value-accessors/select-value-accessor';
 export { TextValueAccessor } from './directives/control-value-accessors/text-value-accessor';
 export { IonTabs } from './directives/navigation/ion-tabs';
-export { IonBackButtonDelegate } from './directives/navigation/ion-back-button';
+export { IonBackButtonDelegate } from './directives/navigation/syg-back-button';
 export { NavDelegate } from './directives/navigation/nav-delegate';
 export { IonRouterOutlet } from './directives/navigation/ion-router-outlet';
 export { RouterLinkDelegate } from './directives/navigation/router-link-delegate';
@@ -104,7 +104,7 @@ export {
 
   ItemSlidingCustomEvent,
 
-  IonicSafeString,
+  SygSafeString,
 
   LoadingOptions,
 

@@ -9,90 +9,90 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <style>
-    ion-spinner {
+    syg-spinner {
       color: #555;
     }
   </style>
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button default-href="/" text="Mailboxes"></ion-back-button>
-        </ion-buttons>
-        <ion-title>All Inboxes</ion-title>
-        <ion-buttons slot="end">
-          <ion-button>Edit</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-buttons slot="start">
+          <syg-back-button default-href="/" text="Mailboxes"></syg-back-button>
+        </syg-buttons>
+        <syg-title>All Inboxes</syg-title>
+        <syg-buttons slot="end">
+          <syg-button>Edit</syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
-      <ion-refresher id="refresher" slot="fixed">
-        <ion-refresher-content></ion-refresher-content>
-      </ion-refresher>
+    <syg-content>
+      <syg-refresher id="refresher" slot="fixed">
+        <syg-refresher-content></syg-refresher-content>
+      </syg-refresher>
 
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">All Inboxes</ion-title>
-        </ion-toolbar>
-        <ion-toolbar>
-          <ion-searchbar></ion-searchbar>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">All Inboxes</syg-title>
+        </syg-toolbar>
+        <syg-toolbar>
+          <syg-searchbar></syg-searchbar>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-list id="list"></ion-list>
-      
-      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button onclick="toggleHeader()">
+      <syg-list id="list"></syg-list>
+
+      <syg-fab vertical="bottom" horizontal="end" slot="fixed">
+        <syg-fab-button onclick="toggleHeader()">
           <ion-icon name="settings"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-    </ion-content>
-  </ion-app>
+        </syg-fab-button>
+      </syg-fab>
+    </syg-content>
+  </syg-app>
 
   <script>
-    
+
     const toggleHeader = () => {
-      const app = document.querySelector('ion-app');
-      const header = app.querySelector('ion-header');
-      
+      const app = document.querySelector('syg-app');
+      const header = app.querySelector('syg-header');
+
       if (header) {
         header.parentNode.removeChild(header);
       } else {
         app.insertAdjacentHTML("afterbegin", `
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-back-button default-href="/" text="Mailboxes"></ion-back-button>
-              </ion-buttons>
-              <ion-title>All Inboxes</ion-title>
-              <ion-buttons slot="end">
-                <ion-button>Edit</ion-button>
-              </ion-buttons>
-            </ion-toolbar>
-          </ion-header>
+          <syg-header>
+            <syg-toolbar>
+              <syg-buttons slot="start">
+                <syg-back-button default-href="/" text="Mailboxes"></syg-back-button>
+              </syg-buttons>
+              <syg-title>All Inboxes</syg-title>
+              <syg-buttons slot="end">
+                <syg-button>Edit</syg-button>
+              </syg-buttons>
+            </syg-toolbar>
+          </syg-header>
         `);
       }
     }
-    
+
     let items = [];
     for (var i = 0; i < 30; i++) {
       items.push(i + 1);
     }
     const list = document.getElementById('list');
     const refresher = document.getElementById('refresher');
-    
+
     refresher.addEventListener('ionPull', () => {
       console.log('ionPull');
     });
-    
+
     refresher.addEventListener('ionStart', () => {
       console.log('ionStart');
     });
-    
+
     refresher.addEventListener('ionRefresh', async function () {
       console.log('Loading data...');
       const data = await getAsyncData();
@@ -104,7 +104,7 @@
     function render() {
       let html = '';
       for (let item of items) {
-        html += `<ion-item button>${item}</ion-item>`;
+        html += `<syg-item button>${item}</syg-item>`;
       }
       list.innerHTML = html;
     }

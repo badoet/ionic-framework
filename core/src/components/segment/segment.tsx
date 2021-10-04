@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Listen, Prop, State, Watch, h, writeTask } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, SegmentChangeEventDetail, StyleEventDetail } from '../../interface';
 import { Gesture, GestureDetail } from '../../utils/gesture';
 import { pointerCoord } from '../../utils/helpers';
@@ -11,7 +11,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-segment',
+  tag: 'syg-segment',
   styleUrls: {
     ios: 'segment.ios.scss',
     md: 'segment.md.scss'
@@ -21,12 +21,12 @@ import { createColorClasses, hostContext } from '../../utils/theme';
 export class Segment implements ComponentInterface {
   private gesture?: Gesture;
   private didInit = false;
-  private checked?: HTMLIonSegmentButtonElement;
+  private checked?: HTMLSygSegmentButtonElement;
 
   // Value to be emitted when gesture ends
   private valueAfterGesture?: any;
 
-  @Element() el!: HTMLIonSegmentElement;
+  @Element() el!: HTMLSygSegmentElement;
 
   @State() activated = false;
 
@@ -93,14 +93,14 @@ export class Segment implements ComponentInterface {
   }
 
   /**
-   * If `true`, navigating to an `ion-segment-button` with the keyboard will focus and select the element.
-   * If `false`, keyboard navigation will only focus the `ion-segment-button` element.
+   * If `true`, navigating to an `syg-segment-button` with the keyboard will focus and select the element.
+   * If `false`, keyboard navigation will only focus the `syg-segment-button` element.
    */
   @Prop() selectOnFocus = false;
 
   /**
    * Emitted when the value property has changed and any
-   * dragging pointer has been released from `ion-segment`.
+   * dragging pointer has been released from `syg-segment`.
    */
   @Event() ionChange!: EventEmitter<SegmentChangeEventDetail>;
 
@@ -189,7 +189,7 @@ export class Segment implements ComponentInterface {
   }
 
   private getButtons() {
-    return Array.from(this.el.querySelectorAll('ion-segment-button'));
+    return Array.from(this.el.querySelectorAll('syg-segment-button'));
   }
 
   /**
@@ -205,7 +205,7 @@ export class Segment implements ComponentInterface {
     const checked = buttons.find(button => button.value === this.value)!;
 
     const root = checked.shadowRoot || checked;
-    const ripple = root.querySelector('ion-ripple-effect');
+    const ripple = root.querySelector('syg-ripple-effect');
 
     if (!ripple) { return; }
 
@@ -232,13 +232,13 @@ export class Segment implements ComponentInterface {
   }
 
   private activate(detail: GestureDetail) {
-    const clicked = detail.event.target as HTMLIonSegmentButtonElement;
+    const clicked = detail.event.target as HTMLSygSegmentButtonElement;
     const buttons = this.getButtons();
     const checked = buttons.find(button => button.value === this.value);
 
     // Make sure we are only checking for activation on a segment button
     // since disabled buttons will get the click on the segment
-    if (clicked.tagName !== 'ION-SEGMENT-BUTTON') {
+    if (clicked.tagName !== 'SYG-SEGMENT-BUTTON') {
       return;
     }
 
@@ -255,12 +255,12 @@ export class Segment implements ComponentInterface {
     }
   }
 
-  private getIndicator(button: HTMLIonSegmentButtonElement): HTMLDivElement | null {
+  private getIndicator(button: HTMLSygSegmentButtonElement): HTMLDivElement | null {
     const root = button.shadowRoot || button;
     return root.querySelector('.segment-button-indicator');
   }
 
-  private checkButton(previous: HTMLIonSegmentButtonElement, current: HTMLIonSegmentButtonElement) {
+  private checkButton(previous: HTMLSygSegmentButtonElement, current: HTMLSygSegmentButtonElement) {
     const previousIndicator = this.getIndicator(previous);
     const currentIndicator = this.getIndicator(current);
 
@@ -348,7 +348,7 @@ export class Segment implements ComponentInterface {
      * returns document otherwise.
      */
     const root = this.el.getRootNode() as Document | ShadowRoot;
-    const nextEl = root.elementFromPoint(currentX, previousY) as HTMLIonSegmentButtonElement;
+    const nextEl = root.elementFromPoint(currentX, previousY) as HTMLSygSegmentButtonElement;
 
     const decreaseIndex = isRTL ? currentX > (left + width) : currentX < left;
     const increaseIndex = isRTL ? currentX < left : currentX > (left + width);
@@ -391,11 +391,11 @@ export class Segment implements ComponentInterface {
     if (current != null) {
 
       /**
-       * If current element is ion-segment then that means
-       * user tried to select a disabled ion-segment-button,
+       * If current element is syg-segment then that means
+       * user tried to select a disabled syg-segment-button,
        * and we should not update the ripple.
        */
-      if (current.tagName === 'ION-SEGMENT') {
+      if (current.tagName === 'SYG-SEGMENT') {
         return false;
       }
 
@@ -414,14 +414,14 @@ export class Segment implements ComponentInterface {
   }
 
   private onClick = (ev: Event) => {
-    const current = ev.target as HTMLIonSegmentButtonElement;
+    const current = ev.target as HTMLSygSegmentButtonElement;
     const previous = this.checked;
 
     // If the current element is a segment then that means
     // the user tried to swipe to a segment button and
     // click a segment button at the same time so we should
     // not update the checked segment button
-    if (current.tagName === 'ION-SEGMENT') {
+    if (current.tagName === 'SYG-SEGMENT') {
       return;
     }
 
@@ -438,7 +438,7 @@ export class Segment implements ComponentInterface {
     this.checked = current;
   }
 
-  private getSegmentButton = (selector: 'first' | 'last' | 'next' | 'previous'): HTMLIonSegmentButtonElement | null => {
+  private getSegmentButton = (selector: 'first' | 'last' | 'next' | 'previous'): HTMLSygSegmentButtonElement | null => {
     const buttons = this.getButtons().filter(button => !button.disabled);
     const currIndex = buttons.findIndex(button => button === document.activeElement);
 
@@ -481,7 +481,7 @@ export class Segment implements ComponentInterface {
       case ' ':
       case 'Enter':
         ev.preventDefault();
-        current = document.activeElement as HTMLIonSegmentButtonElement;
+        current = document.activeElement as HTMLSygSegmentButtonElement;
         keyDownSelectsButton = true;
       default:
         break;
@@ -496,7 +496,7 @@ export class Segment implements ComponentInterface {
     current.focus();
   }
 
-  /* By default, focus is delegated to the selected `ion-segment-button`.
+  /* By default, focus is delegated to the selected `syg-segment-button`.
    * If there is no selected button, focus will instead pass to the first child button.
   **/
   private ensureFocusable() {
@@ -507,15 +507,15 @@ export class Segment implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         role="tablist"
         onClick={this.onClick}
         class={createColorClasses(this.color, {
           [mode]: true,
-          'in-toolbar': hostContext('ion-toolbar', this.el),
-          'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
+          'in-toolbar': hostContext('syg-toolbar', this.el),
+          'in-toolbar-color': hostContext('syg-toolbar[color]', this.el),
           'segment-activated': this.activated,
           'segment-disabled': this.disabled,
           'segment-scrollable': this.scrollable

@@ -17,7 +17,7 @@ test('popover: focus trap', async () => {
   await page.click('#basic-popover');
   await page.waitForSelector('#basic-popover');
 
-  let popover = await page.find('ion-popover');
+  let popover = await page.find('syg-popover');
 
   expect(popover).not.toBe(null);
   await popover.waitForVisible();
@@ -103,12 +103,12 @@ test('popover: htmlAttributes', async () => {
   await page.click('#basic-popover');
   await page.waitForSelector('#basic-popover');
 
-  let alert = await page.find('ion-popover');
+  let alert = await page.find('syg-popover');
 
   expect(alert).not.toBe(null);
   await alert.waitForVisible();
 
-  const attribute = await page.evaluate((el) => document.querySelector('ion-popover').getAttribute('data-testid'));
+  const attribute = await page.evaluate((el) => document.querySelector('syg-popover').getAttribute('data-testid'));
 
   expect(attribute).toEqual('basic-popover');
 });

@@ -1,12 +1,12 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { SpinnerTypes } from '../../interface';
-import { IonicSafeString, sanitizeDOMString } from '../../utils/sanitization';
+import { SygSafeString, sanitizeDOMString } from '../../utils/sanitization';
 
 @Component({
-  tag: 'ion-infinite-scroll-content',
+  tag: 'syg-infinite-scroll-content',
   styleUrls: {
     ios: 'infinite-scroll-content.ios.scss',
     md: 'infinite-scroll-content.md.scss'
@@ -23,16 +23,16 @@ export class InfiniteScrollContent implements ComponentInterface {
    * Optional text to display while loading.
    * `loadingText` can accept either plaintext or HTML as a string.
    * To display characters normally reserved for HTML, they
-   * must be escaped. For example `<Ionic>` would become
-   * `&lt;Ionic&gt;`
+   * must be escaped. For example `<Sygic>` would become
+   * `&lt;Sygic&gt;`
    *
    * For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
    */
-  @Prop() loadingText?: string | IonicSafeString;
+  @Prop() loadingText?: string | SygSafeString;
 
   componentDidLoad() {
     if (this.loadingSpinner === undefined) {
-      const mode = getIonMode(this);
+      const mode = getSygMode(this);
       this.loadingSpinner = config.get(
         'infiniteLoadingSpinner',
         config.get('spinner', mode === 'ios' ? 'lines' : 'crescent')
@@ -41,7 +41,7 @@ export class InfiniteScrollContent implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{
@@ -54,7 +54,7 @@ export class InfiniteScrollContent implements ComponentInterface {
         <div class="infinite-loading">
           {this.loadingSpinner && (
             <div class="infinite-loading-spinner">
-              <ion-spinner name={this.loadingSpinner} />
+              <syg-spinner name={this.loadingSpinner} />
             </div>
           )}
           {this.loadingText && (

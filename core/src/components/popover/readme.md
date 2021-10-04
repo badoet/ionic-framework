@@ -1,25 +1,25 @@
-# ion-popover
+# syg-popover
 
 A Popover is a dialog that appears on top of the current page. It can be used for anything, but generally it is used for overflow actions that don't fit in the navigation bar.
 
-There are two ways to use `ion-popover`: inline or via the `popoverController`. Each method comes with different considerations, so be sure to use the approach that best fits your use case.
+There are two ways to use `syg-popover`: inline or via the `popoverController`. Each method comes with different considerations, so be sure to use the approach that best fits your use case.
 
 ## Inline Popovers
 
-`ion-popover` can be used by writing the component directly in your template. This reduces the number of handlers you need to wire up in order to present the popover. See [Usage](#usage) for an example of how to write a popover inline. 
+`syg-popover` can be used by writing the component directly in your template. This reduces the number of handlers you need to wire up in order to present the popover. See [Usage](#usage) for an example of how to write a popover inline. 
 
-When using `ion-popover` with Angular, React, or Vue, the component you pass in will be destroyed when the popover is dismissed. As this functionality is provided by the JavaScript framework, using `ion-popover` without a JavaScript framework will not destroy the component you passed in. If this is a needed functionality, we recommend using the `popoverController` instead.
+When using `syg-popover` with Angular, React, or Vue, the component you pass in will be destroyed when the popover is dismissed. As this functionality is provided by the JavaScript framework, using `syg-popover` without a JavaScript framework will not destroy the component you passed in. If this is a needed functionality, we recommend using the `popoverController` instead.
 
 ### Angular 
 
 Since the component you passed in needs to be created when the popover is presented and destroyed when the popover is dismissed, we are unable to project the content using `<ng-content>` internally. Instead, we use `<ng-container>` which expects an `<ng-template>` to be passed in. As a result, when passing in your component you will need to wrap it in an `<ng-template>`:
 
 ```html
-<ion-popover [isOpen]="isPopoverOpen">
+<syg-popover [isOpen]="isPopoverOpen">
   <ng-template>
     <app-popover-content></app-popover-content>
   </ng-template>
-</ion-popover>
+</syg-popover>
 ```
 
 ### When to use
@@ -30,7 +30,7 @@ If you need fine grained control over when the popover is presented and dismisse
 
 ## Controller Popovers
 
-`ion-popover` can also be presented programmatically by using the `popoverController` imported from Ionic Framework. This allows you to have complete control over when a popover is presented above and beyond the customization that inline popovers give you. See [Usage](#usage) for an example of how to use the `popoverController`.
+`syg-popover` can also be presented programmatically by using the `popoverController` imported from Ionic Framework. This allows you to have complete control over when a popover is presented above and beyond the customization that inline popovers give you. See [Usage](#usage) for an example of how to use the `popoverController`.
 
 ### When to use
 
@@ -67,23 +67,23 @@ Any of the defined [CSS Custom Properties](#css-custom-properties) can be used t
 
 ## Triggers
 
-A trigger for an `ion-popover` is the element that will open a popover when interacted with. The interaction behavior can be customized by setting the `trigger-action` property. The following example shows how to create a right click menu using `trigger` and `trigger-action`. Note that `trigger-action="context-menu"` will prevent your system's default context menu from opening.
+A trigger for an `syg-popover` is the element that will open a popover when interacted with. The interaction behavior can be customized by setting the `trigger-action` property. The following example shows how to create a right click menu using `trigger` and `trigger-action`. Note that `trigger-action="context-menu"` will prevent your system's default context menu from opening.
 
 ```html
-<ion-button id="trigger-button">Right click me!</ion-button>
-<ion-popover
+<syg-button id="trigger-button">Right click me!</syg-button>
+<syg-popover
   trigger="trigger-button"
   trigger-action="context-menu"
 >
-  <ion-content>
-    <ion-list>
+  <syg-content>
+    <syg-list>
       ...
-    </ion-list>
-  </ion-content>
-</ion-popover>
+    </syg-list>
+  </syg-content>
+</syg-popover>
 ```
 
-> Triggers are not applicable when using the `popoverController` because the `ion-popover` is not created ahead of time.
+> Triggers are not applicable when using the `popoverController` because the `syg-popover` is not created ahead of time.
 ## Positioning
 
 ### Reference
@@ -108,7 +108,7 @@ When making dropdown menus, you may want to have the width of the popover match 
 
 ## Nested Popovers
 
-When using `ion-popover` inline, you can nested popovers to create nested dropdown menus. When doing this, only the backdrop on the first popover will appear so that the screen does not get progressively darker as you open more popovers. See the [Usage](./#usage) section for an example on how to write a nested popover.
+When using `syg-popover` inline, you can nested popovers to create nested dropdown menus. When doing this, only the backdrop on the first popover will appear so that the screen does not get progressively darker as you open more popovers. See the [Usage](./#usage) section for an example on how to write a nested popover.
 
 You can use the `dismissOnSelect` property to automatically close the popover when the popover content has been clicked. This behavior does not apply when clicking a trigger element for another popover.
 
@@ -153,7 +153,7 @@ interface PopoverAttributes extends JSXBase.HTMLAttributes<HTMLElement> {}
 
 ## Types
 
-Below you will find all of the custom types for `ion-popover`:
+Below you will find all of the custom types for `syg-popover`:
 
 ```typescript
 type PopoverSize = 'cover' | 'auto';
@@ -167,7 +167,7 @@ type PositionAlign = 'start' | 'center' | 'end';
 
 ### Keyboard Navigation
 
-`ion-popover` has basic keyboard support for navigating between focusable elements inside of the popover. The following table details what each key does:
+`syg-popover` has basic keyboard support for navigating between focusable elements inside of the popover. The following table details what each key does:
 
 | Key                | Function                                                     |
 | ------------------ | ------------------------------------------------------------ |
@@ -177,7 +177,7 @@ type PositionAlign = 'start' | 'center' | 'end';
 | `Space` or `Enter` | Clicks the focusable element. |
 
 
-`ion-popover` has full arrow key support for navigating between `ion-item` elements with the `button` property. The most common use case for this is as a dropdown menu in a desktop-focused application. In addition to the basic keyboard support, the following table details arrow key support for dropdown menus:
+`syg-popover` has full arrow key support for navigating between `syg-item` elements with the `button` property. The most common use case for this is as a dropdown menu in a desktop-focused application. In addition to the basic keyboard support, the following table details arrow key support for dropdown menus:
 
 | Key                | Function                                                       |
 | ------------------ | -------------------------------------------------------------- |
@@ -226,7 +226,7 @@ export class PopoverExample {
 
 ### Style Placement
 
-In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Popover can be presented from within a page, the `ion-popover` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
+In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Popover can be presented from within a page, the `syg-popover` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
 
 
 ### Javascript
@@ -239,15 +239,15 @@ class PopoverExamplePage extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <ion-content>
-        <ion-list>
-          <ion-list-header><ion-label>Ionic</ion-label></ion-list-header>
-          <ion-item button><ion-label>Item 0</ion-label></ion-item>
-          <ion-item button><ion-label>Item 1</ion-label></ion-item>
-          <ion-item button><ion-label>Item 2</ion-label></ion-item>
-          <ion-item button><ion-label>Item 3</ion-label></ion-item>
-        </ion-list>
-      </ion-content>
+      <syg-content>
+        <syg-list>
+          <syg-list-header><syg-label>Ionic</syg-label></syg-list-header>
+          <syg-item button><syg-label>Item 0</syg-label></syg-item>
+          <syg-item button><syg-label>Item 1</syg-label></syg-item>
+          <syg-item button><syg-label>Item 2</syg-label></syg-item>
+          <syg-item button><syg-label>Item 3</syg-label></syg-item>
+        </syg-list>
+      </syg-content>
     `;
   }
 }
@@ -255,7 +255,7 @@ class PopoverExamplePage extends HTMLElement {
 customElements.define('popover-example-page', PopoverExamplePage);
 
 async function presentPopover(ev) {
-  const popover = Object.assign(document.createElement('ion-popover'), {
+  const popover = Object.assign(document.createElement('syg-popover'), {
     component: 'popover-example-page',
     cssClass: 'my-custom-class',
     event: ev,
@@ -384,9 +384,9 @@ export class PopoverExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={(ev) => this.presentPopover(ev)}>Present Popover</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={(ev) => this.presentPopover(ev)}>Present Popover</syg-button>
+      </syg-content>
     ];
   }
 }
@@ -402,17 +402,17 @@ import { Component, h } from '@stencil/core';
 export class PagePopover {
   render() {
     return [
-      <ion-list>
-        <ion-item>
-          <ion-label>Documentation</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Feedback</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Settings</ion-label>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-item>
+          <syg-label>Documentation</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Feedback</syg-label>
+        </syg-item>
+        <syg-item>
+          <syg-label>Settings</syg-label>
+        </syg-item>
+      </syg-list>
     ];
   }
 }
@@ -423,9 +423,9 @@ export class PagePopover {
 
 ```html
 <template>
-  <ion-content class="ion-padding">
+  <syg-content class="syg-padding">
     Popover Content
-  </ion-content>
+  </syg-content>
 </template>
 
 <script>
@@ -441,11 +441,11 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="openPopover">Open Popover</ion-button>
-    </ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="openPopover">Open Popover</syg-button>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -477,8 +477,8 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true, $event)">Show Popover</ion-button>
-  <ion-popover
+  <syg-button @click="setOpen(true, $event)">Show Popover</syg-button>
+  <syg-popover
     :is-open="isOpenRef"
     css-class="my-custom-class"
     :event="event"
@@ -486,7 +486,7 @@ Developers can also use this component directly in their template:
     @didDismiss="setOpen(false)"
   >
     <Popover></Popover>
-  </ion-popover>
+  </syg-popover>
 </template>
 
 <script>
@@ -519,7 +519,7 @@ export default defineComponent({
 | `animated`        | `animated`          | If `true`, the popover will animate.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `boolean`                                                    | `true`      |
 | `arrow`           | `arrow`             | If `true`, the popover will display an arrow that points at the `reference` when running in `ios` mode on mobile. Does not apply in `md` mode or on desktop.                                                                                                                                                                                                                                                                                                                                                                 | `boolean`                                                    | `true`      |
 | `backdropDismiss` | `backdrop-dismiss`  | If `true`, the popover will be dismissed when the backdrop is clicked.                                                                                                                                                                                                                                                                                                                                                                                                                                                       | `boolean`                                                    | `true`      |
-| `component`       | `component`         | The component to display inside of the popover. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just slot your component inside of `ion-popover`.                                                                                                                                                                                                                                                                                                                                  | `Function \| HTMLElement \| null \| string \| undefined`     | `undefined` |
+| `component`       | `component`         | The component to display inside of the popover. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just slot your component inside of `syg-popover`.                                                                                                                                                                                                                                                                                                                                  | `Function \| HTMLElement \| null \| string \| undefined`     | `undefined` |
 | `componentProps`  | --                  | The data to pass to the popover component. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just set the props directly on your component.                                                                                                                                                                                                                                                                                                                                          | `undefined \| { [key: string]: any; }`                       | `undefined` |
 | `dismissOnSelect` | `dismiss-on-select` | If `true`, the popover will be automatically dismissed when the content has been clicked.                                                                                                                                                                                                                                                                                                                                                                                                                                    | `boolean`                                                    | `false`     |
 | `enterAnimation`  | --                  | Animation to use when the popover is presented.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `((baseEl: any, opts?: any) => Animation) \| undefined`      | `undefined` |
@@ -610,7 +610,7 @@ Type: `Promise<void>`
 | Part         | Description                                                                 |
 | ------------ | --------------------------------------------------------------------------- |
 | `"arrow"`    | The arrow that points to the reference element. Only applies on `ios` mode. |
-| `"backdrop"` | The `ion-backdrop` element.                                                 |
+| `"backdrop"` | The `syg-backdrop` element.                                                 |
 | `"content"`  | The wrapper element for the default slot.                                   |
 
 
@@ -635,13 +635,13 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [ion-backdrop](../backdrop)
+- [syg-backdrop](../backdrop)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-popover --> ion-backdrop
-  style ion-popover fill:#f9f,stroke:#333,stroke-width:4px
+  syg-popover --> syg-backdrop
+  style syg-popover fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -10,7 +10,7 @@
 
   width: 100%;
 
-  background-color: $accordion-background-color;
+  background-color: $accordsyg-background-color;
 
   overflow: hidden;
 
@@ -19,14 +19,14 @@
    * to create a new stacking context
    * otherwise the border radius is
    * temporarily lost when hovering over
-   * the ion-item or expanding/collapsing
+   * the syg-item or expanding/collapsing
    * the accordion.
    */
   z-index: 0;
 }
 
-:host(.accordion-expanding) ::slotted(ion-item[slot="header"]),
-:host(.accordion-expanded) ::slotted(ion-item[slot="header"]) {
+:host(.accordion-expanding) ::slotted(syg-item[slot="header"]),
+:host(.accordion-expanded) ::slotted(syg-item[slot="header"]) {
   --border-width: 0px;
 }
 

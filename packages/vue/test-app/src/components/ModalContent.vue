@@ -2,9 +2,9 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-buttons>
-          <ion-button @click="dismiss" id="dismiss">Dismiss</ion-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-button @click="dismiss" id="dismiss">Dismiss</syg-button>
+        </syg-buttons>
         <ion-title>Modal</ion-title>
       </ion-toolbar>
     </ion-header>

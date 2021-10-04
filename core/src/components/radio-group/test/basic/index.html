@@ -9,108 +9,108 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Radio Group - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Radio Group - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="outer-content">
-      <p class="ion-text-center">
-        <ion-button onClick="addRadio()">Add Radio</ion-button>
-        <ion-button onClick="addChecked()">Add Checked</ion-button>
-        <ion-button id="removeButton" onClick="removeRadio()">Remove Radio</ion-button>
+    <syg-content class="outer-content">
+      <p class="syg-text-center">
+        <syg-button onClick="addRadio()">Add Radio</syg-button>
+        <syg-button onClick="addChecked()">Add Checked</syg-button>
+        <syg-button id="removeButton" onClick="removeRadio()">Remove Radio</syg-button>
       </p>
 
-      <ion-list>
-        <ion-radio-group id="dynamicDisabled" disabled name="tannen" id="group" value="biff">
-          <ion-list-header>
-            <ion-label>Luckiest Man On Earth <span id="group-value"></span></ion-label>
-          </ion-list-header>
+      <syg-list>
+        <syg-radio-group id="dynamicDisabled" disabled name="tannen" id="group" value="biff">
+          <syg-list-header>
+            <syg-label>Luckiest Man On Earth <span id="group-value"></span></syg-label>
+          </syg-list-header>
 
-          <ion-item>
-            <ion-label>Biff
+          <syg-item>
+            <syg-label>Biff
               <span id="biff"></span>
-            </ion-label>
-            <ion-radio value="biff" slot="start"></ion-radio>
-          </ion-item>
+            </syg-label>
+            <syg-radio value="biff" slot="start"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Griff
+          <syg-item>
+            <syg-label>Griff
               <span id="griff"></span>
-            </ion-label>
-            <ion-radio value="griff" slot="start"></ion-radio>
-          </ion-item>
+            </syg-label>
+            <syg-radio value="griff" slot="start"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Buford
+          <syg-item>
+            <syg-label>Buford
               <span id="buford"></span>
-            </ion-label>
-            <ion-radio value="buford" slot="start"></ion-radio>
-          </ion-item>
+            </syg-label>
+            <syg-radio value="buford" slot="start"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>George</ion-label>
-            <ion-radio value="george" slot="start"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
+          <syg-item>
+            <syg-label>George</syg-label>
+            <syg-radio value="george" slot="start"></syg-radio>
+          </syg-item>
+        </syg-radio-group>
+      </syg-list>
 
-      <ion-list>
-        <ion-radio-group value="huey">
-          <ion-item>
-            <ion-label>Huey</ion-label>
-            <ion-radio slot="start" value="huey"></ion-radio>
-          </ion-item>
+      <syg-list>
+        <syg-radio-group value="huey">
+          <syg-item>
+            <syg-label>Huey</syg-label>
+            <syg-radio slot="start" value="huey"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Dewey</ion-label>
-            <ion-radio slot="start" value="dewey"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Dewey</syg-label>
+            <syg-radio slot="start" value="dewey"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Louie</ion-label>
-            <ion-radio slot="start" value="louie"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
+          <syg-item>
+            <syg-label>Louie</syg-label>
+            <syg-radio slot="start" value="louie"></syg-radio>
+          </syg-item>
+        </syg-radio-group>
+      </syg-list>
 
-      <ion-list>
-        <ion-radio-group value="huey">
-          <ion-item-divider>
-            <ion-label>
+      <syg-list>
+        <syg-radio-group value="huey">
+          <syg-item-divider>
+            <syg-label>
               Maintenance Drone
-            </ion-label>
-          </ion-item-divider>
+            </syg-label>
+          </syg-item-divider>
 
-          <ion-item>
-            <ion-label>Huey</ion-label>
-            <ion-radio slot="start" value="huey"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Huey</syg-label>
+            <syg-radio slot="start" value="huey"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Dewey</ion-label>
-            <ion-radio slot="start" value="dewey"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Dewey</syg-label>
+            <syg-radio slot="start" value="dewey"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Louie</ion-label>
-            <ion-radio slot="start" value="louie"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
-    </ion-content>
+          <syg-item>
+            <syg-label>Louie</syg-label>
+            <syg-radio slot="start" value="louie"></syg-radio>
+          </syg-item>
+        </syg-radio-group>
+      </syg-list>
+    </syg-content>
 
     <style>
       .outer-content {
         --background: #f2f2f2;
       }
 
-      ion-list {
+      syg-list {
         margin-bottom: 10px !important;
       }
     </style>
@@ -120,24 +120,24 @@
       const removeButton = document.querySelector('#removeButton');
 
       const valueEl = document.querySelector('#group-value');
-      const group = document.querySelector('ion-radio-group');
+      const group = document.querySelector('syg-radio-group');
 
       group.addEventListener('ionChange', (ev) => {
         valueEl.textContent = group.value;
       });
 
-      customElements.whenDefined('ion-radio-group')
+      customElements.whenDefined('syg-radio-group')
        .then(() => group.componentOnReady && group.componentOnReady())
        .then(() => {
          valueEl.textContent = group.value;
         });
 
       function addRadio() {
-        const item = document.createElement('ion-item');
+        const item = document.createElement('syg-item');
 
         item.innerHTML = `
-          <ion-label>Item ${count}</ion-label>
-          <ion-radio value="item-${count}" slot="start"></ion-radio>
+          <syg-label>Item ${count}</syg-label>
+          <syg-radio value="item-${count}" slot="start"></syg-radio>
         `;
         group.appendChild(item);
         count++;
@@ -146,10 +146,10 @@
       }
 
       function addChecked() {
-        const item = document.createElement('ion-item');
+        const item = document.createElement('syg-item');
         item.innerHTML = `
-          <ion-label>Item ${count}</ion-label>
-          <ion-radio value="item-${count}" slot="start"></ion-radio>
+          <syg-label>Item ${count}</syg-label>
+          <syg-radio value="item-${count}" slot="start"></syg-radio>
         `;
         group.appendChild(item);
 
@@ -162,17 +162,17 @@
       function removeRadio() {
         const removeEl = group.children[group.children.length - 1];
 
-        if (removeEl && removeEl.tagName === 'ION-ITEM') {
+        if (removeEl && removeEl.tagName === 'SYG-ITEM') {
           removeEl.remove();
 
           // No more radios to remove, disable button
-          if (!group.querySelector('ion-item')) {
+          if (!group.querySelector('syg-item')) {
             removeButton.disabled = true;
           }
         }
       }
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

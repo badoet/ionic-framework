@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 @Component({
-  tag: 'ion-buttons',
+  tag: 'syg-buttons',
   styleUrls: {
     ios: 'buttons.ios.scss',
     md: 'buttons.md.scss'
@@ -20,14 +20,14 @@ export class Buttons implements ComponentInterface {
    * only be shown once all toolbars have fully collapsed.
    *
    * Only applies in `ios` mode with `collapse` set to
-   * `true` on `ion-header`.
+   * `true` on `syg-header`.
    *
    * Typically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)
    */
   @Prop() collapse = false;
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{

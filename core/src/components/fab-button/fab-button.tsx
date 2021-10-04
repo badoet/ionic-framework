@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, Color, RouterDirection } from '../../interface';
 import { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
 import { createColorClasses, hostContext, openURL } from '../../utils/theme';
@@ -12,7 +12,7 @@ import { createColorClasses, hostContext, openURL } from '../../utils/theme';
  * @part close-icon - The close icon that is displayed when a fab list opens (uses ion-icon).
  */
 @Component({
-  tag: 'ion-fab-button',
+  tag: 'syg-fab-button',
   styleUrls: {
     ios: 'fab-button.ios.scss',
     md: 'fab-button.md.scss'
@@ -127,8 +127,8 @@ export class FabButton implements ComponentInterface, AnchorInterface, ButtonInt
 
   render() {
     const { el, disabled, color, href, activated, show, translucent, size } = this;
-    const inList = hostContext('ion-fab-list', el);
-    const mode = getIonMode(this);
+    const inList = hostContext('syg-fab-list', el);
+    const mode = getSygMode(this);
     const TagType = href === undefined ? 'button' : 'a' as any;
     const attrs = (TagType === 'button')
       ? { type: this.type }
@@ -150,8 +150,8 @@ export class FabButton implements ComponentInterface, AnchorInterface, ButtonInt
           'fab-button-show': show,
           'fab-button-disabled': disabled,
           'fab-button-translucent': translucent,
-          'ion-activatable': true,
-          'ion-focusable': true,
+          'syg-activatable': true,
+          'syg-focusable': true,
           [`fab-button-${size}`]: size !== undefined,
         })}
       >
@@ -169,7 +169,7 @@ export class FabButton implements ComponentInterface, AnchorInterface, ButtonInt
           <span class="button-inner">
             <slot></slot>
           </span>
-          {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+          {mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
         </TagType>
       </Host>
     );

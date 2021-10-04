@@ -8,8 +8,8 @@ test('should open the modal', async () => {
   const trigger = await page.find('#default');
   trigger.click();
 
-  await page.waitForSelector('ion-modal');
-  const modal = await page.find('ion-modal');
+  await page.waitForSelector('syg-modal');
+  const modal = await page.find('syg-modal');
   await modal.waitForVisible();
 
   screenshotCompares.push(await page.compareScreenshot());
@@ -29,8 +29,8 @@ test('should open the modal then close after a timeout', async () => {
   const trigger = await page.find('#timeout');
   trigger.click();
 
-  await page.waitForSelector('ion-modal');
-  const modal = await page.find('ion-modal');
+  await page.waitForSelector('syg-modal');
+  const modal = await page.find('syg-modal');
   await modal.waitForVisible();
 
   screenshotCompares.push(await page.compareScreenshot());

@@ -8,7 +8,7 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
     <style>
       .grid {
         display: grid;
@@ -25,7 +25,7 @@
         margin-left: 5px;
       }
 
-      ion-modal {
+      syg-modal {
         --width: 350px;
       }
 
@@ -35,35 +35,35 @@
     </style>
   </head>
   <body>
-    <ion-app>
-      <ion-header translucent="true">
-        <ion-toolbar>
-          <ion-title>Datetime - Cover</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
-        <ion-item button="true" id="datetime-trigger">
-          <ion-label>Birthday</ion-label>
-          <ion-text class="placeholder">Select a date</ion-text>
-        </ion-item>
+    <syg-app>
+      <syg-header translucent="true">
+        <syg-toolbar>
+          <syg-title>Datetime - Cover</syg-title>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content class="syg-padding">
+        <syg-item button="true" id="datetime-trigger">
+          <syg-label>Birthday</syg-label>
+          <syg-text class="placeholder">Select a date</syg-text>
+        </syg-item>
 
-        <ion-modal trigger="datetime-trigger">
-          <ion-datetime
+        <syg-modal trigger="datetime-trigger">
+          <syg-datetime
             show-default-title="true"
             show-default-buttons="true"
-          ></ion-datetime>
-        </ion-modal>
-      </ion-content>
+          ></syg-datetime>
+        </syg-modal>
+      </syg-content>
 
       <script>
-        const datetime = document.querySelector('ion-datetime');
-        const text = document.querySelector('ion-text');
+        const datetime = document.querySelector('syg-datetime');
+        const text = document.querySelector('syg-text');
         datetime.addEventListener('ionChange', (ev) => {
           const date = new Date(ev.detail.value);
           text.innerText = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).format(date);
           text.classList.remove('placeholder');
         });
       </script>
-    </ion-app>
+    </syg-app>
   </body>
 </html>

@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Gesture, GestureDetail, ItemReorderEventDetail } from '../../interface';
 import { hapticSelectionChanged, hapticSelectionEnd, hapticSelectionStart } from '../../utils/native/haptic';
 
@@ -11,7 +11,7 @@ const enum ReorderGroupState {
 }
 
 @Component({
-  tag: 'ion-reorder-group',
+  tag: 'syg-reorder-group',
   styleUrl: 'reorder-group.scss'
 })
 export class ReorderGroup implements ComponentInterface {
@@ -53,7 +53,7 @@ export class ReorderGroup implements ComponentInterface {
   @Event() ionItemReorder!: EventEmitter<ItemReorderEventDetail>;
 
   async connectedCallback() {
-    const contentEl = this.el.closest('ion-content');
+    const contentEl = this.el.closest('syg-content');
     if (contentEl) {
       this.scrollEl = await contentEl.getScrollElement();
     }
@@ -104,7 +104,7 @@ export class ReorderGroup implements ComponentInterface {
       return false;
     }
     const target = ev.event.target as HTMLElement;
-    const reorderEl = target.closest('ion-reorder');
+    const reorderEl = target.closest('syg-reorder');
     if (!reorderEl) {
       return false;
     }
@@ -291,7 +291,7 @@ export class ReorderGroup implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{

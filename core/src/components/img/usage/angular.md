@@ -1,10 +1,10 @@
 ```html
-<ion-list>
-  <ion-item *ngFor="let item of items">
-    <ion-thumbnail slot="start">
-      <ion-img [src]="item.src"></ion-img>
-    </ion-thumbnail>
-    <ion-label>{{item.text}}</ion-label>
-  </ion-item>
-</ion-list>
+<syg-list>
+  <syg-item *ngFor="let item of items">
+    <syg-thumbnail slot="start">
+      <syg-img [src]="item.src"></syg-img>
+    </syg-thumbnail>
+    <syg-label>{{item.text}}</syg-label>
+  </syg-item>
+</syg-list>
 ```

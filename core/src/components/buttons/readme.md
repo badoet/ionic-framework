@@ -1,8 +1,8 @@
-# ion-buttons
+# syg-buttons
 
-The Buttons component is a container element. Buttons placed in a toolbar should be placed inside of the `<ion-buttons>` element.
+The Buttons component is a container element. Buttons placed in a toolbar should be placed inside of the `<syg-buttons>` element.
 
-The `<ion-buttons>` element can be positioned inside of the toolbar using a named slot. The below chart has a description of each slot.
+The `<syg-buttons>` element can be positioned inside of the toolbar using a named slot. The below chart has a description of each slot.
 
 | Slot         | Description                                                                                              |
 |--------------|----------------------------------------------------------------------------------------------------------|
@@ -20,104 +20,104 @@ The `<ion-buttons>` element can be positioned inside of the toolbar using a name
 ### Angular
 
 ```html
-<ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
-  </ion-buttons>
-  <ion-title>Back Button</ion-title>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-buttons slot="start">
+    <syg-back-button></syg-back-button>
+  </syg-buttons>
+  <syg-title>Back Button</syg-title>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="secondary">
-    <ion-button>
+<syg-toolbar>
+  <syg-buttons slot="secondary">
+    <syg-button>
       <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button>
+    </syg-button>
+    <syg-button>
       <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Default Buttons</ion-title>
-  <ion-buttons slot="primary">
-    <ion-button color="secondary">
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Default Buttons</syg-title>
+  <syg-buttons slot="primary">
+    <syg-button color="secondary">
       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="primary">
-    <ion-button (click)="clickedStar()">
+<syg-toolbar>
+  <syg-buttons slot="primary">
+    <syg-button (click)="clickedStar()">
       <ion-icon slot="icon-only" name="star"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Right side menu toggle</ion-title>
-  <ion-buttons slot="end">
-    <ion-menu-button autoHide="false"></ion-menu-button>
-  </ion-buttons>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Right side menu toggle</syg-title>
+  <syg-buttons slot="end">
+    <syg-menu-button autoHide="false"></syg-menu-button>
+  </syg-buttons>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons collapse="true">
-    <ion-button>
+<syg-toolbar>
+  <syg-buttons collapse="true">
+    <syg-button>
       <ion-icon slot="icon-only" name="star"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Collapsible Buttons</ion-title>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Collapsible Buttons</syg-title>
+</syg-toolbar>
 ```
 
 
 ### Javascript
 
 ```html
-<ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
-  </ion-buttons>
-  <ion-title>Back Button</ion-title>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-buttons slot="start">
+    <syg-back-button></syg-back-button>
+  </syg-buttons>
+  <syg-title>Back Button</syg-title>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="secondary">
-    <ion-button>
+<syg-toolbar>
+  <syg-buttons slot="secondary">
+    <syg-button>
       <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button>
+    </syg-button>
+    <syg-button>
       <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Default Buttons</ion-title>
-  <ion-buttons slot="primary">
-    <ion-button color="secondary">
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Default Buttons</syg-title>
+  <syg-buttons slot="primary">
+    <syg-button color="secondary">
       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="primary">
-    <ion-button onclick="clickedStar()">
+<syg-toolbar>
+  <syg-buttons slot="primary">
+    <syg-button onclick="clickedStar()">
       <ion-icon slot="icon-only" name="star"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Right side menu toggle</ion-title>
-  <ion-buttons slot="end">
-    <ion-menu-toggle auto-hide="false">
-      <ion-button>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Right side menu toggle</syg-title>
+  <syg-buttons slot="end">
+    <syg-menu-toggle auto-hide="false">
+      <syg-button>
         <ion-icon slot="icon-only" name="menu"></ion-icon>
-      </ion-button>
-    </ion-menu-toggle>
-  </ion-buttons>
-</ion-toolbar>
+      </syg-button>
+    </syg-menu-toggle>
+  </syg-buttons>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons collapse="true">
-    <ion-button>
+<syg-toolbar>
+  <syg-buttons collapse="true">
+    <syg-button>
       <ion-icon slot="icon-only" name="star"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Collapsible Buttons</ion-title>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Collapsible Buttons</syg-title>
+</syg-toolbar>
 ```
 
 
@@ -196,50 +196,50 @@ export class ButtonsExample {
 
   render() {
     return [
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
-        <ion-title>Back Button</ion-title>
-      </ion-toolbar>,
+      <syg-toolbar>
+        <syg-buttons slot="start">
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
+        <syg-title>Back Button</syg-title>
+      </syg-toolbar>,
 
-      <ion-toolbar>
-        <ion-buttons slot="secondary">
-          <ion-button>
+      <syg-toolbar>
+        <syg-buttons slot="secondary">
+          <syg-button>
             <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-          </ion-button>
-          <ion-button>
+          </syg-button>
+          <syg-button>
             <ion-icon slot="icon-only" name="search"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-title>Default Buttons</ion-title>
-        <ion-buttons slot="primary">
-          <ion-button color="secondary">
+          </syg-button>
+        </syg-buttons>
+        <syg-title>Default Buttons</syg-title>
+        <syg-buttons slot="primary">
+          <syg-button color="secondary">
             <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>,
+          </syg-button>
+        </syg-buttons>
+      </syg-toolbar>,
 
-      <ion-toolbar>
-        <ion-buttons slot="primary">
-          <ion-button onClick={() => this.clickedStar()}>
+      <syg-toolbar>
+        <syg-buttons slot="primary">
+          <syg-button onClick={() => this.clickedStar()}>
             <ion-icon slot="icon-only" name="star"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-title>Right side menu toggle</ion-title>
-        <ion-buttons slot="end">
-          <ion-menu-button autoHide={false}></ion-menu-button>
-        </ion-buttons>
-      </ion-toolbar>,
+          </syg-button>
+        </syg-buttons>
+        <syg-title>Right side menu toggle</syg-title>
+        <syg-buttons slot="end">
+          <syg-menu-button autoHide={false}></syg-menu-button>
+        </syg-buttons>
+      </syg-toolbar>,
 
-      <ion-toolbar>
-        <ion-buttons collapse={true}>
-          <ion-button>
+      <syg-toolbar>
+        <syg-buttons collapse={true}>
+          <syg-button>
             <ion-icon slot="icon-only" name="star"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-title>Collapsible Buttons</ion-title>
-      </ion-toolbar>
+          </syg-button>
+        </syg-buttons>
+        <syg-title>Collapsible Buttons</syg-title>
+      </syg-toolbar>
     ];
   }
 }
@@ -250,50 +250,50 @@ export class ButtonsExample {
 
 ```html
 <template>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Back Button</ion-title>
-  </ion-toolbar>
+  <syg-toolbar>
+    <syg-buttons slot="start">
+      <syg-back-button></syg-back-button>
+    </syg-buttons>
+    <syg-title>Back Button</syg-title>
+  </syg-toolbar>
 
-  <ion-toolbar>
-    <ion-buttons slot="secondary">
-      <ion-button>
+  <syg-toolbar>
+    <syg-buttons slot="secondary">
+      <syg-button>
         <ion-icon slot="icon-only" :icon="personCircle"></ion-icon>
-      </ion-button>
-      <ion-button>
+      </syg-button>
+      <syg-button>
         <ion-icon slot="icon-only" :icon="search"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>Default Buttons</ion-title>
-    <ion-buttons slot="primary">
-      <ion-button color="secondary">
+      </syg-button>
+    </syg-buttons>
+    <syg-title>Default Buttons</syg-title>
+    <syg-buttons slot="primary">
+      <syg-button color="secondary">
         <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+      </syg-button>
+    </syg-buttons>
+  </syg-toolbar>
 
-  <ion-toolbar>
-    <ion-buttons slot="primary">
-      <ion-button @click="clickedStar()">
+  <syg-toolbar>
+    <syg-buttons slot="primary">
+      <syg-button @click="clickedStar()">
         <ion-icon slot="icon-only" name="star"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>Right side menu toggle</ion-title>
-    <ion-buttons slot="end">
-      <ion-menu-button auto-hide="false"></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
+      </syg-button>
+    </syg-buttons>
+    <syg-title>Right side menu toggle</syg-title>
+    <syg-buttons slot="end">
+      <syg-menu-button auto-hide="false"></syg-menu-button>
+    </syg-buttons>
+  </syg-toolbar>
 
-  <ion-toolbar>
-    <ion-buttons collapse="true">
-      <ion-button>
+  <syg-toolbar>
+    <syg-buttons collapse="true">
+      <syg-button>
         <ion-icon slot="icon-only" name="star"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>Collapsible Buttons</ion-title>
-  </ion-toolbar>
+      </syg-button>
+    </syg-buttons>
+    <syg-title>Collapsible Buttons</syg-title>
+  </syg-toolbar>
 </template>
 
 <script>
@@ -319,20 +319,20 @@ export default defineComponent({
 
 | Property   | Attribute  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                       | Type      | Default |
 | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------- |
-| `collapse` | `collapse` | If true, buttons will disappear when its parent toolbar has fully collapsed if the toolbar is not the first toolbar. If the toolbar is the first toolbar, the buttons will be hidden and will only be shown once all toolbars have fully collapsed.  Only applies in `ios` mode with `collapse` set to `true` on `ion-header`.  Typically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles) | `boolean` | `false` |
+| `collapse` | `collapse` | If true, buttons will disappear when its parent toolbar has fully collapsed if the toolbar is not the first toolbar. If the toolbar is the first toolbar, the buttons will be hidden and will only be shown once all toolbars have fully collapsed.  Only applies in `ios` mode with `collapse` set to `true` on `syg-header`.  Typically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles) | `boolean` | `false` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [ion-datetime](../datetime)
+ - [syg-datetime](../datetime)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-datetime --> ion-buttons
-  style ion-buttons fill:#f9f,stroke:#333,stroke-width:4px
+  syg-datetime --> syg-buttons
+  style syg-buttons fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

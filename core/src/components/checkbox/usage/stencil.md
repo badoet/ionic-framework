@@ -15,30 +15,30 @@ export class CheckboxExample {
   render() {
     return [
       // Default Checkbox
-      <ion-checkbox></ion-checkbox>,
+      <syg-checkbox></syg-checkbox>,
 
       // Disabled Checkbox
-      <ion-checkbox disabled={true}></ion-checkbox>,
+      <syg-checkbox disabled={true}></syg-checkbox>,
 
       // Checked Checkbox
-      <ion-checkbox checked={true}></ion-checkbox>,
+      <syg-checkbox checked={true}></syg-checkbox>,
 
       // Checkbox Colors
-      <ion-checkbox color="primary"></ion-checkbox>,
-      <ion-checkbox color="secondary"></ion-checkbox>,
-      <ion-checkbox color="danger"></ion-checkbox>,
-      <ion-checkbox color="light"></ion-checkbox>,
-      <ion-checkbox color="dark"></ion-checkbox>,
+      <syg-checkbox color="primary"></syg-checkbox>,
+      <syg-checkbox color="secondary"></syg-checkbox>,
+      <syg-checkbox color="danger"></syg-checkbox>,
+      <syg-checkbox color="light"></syg-checkbox>,
+      <syg-checkbox color="dark"></syg-checkbox>,
 
       // Checkboxes in a List
-      <ion-list>
+      <syg-list>
         {this.form.map(entry =>
-          <ion-item>
-            <ion-label>{entry.val}</ion-label>
-            <ion-checkbox slot="end" checked={entry.isChecked}></ion-checkbox>
-          </ion-item>
+          <syg-item>
+            <syg-label>{entry.val}</syg-label>
+            <syg-checkbox slot="end" checked={entry.isChecked}></syg-checkbox>
+          </syg-item>
         )}
-      </ion-list>
+      </syg-list>
     ];
   }
 }

@@ -1,15 +1,15 @@
 ```html
 <template>
-  <ion-page>
-    <ion-content>
-      <ion-infinite-scroll>
-        <ion-infinite-scroll-content
+  <syg-page>
+    <syg-content>
+      <syg-infinite-scroll>
+        <syg-infinite-scroll-content
           loading-spinner="bubbles"
           loading-text="Loading more data…">
-        </ion-infinite-scroll-content>
-      </ion-infinite-scroll>
-    </ion-content>
-  </ion-page>
+        </syg-infinite-scroll-content>
+      </syg-infinite-scroll>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script lang="ts">

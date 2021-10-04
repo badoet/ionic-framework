@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h, writeTask } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Animation, AnimationBuilder, ComponentProps, ComponentRef, FrameworkDelegate, Gesture, ModalAttributes, OverlayEventDetail, OverlayInterface } from '../../interface';
 import { CoreDelegate, attachComponent, detachComponent } from '../../utils/framework-delegate';
 import { raf } from '../../utils/helpers';
@@ -21,12 +21,12 @@ import { createSwipeToCloseGesture } from './gestures/swipe-to-close';
  *
  * @slot = Content is placed inside of the `.modal-content` element.
  *
- * @part backdrop - The `ion-backdrop` element.
+ * @part backdrop - The `syg-backdrop` element.
  * @part content - The wrapper element for the default slot.
  * @part handle - The handle that is displayed at the top of the sheet modal when `handle="true"`.
  */
 @Component({
-  tag: 'ion-modal',
+  tag: 'syg-modal',
   styleUrls: {
     ios: 'modal.ios.scss',
     md: 'modal.md.scss'
@@ -43,7 +43,7 @@ export class Modal implements ComponentInterface, OverlayInterface {
   private isSheetModal = false;
   private currentBreakpoint?: number;
   private wrapperEl?: HTMLElement;
-  private backdropEl?: HTMLIonBackdropElement;
+  private backdropEl?: HTMLSygBackdropElement;
 
   private inline = false;
   private workingDelegate?: FrameworkDelegate;
@@ -58,7 +58,7 @@ export class Modal implements ComponentInterface, OverlayInterface {
 
   @State() presented = false;
 
-  @Element() el!: HTMLIonModalElement;
+  @Element() el!: HTMLSygModalElement;
 
   /** @internal */
   @Prop() overlayIndex!: number;
@@ -257,11 +257,11 @@ export class Modal implements ComponentInterface, OverlayInterface {
      * If user has custom ID set then we should
      * not assign the default incrementing ID.
      */
-    this.modalId = (this.el.hasAttribute('id')) ? this.el.getAttribute('id')! : `ion-modal-${this.modalIndex}`;
+    this.modalId = (this.el.hasAttribute('id')) ? this.el.getAttribute('id')! : `syg-modal-${this.modalIndex}`;
     this.isSheetModal = breakpoints !== undefined && initialBreakpoint !== undefined;
 
     if (breakpoints !== undefined && initialBreakpoint !== undefined && !breakpoints.includes(initialBreakpoint)) {
-      console.warn('[Ionic Warning]: Your breakpoints array must include the initialBreakpoint value.')
+      console.warn('[Sygic Warning]: Your breakpoints array must include the initialBreakpoint value.')
     }
   }
 
@@ -287,7 +287,7 @@ export class Modal implements ComponentInterface, OverlayInterface {
     const triggerEl = (trigger !== undefined) ? document.getElementById(trigger) : null;
     if (!triggerEl) { return; }
 
-    const configureTriggerInteraction = (triggerEl: HTMLElement, modalEl: HTMLIonModalElement) => {
+    const configureTriggerInteraction = (triggerEl: HTMLElement, modalEl: HTMLSygModalElement) => {
       const openModal = () => {
         modalEl.present();
       }
@@ -323,12 +323,12 @@ export class Modal implements ComponentInterface, OverlayInterface {
      * we potentially need to use the coreDelegate
      * so that this works in vanilla JS apps.
      * If a user has already placed the overlay
-     * as a direct descendant of ion-app or
+     * as a direct descendant of syg-app or
      * the body, then we can assume that
      * the overlay is already in the correct place.
      */
     const parentEl = this.el.parentNode as HTMLElement | null;
-    const inline = this.inline = parentEl !== null && parentEl.tagName !== 'ION-APP' && parentEl.tagName !== 'BODY';
+    const inline = this.inline = parentEl !== null && parentEl.tagName !== 'SYG-APP' && parentEl.tagName !== 'BODY';
     const delegate = this.workingDelegate = (inline) ? this.delegate || this.coreDelegate : this.delegate
 
     return { inline, delegate }
@@ -361,7 +361,7 @@ export class Modal implements ComponentInterface, OverlayInterface {
     };
 
     const { inline, delegate } = this.getDelegate(true);
-    this.usersElement = await attachComponent(delegate, this.el, this.component, ['ion-page'], data, inline);
+    this.usersElement = await attachComponent(delegate, this.el, this.component, ['syg-page'], data, inline);
 
     await deepReady(this.usersElement);
 
@@ -381,7 +381,7 @@ export class Modal implements ComponentInterface, OverlayInterface {
   }
 
   private initSwipeToClose() {
-    if (getIonMode(this) !== 'ios') { return; }
+    if (getSygMode(this) !== 'ios') { return; }
 
     // All of the elements needed for the swipe gesture
     // should be in the DOM and referenced by now, except
@@ -552,7 +552,7 @@ export class Modal implements ComponentInterface, OverlayInterface {
     const { handle, isSheetModal, presentingElement, htmlAttributes } = this;
 
     const showHandle = handle !== false && isSheetModal;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const { presented, modalId } = this;
 
     return (
@@ -573,20 +573,20 @@ export class Modal implements ComponentInterface, OverlayInterface {
           ...getClassMap(this.cssClass)
         }}
         id={modalId}
-        onIonBackdropTap={this.onBackdropTap}
-        onIonDismiss={this.onDismiss}
-        onIonModalDidPresent={this.onLifecycle}
-        onIonModalWillPresent={this.onLifecycle}
-        onIonModalWillDismiss={this.onLifecycle}
-        onIonModalDidDismiss={this.onLifecycle}
+        onSygBackdropTap={this.onBackdropTap}
+        onSygDismiss={this.onDismiss}
+        onSygModalDidPresent={this.onLifecycle}
+        onSygModalWillPresent={this.onLifecycle}
+        onSygModalWillDismiss={this.onLifecycle}
+        onSygModalDidDismiss={this.onLifecycle}
       >
-        <ion-backdrop ref={el => this.backdropEl = el} visible={this.showBackdrop} tappable={this.backdropDismiss} part="backdrop" />
+        <syg-backdrop ref={el => this.backdropEl = el} visible={this.showBackdrop} tappable={this.backdropDismiss} part="backdrop" />
 
         {mode === 'ios' && <div class="modal-shadow"></div>}
 
         <div
           role="dialog"
-          class="modal-wrapper ion-overlay-wrapper"
+          class="modal-wrapper syg-overlay-wrapper"
           part="content"
           ref={el => this.wrapperEl = el}
         >

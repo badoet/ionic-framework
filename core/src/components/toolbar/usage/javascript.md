@@ -1,160 +1,160 @@
 ```html
-<ion-toolbar>
-  <ion-title>Title Only</ion-title>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-title>Title Only</syg-title>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
-  </ion-buttons>
-  <ion-title>Back Button</ion-title>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-buttons slot="start">
+    <syg-back-button></syg-back-button>
+  </syg-buttons>
+  <syg-title>Back Button</syg-title>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-title size="small">Small Title above a Default Title</ion-title>
-</ion-toolbar>
-<ion-toolbar>
-  <ion-title>Default Title</ion-title>
-</ion-toolbar>
+<syg-toolbar>
+  <syg-title size="small">Small Title above a Default Title</syg-title>
+</syg-toolbar>
+<syg-toolbar>
+  <syg-title>Default Title</syg-title>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="secondary">
-    <ion-button>
+<syg-toolbar>
+  <syg-buttons slot="secondary">
+    <syg-button>
       <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button>
+    </syg-button>
+    <syg-button>
       <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-buttons slot="primary">
-    <ion-button color="secondary">
+    </syg-button>
+  </syg-buttons>
+  <syg-buttons slot="primary">
+    <syg-button color="secondary">
       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Default Buttons</ion-title>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Default Buttons</syg-title>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="secondary">
-    <ion-button fill="solid">
+<syg-toolbar>
+  <syg-buttons slot="secondary">
+    <syg-button fill="solid">
       <ion-icon slot="start" name="person-circle"></ion-icon>
       Contact
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Solid Buttons</ion-title>
-  <ion-buttons slot="primary">
-    <ion-button fill="solid" color="secondary">
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Solid Buttons</syg-title>
+  <syg-buttons slot="primary">
+    <syg-button fill="solid" color="secondary">
       Help
       <ion-icon slot="end" name="help-circle"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="secondary">
-    <ion-button fill="outline">
+<syg-toolbar>
+  <syg-buttons slot="secondary">
+    <syg-button fill="outline">
       <ion-icon slot="start" name="star"></ion-icon>
       Star
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Outline Buttons</ion-title>
-  <ion-buttons slot="primary">
-    <ion-button color="danger" fill="outline">
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Outline Buttons</syg-title>
+  <syg-buttons slot="primary">
+    <syg-button color="danger" fill="outline">
       Edit
       <ion-icon slot="end" name="create"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="secondary">
-    <ion-button>
+<syg-toolbar>
+  <syg-buttons slot="secondary">
+    <syg-button>
       Account
-    </ion-button>
-  </ion-buttons>
-  <ion-buttons slot="primary">
-    <ion-button color="danger">
+    </syg-button>
+  </syg-buttons>
+  <syg-buttons slot="primary">
+    <syg-button color="danger">
       Edit
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Text Only Buttons</ion-title>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Text Only Buttons</syg-title>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-menu-button auto-hide="false"></ion-menu-button>
-  </ion-buttons>
-  <ion-buttons slot="secondary">
-    <ion-button>
+<syg-toolbar>
+  <syg-buttons slot="start">
+    <syg-menu-button auto-hide="false"></syg-menu-button>
+  </syg-buttons>
+  <syg-buttons slot="secondary">
+    <syg-button>
       <ion-icon slot="icon-only" name="star"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Left side menu toggle</ion-title>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Left side menu toggle</syg-title>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="primary">
-    <ion-button onclick="clickedStar()">
+<syg-toolbar>
+  <syg-buttons slot="primary">
+    <syg-button onclick="clickedStar()">
       <ion-icon slot="icon-only" name="star"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Right side menu toggle</ion-title>
-  <ion-buttons slot="end">
-    <ion-menu-button auto-hide="false"></ion-menu-button>
-  </ion-buttons>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Right side menu toggle</syg-title>
+  <syg-buttons slot="end">
+    <syg-menu-button auto-hide="false"></syg-menu-button>
+  </syg-buttons>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-buttons slot="primary">
-    <ion-button onclick="clickedSearch()">
+<syg-toolbar>
+  <syg-buttons slot="primary">
+    <syg-button onclick="clickedSearch()">
       <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-searchbar placeholder="Search Favorites"></ion-searchbar>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-searchbar placeholder="Search Favorites"></syg-searchbar>
+</syg-toolbar>
 
-<ion-toolbar>
-  <ion-segment value="all">
-    <ion-segment-button value="all">
+<syg-toolbar>
+  <syg-segment value="all">
+    <syg-segment-button value="all">
       All
-    </ion-segment-button>
-    <ion-segment-button value="favorites">
+    </syg-segment-button>
+    <syg-segment-button value="favorites">
       Favorites
-    </ion-segment-button>
-  </ion-segment>
-</ion-toolbar>
+    </syg-segment-button>
+  </syg-segment>
+</syg-toolbar>
 
-<ion-toolbar color="secondary">
-  <ion-buttons slot="secondary">
-    <ion-button>
+<syg-toolbar color="secondary">
+  <syg-buttons slot="secondary">
+    <syg-button>
       <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button>
+    </syg-button>
+    <syg-button>
       <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-buttons slot="primary">
-    <ion-button color="primary">
+    </syg-button>
+  </syg-buttons>
+  <syg-buttons slot="primary">
+    <syg-button color="primary">
       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Secondary Toolbar</ion-title>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Secondary Toolbar</syg-title>
+</syg-toolbar>
 
-<ion-toolbar color="dark">
-  <ion-buttons slot="secondary">
-    <ion-button>
+<syg-toolbar color="dark">
+  <syg-buttons slot="secondary">
+    <syg-button>
       <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button>
+    </syg-button>
+    <syg-button>
       <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-buttons slot="primary">
-    <ion-button color="danger">
+    </syg-button>
+  </syg-buttons>
+  <syg-buttons slot="primary">
+    <syg-button color="danger">
       <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>Dark Toolbar</ion-title>
-</ion-toolbar>
+    </syg-button>
+  </syg-buttons>
+  <syg-title>Dark Toolbar</syg-title>
+</syg-toolbar>
 ```

@@ -1,4 +1,4 @@
-# ion-nav
+# syg-nav
 
 Nav is a standalone component for loading arbitrary components and pushing new components on to the stack.
 
@@ -24,7 +24,7 @@ interface NavCustomEvent extends CustomEvent {
 | Property       | Attribute       | Description                                                                                                                                                                                    | Type                                                                       | Default     |
 | -------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------- |
 | `animated`     | `animated`      | If `true`, the nav should animate the transition of components.                                                                                                                                | `boolean`                                                                  | `true`      |
-| `animation`    | --              | By default `ion-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions. | `((baseEl: any, opts?: any) => Animation) \| undefined`                    | `undefined` |
+| `animation`    | --              | By default `syg-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions. | `((baseEl: any, opts?: any) => Animation) \| undefined`                    | `undefined` |
 | `root`         | `root`          | Root NavComponent to load                                                                                                                                                                      | `Function \| HTMLElement \| ViewController \| null \| string \| undefined` | `undefined` |
 | `rootParams`   | --              | Any parameters for the root component                                                                                                                                                          | `undefined \| { [key: string]: any; }`                                     | `undefined` |
 | `swipeGesture` | `swipe-gesture` | If the nav component should allow for swipe-to-go-back.                                                                                                                                        | `boolean \| undefined`                                                     | `undefined` |

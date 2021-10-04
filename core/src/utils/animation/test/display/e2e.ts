@@ -17,7 +17,7 @@ const runTest = async (page: any) => {
 
   screenshotCompares.push(await page.compareScreenshot());
 
-  const ANIMATION_FINISHED = 'onIonAnimationFinished';
+  const ANIMATION_FINISHED = 'onSygAnimationFinished';
   const animationStatus = [];
   await page.exposeFunction(ANIMATION_FINISHED, (ev: any) => {
     animationStatus.push(ev.detail);

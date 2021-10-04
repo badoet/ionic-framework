@@ -1,35 +1,35 @@
 ```html
 <!-- Default Toggle -->
-<ion-toggle></ion-toggle>
+<syg-toggle></syg-toggle>
 
 <!-- Disabled Toggle -->
-<ion-toggle disabled></ion-toggle>
+<syg-toggle disabled></syg-toggle>
 
 <!-- Checked Toggle -->
-<ion-toggle checked></ion-toggle>
+<syg-toggle checked></syg-toggle>
 
 <!-- Toggle Colors -->
-<ion-toggle color="primary"></ion-toggle>
-<ion-toggle color="secondary"></ion-toggle>
-<ion-toggle color="danger"></ion-toggle>
-<ion-toggle color="light"></ion-toggle>
-<ion-toggle color="dark"></ion-toggle>
+<syg-toggle color="primary"></syg-toggle>
+<syg-toggle color="secondary"></syg-toggle>
+<syg-toggle color="danger"></syg-toggle>
+<syg-toggle color="light"></syg-toggle>
+<syg-toggle color="dark"></syg-toggle>
 
 <!-- Toggles in a List -->
-<ion-list>
-  <ion-item>
-    <ion-label>Pepperoni</ion-label>
-    <ion-toggle slot="end" value="pepperoni" checked></ion-toggle>
-  </ion-item>
+<syg-list>
+  <syg-item>
+    <syg-label>Pepperoni</syg-label>
+    <syg-toggle slot="end" value="pepperoni" checked></syg-toggle>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Sausage</ion-label>
-    <ion-toggle slot="end" value="sausage" disabled></ion-toggle>
-  </ion-item>
+  <syg-item>
+    <syg-label>Sausage</syg-label>
+    <syg-toggle slot="end" value="sausage" disabled></syg-toggle>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Mushrooms</ion-label>
-    <ion-toggle slot="end" value="mushrooms"></ion-toggle>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Mushrooms</syg-label>
+    <syg-toggle slot="end" value="mushrooms"></syg-toggle>
+  </syg-item>
+</syg-list>
 ```

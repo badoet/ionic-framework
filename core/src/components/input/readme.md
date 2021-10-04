@@ -1,4 +1,4 @@
-# ion-input
+# syg-input
 
 The input component is a wrapper to the HTML input element with custom styling and additional functionality. It accepts most of the same properties as the HTML input, but works great on desktop devices and integrates with the keyboard on mobile devices.
 
@@ -34,46 +34,46 @@ interface InputCustomEvent extends CustomEvent {
 
 ```html
 <!-- Default Input -->
-<ion-input></ion-input>
+<syg-input></syg-input>
 
 <!-- Input with value -->
-<ion-input value="custom"></ion-input>
+<syg-input value="custom"></syg-input>
 
 <!-- Input with placeholder -->
-<ion-input placeholder="Enter Input"></ion-input>
+<syg-input placeholder="Enter Input"></syg-input>
 
 <!-- Input with clear button when there is a value -->
-<ion-input clearInput value="clear me"></ion-input>
+<syg-input clearInput value="clear me"></syg-input>
 
 <!-- Number type input -->
-<ion-input type="number" value="333"></ion-input>
+<syg-input type="number" value="333"></syg-input>
 
 <!-- Disabled input -->
-<ion-input value="Disabled" disabled></ion-input>
+<syg-input value="Disabled" disabled></syg-input>
 
 <!-- Readonly input -->
-<ion-input value="Readonly" readonly></ion-input>
+<syg-input value="Readonly" readonly></syg-input>
 
 <!-- Inputs with labels -->
-<ion-item>
-  <ion-label>Default Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label>Default Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label position="floating">Floating Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="floating">Floating Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label position="fixed">Fixed Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="fixed">Fixed Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label position="stacked">Stacked Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="stacked">Stacked Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 ```
 
 
@@ -81,46 +81,46 @@ interface InputCustomEvent extends CustomEvent {
 
 ```html
 <!-- Default Input -->
-<ion-input></ion-input>
+<syg-input></syg-input>
 
 <!-- Input with value -->
-<ion-input value="custom"></ion-input>
+<syg-input value="custom"></syg-input>
 
 <!-- Input with placeholder -->
-<ion-input placeholder="Enter Input"></ion-input>
+<syg-input placeholder="Enter Input"></syg-input>
 
 <!-- Input with clear button when there is a value -->
-<ion-input clear-input value="clear me"></ion-input>
+<syg-input clear-input value="clear me"></syg-input>
 
 <!-- Number type input -->
-<ion-input type="number" value="333"></ion-input>
+<syg-input type="number" value="333"></syg-input>
 
 <!-- Disabled input -->
-<ion-input value="Disabled" disabled></ion-input>
+<syg-input value="Disabled" disabled></syg-input>
 
 <!-- Readonly input -->
-<ion-input value="Readonly" readonly></ion-input>
+<syg-input value="Readonly" readonly></syg-input>
 
 <!-- Inputs with labels -->
-<ion-item>
-  <ion-label>Default Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label>Default Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label position="floating">Floating Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="floating">Floating Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label position="fixed">Fixed Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="fixed">Fixed Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label position="stacked">Stacked Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="stacked">Stacked Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 ```
 
 
@@ -211,46 +211,46 @@ export class InputExample {
   render() {
     return [
       // Default Input
-      <ion-input></ion-input>,
+      <syg-input></syg-input>,
 
       // Input with value
-      <ion-input value="custom"></ion-input>,
+      <syg-input value="custom"></syg-input>,
 
       // Input with placeholder
-      <ion-input placeholder="Enter Input"></ion-input>,
+      <syg-input placeholder="Enter Input"></syg-input>,
 
       // Input with clear button when there is a value
-      <ion-input clearInput value="clear me"></ion-input>,
+      <syg-input clearInput value="clear me"></syg-input>,
 
       // Number type input
-      <ion-input type="number" value="333"></ion-input>,
+      <syg-input type="number" value="333"></syg-input>,
 
       // Disabled input
-      <ion-input value="Disabled" disabled></ion-input>,
+      <syg-input value="Disabled" disabled></syg-input>,
 
       // Readonly input
-      <ion-input value="Readonly" readonly></ion-input>,
+      <syg-input value="Readonly" readonly></syg-input>,
 
       // Inputs with labels
-      <ion-item>
-        <ion-label>Default Label</ion-label>
-        <ion-input></ion-input>
-      </ion-item>,
+      <syg-item>
+        <syg-label>Default Label</syg-label>
+        <syg-input></syg-input>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label position="floating">Floating Label</ion-label>
-        <ion-input></ion-input>
-      </ion-item>,
+      <syg-item>
+        <syg-label position="floating">Floating Label</syg-label>
+        <syg-input></syg-input>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label position="fixed">Fixed Label</ion-label>
-        <ion-input></ion-input>
-      </ion-item>,
+      <syg-item>
+        <syg-label position="fixed">Fixed Label</syg-label>
+        <syg-input></syg-input>
+      </syg-item>,
 
-      <ion-item>
-        <ion-label position="stacked">Stacked Label</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
+      <syg-item>
+        <syg-label position="stacked">Stacked Label</syg-label>
+        <syg-input></syg-input>
+      </syg-item>
     ];
   }
 }
@@ -262,46 +262,46 @@ export class InputExample {
 ```html
 <template>
   <!-- Default Input -->
-  <ion-input></ion-input>
+  <syg-input></syg-input>
 
   <!-- Input with value -->
-  <ion-input value="custom"></ion-input>
+  <syg-input value="custom"></syg-input>
 
   <!-- Input with placeholder -->
-  <ion-input placeholder="Enter Input"></ion-input>
+  <syg-input placeholder="Enter Input"></syg-input>
 
   <!-- Input with clear button when there is a value -->
-  <ion-input clear-input value="clear me"></ion-input>
+  <syg-input clear-input value="clear me"></syg-input>
 
   <!-- Number type input -->
-  <ion-input type="number" value="333"></ion-input>
+  <syg-input type="number" value="333"></syg-input>
 
   <!-- Disabled input -->
-  <ion-input value="Disabled" disabled></ion-input>
+  <syg-input value="Disabled" disabled></syg-input>
 
   <!-- Readonly input -->
-  <ion-input value="Readonly" readonly></ion-input>
+  <syg-input value="Readonly" readonly></syg-input>
 
   <!-- Inputs with labels -->
-  <ion-item>
-    <ion-label>Default Label</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+  <syg-item>
+    <syg-label>Default Label</syg-label>
+    <syg-input></syg-input>
+  </syg-item>
 
-  <ion-item>
-    <ion-label position="floating">Floating Label</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+  <syg-item>
+    <syg-label position="floating">Floating Label</syg-label>
+    <syg-input></syg-input>
+  </syg-item>
 
-  <ion-item>
-    <ion-label position="fixed">Fixed Label</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+  <syg-item>
+    <syg-label position="fixed">Fixed Label</syg-label>
+    <syg-input></syg-input>
+  </syg-item>
 
-  <ion-item>
-    <ion-label position="stacked">Stacked Label</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+  <syg-item>
+    <syg-label position="stacked">Stacked Label</syg-label>
+    <syg-input></syg-input>
+  </syg-item>
 </template>
 
 <script>
@@ -322,7 +322,7 @@ export default defineComponent({
 | ---------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | `accept`         | `accept`         | If the value of the type attribute is `"file"`, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers.                                                                                                                                                                                                                                                                                                                                                          | `string \| undefined`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | `undefined`    |
 | `autocapitalize` | `autocapitalize` | Indicates whether and how the text value should be automatically capitalized as it is entered/edited by the user. Available options: `"off"`, `"none"`, `"on"`, `"sentences"`, `"words"`, `"characters"`.                                                                                                                                                                                                                                                                                                                                                                                        | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | `'off'`        |
-| `autocomplete`   | `autocomplete`   | Indicates whether the value of the control can be automatically completed by the browser.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | `"on" \| "off" \| "name" \| "honorific-prefix" \| "given-name" \| "additional-name" \| "family-name" \| "honorific-suffix" \| "nickname" \| "email" \| "username" \| "new-password" \| "current-password" \| "one-time-code" \| "organization-title" \| "organization" \| "street-address" \| "address-line1" \| "address-line2" \| "address-line3" \| "address-level4" \| "address-level3" \| "address-level2" \| "address-level1" \| "country" \| "country-name" \| "postal-code" \| "cc-name" \| "cc-given-name" \| "cc-additional-name" \| "cc-family-name" \| "cc-number" \| "cc-exp" \| "cc-exp-month" \| "cc-exp-year" \| "cc-csc" \| "cc-type" \| "transaction-currency" \| "transaction-amount" \| "language" \| "bday" \| "bday-day" \| "bday-month" \| "bday-year" \| "sex" \| "tel" \| "tel-country-code" \| "tel-national" \| "tel-area-code" \| "tel-local" \| "tel-extension" \| "impp" \| "url" \| "photo"` | `'off'`        |
+| `autocomplete`   | `autocomplete`   | Indicates whether the value of the control can be automatically completed by the browser.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | `"on" \| "off" \| "name" \| "honorific-prefix" \| "given-name" \| "additional-name" \| "family-name" \| "honorific-suffix" \| "nickname" \| "email" \| "username" \| "new-password" \| "current-password" \| "one-time-code" \| "organizatsyg-title" \| "organization" \| "street-address" \| "address-line1" \| "address-line2" \| "address-line3" \| "address-level4" \| "address-level3" \| "address-level2" \| "address-level1" \| "country" \| "country-name" \| "postal-code" \| "cc-name" \| "cc-given-name" \| "cc-additional-name" \| "cc-family-name" \| "cc-number" \| "cc-exp" \| "cc-exp-month" \| "cc-exp-year" \| "cc-csc" \| "cc-type" \| "transaction-currency" \| "transaction-amount" \| "language" \| "bday" \| "bday-day" \| "bday-month" \| "bday-year" \| "sex" \| "tel" \| "tel-country-code" \| "tel-national" \| "tel-area-code" \| "tel-local" \| "tel-extension" \| "impp" \| "url" \| "photo"` | `'off'`        |
 | `autocorrect`    | `autocorrect`    | Whether auto correction should be enabled when the user is entering/editing the text value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | `"off" \| "on"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `'off'`        |
 | `autofocus`      | `autofocus`      | This Boolean attribute lets you specify that a form control should have input focus when the page loads.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `boolean`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `false`        |
 | `clearInput`     | `clear-input`    | If `true`, a clear icon will appear in the input when there is a value. Clicking it clears the input.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | `boolean`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `false`        |
@@ -374,7 +374,7 @@ Type: `Promise<HTMLInputElement>`
 
 ### `setFocus() => Promise<void>`
 
-Sets focus on the native `input` in `ion-input`. Use this method instead of the global
+Sets focus on the native `input` in `syg-input`. Use this method instead of the global
 `input.focus()`.
 
 #### Returns

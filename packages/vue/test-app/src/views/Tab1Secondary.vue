@@ -2,9 +2,9 @@
   <ion-page data-pageid="tab1-secondary">
     <ion-header>
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button default-href="/"></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button default-href="/"></syg-back-button>
+        </syg-buttons>
         <ion-title>Tab 1 - Secondary</ion-title>
       </ion-toolbar>
     </ion-header>

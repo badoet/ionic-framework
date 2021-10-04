@@ -10,14 +10,14 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
-  <script type="module">   
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
+  <script type="module">
     const forceCSSAnimations = new URLSearchParams(window.location.search).get('ionic:_forceCSSAnimations');
     if (forceCSSAnimations) {
       Element.prototype.animate = null;
-    } 
+    }
 
-    import { createAnimation } from '../../../../dist/ionic/index.esm.js';
+    import { createAnimation } from '../../../../dist/syg/index.esm.js';
 
     createAnimation()
       .addElement(document.querySelector('.square-a'))
@@ -28,7 +28,7 @@
       .direction('alternate')
       .iterations(Infinity)
       .play();
-      
+
      createAnimation()
       .addElement(document.querySelector('.square-b'))
       .fromTo('transform', 'translateX(0)', 'translateX(500px)')
@@ -40,7 +40,7 @@
       .play();
 
   </script>
-  
+
   <style>
     .square {
       width: 100px;
@@ -56,15 +56,15 @@
   </head>
 
 <body
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Animations</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    
-    <ion-content>
-      <div class="ion-padding">        
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Animations</syg-title>
+      </syg-toolbar>
+    </syg-header>
+
+    <syg-content>
+      <div class="syg-padding">
         <div class="square square-a">
           Hello
         </div>
@@ -72,8 +72,8 @@
           Hello
         </div>
       </div>
-    </ion-content>
-  </ion-app>
+    </syg-content>
+  </syg-app>
 </body>
 
 </html>

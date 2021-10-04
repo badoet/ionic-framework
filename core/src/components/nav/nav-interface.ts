@@ -68,7 +68,7 @@ export interface TransitionInstruction {
 }
 
 export interface NavCustomEvent extends CustomEvent {
-  target: HTMLIonNavElement;
+  target: HTMLSygNavElement;
 }
 
 export { ViewController };

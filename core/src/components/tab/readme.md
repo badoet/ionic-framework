@@ -1,8 +1,8 @@
-# ion-tab
+# syg-tab
 
 The tab component is a child component of [tabs](../tabs). Each tab can contain a top level navigation stack for an app or a single view. An app can have many tabs, all with their own independent navigation.
 
-> Note: This component should only be used with vanilla or Stencil JavaScript projects. For Angular, React, and Vue apps you do not need to use `ion-tab` to declare your tab components.
+> Note: This component should only be used with vanilla or Stencil JavaScript projects. For Angular, React, and Vue apps you do not need to use `syg-tab` to declare your tab components.
 
 See the [tabs documentation](../tabs/) for more details on configuring tabs.
 
@@ -14,7 +14,7 @@ See the [tabs documentation](../tabs/) for more details on configuring tabs.
 | Property           | Attribute   | Description                                                                                                                               | Type                                                     | Default     |
 | ------------------ | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ----------- |
 | `component`        | `component` | The component to display inside of the tab.                                                                                               | `Function \| HTMLElement \| null \| string \| undefined` | `undefined` |
-| `tab` _(required)_ | `tab`       | A tab id must be provided for each `ion-tab`. It's used internally to reference the selected tab or by the router to switch between them. | `string`                                                 | `undefined` |
+| `tab` _(required)_ | `tab`       | A tab id must be provided for each `syg-tab`. It's used internally to reference the selected tab or by the router to switch between them. | `string`                                                 | `undefined` |
 
 
 ## Methods

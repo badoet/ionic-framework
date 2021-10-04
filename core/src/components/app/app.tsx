@@ -1,11 +1,11 @@
 import { Build, Component, ComponentInterface, Element, Host, Method, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { isPlatform } from '../../utils/platform';
 
 @Component({
-  tag: 'ion-app',
+  tag: 'syg-app',
   styleUrl: 'app.scss',
 })
 export class App implements ComponentInterface {
@@ -42,7 +42,7 @@ export class App implements ComponentInterface {
 
   /**
    * @internal
-   * Used to set focus on an element that uses `ion-focusable`.
+   * Used to set focus on an element that uses `syg-focusable`.
    * Do not use this if focusing the element as a result of a keyboard
    * event as the focus utility should handle this for us. This method
    * should be used when we want to programmatically focus an element as
@@ -58,12 +58,12 @@ export class App implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{
           [mode]: true,
-          'ion-page': true,
+          'syg-page': true,
           'force-statusbar-padding': config.getBoolean('_forceStatusbarPadding'),
         }}
       >

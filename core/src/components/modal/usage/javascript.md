@@ -3,25 +3,25 @@
 customElements.define('modal-page', class extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Modal Header</ion-title>
-    <ion-buttons slot="primary">
-      <ion-button onClick="dismissModal()">
+<syg-header>
+  <syg-toolbar>
+    <syg-title>Modal Header</syg-title>
+    <syg-buttons slot="primary">
+      <syg-button onClick="dismissModal()">
         <ion-icon slot="icon-only" name="close"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-<ion-content class="ion-padding">
+      </syg-button>
+    </syg-buttons>
+  </syg-toolbar>
+</syg-header>
+<syg-content class="syg-padding">
   Modal Content
-</ion-content>`;
+</syg-content>`;
   }
 });
 
 function presentModal() {
   // create the modal with the `modal-page` component
-  const modalElement = document.createElement('ion-modal');
+  const modalElement = document.createElement('syg-modal');
   modalElement.component = 'modal-page';
   modalElement.cssClass = 'my-custom-class';
 
@@ -31,14 +31,14 @@ function presentModal() {
 }
 ```
 
-> If you need a wrapper element inside of your modal component, we recommend using a `<div class="ion-page">` so that the component dimensions are still computed properly.
+> If you need a wrapper element inside of your modal component, we recommend using a `<div class="syg-page">` so that the component dimensions are still computed properly.
 
 ### Passing Data
 
 During creation of a modal, data can be passed in through the `componentProps`. The previous example can be written to include data:
 
 ```javascript
-const modalElement = document.createElement('ion-modal');
+const modalElement = document.createElement('syg-modal');
 modalElement.component = 'modal-page';
 modalElement.cssClass = 'my-custom-class';
 modalElement.componentProps = {
@@ -53,7 +53,7 @@ To get the data passed into the `componentProps`, query for the modal in the `mo
 ```js
 customElements.define('modal-page', class extends HTMLElement {
   connectedCallback() {
-    const modalElement = document.querySelector('ion-modal');
+    const modalElement = document.querySelector('syg-modal');
     console.log(modalElement.componentProps.firstName);
 
     ...
@@ -89,27 +89,27 @@ Modals in iOS mode have the ability to be presented in a card-style and swiped t
 > Card style modals when running on iPhone-sized devices do not have backdrops. As a result, the `--backdrop-opacity` variable will not have any effect.
 
 ```javascript
-const modalElement = document.createElement('ion-modal');
+const modalElement = document.createElement('syg-modal');
 modalElement.component = 'modal-page';
 modalElement.cssClass = 'my-custom-class';
 modalElement.swipeToClose = true;
-modalElement.presentingElement = document.querySelector('ion-nav');
+modalElement.presentingElement = document.querySelector('syg-nav');
 ```
 
-In most scenarios, using the `ion-nav` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within a modal, you should pass in the top-most `ion-modal` element as the `presentingElement`.
+In most scenarios, using the `syg-nav` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within a modal, you should pass in the top-most `syg-modal` element as the `presentingElement`.
 
 ```javascript
-const modalElement = document.createElement('ion-modal');
+const modalElement = document.createElement('syg-modal');
 modalElement.component = 'modal-page';
 modalElement.cssClass = 'my-custom-class';
 modalElement.swipeToClose = true;
-modalElement.presentingElement = await modalController.getTop(); // Get the top-most ion-modal
+modalElement.presentingElement = await modalController.getTop(); // Get the top-most syg-modal
 ```
 
 ### Sheet Modals
 
 ```javascript
-const modalElement = document.createElement('ion-modal');
+const modalElement = document.createElement('syg-modal');
 modalElement.component = 'modal-page';
 modalElement.initialBreakpoint = 0.5;
 modalElement.breakpoints = [0, 0.5, 1];

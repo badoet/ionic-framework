@@ -72,14 +72,14 @@ export const ItemExamples: React.FC = () => {
           </IonItem>
 
           <IonItem>
-            <IonLabel className="ion-text-wrap">
+            <IonLabel className="syg-text-wrap">
               Multiline text that should wrap when it is too long
               to fit on one line in the item.
             </IonLabel>
           </IonItem>
 
           <IonItem>
-            <IonLabel className="ion-text-wrap">
+            <IonLabel className="syg-text-wrap">
               <IonText color="primary">
                 <h3>H3 Primary Title</h3>
               </IonText>

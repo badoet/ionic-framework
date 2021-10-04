@@ -9,26 +9,26 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <script type="module">
-    import { modalController } from '../../../../dist/ionic/index.esm.js';
+    import { modalController } from '../../../../dist/syg/index.esm.js';
     window.modalController = modalController;
   </script>
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Modal - Host Elements</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Modal - Host Elements</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding">
+    <syg-content class="syg-padding">
       <p>
-        <ion-button class="e2ePresentModal" onclick="presentModal()">Present modal</ion-button>
+        <syg-button class="e2ePresentModal" onclick="presentModal()">Present modal</syg-button>
       </p>
-    </ion-content>
-  </ion-app>
+    </syg-content>
+  </syg-app>
 
   <script>
     window.addEventListener("ionModalDidDismiss", function (e) { console.log('DidDismiss', e) })
@@ -38,19 +38,19 @@
       async connectedCallback() {
         this.innerHTML = `
 
-          <ion-header>
-            <ion-toolbar>
-              <ion-title>Super Modal</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content>
+          <syg-header>
+            <syg-toolbar>
+              <syg-title>Super Modal</syg-title>
+            </syg-toolbar>
+          </syg-header>
+          <syg-content>
             <h1>Content of doom</h1>
             <div>Here's some more content</div>
-            <ion-button class="dismiss">Dismiss Modal</ion-button>
-          </ion-content>`;
+            <syg-button class="dismiss">Dismiss Modal</syg-button>
+          </syg-content>`;
 
         // listen for close event
-        const button = this.querySelector('ion-button');
+        const button = this.querySelector('syg-button');
         button.addEventListener('click', async () => {
           await modalController.dismiss();
         });
@@ -60,7 +60,7 @@
 
     async function presentModal() {
       // present the modal
-      const modalElement = Object.assign(document.createElement('ion-modal'), {
+      const modalElement = Object.assign(document.createElement('syg-modal'), {
         component: 'modal-page'
       });
       document.body.appendChild(modalElement);

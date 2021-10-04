@@ -1,4 +1,4 @@
-# ion-picker
+# syg-picker
 
 A Picker is a dialog that displays a row of buttons and columns underneath. It appears on top of the app's content, and at the bottom of the viewport.
 
@@ -171,7 +171,7 @@ const PickerExample: React.FC = () => {
 ```vue
 <template>
   <div>
-    <ion-button @click="openPicker">SHOW PICKER</ion-button>
+    <syg-button @click="openPicker">SHOW PICKER</syg-button>
     <p v-if="picked.animal">picked: {{ picked.animal.text }}</p>
   </div>
 </template>
@@ -328,15 +328,15 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [ion-backdrop](../backdrop)
-- ion-picker-column
+- [syg-backdrop](../backdrop)
+- syg-picker-column
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-picker --> ion-backdrop
-  ion-picker --> ion-picker-column
-  style ion-picker fill:#f9f,stroke:#333,stroke-width:4px
+  syg-picker --> syg-backdrop
+  syg-picker --> syg-picker-column
+  style syg-picker fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -1,16 +1,16 @@
 ```html
 <template>
-  <ion-slides pager="true" :options="slideOpts">
-    <ion-slide>
+  <syg-slides pager="true" :options="slideOpts">
+    <syg-slide>
       <h1>Slide 1</h1>
-    </ion-slide>
-    <ion-slide>
+    </syg-slide>
+    <syg-slide>
       <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
+    </syg-slide>
+    <syg-slide>
       <h1>Slide 3</h1>
-    </ion-slide>
-  </ion-slides>
+    </syg-slide>
+  </syg-slides>
 </template>
 
 

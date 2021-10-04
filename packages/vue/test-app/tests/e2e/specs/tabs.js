@@ -84,7 +84,7 @@ describe('Tabs', () => {
     cy.ionPageDoesNotExist('tabs');
   });
 
-  it('should go back from a tabs page to a non-tabs page using ion-back-button', () => {
+  it('should go back from a tabs page to a non-tabs page using syg-back-button', () => {
     cy.visit('http://localhost:8080');
 
     cy.get('#tabs').click();
@@ -205,7 +205,7 @@ describe('Tabs', () => {
   });
 
   // Verifies fix for https://github.com/ionic-team/ionic-framework/issues/23101
-  it('should return to previous tab instance when using the ion-back-button', () => {
+  it('should return to previous tab instance when using the syg-back-button', () => {
     cy.visit('http://localhost:8080/tabs/tab1');
 
     cy.get('#tabs-secondary').click();

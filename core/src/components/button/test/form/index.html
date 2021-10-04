@@ -9,18 +9,18 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Button - Form Submit</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Button - Form Submit</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding ion-text-center" id="content" no-bounce>
+    <syg-content class="syg-padding syg-text-center" id="content" no-bounce>
 
       <form onsubmit="return validate(event)" action="http://httpbin.org/get" method="GET">
 
@@ -28,15 +28,15 @@
           <input name="name" required>
         </div>
 
-        <ion-button type="submit">
+        <syg-button type="submit">
           Submit Form
-        </ion-button>
+        </syg-button>
 
       </form>
 
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     document.querySelector('form').addEventListener('submit', (event) => {

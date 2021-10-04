@@ -1,4 +1,4 @@
-# ion-progress-bar
+# syg-progress-bar
 
 Progress bars inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates. There are two types of progress bars: `determinate` and `indeterminate`.
 
@@ -23,19 +23,19 @@ The indeterminate type should be used when it is unknown how long the process wi
 
 ```html
 <!-- Default Progressbar -->
-<ion-progress-bar></ion-progress-bar>
+<syg-progress-bar></syg-progress-bar>
 
 <!-- Default Progressbar with 50 percent -->
-<ion-progress-bar value="0.5"></ion-progress-bar>
+<syg-progress-bar value="0.5"></syg-progress-bar>
 
 <!-- Colorize Progressbar -->
-<ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
-<ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
+<syg-progress-bar color="primary" value="0.5"></syg-progress-bar>
+<syg-progress-bar color="secondary" value="0.5"></syg-progress-bar>
 
 <!-- Other types -->
-<ion-progress-bar value="0.25" buffer="0.5"></ion-progress-bar>
-<ion-progress-bar type="indeterminate"></ion-progress-bar>
-<ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+<syg-progress-bar value="0.25" buffer="0.5"></syg-progress-bar>
+<syg-progress-bar type="indeterminate"></syg-progress-bar>
+<syg-progress-bar type="indeterminate" reversed="true"></syg-progress-bar>
 ```
 
 
@@ -79,19 +79,19 @@ export class ProgressBarExample {
   render() {
     return [
       // Default Progressbar
-      <ion-progress-bar></ion-progress-bar>,
+      <syg-progress-bar></syg-progress-bar>,
 
       // Default Progressbar with 50 percent
-      <ion-progress-bar value={0.5}></ion-progress-bar>,
+      <syg-progress-bar value={0.5}></syg-progress-bar>,
 
       // Colorize Progressbar
-      <ion-progress-bar color="primary" value={0.5}></ion-progress-bar>,
-      <ion-progress-bar color="secondary" value={0.5}></ion-progress-bar>,
+      <syg-progress-bar color="primary" value={0.5}></syg-progress-bar>,
+      <syg-progress-bar color="secondary" value={0.5}></syg-progress-bar>,
 
       // Other types
-      <ion-progress-bar value={0.25} buffer={0.5}></ion-progress-bar>,
-      <ion-progress-bar type="indeterminate"></ion-progress-bar>,
-      <ion-progress-bar type="indeterminate" reversed={true}></ion-progress-bar>
+      <syg-progress-bar value={0.25} buffer={0.5}></syg-progress-bar>,
+      <syg-progress-bar type="indeterminate"></syg-progress-bar>,
+      <syg-progress-bar type="indeterminate" reversed={true}></syg-progress-bar>
     ];
   }
 }
@@ -103,19 +103,19 @@ export class ProgressBarExample {
 ```html
 <template>
   <!-- Default Progressbar -->
-  <ion-progress-bar></ion-progress-bar>
+  <syg-progress-bar></syg-progress-bar>
 
   <!-- Default Progressbar with 50 percent -->
-  <ion-progress-bar value="0.5"></ion-progress-bar>
+  <syg-progress-bar value="0.5"></syg-progress-bar>
 
   <!-- Colorize Progressbar -->
-  <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
-  <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
+  <syg-progress-bar color="primary" value="0.5"></syg-progress-bar>
+  <syg-progress-bar color="secondary" value="0.5"></syg-progress-bar>
 
   <!-- Other types -->
-  <ion-progress-bar value="0.25" buffer="0.5"></ion-progress-bar>
-  <ion-progress-bar type="indeterminate"></ion-progress-bar>
-  <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+  <syg-progress-bar value="0.25" buffer="0.5"></syg-progress-bar>
+  <syg-progress-bar type="indeterminate"></syg-progress-bar>
+  <syg-progress-bar type="indeterminate" reversed="true"></syg-progress-bar>
 </template>
 
 <script>

@@ -6,5 +6,5 @@ export interface ToggleChangeEventDetail<T = any> {
 
 export interface ToggleCustomEvent<T = any> extends CustomEvent {
   detail: ToggleChangeEventDetail<T>;
-  target: HTMLIonToggleElement;
+  target: HTMLSygToggleElement;
 }

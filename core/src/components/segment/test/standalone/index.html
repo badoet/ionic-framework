@@ -10,115 +10,115 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
 </head>
 
 <body onLoad="onLoad()">
-  <ion-toolbar>
-    <ion-segment value="Free">
-      <ion-segment-button value="Paid">
-        <ion-label>Paid</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Free">
-        <ion-label>Free</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Top">
-        <ion-label>Top</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+  <syg-toolbar>
+    <syg-segment value="Free">
+      <syg-segment-button value="Paid">
+        <syg-label>Paid</syg-label>
+      </syg-segment-button>
+      <syg-segment-button value="Free">
+        <syg-label>Free</syg-label>
+      </syg-segment-button>
+      <syg-segment-button value="Top">
+        <syg-label>Top</syg-label>
+      </syg-segment-button>
+    </syg-segment>
+  </syg-toolbar>
 
-  <ion-segment color="dark" value="Reading List">
-    <ion-segment-button value="Bookmarks">
+  <syg-segment color="dark" value="Reading List">
+    <syg-segment-button value="Bookmarks">
       <ion-icon name="book"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="Reading List">
+    </syg-segment-button>
+    <syg-segment-button value="Reading List">
       <ion-icon name="glasses"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="Shared Links">
+    </syg-segment-button>
+    <syg-segment-button value="Shared Links">
       <ion-icon name="at"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
+    </syg-segment-button>
+  </syg-segment>
 
-  <ion-segment id="browserSegment" color="danger">
-    <ion-segment-button href="#bookmarks" value="bookmarks">
-      <ion-label>Bookmarks</ion-label>
-    </ion-segment-button>
-    <ion-segment-button href="#reading" value="reading">
-      <ion-label>Reading List</ion-label>
-    </ion-segment-button>
-    <ion-segment-button href="#links" value="links">
-      <ion-label>Shared Links</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment id="browserSegment" color="danger">
+    <syg-segment-button href="#bookmarks" value="bookmarks">
+      <syg-label>Bookmarks</syg-label>
+    </syg-segment-button>
+    <syg-segment-button href="#reading" value="reading">
+      <syg-label>Reading List</syg-label>
+    </syg-segment-button>
+    <syg-segment-button href="#links" value="links">
+      <syg-label>Shared Links</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 
   <pre><code><span id="browserResults"></span></code></pre>
 
-  <ion-segment color="secondary" value="active">
-    <ion-segment-button value="active">
-      <ion-label>Active</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="disabled" disabled="true">
-      <ion-label>Disabled</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="inactive" disabled="false">
-      <ion-label>Inactive</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment color="secondary" value="active">
+    <syg-segment-button value="active">
+      <syg-label>Active</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="disabled" disabled="true">
+      <syg-label>Disabled</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="inactive" disabled="false">
+      <syg-label>Inactive</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 
-  <ion-segment class="custom" value="active">
-    <ion-segment-button value="active">
-      <ion-label>Active</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="disabled" disabled="true">
-      <ion-label>Disabled</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="inactive" disabled="false">
-      <ion-label>Inactive</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <syg-segment class="custom" value="active">
+    <syg-segment-button value="active">
+      <syg-label>Active</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="disabled" disabled="true">
+      <syg-label>Disabled</syg-label>
+    </syg-segment-button>
+    <syg-segment-button value="inactive" disabled="false">
+      <syg-label>Inactive</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 
-  <ion-segment class="custom-icon" value="instagram">
-    <ion-segment-button class="segment-button-facebook" value="facebook">
-      <ion-label>Facebook</ion-label>
+  <syg-segment class="custom-icon" value="instagram">
+    <syg-segment-button class="segment-button-facebook" value="facebook">
+      <syg-label>Facebook</syg-label>
       <ion-icon name="logo-facebook"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button class="segment-button-instagram" value="instagram">
-      <ion-label>Instagram</ion-label>
+    </syg-segment-button>
+    <syg-segment-button class="segment-button-instagram" value="instagram">
+      <syg-label>Instagram</syg-label>
       <ion-icon name="logo-instagram"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button class="segment-button-slack" value="slack">
-      <ion-label>Slack</ion-label>
+    </syg-segment-button>
+    <syg-segment-button class="segment-button-slack" value="slack">
+      <syg-label>Slack</syg-label>
       <ion-icon name="logo-slack"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
+    </syg-segment-button>
+  </syg-segment>
 
-  <ion-segment value="2" class="custom-indicator">
-    <ion-segment-button value="1">
+  <syg-segment value="2" class="custom-indicator">
+    <syg-segment-button value="1">
       <ion-icon name="home"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button class="large-icon" value="2">
+    </syg-segment-button>
+    <syg-segment-button class="large-icon" value="2">
       <ion-icon name="call"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="3">
+    </syg-segment-button>
+    <syg-segment-button value="3">
       <ion-icon name="person"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
+    </syg-segment-button>
+  </syg-segment>
 
-  <ion-segment value="2" class="custom-indicator">
-    <ion-segment-button layout="icon-start" value="1">
+  <syg-segment value="2" class="custom-indicator">
+    <syg-segment-button layout="icon-start" value="1">
       <ion-icon name="home"></ion-icon>
-      <ion-label>Home</ion-label>
-    </ion-segment-button>
-    <ion-segment-button layout="icon-start" class="large-icon" value="2">
+      <syg-label>Home</syg-label>
+    </syg-segment-button>
+    <syg-segment-button layout="icon-start" class="large-icon" value="2">
       <ion-icon name="call"></ion-icon>
-      <ion-label>Call</ion-label>
-    </ion-segment-button>
-    <ion-segment-button layout="icon-start" value="3">
+      <syg-label>Call</syg-label>
+    </syg-segment-button>
+    <syg-segment-button layout="icon-start" value="3">
       <ion-icon name="person"></ion-icon>
-      <ion-label>Person</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+      <syg-label>Person</syg-label>
+    </syg-segment-button>
+  </syg-segment>
 </body>
 
 <script>
@@ -179,11 +179,11 @@
     margin: 0;
   }
 
-  ion-segment {
+  syg-segment {
     margin-bottom: 10px;
   }
 
-  ion-toolbar ion-segment {
+  syg-toolbar syg-segment {
     margin-bottom: 0;
   }
 

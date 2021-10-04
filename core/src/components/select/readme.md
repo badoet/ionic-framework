@@ -1,14 +1,14 @@
-# ion-select
+# syg-select
 
 Selects are form controls to select an option, or options, from a set of options, similar to a native `<select>` element. When a user taps the select, a dialog appears with all of the options in a large, easy to select list.
 
-A select should be used with child `<ion-select-option>` elements. If the child option is not given a `value` attribute then its text will be used as the value.
+A select should be used with child `<syg-select-option>` elements. If the child option is not given a `value` attribute then its text will be used as the value.
 
-If `value` is set on the `<ion-select>`, the selected option will be chosen based on that value.
+If `value` is set on the `<syg-select>`, the selected option will be chosen based on that value.
 
 ## Interfaces
 
-By default, select uses [ion-alert](../alert) to open up the overlay of options in an alert. The interface can be changed to use [ion-action-sheet](../action-sheet) or [ion-popover](../popover) by passing `action-sheet` or `popover`, respectively, to the `interface` property. Read on to the other sections for the limitations of the different interfaces.
+By default, select uses [syg-alert](../alert) to open up the overlay of options in an alert. The interface can be changed to use [syg-action-sheet](../action-sheet) or [syg-popover](../popover) by passing `action-sheet` or `popover`, respectively, to the `interface` property. Read on to the other sections for the limitations of the different interfaces.
 
 
 ## Single Selection
@@ -39,20 +39,20 @@ The `action-sheet` and `popover` interfaces do not have an `OK` button, clicking
 
 Since select uses the alert, action sheet and popover interfaces, options can be passed to these components through the `interfaceOptions` property. This can be used to pass a custom header, subheader, css class, and more.
 
-See the [ion-alert docs](../alert), [ion-action-sheet docs](../action-sheet), and [ion-popover docs](../popover) for the properties that each interface accepts.
+See the [syg-alert docs](../alert), [syg-action-sheet docs](../action-sheet), and [syg-popover docs](../popover) for the properties that each interface accepts.
 
 Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
 
 ## Customization
 
-There are two units that make up the Select component and each need to be styled separately. The `ion-select` element is represented on the view by the selected value(s), or placeholder if there is none, and dropdown icon. The interface, which is defined in the [Interfaces](#interfaces) section above, is the dialog that opens when clicking on the `ion-select`. The interface contains all of the options defined by adding `ion-select-option` elements. The following sections will go over the differences between styling these.
+There are two units that make up the Select component and each need to be styled separately. The `syg-select` element is represented on the view by the selected value(s), or placeholder if there is none, and dropdown icon. The interface, which is defined in the [Interfaces](#interfaces) section above, is the dialog that opens when clicking on the `syg-select`. The interface contains all of the options defined by adding `syg-select-option` elements. The following sections will go over the differences between styling these.
 
 ### Styling Select Element
 
-As mentioned, the `ion-select` element consists only of the value(s), or placeholder, and icon that is displayed on the view. To customize this, style using a combination of CSS and any of the [CSS custom properties](#css-custom-properties):
+As mentioned, the `syg-select` element consists only of the value(s), or placeholder, and icon that is displayed on the view. To customize this, style using a combination of CSS and any of the [CSS custom properties](#css-custom-properties):
 
 ```css
-ion-select {
+syg-select {
   /* Applies to the value and placeholder color */
   color: #545ca7;
 
@@ -68,20 +68,20 @@ Alternatively, depending on the [browser support](https://caniuse.com/#feat=mdn-
 
 ```css
 /* Set the width to the full container and center the content */
-ion-select {
+syg-select {
   width: 100%;
 
   justify-content: center;
 }
 
 /* Set the flex in order to size the text width to its content */
-ion-select::part(placeholder),
-ion-select::part(text) {
+syg-select::part(placeholder),
+syg-select::part(text) {
   flex: 0 0 auto;
 }
 
 /* Set the placeholder color and opacity */
-ion-select::part(placeholder) {
+syg-select::part(placeholder) {
   color: #20a08a;
   opacity: 1;
 }
@@ -91,18 +91,18 @@ ion-select::part(placeholder) {
  * Shadow parts work with pseudo-elements, too!
  * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
  */
-ion-select::part(placeholder)::first-letter {
+syg-select::part(placeholder)::first-letter {
   font-size: 24px;
   font-weight: 500;
 }
 
 /* Set the text color */
-ion-select::part(text) {
+syg-select::part(text) {
   color: #545ca7;
 }
 
 /* Set the icon color and opacity */
-ion-select::part(icon) {
+syg-select::part(icon) {
   color: #971e49;
   opacity: 1;
 }
@@ -151,89 +151,89 @@ interface SelectCustomEvent<T = any> extends CustomEvent {
 ### Single Selection
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Single Selection
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Gender</ion-label>
-    <ion-select placeholder="Select One">
-      <ion-select-option value="f">Female</ion-select-option>
-      <ion-select-option value="m">Male</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Gender</syg-label>
+    <syg-select placeholder="Select One">
+      <syg-select-option value="f">Female</syg-select-option>
+      <syg-select-option value="m">Male</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Hair Color</ion-label>
-    <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-      <ion-select-option value="brown">Brown</ion-select-option>
-      <ion-select-option value="blonde">Blonde</ion-select-option>
-      <ion-select-option value="black">Black</ion-select-option>
-      <ion-select-option value="red">Red</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Hair Color</syg-label>
+    <syg-select value="brown" okText="Okay" cancelText="Dismiss">
+      <syg-select-option value="brown">Brown</syg-select-option>
+      <syg-select-option value="blonde">Blonde</syg-select-option>
+      <syg-select-option value="black">Black</syg-select-option>
+      <syg-select-option value="red">Red</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-</ion-list>
+</syg-list>
 ```
 
 ### Multiple Selection
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Multiple Selection
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Toppings</ion-label>
-    <ion-select multiple="true" cancelText="Nah" okText="Okay!">
-      <ion-select-option value="bacon">Bacon</ion-select-option>
-      <ion-select-option value="olives">Black Olives</ion-select-option>
-      <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-      <ion-select-option value="peppers">Green Peppers</ion-select-option>
-      <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-      <ion-select-option value="onions">Onions</ion-select-option>
-      <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-      <ion-select-option value="pineapple">Pineapple</ion-select-option>
-      <ion-select-option value="sausage">Sausage</ion-select-option>
-      <ion-select-option value="Spinach">Spinach</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Toppings</syg-label>
+    <syg-select multiple="true" cancelText="Nah" okText="Okay!">
+      <syg-select-option value="bacon">Bacon</syg-select-option>
+      <syg-select-option value="olives">Black Olives</syg-select-option>
+      <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+      <syg-select-option value="peppers">Green Peppers</syg-select-option>
+      <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+      <syg-select-option value="onions">Onions</syg-select-option>
+      <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+      <syg-select-option value="pineapple">Pineapple</syg-select-option>
+      <syg-select-option value="sausage">Sausage</syg-select-option>
+      <syg-select-option value="Spinach">Spinach</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Pets</ion-label>
-    <ion-select multiple="true" [value]="['bird', 'dog']">
-      <ion-select-option value="bird">Bird</ion-select-option>
-      <ion-select-option value="cat">Cat</ion-select-option>
-      <ion-select-option value="dog">Dog</ion-select-option>
-      <ion-select-option value="honeybadger">Honey Badger</ion-select-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Pets</syg-label>
+    <syg-select multiple="true" [value]="['bird', 'dog']">
+      <syg-select-option value="bird">Bird</syg-select-option>
+      <syg-select-option value="cat">Cat</syg-select-option>
+      <syg-select-option value="dog">Dog</syg-select-option>
+      <syg-select-option value="honeybadger">Honey Badger</syg-select-option>
+    </syg-select>
+  </syg-item>
+</syg-list>
 ```
 
 ### Objects as Values
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Objects as Values (compareWith)
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Users</ion-label>
-    <ion-select [compareWith]="compareWith">
-      <ion-select-option *ngFor="let user of users" [value]="user">{{user.first + ' ' + user.last}}</ion-select-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Users</syg-label>
+    <syg-select [compareWith]="compareWith">
+      <syg-select-option *ngFor="let user of users" [value]="user">{{user.first + ' ' + user.last}}</syg-select-option>
+    </syg-select>
+  </syg-item>
+</syg-list>
 ```
 
 ```typescript
@@ -278,20 +278,20 @@ export class SelectExample {
 ### Objects as Values with Multiple Selection
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Objects as Values (compareWith)
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Users</ion-label>
-    <ion-select [compareWith]="compareWith" multiple="true">
-      <ion-select-option *ngFor="let user of users" [value]="user">{{user.first + ' ' + user.last}}</ion-select-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Users</syg-label>
+    <syg-select [compareWith]="compareWith" multiple="true">
+      <syg-select-option *ngFor="let user of users" [value]="user">{{user.first + ' ' + user.last}}</syg-select-option>
+    </syg-select>
+  </syg-item>
+</syg-list>
 ```
 
 ```typescript
@@ -344,51 +344,51 @@ export class SelectExample {
 ### Interface Options
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Interface Options
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Alert</ion-label>
-    <ion-select [interfaceOptions]="customAlertOptions" interface="alert" multiple="true" placeholder="Select One">
-      <ion-select-option value="bacon">Bacon</ion-select-option>
-      <ion-select-option value="olives">Black Olives</ion-select-option>
-      <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-      <ion-select-option value="peppers">Green Peppers</ion-select-option>
-      <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-      <ion-select-option value="onions">Onions</ion-select-option>
-      <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-      <ion-select-option value="pineapple">Pineapple</ion-select-option>
-      <ion-select-option value="sausage">Sausage</ion-select-option>
-      <ion-select-option value="Spinach">Spinach</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Alert</syg-label>
+    <syg-select [interfaceOptions]="customAlertOptions" interface="alert" multiple="true" placeholder="Select One">
+      <syg-select-option value="bacon">Bacon</syg-select-option>
+      <syg-select-option value="olives">Black Olives</syg-select-option>
+      <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+      <syg-select-option value="peppers">Green Peppers</syg-select-option>
+      <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+      <syg-select-option value="onions">Onions</syg-select-option>
+      <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+      <syg-select-option value="pineapple">Pineapple</syg-select-option>
+      <syg-select-option value="sausage">Sausage</syg-select-option>
+      <syg-select-option value="Spinach">Spinach</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Popover</ion-label>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One">
-      <ion-select-option value="brown">Brown</ion-select-option>
-      <ion-select-option value="blonde">Blonde</ion-select-option>
-      <ion-select-option value="black">Black</ion-select-option>
-      <ion-select-option value="red">Red</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Popover</syg-label>
+    <syg-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One">
+      <syg-select-option value="brown">Brown</syg-select-option>
+      <syg-select-option value="blonde">Blonde</syg-select-option>
+      <syg-select-option value="black">Black</syg-select-option>
+      <syg-select-option value="red">Red</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Action Sheet</ion-label>
-    <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
-      <ion-select-option value="red">Red</ion-select-option>
-      <ion-select-option value="purple">Purple</ion-select-option>
-      <ion-select-option value="yellow">Yellow</ion-select-option>
-      <ion-select-option value="orange">Orange</ion-select-option>
-      <ion-select-option value="green">Green</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Action Sheet</syg-label>
+    <syg-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+      <syg-select-option value="red">Red</syg-select-option>
+      <syg-select-option value="purple">Purple</syg-select-option>
+      <syg-select-option value="yellow">Yellow</syg-select-option>
+      <syg-select-option value="orange">Orange</syg-select-option>
+      <syg-select-option value="green">Green</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-</ion-list>
+</syg-list>
 ```
 
 ```typescript
@@ -426,70 +426,70 @@ export class SelectExample {
 ### Single Selection
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Single Selection
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Gender</ion-label>
-    <ion-select placeholder="Select One">
-      <ion-select-option value="f">Female</ion-select-option>
-      <ion-select-option value="m">Male</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Gender</syg-label>
+    <syg-select placeholder="Select One">
+      <syg-select-option value="f">Female</syg-select-option>
+      <syg-select-option value="m">Male</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Hair Color</ion-label>
-    <ion-select value="brown" ok-text="Okay" cancel-text="Dismiss">
-      <ion-select-option value="brown">Brown</ion-select-option>
-      <ion-select-option value="blonde">Blonde</ion-select-option>
-      <ion-select-option value="black">Black</ion-select-option>
-      <ion-select-option value="red">Red</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Hair Color</syg-label>
+    <syg-select value="brown" ok-text="Okay" cancel-text="Dismiss">
+      <syg-select-option value="brown">Brown</syg-select-option>
+      <syg-select-option value="blonde">Blonde</syg-select-option>
+      <syg-select-option value="black">Black</syg-select-option>
+      <syg-select-option value="red">Red</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-</ion-list>
+</syg-list>
 ```
 
 ### Multiple Selection
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Multiple Selection
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Toppings</ion-label>
-    <ion-select multiple="true" cancel-text="Nah" ok-text="Okay!">
-      <ion-select-option value="bacon">Bacon</ion-select-option>
-      <ion-select-option value="olives">Black Olives</ion-select-option>
-      <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-      <ion-select-option value="peppers">Green Peppers</ion-select-option>
-      <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-      <ion-select-option value="onions">Onions</ion-select-option>
-      <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-      <ion-select-option value="pineapple">Pineapple</ion-select-option>
-      <ion-select-option value="sausage">Sausage</ion-select-option>
-      <ion-select-option value="Spinach">Spinach</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Toppings</syg-label>
+    <syg-select multiple="true" cancel-text="Nah" ok-text="Okay!">
+      <syg-select-option value="bacon">Bacon</syg-select-option>
+      <syg-select-option value="olives">Black Olives</syg-select-option>
+      <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+      <syg-select-option value="peppers">Green Peppers</syg-select-option>
+      <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+      <syg-select-option value="onions">Onions</syg-select-option>
+      <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+      <syg-select-option value="pineapple">Pineapple</syg-select-option>
+      <syg-select-option value="sausage">Sausage</syg-select-option>
+      <syg-select-option value="Spinach">Spinach</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Pets</ion-label>
-    <ion-select id="multiple" multiple="true">
-      <ion-select-option value="bird">Bird</ion-select-option>
-      <ion-select-option value="cat">Cat</ion-select-option>
-      <ion-select-option value="dog">Dog</ion-select-option>
-      <ion-select-option value="honeybadger">Honey Badger</ion-select-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Pets</syg-label>
+    <syg-select id="multiple" multiple="true">
+      <syg-select-option value="bird">Bird</syg-select-option>
+      <syg-select-option value="cat">Cat</syg-select-option>
+      <syg-select-option value="dog">Dog</syg-select-option>
+      <syg-select-option value="honeybadger">Honey Badger</syg-select-option>
+    </syg-select>
+  </syg-item>
+</syg-list>
 ```
 
 ```javascript
@@ -500,18 +500,18 @@ select.value = ['bird', 'dog'];
 ### Objects as Values
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Objects as Values (compareWith)
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Users</ion-label>
-    <ion-select id="objectSelectCompareWith"></ion-select>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Users</syg-label>
+    <syg-select id="objectSelectCompareWith"></syg-select>
+  </syg-item>
+</syg-list>
 ```
 
 ```javascript
@@ -541,7 +541,7 @@ select.value = ['bird', 'dog'];
   objectSelectElement.compareWith = compareWithFn;
 
   objectOptions.forEach((option, i) => {
-    let selectOption = document.createElement('ion-select-option');
+    let selectOption = document.createElement('syg-select-option');
     selectOption.value = option;
     selectOption.textContent = option.first + ' ' + option.last;
 
@@ -555,51 +555,51 @@ select.value = ['bird', 'dog'];
 ### Interface Options
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Interface Options
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Alert</ion-label>
-    <ion-select id="customAlertSelect" interface="alert" multiple="true" placeholder="Select One">
-      <ion-select-option value="bacon">Bacon</ion-select-option>
-      <ion-select-option value="olives">Black Olives</ion-select-option>
-      <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-      <ion-select-option value="peppers">Green Peppers</ion-select-option>
-      <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-      <ion-select-option value="onions">Onions</ion-select-option>
-      <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-      <ion-select-option value="pineapple">Pineapple</ion-select-option>
-      <ion-select-option value="sausage">Sausage</ion-select-option>
-      <ion-select-option value="Spinach">Spinach</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Alert</syg-label>
+    <syg-select id="customAlertSelect" interface="alert" multiple="true" placeholder="Select One">
+      <syg-select-option value="bacon">Bacon</syg-select-option>
+      <syg-select-option value="olives">Black Olives</syg-select-option>
+      <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+      <syg-select-option value="peppers">Green Peppers</syg-select-option>
+      <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+      <syg-select-option value="onions">Onions</syg-select-option>
+      <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+      <syg-select-option value="pineapple">Pineapple</syg-select-option>
+      <syg-select-option value="sausage">Sausage</syg-select-option>
+      <syg-select-option value="Spinach">Spinach</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Popover</ion-label>
-    <ion-select id="customPopoverSelect" interface="popover" placeholder="Select One">
-      <ion-select-option value="brown">Brown</ion-select-option>
-      <ion-select-option value="blonde">Blonde</ion-select-option>
-      <ion-select-option value="black">Black</ion-select-option>
-      <ion-select-option value="red">Red</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Popover</syg-label>
+    <syg-select id="customPopoverSelect" interface="popover" placeholder="Select One">
+      <syg-select-option value="brown">Brown</syg-select-option>
+      <syg-select-option value="blonde">Blonde</syg-select-option>
+      <syg-select-option value="black">Black</syg-select-option>
+      <syg-select-option value="red">Red</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Action Sheet</ion-label>
-    <ion-select id="customActionSheetSelect" interface="action-sheet" placeholder="Select One">
-      <ion-select-option value="red">Red</ion-select-option>
-      <ion-select-option value="purple">Purple</ion-select-option>
-      <ion-select-option value="yellow">Yellow</ion-select-option>
-      <ion-select-option value="orange">Orange</ion-select-option>
-      <ion-select-option value="green">Green</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Action Sheet</syg-label>
+    <syg-select id="customActionSheetSelect" interface="action-sheet" placeholder="Select One">
+      <syg-select-option value="red">Red</syg-select-option>
+      <syg-select-option value="purple">Purple</syg-select-option>
+      <syg-select-option value="yellow">Yellow</syg-select-option>
+      <syg-select-option value="orange">Orange</syg-select-option>
+      <syg-select-option value="green">Green</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-</ion-list>
+</syg-list>
 ```
 
 ```javascript
@@ -924,32 +924,32 @@ import { Component, h } from '@stencil/core';
 export class SelectExample {
   render() {
     return [
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Single Selection
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-item>
-          <ion-label>Gender</ion-label>
-          <ion-select placeholder="Select One">
-            <ion-select-option value="f">Female</ion-select-option>
-            <ion-select-option value="m">Male</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Gender</syg-label>
+          <syg-select placeholder="Select One">
+            <syg-select-option value="f">Female</syg-select-option>
+            <syg-select-option value="m">Male</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Hair Color</ion-label>
-          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="brown">Brown</ion-select-option>
-            <ion-select-option value="blonde">Blonde</ion-select-option>
-            <ion-select-option value="black">Black</ion-select-option>
-            <ion-select-option value="red">Red</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Hair Color</syg-label>
+          <syg-select value="brown" okText="Okay" cancelText="Dismiss">
+            <syg-select-option value="brown">Brown</syg-select-option>
+            <syg-select-option value="blonde">Blonde</syg-select-option>
+            <syg-select-option value="black">Black</syg-select-option>
+            <syg-select-option value="red">Red</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-      </ion-list>
+      </syg-list>
     ];
   }
 }
@@ -967,39 +967,39 @@ import { Component, h } from '@stencil/core';
 export class SelectExample {
   render() {
     return [
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Multiple Selection
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-item>
-          <ion-label>Toppings</ion-label>
-          <ion-select multiple={true} cancelText="Nah" okText="Okay!">
-            <ion-select-option value="bacon">Bacon</ion-select-option>
-            <ion-select-option value="olives">Black Olives</ion-select-option>
-            <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-            <ion-select-option value="peppers">Green Peppers</ion-select-option>
-            <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-            <ion-select-option value="onions">Onions</ion-select-option>
-            <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-            <ion-select-option value="pineapple">Pineapple</ion-select-option>
-            <ion-select-option value="sausage">Sausage</ion-select-option>
-            <ion-select-option value="Spinach">Spinach</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Toppings</syg-label>
+          <syg-select multiple={true} cancelText="Nah" okText="Okay!">
+            <syg-select-option value="bacon">Bacon</syg-select-option>
+            <syg-select-option value="olives">Black Olives</syg-select-option>
+            <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+            <syg-select-option value="peppers">Green Peppers</syg-select-option>
+            <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+            <syg-select-option value="onions">Onions</syg-select-option>
+            <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+            <syg-select-option value="pineapple">Pineapple</syg-select-option>
+            <syg-select-option value="sausage">Sausage</syg-select-option>
+            <syg-select-option value="Spinach">Spinach</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Pets</ion-label>
-          <ion-select multiple={true} value={['bird', 'dog']}>
-            <ion-select-option value="bird">Bird</ion-select-option>
-            <ion-select-option value="cat">Cat</ion-select-option>
-            <ion-select-option value="dog">Dog</ion-select-option>
-            <ion-select-option value="honeybadger">Honey Badger</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+        <syg-item>
+          <syg-label>Pets</syg-label>
+          <syg-select multiple={true} value={['bird', 'dog']}>
+            <syg-select-option value="bird">Bird</syg-select-option>
+            <syg-select-option value="cat">Cat</syg-select-option>
+            <syg-select-option value="dog">Dog</syg-select-option>
+            <syg-select-option value="honeybadger">Honey Badger</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
     ];
   }
 }
@@ -1039,24 +1039,24 @@ export class SelectExample {
 
   render() {
     return [
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Objects as Values (compareWith)
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-item>
-          <ion-label>Users</ion-label>
-          <ion-select compareWith={this.compareWith}>
+        <syg-item>
+          <syg-label>Users</syg-label>
+          <syg-select compareWith={this.compareWith}>
             {this.users.map(user =>
-            <ion-select-option value={user}>
+            <syg-select-option value={user}>
               {user.first + ' ' + user.last}
-            </ion-select-option>
+            </syg-select-option>
             )}
-          </ion-select>
-        </ion-item>
-      </ion-list>
+          </syg-select>
+        </syg-item>
+      </syg-list>
     ];
   }
 }
@@ -1092,50 +1092,50 @@ export class SelectExample {
 
   render() {
     return [
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Interface Options
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-item>
-          <ion-label>Alert</ion-label>
-          <ion-select interfaceOptions={this.customAlertOptions} interface="alert" multiple={true} placeholder="Select One">
-            <ion-select-option value="bacon">Bacon</ion-select-option>
-            <ion-select-option value="olives">Black Olives</ion-select-option>
-            <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-            <ion-select-option value="peppers">Green Peppers</ion-select-option>
-            <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-            <ion-select-option value="onions">Onions</ion-select-option>
-            <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-            <ion-select-option value="pineapple">Pineapple</ion-select-option>
-            <ion-select-option value="sausage">Sausage</ion-select-option>
-            <ion-select-option value="Spinach">Spinach</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Alert</syg-label>
+          <syg-select interfaceOptions={this.customAlertOptions} interface="alert" multiple={true} placeholder="Select One">
+            <syg-select-option value="bacon">Bacon</syg-select-option>
+            <syg-select-option value="olives">Black Olives</syg-select-option>
+            <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+            <syg-select-option value="peppers">Green Peppers</syg-select-option>
+            <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+            <syg-select-option value="onions">Onions</syg-select-option>
+            <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+            <syg-select-option value="pineapple">Pineapple</syg-select-option>
+            <syg-select-option value="sausage">Sausage</syg-select-option>
+            <syg-select-option value="Spinach">Spinach</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Popover</ion-label>
-          <ion-select interfaceOptions={this.customPopoverOptions} interface="popover" placeholder="Select One">
-            <ion-select-option value="brown">Brown</ion-select-option>
-            <ion-select-option value="blonde">Blonde</ion-select-option>
-            <ion-select-option value="black">Black</ion-select-option>
-            <ion-select-option value="red">Red</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Popover</syg-label>
+          <syg-select interfaceOptions={this.customPopoverOptions} interface="popover" placeholder="Select One">
+            <syg-select-option value="brown">Brown</syg-select-option>
+            <syg-select-option value="blonde">Blonde</syg-select-option>
+            <syg-select-option value="black">Black</syg-select-option>
+            <syg-select-option value="red">Red</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Action Sheet</ion-label>
-          <ion-select interfaceOptions={this.customActionSheetOptions} interface="action-sheet" placeholder="Select One">
-            <ion-select-option value="red">Red</ion-select-option>
-            <ion-select-option value="purple">Purple</ion-select-option>
-            <ion-select-option value="yellow">Yellow</ion-select-option>
-            <ion-select-option value="orange">Orange</ion-select-option>
-            <ion-select-option value="green">Green</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+        <syg-item>
+          <syg-label>Action Sheet</syg-label>
+          <syg-select interfaceOptions={this.customActionSheetOptions} interface="action-sheet" placeholder="Select One">
+            <syg-select-option value="red">Red</syg-select-option>
+            <syg-select-option value="purple">Purple</syg-select-option>
+            <syg-select-option value="yellow">Yellow</syg-select-option>
+            <syg-select-option value="orange">Orange</syg-select-option>
+            <syg-select-option value="green">Green</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
     ];
   }
 }
@@ -1148,38 +1148,38 @@ export class SelectExample {
 
 ```html
 <template>
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
+  <syg-list>
+    <syg-list-header>
+      <syg-label>
         Single Selection
-      </ion-label>
-    </ion-list-header>
+      </syg-label>
+    </syg-list-header>
 
-    <ion-item>
-      <ion-label>Gender</ion-label>
-      <ion-select placeholder="Select One">
-        <ion-select-option value="f">Female</ion-select-option>
-        <ion-select-option value="m">Male</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <syg-item>
+      <syg-label>Gender</syg-label>
+      <syg-select placeholder="Select One">
+        <syg-select-option value="f">Female</syg-select-option>
+        <syg-select-option value="m">Male</syg-select-option>
+      </syg-select>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Hair Color</ion-label>
-      <ion-select value="brown" ok-text="Okay" cancel-text="Dismiss">
-        <ion-select-option value="brown">Brown</ion-select-option>
-        <ion-select-option value="blonde">Blonde</ion-select-option>
-        <ion-select-option value="black">Black</ion-select-option>
-        <ion-select-option value="red">Red</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <syg-item>
+      <syg-label>Hair Color</syg-label>
+      <syg-select value="brown" ok-text="Okay" cancel-text="Dismiss">
+        <syg-select-option value="brown">Brown</syg-select-option>
+        <syg-select-option value="blonde">Blonde</syg-select-option>
+        <syg-select-option value="black">Black</syg-select-option>
+        <syg-select-option value="red">Red</syg-select-option>
+      </syg-select>
+    </syg-item>
 
-  </ion-list>
+  </syg-list>
 </template>
 
 <script>
-import { 
-  IonItem, 
-  IonLabel, 
+import {
+  IonItem,
+  IonLabel,
   IonList,
   IonListHeader,
   IonSelect,
@@ -1189,8 +1189,8 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   components: {
-    IonItem, 
-    IonLabel, 
+    IonItem,
+    IonLabel,
     IonList,
     IonListHeader,
     IonSelect,
@@ -1204,45 +1204,45 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
+  <syg-list>
+    <syg-list-header>
+      <syg-label>
         Multiple Selection
-      </ion-label>
-    </ion-list-header>
+      </syg-label>
+    </syg-list-header>
 
-    <ion-item>
-      <ion-label>Toppings</ion-label>
-      <ion-select multiple="true" cancel-text="Nah" ok-text="Okay!">
-        <ion-select-option value="bacon">Bacon</ion-select-option>
-        <ion-select-option value="olives">Black Olives</ion-select-option>
-        <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-        <ion-select-option value="peppers">Green Peppers</ion-select-option>
-        <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-        <ion-select-option value="onions">Onions</ion-select-option>
-        <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-        <ion-select-option value="pineapple">Pineapple</ion-select-option>
-        <ion-select-option value="sausage">Sausage</ion-select-option>
-        <ion-select-option value="Spinach">Spinach</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <syg-item>
+      <syg-label>Toppings</syg-label>
+      <syg-select multiple="true" cancel-text="Nah" ok-text="Okay!">
+        <syg-select-option value="bacon">Bacon</syg-select-option>
+        <syg-select-option value="olives">Black Olives</syg-select-option>
+        <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+        <syg-select-option value="peppers">Green Peppers</syg-select-option>
+        <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+        <syg-select-option value="onions">Onions</syg-select-option>
+        <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+        <syg-select-option value="pineapple">Pineapple</syg-select-option>
+        <syg-select-option value="sausage">Sausage</syg-select-option>
+        <syg-select-option value="Spinach">Spinach</syg-select-option>
+      </syg-select>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Pets</ion-label>
-      <ion-select multiple="true" :value=['bird', 'dog']>
-        <ion-select-option value="bird">Bird</ion-select-option>
-        <ion-select-option value="cat">Cat</ion-select-option>
-        <ion-select-option value="dog">Dog</ion-select-option>
-        <ion-select-option value="honeybadger">Honey Badger</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
+    <syg-item>
+      <syg-label>Pets</syg-label>
+      <syg-select multiple="true" :value=['bird', 'dog']>
+        <syg-select-option value="bird">Bird</syg-select-option>
+        <syg-select-option value="cat">Cat</syg-select-option>
+        <syg-select-option value="dog">Dog</syg-select-option>
+        <syg-select-option value="honeybadger">Honey Badger</syg-select-option>
+      </syg-select>
+    </syg-item>
+  </syg-list>
 </template>
 
 <script>
-import { 
-  IonItem, 
-  IonLabel, 
+import {
+  IonItem,
+  IonLabel,
   IonList,
   IonListHeader,
   IonSelect,
@@ -1252,8 +1252,8 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   components: {
-    IonItem, 
-    IonLabel, 
+    IonItem,
+    IonLabel,
     IonList,
     IonListHeader,
     IonSelect,
@@ -1267,57 +1267,57 @@ export default defineComponent({
 
 ```html
 <template>
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
+  <syg-list>
+    <syg-list-header>
+      <syg-label>
         Interface Options
-      </ion-label>
-    </ion-list-header>
+      </syg-label>
+    </syg-list-header>
 
-    <ion-item>
-      <ion-label>Alert</ion-label>
-      <ion-select :interface-options="customAlertOptions" interface="alert" multiple="true" placeholder="Select One">
-        <ion-select-option value="bacon">Bacon</ion-select-option>
-        <ion-select-option value="olives">Black Olives</ion-select-option>
-        <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-        <ion-select-option value="peppers">Green Peppers</ion-select-option>
-        <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-        <ion-select-option value="onions">Onions</ion-select-option>
-        <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-        <ion-select-option value="pineapple">Pineapple</ion-select-option>
-        <ion-select-option value="sausage">Sausage</ion-select-option>
-        <ion-select-option value="Spinach">Spinach</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <syg-item>
+      <syg-label>Alert</syg-label>
+      <syg-select :interface-options="customAlertOptions" interface="alert" multiple="true" placeholder="Select One">
+        <syg-select-option value="bacon">Bacon</syg-select-option>
+        <syg-select-option value="olives">Black Olives</syg-select-option>
+        <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+        <syg-select-option value="peppers">Green Peppers</syg-select-option>
+        <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+        <syg-select-option value="onions">Onions</syg-select-option>
+        <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+        <syg-select-option value="pineapple">Pineapple</syg-select-option>
+        <syg-select-option value="sausage">Sausage</syg-select-option>
+        <syg-select-option value="Spinach">Spinach</syg-select-option>
+      </syg-select>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Popover</ion-label>
-      <ion-select :interface-options="customPopoverOptions" interface="popover" placeholder="Select One">
-        <ion-select-option value="brown">Brown</ion-select-option>
-        <ion-select-option value="blonde">Blonde</ion-select-option>
-        <ion-select-option value="black">Black</ion-select-option>
-        <ion-select-option value="red">Red</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <syg-item>
+      <syg-label>Popover</syg-label>
+      <syg-select :interface-options="customPopoverOptions" interface="popover" placeholder="Select One">
+        <syg-select-option value="brown">Brown</syg-select-option>
+        <syg-select-option value="blonde">Blonde</syg-select-option>
+        <syg-select-option value="black">Black</syg-select-option>
+        <syg-select-option value="red">Red</syg-select-option>
+      </syg-select>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Action Sheet</ion-label>
-      <ion-select :interface-options="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="purple">Purple</ion-select-option>
-        <ion-select-option value="yellow">Yellow</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <syg-item>
+      <syg-label>Action Sheet</syg-label>
+      <syg-select :interface-options="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+        <syg-select-option value="red">Red</syg-select-option>
+        <syg-select-option value="purple">Purple</syg-select-option>
+        <syg-select-option value="yellow">Yellow</syg-select-option>
+        <syg-select-option value="orange">Orange</syg-select-option>
+        <syg-select-option value="green">Green</syg-select-option>
+      </syg-select>
+    </syg-item>
 
-  </ion-list>
+  </syg-list>
 </template>
 
 <script>
-import { 
-  IonItem, 
-  IonLabel, 
+import {
+  IonItem,
+  IonLabel,
   IonList,
   IonListHeader,
   IonSelect,
@@ -1327,8 +1327,8 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   components: {
-    IonItem, 
-    IonLabel, 
+    IonItem,
+    IonLabel,
     IonList,
     IonListHeader,
     IonSelect,
@@ -1352,7 +1352,7 @@ export default defineComponent({
       header: 'Colors',
       subHeader: 'Select your favorite color'
     };
-    
+
     return {
       customAlertOptions,
       customPopoverOptions,
@@ -1373,7 +1373,7 @@ export default defineComponent({
 | `compareWith`      | `compare-with`      | A property name or function used to compare object values                                                                                                                                                                                                                                                                                                 | `((currentValue: any, compareValue: any) => boolean) \| null \| string \| undefined` | `undefined`    |
 | `disabled`         | `disabled`          | If `true`, the user cannot interact with the select.                                                                                                                                                                                                                                                                                                      | `boolean`                                                                            | `false`        |
 | `interface`        | `interface`         | The interface the select should use: `action-sheet`, `popover` or `alert`.                                                                                                                                                                                                                                                                                | `"action-sheet" \| "alert" \| "popover"`                                             | `'alert'`      |
-| `interfaceOptions` | `interface-options` | Any additional options that the `alert`, `action-sheet` or `popover` interface can take. See the [ion-alert docs](../alert), the [ion-action-sheet docs](../action-sheet) and the [ion-popover docs](../popover) for the create options for each interface.  Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface. | `any`                                                                                | `{}`           |
+| `interfaceOptions` | `interface-options` | Any additional options that the `alert`, `action-sheet` or `popover` interface can take. See the [syg-alert docs](../alert), the [syg-action-sheet docs](../action-sheet) and the [syg-popover docs](../popover) for the create options for each interface.  Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface. | `any`                                                                                | `{}`           |
 | `mode`             | `mode`              | The mode determines which platform styles to use.                                                                                                                                                                                                                                                                                                         | `"ios" \| "md"`                                                                      | `undefined`    |
 | `multiple`         | `multiple`          | If `true`, the select can accept multiple values.                                                                                                                                                                                                                                                                                                         | `boolean`                                                                            | `false`        |
 | `name`             | `name`              | The name of the control, which is submitted with the form data.                                                                                                                                                                                                                                                                                           | `string`                                                                             | `this.inputId` |
@@ -1398,7 +1398,7 @@ export default defineComponent({
 ### `open(event?: UIEvent | undefined) => Promise<any>`
 
 Open the select overlay. The overlay is either an alert, action sheet, or popover,
-depending on the `interface` property on the `ion-select`.
+depending on the `interface` property on the `syg-select`.
 
 #### Returns
 

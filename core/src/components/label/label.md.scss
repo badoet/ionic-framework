@@ -55,7 +55,7 @@
 }
 
 /**
- * When translating the label inside of an ion-item with `fill="outline"`,
+ * When translating the label inside of an syg-item with `fill="outline"`,
  * add pseudo-elements to imitate fieldset-like padding without shifting the label
  */
 :host-context(.item-fill-outline.ion-focused).label-floating,

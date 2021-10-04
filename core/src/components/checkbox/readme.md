@@ -1,4 +1,4 @@
-# ion-checkbox
+# syg-checkbox
 
 Checkboxes allow the selection of multiple options from a set of options. They appear as checked (ticked) when activated. Clicking on a checkbox will toggle the `checked` property. They can also be checked programmatically by setting the `checked` property.
 
@@ -34,28 +34,28 @@ interface CheckboxCustomEvent<T = any> extends CustomEvent {
 
 ```html
 <!-- Default Checkbox -->
-<ion-checkbox></ion-checkbox>
+<syg-checkbox></syg-checkbox>
 
 <!-- Disabled Checkbox -->
-<ion-checkbox disabled="true"></ion-checkbox>
+<syg-checkbox disabled="true"></syg-checkbox>
 
 <!-- Checked Checkbox -->
-<ion-checkbox checked="true"></ion-checkbox>
+<syg-checkbox checked="true"></syg-checkbox>
 
 <!-- Checkbox Colors -->
-<ion-checkbox color="primary"></ion-checkbox>
-<ion-checkbox color="secondary"></ion-checkbox>
-<ion-checkbox color="danger"></ion-checkbox>
-<ion-checkbox color="light"></ion-checkbox>
-<ion-checkbox color="dark"></ion-checkbox>
+<syg-checkbox color="primary"></syg-checkbox>
+<syg-checkbox color="secondary"></syg-checkbox>
+<syg-checkbox color="danger"></syg-checkbox>
+<syg-checkbox color="light"></syg-checkbox>
+<syg-checkbox color="dark"></syg-checkbox>
 
 <!-- Checkboxes in a List -->
-<ion-list>
-  <ion-item *ngFor="let entry of form">
-    <ion-label>{{entry.val}}</ion-label>
-    <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
-  </ion-item>
-</ion-list>
+<syg-list>
+  <syg-item *ngFor="let entry of form">
+    <syg-label>{{entry.val}}</syg-label>
+    <syg-checkbox slot="end" [(ngModel)]="entry.isChecked"></syg-checkbox>
+  </syg-item>
+</syg-list>
 ```
 
 ```typescript
@@ -80,38 +80,38 @@ export class HomePage {
 
 ```html
 <!-- Default Checkbox -->
-<ion-checkbox></ion-checkbox>
+<syg-checkbox></syg-checkbox>
 
 <!-- Disabled Checkbox -->
-<ion-checkbox disabled></ion-checkbox>
+<syg-checkbox disabled></syg-checkbox>
 
 <!-- Checked Checkbox -->
-<ion-checkbox checked></ion-checkbox>
+<syg-checkbox checked></syg-checkbox>
 
 <!-- Checkbox Colors -->
-<ion-checkbox color="primary"></ion-checkbox>
-<ion-checkbox color="secondary"></ion-checkbox>
-<ion-checkbox color="danger"></ion-checkbox>
-<ion-checkbox color="light"></ion-checkbox>
-<ion-checkbox color="dark"></ion-checkbox>
+<syg-checkbox color="primary"></syg-checkbox>
+<syg-checkbox color="secondary"></syg-checkbox>
+<syg-checkbox color="danger"></syg-checkbox>
+<syg-checkbox color="light"></syg-checkbox>
+<syg-checkbox color="dark"></syg-checkbox>
 
 <!-- Checkboxes in a List -->
-<ion-list>
-  <ion-item>
-    <ion-label>Pepperoni</ion-label>
-    <ion-checkbox slot="end" value="pepperoni" checked></ion-checkbox>
-  </ion-item>
+<syg-list>
+  <syg-item>
+    <syg-label>Pepperoni</syg-label>
+    <syg-checkbox slot="end" value="pepperoni" checked></syg-checkbox>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Sausage</ion-label>
-    <ion-checkbox slot="end" value="sausage" disabled></ion-checkbox>
-  </ion-item>
+  <syg-item>
+    <syg-label>Sausage</syg-label>
+    <syg-checkbox slot="end" value="sausage" disabled></syg-checkbox>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Mushrooms</ion-label>
-    <ion-checkbox slot="end" value="mushrooms"></ion-checkbox>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Mushrooms</syg-label>
+    <syg-checkbox slot="end" value="mushrooms"></syg-checkbox>
+  </syg-item>
+</syg-list>
 ```
 
 
@@ -192,30 +192,30 @@ export class CheckboxExample {
   render() {
     return [
       // Default Checkbox
-      <ion-checkbox></ion-checkbox>,
+      <syg-checkbox></syg-checkbox>,
 
       // Disabled Checkbox
-      <ion-checkbox disabled={true}></ion-checkbox>,
+      <syg-checkbox disabled={true}></syg-checkbox>,
 
       // Checked Checkbox
-      <ion-checkbox checked={true}></ion-checkbox>,
+      <syg-checkbox checked={true}></syg-checkbox>,
 
       // Checkbox Colors
-      <ion-checkbox color="primary"></ion-checkbox>,
-      <ion-checkbox color="secondary"></ion-checkbox>,
-      <ion-checkbox color="danger"></ion-checkbox>,
-      <ion-checkbox color="light"></ion-checkbox>,
-      <ion-checkbox color="dark"></ion-checkbox>,
+      <syg-checkbox color="primary"></syg-checkbox>,
+      <syg-checkbox color="secondary"></syg-checkbox>,
+      <syg-checkbox color="danger"></syg-checkbox>,
+      <syg-checkbox color="light"></syg-checkbox>,
+      <syg-checkbox color="dark"></syg-checkbox>,
 
       // Checkboxes in a List
-      <ion-list>
+      <syg-list>
         {this.form.map(entry =>
-          <ion-item>
-            <ion-label>{entry.val}</ion-label>
-            <ion-checkbox slot="end" checked={entry.isChecked}></ion-checkbox>
-          </ion-item>
+          <syg-item>
+            <syg-label>{entry.val}</syg-label>
+            <syg-checkbox slot="end" checked={entry.isChecked}></syg-checkbox>
+          </syg-item>
         )}
-      </ion-list>
+      </syg-list>
     ];
   }
 }
@@ -227,32 +227,32 @@ export class CheckboxExample {
 ```html
 <template>
   <!-- Default Checkbox -->
-  <ion-checkbox></ion-checkbox>
+  <syg-checkbox></syg-checkbox>
 
   <!-- Disabled Checkbox -->
-  <ion-checkbox disabled="true"></ion-checkbox>
+  <syg-checkbox disabled="true"></syg-checkbox>
 
   <!-- Checked Checkbox -->
-  <ion-checkbox checked="true"></ion-checkbox>
+  <syg-checkbox checked="true"></syg-checkbox>
 
   <!-- Checkbox Colors -->
-  <ion-checkbox color="primary"></ion-checkbox>
-  <ion-checkbox color="secondary"></ion-checkbox>
-  <ion-checkbox color="danger"></ion-checkbox>
-  <ion-checkbox color="light"></ion-checkbox>
-  <ion-checkbox color="dark"></ion-checkbox>
+  <syg-checkbox color="primary"></syg-checkbox>
+  <syg-checkbox color="secondary"></syg-checkbox>
+  <syg-checkbox color="danger"></syg-checkbox>
+  <syg-checkbox color="light"></syg-checkbox>
+  <syg-checkbox color="dark"></syg-checkbox>
 
   <!-- Checkboxes in a List -->
-  <ion-list>
-    <ion-item v-for="entry in form">
-      <ion-label>{{entry.val}}</ion-label>
-      <ion-checkbox
+  <syg-list>
+    <syg-item v-for="entry in form">
+      <syg-label>{{entry.val}}</syg-label>
+      <syg-checkbox
         slot="end"
         @update:modelValue="entry.isChecked = $event"
         :modelValue="entry.isChecked">
-      </ion-checkbox>
-    </ion-item>
-  </ion-list>
+      </syg-checkbox>
+    </syg-item>
+  </syg-list>
 </template>
 
 <script>
@@ -327,13 +327,13 @@ export default defineComponent({
 
 ### Used by
 
- - ion-select-popover
+ - syg-select-popover
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-select-popover --> ion-checkbox
-  style ion-checkbox fill:#f9f,stroke:#333,stroke-width:4px
+  syg-select-popover --> syg-checkbox
+  style syg-checkbox fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

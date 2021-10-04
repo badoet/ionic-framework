@@ -7,7 +7,7 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
     <style>
       .grid {
         display: grid;
@@ -32,35 +32,35 @@
     </style>
   </head>
   <body>
-    <ion-app>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Popover - isOpen</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <syg-app>
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Popover - isOpen</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content class="ion-padding">
+      <syg-content class="syg-padding">
         <div class="grid">
           <div class="grid-item">
             <h2>Default</h2>
-            <ion-button id="default" onclick="openPopover(event)">Open Popover</ion-button>
+            <syg-button id="default" onclick="openPopover(event)">Open Popover</syg-button>
           </div>
           <div class="grid-item">
             <h2>Open, then close after 500ms</h2>
-            <ion-button id="timeout" onclick="openPopover(event, 500)">Open Popover</ion-button>
+            <syg-button id="timeout" onclick="openPopover(event, 500)">Open Popover</syg-button>
           </div>
         </div>
 
-        <ion-popover>
-          <ion-content class="ion-padding">
+        <syg-popover>
+          <syg-content class="syg-padding">
             Hello World
-          </ion-content>
-        </ion-popover>
-      </ion-content>
-    </ion-app>
+          </syg-content>
+        </syg-popover>
+      </syg-content>
+    </syg-app>
 
     <script>
-      const popover = document.querySelector('ion-popover');
+      const popover = document.querySelector('syg-popover');
 
       const openPopover = (ev, timeout) => {
         popover.event = ev;

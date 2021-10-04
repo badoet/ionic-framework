@@ -9,10 +9,10 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-list><ion-reorder-group disabled="false"></ion-reorder-group></ion-list>
+  <syg-list><syg-reorder-group disabled="false"></syg-reorder-group></syg-list>
 
   <script>
     class TestReorderListShadowDom extends HTMLElement {
@@ -20,7 +20,7 @@
         super();
         const shadow = this.attachShadow({mode: 'open'});
         const wrapper = document.createElement('div');
-        wrapper.innerHTML = `<ion-list><ion-reorder-group disabled="false"></ion-reorder-group></ion-list>`;
+        wrapper.innerHTML = `<syg-list><syg-reorder-group disabled="false"></syg-reorder-group></syg-list>`;
         shadow.appendChild(wrapper);
       }
     }
@@ -28,12 +28,12 @@
     customElements.define('test-reorder-list-shadow-dom', TestReorderListShadowDom);
 
     function addReorderItem(list) {
-      const reorderItem = document.createElement('ion-reorder');
-      reorderItem.innerHTML = `<ion-item>
-          <ion-label>
+      const reorderItem = document.createElement('syg-reorder');
+      reorderItem.innerHTML = `<syg-item>
+          <syg-label>
             <h2>Item ${list.childElementCount}</h2>
-          </ion-label>
-      </ion-item>`;
+          </syg-label>
+      </syg-item>`;
 
       reorderItem.id = `item-${list.childElementCount}`;
 
@@ -43,8 +43,8 @@
     const testShadowDomEl = document.createElement('test-reorder-list-shadow-dom');
     document.body.appendChild(testShadowDomEl);
 
-    let lists = Array.from(document.getElementsByTagName('ion-reorder-group'));
-    lists.push(testShadowDomEl.shadowRoot.querySelector('ion-reorder-group'));
+    let lists = Array.from(document.getElementsByTagName('syg-reorder-group'));
+    lists.push(testShadowDomEl.shadowRoot.querySelector('syg-reorder-group'));
 
     for (var i = 0; i < lists.length; i++) {
       lists[i].addEventListener('ionItemReorder', ({detail}) => detail.complete(true));

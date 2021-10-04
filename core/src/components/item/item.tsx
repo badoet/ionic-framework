@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Host, Listen, Prop, State, forceUpdate, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, Color, CssClassMap, RouterDirection, StyleEventDetail } from '../../interface';
 import { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
 import { raf } from '../../utils/helpers';
@@ -20,7 +20,7 @@ import { InputChangeEventDetail } from '../input/input-interface';
  * @part detail-icon - The chevron icon for the item. Only applies when `detail="true"`.
  */
 @Component({
-  tag: 'ion-item',
+  tag: 'syg-item',
   styleUrls: {
     ios: 'item.ios.scss',
     md: 'item.md.scss'
@@ -35,7 +35,7 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
   private itemStyles = new Map<string, CssClassMap>();
   private clickListener?: (ev: Event) => void;
 
-  @Element() el!: HTMLIonItemElement;
+  @Element() el!: HTMLSygItemElement;
 
   @State() multipleInputs = false;
 
@@ -104,7 +104,7 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
   @Prop() lines?: 'full' | 'inset' | 'none';
 
   /**
-   * If `true`, a character counter will display the ratio of characters used and the total character limit. Only applies when the `maxlength` property is set on the inner `ion-input` or `ion-textarea`.
+   * If `true`, a character counter will display the ratio of characters used and the total character limit. Only applies when the `maxlength` property is set on the inner `syg-input` or `syg-textarea`.
    */
   @Prop() counter = true;
 
@@ -137,7 +137,7 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
   @Listen('ionChange')
   handleIonChange(ev: CustomEvent<InputChangeEventDetail>) {
     if (this.counter && ev.target === this.getFirstInput()) {
-      this.updateCounterOutput(ev.target as HTMLIonInputElement | HTMLIonTextareaElement);
+      this.updateCounterOutput(ev.target as HTMLSygInputElement | HTMLSygTextareaElement);
     }
   }
 
@@ -217,15 +217,15 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
   // interfering with their individual click events
   private setMultipleInputs() {
     // The following elements have a clickable cover that is relative to the entire item
-    const covers = this.el.querySelectorAll('ion-checkbox, ion-datetime, ion-select, ion-radio');
+    const covers = this.el.querySelectorAll('syg-checkbox, syg-datetime, syg-select, syg-radio');
 
     // The following elements can accept focus alongside the previous elements
     // therefore if these elements are also a child of item, we don't want the
     // input cover on top of those interfering with their clicks
-    const inputs = this.el.querySelectorAll('ion-input, ion-range, ion-searchbar, ion-segment, ion-textarea, ion-toggle');
+    const inputs = this.el.querySelectorAll('syg-input, syg-range, syg-searchbar, syg-segment, syg-textarea, syg-toggle');
 
     // The following elements should also stay clickable when an input with cover is present
-    const clickables = this.el.querySelectorAll('ion-anchor, ion-button, a, button');
+    const clickables = this.el.querySelectorAll('syg-anchor, syg-button, a, button');
 
     // Check for multiple inputs to change the position of the input cover to relative
     // for all of the covered inputs above
@@ -239,7 +239,7 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
   // that should get the hover, focused and activated states UNLESS it has multiple
   // inputs, then those need to individually get each click
   private hasCover(): boolean {
-    const inputs = this.el.querySelectorAll('ion-checkbox, ion-datetime, ion-select, ion-radio');
+    const inputs = this.el.querySelectorAll('syg-checkbox, syg-datetime, syg-select, syg-radio');
     return inputs.length === 1 && !this.multipleInputs;
   }
 
@@ -253,8 +253,8 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
     return (this.isClickable() || this.hasCover());
   }
 
-  private getFirstInput(): HTMLIonInputElement | HTMLIonTextareaElement {
-    const inputs = this.el.querySelectorAll('ion-input, ion-textarea') as NodeListOf<HTMLIonInputElement | HTMLIonTextareaElement>;
+  private getFirstInput(): HTMLSygInputElement | HTMLSygTextareaElement {
+    const inputs = this.el.querySelectorAll('syg-input, syg-textarea') as NodeListOf<HTMLSygInputElement | HTMLSygTextareaElement>;
     return inputs[0];
   }
 
@@ -262,8 +262,8 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
   // clicking on the left padding of an item is not focusing the input
   // but is opening the keyboard. It will no longer be needed with
   // iOS 14.
-  private delegateFocus(ev: Event, input: HTMLIonInputElement | HTMLIonTextareaElement) {
-    const clickedItem = (ev.target as HTMLElement).tagName === 'ION-ITEM';
+  private delegateFocus(ev: Event, input: HTMLSygInputElement | HTMLSygTextareaElement) {
+    const clickedItem = (ev.target as HTMLElement).tagName === 'SYG-ITEM';
     let firstActive = false;
 
     // If the first input is the same as the active element we need
@@ -273,7 +273,7 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
       firstActive = input.querySelector('input, textarea') === document.activeElement;
     }
 
-    // Only focus the first input if we clicked on an ion-item
+    // Only focus the first input if we clicked on an syg-item
     // and the first input exists
     if (clickedItem && (firstActive || !this.multipleInputs)) {
       input.fireFocusEvents = false;
@@ -285,7 +285,7 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
     }
   }
 
-  private updateCounterOutput(inputEl: HTMLIonInputElement | HTMLIonTextareaElement) {
+  private updateCounterOutput(inputEl: HTMLSygInputElement | HTMLSygTextareaElement) {
     if (this.counter && !this.multipleInputs && inputEl?.maxlength !== undefined) {
       const length = inputEl?.value?.toString().length ?? '0';
       this.counterString = `${length}/${inputEl.maxlength}`;
@@ -302,7 +302,7 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
   render() {
     const { counterString, detail, detailIcon, download, fill, labelColorStyles, lines, disabled, href, rel, shape, target, routerAnimation, routerDirection } = this;
     const childStyles = {} as any;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const clickable = this.isClickable();
     const canActivate = this.canActivate();
     const TagType = clickable ? (href === undefined ? 'button' : 'a') : 'div' as any;
@@ -338,10 +338,10 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
             [`item-fill-${fillValue}`]: true,
             [`item-shape-${shape}`]: shape !== undefined,
             'item-disabled': disabled,
-            'in-list': hostContext('ion-list', this.el),
+            'in-list': hostContext('syg-list', this.el),
             'item-multiple-inputs': this.multipleInputs,
-            'ion-activatable': canActivate,
-            'ion-focusable': true,
+            'syg-activatable': canActivate,
+            'syg-focusable': true,
             'item-rtl': document.dir === 'rtl'
           })
         }}
@@ -362,13 +362,13 @@ export class Item implements ComponentInterface, AnchorInterface, ButtonInterfac
             {showDetail && <ion-icon icon={detailIcon} lazy={false} class="item-detail-icon" part="detail-icon" aria-hidden="true"></ion-icon>}
             <div class="item-inner-highlight"></div>
           </div>
-          {canActivate && mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+          {canActivate && mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
           <div class="item-highlight"></div>
         </TagType>
         <div class="item-bottom">
           <slot name="error"></slot>
           <slot name="helper"></slot>
-          {counterString && <ion-note class="item-counter">{counterString}</ion-note>}
+          {counterString && <syg-note class="item-counter">{counterString}</syg-note>}
         </div>
       </Host>
     );

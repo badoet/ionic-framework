@@ -138,7 +138,7 @@ export const IonRouterOutlet = /*@__PURE__*/ defineComponent({
 
         /**
          * Use the same logic as clicking
-         * ion-back-button to determine where
+         * syg-back-button to determine where
          * to go back to.
          */
         ionRouter.handleNavigateBack();

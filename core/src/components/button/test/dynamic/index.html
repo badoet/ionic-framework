@@ -9,50 +9,50 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 </head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Button - Dynamic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Button - Dynamic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding" id="content" no-bounce>
-      <ion-item id="dynamicItem">
-        <ion-button slot="start">Default</ion-button>
-        <ion-label>Dynamic Button</ion-label>
-        <ion-button id="dynamicItemLarge" slot="end" size="large">Large</ion-button>
-      </ion-item>
-      <ion-button id="add-item-button" color="success" onClick="addButton('dynamicItem')">
+    <syg-content class="syg-padding" id="content" no-bounce>
+      <syg-item id="dynamicItem">
+        <syg-button slot="start">Default</syg-button>
+        <syg-label>Dynamic Button</syg-label>
+        <syg-button id="dynamicItemLarge" slot="end" size="large">Large</syg-button>
+      </syg-item>
+      <syg-button id="add-item-button" color="success" onClick="addButton('dynamicItem')">
         Add a Button
-      </ion-button>
-      <ion-button id="change-item-button" color="tertiary" onClick="changeButtonSize('dynamicItemLarge')">
+      </syg-button>
+      <syg-button id="change-item-button" color="tertiary" onClick="changeButtonSize('dynamicItemLarge')">
         Change Button Size
-      </ion-button>
+      </syg-button>
 
-      <ion-item-divider id="dynamicItemDivider">
-        <ion-button slot="start">Default</ion-button>
-        <ion-label>Dynamic Button</ion-label>
-        <ion-button id="dynamicItemDividerLarge" slot="end" size="large">Large</ion-button>
-      </ion-item-divider>
-      <ion-button id="add-item-divider-button" color="success" onClick="addButton('dynamicItemDivider')">
+      <syg-item-divider id="dynamicItemDivider">
+        <syg-button slot="start">Default</syg-button>
+        <syg-label>Dynamic Button</syg-label>
+        <syg-button id="dynamicItemDividerLarge" slot="end" size="large">Large</syg-button>
+      </syg-item-divider>
+      <syg-button id="add-item-divider-button" color="success" onClick="addButton('dynamicItemDivider')">
         Add a Button
-      </ion-button>
-      <ion-button id="change-item-divider-button" color="tertiary" onClick="changeButtonSize('dynamicItemDividerLarge')">
+      </syg-button>
+      <syg-button id="change-item-divider-button" color="tertiary" onClick="changeButtonSize('dynamicItemDividerLarge')">
         Change Button Size
-      </ion-button>
-    </ion-content>
+      </syg-button>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     function addButton(dynamicId) {
       var item = document.querySelector('#' + dynamicId);
-      var button = document.createElement("ion-button");
+      var button = document.createElement("syg-button");
       button.textContent = "Button";
       button.slot = "start";
       item.appendChild(button);

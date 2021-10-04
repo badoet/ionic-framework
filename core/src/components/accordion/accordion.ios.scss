@@ -4,6 +4,6 @@
 // iOS Accordion
 // --------------------------------------------------
 
-:host(.accordion-next) ::slotted(ion-item[slot="header"]) {
+:host(.accordion-next) ::slotted(syg-item[slot="header"]) {
   --border-width: #{$item-ios-border-bottom-width 0px $item-ios-border-bottom-width 0px};
 }

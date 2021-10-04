@@ -9,109 +9,109 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Select - Custom</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Select - Custom</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="outer-content test-content">
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+    <syg-content class="outer-content test-content">
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Standalone Select
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-select placeholder="Default Select">
-          <ion-select-option value="madison">Madison, WI</ion-select-option>
-          <ion-select-option value="austin">Austin, TX</ion-select-option>
-          <ion-select-option value="chicago">Chicago, IL</ion-select-option>
-          <ion-select-option value="seattle">Seattle, WA</ion-select-option>
-        </ion-select>
+        <syg-select placeholder="Default Select">
+          <syg-select-option value="madison">Madison, WI</syg-select-option>
+          <syg-select-option value="austin">Austin, TX</syg-select-option>
+          <syg-select-option value="chicago">Chicago, IL</syg-select-option>
+          <syg-select-option value="seattle">Seattle, WA</syg-select-option>
+        </syg-select>
 
-        <ion-select placeholder="Placeholder" class="custom-part-colors">
-          <ion-select-option value="madison">Madison, WI</ion-select-option>
-          <ion-select-option value="austin">Austin, TX</ion-select-option>
-          <ion-select-option value="chicago">Chicago, IL</ion-select-option>
-          <ion-select-option value="seattle">Seattle, WA</ion-select-option>
-        </ion-select>
+        <syg-select placeholder="Placeholder" class="custom-part-colors">
+          <syg-select-option value="madison">Madison, WI</syg-select-option>
+          <syg-select-option value="austin">Austin, TX</syg-select-option>
+          <syg-select-option value="chicago">Chicago, IL</syg-select-option>
+          <syg-select-option value="seattle">Seattle, WA</syg-select-option>
+        </syg-select>
 
-        <ion-select value="austin" class="custom-part-colors">
-          <ion-select-option value="madison">Madison, WI</ion-select-option>
-          <ion-select-option value="austin">Austin, TX</ion-select-option>
-          <ion-select-option value="chicago">Chicago, IL</ion-select-option>
-          <ion-select-option value="seattle">Seattle, WA</ion-select-option>
-        </ion-select>
+        <syg-select value="austin" class="custom-part-colors">
+          <syg-select-option value="madison">Madison, WI</syg-select-option>
+          <syg-select-option value="austin">Austin, TX</syg-select-option>
+          <syg-select-option value="chicago">Chicago, IL</syg-select-option>
+          <syg-select-option value="seattle">Seattle, WA</syg-select-option>
+        </syg-select>
 
-        <ion-list-header>
-          <ion-label>
+        <syg-list-header>
+          <syg-label>
             Item Select
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-item>
-          <ion-label>Location</ion-label>
-          <ion-select placeholder="Default Select">
-            <ion-select-option value="madison">Madison, WI</ion-select-option>
-            <ion-select-option value="austin">Austin, TX</ion-select-option>
-            <ion-select-option value="chicago">Chicago, IL</ion-select-option>
-            <ion-select-option value="seattle">Seattle, WA</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+        <syg-item>
+          <syg-label>Location</syg-label>
+          <syg-select placeholder="Default Select">
+            <syg-select-option value="madison">Madison, WI</syg-select-option>
+            <syg-select-option value="austin">Austin, TX</syg-select-option>
+            <syg-select-option value="chicago">Chicago, IL</syg-select-option>
+            <syg-select-option value="seattle">Seattle, WA</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>Custom Options</ion-label>
-        </ion-list-header>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>Custom Options</syg-label>
+        </syg-list-header>
 
-        <ion-item>
-          <ion-label>Default Interface (Alert)</ion-label>
-          <ion-select placeholder="Styled Options" class="custom-options">
-            <ion-select-option class="select-option-custom-red" value="madison">Madison, WI</ion-select-option>
-            <ion-select-option class="select-option-custom-red" value="austin">Austin, TX</ion-select-option>
-            <ion-select-option class="select-option-custom-purple" value="chicago">Chicago, IL</ion-select-option>
-            <ion-select-option class="select-option-custom-red" value="seattle">Seattle, WA</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Default Interface (Alert)</syg-label>
+          <syg-select placeholder="Styled Options" class="custom-options">
+            <syg-select-option class="select-option-custom-red" value="madison">Madison, WI</syg-select-option>
+            <syg-select-option class="select-option-custom-red" value="austin">Austin, TX</syg-select-option>
+            <syg-select-option class="select-option-custom-purple" value="chicago">Chicago, IL</syg-select-option>
+            <syg-select-option class="select-option-custom-red" value="seattle">Seattle, WA</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Action Sheet Interface</ion-label>
-          <ion-select placeholder="Styled Options" interface="action-sheet" class="custom-options">
-            <ion-select-option class="select-option-custom-red" value="madison">Madison, WI</ion-select-option>
-            <ion-select-option class="select-option-custom-red" value="austin">Austin, TX</ion-select-option>
-            <ion-select-option class="select-option-custom-purple" value="chicago">Chicago, IL</ion-select-option>
-            <ion-select-option class="select-option-custom-red" value="seattle">Seattle, WA</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Action Sheet Interface</syg-label>
+          <syg-select placeholder="Styled Options" interface="action-sheet" class="custom-options">
+            <syg-select-option class="select-option-custom-red" value="madison">Madison, WI</syg-select-option>
+            <syg-select-option class="select-option-custom-red" value="austin">Austin, TX</syg-select-option>
+            <syg-select-option class="select-option-custom-purple" value="chicago">Chicago, IL</syg-select-option>
+            <syg-select-option class="select-option-custom-red" value="seattle">Seattle, WA</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Popover Interface</ion-label>
-          <ion-select placeholder="Styled Options" interface="popover" class="custom-options">
-            <ion-select-option class="select-option-custom-red" value="madison">Madison, WI</ion-select-option>
-            <ion-select-option class="select-option-custom-red" value="austin">Austin, TX</ion-select-option>
-            <ion-select-option class="select-option-custom-purple" value="chicago">Chicago, IL</ion-select-option>
-            <ion-select-option class="select-option-custom-red" value="seattle">Seattle, WA</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <syg-item>
+          <syg-label>Popover Interface</syg-label>
+          <syg-select placeholder="Styled Options" interface="popover" class="custom-options">
+            <syg-select-option class="select-option-custom-red" value="madison">Madison, WI</syg-select-option>
+            <syg-select-option class="select-option-custom-red" value="austin">Austin, TX</syg-select-option>
+            <syg-select-option class="select-option-custom-purple" value="chicago">Chicago, IL</syg-select-option>
+            <syg-select-option class="select-option-custom-red" value="seattle">Seattle, WA</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Default Interface (Alert): Multiple</ion-label>
-          <ion-select multiple="true" placeholder="Styled Options" class="custom-options">
-            <ion-select-option class="select-option-custom-red" value="madison">Madison, WI</ion-select-option>
-            <ion-select-option class="select-option-custom-red" value="austin">Austin, TX</ion-select-option>
-            <ion-select-option class="select-option-custom-purple" value="chicago">Chicago, IL</ion-select-option>
-            <ion-select-option class="select-option-custom-red" value="seattle">Seattle, WA</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-    </ion-content>
+        <syg-item>
+          <syg-label>Default Interface (Alert): Multiple</syg-label>
+          <syg-select multiple="true" placeholder="Styled Options" class="custom-options">
+            <syg-select-option class="select-option-custom-red" value="madison">Madison, WI</syg-select-option>
+            <syg-select-option class="select-option-custom-red" value="austin">Austin, TX</syg-select-option>
+            <syg-select-option class="select-option-custom-purple" value="chicago">Chicago, IL</syg-select-option>
+            <syg-select-option class="select-option-custom-red" value="seattle">Seattle, WA</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
+    </syg-content>
 
     <script>
       const selects = document.querySelectorAll('.custom-options');
@@ -202,7 +202,7 @@
       }
     </style>
 
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

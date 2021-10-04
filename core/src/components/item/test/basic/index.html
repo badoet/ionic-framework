@@ -10,125 +10,125 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Item - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Item - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+    <syg-content id="content">
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             List Header
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-label>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
+          <syg-label>
             Item
-          </ion-label>
-        </ion-item>
-        <ion-item-divider>
-          <ion-label>
+          </syg-label>
+        </syg-item>
+        <syg-item-divider>
+          <syg-label>
             Item Divider
-          </ion-label>
-        </ion-item-divider>
-        <ion-item>
-          <ion-label>
+          </syg-label>
+        </syg-item-divider>
+        <syg-item>
+          <syg-label>
             Item
-          </ion-label>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-item>
+      </syg-list>
 
-      <ion-item>
-        <ion-label>
+      <syg-item>
+        <syg-label>
           Plain Ol' div with some text
-        </ion-label>
-      </ion-item>
+        </syg-label>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>
+      <syg-item>
+        <syg-label>
           Single line text that should have ellipses when it doesn't all fit in the item
-        </ion-label>
-      </ion-item>
+        </syg-label>
+      </syg-item>
 
-      <ion-item lines="none">
-        <ion-label>
+      <syg-item lines="none">
+        <syg-label>
           Single line item with no lines
-        </ion-label>
-      </ion-item>
+        </syg-label>
+      </syg-item>
 
-      <ion-item>
-        <ion-label class="ion-text-wrap">
-          Multiline text that should wrap when it is too long to fit on one line in the item. Attribute on ion-label
-        </ion-label>
-      </ion-item>
+      <syg-item>
+        <syg-label class="syg-text-wrap">
+          Multiline text that should wrap when it is too long to fit on one line in the item. Attribute on syg-label
+        </syg-label>
+      </syg-item>
 
-      <ion-item color="secondary">
-        <ion-label class="ion-text-wrap">
+      <syg-item color="secondary">
+        <syg-label class="syg-text-wrap">
           <h1>H1 Title Text</h1>
           <p>Paragraph line 1</p>
-        </ion-label>
-      </ion-item>
+        </syg-label>
+      </syg-item>
 
-      <ion-item>
-        <ion-label class="ion-text-wrap">
+      <syg-item>
+        <syg-label class="syg-text-wrap">
           <h2>H2 Title Text</h2>
           <p>Paragraph line 1</p>
-        </ion-label>
-      </ion-item>
+        </syg-label>
+      </syg-item>
 
-      <ion-item>
-        <ion-label class="ion-text-wrap">
-          <ion-text color="primary">
+      <syg-item>
+        <syg-label class="syg-text-wrap">
+          <syg-text color="primary">
             <h3>H3 Title Text</h3>
-          </ion-text>
+          </syg-text>
           <p>Paragraph line 1</p>
-          <ion-text color="secondary">
+          <syg-text color="secondary">
             <p>Paragraph line 2 secondary</p>
-          </ion-text>
-        </ion-label>
-      </ion-item>
+          </syg-text>
+        </syg-label>
+      </syg-item>
 
-      <ion-item>
-        <ion-label class="ion-text-wrap">
+      <syg-item>
+        <syg-label class="syg-text-wrap">
           <h4>H4 Title Text</h4>
           <p>Paragraph line 1</p>
           <p>Paragraph line 2</p>
           <p>Paragraph line 3</p>
-        </ion-label>
-      </ion-item>
+        </syg-label>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>
-          Item using inner ion-label
-        </ion-label>
-      </ion-item>
+      <syg-item>
+        <syg-label>
+          Item using inner syg-label
+        </syg-label>
+      </syg-item>
 
-      <ion-item class="overflow-visible">
-        <ion-label position="fixed">PIN:</ion-label>
-        <ion-input type="number" pattern="[0-9]*" inputmode="numeric" formControlName="acct_no"
-          placeholder="Enter 7 digits"></ion-input>
+      <syg-item class="overflow-visible">
+        <syg-label position="fixed">PIN:</syg-label>
+        <syg-input type="number" pattern="[0-9]*" inputmode="numeric" formControlName="acct_no"
+          placeholder="Enter 7 digits"></syg-input>
         <span class="error">Must enter 7 digits</span>
-      </ion-item>
+      </syg-item>
 
-      <ion-item class="overflow-scroll">
-        <ion-label class="ion-text-wrap">Item with overflow scroll. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vulputate enim nulla aliquet porttitor. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Cras semper auctor neque vitae. Cursus eget nunc scelerisque viverra mauris in aliquam. Non sodales neque sodales ut etiam sit amet. Sit amet nulla facilisi morbi tempus. Accumsan in nisl nisi scelerisque eu. Sed elementum tempus egestas sed sed. Urna nunc id cursus metus aliquam. Gravida dictum fusce ut placerat orci nulla pellentesque. Id diam maecenas ultricies mi eget. Elementum nisi quis eleifend quam adipiscing vitae proin.</ion-label>
-      </ion-item>
-    </ion-content>
+      <syg-item class="overflow-scroll">
+        <syg-label class="syg-text-wrap">Item with overflow scroll. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vulputate enim nulla aliquet porttitor. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Cras semper auctor neque vitae. Cursus eget nunc scelerisque viverra mauris in aliquam. Non sodales neque sodales ut etiam sit amet. Sit amet nulla facilisi morbi tempus. Accumsan in nisl nisi scelerisque eu. Sed elementum tempus egestas sed sed. Urna nunc id cursus metus aliquam. Gravida dictum fusce ut placerat orci nulla pellentesque. Id diam maecenas ultricies mi eget. Elementum nisi quis eleifend quam adipiscing vitae proin.</syg-label>
+      </syg-item>
+    </syg-content>
 
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title>Footer</ion-title>
-      </ion-toolbar>
-    </ion-footer>
+    <syg-footer>
+      <syg-toolbar>
+        <syg-title>Footer</syg-title>
+      </syg-toolbar>
+    </syg-footer>
 
-  </ion-app>
+  </syg-app>
 
   <style>
     .overflow-visible {

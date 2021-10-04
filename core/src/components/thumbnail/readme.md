@@ -1,8 +1,8 @@
-# ion-thumbnail
+# syg-thumbnail
 
 Thumbnails are square components that usually wrap an image or icon. They can be used to make it easier to display a group of larger images or provide a preview of the full-size image.
 
-Thumbnails can be used by themselves or inside of any element. If placed inside of an `ion-item`, the thumbnail will resize to fit the parent component. To position a thumbnail on the left or right side of an item, set the slot to `start` or `end`, respectively.
+Thumbnails can be used by themselves or inside of any element. If placed inside of an `syg-item`, the thumbnail will resize to fit the parent component. To position a thumbnail on the left or right side of an item, set the slot to `start` or `end`, respectively.
 
 
 <!-- Auto Generated Below -->
@@ -13,16 +13,16 @@ Thumbnails can be used by themselves or inside of any element. If placed inside 
 ### Angular / javascript
 
 ```html
-<ion-thumbnail>
+<syg-thumbnail>
   <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-</ion-thumbnail>
+</syg-thumbnail>
 
-<ion-item>
-  <ion-thumbnail slot="start">
+<syg-item>
+  <syg-thumbnail slot="start">
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-  </ion-thumbnail>
-  <ion-label>Item Thumbnail</ion-label>
-</ion-item>
+  </syg-thumbnail>
+  <syg-label>Item Thumbnail</syg-label>
+</syg-item>
 ```
 
 
@@ -61,16 +61,16 @@ import { Component, h } from '@stencil/core';
 export class ThumbnailExample {
   render() {
     return [
-      <ion-thumbnail>
+      <syg-thumbnail>
         <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
-      </ion-thumbnail>,
+      </syg-thumbnail>,
 
-      <ion-item>
-        <ion-thumbnail slot="start">
+      <syg-item>
+        <syg-thumbnail slot="start">
           <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
-        </ion-thumbnail>
-        <ion-label>Item Thumbnail</ion-label>
-      </ion-item>
+        </syg-thumbnail>
+        <syg-label>Item Thumbnail</syg-label>
+      </syg-item>
     ];
   }
 }
@@ -81,16 +81,16 @@ export class ThumbnailExample {
 
 ```html
 <template>
-  <ion-thumbnail>
+  <syg-thumbnail>
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-  </ion-thumbnail>
+  </syg-thumbnail>
 
-  <ion-item>
-    <ion-thumbnail slot="start">
+  <syg-item>
+    <syg-thumbnail slot="start">
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-thumbnail>
-    <ion-label>Item Thumbnail</ion-label>
-  </ion-item>
+    </syg-thumbnail>
+    <syg-label>Item Thumbnail</syg-label>
+  </syg-item>
 </template>
 
 <script>

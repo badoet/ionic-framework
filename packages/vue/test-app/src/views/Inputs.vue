@@ -2,9 +2,9 @@
   <ion-page data-pageid="inputs">
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Inputs</ion-title>
       </ion-toolbar>
       <ion-toolbar>
@@ -96,8 +96,8 @@
 
         <br>
 
-        <ion-button expand="block" @click="reset" id="reset">Reset Values</ion-button>
-        <ion-button expand="block" @click="set" id="set">Set Values</ion-button>
+        <syg-button expand="block" @click="reset" id="reset">Reset Values</syg-button>
+        <syg-button expand="block" @click="set" id="set">Set Values</syg-button>
       </div>
     </ion-content>
   </ion-page>

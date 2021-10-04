@@ -1,12 +1,12 @@
-# ion-route
+# syg-route
 
 The route component takes a component and renders it when the Browser URL matches the url property.
 
-> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.
+> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`syg-router-outlet`](../router-outlet) and the Angular router.
 
 ## Navigation Hooks
 
-Navigation hooks can be used to perform tasks or act as navigation guards. Hooks are used by providing functions to the `beforeEnter` and `beforeLeave` properties on each `ion-route`. Returning `true` allows navigation to proceed, while returning `false` causes it to be cancelled. Returning an object of type `NavigationHookOptions` allows you to redirect navigation to another page.
+Navigation hooks can be used to perform tasks or act as navigation guards. Hooks are used by providing functions to the `beforeEnter` and `beforeLeave` properties on each `syg-route`. Returning `true` allows navigation to proceed, while returning `false` causes it to be cancelled. Returning an object of type `NavigationHookOptions` allows you to redirect navigation to another page.
 
 ## Interfaces
 
@@ -28,19 +28,19 @@ interface NavigationHookOptions {
 ### Javascript
 
 ```html
-<ion-router>
-  <ion-route url="/home" component="page-home"></ion-route>
-  <ion-route url="/dashboard" component="page-dashboard"></ion-route>
-  <ion-route url="/new-message" component="page-new-message"></ion-route>
-  <ion-route url="/login" component="page-login"></ion-route>
-</ion-router>
+<syg-router>
+  <syg-route url="/home" component="page-home"></syg-route>
+  <syg-route url="/dashboard" component="page-dashboard"></syg-route>
+  <syg-route url="/new-message" component="page-new-message"></syg-route>
+  <syg-route url="/login" component="page-login"></syg-route>
+</syg-router>
 ```
 
 ```javascript
-const dashboardPage = document.querySelector('ion-route[url="/dashboard"]');
+const dashboardPage = document.querySelector('syg-route[url="/dashboard"]');
 dashboardPage.beforeEnter = isLoggedInGuard;
 
-const newMessagePage = document.querySelector('ion-route[url="/dashboard"]');
+const newMessagePage = document.querySelector('syg-route[url="/dashboard"]');
 newMessagePage.beforeLeave = hasUnsavedDataGuard;
 
 const isLoggedInGuard = async () => {
@@ -64,7 +64,7 @@ const hasUnsavedDataGuard = async () => {
 }
 
 const confirmDiscardChanges = async () => {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.header = 'Discard Unsaved Changes?';
   alert.message = 'Are you sure you want to leave? Any unsaved changed will be lost.';
   alert.buttons = [
@@ -102,12 +102,12 @@ import { alertController } from '@ionic/core';
 export class RouterExample {
   render() {
     return (
-      <ion-router>
-        <ion-route url="/home" component="page-home"></ion-route>
-        <ion-route url="/dashboard" component="page-dashboard" beforeEnter={isLoggedInGuard}></ion-route>
-        <ion-route url="/new-message" component="page-new-message" beforeLeave={hasUnsavedDataGuard}></ion-route>
-        <ion-route url="/login" component="page-login"></ion-route>
-      </ion-router>
+      <syg-router>
+        <syg-route url="/home" component="page-home"></syg-route>
+        <syg-route url="/dashboard" component="page-dashboard" beforeEnter={isLoggedInGuard}></syg-route>
+        <syg-route url="/new-message" component="page-new-message" beforeLeave={hasUnsavedDataGuard}></syg-route>
+        <syg-route url="/login" component="page-login"></syg-route>
+      </syg-router>
     )
   }
 }
@@ -161,12 +161,12 @@ const confirmDiscardChanges = async () => {
 
 ```html
 <template>
-  <ion-router>
-    <ion-route url="/home" component="page-home"></ion-route>
-    <ion-route url="/dashboard" component="page-dashboard" :beforeEnter="isLoggedInGuard"></ion-route>
-    <ion-route url="/new-message" component="page-new-message" :beforeLeave="hasUnsavedDataGuard"></ion-route>
-    <ion-route url="/login" component="page-login"></ion-route>
-  </ion-router>
+  <syg-router>
+    <syg-route url="/home" component="page-home"></syg-route>
+    <syg-route url="/dashboard" component="page-dashboard" :beforeEnter="isLoggedInGuard"></syg-route>
+    <syg-route url="/new-message" component="page-new-message" :beforeLeave="hasUnsavedDataGuard"></syg-route>
+    <syg-route url="/login" component="page-login"></syg-route>
+  </syg-router>
 </template>
 
 <script>
@@ -225,7 +225,7 @@ const confirmDiscardChanges = async () => {
 | ------------------------ | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ----------- |
 | `beforeEnter`            | --          | A navigation hook that is fired when the route tries to enter. Returning `true` allows the navigation to proceed, while returning `false` causes it to be cancelled. Returning a `NavigationHookOptions` object causes the router to redirect to the path specified.   | `(() => NavigationHookResult \| Promise<NavigationHookResult>) \| undefined` | `undefined` |
 | `beforeLeave`            | --          | A navigation hook that is fired when the route tries to leave. Returning `true` allows the navigation to proceed, while returning `false` causes it to be cancelled. Returning a `NavigationHookOptions` object causes the router to redirect to the path specified.   | `(() => NavigationHookResult \| Promise<NavigationHookResult>) \| undefined` | `undefined` |
-| `component` _(required)_ | `component` | Name of the component to load/select in the navigation outlet (`ion-tabs`, `ion-nav`) when the route matches.  The value of this property is not always the tagname of the component to load, in `ion-tabs` it actually refers to the name of the `ion-tab` to select. | `string`                                                                     | `undefined` |
+| `component` _(required)_ | `component` | Name of the component to load/select in the navigation outlet (`syg-tabs`, `syg-nav`) when the route matches.  The value of this property is not always the tagname of the component to load, in `syg-tabs` it actually refers to the name of the `syg-tab` to select. | `string`                                                                     | `undefined` |
 | `componentProps`         | --          | A key value `{ 'red': true, 'blue': 'white'}` containing props that should be passed to the defined component when rendered.                                                                                                                                           | `undefined \| { [key: string]: any; }`                                       | `undefined` |
 | `url`                    | `url`       | Relative path that needs to match in order for this route to apply.  Accepts paths similar to expressjs so that you can define parameters in the url /foo/:bar where bar would be available in incoming props.                                                         | `string`                                                                     | `''`        |
 
@@ -234,7 +234,7 @@ const confirmDiscardChanges = async () => {
 
 | Event                 | Description                                                         | Type               |
 | --------------------- | ------------------------------------------------------------------- | ------------------ |
-| `ionRouteDataChanged` | Used internally by `ion-router` to know when this route did change. | `CustomEvent<any>` |
+| `ionRouteDataChanged` | Used internally by `syg-router` to know when this route did change. | `CustomEvent<any>` |
 
 
 ----------------------------------------------

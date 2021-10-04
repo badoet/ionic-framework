@@ -1,18 +1,18 @@
 ```html
 <template>
-  <ion-split-pane content-id="main">
+  <syg-split-pane content-id="main">
     <!--  the side menu  -->
-    <ion-menu content-id="main">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-    </ion-menu>
+    <syg-menu content-id="main">
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Menu</syg-title>
+        </syg-toolbar>
+      </syg-header>
+    </syg-menu>
 
     <!-- the main content -->
-    <ion-router-outlet id="main"></ion-router-outlet>
-  </ion-split-pane>
+    <syg-router-outlet id="main"></syg-router-outlet>
+  </syg-split-pane>
 </template>
 
 <script>

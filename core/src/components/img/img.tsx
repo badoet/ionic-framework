@@ -1,12 +1,12 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 /**
  * @part image - The inner `img` element.
  */
 @Component({
-  tag: 'ion-img',
+  tag: 'syg-img',
   styleUrl: 'img.scss',
   shadow: true
 })
@@ -101,7 +101,7 @@ export class Img implements ComponentInterface {
 
   render() {
     return (
-      <Host class={getIonMode(this)}>
+      <Host class={getSygMode(this)}>
         <img
           decoding="async"
           src={this.loadSrc}

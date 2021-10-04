@@ -9,7 +9,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   <style>
     .custom-modal {
       --height: 70%;
@@ -21,7 +21,7 @@
       align-items: flex-end;
     }
 
-    .custom-modal ion-toolbar {
+    .custom-modal syg-toolbar {
       --padding-top: 46px;
       --padding-bottom: 10px;
     }
@@ -36,21 +36,21 @@
 </head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Modal - Custom</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Modal - Custom</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding">
+    <syg-content class="syg-padding">
       <p>
-        <ion-button id="custom-modal" class="e2ePresentModal" onclick="presentModal()">Present modal</ion-button>
+        <syg-button id="custom-modal" class="e2ePresentModal" onclick="presentModal()">Present modal</syg-button>
       </p>
-    </ion-content>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
 
@@ -58,30 +58,30 @@
       // create component to open
       const element = document.createElement('div');
       element.innerHTML = `
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-button>
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-button>
               <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-          <ion-title>Super Modal</ion-title>
-          <ion-buttons slot="end">
-            <ion-button class="dismiss">
+            </syg-button>
+          </syg-buttons>
+          <syg-title>Super Modal</syg-title>
+          <syg-buttons slot="end">
+            <syg-button class="dismiss">
               Close
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
+            </syg-button>
+          </syg-buttons>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content>
         <h1>Content of doom</h1>
         <div>Here's some more content</div>
-        <ion-button class="dismiss" class="dismiss">Dismiss Modal</ion-button>
-      </ion-content>
+        <syg-button class="dismiss" class="dismiss">Dismiss Modal</syg-button>
+      </syg-content>
       `;
 
       // present the modal
-      const modalElement = Object.assign(document.createElement('ion-modal'), {
+      const modalElement = Object.assign(document.createElement('syg-modal'), {
         component: element,
         cssClass: 'custom-modal',
       });

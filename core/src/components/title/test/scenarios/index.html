@@ -13,70 +13,70 @@
 </head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button text="Mailboxes" default-href="/"></ion-back-button>
-        </ion-buttons>
-        <ion-buttons slot="primary">
-          <ion-button>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-buttons slot="start">
+          <syg-back-button text="Mailboxes" default-href="/"></syg-back-button>
+        </syg-buttons>
+        <syg-buttons slot="primary">
+          <syg-button>
             Edit
-          </ion-button>
-        </ion-buttons>
-        <ion-title>Inbox</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button text="Mailboxes" default-href="/"></ion-back-button>
-        </ion-buttons>
-        <ion-buttons slot="primary">
-          <ion-button>
+          </syg-button>
+        </syg-buttons>
+        <syg-title>Inbox</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-buttons slot="start">
+          <syg-back-button text="Mailboxes" default-href="/"></syg-back-button>
+        </syg-buttons>
+        <syg-buttons slot="primary">
+          <syg-button>
             Edit
-          </ion-button>
-        </ion-buttons>
-        <ion-title size="large">Inbox</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button text="Mailboxes" default-href="/"></ion-back-button>
-        </ion-buttons>
-        <ion-buttons slot="primary">
-          <ion-button>
+          </syg-button>
+        </syg-buttons>
+        <syg-title size="large">Inbox</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-buttons slot="start">
+          <syg-back-button text="Mailboxes" default-href="/"></syg-back-button>
+        </syg-buttons>
+        <syg-buttons slot="primary">
+          <syg-button>
             Edit
-          </ion-button>
-        </ion-buttons>
-        <ion-title size="large">Inbox</ion-title>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-searchbar></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+          </syg-button>
+        </syg-buttons>
+        <syg-title size="large">Inbox</syg-title>
+      </syg-toolbar>
+      <syg-toolbar>
+        <syg-searchbar></syg-searchbar>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Title</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title size="large">Title</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Title</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title size="large">Title</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content></ion-content>
+    <syg-content></syg-content>
 
-    <ion-footer>
-      <ion-button expand="full" onClick="toggle()" class="ion-no-margin">Toggle Size</ion-button>
-    </ion-footer>
-  </ion-app>
+    <syg-footer>
+      <syg-button expand="full" onClick="toggle()" class="syg-no-margin">Toggle Size</syg-button>
+    </syg-footer>
+  </syg-app>
 
   <script>
-    const titles = document.querySelectorAll('ion-title[size]');
+    const titles = document.querySelectorAll('syg-title[size]');
     function toggle() {
       for (title of titles) {
         const size = title.size === 'large' ? undefined : 'large';

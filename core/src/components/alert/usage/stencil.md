@@ -314,14 +314,14 @@ export class AlertExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.presentAlert()}>Present Alert</ion-button>
-        <ion-button onClick={() => this.presentAlertMultipleButtons()}>Present Alert: Multiple Buttons</ion-button>
-        <ion-button onClick={() => this.presentAlertConfirm()}>Present Alert: Confirm</ion-button>
-        <ion-button onClick={() => this.presentAlertPrompt()}>Present Alert: Prompt</ion-button>
-        <ion-button onClick={() => this.presentAlertRadio()}>Present Alert: Radio</ion-button>
-        <ion-button onClick={() => this.presentAlertCheckbox()}>Present Alert: Checkbox</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={() => this.presentAlert()}>Present Alert</syg-button>
+        <syg-button onClick={() => this.presentAlertMultipleButtons()}>Present Alert: Multiple Buttons</syg-button>
+        <syg-button onClick={() => this.presentAlertConfirm()}>Present Alert: Confirm</syg-button>
+        <syg-button onClick={() => this.presentAlertPrompt()}>Present Alert: Prompt</syg-button>
+        <syg-button onClick={() => this.presentAlertRadio()}>Present Alert: Radio</syg-button>
+        <syg-button onClick={() => this.presentAlertCheckbox()}>Present Alert: Checkbox</syg-button>
+      </syg-content>
     ];
   }
 }

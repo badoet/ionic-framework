@@ -1,15 +1,15 @@
 ```html
-<ion-split-pane contentId="main">
+<syg-split-pane contentId="main">
   <!--  the side menu  -->
-  <ion-menu contentId="main">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </ion-menu>
+  <syg-menu contentId="main">
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Menu</syg-title>
+      </syg-toolbar>
+    </syg-header>
+  </syg-menu>
 
   <!-- the main content -->
-  <ion-router-outlet id="main"></ion-router-outlet>
-</ion-split-pane>
+  <syg-router-outlet id="main"></syg-router-outlet>
+</syg-split-pane>
 ```

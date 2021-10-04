@@ -3,13 +3,13 @@ const testController = (overlay, shadow = false) => {
   cy.get(`ion-radio#${overlay}`).click();
   cy.get('ion-radio#controller').click();
 
-  cy.get('ion-button#present-overlay').click();
+  cy.get('syg-button#present-overlay').click();
   cy.get(selector).should('exist').should('be.visible');
 
   if (shadow) {
-    cy.get(selector).shadow().find('ion-backdrop').click({ force: true });
+    cy.get(selector).shadow().find('syg-backdrop').click({ force: true });
   } else {
-    cy.get(`${selector} ion-backdrop`).click({ force: true });
+    cy.get(`${selector} syg-backdrop`).click({ force: true });
   }
 
   cy.get(selector).should('not.exist');
@@ -19,13 +19,13 @@ const testComponent = (overlay, shadow = false) => {
   cy.get(`ion-radio#${overlay}`).click();
   cy.get('ion-radio#component').click();
 
-  cy.get('ion-button#present-overlay').click();
+  cy.get('syg-button#present-overlay').click();
   cy.get(overlay).should('exist').should('be.visible');
 
   if (shadow) {
-    cy.get(overlay).shadow().find('ion-backdrop').click({ force: true });
+    cy.get(overlay).shadow().find('syg-backdrop').click({ force: true });
   } else {
-    cy.get(`${overlay} ion-backdrop`).click({ force: true });
+    cy.get(`${overlay} syg-backdrop`).click({ force: true });
 
     /**
      * Overlay components that are shadow can be used inline
@@ -43,12 +43,12 @@ describe('Overlays', () => {
     cy.visit('http://localhost:8080/overlays')
   })
 
-  it(`should open and close ion-alert via controller`, () => {
-    testController('ion-alert');
+  it(`should open and close syg-alert via controller`, () => {
+    testController('syg-alert');
   });
 
-  it(`should open and close ion-action-sheet via controller`, () => {
-    testController('ion-action-sheet');
+  it(`should open and close syg-action-sheet via controller`, () => {
+    testController('syg-action-sheet');
   });
 
   it(`should open and close ion-loading via controller`, () => {
@@ -67,7 +67,7 @@ describe('Overlays', () => {
     cy.get(`ion-radio#ion-toast`).click();
     cy.get('ion-radio#controller').click();
 
-    cy.get('ion-button#present-overlay').click();
+    cy.get('syg-button#present-overlay').click();
     cy.get('ion-toast').should('exist');
 
     cy.get('ion-toast').shadow().find('button').click();
@@ -75,12 +75,12 @@ describe('Overlays', () => {
     cy.get('ion-toast').should('not.exist');
   });
 
-  it(`should open and close ion-alert via component`, () => {
-    testComponent('ion-alert');
+  it(`should open and close syg-alert via component`, () => {
+    testComponent('syg-alert');
   });
 
-  it(`should open and close ion-action-sheet via component`, () => {
-    testComponent('ion-action-sheet');
+  it(`should open and close syg-action-sheet via component`, () => {
+    testComponent('syg-action-sheet');
   });
 
   it(`should open and close ion-loading via component`, () => {
@@ -99,7 +99,7 @@ describe('Overlays', () => {
     cy.get(`ion-radio#ion-toast`).click();
     cy.get('ion-radio#component').click();
 
-    cy.get('ion-button#present-overlay').click();
+    cy.get('syg-button#present-overlay').click();
     cy.get('ion-toast').should('exist');
 
     cy.get('ion-toast').shadow().find('button').click();
@@ -111,7 +111,7 @@ describe('Overlays', () => {
     cy.get('ion-radio#ion-modal').click();
     cy.get('ion-radio#controller').click();
 
-    cy.get('ion-button#present-overlay').click();
+    cy.get('syg-button#present-overlay').click();
     cy.get('ion-modal').should('exist');
 
     cy.get('ion-modal ion-content').should('have.text', 'Custom Title');
@@ -121,7 +121,7 @@ describe('Overlays', () => {
     cy.get('ion-radio#ion-modal').click();
     cy.get('ion-radio#component').click();
 
-    cy.get('ion-button#present-overlay').click();
+    cy.get('syg-button#present-overlay').click();
     cy.get('ion-modal').should('exist');
 
     cy.get('ion-modal ion-content').should('have.text', 'Custom Title');
@@ -131,7 +131,7 @@ describe('Overlays', () => {
     cy.get('ion-radio#ion-popover').click();
     cy.get('ion-radio#controller').click();
 
-    cy.get('ion-button#present-overlay').click();
+    cy.get('syg-button#present-overlay').click();
     cy.get('ion-popover.ion-popover-controller').should('exist');
 
     cy.get('ion-popover.ion-popover-controller ion-content').should('have.text', 'Custom Title');
@@ -141,7 +141,7 @@ describe('Overlays', () => {
     cy.get('ion-radio#ion-popover').click();
     cy.get('ion-radio#component').click();
 
-    cy.get('ion-button#present-overlay').click();
+    cy.get('syg-button#present-overlay').click();
     cy.get('ion-popover').should('exist');
 
     cy.get('ion-popover.popover-inline ion-content').should('have.text', 'Custom Title');
@@ -157,7 +157,7 @@ describe('Overlays', () => {
     cy.get('ion-radio#ion-modal').click();
     cy.get('ion-radio#component').click();
 
-    cy.get('ion-button#present-overlay').click();
+    cy.get('syg-button#present-overlay').click();
     cy.get('ion-modal').should('exist');
 
     testLifecycle('overlays', {
@@ -176,7 +176,7 @@ describe('Overlays', () => {
       didDismiss: 1
     });
 
-    cy.get('ion-button#present-overlay').click();
+    cy.get('syg-button#present-overlay').click();
     cy.get('ion-modal').should('exist');
 
     testLifecycle('overlays', {

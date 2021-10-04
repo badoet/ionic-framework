@@ -69,13 +69,13 @@ describe('Routing Tests', () => {
     // This was a bug when loading the root of the app and not going directly to the home tab
     cy.visit(`http://localhost:${port}/routing/`);
     cy.ionNav('ion-item', 'Details 1');
-    cy.ionNav('ion-button', 'Go to Details 2');
-    cy.ionNav('ion-button', 'Go to Details 3');
+    cy.ionNav('syg-button', 'Go to Details 2');
+    cy.ionNav('syg-button', 'Go to Details 3');
     cy.contains('[data-pageid=home-details-page-3] ion-label', 'Details 3');
     cy.ionTabClick('Settings');
     cy.ionNav('ion-item', 'Settings Details 1');
-    cy.ionNav('ion-button', 'Go to Settings Details 2');
-    cy.ionNav('ion-button', 'Go to Settings Details 3');
+    cy.ionNav('syg-button', 'Go to Settings Details 2');
+    cy.ionNav('syg-button', 'Go to Settings Details 3');
     cy.contains('[data-pageid=settings-details-page-3] ion-label', 'Details 3');
     cy.ionTabClick('Home');
     cy.contains('[data-pageid=home-details-page-3] ion-label', 'Details 3');
@@ -91,7 +91,7 @@ describe('Routing Tests', () => {
     cy.visit(`http://localhost:${port}/routing/`);
     cy.ionNav('ion-item', 'Details 1 with Query Params');
     cy.contains('[data-pageid=home-details-page-1] ion-label', 'Query Params: ');
-    cy.ionNav('ion-button', 'Go to Details 2');
+    cy.ionNav('syg-button', 'Go to Details 2');
     cy.contains('[data-pageid=home-details-page-2] ion-label', 'Details 2');
     cy.ionBackClick('home-details-page-2');
     cy.contains('[data-pageid=home-details-page-1] ion-label', 'Query Params: ');
@@ -123,7 +123,7 @@ describe('Routing Tests', () => {
     cy.visit(`http://localhost:${port}/routing/tabs/home`);
     cy.ionNav('a', 'Go to details 1 on settings');
     cy.ionPageVisible('settings-details-page-1');
-    cy.ionNav('ion-button', 'Go to Settings Details 2');
+    cy.ionNav('syg-button', 'Go to Settings Details 2');
     cy.ionPageVisible('settings-details-page-2');
     cy.ionBackClick('settings-details-page-2');
     cy.ionPageVisible('settings-details-page-1');
@@ -135,7 +135,7 @@ describe('Routing Tests', () => {
     // Tests transferring from one outlet to another and back again with animation
     // TODO: how to test the transition animation happens?
     cy.visit(`http://localhost:${port}/routing/tabs/tab3`);
-    cy.ionNav('ion-button', 'Go to Other Page');
+    cy.ionNav('syg-button', 'Go to Other Page');
     cy.ionPageVisible('other-page');
     cy.ionBackClick('other-page');
     cy.ionPageVisible('tab3-page');
@@ -157,9 +157,9 @@ describe('Routing Tests', () => {
     cy.visit(`http://localhost:${port}/routing/`);
     cy.ionNav('ion-item', 'Details 1');
     cy.ionPageVisible('home-details-page-1');
-    cy.ionNav('ion-button', 'Go to Details 2');
+    cy.ionNav('syg-button', 'Go to Details 2');
     cy.ionPageVisible('home-details-page-2');
-    cy.ionNav('ion-button', 'Go to Details 3');
+    cy.ionNav('syg-button', 'Go to Details 3');
     cy.ionPageVisible('home-details-page-3');
     cy.go('back');
     cy.ionPageVisible('home-details-page-2');
@@ -174,9 +174,9 @@ describe('Routing Tests', () => {
     cy.visit(`http://localhost:${port}/routing/`);
     cy.ionNav('ion-item', 'Details 1');
     cy.ionPageVisible('home-details-page-1');
-    cy.ionNav('ion-button', 'Go to Details 2');
+    cy.ionNav('syg-button', 'Go to Details 2');
     cy.ionPageVisible('home-details-page-2');
-    cy.ionNav('ion-button', 'Go to Details 3');
+    cy.ionNav('syg-button', 'Go to Details 3');
     cy.ionPageVisible('home-details-page-3');
     cy.ionTabClick('Settings');
     cy.ionPageVisible('settings-page');
@@ -192,9 +192,9 @@ describe('Routing Tests', () => {
     cy.visit(`http://localhost:${port}/routing/`);
     cy.ionNav('ion-item', 'Details 1');
     cy.ionPageVisible('home-details-page-1');
-    cy.ionNav('ion-button', 'Go to Details 2');
+    cy.ionNav('syg-button', 'Go to Details 2');
     cy.ionPageVisible('home-details-page-2');
-    cy.ionNav('ion-button', 'Go to Details 3');
+    cy.ionNav('syg-button', 'Go to Details 3');
     cy.ionPageVisible('home-details-page-3');
     cy.go('back');
     cy.ionPageVisible('home-details-page-2');
@@ -256,9 +256,9 @@ describe('Routing Tests', () => {
     cy.ionPageVisible('home-page');
     cy.ionNav('ion-item', 'Details 1');
     cy.ionPageVisible('home-details-page-1');
-    cy.ionNav('ion-button', 'Go to Details 2');
+    cy.ionNav('syg-button', 'Go to Details 2');
     cy.ionPageVisible('home-details-page-2');
-    cy.ionNav('ion-button', 'Go to Details 3');
+    cy.ionNav('syg-button', 'Go to Details 3');
     cy.ionPageVisible('home-details-page-3');
     cy.ionBackClick('home-details-page-3');
     cy.ionPageVisible('home-details-page-2');

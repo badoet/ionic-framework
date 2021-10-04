@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h, readTask, writeTask } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Animation, Gesture, GestureDetail, RefresherEventDetail } from '../../interface';
 import { getTimeGivenProgression } from '../../utils/animation/cubic-bezier';
 import { clamp, componentOnReady, getElementRoot, raf, transitionEndAsync } from '../../utils/helpers';
@@ -18,7 +18,7 @@ import {
 } from './refresher.utils';
 
 @Component({
-  tag: 'ion-refresher',
+  tag: 'syg-refresher',
   styleUrls: {
     ios: 'refresher.ios.scss',
     md: 'refresher.md.scss'
@@ -43,7 +43,7 @@ export class Refresher implements ComponentInterface {
 
   @State() private nativeRefresher = false;
 
-  @Element() el!: HTMLIonRefresherElement;
+  @Element() el!: HTMLSygRefresherElement;
 
   /**
    * The current state which the refresher is in. The refresher's states include:
@@ -134,9 +134,9 @@ export class Refresher implements ComponentInterface {
   @Event() ionStart!: EventEmitter<void>;
 
   private async checkNativeRefresher() {
-    const useNativeRefresher = await shouldUseNativeRefresher(this.el, getIonMode(this));
+    const useNativeRefresher = await shouldUseNativeRefresher(this.el, getSygMode(this));
     if (useNativeRefresher && !this.nativeRefresher) {
-      const contentEl = this.el.closest('ion-content');
+      const contentEl = this.el.closest('syg-content');
       this.setupNativeRefresher(contentEl);
     } else if (!useNativeRefresher) {
       this.destroyNativeRefresher();
@@ -155,7 +155,7 @@ export class Refresher implements ComponentInterface {
   private async resetNativeRefresher(el: HTMLElement | undefined, state: RefresherState) {
     this.state = state;
 
-    if (getIonMode(this) === 'ios') {
+    if (getSygMode(this) === 'ios') {
       await translateElement(el, undefined, 300);
     } else {
       await transitionEndAsync(this.el.querySelector('.refresher-refreshing-icon'), 200);
@@ -171,7 +171,7 @@ export class Refresher implements ComponentInterface {
     this.state = RefresherState.Inactive;
   }
 
-  private async setupiOSNativeRefresher(pullingSpinner: HTMLIonSpinnerElement, refreshingSpinner: HTMLIonSpinnerElement) {
+  private async setupiOSNativeRefresher(pullingSpinner: HTMLSygSpinnerElement, refreshingSpinner: HTMLSygSpinnerElement) {
     this.elementToTransform = this.scrollEl!;
     const ticks = pullingSpinner.shadowRoot!.querySelectorAll('svg');
     let MAX_PULL = this.scrollEl!.clientHeight * 0.16;
@@ -271,7 +271,7 @@ export class Refresher implements ComponentInterface {
              * will be 0. When the gesture starts, the content
              * will be visible, so try to get the correct
              * client height again. This is most common when
-             * using the refresher in an ion-menu.
+             * using the refresher in an syg-menu.
              */
             if (MAX_PULL === 0) {
               MAX_PULL = this.scrollEl!.clientHeight * 0.16;
@@ -296,9 +296,9 @@ export class Refresher implements ComponentInterface {
     this.disabledChanged();
   }
 
-  private async setupMDNativeRefresher(contentEl: HTMLIonContentElement, pullingSpinner: HTMLIonSpinnerElement, refreshingSpinner: HTMLIonSpinnerElement) {
+  private async setupMDNativeRefresher(contentEl: HTMLSygContentElement, pullingSpinner: HTMLSygSpinnerElement, refreshingSpinner: HTMLSygSpinnerElement) {
     const circle = getElementRoot(pullingSpinner).querySelector('circle');
-    const pullingRefresherIcon = this.el.querySelector('ion-refresher-content .refresher-pulling-icon') as HTMLElement;
+    const pullingRefresherIcon = this.el.querySelector('syg-refresher-content .refresher-pulling-icon') as HTMLElement;
     const refreshingCircle = getElementRoot(refreshingSpinner).querySelector('circle');
 
     if (circle !== null && refreshingCircle !== null) {
@@ -306,8 +306,8 @@ export class Refresher implements ComponentInterface {
         circle.style.setProperty('animation', 'none');
 
         // This lines up the animation on the refreshing spinner with the pulling spinner
-        refreshingSpinner.style.setProperty('animation-delay', '-655ms');
-        refreshingCircle.style.setProperty('animation-delay', '-655ms');
+        refreshingSpinner.style.setProperty('animatsyg-delay', '-655ms');
+        refreshingCircle.style.setProperty('animatsyg-delay', '-655ms');
       });
     }
 
@@ -383,7 +383,7 @@ export class Refresher implements ComponentInterface {
     this.disabledChanged();
   }
 
-  private async setupNativeRefresher(contentEl: HTMLIonContentElement | null) {
+  private async setupNativeRefresher(contentEl: HTMLSygContentElement | null) {
     if (this.scrollListenerCallback || !contentEl || this.nativeRefresher || !this.scrollEl) {
       return;
     }
@@ -399,10 +399,10 @@ export class Refresher implements ComponentInterface {
 
     this.nativeRefresher = true;
 
-    const pullingSpinner = this.el.querySelector('ion-refresher-content .refresher-pulling ion-spinner') as HTMLIonSpinnerElement;
-    const refreshingSpinner = this.el.querySelector('ion-refresher-content .refresher-refreshing ion-spinner') as HTMLIonSpinnerElement;
+    const pullingSpinner = this.el.querySelector('syg-refresher-content .refresher-pulling syg-spinner') as HTMLSygSpinnerElement;
+    const refreshingSpinner = this.el.querySelector('syg-refresher-content .refresher-refreshing syg-spinner') as HTMLSygSpinnerElement;
 
-    if (getIonMode(this) === 'ios') {
+    if (getSygMode(this) === 'ios') {
       this.setupiOSNativeRefresher(pullingSpinner, refreshingSpinner);
     } else {
       this.setupMDNativeRefresher(contentEl, pullingSpinner, refreshingSpinner);
@@ -415,13 +415,13 @@ export class Refresher implements ComponentInterface {
 
   async connectedCallback() {
     if (this.el.getAttribute('slot') !== 'fixed') {
-      console.error('Make sure you use: <ion-refresher slot="fixed">');
+      console.error('Make sure you use: <syg-refresher slot="fixed">');
       return;
     }
 
-    const contentEl = this.el.closest('ion-content');
+    const contentEl = this.el.closest('syg-content');
     if (!contentEl) {
-      console.error('<ion-refresher> must be used inside an <ion-content>');
+      console.error('<syg-refresher> must be used inside an <syg-content>');
       return;
     }
 
@@ -430,7 +430,7 @@ export class Refresher implements ComponentInterface {
     this.scrollEl = await contentEl.getScrollElement();
     this.backgroundContentEl = getElementRoot(contentEl).querySelector('#background-content') as HTMLElement;
 
-    if (await shouldUseNativeRefresher(this.el, getIonMode(this))) {
+    if (await shouldUseNativeRefresher(this.el, getSygMode(this))) {
       this.setupNativeRefresher(contentEl);
     } else {
       this.gesture = (await import('../../utils/gesture')).createGesture({
@@ -700,7 +700,7 @@ export class Refresher implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         slot="fixed"

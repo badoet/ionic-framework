@@ -20,29 +20,29 @@
   </style>
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>  <script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>  <script>
 
     class HomePage extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Home Page</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
-          <ion-list>
-            <ion-button id="router-push">router.push</ion-button><br>
-            <ion-router-link href="/child/1">
-              <ion-button id="router-link">ion-router-link</ion-button><br>
-            </ion-router-link>
-            <ion-button href="/child/1" id="href">href</ion-button>
-          </ion-list>
-        </ion-content>`;
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Home Page</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content class="syg-padding">
+          <syg-list>
+            <syg-button id="router-push">router.push</syg-button><br>
+            <syg-router-link href="/child/1">
+              <syg-button id="router-link">syg-router-link</syg-button><br>
+            </syg-router-link>
+            <syg-button href="/child/1" id="href">href</syg-button>
+          </syg-list>
+        </syg-content>`;
 
         const childButton = this.querySelector('#router-push');
         childButton.addEventListener('click', () => {
-          const r = document.querySelector('ion-router');
+          const r = document.querySelector('syg-router');
           r.push('/child/1');
         });
       }
@@ -51,48 +51,48 @@
     class ChildPage extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-buttons>
-              <ion-back-button default-href="/test"></ion-back-button>
-            </ion-buttons>
-            <ion-title>Child Page</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-        </ion-content>`;
+        <syg-header>
+          <syg-toolbar>
+            <syg-buttons>
+              <syg-back-button default-href="/test"></syg-back-button>
+            </syg-buttons>
+            <syg-title>Child Page</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
+        </syg-content>`;
       }
     }
 
     class TestPage extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-buttons>
-              <ion-back-button></ion-back-button>
-            </ion-buttons>
-            <ion-title>Test Page</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-        </ion-content>`;
+        <syg-header>
+          <syg-toolbar>
+            <syg-buttons>
+              <syg-back-button></syg-back-button>
+            </syg-buttons>
+            <syg-title>Test Page</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
+        </syg-content>`;
       }
     }
 
     class GuardInitialPage extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-buttons>
-              <ion-back-button></ion-back-button>
-            </ion-buttons>
-            <ion-title>Guard Initial Page</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-        </ion-content>`;
+        <syg-header>
+          <syg-toolbar>
+            <syg-buttons>
+              <syg-back-button></syg-back-button>
+            </syg-buttons>
+            <syg-title>Guard Initial Page</syg-title>
+          </syg-toolbar>
+        </syg-header>
+        <syg-content>
+        </syg-content>`;
       }
     }
 
@@ -107,70 +107,70 @@
 <body>
 
   <div class="toolbar">
-    <ion-radio-group id="beforeEnter" value="allow">
-      <ion-list-header>
-        <ion-label>
+    <syg-radio-group id="beforeEnter" value="allow">
+      <syg-list-header>
+        <syg-label>
           beforeEnter Behavior
-        </ion-label>
-      </ion-list-header>
+        </syg-label>
+      </syg-list-header>
 
-      <ion-item>
-        <ion-label>Allow Navigation</ion-label>
-        <ion-radio value="allow"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Allow Navigation</syg-label>
+        <syg-radio value="allow"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Block Navigation</ion-label>
-        <ion-radio value="block"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Block Navigation</syg-label>
+        <syg-radio value="block"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Redirect</ion-label>
-        <ion-radio value="redirect"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
+      <syg-item>
+        <syg-label>Redirect</syg-label>
+        <syg-radio value="redirect"></syg-radio>
+      </syg-item>
+    </syg-radio-group>
 
     <br><br>
 
-    <ion-radio-group id="beforeLeave" value="allow">
-      <ion-list-header>
-        <ion-label>
+    <syg-radio-group id="beforeLeave" value="allow">
+      <syg-list-header>
+        <syg-label>
           beforeLeave Behavior
-        </ion-label>
-      </ion-list-header>
+        </syg-label>
+      </syg-list-header>
 
-      <ion-item>
-        <ion-label>Allow Navigation</ion-label>
-        <ion-radio value="allow"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Allow Navigation</syg-label>
+        <syg-radio value="allow"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Block Navigation</ion-label>
-        <ion-radio value="block"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Block Navigation</syg-label>
+        <syg-radio value="block"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Redirect</ion-label>
-        <ion-radio value="redirect"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
+      <syg-item>
+        <syg-label>Redirect</syg-label>
+        <syg-radio value="redirect"></syg-radio>
+      </syg-item>
+    </syg-radio-group>
   </div>
 
-  <ion-app>
+  <syg-app>
 
-    <ion-router>
-      <ion-route-redirect from="/" to="/home"></ion-route-redirect>
-      <ion-route url="/home" component="home-page"></ion-route>
-      <ion-route url="/test" component="test-page"></ion-route>
-      <ion-route url="/child/:id" component="child-page"></ion-route>
-      <ion-route url="/guard-initial-page" component="guard-initial-page"></ion-route>
-    </ion-router>
+    <syg-router>
+      <syg-route-redirect from="/" to="/home"></syg-route-redirect>
+      <syg-route url="/home" component="home-page"></syg-route>
+      <syg-route url="/test" component="test-page"></syg-route>
+      <syg-route url="/child/:id" component="child-page"></syg-route>
+      <syg-route url="/guard-initial-page" component="guard-initial-page"></syg-route>
+    </syg-router>
 
-    <ion-nav></ion-nav>
+    <syg-nav></syg-nav>
 
     <script>
-      const beforeEnterGroup = document.querySelector('ion-radio-group#beforeEnter');
-      const beforeLeaveGroup = document.querySelector('ion-radio-group#beforeLeave');
+      const beforeEnterGroup = document.querySelector('syg-radio-group#beforeEnter');
+      const beforeLeaveGroup = document.querySelector('syg-radio-group#beforeLeave');
       beforeEnterGroup.addEventListener('ionChange', (ev) => {
         switch (ev.detail.value) {
           case "redirect":
@@ -203,16 +203,16 @@
       const block = () => false;
       const allow = () => true;
 
-      const page = document.querySelector('ion-route[component="child-page"]');
+      const page = document.querySelector('syg-route[component="child-page"]');
       page.beforeEnter = allow;
       page.beforeLeave = allow;
 
 
-      const guardPage = document.querySelector('ion-route[component="guard-initial-page"]');
+      const guardPage = document.querySelector('syg-route[component="guard-initial-page"]');
       guardPage.beforeEnter = () => {
         return { redirect: '/child/1' };
-      }      
+      }
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 </html>

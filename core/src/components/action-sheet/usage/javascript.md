@@ -1,6 +1,6 @@
 ```javascript
 async function presentActionSheet() {
-  const actionSheet = document.createElement('ion-action-sheet');
+  const actionSheet = document.createElement('syg-action-sheet');
 
   actionSheet.header = 'Albums';
   actionSheet.cssClass = 'my-custom-class';

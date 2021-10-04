@@ -9,51 +9,51 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Router Link - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Router Link - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding">
+    <syg-content class="syg-padding">
       <p>
         <a href="#">A</a>
       </p>
 
       <p>
-        <ion-router-link href="#">Router Link</ion-router-link>
+        <syg-router-link href="#">Router Link</syg-router-link>
       </p>
 
       <p>
-        <ion-router-link href="https://ionicframework.com" rel="external" target="_blank" style="text-decoration: underline">External Router Link</ion-router-link>
+        <syg-router-link href="https://ionicframework.com" rel="external" target="_blank" style="text-decoration: underline">External Router Link</syg-router-link>
       </p>
 
       <p>
-        <ion-router-link href="#" download="yes" class="custom">Custom Router Link</ion-router-link>
+        <syg-router-link href="#" download="yes" class="custom">Custom Router Link</syg-router-link>
       </p>
 
       <p>
-        <ion-router-link color="dark" href="#">Dark Router Link</ion-router-link>
+        <syg-router-link color="dark" href="#">Dark Router Link</syg-router-link>
       </p>
 
       <p>
-        <ion-router-link color="danger" href="#">Danger Router Link</ion-router-link>
+        <syg-router-link color="danger" href="#">Danger Router Link</syg-router-link>
       </p>
 
       <p>
-        <ion-router-link id="toggleColor" color="tertiary" href="#">Dynamic Color</ion-router-link>
+        <syg-router-link id="toggleColor" color="tertiary" href="#">Dynamic Color</syg-router-link>
       </p>
 
-      <ion-button onclick="toggleColor()">Toggle Color</ion-button>
-    </ion-content>
+      <syg-button onclick="toggleColor()">Toggle Color</syg-button>
+    </syg-content>
 
 
-  </ion-app>
+  </syg-app>
 
   <script>
     const el = document.querySelector('#toggleColor');

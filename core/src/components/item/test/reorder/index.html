@@ -9,44 +9,44 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Item Reorder</ion-title>
-        <ion-buttons slot="primary">
-          <ion-button onclick="toggle()">Edit</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content id="content">
-      <ion-list>
-        <ion-reorder-group id="reorderGroup"></ion-reorder-group>
-      </ion-list>
+    <syg-header>
+      <syg-toolbar color="primary">
+        <syg-title>Item Reorder</syg-title>
+        <syg-buttons slot="primary">
+          <syg-button onclick="toggle()">Edit</syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content id="content">
+      <syg-list>
+        <syg-reorder-group id="reorderGroup"></syg-reorder-group>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Start
-          </ion-label>
-        </ion-list-header>
-        <ion-reorder-group id="startGroup"></ion-reorder-group>
-      </ion-list>
+          </syg-label>
+        </syg-list-header>
+        <syg-reorder-group id="startGroup"></syg-reorder-group>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             End
-          </ion-label>
-        </ion-list-header>
-        <ion-reorder-group id="endGroup"></ion-reorder-group>
-      </ion-list>
-    </ion-content>
+          </syg-label>
+        </syg-list-header>
+        <syg-reorder-group id="endGroup"></syg-reorder-group>
+      </syg-list>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <style>
     .item {
@@ -104,11 +104,11 @@
       for (var i = 0; i < items.length; i++) {
         const index = items[i];
         innerHTML += `
-          <ion-item onClick="clickedButton(${index})"
+          <syg-item onClick="clickedButton(${index})"
             style="min-height: ${index * 2 + 35}px; --background: rgb(${255 - index * 4}, ${255 - index * 4}, ${255 - index * 4})">
             ${index}
-            <ion-reorder slot="end"></ion-reorder>
-          </ion-item>`;
+            <syg-reorder slot="end"></syg-reorder>
+          </syg-item>`;
       }
       groupEl.innerHTML = innerHTML;
     }
@@ -116,21 +116,21 @@
       let innerHTML = '';
       for (var i = 0; i < items.length; i++) {
         innerHTML += `
-          <ion-item-sliding>
-            <ion-item onclick="clickedButton(${i})">
-              <ion-reorder slot="${group.side}"></ion-reorder>
-              <ion-label>
+          <syg-item-sliding>
+            <syg-item onclick="clickedButton(${i})">
+              <syg-reorder slot="${group.side}"></syg-reorder>
+              <syg-label>
                 <h2>Sliding item ${i}</h2>
-              </ion-label>
+              </syg-label>
               <div slot="end">right</div>
-            </ion-item>
-            <ion-item-options side="end">
-              <ion-item-option color="danger">
+            </syg-item>
+            <syg-item-options side="end">
+              <syg-item-option color="danger">
                 <ion-icon name="trash" slot="start"></ion-icon>
                 Remove
-              </ion-item-option>
-            </ion-item-options>
-          </ion-item-sliding>`;
+              </syg-item-option>
+            </syg-item-options>
+          </syg-item-sliding>`;
       }
       groupEl.innerHTML = innerHTML;
     }

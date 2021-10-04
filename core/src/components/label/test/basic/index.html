@@ -9,93 +9,93 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Label - Basic</ion-title>
-        <ion-buttons slot="end">
-          <ion-button onClick="changeColors()">
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Label - Basic</syg-title>
+        <syg-buttons slot="end">
+          <syg-button onClick="changeColors()">
             Color Change
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+          </syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
-      <div class="ion-padding">
-        <ion-label>Default</ion-label>
+    <syg-content>
+      <div class="syg-padding">
+        <syg-label>Default</syg-label>
 
-        <ion-label color="secondary">Secondary</ion-label>
+        <syg-label color="secondary">Secondary</syg-label>
 
-        <ion-label color="tertiary">Tertiary</ion-label>
+        <syg-label color="tertiary">Tertiary</syg-label>
 
-        <ion-label color="danger">Danger</ion-label>
+        <syg-label color="danger">Danger</syg-label>
 
-        <ion-label class="custom">Custom</ion-label>
+        <syg-label class="custom">Custom</syg-label>
       </div>
 
-      <ion-list>
-        <ion-item>
-          <ion-label>Default</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label color="tertiary">Tertiary</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label class="custom">Custom</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label class="ion-text-wrap">Wrap label this label just goes on and on and on</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="fixed">Fixed</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Floating</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item class="floating-color">
-          <ion-label position="floating" color="success">Floating: Success</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Stacked</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item class="stacked-color">
-          <ion-label position="stacked" color="danger">Stacked: Danger</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-item>
+          <syg-label>Default</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label color="tertiary">Tertiary</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label class="custom">Custom</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label class="syg-text-wrap">Wrap label this label just goes on and on and on</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label position="fixed">Fixed</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label position="floating">Floating</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item class="floating-color">
+          <syg-label position="floating" color="success">Floating: Success</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item>
+          <syg-label position="stacked">Stacked</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item class="stacked-color">
+          <syg-label position="stacked" color="danger">Stacked: Danger</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-item color="tertiary">
-          <ion-label position="floating">(Item: Tertiary) Floating</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item color="primary">
-          <ion-label position="stacked">(Item: Primary) Stacked</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item class="floating-color" color="tertiary">
-          <ion-label position="floating" color="success">(Item: Tertiary) Floating: Success</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-        <ion-item class="stacked-color" color="primary">
-          <ion-label position="stacked" color="danger">(Item: Primary) Stacked: Danger</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-      </ion-list>
-    </ion-content>
+      <syg-list>
+        <syg-item color="tertiary">
+          <syg-label position="floating">(Item: Tertiary) Floating</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item color="primary">
+          <syg-label position="stacked">(Item: Primary) Stacked</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item class="floating-color" color="tertiary">
+          <syg-label position="floating" color="success">(Item: Tertiary) Floating: Success</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+        <syg-item class="stacked-color" color="primary">
+          <syg-label position="stacked" color="danger">(Item: Primary) Stacked: Danger</syg-label>
+          <syg-input></syg-input>
+        </syg-item>
+      </syg-list>
+    </syg-content>
 
     <style>
       .custom {
@@ -104,7 +104,7 @@
     </style>
 
     <script>
-      const labels = document.querySelectorAll('.floating-color ion-label, .stacked-color ion-label');
+      const labels = document.querySelectorAll('.floating-color syg-label, .stacked-color syg-label');
 
       function changeColors() {
         for (label of labels) {
@@ -113,7 +113,7 @@
         }
       }
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

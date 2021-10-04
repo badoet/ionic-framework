@@ -10,25 +10,25 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
 </head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Select - a11y</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Select - a11y</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="outer-content">
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+    <syg-content class="outer-content">
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Native Select
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
         <div class="native-select-wrapper">
           <label for="pet-select">Favorite Pet</label>
@@ -42,120 +42,120 @@
             <option value="goldfish">Goldfish</option>
           </select>
         </div>
-      </ion-list>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Custom Label Ionic Select
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-item>
-          <ion-label>Favorite Pet</ion-label>
+        <syg-item>
+          <syg-label>Favorite Pet</syg-label>
 
-          <ion-select>
-            <ion-select-option value="dog">Dog</ion-select-option>
-            <ion-select-option value="cat">Cat</ion-select-option>
-            <ion-select-option value="hamster">Hamster</ion-select-option>
-            <ion-select-option value="parrot">Parrot</ion-select-option>
-            <ion-select-option value="spider">Spider</ion-select-option>
-            <ion-select-option value="goldfish">Goldfish</ion-select-option>
-          </ion-select>
-        </ion-item>
+          <syg-select>
+            <syg-select-option value="dog">Dog</syg-select-option>
+            <syg-select-option value="cat">Cat</syg-select-option>
+            <syg-select-option value="hamster">Hamster</syg-select-option>
+            <syg-select-option value="parrot">Parrot</syg-select-option>
+            <syg-select-option value="spider">Spider</syg-select-option>
+            <syg-select-option value="goldfish">Goldfish</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Favorite Pet</ion-label>
+        <syg-item>
+          <syg-label>Favorite Pet</syg-label>
 
-          <ion-select placeholder="Select a Pet">
-            <ion-select-option value="dog">Dog</ion-select-option>
-            <ion-select-option value="cat">Cat</ion-select-option>
-            <ion-select-option value="hamster">Hamster</ion-select-option>
-            <ion-select-option value="parrot">Parrot</ion-select-option>
-            <ion-select-option value="spider">Spider</ion-select-option>
-            <ion-select-option value="goldfish">Goldfish</ion-select-option>
-          </ion-select>
-        </ion-item>
+          <syg-select placeholder="Select a Pet">
+            <syg-select-option value="dog">Dog</syg-select-option>
+            <syg-select-option value="cat">Cat</syg-select-option>
+            <syg-select-option value="hamster">Hamster</syg-select-option>
+            <syg-select-option value="parrot">Parrot</syg-select-option>
+            <syg-select-option value="spider">Spider</syg-select-option>
+            <syg-select-option value="goldfish">Goldfish</syg-select-option>
+          </syg-select>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Favorite Pet</ion-label>
+        <syg-item>
+          <syg-label>Favorite Pet</syg-label>
 
-          <ion-select value="spider">
-            <ion-select-option value="dog">Dog</ion-select-option>
-            <ion-select-option value="cat">Cat</ion-select-option>
-            <ion-select-option value="hamster">Hamster</ion-select-option>
-            <ion-select-option value="parrot">Parrot</ion-select-option>
-            <ion-select-option value="spider">Spider</ion-select-option>
-            <ion-select-option value="goldfish">Goldfish</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+          <syg-select value="spider">
+            <syg-select-option value="dog">Dog</syg-select-option>
+            <syg-select-option value="cat">Cat</syg-select-option>
+            <syg-select-option value="hamster">Hamster</syg-select-option>
+            <syg-select-option value="parrot">Parrot</syg-select-option>
+            <syg-select-option value="spider">Spider</syg-select-option>
+            <syg-select-option value="goldfish">Goldfish</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Alert Ionic Select
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-item>
+        <syg-item>
           <label for="ionic-select">Favorite Pet</label>
 
-          <ion-select id="ionic-select">
-            <ion-select-option value="dog">Dog</ion-select-option>
-            <ion-select-option value="cat">Cat</ion-select-option>
-            <ion-select-option value="hamster">Hamster</ion-select-option>
-            <ion-select-option value="parrot">Parrot</ion-select-option>
-            <ion-select-option value="spider">Spider</ion-select-option>
-            <ion-select-option value="goldfish">Goldfish</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+          <syg-select id="ionic-select">
+            <syg-select-option value="dog">Dog</syg-select-option>
+            <syg-select-option value="cat">Cat</syg-select-option>
+            <syg-select-option value="hamster">Hamster</syg-select-option>
+            <syg-select-option value="parrot">Parrot</syg-select-option>
+            <syg-select-option value="spider">Spider</syg-select-option>
+            <syg-select-option value="goldfish">Goldfish</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Popover Ionic Select
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-item>
-          <ion-label>Favorite Pet</ion-label>
+        <syg-item>
+          <syg-label>Favorite Pet</syg-label>
 
-          <ion-select interface="popover">
-            <ion-select-option value="dog">Dog</ion-select-option>
-            <ion-select-option value="cat">Cat</ion-select-option>
-            <ion-select-option value="hamster">Hamster</ion-select-option>
-            <ion-select-option value="parrot">Parrot</ion-select-option>
-            <ion-select-option value="spider">Spider</ion-select-option>
-            <ion-select-option value="goldfish">Goldfish</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+          <syg-select interface="popover">
+            <syg-select-option value="dog">Dog</syg-select-option>
+            <syg-select-option value="cat">Cat</syg-select-option>
+            <syg-select-option value="hamster">Hamster</syg-select-option>
+            <syg-select-option value="parrot">Parrot</syg-select-option>
+            <syg-select-option value="spider">Spider</syg-select-option>
+            <syg-select-option value="goldfish">Goldfish</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Action Sheet Ionic Select
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
 
-        <ion-item>
-          <ion-label>Favorite Pet</ion-label>
+        <syg-item>
+          <syg-label>Favorite Pet</syg-label>
 
-          <ion-select interface="action-sheet">
-            <ion-select-option value="dog">Dog</ion-select-option>
-            <ion-select-option value="cat">Cat</ion-select-option>
-            <ion-select-option value="hamster">Hamster</ion-select-option>
-            <ion-select-option value="parrot">Parrot</ion-select-option>
-            <ion-select-option value="spider">Spider</ion-select-option>
-            <ion-select-option value="goldfish">Goldfish</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+          <syg-select interface="action-sheet">
+            <syg-select-option value="dog">Dog</syg-select-option>
+            <syg-select-option value="cat">Cat</syg-select-option>
+            <syg-select-option value="hamster">Hamster</syg-select-option>
+            <syg-select-option value="parrot">Parrot</syg-select-option>
+            <syg-select-option value="spider">Spider</syg-select-option>
+            <syg-select-option value="goldfish">Goldfish</syg-select-option>
+          </syg-select>
+        </syg-item>
+      </syg-list>
 
 
-    </ion-content>
+    </syg-content>
 
     <style>
       .native-select-wrapper {
@@ -172,7 +172,7 @@
     <script>
 
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

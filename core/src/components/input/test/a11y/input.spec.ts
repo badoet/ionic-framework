@@ -4,27 +4,27 @@ import { Item } from '../../../item/item';
 import { Label } from '../../../label/label';
 
 describe('Input a11y', () => {
-  it('does not set a default aria-labelledby when there is not a neighboring ion-label', async () => {
+  it('does not set a default aria-labelledby when there is not a neighboring syg-label', async () => {
     const page = await newSpecPage({
       components: [Input, Item, Label],
-      html: `<ion-input></ion-input>`
+      html: `<syg-input></syg-input>`
     })
  
-    const ariaLabelledBy = page.body.querySelector('ion-input > input').getAttribute('aria-labelledby');
+    const ariaLabelledBy = page.body.querySelector('syg-input > input').getAttribute('aria-labelledby');
     expect(ariaLabelledBy).toBe(null);
   });
 
-  it('set a default aria-labelledby when a neighboring ion-label exists', async () => {
+  it('set a default aria-labelledby when a neighboring syg-label exists', async () => {
     const page = await newSpecPage({
       components: [Input, Item, Label],
-      html: `<ion-item>
-        <ion-label>A11y Test</ion-label>
-        <ion-input></ion-input>
-      </ion-item>`
+      html: `<syg-item>
+        <syg-label>A11y Test</syg-label>
+        <syg-input></syg-input>
+      </syg-item>`
     })
 
-    const label = page.body.querySelector('ion-label'); 
-    const ariaLabelledBy = page.body.querySelector('ion-input > input').getAttribute('aria-labelledby');
+    const label = page.body.querySelector('syg-label'); 
+    const ariaLabelledBy = page.body.querySelector('syg-input > input').getAttribute('aria-labelledby');
     expect(ariaLabelledBy).toBe(label.id);
   });
 });

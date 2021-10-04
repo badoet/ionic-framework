@@ -14,7 +14,7 @@ test('action-sheet: data', async () => {
   await page.click('#buttonData');
   await page.waitForSelector('#buttonData');
 
-  const actionSheet = await page.find('ion-action-sheet');
+  const actionSheet = await page.find('syg-action-sheet');
   await actionSheet.waitForVisible();
 
   const button = await actionSheet.find('button#option');
@@ -30,7 +30,7 @@ test('action-sheet: data cancel', async () => {
   await page.click('#buttonData');
   await page.waitForSelector('#buttonData');
 
-  const actionSheet = await page.find('ion-action-sheet');
+  const actionSheet = await page.find('syg-action-sheet');
   await actionSheet.waitForVisible();
 
   const button = await actionSheet.find('button.action-sheet-cancel');
@@ -45,7 +45,7 @@ test('action-sheet: focus trap', async () => {
   await page.click('#basic');
   await page.waitForSelector('#basic');
 
-  let actionSheet = await page.find('ion-action-sheet');
+  let actionSheet = await page.find('syg-action-sheet');
 
   expect(actionSheet).not.toBe(null);
   await actionSheet.waitForVisible();
@@ -152,12 +152,12 @@ test('action-sheet: htmlAttributes', async () => {
   await page.click('#basic');
   await page.waitForSelector('#basic');
 
-  let toast = await page.find('ion-action-sheet');
+  let toast = await page.find('syg-action-sheet');
 
   expect(toast).not.toBe(null);
   await toast.waitForVisible();
 
-  const attribute = await page.evaluate((el) => document.querySelector('ion-action-sheet').getAttribute('data-testid'));
+  const attribute = await page.evaluate((el) => document.querySelector('syg-action-sheet').getAttribute('data-testid'));
 
   expect(attribute).toEqual('basic-action-sheet');
 });

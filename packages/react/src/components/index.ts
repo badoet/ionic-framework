@@ -75,7 +75,7 @@ export {
 
   ItemSlidingCustomEvent,
 
-  IonicSafeString,
+  SygSafeString,
 
   LoadingOptions,
 
@@ -195,6 +195,6 @@ addIcons({
  * TODO: Remove when all integrations have been
  * migrated to CE build.
  */
-document.documentElement.classList.add('ion-ce');
+document.documentElement.classList.add('syg-ce');
 
 initialize();

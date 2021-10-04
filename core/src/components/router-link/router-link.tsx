@@ -1,11 +1,11 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, Color, RouterDirection } from '../../interface';
 import { createColorClasses, openURL } from '../../utils/theme';
 
 @Component({
-  tag: 'ion-router-link',
+  tag: 'syg-router-link',
   styleUrl: 'router-link.scss',
   shadow: true
 })
@@ -54,7 +54,7 @@ export class RouterLink implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const attrs = {
       href: this.href,
       rel: this.rel,
@@ -65,7 +65,7 @@ export class RouterLink implements ComponentInterface {
         onClick={this.onClick}
         class={createColorClasses(this.color, {
           [mode]: true,
-          'ion-activatable': true
+          'syg-activatable': true
         })}
       >
         <a {...attrs}>

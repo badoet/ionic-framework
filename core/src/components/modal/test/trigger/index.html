@@ -7,7 +7,7 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
     <style>
       .grid {
         display: grid;
@@ -32,29 +32,29 @@
     </style>
   </head>
   <body>
-    <ion-app>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Modal - Triggers</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <syg-app>
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Modal - Triggers</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content class="ion-padding">
+      <syg-content class="syg-padding">
         <div class="grid">
           <div class="grid-item">
             <h2>Click</h2>
-            <ion-button id="left-click-trigger">Trigger</ion-button>
-            <ion-modal
+            <syg-button id="left-click-trigger">Trigger</syg-button>
+            <syg-modal
               class="left-click-modal"
               trigger="left-click-trigger"
             >
-              <ion-content class="ion-padding">
+              <syg-content class="syg-padding">
                 Modal Content
-              </ion-content>
-            </ion-modal>
+              </syg-content>
+            </syg-modal>
           </div>
         </div>
-      </ion-content>
-    </ion-app>
+      </syg-content>
+    </syg-app>
   </body>
 </html>

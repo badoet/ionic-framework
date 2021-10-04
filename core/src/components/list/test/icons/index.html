@@ -10,106 +10,106 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
 </head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Trip</ion-title>
-        <ion-buttons slot="end">
-          <ion-button>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Trip</syg-title>
+        <syg-buttons slot="end">
+          <syg-button>
             <ion-icon slot="icon-only" name="search-outline"></ion-icon>
-          </ion-button>
-          <ion-button>
+          </syg-button>
+          <syg-button>
             <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-list-header lines="full">
-          <ion-label>
+          </syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
+      <syg-list>
+        <syg-list-header lines="full">
+          <syg-label>
             Categories
-          </ion-label>
-        </ion-list-header>
-        <ion-item button>
+          </syg-label>
+        </syg-list-header>
+        <syg-item button>
           <ion-icon name="film-outline" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             Attractions
-          </ion-label>
-        </ion-item>
-        <ion-item button>
+          </syg-label>
+        </syg-item>
+        <syg-item button>
           <ion-icon name="restaurant-outline" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             Dining
-          </ion-label>
-        </ion-item>
-        <ion-item button>
+          </syg-label>
+        </syg-item>
+        <syg-item button>
           <ion-icon name="create-outline" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             Education
-          </ion-label>
-        </ion-item>
-        <ion-item button lines="full">
+          </syg-label>
+        </syg-item>
+        <syg-item button lines="full">
           <ion-icon name="airplane-outline" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             Travel
-          </ion-label>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header lines="full">
-          <ion-label>
+      <syg-list>
+        <syg-list-header lines="full">
+          <syg-label>
             Information
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
           <ion-icon name="people-outline" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             Attendees
-          </ion-label>
-          <ion-select slot="end" value="1">
-            <ion-select-option value="1">1</ion-select-option>
-            <ion-select-option value="2">2</ion-select-option>
-            <ion-select-option value="3">3</ion-select-option>
-          </ion-select>
-        </ion-item>
-        <ion-item lines="full">
+          </syg-label>
+          <syg-select slot="end" value="1">
+            <syg-select-option value="1">1</syg-select-option>
+            <syg-select-option value="2">2</syg-select-option>
+            <syg-select-option value="3">3</syg-select-option>
+          </syg-select>
+        </syg-item>
+        <syg-item lines="full">
           <ion-icon name="repeat-outline" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             Round-trip
-          </ion-label>
-          <ion-toggle checked></ion-toggle>
-        </ion-item>
-      </ion-list>
+          </syg-label>
+          <syg-toggle checked></syg-toggle>
+        </syg-item>
+      </syg-list>
 
-      <ion-list>
-        <ion-list-header lines="full">
-          <ion-label>
+      <syg-list>
+        <syg-list-header lines="full">
+          <syg-label>
             Contact
-          </ion-label>
-        </ion-list-header>
-        <ion-item>
+          </syg-label>
+        </syg-list-header>
+        <syg-item>
           <ion-icon name="person-outline" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             Name
-          </ion-label>
-          <ion-input placeholder="xxxxx"></ion-input>
-        </ion-item>
-        <ion-item lines="full">
+          </syg-label>
+          <syg-input placeholder="xxxxx"></syg-input>
+        </syg-item>
+        <syg-item lines="full">
           <ion-icon name="call-outline" slot="start"></ion-icon>
-          <ion-label>
+          <syg-label>
             Phone Number
-          </ion-label>
-          <ion-input placeholder="(xxx) xxx-xxxx" type="number"></ion-input>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-app>
+          </syg-label>
+          <syg-input placeholder="(xxx) xxx-xxxx" type="number"></syg-input>
+        </syg-item>
+      </syg-list>
+    </syg-content>
+  </syg-app>
 </body>
 
 </html>

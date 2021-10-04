@@ -10,29 +10,29 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
 </head>
 
 <body>
-  <ion-app>
-    <ion-content id="content">
-      <ion-slides pager>
-        <ion-slide style="background: #24a5a3; color: white;">
+  <syg-app>
+    <syg-content id="content">
+      <syg-slides pager>
+        <syg-slide style="background: #24a5a3; color: white;">
           <h1>Slide 1</h1>
-        </ion-slide>
-        <ion-slide style="background: #a52466; color: white;">
+        </syg-slide>
+        <syg-slide style="background: #a52466; color: white;">
           <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide style="background: #24a562; color: white;">
+        </syg-slide>
+        <syg-slide style="background: #24a562; color: white;">
           <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
-    </ion-content>
+        </syg-slide>
+      </syg-slides>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
-    const slides = document.querySelector('ion-slides');
+    const slides = document.querySelector('syg-slides');
 
     slides.options = {
       direction: 'vertical'
@@ -41,7 +41,7 @@
 
   <style>
     /* Important is required due to slides being scoped */
-    ion-slides {
+    syg-slides {
       --bullet-background-active: white !important;
     }
   </style>

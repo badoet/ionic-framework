@@ -1,4 +1,4 @@
-# ion-accordion-group
+# syg-accordion-group
 
 Accordion group is a container for accordion instances. It manages the state of the accordions and provides keyboard navigation.
 

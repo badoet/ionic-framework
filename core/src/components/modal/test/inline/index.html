@@ -7,39 +7,39 @@
     <link href="../../../../../css/ionic.bundle.css" rel="stylesheet">
     <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
     <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+    <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
   </head>
   <body>
-    <ion-app>
-      <div class="ion-page">
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Modal - Inline</ion-title>
-          </ion-toolbar>
-        </ion-header>
+    <syg-app>
+      <div class="syg-page">
+        <syg-header>
+          <syg-toolbar>
+            <syg-title>Modal - Inline</syg-title>
+          </syg-toolbar>
+        </syg-header>
 
-        <ion-content class="ion-padding">
-          <ion-button onclick="openModal(event)">Open Modal</ion-button>
+        <syg-content class="syg-padding">
+          <syg-button onclick="openModal(event)">Open Modal</syg-button>
 
-          <ion-modal swipe-to-close="true">
-            <ion-header>
-              <ion-toolbar>
-                <ion-title>
+          <syg-modal swipe-to-close="true">
+            <syg-header>
+              <syg-toolbar>
+                <syg-title>
                   Modal
-                </ion-title>
-              </ion-toolbar>
-            </ion-header>
-            <ion-content class="ion-padding">
+                </syg-title>
+              </syg-toolbar>
+            </syg-header>
+            <syg-content class="syg-padding">
               This is my inline modal content!
-            </ion-content>
-          </ion-modal>
-        </ion-content>
+            </syg-content>
+          </syg-modal>
+        </syg-content>
       </div>
-    </ion-app>
+    </syg-app>
 
     <script>
-      const modal = document.querySelector('ion-modal');
-      modal.presentingElement = document.querySelector('.ion-page');
+      const modal = document.querySelector('syg-modal');
+      modal.presentingElement = document.querySelector('.syg-page');
 
       const openModal = () => {
         modal.isOpen = true;

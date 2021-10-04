@@ -1,6 +1,6 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
-import { vueOutputTarget } from '@stencil/vue-output-target';
+// import { vueOutputTarget } from '@stencil/vue-output-target';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
 // @ts-ignore
@@ -8,53 +8,53 @@ import { apiSpecGenerator } from './scripts/api-spec-generator';
 
 export const config: Config = {
   autoprefixCss: true,
-  namespace: 'Ionic',
+  namespace: 'Syg',
   bundles: [
-    { components: ['ion-action-sheet'] },
-    { components: ['ion-alert'] },
-    { components: ['ion-back-button'] },
-    { components: ['ion-app', 'ion-router-outlet', 'ion-buttons', 'ion-content', 'ion-footer', 'ion-header', 'ion-title', 'ion-toolbar'] },
-    { components: ['ion-avatar', 'ion-badge', 'ion-thumbnail'] },
-    { components: ['ion-backdrop'] },
-    { components: ['ion-button', 'ion-icon'] },
-    { components: ['ion-card', 'ion-card-content', 'ion-card-header', 'ion-card-title', 'ion-card-subtitle'] },
-    { components: ['ion-checkbox'] },
-    { components: ['ion-chip'] },
-    { components: ['ion-datetime', 'ion-picker', 'ion-picker-column'] },
-    { components: ['ion-fab', 'ion-fab-button', 'ion-fab-list'] },
-    { components: ['ion-grid', 'ion-row', 'ion-col'] },
-    { components: ['ion-infinite-scroll', 'ion-infinite-scroll-content'] },
-    { components: ['ion-input'] },
-    { components: ['ion-textarea'] },
-    { components: ['ion-item', 'ion-item-divider', 'ion-item-group', 'ion-label', 'ion-list', 'ion-list-header', 'ion-skeleton-text', 'ion-note'] },
-    { components: ['ion-item-sliding', 'ion-item-options', 'ion-item-option'] },
-    { components: ['ion-loading'] },
-    { components: ['ion-menu', 'ion-menu-toggle', 'ion-menu-button'] },
-    { components: ['ion-modal'] },
-    { components: ['ion-nav', 'ion-nav-link'] },
-    { components: ['ion-img'] },
-    { components: ['ion-popover'] },
-    { components: ['ion-progress-bar'] },
-    { components: ['ion-radio', 'ion-radio-group'] },
-    { components: ['ion-range'] },
-    { components: ['ion-refresher', 'ion-refresher-content'] },
-    { components: ['ion-reorder', 'ion-reorder-group'] },
-    { components: ['ion-ripple-effect'] },
-    { components: ['ion-router', 'ion-route', 'ion-route-redirect', 'ion-router-link'] },
-    { components: ['ion-searchbar'] },
-    { components: ['ion-segment', 'ion-segment-button'] },
-    { components: ['ion-select', 'ion-select-option', 'ion-select-popover'] },
-    { components: ['ion-slides', 'ion-slide'] },
-    { components: ['ion-spinner'] },
-    { components: ['ion-split-pane'] },
-    { components: ['ion-tabs', 'ion-tab'] },
-    { components: ['ion-tab-bar', 'ion-tab-button'] },
-    { components: ['ion-text'] },
-    { components: ['ion-toast'] },
-    { components: ['ion-toggle'] },
-    { components: ['ion-virtual-scroll'] },
-    { components: ['ion-accordion-group', 'ion-accordion'] },
-    { components: ['ion-breadcrumb', 'ion-breadcrumbs'] },
+    { components: ['syg-action-sheet'] },
+    { components: ['syg-alert'] },
+    { components: ['syg-back-button'] },
+    { components: ['syg-app', 'syg-router-outlet', 'syg-buttons', 'syg-content', 'syg-footer', 'syg-header', 'syg-title', 'syg-toolbar'] },
+    { components: ['syg-avatar', 'syg-badge', 'syg-thumbnail'] },
+    { components: ['syg-backdrop'] },
+    { components: ['syg-button', 'ion-icon'] },
+    { components: ['syg-card', 'syg-card-content', 'syg-card-header', 'syg-card-title', 'syg-card-subtitle'] },
+    { components: ['syg-checkbox'] },
+    { components: ['syg-chip'] },
+    { components: ['syg-datetime', 'syg-picker', 'syg-picker-column'] },
+    { components: ['syg-fab', 'syg-fab-button', 'syg-fab-list'] },
+    { components: ['syg-grid', 'syg-row', 'syg-col'] },
+    { components: ['syg-infinite-scroll', 'syg-infinite-scroll-content'] },
+    { components: ['syg-input'] },
+    { components: ['syg-textarea'] },
+    { components: ['syg-item', 'syg-item-divider', 'syg-item-group', 'syg-label', 'syg-list', 'syg-list-header', 'syg-skeleton-text', 'syg-note'] },
+    { components: ['syg-item-sliding', 'syg-item-options', 'syg-item-option'] },
+    { components: ['syg-loading'] },
+    { components: ['syg-menu', 'syg-menu-toggle', 'syg-menu-button'] },
+    { components: ['syg-modal'] },
+    { components: ['syg-nav', 'syg-nav-link'] },
+    { components: ['syg-img'] },
+    { components: ['syg-popover'] },
+    { components: ['syg-progress-bar'] },
+    { components: ['syg-radio', 'syg-radio-group'] },
+    { components: ['syg-range'] },
+    { components: ['syg-refresher', 'syg-refresher-content'] },
+    { components: ['syg-reorder', 'syg-reorder-group'] },
+    { components: ['syg-ripple-effect'] },
+    { components: ['syg-router', 'syg-route', 'syg-route-redirect', 'syg-router-link'] },
+    { components: ['syg-searchbar'] },
+    { components: ['syg-segment', 'syg-segment-button'] },
+    { components: ['syg-select', 'syg-select-option', 'syg-select-popover'] },
+    { components: ['syg-slides', 'syg-slide'] },
+    { components: ['syg-spinner'] },
+    { components: ['syg-split-pane'] },
+    { components: ['syg-tabs', 'syg-tab'] },
+    { components: ['syg-tab-bar', 'syg-tab-button'] },
+    { components: ['syg-text'] },
+    { components: ['syg-toast'] },
+    { components: ['syg-toggle'] },
+    { components: ['syg-virtual-scroll'] },
+    { components: ['syg-accordion-group', 'syg-accordion'] },
+    { components: ['syg-breadcrumb', 'syg-breadcrumbs'] },
   ],
   plugins: [
     sass({
@@ -63,86 +63,86 @@ export const config: Config = {
   ],
   outputTargets: [
     reactOutputTarget({
-      componentCorePackage: '@ionic/core',
+      componentCorePackage: '@sygnature/core',
       includeImportCustomElements: true,
       includePolyfills: false,
       includeDefineCustomElements: false,
       proxiesFile: '../packages/react/src/components/proxies.ts',
       excludeComponents: [
         // Routing
-        'ion-router',
-        'ion-route',
-        'ion-route-redirect',
-        'ion-router-link',
-        'ion-router-outlet',
-        'ion-back-button',
-        'ion-tab-button',
-        'ion-tabs',
-        'ion-tab-bar',
-        'ion-button',
-        'ion-card',
-        'ion-fab-button',
-        'ion-item',
-        'ion-item-option',
+        'syg-router',
+        'syg-route',
+        'syg-route-redirect',
+        'syg-router-link',
+        'syg-router-outlet',
+        'syg-back-button',
+        'syg-tab-button',
+        'syg-tabs',
+        'syg-tab-bar',
+        'syg-button',
+        'syg-card',
+        'syg-fab-button',
+        'syg-item',
+        'syg-item-option',
 
         // Overlays
-        'ion-action-sheet',
-        'ion-alert',
-        'ion-loading',
-        'ion-modal',
-        'ion-picker',
-        'ion-popover',
-        'ion-toast',
+        'syg-action-sheet',
+        'syg-alert',
+        'syg-loading',
+        'syg-modal',
+        'syg-picker',
+        'syg-popover',
+        'syg-toast',
 
         'ion-icon'
       ]
     }),
-    vueOutputTarget({
-      componentCorePackage: '@ionic/core',
-      includeImportCustomElements: true,
-      includePolyfills: false,
-      includeDefineCustomElements: false,
-      proxiesFile: '../packages/vue/src/proxies.ts',
-      excludeComponents: [
-        // Routing
-        'ion-router',
-        'ion-route',
-        'ion-route-redirect',
-        'ion-router-link',
-        'ion-router-outlet',
-        'ion-back-button',
-        'ion-tab-button',
-        'ion-tabs',
-        'ion-tab',
-        'ion-tab-bar',
+    // vueOutputTarget({
+    //   componentCorePackage: '@ionic/core',
+    //   includeImportCustomElements: true,
+    //   includePolyfills: false,
+    //   includeDefineCustomElements: false,
+    //   proxiesFile: '../packages/vue/src/proxies.ts',
+    //   excludeComponents: [
+    //     // Routing
+    //     'syg-router',
+    //     'syg-route',
+    //     'syg-route-redirect',
+    //     'syg-router-link',
+    //     'syg-router-outlet',
+    //     'syg-back-button',
+    //     'syg-tab-button',
+    //     'syg-tabs',
+    //     'syg-tab',
+    //     'syg-tab-bar',
 
-        // Overlays
-        'ion-action-sheet',
-        'ion-alert',
-        'ion-loading',
-        'ion-modal',
-        'ion-picker',
-        'ion-popover',
-        'ion-toast',
+    //     // Overlays
+    //     'syg-action-sheet',
+    //     'syg-alert',
+    //     'syg-loading',
+    //     'syg-modal',
+    //     'syg-picker',
+    //     'syg-popover',
+    //     'syg-toast',
 
-        'ion-app',
-        'ion-icon'
-      ],
-      componentModels: [
-        {
-          elements: ['ion-checkbox', 'ion-toggle'],
-          targetAttr: 'checked',
-          event: 'v-ion-change',
-          externalEvent: 'ionChange'
-        },
-        {
-          elements: ['ion-datetime', 'ion-input', 'ion-radio-group', 'ion-radio', 'ion-range', 'ion-searchbar', 'ion-segment', 'ion-segment-button', 'ion-select', 'ion-textarea'],
-          targetAttr: 'value',
-          event: 'v-ion-change',
-          externalEvent: 'ionChange'
-        }
-      ],
-    }),
+    //     'syg-app',
+    //     'ion-icon'
+    //   ],
+    //   componentModels: [
+    //     {
+    //       elements: ['syg-checkbox', 'syg-toggle'],
+    //       targetAttr: 'checked',
+    //       event: 'v-syg-change',
+    //       externalEvent: 'ionChange'
+    //     },
+    //     {
+    //       elements: ['syg-datetime', 'syg-input', 'syg-radio-group', 'syg-radio', 'syg-range', 'syg-searchbar', 'syg-segment', 'syg-segment-button', 'syg-select', 'syg-textarea'],
+    //       targetAttr: 'value',
+    //       event: 'v-syg-change',
+    //       externalEvent: 'ionChange'
+    //     }
+    //   ],
+    // }),
     {
       type: 'docs-vscode',
       file: 'dist/html.html-data.json',
@@ -180,39 +180,39 @@ export const config: Config = {
     //   type: 'stats',
     //   file: 'stats.json'
     // },
-    {
-      type: 'angular',
-      componentCorePackage: '@ionic/core',
-      directivesProxyFile: '../angular/src/directives/proxies.ts',
-      directivesUtilsFile: '../angular/src/directives/proxies-utils.ts',
-      directivesArrayFile: '../angular/src/directives/proxies-list.txt',
-      excludeComponents: [
-        // overlays
-        'ion-action-sheet',
-        'ion-alert',
-        'ion-loading',
-        'ion-modal',
-        'ion-picker',
-        'ion-popover',
-        'ion-toast',
-        'ion-toast',
+  //   {
+  //     type: 'angular',
+  //     componentCorePackage: '@ionic/core',
+  //     directivesProxyFile: '../angular/src/directives/proxies.ts',
+  //     directivesUtilsFile: '../angular/src/directives/proxies-utils.ts',
+  //     directivesArrayFile: '../angular/src/directives/proxies-list.txt',
+  //     excludeComponents: [
+  //       // overlays
+  //       'syg-action-sheet',
+  //       'syg-alert',
+  //       'syg-loading',
+  //       'syg-modal',
+  //       'syg-picker',
+  //       'syg-popover',
+  //       'syg-toast',
+  //       'syg-toast',
 
-        // navigation
-        'ion-router',
-        'ion-route',
-        'ion-route-redirect',
-        'ion-router-link',
-        'ion-router-outlet',
+  //       // navigation
+  //       'syg-router',
+  //       'syg-route',
+  //       'syg-route-redirect',
+  //       'syg-router-link',
+  //       'syg-router-outlet',
 
-        // tabs
-        'ion-tabs',
-        'ion-tab',
+  //       // tabs
+  //       'syg-tabs',
+  //       'syg-tab',
 
-        // auxiliar
-        'ion-picker-column',
-        'ion-virtual-scroll'
-      ]
-    }
+  //       // auxiliar
+  //       'syg-picker-column',
+  //       'syg-virtual-scroll'
+  //     ]
+  //   }
   ],
   buildEs5: 'prod',
   extras: {
@@ -249,7 +249,7 @@ export const config: Config = {
       }
     ]
   },
-  preamble: '(C) Ionic http://ionicframework.com - MIT License',
-  globalScript: 'src/global/ionic-global.ts',
+  preamble: '(C) Sygnature - MIT License',
+  globalScript: 'src/global/syg-global.ts',
   enableCache: true,
 };

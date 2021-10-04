@@ -1,6 +1,6 @@
-# ion-reorder-group
+# syg-reorder-group
 
-The reorder group is a wrapper component for items using the `ion-reorder` component. See the [Reorder documentation](../reorder/) for further information about the anchor component that is used to drag items within the `ion-reorder-group`.
+The reorder group is a wrapper component for items using the `syg-reorder` component. See the [Reorder documentation](../reorder/) for further information about the anchor component that is used to drag items within the `syg-reorder-group`.
 
 Once the user drags an item and drops it in a new position, the `ionItemReorder` event is dispatched. A handler for it should be implemented that calls the `complete()` method.
 
@@ -38,73 +38,73 @@ interface ItemReorderCustomEvent extends CustomEvent {
 
 ```html
 <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
-<ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
+<syg-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
   <!-- Default reorder icon, end aligned items -->
-  <ion-item>
-    <ion-label>
+  <syg-item>
+    <syg-label>
       Item 1
-    </ion-label>
-    <ion-reorder slot="end"></ion-reorder>
-  </ion-item>
+    </syg-label>
+    <syg-reorder slot="end"></syg-reorder>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>
+  <syg-item>
+    <syg-label>
       Item 2
-    </ion-label>
-    <ion-reorder slot="end"></ion-reorder>
-  </ion-item>
+    </syg-label>
+    <syg-reorder slot="end"></syg-reorder>
+  </syg-item>
 
   <!-- Default reorder icon, start aligned items -->
-  <ion-item>
-    <ion-reorder slot="start"></ion-reorder>
-    <ion-label>
+  <syg-item>
+    <syg-reorder slot="start"></syg-reorder>
+    <syg-label>
       Item 3
-    </ion-label>
-  </ion-item>
+    </syg-label>
+  </syg-item>
 
-  <ion-item>
-    <ion-reorder slot="start"></ion-reorder>
-    <ion-label>
+  <syg-item>
+    <syg-reorder slot="start"></syg-reorder>
+    <syg-label>
       Item 4
-    </ion-label>
-  </ion-item>
+    </syg-label>
+  </syg-item>
 
   <!-- Custom reorder icon end items -->
-  <ion-item>
-    <ion-label>
+  <syg-item>
+    <syg-label>
       Item 5
-    </ion-label>
-    <ion-reorder slot="end">
+    </syg-label>
+    <syg-reorder slot="end">
       <ion-icon name="pizza"></ion-icon>
-    </ion-reorder>
-  </ion-item>
+    </syg-reorder>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>
+  <syg-item>
+    <syg-label>
       Item 6
-    </ion-label>
-    <ion-reorder slot="end">
+    </syg-label>
+    <syg-reorder slot="end">
       <ion-icon name="pizza"></ion-icon>
-    </ion-reorder>
-  </ion-item>
+    </syg-reorder>
+  </syg-item>
 
   <!-- Items wrapped in a reorder, entire item can be dragged -->
-  <ion-reorder>
-    <ion-item>
-      <ion-label>
+  <syg-reorder>
+    <syg-item>
+      <syg-label>
         Item 7
-      </ion-label>
-    </ion-item>
-  </ion-reorder>
+      </syg-label>
+    </syg-item>
+  </syg-reorder>
 
-  <ion-reorder>
-    <ion-item>
-      <ion-label>
+  <syg-reorder>
+    <syg-item>
+      <syg-label>
         Item 8
-      </ion-label>
-    </ion-item>
-  </ion-reorder>
-</ion-reorder-group>
+      </syg-label>
+    </syg-item>
+  </syg-reorder>
+</syg-reorder-group>
 ```
 
 ```javascript
@@ -179,77 +179,77 @@ export class ReorderGroupExample {
 
 ```html
 <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
-<ion-reorder-group disabled="false">
+<syg-reorder-group disabled="false">
   <!-- Default reorder icon, end aligned items -->
-  <ion-item>
-    <ion-label>
+  <syg-item>
+    <syg-label>
       Item 1
-    </ion-label>
-    <ion-reorder slot="end"></ion-reorder>
-  </ion-item>
+    </syg-label>
+    <syg-reorder slot="end"></syg-reorder>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>
+  <syg-item>
+    <syg-label>
       Item 2
-    </ion-label>
-    <ion-reorder slot="end"></ion-reorder>
-  </ion-item>
+    </syg-label>
+    <syg-reorder slot="end"></syg-reorder>
+  </syg-item>
 
   <!-- Default reorder icon, start aligned items -->
-  <ion-item>
-    <ion-reorder slot="start"></ion-reorder>
-    <ion-label>
+  <syg-item>
+    <syg-reorder slot="start"></syg-reorder>
+    <syg-label>
       Item 3
-    </ion-label>
-  </ion-item>
+    </syg-label>
+  </syg-item>
 
-  <ion-item>
-    <ion-reorder slot="start"></ion-reorder>
-    <ion-label>
+  <syg-item>
+    <syg-reorder slot="start"></syg-reorder>
+    <syg-label>
       Item 4
-    </ion-label>
-  </ion-item>
+    </syg-label>
+  </syg-item>
 
   <!-- Custom reorder icon end items -->
-  <ion-item>
-    <ion-label>
+  <syg-item>
+    <syg-label>
       Item 5
-    </ion-label>
-    <ion-reorder slot="end">
+    </syg-label>
+    <syg-reorder slot="end">
       <ion-icon name="pizza"></ion-icon>
-    </ion-reorder>
-  </ion-item>
+    </syg-reorder>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>
+  <syg-item>
+    <syg-label>
       Item 6
-    </ion-label>
-    <ion-reorder slot="end">
+    </syg-label>
+    <syg-reorder slot="end">
       <ion-icon name="pizza"></ion-icon>
-    </ion-reorder>
-  </ion-item>
+    </syg-reorder>
+  </syg-item>
 
   <!-- Items wrapped in a reorder, entire item can be dragged -->
-  <ion-reorder>
-    <ion-item>
-      <ion-label>
+  <syg-reorder>
+    <syg-item>
+      <syg-label>
         Item 7
-      </ion-label>
-    </ion-item>
-  </ion-reorder>
+      </syg-label>
+    </syg-item>
+  </syg-reorder>
 
-  <ion-reorder>
-    <ion-item>
-      <ion-label>
+  <syg-reorder>
+    <syg-item>
+      <syg-label>
         Item 8
-      </ion-label>
-    </ion-item>
-  </ion-reorder>
-</ion-reorder-group>
+      </syg-label>
+    </syg-item>
+  </syg-reorder>
+</syg-reorder-group>
 ```
 
 ```javascript
-const reorderGroup = document.querySelector('ion-reorder-group');
+const reorderGroup = document.querySelector('syg-reorder-group');
 
 reorderGroup.addEventListener('ionItemReorder', ({detail}) => {
   // The `from` and `to` properties contain the index of the item
@@ -267,7 +267,7 @@ reorderGroup.addEventListener('ionItemReorder', ({detail}) => {
 
 ```javascript
 const items = [1, 2, 3, 4, 5];
-const reorderGroup = document.querySelector('ion-reorder-group');
+const reorderGroup = document.querySelector('syg-reorder-group');
 
 reorderGroup.addEventListener('ionItemReorder', ({detail}) => {
   // Before complete is called with the items they will remain in the
@@ -407,73 +407,73 @@ export class ReorderGroupExample {
   render() {
     return [
       // The reorder gesture is disabled by default, enable it to drag and drop items
-      <ion-reorder-group onIonItemReorder={(ev) => this.doReorder(ev)} disabled={false}>
+      <syg-reorder-group onIonItemReorder={(ev) => this.doReorder(ev)} disabled={false}>
         {/* Default reorder icon, end aligned items */}
-        <ion-item>
-          <ion-label>
+        <syg-item>
+          <syg-label>
             Item 1
-          </ion-label>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
+          </syg-label>
+          <syg-reorder slot="end"></syg-reorder>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>
+        <syg-item>
+          <syg-label>
             Item 2
-          </ion-label>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
+          </syg-label>
+          <syg-reorder slot="end"></syg-reorder>
+        </syg-item>
 
         {/* Default reorder icon, start aligned items */}
-        <ion-item>
-          <ion-reorder slot="start"></ion-reorder>
-          <ion-label>
+        <syg-item>
+          <syg-reorder slot="start"></syg-reorder>
+          <syg-label>
             Item 3
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
-        <ion-item>
-          <ion-reorder slot="start"></ion-reorder>
-          <ion-label>
+        <syg-item>
+          <syg-reorder slot="start"></syg-reorder>
+          <syg-label>
             Item 4
-          </ion-label>
-        </ion-item>
+          </syg-label>
+        </syg-item>
 
         {/* Custom reorder icon end items */}
-        <ion-item>
-          <ion-label>
+        <syg-item>
+          <syg-label>
             Item 5
-          </ion-label>
-          <ion-reorder slot="end">
+          </syg-label>
+          <syg-reorder slot="end">
             <ion-icon name="pizza"></ion-icon>
-          </ion-reorder>
-        </ion-item>
+          </syg-reorder>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>
+        <syg-item>
+          <syg-label>
             Item 6
-          </ion-label>
-          <ion-reorder slot="end">
+          </syg-label>
+          <syg-reorder slot="end">
             <ion-icon name="pizza"></ion-icon>
-          </ion-reorder>
-        </ion-item>
+          </syg-reorder>
+        </syg-item>
 
         {/* Items wrapped in a reorder, entire item can be dragged */}
-        <ion-reorder>
-          <ion-item>
-            <ion-label>
+        <syg-reorder>
+          <syg-item>
+            <syg-label>
               Item 7
-            </ion-label>
-          </ion-item>
-        </ion-reorder>
+            </syg-label>
+          </syg-item>
+        </syg-reorder>
 
-        <ion-reorder>
-          <ion-item>
-            <ion-label>
+        <syg-reorder>
+          <syg-item>
+            <syg-label>
               Item 8
-            </ion-label>
-          </ion-item>
-        </ion-reorder>
-      </ion-reorder-group>
+            </syg-label>
+          </syg-item>
+        </syg-reorder>
+      </syg-reorder-group>
     ]
   }
 }
@@ -508,18 +508,18 @@ export class ReorderGroupExample {
   render() {
     return [
       // The reorder gesture is disabled by default, enable it to drag and drop items
-      <ion-reorder-group onIonItemReorder={(ev) => this.doReorder(ev)} disabled={false}>
+      <syg-reorder-group onIonItemReorder={(ev) => this.doReorder(ev)} disabled={false}>
 
         {this.items.map(item =>
-          <ion-item>
-            <ion-label>
+          <syg-item>
+            <syg-label>
               Item { item }
-            </ion-label>
-            <ion-reorder slot="end"></ion-reorder>
-          </ion-item>
+            </syg-label>
+            <syg-reorder slot="end"></syg-reorder>
+          </syg-item>
         )}
 
-      </ion-reorder-group>
+      </syg-reorder-group>
     ]
   }
 }
@@ -531,92 +531,92 @@ export class ReorderGroupExample {
 ```html
 <template>
   <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
-  <ion-reorder-group @ionItemReorder="doReorder($event)" disabled="false">
+  <syg-reorder-group @ionItemReorder="doReorder($event)" disabled="false">
     <!-- Default reorder icon, end aligned items -->
-    <ion-item>
-      <ion-label>
+    <syg-item>
+      <syg-label>
         Item 1
-      </ion-label>
-      <ion-reorder slot="end"></ion-reorder>
-    </ion-item>
+      </syg-label>
+      <syg-reorder slot="end"></syg-reorder>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>
+    <syg-item>
+      <syg-label>
         Item 2
-      </ion-label>
-      <ion-reorder slot="end"></ion-reorder>
-    </ion-item>
+      </syg-label>
+      <syg-reorder slot="end"></syg-reorder>
+    </syg-item>
 
     <!-- Default reorder icon, start aligned items -->
-    <ion-item>
-      <ion-reorder slot="start"></ion-reorder>
-      <ion-label>
+    <syg-item>
+      <syg-reorder slot="start"></syg-reorder>
+      <syg-label>
         Item 3
-      </ion-label>
-    </ion-item>
+      </syg-label>
+    </syg-item>
 
-    <ion-item>
-      <ion-reorder slot="start"></ion-reorder>
-      <ion-label>
+    <syg-item>
+      <syg-reorder slot="start"></syg-reorder>
+      <syg-label>
         Item 4
-      </ion-label>
-    </ion-item>
+      </syg-label>
+    </syg-item>
 
     <!-- Custom reorder icon end items -->
-    <ion-item>
-      <ion-label>
+    <syg-item>
+      <syg-label>
         Item 5
-      </ion-label>
-      <ion-reorder slot="end">
+      </syg-label>
+      <syg-reorder slot="end">
         <ion-icon name="pizza"></ion-icon>
-      </ion-reorder>
-    </ion-item>
+      </syg-reorder>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>
+    <syg-item>
+      <syg-label>
         Item 6
-      </ion-label>
-      <ion-reorder slot="end">
+      </syg-label>
+      <syg-reorder slot="end">
         <ion-icon name="pizza"></ion-icon>
-      </ion-reorder>
-    </ion-item>
+      </syg-reorder>
+    </syg-item>
 
     <!-- Items wrapped in a reorder, entire item can be dragged -->
-    <ion-reorder>
-      <ion-item>
-        <ion-label>
+    <syg-reorder>
+      <syg-item>
+        <syg-label>
           Item 7
-        </ion-label>
-      </ion-item>
-    </ion-reorder>
+        </syg-label>
+      </syg-item>
+    </syg-reorder>
 
-    <ion-reorder>
-      <ion-item>
-        <ion-label>
+    <syg-reorder>
+      <syg-item>
+        <syg-label>
           Item 8
-        </ion-label>
-      </ion-item>
-    </ion-reorder>
-  </ion-reorder-group>
+        </syg-label>
+      </syg-item>
+    </syg-reorder>
+  </syg-reorder-group>
 </template>
 
 <script>
-import { 
-  IonIcon, 
-  IonItem, 
-  IonLabel, 
-  IonReorder, 
+import {
+  IonIcon,
+  IonItem,
+  IonLabel,
+  IonReorder,
   IonReorderGroup
 } from '@ionic/vue';
 import { pizza } from 'ionicons/icons';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  components: { 
-    IonIcon, 
-    IonItem, 
-    IonLabel, 
-    IonReorder, 
+  components: {
+    IonIcon,
+    IonItem,
+    IonLabel,
+    IonReorder,
     IonReorderGroup
   },
   setup() {

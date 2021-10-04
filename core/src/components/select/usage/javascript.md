@@ -1,70 +1,70 @@
 ### Single Selection
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Single Selection
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Gender</ion-label>
-    <ion-select placeholder="Select One">
-      <ion-select-option value="f">Female</ion-select-option>
-      <ion-select-option value="m">Male</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Gender</syg-label>
+    <syg-select placeholder="Select One">
+      <syg-select-option value="f">Female</syg-select-option>
+      <syg-select-option value="m">Male</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Hair Color</ion-label>
-    <ion-select value="brown" ok-text="Okay" cancel-text="Dismiss">
-      <ion-select-option value="brown">Brown</ion-select-option>
-      <ion-select-option value="blonde">Blonde</ion-select-option>
-      <ion-select-option value="black">Black</ion-select-option>
-      <ion-select-option value="red">Red</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Hair Color</syg-label>
+    <syg-select value="brown" ok-text="Okay" cancel-text="Dismiss">
+      <syg-select-option value="brown">Brown</syg-select-option>
+      <syg-select-option value="blonde">Blonde</syg-select-option>
+      <syg-select-option value="black">Black</syg-select-option>
+      <syg-select-option value="red">Red</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-</ion-list>
+</syg-list>
 ```
 
 ### Multiple Selection
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Multiple Selection
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Toppings</ion-label>
-    <ion-select multiple="true" cancel-text="Nah" ok-text="Okay!">
-      <ion-select-option value="bacon">Bacon</ion-select-option>
-      <ion-select-option value="olives">Black Olives</ion-select-option>
-      <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-      <ion-select-option value="peppers">Green Peppers</ion-select-option>
-      <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-      <ion-select-option value="onions">Onions</ion-select-option>
-      <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-      <ion-select-option value="pineapple">Pineapple</ion-select-option>
-      <ion-select-option value="sausage">Sausage</ion-select-option>
-      <ion-select-option value="Spinach">Spinach</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Toppings</syg-label>
+    <syg-select multiple="true" cancel-text="Nah" ok-text="Okay!">
+      <syg-select-option value="bacon">Bacon</syg-select-option>
+      <syg-select-option value="olives">Black Olives</syg-select-option>
+      <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+      <syg-select-option value="peppers">Green Peppers</syg-select-option>
+      <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+      <syg-select-option value="onions">Onions</syg-select-option>
+      <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+      <syg-select-option value="pineapple">Pineapple</syg-select-option>
+      <syg-select-option value="sausage">Sausage</syg-select-option>
+      <syg-select-option value="Spinach">Spinach</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Pets</ion-label>
-    <ion-select id="multiple" multiple="true">
-      <ion-select-option value="bird">Bird</ion-select-option>
-      <ion-select-option value="cat">Cat</ion-select-option>
-      <ion-select-option value="dog">Dog</ion-select-option>
-      <ion-select-option value="honeybadger">Honey Badger</ion-select-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Pets</syg-label>
+    <syg-select id="multiple" multiple="true">
+      <syg-select-option value="bird">Bird</syg-select-option>
+      <syg-select-option value="cat">Cat</syg-select-option>
+      <syg-select-option value="dog">Dog</syg-select-option>
+      <syg-select-option value="honeybadger">Honey Badger</syg-select-option>
+    </syg-select>
+  </syg-item>
+</syg-list>
 ```
 
 ```javascript
@@ -75,18 +75,18 @@ select.value = ['bird', 'dog'];
 ### Objects as Values
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Objects as Values (compareWith)
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Users</ion-label>
-    <ion-select id="objectSelectCompareWith"></ion-select>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-label>Users</syg-label>
+    <syg-select id="objectSelectCompareWith"></syg-select>
+  </syg-item>
+</syg-list>
 ```
 
 ```javascript
@@ -116,7 +116,7 @@ select.value = ['bird', 'dog'];
   objectSelectElement.compareWith = compareWithFn;
 
   objectOptions.forEach((option, i) => {
-    let selectOption = document.createElement('ion-select-option');
+    let selectOption = document.createElement('syg-select-option');
     selectOption.value = option;
     selectOption.textContent = option.first + ' ' + option.last;
 
@@ -130,51 +130,51 @@ select.value = ['bird', 'dog'];
 ### Interface Options
 
 ```html
-<ion-list>
-  <ion-list-header>
-    <ion-label>
+<syg-list>
+  <syg-list-header>
+    <syg-label>
       Interface Options
-    </ion-label>
-  </ion-list-header>
+    </syg-label>
+  </syg-list-header>
 
-  <ion-item>
-    <ion-label>Alert</ion-label>
-    <ion-select id="customAlertSelect" interface="alert" multiple="true" placeholder="Select One">
-      <ion-select-option value="bacon">Bacon</ion-select-option>
-      <ion-select-option value="olives">Black Olives</ion-select-option>
-      <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-      <ion-select-option value="peppers">Green Peppers</ion-select-option>
-      <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-      <ion-select-option value="onions">Onions</ion-select-option>
-      <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-      <ion-select-option value="pineapple">Pineapple</ion-select-option>
-      <ion-select-option value="sausage">Sausage</ion-select-option>
-      <ion-select-option value="Spinach">Spinach</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Alert</syg-label>
+    <syg-select id="customAlertSelect" interface="alert" multiple="true" placeholder="Select One">
+      <syg-select-option value="bacon">Bacon</syg-select-option>
+      <syg-select-option value="olives">Black Olives</syg-select-option>
+      <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+      <syg-select-option value="peppers">Green Peppers</syg-select-option>
+      <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+      <syg-select-option value="onions">Onions</syg-select-option>
+      <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+      <syg-select-option value="pineapple">Pineapple</syg-select-option>
+      <syg-select-option value="sausage">Sausage</syg-select-option>
+      <syg-select-option value="Spinach">Spinach</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Popover</ion-label>
-    <ion-select id="customPopoverSelect" interface="popover" placeholder="Select One">
-      <ion-select-option value="brown">Brown</ion-select-option>
-      <ion-select-option value="blonde">Blonde</ion-select-option>
-      <ion-select-option value="black">Black</ion-select-option>
-      <ion-select-option value="red">Red</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Popover</syg-label>
+    <syg-select id="customPopoverSelect" interface="popover" placeholder="Select One">
+      <syg-select-option value="brown">Brown</syg-select-option>
+      <syg-select-option value="blonde">Blonde</syg-select-option>
+      <syg-select-option value="black">Black</syg-select-option>
+      <syg-select-option value="red">Red</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-  <ion-item>
-    <ion-label>Action Sheet</ion-label>
-    <ion-select id="customActionSheetSelect" interface="action-sheet" placeholder="Select One">
-      <ion-select-option value="red">Red</ion-select-option>
-      <ion-select-option value="purple">Purple</ion-select-option>
-      <ion-select-option value="yellow">Yellow</ion-select-option>
-      <ion-select-option value="orange">Orange</ion-select-option>
-      <ion-select-option value="green">Green</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <syg-item>
+    <syg-label>Action Sheet</syg-label>
+    <syg-select id="customActionSheetSelect" interface="action-sheet" placeholder="Select One">
+      <syg-select-option value="red">Red</syg-select-option>
+      <syg-select-option value="purple">Purple</syg-select-option>
+      <syg-select-option value="yellow">Yellow</syg-select-option>
+      <syg-select-option value="orange">Orange</syg-select-option>
+      <syg-select-option value="green">Green</syg-select-option>
+    </syg-select>
+  </syg-item>
 
-</ion-list>
+</syg-list>
 ```
 
 ```javascript

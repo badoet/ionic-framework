@@ -1,10 +1,10 @@
-# ion-infinite-scroll-content
+# syg-infinite-scroll-content
 
-The `ion-infinite-scroll-content` component is the default child used by the `ion-infinite-scroll`. It displays an infinite scroll spinner that looks best based on the platform and changes the look depending on the infinite scroll's state. The default spinner can be changed and text can be added by setting the `loadingSpinner` and `loadingText` properties.
+The `syg-infinite-scroll-content` component is the default child used by the `syg-infinite-scroll`. It displays an infinite scroll spinner that looks best based on the platform and changes the look depending on the infinite scroll's state. The default spinner can be changed and text can be added by setting the `loadingSpinner` and `loadingText` properties.
 
 ## React
 
-The `ion-infinite-scroll-content` component is not supported in React.
+The `syg-infinite-scroll-content` component is not supported in React.
 
 <!-- Auto Generated Below -->
 
@@ -14,28 +14,28 @@ The `ion-infinite-scroll-content` component is not supported in React.
 ### Angular
 
 ```html
-<ion-content>
-  <ion-infinite-scroll>
-    <ion-infinite-scroll-content
+<syg-content>
+  <syg-infinite-scroll>
+    <syg-infinite-scroll-content
       loadingSpinner="bubbles"
       loadingText="Loading more data…">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-</ion-content>
+    </syg-infinite-scroll-content>
+  </syg-infinite-scroll>
+</syg-content>
 ```
 
 
 ### Javascript
 
 ```html
-<ion-content>
-  <ion-infinite-scroll>
-    <ion-infinite-scroll-content
+<syg-content>
+  <syg-infinite-scroll>
+    <syg-infinite-scroll-content
       loading-spinner="bubbles"
       loading-text="Loading more data…">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-</ion-content>
+    </syg-infinite-scroll-content>
+  </syg-infinite-scroll>
+</syg-content>
 ```
 
 
@@ -51,14 +51,14 @@ import { Component, h } from '@stencil/core';
 export class InfiniteScrollContentExample {
   render() {
     return [
-      <ion-content>
-        <ion-infinite-scroll>
-          <ion-infinite-scroll-content
+      <syg-content>
+        <syg-infinite-scroll>
+          <syg-infinite-scroll-content
             loadingSpinner="bubbles"
             loadingText="Loading more data...">
-          </ion-infinite-scroll-content>
-        </ion-infinite-scroll>
-      </ion-content>
+          </syg-infinite-scroll-content>
+        </syg-infinite-scroll>
+      </syg-content>
     ];
   }
 }
@@ -69,16 +69,16 @@ export class InfiniteScrollContentExample {
 
 ```html
 <template>
-  <ion-page>
-    <ion-content>
-      <ion-infinite-scroll>
-        <ion-infinite-scroll-content
+  <syg-page>
+    <syg-content>
+      <syg-infinite-scroll>
+        <syg-infinite-scroll-content
           loading-spinner="bubbles"
           loading-text="Loading more data…">
-        </ion-infinite-scroll-content>
-      </ion-infinite-scroll>
-    </ion-content>
-  </ion-page>
+        </syg-infinite-scroll-content>
+      </syg-infinite-scroll>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script lang="ts">
@@ -107,20 +107,20 @@ export default defineComponent({
 | Property         | Attribute         | Description                                                                                                                                                                                                                                                                                                                     | Type                                                                                                                                                    | Default     |
 | ---------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | `loadingSpinner` | `loading-spinner` | An animated SVG spinner that shows while loading.                                                                                                                                                                                                                                                                               | `"bubbles" \| "circles" \| "circular" \| "crescent" \| "dots" \| "lines" \| "lines-sharp" \| "lines-sharp-small" \| "lines-small" \| null \| undefined` | `undefined` |
-| `loadingText`    | `loading-text`    | Optional text to display while loading. `loadingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security) | `IonicSafeString \| string \| undefined`                                                                                                                | `undefined` |
+| `loadingText`    | `loading-text`    | Optional text to display while loading. `loadingText` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security) | `SygSafeString \| string \| undefined`                                                                                                                | `undefined` |
 
 
 ## Dependencies
 
 ### Depends on
 
-- [ion-spinner](../spinner)
+- [syg-spinner](../spinner)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-infinite-scroll-content --> ion-spinner
-  style ion-infinite-scroll-content fill:#f9f,stroke:#333,stroke-width:4px
+  syg-infinite-scroll-content --> syg-spinner
+  style syg-infinite-scroll-content fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

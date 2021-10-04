@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, TabBarChangedEventDetail } from '../../interface';
 import { createColorClasses } from '../../utils/theme';
 
@@ -8,7 +8,7 @@ import { createColorClasses } from '../../utils/theme';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-tab-bar',
+  tag: 'syg-tab-bar',
   styleUrls: {
     ios: 'tab-bar.ios.scss',
     md: 'tab-bar.md.scss'
@@ -85,7 +85,7 @@ export class TabBar implements ComponentInterface {
 
   render() {
     const { color, translucent, keyboardVisible } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     return (
       <Host

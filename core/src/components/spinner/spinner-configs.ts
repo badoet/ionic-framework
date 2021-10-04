@@ -13,7 +13,7 @@ const spinners = {
         style: {
           'top': `${ 9 * Math.sin(angle) }px`,
           'left': `${ 9 * Math.cos(angle) }px`,
-          'animation-delay': animationDelay,
+          'animatsyg-delay': animationDelay,
         }
       };
     }
@@ -31,7 +31,7 @@ const spinners = {
         style: {
           'top': `${ 9 * Math.sin(angle)}px`,
           'left': `${ 9 * Math.cos(angle) }px`,
-          'animation-delay': animationDelay,
+          'animatsyg-delay': animationDelay,
         }
       };
     }
@@ -74,7 +74,7 @@ const spinners = {
         r: 6,
         style: {
           'left': `${ 9 - (9 * index)}px`,
-          'animation-delay': animationDelay,
+          'animatsyg-delay': animationDelay,
         }
       };
     }
@@ -92,7 +92,7 @@ const spinners = {
         y2: 26,
         style: {
           'transform': transform,
-          'animation-delay': animationDelay,
+          'animatsyg-delay': animationDelay,
         }
       };
     }
@@ -109,7 +109,7 @@ const spinners = {
         y2: 20,
         style: {
           'transform': transform,
-          'animation-delay': animationDelay,
+          'animatsyg-delay': animationDelay,
         }
       };
     }
@@ -127,7 +127,7 @@ const spinners = {
         y2: 29,
         style: {
           'transform': transform,
-          'animation-delay': animationDelay,
+          'animatsyg-delay': animationDelay,
         }
       };
     }
@@ -144,7 +144,7 @@ const spinners = {
         y2: 20,
         style: {
           'transform': transform,
-          'animation-delay': animationDelay,
+          'animatsyg-delay': animationDelay,
         }
       };
     }

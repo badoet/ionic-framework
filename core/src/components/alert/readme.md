@@ -1,4 +1,4 @@
-# ion-alert
+# syg-alert
 
 An Alert is a dialog that presents users with information or collects information from the user using inputs. An alert appears on top of the app's content, and must be manually dismissed by the user before they can resume interaction with the app. It can also optionally have a `header`, `subHeader` and `message`.
 
@@ -88,7 +88,7 @@ interface AlertInputAttributes extends JSXBase.InputHTMLAttributes<HTMLInputElem
 interface AlertOptions {
   header?: string;
   subHeader?: string;
-  message?: string | IonicSafeString;
+  message?: string | SygSafeString;
   cssClass?: string | string[];
   inputs?: AlertInput[];
   buttons?: (AlertButton | string)[];
@@ -447,14 +447,14 @@ export class AlertExample {
 
 ### Style Placement
 
-In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Alert can be presented from within a page, the `ion-alert` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
+In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Alert can be presented from within a page, the `syg-alert` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
 
 
 ### Javascript
 
 ```javascript
 function presentAlert() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Alert';
   alert.subHeader = 'Subtitle';
@@ -469,7 +469,7 @@ function presentAlert() {
 }
 
 function presentAlertMultipleButtons() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Alert';
   alert.subHeader = 'Subtitle';
@@ -481,7 +481,7 @@ function presentAlertMultipleButtons() {
 }
 
 function presentAlertConfirm() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Confirm!';
   alert.message = 'Message <strong>text</strong>!!!';
@@ -508,7 +508,7 @@ function presentAlertConfirm() {
 }
 
 function presentAlertPrompt() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Prompt!';
   alert.inputs = [
@@ -588,7 +588,7 @@ function presentAlertPrompt() {
 }
 
 function presentAlertRadio() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Radio';
   alert.inputs = [
@@ -662,7 +662,7 @@ function presentAlertRadio() {
 }
 
 function presentAlertCheckbox() {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = 'Checkbox';
   alert.inputs = [
@@ -1415,14 +1415,14 @@ export class AlertExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.presentAlert()}>Present Alert</ion-button>
-        <ion-button onClick={() => this.presentAlertMultipleButtons()}>Present Alert: Multiple Buttons</ion-button>
-        <ion-button onClick={() => this.presentAlertConfirm()}>Present Alert: Confirm</ion-button>
-        <ion-button onClick={() => this.presentAlertPrompt()}>Present Alert: Prompt</ion-button>
-        <ion-button onClick={() => this.presentAlertRadio()}>Present Alert: Radio</ion-button>
-        <ion-button onClick={() => this.presentAlertCheckbox()}>Present Alert: Checkbox</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={() => this.presentAlert()}>Present Alert</syg-button>
+        <syg-button onClick={() => this.presentAlertMultipleButtons()}>Present Alert: Multiple Buttons</syg-button>
+        <syg-button onClick={() => this.presentAlertConfirm()}>Present Alert: Confirm</syg-button>
+        <syg-button onClick={() => this.presentAlertPrompt()}>Present Alert: Prompt</syg-button>
+        <syg-button onClick={() => this.presentAlertRadio()}>Present Alert: Radio</syg-button>
+        <syg-button onClick={() => this.presentAlertCheckbox()}>Present Alert: Checkbox</syg-button>
+      </syg-content>
     ];
   }
 }
@@ -1433,12 +1433,12 @@ export class AlertExample {
 
 ```html
 <template>
-  <ion-button @click="presentAlert">Show Alert</ion-button>
-  <ion-button @click="presentAlertMultipleButtons">Show Alert (multiple buttons)</ion-button>
-  <ion-button @click="presentAlertConfirm">Show Alert (confirm)</ion-button>
-  <ion-button @click="presentAlertPrompt">Show Alert (prompt)</ion-button>
-  <ion-button @click="presentAlertRadio">Show Alert (radio)</ion-button>
-  <ion-button @click="presentAlertCheckbox">Show Alert (checkbox)</ion-button>
+  <syg-button @click="presentAlert">Show Alert</syg-button>
+  <syg-button @click="presentAlertMultipleButtons">Show Alert (multiple buttons)</syg-button>
+  <syg-button @click="presentAlertConfirm">Show Alert (confirm)</syg-button>
+  <syg-button @click="presentAlertPrompt">Show Alert (prompt)</syg-button>
+  <syg-button @click="presentAlertRadio">Show Alert (radio)</syg-button>
+  <syg-button @click="presentAlertCheckbox">Show Alert (checkbox)</syg-button>
 </template>
 
 <script>
@@ -1742,8 +1742,8 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Alert</ion-button>
-  <ion-alert
+  <syg-button @click="setOpen(true)">Show Alert</syg-button>
+  <syg-alert
     :is-open="isOpenRef"
     header="Alert"
     sub-header="Subtitle"
@@ -1752,7 +1752,7 @@ Developers can also use this component directly in their template:
     :buttons="buttons"
     @didDismiss="setOpen(false)"
   >
-  </ion-alert>
+  </syg-alert>
 </template>
 
 <script>
@@ -1765,7 +1765,7 @@ export default defineComponent({
     const isOpenRef = ref(false);
     const setOpen = (state: boolean) => isOpenRef.value = state;
     const buttons = ['Ok'];
-    
+
     return { buttons, isOpenRef, setOpen }
   }
 });
@@ -1788,7 +1788,7 @@ export default defineComponent({
 | `inputs`          | --                 | Array of input to show in the alert.                                                                                                                                                                                                                                                                                               | `AlertInput[]`                                          | `[]`        |
 | `keyboardClose`   | `keyboard-close`   | If `true`, the keyboard will be automatically dismissed when the overlay is presented.                                                                                                                                                                                                                                             | `boolean`                                               | `true`      |
 | `leaveAnimation`  | --                 | Animation to use when the alert is dismissed.                                                                                                                                                                                                                                                                                      | `((baseEl: any, opts?: any) => Animation) \| undefined` | `undefined` |
-| `message`         | `message`          | The main message to be displayed in the alert. `message` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security) | `IonicSafeString \| string \| undefined`                | `undefined` |
+| `message`         | `message`          | The main message to be displayed in the alert. `message` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security) | `SygSafeString \| string \| undefined`                | `undefined` |
 | `mode`            | `mode`             | The mode determines which platform styles to use.                                                                                                                                                                                                                                                                                  | `"ios" \| "md"`                                         | `undefined` |
 | `subHeader`       | `sub-header`       | The subtitle in the heading of the alert. Displayed under the title.                                                                                                                                                                                                                                                               | `string \| undefined`                                   | `undefined` |
 | `translucent`     | `translucent`      | If `true`, the alert will be translucent. Only applies when the mode is `"ios"` and the device supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).                                                                                                               | `boolean`                                               | `false`     |
@@ -1865,15 +1865,15 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [ion-ripple-effect](../ripple-effect)
-- [ion-backdrop](../backdrop)
+- [syg-ripple-effect](../ripple-effect)
+- [syg-backdrop](../backdrop)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-alert --> ion-ripple-effect
-  ion-alert --> ion-backdrop
-  style ion-alert fill:#f9f,stroke:#333,stroke-width:4px
+  syg-alert --> syg-ripple-effect
+  syg-alert --> syg-backdrop
+  style syg-alert fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

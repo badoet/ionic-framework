@@ -1,6 +1,6 @@
 import { Build, Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h, readTask } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, StyleEventDetail, TextareaChangeEventDetail } from '../../interface';
 import { debounceEvent, findItemLabel, inheritAttributes, raf } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
@@ -9,7 +9,7 @@ import { createColorClasses } from '../../utils/theme';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-textarea',
+  tag: 'syg-textarea',
   styleUrls: {
     ios: 'textarea.ios.scss',
     md: 'textarea.md.scss'
@@ -19,7 +19,7 @@ import { createColorClasses } from '../../utils/theme';
 export class Textarea implements ComponentInterface {
 
   private nativeInput?: HTMLTextAreaElement;
-  private inputId = `ion-textarea-${textareaIds++}`;
+  private inputId = `syg-textarea-${textareaIds++}`;
   private didBlurAfterEdit = false;
   private textareaWrapper?: HTMLElement;
   private inheritedAttributes: { [k: string]: any } = {};
@@ -235,7 +235,7 @@ export class Textarea implements ComponentInterface {
   }
 
   /**
-   * Sets focus on the native `textarea` in `ion-textarea`. Use this method instead of the global
+   * Sets focus on the native `textarea` in `syg-textarea`. Use this method instead of the global
    * `textarea.focus()`.
    */
   @Method()
@@ -246,7 +246,7 @@ export class Textarea implements ComponentInterface {
   }
 
   /**
-   * Sets blur on the native `textarea` in `ion-textarea`. Use this method instead of the global
+   * Sets blur on the native `textarea` in `syg-textarea`. Use this method instead of the global
    * `textarea.blur()`.
    * @internal
    */
@@ -342,7 +342,7 @@ export class Textarea implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const value = this.getValue();
     const labelId = this.inputId + '-lbl';
     const label = findItemLabel(this.el);

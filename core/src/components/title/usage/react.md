@@ -112,7 +112,7 @@ export const LargeTitleExample: React.FC = () => (
 
 In this example, notice that we have added two sets of `IonButtons` both with `collapse` set to `true`. When the secondary header collapses, the buttons in the secondary header will hide, and the buttons in the primary header will show. This is useful for ensuring that your header buttons always appear next to an `IonTitle` element.
 
-`IonButtons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `ion-buttons` elements inside of `ion-content`, the `ion-buttons` elements should always be placed in the `end` slot.
+`IonButtons` elements that do not have `collapse` set will always be visible, regardless of collapsed state. When using the large title and `syg-buttons` elements inside of `syg-content`, the `syg-buttons` elements should always be placed in the `end` slot.
 
 > When using collapsible large titles, it is required that `fullscreen` is set to `true` on `IonContent` and `translucent="true"` be set on the main `IonHeader`.
 
@@ -127,7 +127,7 @@ You can change the background color of the toolbar with the standard title by se
 When styling the text color of the large title, you should target the large title globally as opposed to within the context of a particular page or tab, otherwise its styles will not be applied during the navigation animation.
 
 ```css
-ion-title.large-title {
+syg-title.large-title {
   color: purple;
   font-size: 30px;
 }

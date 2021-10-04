@@ -9,7 +9,7 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
 
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="Ionic App" />
@@ -75,23 +75,23 @@
 </head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <div class="ion-page">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Modal - Sheet</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <div class="syg-page">
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Modal - Sheet</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-content class="ion-padding">
-        <ion-button id="sheet-modal" onclick="presentModal()">Present Sheet Modal</ion-button>
-        <ion-button id="custom-breakpoint-modal" onclick="presentModal({ initialBreakpoint: 0.5, breakpoints: [0, 0.5, 1] })">Present Sheet Modal (Custom Breakpoints)</ion-button>
-        <ion-button id="custom-breakpoint-modal" onclick="presentModal({ initialBreakpoint: 0.5, breakpoints: [0, 0.5, 0.75] })">Present Sheet Modal (Max breakpoint is not 1)</ion-button>
-        <ion-button id="custom-backdrop-modal" onclick="presentModal({ backdropBreakpoint: 0.5, initialBreakpoint: 0.5 })">Present Sheet Modal (Custom Backdrop Breakpoint)</ion-button>
-        <ion-button id="custom-height-modal" onclick="presentModal({ cssClass: 'custom-height' })">Present Sheet Modal (Custom Height)</ion-button>
-        <ion-button id="custom-handle-modal" onclick="presentModal({ cssClass: 'custom-handle' })">Present Sheet Modal (Custom Handle)</ion-button>
-        <ion-button id="no-handle-modal" onclick="presentModal({ handle: false })">Present Sheet Modal (No Handle)</ion-button>
+      <syg-content class="syg-padding">
+        <syg-button id="sheet-modal" onclick="presentModal()">Present Sheet Modal</syg-button>
+        <syg-button id="custom-breakpoint-modal" onclick="presentModal({ initialBreakpoint: 0.5, breakpoints: [0, 0.5, 1] })">Present Sheet Modal (Custom Breakpoints)</syg-button>
+        <syg-button id="custom-breakpoint-modal" onclick="presentModal({ initialBreakpoint: 0.5, breakpoints: [0, 0.5, 0.75] })">Present Sheet Modal (Max breakpoint is not 1)</syg-button>
+        <syg-button id="custom-backdrop-modal" onclick="presentModal({ backdropBreakpoint: 0.5, initialBreakpoint: 0.5 })">Present Sheet Modal (Custom Backdrop Breakpoint)</syg-button>
+        <syg-button id="custom-height-modal" onclick="presentModal({ cssClass: 'custom-height' })">Present Sheet Modal (Custom Height)</syg-button>
+        <syg-button id="custom-handle-modal" onclick="presentModal({ cssClass: 'custom-handle' })">Present Sheet Modal (Custom Handle)</syg-button>
+        <syg-button id="no-handle-modal" onclick="presentModal({ handle: false })">Present Sheet Modal (No Handle)</syg-button>
 
         <div class="grid">
           <div class="grid-item red"></div>
@@ -104,10 +104,10 @@
           <div class="grid-item orange"></div>
         </div>
 
-      </ion-content>
+      </syg-content>
     </div>
 
-  </ion-app>
+  </syg-app>
   <script>
     window.addEventListener("ionModalDidDismiss", function (e) { console.log('DidDismiss', e) })
     window.addEventListener("ionModalWillDismiss", function (e) { console.log('WillDismiss', e) })
@@ -116,25 +116,25 @@
       let items = '';
 
       for (var i = 0; i < 25; i++ ) {
-        items += `<ion-item>Item ${i}</ion-item>`;
+        items += `<syg-item>Item ${i}</syg-item>`;
       }
 
       // create component to open
       const element = document.createElement('div');
       element.innerHTML = `
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Super Modal</ion-title>
-          <ion-buttons slot="end">
-            <ion-button class="dismiss">Dismiss Modal</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
+      <syg-header>
+        <syg-toolbar>
+          <syg-title>Super Modal</syg-title>
+          <syg-buttons slot="end">
+            <syg-button class="dismiss">Dismiss Modal</syg-button>
+          </syg-buttons>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content>
+        <syg-list>
           ${items}
-        </ion-list>
-      </ion-content>
+        </syg-list>
+      </syg-content>
       `;
 
       let extraOptions = {
@@ -150,13 +150,13 @@
       }
 
       // present the modal
-      const modalElement = Object.assign(document.createElement('ion-modal'), {
+      const modalElement = Object.assign(document.createElement('syg-modal'), {
         component: element,
         ...extraOptions
       });
 
       // listen for close event
-      const button = element.querySelector('ion-button');
+      const button = element.querySelector('syg-button');
       button.addEventListener('click', () => {
         modalElement.dismiss();
       });
@@ -170,7 +170,7 @@
     }
 
     async function presentCardModal() {
-      const presentingEl = document.querySelectorAll('.ion-page')[1];
+      const presentingEl = document.querySelectorAll('.syg-page')[1];
       const modal = createModal('card', {
         presentingElement: presentingEl
       });

@@ -97,14 +97,14 @@ describe('parser', () => {
 });
 
 export function mockRouteElement(win: Window, path: string, component: string) {
-  const el = win.document.createElement('ion-route');
+  const el = win.document.createElement('syg-route');
   el.setAttribute('url', path);
   (el as any).component = component;
   return el;
 }
 
 export function mockRedirectElement(win: Window, from: string | undefined | null, to: string | undefined | null) {
-  const el = win.document.createElement('ion-route-redirect');
+  const el = win.document.createElement('syg-route-redirect');
   if (from != null) {
     el.setAttribute('from', from);
   }

@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Element, Host, Method, Prop, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 @Component({
-  tag: 'ion-fab',
+  tag: 'syg-fab',
   styleUrl: 'fab.scss',
   shadow: true
 })
@@ -29,8 +29,8 @@ export class Fab implements ComponentInterface {
   @Prop() edge = false;
 
   /**
-   * If `true`, both the `ion-fab-button` and all `ion-fab-list` inside `ion-fab` will become active.
-   * That means `ion-fab-button` will become a `close` icon and `ion-fab-list` will become visible.
+   * If `true`, both the `syg-fab-button` and all `syg-fab-list` inside `syg-fab` will become active.
+   * That means `syg-fab-button` will become a `close` icon and `syg-fab-list` will become visible.
    */
   @Prop({ mutable: true }) activated = false;
   @Watch('activated')
@@ -40,7 +40,7 @@ export class Fab implements ComponentInterface {
     if (fab) {
       fab.activated = activated;
     }
-    Array.from(this.el.querySelectorAll('ion-fab-list')).forEach(list => {
+    Array.from(this.el.querySelectorAll('syg-fab-list')).forEach(list => {
       list.activated = activated;
     });
   }
@@ -59,11 +59,11 @@ export class Fab implements ComponentInterface {
   }
 
   private getFab() {
-    return this.el.querySelector('ion-fab-button');
+    return this.el.querySelector('syg-fab-button');
   }
 
   private onClick = () => {
-    const hasList = !!this.el.querySelector('ion-fab-list');
+    const hasList = !!this.el.querySelector('syg-fab-list');
     const getButton = this.getFab();
     const isButtonDisabled = getButton && getButton.disabled;
 
@@ -74,7 +74,7 @@ export class Fab implements ComponentInterface {
 
   render() {
     const { horizontal, vertical, edge } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         onClick={this.onClick}

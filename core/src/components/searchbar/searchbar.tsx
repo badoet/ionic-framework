@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, forceUpdate, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AutocompleteTypes, Color, SearchbarChangeEventDetail, StyleEventDetail } from '../../interface';
 import { debounceEvent, raf } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
@@ -10,7 +10,7 @@ import { createColorClasses } from '../../utils/theme';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-searchbar',
+  tag: 'syg-searchbar',
   styleUrls: {
     ios: 'searchbar.ios.scss',
     md: 'searchbar.md.scss'
@@ -23,7 +23,7 @@ export class Searchbar implements ComponentInterface {
   private isCancelVisible = false;
   private shouldAlignLeft = true;
 
-  @Element() el!: HTMLIonSearchbarElement;
+  @Element() el!: HTMLSygSearchbarElement;
 
   @State() focused = false;
   @State() noAnimate = true;
@@ -99,8 +99,8 @@ export class Searchbar implements ComponentInterface {
    * Set the input's placeholder.
    * `placeholder` can accept either plaintext or HTML as a string.
    * To display characters normally reserved for HTML, they
-   * must be escaped. For example `<Ionic>` would become
-   * `&lt;Ionic&gt;`
+   * must be escaped. For example `<Sygic>` would become
+   * `&lt;Sygic&gt;`
    *
    * For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
    */
@@ -220,7 +220,7 @@ export class Searchbar implements ComponentInterface {
   }
 
   /**
-   * Sets focus on the specified `ion-searchbar`. Use this method instead of the global
+   * Sets focus on the specified `syg-searchbar`. Use this method instead of the global
    * `input.focus()`.
    */
   @Method()
@@ -325,7 +325,7 @@ export class Searchbar implements ComponentInterface {
   private positionElements() {
     const value = this.getValue();
     const prevAlignLeft = this.shouldAlignLeft;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const shouldAlignLeft = (!this.animated || value.trim() !== '' || !!this.focused);
     this.shouldAlignLeft = shouldAlignLeft;
 
@@ -456,7 +456,7 @@ export class Searchbar implements ComponentInterface {
   render() {
     const { cancelButtonText } = this;
     const animated = this.animated && config.getBoolean('animated', true);
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const clearIcon = this.clearIcon || (mode === 'ios' ? 'close-circle' : 'close-sharp');
     const searchIcon = this.searchIcon || (mode === 'ios' ? 'search-outline' : 'search-sharp');
     const shouldShowCancelButton = this.shouldShowCancelButton();

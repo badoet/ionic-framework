@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, Gesture, GestureDetail, KnobName, RangeChangeEventDetail, RangeValue, StyleEventDetail } from '../../interface';
 import { clamp, debounceEvent, getAriaLabel, inheritAttributes, renderHiddenInput } from '../../utils/helpers';
 import { createColorClasses, hostContext } from '../../utils/theme';
@@ -21,7 +21,7 @@ import { PinFormatter } from './range-interface';
  * @part bar-active - The active part of the bar.
  */
 @Component({
-  tag: 'ion-range',
+  tag: 'syg-range',
   styleUrls: {
     ios: 'range.ios.scss',
     md: 'range.md.scss'
@@ -39,7 +39,7 @@ export class Range implements ComponentInterface {
   private gesture?: Gesture;
   private inheritedAttributes: { [k: string]: any } = {};
 
-  @Element() el!: HTMLIonRangeElement;
+  @Element() el!: HTMLSygRangeElement;
 
   @State() private ratioA = 0;
   @State() private ratioB = 0;
@@ -64,7 +64,7 @@ export class Range implements ComponentInterface {
     this.ionChange = debounceEvent(this.ionChange, this.debounce);
   }
 
-  // TODO: In Ionic Framework v6 this should initialize to this.rangeId like the other form components do.
+  // TODO: In Sygic Framework v6 this should initialize to this.rangeId like the other form components do.
 
   /**
    * The name of the control, which is submitted with the form data.
@@ -211,7 +211,7 @@ export class Range implements ComponentInterface {
      * If user has custom ID set then we should
      * not assign the default incrementing ID.
      */
-    this.rangeId = (this.el.hasAttribute('id')) ? this.el.getAttribute('id')! : `ion-r-${rangeIds++}`;
+    this.rangeId = (this.el.hasAttribute('id')) ? this.el.getAttribute('id')! : `syg-r-${rangeIds++}`;
 
     this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
   }
@@ -228,8 +228,8 @@ export class Range implements ComponentInterface {
 
     /**
      * If we have not yet rendered
-     * ion-range, then rangeSlider is not defined.
-     * But if we are moving ion-range via appendChild,
+     * syg-range, then rangeSlider is not defined.
+     * But if we are moving syg-range via appendChild,
      * then rangeSlider will be defined.
      */
     if (this.didLoad) {
@@ -420,7 +420,7 @@ export class Range implements ComponentInterface {
     const { min, max, step, el, handleKeyboard, pressedKnob, disabled, pin, ratioLower, ratioUpper, inheritedAttributes, rangeId, pinFormatter } = this;
 
     /**
-     * Look for external label, ion-label, or aria-labelledby.
+     * Look for external label, syg-label, or aria-labelledby.
      * If none, see if user placed an aria-label on the host
      * and use that instead.
      */
@@ -428,7 +428,7 @@ export class Range implements ComponentInterface {
     if (labelText === undefined || labelText === null) {
       labelText = inheritedAttributes['aria-label'];
     }
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const barStart = `${ratioLower * 100}%`;
     const barEnd = `${100 - ratioUpper * 100}%`;
 
@@ -473,7 +473,7 @@ export class Range implements ComponentInterface {
         id={rangeId}
         class={createColorClasses(this.color, {
           [mode]: true,
-          'in-item': hostContext('ion-item', el),
+          'in-item': hostContext('syg-item', el),
           'range-disabled': disabled,
           'range-pressed': pressedKnob !== undefined,
           'range-has-pin': pin

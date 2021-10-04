@@ -8,14 +8,14 @@ describe('toggle', () => {
 
     // set the page content
     await page.setContent(`
-      <ion-toggle class="some-class"></ion-toggle>
+      <syg-toggle class="some-class"></syg-toggle>
     `);
 
     // add an event spy to the page
     const ionChange = await page.spyOnEvent('ionChange');
 
     // find the elemnt in the page
-    const toggle = await page.find('ion-toggle');
+    const toggle = await page.find('syg-toggle');
 
     // check it has the expected css classes
     expect(toggle).toHaveClass('some-class');
@@ -68,11 +68,11 @@ describe('toggle', () => {
 
   it('should create standalone, checked by default', async () => {
     const page = await newE2EPage({ html: `
-      <ion-toggle checked></ion-toggle>
+      <syg-toggle checked></syg-toggle>
     `});
 
     // find the elemnt in the page
-    const toggle = await page.find('ion-toggle');
+    const toggle = await page.find('syg-toggle');
 
     // spy on the ionChange event
     const ionChange = await page.spyOnEvent('ionChange');
@@ -81,7 +81,7 @@ describe('toggle', () => {
     expect(toggle).toEqualAttribute('aria-checked', 'true');
 
     // find the hidden input in the light dom
-    const hiddenInput = await page.find('ion-toggle input[type=hidden]');
+    const hiddenInput = await page.find('syg-toggle input[type=hidden]');
 
     // hidden input property should have value
     expect(hiddenInput).toEqualAttribute('value', 'on');
@@ -121,17 +121,17 @@ describe('toggle', () => {
 
   it('should pass properties down to hidden input', async () => {
     const page = await newE2EPage({ html: `
-      <ion-toggle disabled checked value="coding" name="primary"></ion-toggle>
+      <syg-toggle disabled checked value="coding" name="primary"></syg-toggle>
     `});
 
-    const toggle = await page.find('ion-toggle');
+    const toggle = await page.find('syg-toggle');
 
     expect(await toggle.getProperty('disabled')).toBe(true);
     expect(await toggle.getProperty('checked')).toBe(true);
     expect(await toggle.getProperty('value')).toBe('coding');
     expect(await toggle.getProperty('name')).toBe('primary');
 
-    const hiddenInput = await page.find('ion-toggle input[type=hidden]');
+    const hiddenInput = await page.find('syg-toggle input[type=hidden]');
 
     expect(await hiddenInput.getProperty('disabled')).toBe(true);
     expect(await hiddenInput.getProperty('value')).toBe('coding');

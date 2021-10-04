@@ -1,17 +1,17 @@
 ```html
-<ion-router>
-  <ion-route url="/home" component="page-home"></ion-route>
-  <ion-route url="/dashboard" component="page-dashboard"></ion-route>
-  <ion-route url="/new-message" component="page-new-message"></ion-route>
-  <ion-route url="/login" component="page-login"></ion-route>
-</ion-router>
+<syg-router>
+  <syg-route url="/home" component="page-home"></syg-route>
+  <syg-route url="/dashboard" component="page-dashboard"></syg-route>
+  <syg-route url="/new-message" component="page-new-message"></syg-route>
+  <syg-route url="/login" component="page-login"></syg-route>
+</syg-router>
 ```
 
 ```javascript
-const dashboardPage = document.querySelector('ion-route[url="/dashboard"]');
+const dashboardPage = document.querySelector('syg-route[url="/dashboard"]');
 dashboardPage.beforeEnter = isLoggedInGuard;
 
-const newMessagePage = document.querySelector('ion-route[url="/dashboard"]');
+const newMessagePage = document.querySelector('syg-route[url="/dashboard"]');
 newMessagePage.beforeLeave = hasUnsavedDataGuard;
 
 const isLoggedInGuard = async () => {
@@ -35,7 +35,7 @@ const hasUnsavedDataGuard = async () => {
 }
 
 const confirmDiscardChanges = async () => {
-  const alert = document.createElement('ion-alert');
+  const alert = document.createElement('syg-alert');
   alert.header = 'Discard Unsaved Changes?';
   alert.message = 'Are you sure you want to leave? Any unsaved changed will be lost.';
   alert.buttons = [

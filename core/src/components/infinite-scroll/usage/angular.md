@@ -1,18 +1,18 @@
 ```html
-<ion-content>
-  <ion-button (click)="toggleInfiniteScroll()" expand="block">
+<syg-content>
+  <syg-button (click)="toggleInfiniteScroll()" expand="block">
     Toggle Infinite Scroll
-  </ion-button>
+  </syg-button>
 
-  <ion-list></ion-list>
+  <syg-list></syg-list>
 
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-    <ion-infinite-scroll-content
+  <syg-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <syg-infinite-scroll-content
       loadingSpinner="bubbles"
       loadingText="Loading more data...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-</ion-content>
+    </syg-infinite-scroll-content>
+  </syg-infinite-scroll>
+</syg-content>
 ```
 
 ```typescript

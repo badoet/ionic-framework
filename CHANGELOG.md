@@ -75,7 +75,7 @@
 
 ### Code Refactoring
 
-* **virtual-scroll:** deprecated virtual scroll in favor of solutions provided by JS frameworks ([#23854](https://github.com/ionic-team/ionic-framework/pull/23854)) ([a0229bc](https://github.com/ionic-team/ionic-framework/commit/a0229bc7b2edb061510de0f2042e7910d04accc0)) 
+* **virtual-scroll:** deprecated virtual scroll in favor of solutions provided by JS frameworks ([#23854](https://github.com/ionic-team/ionic-framework/pull/23854)) ([a0229bc](https://github.com/ionic-team/ionic-framework/commit/a0229bc7b2edb061510de0f2042e7910d04accc0))
 
 
 
@@ -381,7 +381,7 @@
 ### Bug Fixes
 
 * **all:** update tslib to resolve export errors ([#23092](https://github.com/ionic-team/ionic-framework/pull/23092)) ([0cdd326](https://github.com/ionic-team/ionic-framework/commit/0cdd326a4a02729a306bccfcadca7370475eae32)), closes [#23090](https://github.com/ionic-team/ionic-framework/issues/23090)
-* **react:** correctly show ion-back-button when going back ([#23069](https://github.com/ionic-team/ionic/issues/23069)) ([1c93b75](https://github.com/ionic-team/ionic/commit/1c93b75e397961e374620eb43bee3d6bb4389836)), closes [#22692](https://github.com/ionic-team/ionic/issues/22692)
+* **react:** correctly show syg-back-button when going back ([#23069](https://github.com/ionic-team/ionic/issues/23069)) ([1c93b75](https://github.com/ionic-team/ionic/commit/1c93b75e397961e374620eb43bee3d6bb4389836)), closes [#22692](https://github.com/ionic-team/ionic/issues/22692)
 
 
 
@@ -420,7 +420,7 @@
 * **radio-group:** pressing space no longer jumps screen to bottom of page ([#22892](https://github.com/ionic-team/ionic/issues/22892)) ([3a0465e](https://github.com/ionic-team/ionic/commit/3a0465e7d6f9e3cb01336a8bdbd7001e4ec34559)), closes [#22716](https://github.com/ionic-team/ionic/issues/22716)
 * **react:** IonRouterOutlet now respects animated={false} prop ([#22905](https://github.com/ionic-team/ionic/issues/22905)) ([da1b7a0](https://github.com/ionic-team/ionic/commit/da1b7a0e7a9a5e6a9120dc4d5459c97d8bca5390)), closes [#22903](https://github.com/ionic-team/ionic/issues/22903)
 * **react:** onIonTabsWillChange and onIonTabsDidChange event handlers are now properly bound to IonTabs ([#22233](https://github.com/ionic-team/ionic/issues/22233)) ([b064fde](https://github.com/ionic-team/ionic/commit/b064fdebef14018b77242b791914d5bb10863d39))
-* **react, vue:** navigating using ion-back-button now selects correct page ([#22974](https://github.com/ionic-team/ionic/issues/22974)) ([cd8ffd8](https://github.com/ionic-team/ionic/commit/cd8ffd82a03ee69ef4cbd7922544bfc39680def9)), closes [#22830](https://github.com/ionic-team/ionic/issues/22830)
+* **react, vue:** navigating using syg-back-button now selects correct page ([#22974](https://github.com/ionic-team/ionic/issues/22974)) ([cd8ffd8](https://github.com/ionic-team/ionic/commit/cd8ffd82a03ee69ef4cbd7922544bfc39680def9)), closes [#22830](https://github.com/ionic-team/ionic/issues/22830)
 * **react, vue:** tab buttons no longer throw an error if href is undefined ([#22998](https://github.com/ionic-team/ionic/issues/22998)) ([943e3f6](https://github.com/ionic-team/ionic/commit/943e3f6ae37ecc56f21168f057dde77a05e4e144)), closes [#22997](https://github.com/ionic-team/ionic/issues/22997)
 * **refresher:** add correct dark mode styles ([#22639](https://github.com/ionic-team/ionic/issues/22639)) ([c05476b](https://github.com/ionic-team/ionic/commit/c05476b88e3e6884b4c490461c9c67dee3dca83d)), closes [#22637](https://github.com/ionic-team/ionic/issues/22637)
 * **vue:** correctly remove active state from tab button when navigating away from tab ([#23000](https://github.com/ionic-team/ionic/issues/23000)) ([a2763af](https://github.com/ionic-team/ionic/commit/a2763afe8e1fe1dc0decdbcb757a03bc5038045e)), closes [#22597](https://github.com/ionic-team/ionic/issues/22597)
@@ -681,7 +681,7 @@ Check out our [Quickstart Guide](https://ionicframework.com/docs/vue/quickstart)
 ### Bug Fixes
 
 * **vue:** correctly handle query params ([#22253](https://github.com/ionic-team/ionic/issues/22253)) ([6849dd3](https://github.com/ionic-team/ionic/commit/6849dd3483fb90aac1ff19834390a652c59a74de)), closes [#22229](https://github.com/ionic-team/ionic/issues/22229)
-* **vue:** correctly show ion-back-button when going back ([#22260](https://github.com/ionic-team/ionic/issues/22260)) ([39d2530](https://github.com/ionic-team/ionic/commit/39d2530427b1cd86975fc95ab2c8da9f4b0b27b3)), closes [#22217](https://github.com/ionic-team/ionic/issues/22217)
+* **vue:** correctly show syg-back-button when going back ([#22260](https://github.com/ionic-team/ionic/issues/22260)) ([39d2530](https://github.com/ionic-team/ionic/commit/39d2530427b1cd86975fc95ab2c8da9f4b0b27b3)), closes [#22217](https://github.com/ionic-team/ionic/issues/22217)
 * **vue:** hide layout shift on ion-page components ([#22254](https://github.com/ionic-team/ionic/issues/22254)) ([2bad1bb](https://github.com/ionic-team/ionic/commit/2bad1bb82e0fa3fe9e3db54403565d210f636120)), closes [#22052](https://github.com/ionic-team/ionic/issues/22052)
 * **vue:** ion-tab-bar no longer throws undefined error when re-creating tabs ([#22261](https://github.com/ionic-team/ionic/issues/22261)) ([d746561](https://github.com/ionic-team/ionic/commit/d746561ea29e61db2cfb55d2765b5548fd8b5a78)), closes [#22255](https://github.com/ionic-team/ionic/issues/22255)
 
@@ -2603,12 +2603,12 @@ And for the tabs markup, we have something close to pre-beta 16 tabs, but still 
 
 ### [ANGULAR] href does not cause Angular Router to navigate
 
-For consistency sake, the `href` attribute of `ion-button`, `ion-item` and `ion-anchor` no longer
+For consistency sake, the `href` attribute of `syg-button`, `ion-item` and `ion-anchor` no longer
 trigger navigation using the Angular’s Router,instead use angular’s `[routerLink]`:
 
 ```diff
-- <ion-button href="/path/to/page">
-+ <ion-button routerLink="/path/to/page">
+- <syg-button href="/path/to/page">
++ <syg-button routerLink="/path/to/page">
 ```
 
 This change will not affect SEO since ionic will still use `href` under the hood.
@@ -2692,7 +2692,7 @@ Segment Button now requires the text to be wrapped in an `ion-label` element for
 
 #### Simplifying Chip
 
-Because of updates to the Material Design spec, `ion-chip` no longer requires a chip-specific version of `ion-icon` or `ion-button`. Chips themselves should be interactive and don't require a nested button.
+Because of updates to the Material Design spec, `ion-chip` no longer requires a chip-specific version of `ion-icon` or `syg-button`. Chips themselves should be interactive and don't require a nested button.
 
 *Old usage:*
 
@@ -3384,7 +3384,7 @@ The following dependencies need to be updated to resolve build errors
 * **all:** safe-area using css variables ([aa23d08](https://github.com/ionic-team/ionic/commit/aa23d08))
 * **all:** user-select for desktop ([2d70ee4](https://github.com/ionic-team/ionic/commit/2d70ee4))
 * **anchor:** add custom properties and make sure color works properly ([8fef263](https://github.com/ionic-team/ionic/commit/8fef263)), closes [#14850](https://github.com/ionic-team/ionic/issues/14850)
-* **angular:** add ion-backdrop ([89e8256](https://github.com/ionic-team/ionic/commit/89e8256)), closes [#14971](https://github.com/ionic-team/ionic/issues/14971)
+* **angular:** add syg-backdrop ([89e8256](https://github.com/ionic-team/ionic/commit/89e8256)), closes [#14971](https://github.com/ionic-team/ionic/issues/14971)
 * **angular:** save internal data ([f84bb76](https://github.com/ionic-team/ionic/commit/f84bb76)), closes [#14888](https://github.com/ionic-team/ionic/issues/14888) [#14885](https://github.com/ionic-team/ionic/issues/14885) [#15054](https://github.com/ionic-team/ionic/issues/15054) [#15050](https://github.com/ionic-team/ionic/issues/15050)
 * **avatar:** document and add custom properties ([6738ab7](https://github.com/ionic-team/ionic/commit/6738ab7)), closes [#14850](https://github.com/ionic-team/ionic/issues/14850)
 * **badge:** add custom properties and make sure color works properly ([9beca98](https://github.com/ionic-team/ionic/commit/9beca98)), closes [#14850](https://github.com/ionic-team/ionic/issues/14850)
@@ -3572,7 +3572,7 @@ The following dependencies need to be updated to resolve build errors
 * **list:** hide the last item border when there are no lines ([#14770](https://github.com/ionic-team/ionic/issues/14770)) ([26f7379](https://github.com/ionic-team/ionic/commit/26f7379)), closes [#14769](https://github.com/ionic-team/ionic/issues/14769)
 * **margin:** adds css variables ([f6c8f3f](https://github.com/ionic-team/ionic/commit/f6c8f3f)), closes [#14798](https://github.com/ionic-team/ionic/issues/14798) [#14826](https://github.com/ionic-team/ionic/issues/14826)
 * **menu-button:** fix sass linting ([d22f04b](https://github.com/ionic-team/ionic/commit/d22f04b))
-* **menu-button:** get proper styles when used inside ion-buttons ([811eee7](https://github.com/ionic-team/ionic/commit/811eee7))
+* **menu-button:** get proper styles when used inside syg-buttons ([811eee7](https://github.com/ionic-team/ionic/commit/811eee7))
 * **modal:** use flex to position modal to make it easier to size ([9488a98](https://github.com/ionic-team/ionic/commit/9488a98)), closes [#14392](https://github.com/ionic-team/ionic/issues/14392)
 * **overlay:** remove global css vars in overlays for local ones ([38b1e47](https://github.com/ionic-team/ionic/commit/38b1e47))
 * **refresher:** find parent ion-content properly ([4eab209](https://github.com/ionic-team/ionic/commit/4eab209)), closes [#14833](https://github.com/ionic-team/ionic/issues/14833)
@@ -3598,7 +3598,7 @@ The following dependencies need to be updated to resolve build errors
 * **anchor:** inner <a> inherits text styles ([9aedfc6](https://github.com/ionic-team/ionic/commit/9aedfc6))
 * **button:** add box-sizing so anchor buttons won't exceed max-width ([9c9f081](https://github.com/ionic-team/ionic/commit/9c9f081)), closes [#14760](https://github.com/ionic-team/ionic/issues/14760)
 * **button:** set display type on host ([89d1526](https://github.com/ionic-team/ionic/commit/89d1526))
-* **button:** submit form w/ ion-button within shadow dom ([4ed8541](https://github.com/ionic-team/ionic/commit/4ed8541)), closes [#14776](https://github.com/ionic-team/ionic/issues/14776)
+* **button:** submit form w/ syg-button within shadow dom ([4ed8541](https://github.com/ionic-team/ionic/commit/4ed8541)), closes [#14776](https://github.com/ionic-team/ionic/issues/14776)
 * **item:** add cursor pointer back to native item ([43f1fec](https://github.com/ionic-team/ionic/commit/43f1fec)), closes [#14743](https://github.com/ionic-team/ionic/issues/14743)
 * **searchbar:** use tag in toolbar context selector ([124b87c](https://github.com/ionic-team/ionic/commit/124b87c))
 * **segment:** add styles for in a color toolbar ([d9e4ca7](https://github.com/ionic-team/ionic/commit/d9e4ca7))
@@ -3710,7 +3710,7 @@ The following dependencies need to be updated to resolve build errors
 * **app:** fix the statusbar-padding to match new structure ([6c2d539](https://github.com/ionic-team/ionic/commit/6c2d539))
 * **back-button:** fix position ([e00da6d](https://github.com/ionic-team/ionic/commit/e00da6d))
 * **capacitor:** detect capacitor native ([23d86eb](https://github.com/ionic-team/ionic/commit/23d86eb))
-* **hover:** remove ion-app .enable-hover css ([a939fa2](https://github.com/ionic-team/ionic/commit/a939fa2))
+* **hover:** remove syg-app .enable-hover css ([a939fa2](https://github.com/ionic-team/ionic/commit/a939fa2))
 * **inputs:** interactive css to rule all them ([1bd5467](https://github.com/ionic-team/ionic/commit/1bd5467))
 * **refresher:** move gesture target to content ([df2faa4](https://github.com/ionic-team/ionic/commit/df2faa4))
 * **router:** change events when URL changes ([ece86ee](https://github.com/ionic-team/ionic/commit/ece86ee))
@@ -3803,7 +3803,7 @@ The following dependencies need to be updated to resolve build errors
 * **fab:** fix fab activation ([a203534](https://github.com/ionic-team/ionic/commit/a203534))
 * **label:** inline position by default ([fde878b](https://github.com/ionic-team/ionic/commit/fde878b))
 * **label:** using prop for position ([b1ee4b8](https://github.com/ionic-team/ionic/commit/b1ee4b8)), closes [#14288](https://github.com/ionic-team/ionic/issues/14288)
-* **mode:** set mode css class on ion-app ([fcb08e1](https://github.com/ionic-team/ionic/commit/fcb08e1))
+* **mode:** set mode css class on syg-app ([fcb08e1](https://github.com/ionic-team/ionic/commit/fcb08e1))
 * **props:** update stencil ([ea24ad6](https://github.com/ionic-team/ionic/commit/ea24ad6))
 * **react:** FrameworkDelegate matches API ([e40a6b0](https://github.com/ionic-team/ionic/commit/e40a6b0))
 * **toast:** account for safe-area on ios ([d984214](https://github.com/ionic-team/ionic/commit/d984214))
@@ -3904,7 +3904,7 @@ The following dependencies need to be updated to resolve build errors
 
 * **all:** absolute positioning ([4fcddad](https://github.com/ionic-team/ionic/commit/4fcddad))
 * **angular:** goback navigation ([7b9a00e](https://github.com/ionic-team/ionic/commit/7b9a00e))
-* **angular:** ion-back-button ([9c789ce](https://github.com/ionic-team/ionic/commit/9c789ce))
+* **angular:** syg-back-button ([9c789ce](https://github.com/ionic-team/ionic/commit/9c789ce))
 * **angular:** stack based navigation ([726938f](https://github.com/ionic-team/ionic/commit/726938f))
 * **avatar:** adjust wide images to fill instead of squish ([b0f8ca5](https://github.com/ionic-team/ionic/commit/b0f8ca5))
 * **back-button:** empty text is a valid value ([eb0ff2f](https://github.com/ionic-team/ionic/commit/eb0ff2f))

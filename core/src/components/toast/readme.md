@@ -1,4 +1,4 @@
-# ion-toast
+# syg-toast
 
 A Toast is a subtle notification commonly used in modern applications. It can be used to provide feedback about an operation or to display a system message. The toast appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app.
 
@@ -34,7 +34,7 @@ interface ToastButton {
 ```typescript
 interface ToastOptions {
   header?: string;
-  message?: string | IonicSafeString;
+  message?: string | SygSafeString;
   cssClass?: string | string[];
   duration?: number;
   buttons?: (ToastButton | string)[];
@@ -91,7 +91,7 @@ export class ToastExample {
     const toast = await this.toastController.create({
       header: 'Toast header',
       message: 'Click to Close',
-      icon: 'information-circle',
+      icon: 'informatsyg-circle',
       position: 'top',
       buttons: [
         {
@@ -124,7 +124,7 @@ export class ToastExample {
 
 ```javascript
 async function presentToast() {
-  const toast = document.createElement('ion-toast');
+  const toast = document.createElement('syg-toast');
   toast.message = 'Your settings have been saved.';
   toast.duration = 2000;
 
@@ -133,10 +133,10 @@ async function presentToast() {
 }
 
 async function presentToastWithOptions() {
-  const toast = document.createElement('ion-toast');
+  const toast = document.createElement('syg-toast');
   toast.header = 'Toast header';
   toast.message = 'Click to Close';
-  toast.icon = 'information-circle',
+  toast.icon = 'informatsyg-circle',
   toast.position = 'top';
   toast.buttons = [
     {
@@ -282,7 +282,7 @@ export class ToastExample {
     const toast = await toastController.create({
       header: 'Toast header',
       message: 'Click to Close',
-      icon: 'information-circle',
+      icon: 'informatsyg-circle',
       position: 'top',
       buttons: [
         {
@@ -309,10 +309,10 @@ export class ToastExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.presentToast()}>Present Toast</ion-button>
-        <ion-button onClick={() => this.presentToastWithOptions()}>Present Toast: Options</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={() => this.presentToast()}>Present Toast</syg-button>
+        <syg-button onClick={() => this.presentToastWithOptions()}>Present Toast: Options</syg-button>
+      </syg-content>
     ];
   }
 }
@@ -323,12 +323,12 @@ export class ToastExample {
 
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="openToast">Open Toast</ion-button>
-      <ion-button @click="openToastOptions">Open Toast: Options</ion-button>
-    </ion-content>
-  </ion-page>
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="openToast">Open Toast</syg-button>
+      <syg-button @click="openToastOptions">Open Toast: Options</syg-button>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script>
@@ -384,14 +384,14 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Toast</ion-button>
-  <ion-toast
+  <syg-button @click="setOpen(true)">Show Toast</syg-button>
+  <syg-toast
     :is-open="isOpenRef"
     message="Your settings have been saved."
     :duration="2000"
     @didDismiss="setOpen(false)"
   >
-  </ion-toast>
+  </syg-toast>
 </template>
 
 <script>
@@ -427,7 +427,7 @@ export default defineComponent({
 | `icon`           | `icon`           | The name of the icon to display, or the path to a valid SVG file. See `ion-icon`. https://ionic.io/ionicons                                                                                                                                                            | `string \| undefined`                                   | `undefined` |
 | `keyboardClose`  | `keyboard-close` | If `true`, the keyboard will be automatically dismissed when the overlay is presented.                                                                                                                                                                                 | `boolean`                                               | `false`     |
 | `leaveAnimation` | --               | Animation to use when the toast is dismissed.                                                                                                                                                                                                                          | `((baseEl: any, opts?: any) => Animation) \| undefined` | `undefined` |
-| `message`        | `message`        | Message to be shown in the toast.                                                                                                                                                                                                                                      | `IonicSafeString \| string \| undefined`                | `undefined` |
+| `message`        | `message`        | Message to be shown in the toast.                                                                                                                                                                                                                                      | `SygSafeString \| string \| undefined`                | `undefined` |
 | `mode`           | `mode`           | The mode determines which platform styles to use.                                                                                                                                                                                                                      | `"ios" \| "md"`                                         | `undefined` |
 | `position`       | `position`       | The position of the toast on the screen.                                                                                                                                                                                                                               | `"bottom" \| "middle" \| "top"`                         | `'bottom'`  |
 | `translucent`    | `translucent`    | If `true`, the toast will be translucent. Only applies when the mode is `"ios"` and the device supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).                                                   | `boolean`                                               | `false`     |
@@ -525,14 +525,14 @@ Type: `Promise<void>`
 ### Depends on
 
 - ion-icon
-- [ion-ripple-effect](../ripple-effect)
+- [syg-ripple-effect](../ripple-effect)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-toast --> ion-icon
-  ion-toast --> ion-ripple-effect
-  style ion-toast fill:#f9f,stroke:#333,stroke-width:4px
+  syg-toast --> ion-icon
+  syg-toast --> syg-ripple-effect
+  style syg-toast fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

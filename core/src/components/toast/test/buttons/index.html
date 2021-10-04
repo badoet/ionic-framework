@@ -9,40 +9,40 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <script type="module">
-    import { toastController } from '../../../../dist/ionic/index.esm.js';
+    import { toastController } from '../../../../dist/syg/index.esm.js';
     window.toastController = toastController;
   </script>
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Toast - Buttons</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Toast - Buttons</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding" id="content">
+    <syg-content class="syg-padding" id="content">
 
       <!-- New way using array of buttons -->
-      <ion-button id="closeArray" expand="block" onclick="presentCloseArrayToast()">
+      <syg-button id="closeArray" expand="block" onclick="presentCloseArrayToast()">
         Close Button Array
-      </ion-button>
+      </syg-button>
 
-      <ion-button id="twoButtons" expand="block" onclick="presentToastWithTwoButtons()">
+      <syg-button id="twoButtons" expand="block" onclick="presentToastWithTwoButtons()">
         Two Buttons
-      </ion-button>
+      </syg-button>
 
-      <ion-button id="multipleButtons" expand="block" onclick="presentToastWithMultipleButtons()">
+      <syg-button id="multipleButtons" expand="block" onclick="presentToastWithMultipleButtons()">
         Multiple Buttons
-      </ion-button>
+      </syg-button>
 
-      <ion-button id="longButton" expand="block" onclick="presentToastWithLongButton()">
+      <syg-button id="longButton" expand="block" onclick="presentToastWithLongButton()">
         Really Long Button
-      </ion-button>
-    </ion-content>
+      </syg-button>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     window.addEventListener('ionToastDidDismiss', function (e) { console.log('didDismiss', e) })

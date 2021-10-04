@@ -9,146 +9,146 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Floating Action Button - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Floating Action Button - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding" id="content" fullscreen>
+    <syg-content class="syg-padding" id="content" fullscreen>
       <f></f>
       <f></f>
 
       <pre id="log" style="right:10px; bottom:50px; text-shadow: 0 0 2px rgba(0, 0, 0, 0.24);" slot="fixed">log</pre>
-      <ion-button>Test</ion-button>
-      <ion-fab-button disabled href="#path" onclick="throw 'no clickable'">FAB</ion-fab-button>
+      <syg-button>Test</syg-button>
+      <syg-fab-button disabled href="#path" onclick="throw 'no clickable'">FAB</syg-fab-button>
 
-      <ion-fab vertical="top" horizontal="end" edge id="fab1" slot="fixed">
-        <ion-fab-button onclick="clickMainFAB('fab1')" size="small" class="e2eFabTopRight">
+      <syg-fab vertical="top" horizontal="end" edge id="fab1" slot="fixed">
+        <syg-fab-button onclick="clickMainFAB('fab1')" size="small" class="e2eFabTopRight">
           <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-list>
-          <ion-fab-button onclick="openSocial('facebook', 'fab1')">
+        </syg-fab-button>
+        <syg-fab-list>
+          <syg-fab-button onclick="openSocial('facebook', 'fab1')">
             <ion-icon name="logo-facebook"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('twitter', 'fab1')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('twitter', 'fab1')">
             <ion-icon name="logo-twitter"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('vimeo', 'fab1')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('vimeo', 'fab1')">
             <ion-icon name="logo-vimeo"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('instagram', 'fab1')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('instagram', 'fab1')">
             <ion-icon name="logo-instagram"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-      </ion-fab>
+          </syg-fab-button>
+        </syg-fab-list>
+      </syg-fab>
 
-      <ion-fab vertical="bottom" horizontal="end" edge id="fab2" slot="fixed">
-        <ion-fab-button onclick="clickMainFAB('fab2')" color="dark" class="e2eFabBottomRight" disabled>
+      <syg-fab vertical="bottom" horizontal="end" edge id="fab2" slot="fixed">
+        <syg-fab-button onclick="clickMainFAB('fab2')" color="dark" class="e2eFabBottomRight" disabled>
           <ion-icon name="arrow-back-circle"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-list side="start">
-          <ion-fab-button onclick="openSocial('facebook', 'fab2')">
+        </syg-fab-button>
+        <syg-fab-list side="start">
+          <syg-fab-button onclick="openSocial('facebook', 'fab2')">
             <ion-icon name="logo-facebook"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('twitter', 'fab2')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('twitter', 'fab2')">
             <ion-icon name="logo-twitter"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('vimeo', 'fab2')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('vimeo', 'fab2')">
             <ion-icon name="logo-vimeo"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('instagram', 'fab2')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('instagram', 'fab2')">
             <ion-icon name="logo-instagram"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-      </ion-fab>
+          </syg-fab-button>
+        </syg-fab-list>
+      </syg-fab>
 
-      <ion-fab vertical="top" horizontal="start" id="fab3" slot="fixed">
-        <ion-fab-button onclick="clickMainFAB('fab3')" color="secondary" class="e2eFabTopLeft">
+      <syg-fab vertical="top" horizontal="start" id="fab3" slot="fixed">
+        <syg-fab-button onclick="clickMainFAB('fab3')" color="secondary" class="e2eFabTopLeft">
           <ion-icon name="arrow-forward-circle"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-list side="end">
-          <ion-fab-button onclick="openSocial('facebook', 'fab3')">
+        </syg-fab-button>
+        <syg-fab-list side="end">
+          <syg-fab-button onclick="openSocial('facebook', 'fab3')">
             <ion-icon name="logo-facebook"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('twitter', 'fab3')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('twitter', 'fab3')">
             <ion-icon name="logo-twitter"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('vimeo', 'fab3')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('vimeo', 'fab3')">
             <ion-icon name="logo-vimeo"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('instagram', 'fab3')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('instagram', 'fab3')">
             <ion-icon name="logo-instagram"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-      </ion-fab>
+          </syg-fab-button>
+        </syg-fab-list>
+      </syg-fab>
 
-      <ion-fab vertical="bottom" horizontal="start" id="fab4" slot="fixed">
-        <ion-fab-button onclick="clickMainFAB('fab4')" color="light" class="e2eFabBottomLeft">
+      <syg-fab vertical="bottom" horizontal="start" id="fab4" slot="fixed">
+        <syg-fab-button onclick="clickMainFAB('fab4')" color="light" class="e2eFabBottomLeft">
           <ion-icon name="arrow-up-circle"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-list side="top">
-          <ion-fab-button onclick="openSocial('facebook', 'fab4')">
+        </syg-fab-button>
+        <syg-fab-list side="top">
+          <syg-fab-button onclick="openSocial('facebook', 'fab4')">
             <ion-icon name="logo-facebook"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('twitter', 'fab4')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('twitter', 'fab4')">
             <ion-icon name="logo-twitter"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('vimeo', 'fab4')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('vimeo', 'fab4')">
             <ion-icon name="logo-vimeo"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button onclick="openSocial('instagram', 'fab4')">
+          </syg-fab-button>
+          <syg-fab-button onclick="openSocial('instagram', 'fab4')">
             <ion-icon name="logo-instagram"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-      </ion-fab>
+          </syg-fab-button>
+        </syg-fab-list>
+      </syg-fab>
 
-      <ion-fab vertical="center" horizontal="center" id="fab5" slot="fixed">
-        <ion-fab-button onclick="clickMainFAB('fab5')" class="e2eFabCenter">
+      <syg-fab vertical="center" horizontal="center" id="fab5" slot="fixed">
+        <syg-fab-button onclick="clickMainFAB('fab5')" class="e2eFabCenter">
           <ion-icon name="share"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-list side="top">
-          <ion-fab-button onclick="openSocial('vimeo', 'fab5')" color="primary">
+        </syg-fab-button>
+        <syg-fab-list side="top">
+          <syg-fab-button onclick="openSocial('vimeo', 'fab5')" color="primary">
             <ion-icon name="logo-vimeo"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-        <ion-fab-list side="bottom">
-          <ion-fab-button onclick="openSocial('facebook', 'fab5')" color="secondary">
+          </syg-fab-button>
+        </syg-fab-list>
+        <syg-fab-list side="bottom">
+          <syg-fab-button onclick="openSocial('facebook', 'fab5')" color="secondary">
             <ion-icon name="logo-facebook"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-        <ion-fab-list side="start">
-          <ion-fab-button onclick="openSocial('instagram', 'fab5')" color="light">
+          </syg-fab-button>
+        </syg-fab-list>
+        <syg-fab-list side="start">
+          <syg-fab-button onclick="openSocial('instagram', 'fab5')" color="light">
             <ion-icon name="logo-instagram"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-        <ion-fab-list side="end">
-          <ion-fab-button onclick="openSocial('twitter', 'fab5')" color="dark">
+          </syg-fab-button>
+        </syg-fab-list>
+        <syg-fab-list side="end">
+          <syg-fab-button onclick="openSocial('twitter', 'fab5')" color="dark">
             <ion-icon name="logo-twitter"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-      </ion-fab>
+          </syg-fab-button>
+        </syg-fab-list>
+      </syg-fab>
 
-      <ion-fab horizontal="end" vertical="center" slot="fixed">
-        <ion-fab-button color="danger" onclick="add()">
+      <syg-fab horizontal="end" vertical="center" slot="fixed">
+        <syg-fab-button color="danger" onclick="add()">
           <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-    </ion-content>
+        </syg-fab-button>
+      </syg-fab>
+    </syg-content>
 
-    <ion-footer>
-      <ion-toolbar>
-        <ion-buttons slot="secondary">
-          <ion-button onclick="closeLists()">Close</ion-button>
-        </ion-buttons>
-        <ion-title>Footer</ion-title>
-      </ion-toolbar>
-    </ion-footer>
+    <syg-footer>
+      <syg-toolbar>
+        <syg-buttons slot="secondary">
+          <syg-button onclick="closeLists()">Close</syg-button>
+        </syg-buttons>
+        <syg-title>Footer</syg-title>
+      </syg-toolbar>
+    </syg-footer>
 
     <script>
       function insertAfter(el, referenceNode) {
@@ -180,7 +180,7 @@
       }
 
       function closeLists() {
-        var fabs = document.querySelectorAll('ion-fab');
+        var fabs = document.querySelectorAll('syg-fab');
 
         for (var i = 0; i < fabs.length; i++) {
           fabs[i].activated = false;
@@ -201,7 +201,7 @@
         background: yellow;
       }
     </style>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

@@ -10,13 +10,13 @@ test.skip('nav: basic', async () => {
 
   expect(await page.compareScreenshot()).toMatchScreenshot();
 
-  page.click('page-one ion-button.next');
+  page.click('page-one syg-button.next');
   await page.waitForTimeout(navChanged);
-  page.click('page-two ion-button.next');
+  page.click('page-two syg-button.next');
   await page.waitForTimeout(navChanged);
-  page.click('page-three ion-back-button');
+  page.click('page-three syg-back-button');
   await page.waitForTimeout(navChanged);
-  page.click('page-two ion-back-button');
+  page.click('page-two syg-back-button');
   await page.waitForTimeout(navChanged);
 
   expect(await page.compareScreenshot('stack traversal')).toMatchScreenshot();

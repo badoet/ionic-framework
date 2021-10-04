@@ -9,26 +9,26 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <script type="module">
-    import { pickerController } from '../../../../dist/ionic/index.esm.js';
+    import { pickerController } from '../../../../dist/syg/index.esm.js';
     window.pickerController = pickerController;
   </script>
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Picker - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Picker - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding">
-      <ion-button id="basic" expand="block" onclick="presentPicker()">Show Picker</ion-button>
-      <ion-button id="custom" expand="block" onclick="presentPicker('my-custom-class')">Show Custom Picker</ion-button>
-    </ion-content>
+    <syg-content class="syg-padding">
+      <syg-button id="basic" expand="block" onclick="presentPicker()">Show Picker</syg-button>
+      <syg-button id="custom" expand="block" onclick="presentPicker('my-custom-class')">Show Custom Picker</syg-button>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <style>
     .my-custom-class {

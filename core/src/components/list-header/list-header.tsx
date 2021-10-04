@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color } from '../../interface';
 import { createColorClasses } from '../../utils/theme';
 
@@ -8,7 +8,7 @@ import { createColorClasses } from '../../utils/theme';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-list-header',
+  tag: 'syg-list-header',
   styleUrls: {
     ios: 'list-header.ios.scss',
     md: 'list-header.md.scss'
@@ -31,7 +31,7 @@ export class ListHeader implements ComponentInterface {
 
   render() {
     const { lines } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     return (
       <Host

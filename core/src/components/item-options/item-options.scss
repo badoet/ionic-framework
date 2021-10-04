@@ -3,7 +3,7 @@
 // Item Options
 // --------------------------------------------------
 
-ion-item-options {
+syg-item-options {
   @include multi-dir() {
     /* stylelint-disable property-disallowed-list */
     top: 0;
@@ -56,33 +56,33 @@ ion-item-options {
   }
 }
 
-.item-options-start ion-item-option:first-child {
+.item-options-start syg-item-option:first-child {
   @include padding-horizontal(null, var(--ion-safe-area-left));
 
 }
 
-.item-options-end ion-item-option:last-child {
+.item-options-end syg-item-option:last-child {
   @include padding-horizontal(null, var(--ion-safe-area-right));
 
 }
 
 .item-sliding-active-slide {
   @include rtl() {
-    &.item-sliding-active-options-start ion-item-options:not(.item-options-end) {
+    &.item-sliding-active-options-start syg-item-options:not(.item-options-end) {
       width: 100%;
 
       visibility: visible;
     }
   }
 
-  ion-item-options {
+  syg-item-options {
     display: flex;
 
     visibility: hidden;
   }
 
   &.item-sliding-active-options-start .item-options-start,
-  &.item-sliding-active-options-end ion-item-options:not(.item-options-start) {
+  &.item-sliding-active-options-end syg-item-options:not(.item-options-start) {
     width: 100%;
 
     visibility: visible;

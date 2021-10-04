@@ -8,28 +8,28 @@ import { Component, h } from '@stencil/core';
 export class RadioExample {
   render() {
     return [
-      <ion-list>
-        <ion-radio-group value="biff">
-          <ion-list-header>
-            <ion-label>Name</ion-label>
-          </ion-list-header>
+      <syg-list>
+        <syg-radio-group value="biff">
+          <syg-list-header>
+            <syg-label>Name</syg-label>
+          </syg-list-header>
 
-          <ion-item>
-            <ion-label>Biff</ion-label>
-            <ion-radio slot="start" value="biff"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Biff</syg-label>
+            <syg-radio slot="start" value="biff"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Griff</ion-label>
-            <ion-radio slot="start" value="griff"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Griff</syg-label>
+            <syg-radio slot="start" value="griff"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Buford</ion-label>
-            <ion-radio slot="start" value="buford"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
+          <syg-item>
+            <syg-label>Buford</syg-label>
+            <syg-radio slot="start" value="buford"></syg-radio>
+          </syg-item>
+        </syg-radio-group>
+      </syg-list>
     ];
   }
 }

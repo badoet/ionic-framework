@@ -9,26 +9,26 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body onLoad="render()">
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Reorder - Data</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Reorder - Data</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-list>
-        <ion-reorder-group id="reorderGroup" disabled="false">
+    <syg-content id="content">
+      <syg-list>
+        <syg-reorder-group id="reorderGroup" disabled="false">
           <!-- items will be inserted here -->
-        </ion-reorder-group>
-      </ion-list>
-    </ion-content>
+        </syg-reorder-group>
+      </syg-list>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     let items = [];
@@ -41,10 +41,10 @@
       let html = '';
       for(let item of items) {
         html += `
-          <ion-item>
-            <ion-label>${item}</ion-label>
-            <ion-reorder slot="end"></ion-reorder>
-          </ion-item>`;
+          <syg-item>
+            <syg-label>${item}</syg-label>
+            <syg-reorder slot="end"></syg-reorder>
+          </syg-item>`;
       }
       reorderGroup.innerHTML = html;
     }

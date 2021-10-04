@@ -1,57 +1,57 @@
 ```html
-<ion-item>
-  <ion-label>Select</ion-label>
-  <ion-select>
-    <ion-select-option value="brown">Brown</ion-select-option>
-    <ion-select-option value="blonde">Blonde</ion-select-option>
-    <ion-select-option value="black">Black</ion-select-option>
-    <ion-select-option value="red">Red</ion-select-option>
-  </ion-select>
-</ion-item>
+<syg-item>
+  <syg-label>Select</syg-label>
+  <syg-select>
+    <syg-select-option value="brown">Brown</syg-select-option>
+    <syg-select-option value="blonde">Blonde</syg-select-option>
+    <syg-select-option value="black">Black</syg-select-option>
+    <syg-select-option value="red">Red</syg-select-option>
+  </syg-select>
+</syg-item>
 ```
 
 ### Customizing Options
 
 ```html
-<ion-item>
-  <ion-label>Select: Alert Interface</ion-label>
-  <ion-select class="custom-options">
-    <ion-select-option value="brown">Brown</ion-select-option>
-    <ion-select-option value="blonde">Blonde</ion-select-option>
-    <ion-select-option value="black">Black</ion-select-option>
-    <ion-select-option value="red">Red</ion-select-option>
-  </ion-select>
-</ion-item>
+<syg-item>
+  <syg-label>Select: Alert Interface</syg-label>
+  <syg-select class="custom-options">
+    <syg-select-option value="brown">Brown</syg-select-option>
+    <syg-select-option value="blonde">Blonde</syg-select-option>
+    <syg-select-option value="black">Black</syg-select-option>
+    <syg-select-option value="red">Red</syg-select-option>
+  </syg-select>
+</syg-item>
 
-<ion-item>
-  <ion-label>Select: Alert Interface (Multiple Selection)</ion-label>
-  <ion-select class="custom-options" multiple="true">
-    <ion-select-option value="brown">Brown</ion-select-option>
-    <ion-select-option value="blonde">Blonde</ion-select-option>
-    <ion-select-option value="black">Black</ion-select-option>
-    <ion-select-option value="red">Red</ion-select-option>
-  </ion-select>
-</ion-item>
+<syg-item>
+  <syg-label>Select: Alert Interface (Multiple Selection)</syg-label>
+  <syg-select class="custom-options" multiple="true">
+    <syg-select-option value="brown">Brown</syg-select-option>
+    <syg-select-option value="blonde">Blonde</syg-select-option>
+    <syg-select-option value="black">Black</syg-select-option>
+    <syg-select-option value="red">Red</syg-select-option>
+  </syg-select>
+</syg-item>
 
-<ion-item>
-  <ion-label>Select: Popover Interface</ion-label>
-  <ion-select interface="popover" class="custom-options">
-    <ion-select-option value="brown">Brown</ion-select-option>
-    <ion-select-option value="blonde">Blonde</ion-select-option>
-    <ion-select-option value="black">Black</ion-select-option>
-    <ion-select-option value="red">Red</ion-select-option>
-  </ion-select>
-</ion-item>
+<syg-item>
+  <syg-label>Select: Popover Interface</syg-label>
+  <syg-select interface="popover" class="custom-options">
+    <syg-select-option value="brown">Brown</syg-select-option>
+    <syg-select-option value="blonde">Blonde</syg-select-option>
+    <syg-select-option value="black">Black</syg-select-option>
+    <syg-select-option value="red">Red</syg-select-option>
+  </syg-select>
+</syg-item>
 
-<ion-item>
-  <ion-label>Select: Action Sheet Interface</ion-label>
-  <ion-select interface="action-sheet" class="custom-options">
-    <ion-select-option value="brown">Brown</ion-select-option>
-    <ion-select-option value="blonde">Blonde</ion-select-option>
-    <ion-select-option value="black">Black</ion-select-option>
-    <ion-select-option value="red">Red</ion-select-option>
-  </ion-select>
-</ion-item>
+<syg-item>
+  <syg-label>Select: Action Sheet Interface</syg-label>
+  <syg-select interface="action-sheet" class="custom-options">
+    <syg-select-option value="brown">Brown</syg-select-option>
+    <syg-select-option value="blonde">Blonde</syg-select-option>
+    <syg-select-option value="black">Black</syg-select-option>
+    <syg-select-option value="red">Red</syg-select-option>
+  </syg-select>
+</syg-item>
 ```
 
 ```css
@@ -103,18 +103,18 @@ for (var i = 0; i < selects.length; i++) {
 
 ### Customizing Individual Options
 
-To customize an individual option, set a class on the `ion-select-option`:
+To customize an individual option, set a class on the `syg-select-option`:
 
 ```html
-<ion-item>
-  <ion-label>Select</ion-label>
-  <ion-select class="custom-options" interface="popover">
-    <ion-select-option value="brown" class="brown-option">Brown</ion-select-option>
-    <ion-select-option value="blonde">Blonde</ion-select-option>
-    <ion-select-option value="black">Black</ion-select-option>
-    <ion-select-option value="red">Red</ion-select-option>
-  </ion-select>
-</ion-item>
+<syg-item>
+  <syg-label>Select</syg-label>
+  <syg-select class="custom-options" interface="popover">
+    <syg-select-option value="brown" class="brown-option">Brown</syg-select-option>
+    <syg-select-option value="blonde">Blonde</syg-select-option>
+    <syg-select-option value="black">Black</syg-select-option>
+    <syg-select-option value="red">Red</syg-select-option>
+  </syg-select>
+</syg-item>
 ```
 
 ```css

@@ -91,7 +91,7 @@
 // Material Design Item Divider Avatar
 // --------------------------------------------------
 
-::slotted(ion-avatar) {
+::slotted(syg-avatar) {
   width: $item-md-avatar-width;
   height: $item-md-avatar-height;
 }
@@ -108,17 +108,17 @@
 // Material Design Item Divider Avatar/Thumbnail
 // --------------------------------------------------
 
-::slotted(ion-avatar),
+::slotted(syg-avatar),
 ::slotted(ion-thumbnail) {
   @include margin($item-md-media-slot-margin-top, $item-md-media-slot-margin-end, $item-md-media-slot-margin-bottom, $item-md-media-slot-margin-start);
 }
 
-::slotted(ion-avatar[slot="start"]),
+::slotted(syg-avatar[slot="start"]),
 ::slotted(ion-thumbnail[slot="start"]) {
   @include margin-horizontal($item-md-media-start-slot-margin-start, $item-md-media-start-slot-margin-end);
 }
 
-::slotted(ion-avatar[slot="end"]),
+::slotted(syg-avatar[slot="end"]),
 ::slotted(ion-thumbnail[slot="end"]) {
   @include margin-horizontal($item-md-media-end-slot-margin-start, $item-md-media-end-slot-margin-end);
 }

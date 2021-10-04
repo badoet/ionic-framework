@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, Color, RouterDirection } from '../../interface';
 import { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
 import { hasShadowDom, inheritAttributes } from '../../utils/helpers';
@@ -17,7 +17,7 @@ import { createColorClasses, hostContext, openURL } from '../../utils/theme';
  * @part native - The native HTML button or anchor element that wraps all child elements.
  */
 @Component({
-  tag: 'ion-button',
+  tag: 'syg-button',
   styleUrls: {
     ios: 'button.ios.scss',
     md: 'button.md.scss'
@@ -132,9 +132,9 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
   @Event() ionBlur!: EventEmitter<void>;
 
   componentWillLoad() {
-    this.inToolbar = !!this.el.closest('ion-buttons');
-    this.inListHeader = !!this.el.closest('ion-list-header');
-    this.inItem = !!this.el.closest('ion-item') || !!this.el.closest('ion-item-divider');
+    this.inToolbar = !!this.el.closest('syg-buttons');
+    this.inListHeader = !!this.el.closest('syg-list-header');
+    this.inItem = !!this.el.closest('syg-item') || !!this.el.closest('syg-item-divider');
     this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
   }
 
@@ -185,7 +185,7 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const { buttonType, type, disabled, rel, target, size, href, color, expand, hasIconOnly, shape, strong, inheritedAttributes } = this;
     const finalSize = size === undefined && this.inItem ? 'small' : size;
     const TagType = href === undefined ? 'button' : 'a' as any;
@@ -214,12 +214,12 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
           [`${buttonType}-${shape}`]: shape !== undefined,
           [`${buttonType}-${fill}`]: true,
           [`${buttonType}-strong`]: strong,
-          'in-toolbar': hostContext('ion-toolbar', this.el),
-          'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
+          'in-toolbar': hostContext('syg-toolbar', this.el),
+          'in-toolbar-color': hostContext('syg-toolbar[color]', this.el),
           'button-has-icon-only': hasIconOnly,
           'button-disabled': disabled,
-          'ion-activatable': true,
-          'ion-focusable': true,
+          'syg-activatable': true,
+          'syg-focusable': true,
         })}
       >
         <TagType
@@ -237,7 +237,7 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
             <slot></slot>
             <slot name="end"></slot>
           </span>
-          {mode === 'md' && <ion-ripple-effect type={this.rippleType}></ion-ripple-effect>}
+          {mode === 'md' && <syg-ripple-effect type={this.rippleType}></syg-ripple-effect>}
         </TagType>
       </Host>
     );

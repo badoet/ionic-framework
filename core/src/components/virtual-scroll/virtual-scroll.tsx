@@ -7,7 +7,7 @@ import { CELL_TYPE_FOOTER, CELL_TYPE_HEADER, CELL_TYPE_ITEM } from './constants'
 import { Range, calcCells, calcHeightIndex, doRender, findCellIndex, getRange, getShouldUpdate, getViewport, inplaceUpdate, positionForIndex, resizeBuffer, updateVDom } from './virtual-scroll-utils';
 
 @Component({
-  tag: 'ion-virtual-scroll',
+  tag: 'syg-virtual-scroll',
   styleUrl: 'virtual-scroll.scss'
 })
 export class VirtualScroll implements ComponentInterface {
@@ -27,7 +27,7 @@ export class VirtualScroll implements ComponentInterface {
   private lastItemLen = 0;
   private rmEvent: (() => void) | undefined;
 
-  @Element() el!: HTMLIonVirtualScrollElement;
+  @Element() el!: HTMLSygVirtualScrollElement;
 
   @State() totalHeight = 0;
 
@@ -98,7 +98,7 @@ export class VirtualScroll implements ComponentInterface {
   /**
    * An optional function that maps each item within their height.
    * When this function is provides, heavy optimizations and fast path can be taked by
-   * `ion-virtual-scroll` leading to massive performance improvements.
+   * `syg-virtual-scroll` leading to massive performance improvements.
    *
    * This function allows to skip all DOM reads, which can be Doing so leads
    * to massive performance
@@ -154,13 +154,13 @@ export class VirtualScroll implements ComponentInterface {
   }
 
   componentWillLoad() {
-    console.warn(`[Deprecation Warning]: ion-virtual-scroll has been deprecated and will be removed in Ionic Framework v7.0. See https://ionicframework.com/docs/angular/virtual-scroll for migration steps.`);
+    console.warn(`[Deprecation Warning]: syg-virtual-scroll has been deprecated and will be removed in Sygic Framework v7.0. See https://ionicframework.com/docs/angular/virtual-scroll for migration steps.`);
   }
 
   async connectedCallback() {
-    const contentEl = this.el.closest('ion-content');
+    const contentEl = this.el.closest('syg-content');
     if (!contentEl) {
-      console.error('<ion-virtual-scroll> must be used inside an <ion-content>');
+      console.error('<syg-virtual-scroll> must be used inside an <syg-content>');
       return;
     }
     this.scrollEl = await contentEl.getScrollElement();

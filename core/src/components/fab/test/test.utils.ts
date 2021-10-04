@@ -78,11 +78,11 @@ const getFabComponent = async (page: any, selector: string) => {
 };
 
 const getFabButton = async (fabComponent: any) => {
-  return fabComponent.find('ion-fab-button');
+  return fabComponent.find('syg-fab-button');
 };
 
 const getFabList = async (fabComponent: any) => {
-  return fabComponent.find('ion-fab-list');
+  return fabComponent.find('syg-fab-list');
 };
 
 const ensureFabState = async (fab: any, state: string) => {

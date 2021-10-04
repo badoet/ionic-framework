@@ -1,6 +1,6 @@
-# ion-item-option
+# syg-item-option
 
-The option button for an `ion-item-sliding`. Must be placed inside of an `<ion-item-options>`.
+The option button for an `syg-item-sliding`. Must be placed inside of an `<syg-item-options>`.
 You can combine the `ionSwipe` event and the `expandable` directive to create a full swipe
 action for the item.
 
@@ -53,13 +53,13 @@ action for the item.
 
 ### Depends on
 
-- [ion-ripple-effect](../ripple-effect)
+- [syg-ripple-effect](../ripple-effect)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-item-option --> ion-ripple-effect
-  style ion-item-option fill:#f9f,stroke:#333,stroke-width:4px
+  syg-item-option --> syg-ripple-effect
+  style syg-item-option fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Host, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 
 @Component({
-  tag: 'ion-avatar',
+  tag: 'syg-avatar',
   styleUrls: {
     ios: 'avatar.ios.scss',
     md: 'avatar.md.scss'
@@ -14,7 +14,7 @@ export class Avatar implements ComponentInterface {
 
   render() {
     return (
-      <Host class={getIonMode(this)}>
+      <Host class={getSygMode(this)}>
         <slot></slot>
       </Host>
     );

@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { componentOnReady } from '../../utils/helpers'
 
 import { SwiperInterface, SwiperOptions } from './swiper/swiper-interface';
@@ -9,7 +9,7 @@ import { SwiperInterface, SwiperOptions } from './swiper/swiper-interface';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-slides',
+  tag: 'syg-slides',
   styleUrls: {
     ios: 'slides.ios.scss',
     md: 'slides.md.scss'
@@ -27,7 +27,7 @@ export class Slides implements ComponentInterface {
   private syncSwiper?: SwiperInterface;
   private didInit = false;
 
-  @Element() el!: HTMLIonSlidesElement;
+  @Element() el!: HTMLSygSlidesElement;
 
   /**
    * Options to pass to the swiper instance.
@@ -137,7 +137,7 @@ export class Slides implements ComponentInterface {
   @Event() ionSlideTouchEnd!: EventEmitter<void>;
 
   componentWillLoad() {
-    console.warn(`[Deprecation Warning]: ion-slides has been deprecated and will be removed in Ionic Framework v7.0. We recommend using the framework-specific integrations that Swiper.js provides, allowing for faster bug fixes and an improved developer experience. See https://ionicframework.com/docs/api/slides for more information including migration steps.`);
+    console.warn(`[Deprecation Warning]: syg-slides has been deprecated and will be removed in Sygic Framework v7.0. We recommend using the framework-specific integrations that Swiper.js provides, allowing for faster bug fixes and an improved developer experience. See https://ionicframework.com/docs/api/slides for more information including migration steps.`);
   }
 
   connectedCallback() {
@@ -513,7 +513,7 @@ export class Slides implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{
@@ -537,6 +537,6 @@ export class Slides implements ComponentInterface {
 
 const waitForSlides = (el: HTMLElement) => {
   return Promise.all(
-    Array.from(el.querySelectorAll('ion-slide')).map(s => new Promise(resolve => componentOnReady(s, resolve)))
+    Array.from(el.querySelectorAll('syg-slide')).map(s => new Promise(resolve => componentOnReady(s, resolve)))
   );
 };

@@ -79,7 +79,7 @@
   }
 }
 
-ion-backdrop {
+syg-backdrop {
   display: none;
 
   opacity: .01;
@@ -143,7 +143,7 @@ ion-backdrop {
   box-shadow: none !important;
 }
 
-:host(.menu-pane-visible) ion-backdrop {
+:host(.menu-pane-visible) syg-backdrop {
   display: hidden !important;
   /* stylelint-enable declaration-no-important */
 }

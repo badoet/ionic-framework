@@ -4,8 +4,8 @@ import { clamp, raf } from '../../../utils/helpers';
 import { getBackdropValueForSheet } from '../utils';
 
 export const createSheetGesture = (
-  baseEl: HTMLIonModalElement,
-  backdropEl: HTMLIonBackdropElement,
+  baseEl: HTMLSygModalElement,
+  backdropEl: HTMLSygBackdropElement,
   wrapperEl: HTMLElement,
   initialBreakpoint: number,
   backdropBreakpoint: number,
@@ -34,7 +34,7 @@ export const createSheetGesture = (
     BACKDROP_KEYFRAMES: (backdropBreakpoint !== 0) ? customBackdrop : defaultBackdrop
   };
 
-  const contentEl = baseEl.querySelector('ion-content');
+  const contentEl = baseEl.querySelector('syg-content');
   const height = wrapperEl.clientHeight;
   let currentBreakpoint = initialBreakpoint;
   let offset = 0;
@@ -74,7 +74,7 @@ export const createSheetGesture = (
      * the gesture should not start to
      * allow for scrolling on the content.
      */
-    const content = (detail.event.target! as HTMLElement).closest('ion-content');
+    const content = (detail.event.target! as HTMLElement).closest('syg-content');
 
     if (currentBreakpoint === 1 && content) {
       return false;

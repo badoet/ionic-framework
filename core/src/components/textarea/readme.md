@@ -1,4 +1,4 @@
-# ion-textarea
+# syg-textarea
 
 The textarea component is used for multi-line text input. A native textarea element is rendered inside of the component. The user experience and interactivity of the textarea component is improved by having control over the native textarea.
 
@@ -36,40 +36,40 @@ interface TextareaCustomEvent extends CustomEvent {
 
 ```html
 <!-- Default textarea -->
-<ion-textarea></ion-textarea>
+<syg-textarea></syg-textarea>
 
 <!-- Textarea in an item with a placeholder -->
-<ion-item>
-  <ion-textarea placeholder="Enter more information here..."></ion-textarea>
-</ion-item>
+<syg-item>
+  <syg-textarea placeholder="Enter more information here..."></syg-textarea>
+</syg-item>
 
 <!-- Textarea in an item with a floating label -->
-<ion-item>
-  <ion-label position="floating">Description</ion-label>
-  <ion-textarea></ion-textarea>
-</ion-item>
+<syg-item>
+  <syg-label position="floating">Description</syg-label>
+  <syg-textarea></syg-textarea>
+</syg-item>
 
 <!-- Disabled and readonly textarea in an item with a stacked label -->
-<ion-item>
-  <ion-label position="stacked">Summary</ion-label>
-  <ion-textarea
+<syg-item>
+  <syg-label position="stacked">Summary</syg-label>
+  <syg-textarea
     disabled
     readonly
     value="Ionic enables developers to build performant, high-quality mobile apps.">
-  </ion-textarea>
-</ion-item>
+  </syg-textarea>
+</syg-item>
 
 <!-- Textarea that clears the value on edit -->
-<ion-item>
-  <ion-label>Comment</ion-label>
-  <ion-textarea clearOnEdit="true"></ion-textarea>
-</ion-item>
+<syg-item>
+  <syg-label>Comment</syg-label>
+  <syg-textarea clearOnEdit="true"></syg-textarea>
+</syg-item>
 
 <!-- Textarea with custom number of rows and cols -->
-<ion-item>
-  <ion-label>Notes</ion-label>
-  <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
-</ion-item>
+<syg-item>
+  <syg-label>Notes</syg-label>
+  <syg-textarea rows="6" cols="20" placeholder="Enter any notes here..."></syg-textarea>
+</syg-item>
 ```
 
 
@@ -77,40 +77,40 @@ interface TextareaCustomEvent extends CustomEvent {
 
 ```html
 <!-- Default textarea -->
-<ion-textarea></ion-textarea>
+<syg-textarea></syg-textarea>
 
 <!-- Textarea in an item with a placeholder -->
-<ion-item>
-  <ion-textarea placeholder="Enter more information here..."></ion-textarea>
-</ion-item>
+<syg-item>
+  <syg-textarea placeholder="Enter more information here..."></syg-textarea>
+</syg-item>
 
 <!-- Textarea in an item with a floating label -->
-<ion-item>
-  <ion-label position="floating">Description</ion-label>
-  <ion-textarea></ion-textarea>
-</ion-item>
+<syg-item>
+  <syg-label position="floating">Description</syg-label>
+  <syg-textarea></syg-textarea>
+</syg-item>
 
 <!-- Disabled and readonly textarea in an item with a stacked label -->
-<ion-item>
-  <ion-label position="stacked">Summary</ion-label>
-  <ion-textarea
+<syg-item>
+  <syg-label position="stacked">Summary</syg-label>
+  <syg-textarea
     disabled
     readonly
     value="Ionic enables developers to build performant, high-quality mobile apps.">
-  </ion-textarea>
-</ion-item>
+  </syg-textarea>
+</syg-item>
 
 <!-- Textarea that clears the value on edit -->
-<ion-item>
-  <ion-label>Comment</ion-label>
-  <ion-textarea clear-on-edit="true"></ion-textarea>
-</ion-item>
+<syg-item>
+  <syg-label>Comment</syg-label>
+  <syg-textarea clear-on-edit="true"></syg-textarea>
+</syg-item>
 
 <!-- Textarea with custom number of rows and cols -->
-<ion-item>
-  <ion-label>Notes</ion-label>
-  <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
-</ion-item>
+<syg-item>
+  <syg-label>Notes</syg-label>
+  <syg-textarea rows="6" cols="20" placeholder="Enter any notes here..."></syg-textarea>
+</syg-item>
 ```
 
 
@@ -190,40 +190,40 @@ export class TextareaExample {
   render() {
     return [
       // Default textarea
-      <ion-textarea></ion-textarea>,
+      <syg-textarea></syg-textarea>,
 
       // Textarea in an item with a placeholder
-      <ion-item>
-        <ion-textarea placeholder="Enter more information here..."></ion-textarea>
-      </ion-item>,
+      <syg-item>
+        <syg-textarea placeholder="Enter more information here..."></syg-textarea>
+      </syg-item>,
 
       // Textarea in an item with a floating label
-      <ion-item>
-        <ion-label position="floating">Description</ion-label>
-        <ion-textarea></ion-textarea>
-      </ion-item>,
+      <syg-item>
+        <syg-label position="floating">Description</syg-label>
+        <syg-textarea></syg-textarea>
+      </syg-item>,
 
       // Disabled and readonly textarea in an item with a stacked label
-      <ion-item>
-        <ion-label position="stacked">Summary</ion-label>
-        <ion-textarea
+      <syg-item>
+        <syg-label position="stacked">Summary</syg-label>
+        <syg-textarea
           disabled
           readonly
           value="Ionic enables developers to build performant, high-quality mobile apps.">
-        </ion-textarea>
-      </ion-item>,
+        </syg-textarea>
+      </syg-item>,
 
       // Textarea that clears the value on edit
-      <ion-item>
-        <ion-label>Comment</ion-label>
-        <ion-textarea clearOnEdit={true}></ion-textarea>
-      </ion-item>,
+      <syg-item>
+        <syg-label>Comment</syg-label>
+        <syg-textarea clearOnEdit={true}></syg-textarea>
+      </syg-item>,
 
       // Textarea with custom number of rows and cols
-      <ion-item>
-        <ion-label>Notes</ion-label>
-        <ion-textarea rows={6} cols={20} placeholder="Enter any notes here..."></ion-textarea>
-      </ion-item>
+      <syg-item>
+        <syg-label>Notes</syg-label>
+        <syg-textarea rows={6} cols={20} placeholder="Enter any notes here..."></syg-textarea>
+      </syg-item>
     ];
   }
 }
@@ -235,40 +235,40 @@ export class TextareaExample {
 ```html
 <template>
   <!-- Default textarea -->
-  <ion-textarea></ion-textarea>
+  <syg-textarea></syg-textarea>
 
   <!-- Textarea in an item with a placeholder -->
-  <ion-item>
-    <ion-textarea placeholder="Enter more information here..."></ion-textarea>
-  </ion-item>
+  <syg-item>
+    <syg-textarea placeholder="Enter more information here..."></syg-textarea>
+  </syg-item>
 
   <!-- Textarea in an item with a floating label -->
-  <ion-item>
-    <ion-label position="floating">Description</ion-label>
-    <ion-textarea></ion-textarea>
-  </ion-item>
+  <syg-item>
+    <syg-label position="floating">Description</syg-label>
+    <syg-textarea></syg-textarea>
+  </syg-item>
 
   <!-- Disabled and readonly textarea in an item with a stacked label -->
-  <ion-item>
-    <ion-label position="stacked">Summary</ion-label>
-    <ion-textarea
+  <syg-item>
+    <syg-label position="stacked">Summary</syg-label>
+    <syg-textarea
       disabled
       readonly
       value="Ionic enables developers to build performant, high-quality mobile apps.">
-    </ion-textarea>
-  </ion-item>
+    </syg-textarea>
+  </syg-item>
 
   <!-- Textarea that clears the value on edit -->
-  <ion-item>
-    <ion-label>Comment</ion-label>
-    <ion-textarea clear-on-edit="true"></ion-textarea>
-  </ion-item>
+  <syg-item>
+    <syg-label>Comment</syg-label>
+    <syg-textarea clear-on-edit="true"></syg-textarea>
+  </syg-item>
 
   <!-- Textarea with custom number of rows and cols -->
-  <ion-item>
-    <ion-label>Notes</ion-label>
-    <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
-  </ion-item>
+  <syg-item>
+    <syg-label>Notes</syg-label>
+    <syg-textarea rows="6" cols="20" placeholder="Enter any notes here..."></syg-textarea>
+  </syg-item>
 </template>
 
 <script>
@@ -334,7 +334,7 @@ Type: `Promise<HTMLTextAreaElement>`
 
 ### `setFocus() => Promise<void>`
 
-Sets focus on the native `textarea` in `ion-textarea`. Use this method instead of the global
+Sets focus on the native `textarea` in `syg-textarea`. Use this method instead of the global
 `textarea.focus()`.
 
 #### Returns

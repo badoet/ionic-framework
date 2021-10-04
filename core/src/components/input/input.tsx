@@ -1,6 +1,6 @@
 import { Build, Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AutocompleteTypes, Color, InputChangeEventDetail, StyleEventDetail, TextFieldTypes } from '../../interface';
 import { debounceEvent, findItemLabel, inheritAttributes } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
@@ -9,7 +9,7 @@ import { createColorClasses } from '../../utils/theme';
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-input',
+  tag: 'syg-input',
   styleUrls: {
     ios: 'input.ios.scss',
     md: 'input.md.scss'
@@ -19,7 +19,7 @@ import { createColorClasses } from '../../utils/theme';
 export class Input implements ComponentInterface {
 
   private nativeInput?: HTMLInputElement;
-  private inputId = `ion-input-${inputIds++}`;
+  private inputId = `syg-input-${inputIds++}`;
   private didBlurAfterEdit = false;
   private inheritedAttributes: { [k: string]: any } = {};
 
@@ -256,7 +256,7 @@ export class Input implements ComponentInterface {
   }
 
   /**
-   * Sets focus on the native `input` in `ion-input`. Use this method instead of the global
+   * Sets focus on the native `input` in `syg-input`. Use this method instead of the global
    * `input.focus()`.
    */
   @Method()
@@ -267,7 +267,7 @@ export class Input implements ComponentInterface {
   }
 
   /**
-   * Sets blur on the native `input` in `ion-input`. Use this method instead of the global
+   * Sets blur on the native `input` in `syg-input`. Use this method instead of the global
    * `input.blur()`.
    * @internal
    */
@@ -388,7 +388,7 @@ export class Input implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const value = this.getValue();
     const labelId = this.inputId + '-lbl';
     const label = findItemLabel(this.el);

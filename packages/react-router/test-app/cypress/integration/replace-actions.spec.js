@@ -9,9 +9,9 @@ describe('Replace Action', () => {
   it('/replace-action > Goto Page2 > Goto Page3 > Browser Back > Page1 should be visible and Page2 should be gone', () => {
     cy.visit(`http://localhost:${port}/replace-action`);
     cy.ionPageVisible('page1');
-    cy.ionNav('ion-button', 'Goto Page2');
+    cy.ionNav('syg-button', 'Goto Page2');
     cy.ionPageVisible('page2');
-    cy.ionNav('ion-button', 'Goto Page3');
+    cy.ionNav('syg-button', 'Goto Page3');
     cy.ionPageVisible('page3');
     cy.go('back');
     cy.ionPageVisible('page1');

@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color } from '../../interface';
 import { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
 import { createColorClasses } from '../../utils/theme';
@@ -18,7 +18,7 @@ import { createColorClasses } from '../../utils/theme';
  * @part native - The native HTML button or anchor element that wraps all child elements.
  */
 @Component({
-  tag: 'ion-item-option',
+  tag: 'syg-item-option',
   styleUrls: {
     ios: 'item-option.ios.scss',
     md: 'item-option.md.scss'
@@ -79,7 +79,7 @@ export class ItemOption implements ComponentInterface, AnchorInterface, ButtonIn
   @Prop() type: 'submit' | 'reset' | 'button' = 'button';
 
   private onClick = (ev: Event) => {
-    const el = (ev.target as HTMLElement).closest('ion-item-option');
+    const el = (ev.target as HTMLElement).closest('syg-item-option');
     if (el) {
       ev.preventDefault();
     }
@@ -88,7 +88,7 @@ export class ItemOption implements ComponentInterface, AnchorInterface, ButtonIn
   render() {
     const { disabled, expandable, href } = this;
     const TagType = href === undefined ? 'button' : 'a' as any;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const attrs = (TagType === 'button')
       ? { type: this.type }
       : {
@@ -104,7 +104,7 @@ export class ItemOption implements ComponentInterface, AnchorInterface, ButtonIn
           [mode]: true,
           'item-option-disabled': disabled,
           'item-option-expandable': expandable,
-          'ion-activatable': true
+          'syg-activatable': true
         })}
       >
         <TagType
@@ -123,7 +123,7 @@ export class ItemOption implements ComponentInterface, AnchorInterface, ButtonIn
             </div>
             <slot name="bottom"></slot>
           </span>
-          {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+          {mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
         </TagType>
       </Host>
     );

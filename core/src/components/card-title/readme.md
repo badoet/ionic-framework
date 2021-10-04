@@ -1,6 +1,6 @@
-# ion-card-title
+# syg-card-title
 
-`ion-card-title` is a child component of `ion-card`
+`syg-card-title` is a child component of `syg-card`
 
 
 <!-- Auto Generated Below -->

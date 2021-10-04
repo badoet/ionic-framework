@@ -42,7 +42,7 @@ export const iosEnterAnimation = (baseEl: HTMLElement, opts?: any): Animation =>
   const wrapperAnimation = createAnimation();
 
   backdropAnimation
-    .addElement(root.querySelector('ion-backdrop')!)
+    .addElement(root.querySelector('syg-backdrop')!)
     .fromTo('opacity', 0.01, 'var(--backdrop-opacity)')
     .beforeStyles({
       'pointer-events': 'none'

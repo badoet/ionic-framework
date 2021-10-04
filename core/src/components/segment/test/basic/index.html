@@ -10,196 +10,196 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>
 </head>
 
 <body onload="listenForEvent()">
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Segment - Basic</ion-title>
-      </ion-toolbar>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Segment - Basic</syg-title>
+      </syg-toolbar>
 
-      <ion-toolbar>
-        <ion-segment class="event-tester" value="Free">
-          <ion-segment-button value="Paid">
+      <syg-toolbar>
+        <syg-segment class="event-tester" value="Free">
+          <syg-segment-button value="Paid">
             PaidPaidPaid
-          </ion-segment-button>
-          <ion-segment-button value="Free">
+          </syg-segment-button>
+          <syg-segment-button value="Free">
             Free
-          </ion-segment-button>
-          <ion-segment-button value="Top">
+          </syg-segment-button>
+          <syg-segment-button value="Top">
             Top
-          </ion-segment-button>
-        </ion-segment>
-      </ion-toolbar>
+          </syg-segment-button>
+        </syg-segment>
+      </syg-toolbar>
 
-      <ion-toolbar>
-        <ion-segment name="dynamicPropDisable" disabled color="danger">
-          <ion-segment-button value="Bookmarks">
+      <syg-toolbar>
+        <syg-segment name="dynamicPropDisable" disabled color="danger">
+          <syg-segment-button value="Bookmarks">
             Bookmarks
-          </ion-segment-button>
-          <ion-segment-button value="Reading List">
+          </syg-segment-button>
+          <syg-segment-button value="Reading List">
             Reading List
-          </ion-segment-button>
-          <ion-segment-button value="Shared Links">
+          </syg-segment-button>
+          <syg-segment-button value="Shared Links">
             Shared Links
-          </ion-segment-button>
-        </ion-segment>
-      </ion-toolbar>
+          </syg-segment-button>
+        </syg-segment>
+      </syg-toolbar>
 
-      <ion-toolbar>
-        <ion-segment name="dynamicAttrElem" color="secondary" value="active">
-          <ion-segment-button value="active">
+      <syg-toolbar>
+        <syg-segment name="dynamicAttrElem" color="secondary" value="active">
+          <syg-segment-button value="active">
             Active
-          </ion-segment-button>
-          <ion-segment-button name="dynamicAttrDisable" value="disabled" disabled="true">
+          </syg-segment-button>
+          <syg-segment-button name="dynamicAttrDisable" value="disabled" disabled="true">
             Disabled
-          </ion-segment-button>
-          <ion-segment-button value="inactive" disabled="false">
+          </syg-segment-button>
+          <syg-segment-button value="inactive" disabled="false">
             Inactive
-          </ion-segment-button>
-        </ion-segment>
-      </ion-toolbar>
+          </syg-segment-button>
+        </syg-segment>
+      </syg-toolbar>
 
-      <ion-toolbar>
-        <ion-segment value="all">
-          <ion-segment-button value="all">
+      <syg-toolbar>
+        <syg-segment value="all">
+          <syg-segment-button value="all">
             All
-          </ion-segment-button>
-          <ion-segment-button value="missed">
+          </syg-segment-button>
+          <syg-segment-button value="missed">
             Missed
-          </ion-segment-button>
-        </ion-segment>
-      </ion-toolbar>
-    </ion-header>
+          </syg-segment-button>
+        </syg-segment>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-segment value="segment">
-      <ion-segment-button value="segment">
+    <syg-segment value="segment">
+      <syg-segment-button value="segment">
         Segment
-      </ion-segment-button>
-      <ion-segment-button value="outside">
+      </syg-segment-button>
+      <syg-segment-button value="outside">
         Outside
-      </ion-segment-button>
-      <ion-segment-button value="content">
+      </syg-segment-button>
+      <syg-segment-button value="content">
         Content
-      </ion-segment-button>
-    </ion-segment>
+      </syg-segment-button>
+    </syg-segment>
 
-    <ion-content>
-      <div class="ion-padding">
-        <ion-segment>
-          <ion-segment-button>
-            <ion-label>Seg 1</ion-label>
-          </ion-segment-button>
-          <ion-segment-button>
-            <ion-label>Seg 2</ion-label>
-          </ion-segment-button>
-          <ion-segment-button>
-            <ion-label>Seg 3</ion-label>
-          </ion-segment-button>
-        </ion-segment>
+    <syg-content>
+      <div class="syg-padding">
+        <syg-segment>
+          <syg-segment-button>
+            <syg-label>Seg 1</syg-label>
+          </syg-segment-button>
+          <syg-segment-button>
+            <syg-label>Seg 2</syg-label>
+          </syg-segment-button>
+          <syg-segment-button>
+            <syg-label>Seg 3</syg-label>
+          </syg-segment-button>
+        </syg-segment>
 
-        <ion-segment class="segment-no-animate" value="is">
-          <ion-segment-button value="animate">
-            <ion-label>Animate</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="is">
-            <ion-label>Is</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="false">
-            <ion-label>False</ion-label>
-          </ion-segment-button>
-        </ion-segment>
+        <syg-segment class="segment-no-animate" value="is">
+          <syg-segment-button value="animate">
+            <syg-label>Animate</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="is">
+            <syg-label>Is</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="false">
+            <syg-label>False</syg-label>
+          </syg-segment-button>
+        </syg-segment>
 
-        <ion-segment color="dark" value="Reading List">
-          <ion-segment-button value="Bookmarks">
+        <syg-segment color="dark" value="Reading List">
+          <syg-segment-button value="Bookmarks">
             <ion-icon name="book"></ion-icon>
-          </ion-segment-button>
-          <ion-segment-button value="Reading List">
+          </syg-segment-button>
+          <syg-segment-button value="Reading List">
             <ion-icon name="search"></ion-icon>
-          </ion-segment-button>
-          <ion-segment-button value="Shared Links">
+          </syg-segment-button>
+          <syg-segment-button value="Shared Links">
             <ion-icon name="time"></ion-icon>
-          </ion-segment-button>
-        </ion-segment>
+          </syg-segment-button>
+        </syg-segment>
 
-        <ion-segment>
-          <ion-segment-button value="330">
-            <ion-label>330ml</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="440">
-            <ion-label>440ml</ion-label>
-          </ion-segment-button>
-          <ion-segment-button disabled value="500">
-            <ion-label>500ml</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="custom">
+        <syg-segment>
+          <syg-segment-button value="330">
+            <syg-label>330ml</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="440">
+            <syg-label>440ml</syg-label>
+          </syg-segment-button>
+          <syg-segment-button disabled value="500">
+            <syg-label>500ml</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="custom">
             <ion-icon name="create"></ion-icon>
-          </ion-segment-button>
-        </ion-segment>
+          </syg-segment-button>
+        </syg-segment>
 
-        <ion-segment name="dynamicPropDisable" disabled color="danger">
-          <ion-segment-button value="Bookmarks">
-            <ion-label>Bookmarks</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="Reading List">
-            <ion-label>Reading List</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="Shared Links">
-            <ion-label>Shared Links</ion-label>
-          </ion-segment-button>
-        </ion-segment>
+        <syg-segment name="dynamicPropDisable" disabled color="danger">
+          <syg-segment-button value="Bookmarks">
+            <syg-label>Bookmarks</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="Reading List">
+            <syg-label>Reading List</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="Shared Links">
+            <syg-label>Shared Links</syg-label>
+          </syg-segment-button>
+        </syg-segment>
 
-        <ion-segment id="finalSegment" name="dynamicAttrElem" color="secondary" value="active">
-          <ion-segment-button value="active">
-            <ion-label>Active</ion-label>
-          </ion-segment-button>
-          <ion-segment-button name="dynamicAttrDisable" value="disabled" disabled="true">
-            <ion-label>Disabled</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="inactive" disabled="false">
-            <ion-label>Inactive</ion-label>
-          </ion-segment-button>
-        </ion-segment>
+        <syg-segment id="finalSegment" name="dynamicAttrElem" color="secondary" value="active">
+          <syg-segment-button value="active">
+            <syg-label>Active</syg-label>
+          </syg-segment-button>
+          <syg-segment-button name="dynamicAttrDisable" value="disabled" disabled="true">
+            <syg-label>Disabled</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="inactive" disabled="false">
+            <syg-label>Inactive</syg-label>
+          </syg-segment-button>
+        </syg-segment>
 
-        <ion-segment name="dynamicAttrElem">
-          <ion-segment-button value="active">
-            <ion-label>Active</ion-label>
-          </ion-segment-button>
-          <ion-segment-button name="dynamicAttrDisable" value="disabled" disabled="true">
-            <ion-label>Disabled</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="inactive" disabled="false">
-            <ion-label>Inactive</ion-label>
-          </ion-segment-button>
-        </ion-segment>
+        <syg-segment name="dynamicAttrElem">
+          <syg-segment-button value="active">
+            <syg-label>Active</syg-label>
+          </syg-segment-button>
+          <syg-segment-button name="dynamicAttrDisable" value="disabled" disabled="true">
+            <syg-label>Disabled</syg-label>
+          </syg-segment-button>
+          <syg-segment-button value="inactive" disabled="false">
+            <syg-label>Inactive</syg-label>
+          </syg-segment-button>
+        </syg-segment>
 
-        <ion-segment>
-          <ion-segment-button value="active">
+        <syg-segment>
+          <syg-segment-button value="active">
             <div class="square red"></div>
-          </ion-segment-button>
-          <ion-segment-button name="dynamicAttrDisable">
+          </syg-segment-button>
+          <syg-segment-button name="dynamicAttrDisable">
             <div class="square green"></div>
-          </ion-segment-button>
-          <ion-segment-button value="inactive">
+          </syg-segment-button>
+          <syg-segment-button value="inactive">
             <div class="square blue"></div>
-          </ion-segment-button>
-        </ion-segment>
+          </syg-segment-button>
+        </syg-segment>
 
         <!-- Dynamic Buttons -->
-        <ion-segment id="dynamicButtons"></ion-segment>
+        <syg-segment id="dynamicButtons"></syg-segment>
       </div>
 
-      <div class="ion-padding-horizontal">
-        <ion-button expand="block" onClick="toggleDisabled()">Toggle Disabled</ion-button>
+      <div class="syg-padding-horizontal">
+        <syg-button expand="block" onClick="toggleDisabled()">Toggle Disabled</syg-button>
       </div>
-      <div class="ion-padding">
-        <ion-button expand="block" color="secondary" onClick="toggleValue()">Toggle Value</ion-button>
+      <div class="syg-padding">
+        <syg-button expand="block" color="secondary" onClick="toggleValue()">Toggle Value</syg-button>
       </div>
-      <div class="ion-padding-horizontal">
-        <ion-button expand="block" color="tertiary" onClick="toggleSwipeGesture()">Toggle Swipe Gesture</ion-button>
+      <div class="syg-padding-horizontal">
+        <syg-button expand="block" color="tertiary" onClick="toggleSwipeGesture()">Toggle Swipe Gesture</syg-button>
       </div>
 
       <script>
@@ -233,14 +233,14 @@
         }
 
         function toggleSwipeGesture() {
-          const ionSegmentElement = document.querySelectorAll('ion-segment');
+          const ionSegmentElement = document.querySelectorAll('syg-segment');
           for (var i = 0; i < ionSegmentElement.length; i++) {
             ionSegmentElement[i].swipeGesture = !ionSegmentElement[i].swipeGesture;
           }
         }
 
         async function listenForEvent() {
-          const ionSegmentElement = document.querySelector('ion-segment.event-tester');
+          const ionSegmentElement = document.querySelector('syg-segment.event-tester');
           ionSegmentElement.addEventListener('ionChange', (event) => {
             console.log('event.target: ', event.target.value);
           });
@@ -258,16 +258,16 @@
           const begin = buttonsLength === 0 ? 0 : buttonsLength;
 
           for (var i = begin; i < length; i++) {
-            const button = document.createElement('ion-segment-button');
+            const button = document.createElement('syg-segment-button');
             button.value = `segment-${i}`;
-            button.innerHTML = `<ion-label>Btn ${i}</ion-label>`;
+            button.innerHTML = `<syg-label>Btn ${i}</syg-label>`;
 
             dynamicButtons.appendChild(button);
           }
         }
 
       </script>
-    </ion-content>
+    </syg-content>
 
     <style>
       .square {
@@ -288,16 +288,16 @@
         background: blue;
       }
 
-      ion-content ion-segment {
+      syg-content syg-segment {
         margin-bottom: 10px;
       }
 
-      .segment-no-animate ion-segment-button {
+      .segment-no-animate syg-segment-button {
         --indicator-transition: none;
         --indicator-transform: none;
       }
     </style>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

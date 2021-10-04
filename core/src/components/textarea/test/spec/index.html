@@ -9,68 +9,68 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Textarea - Spec</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
+  <syg-app>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Textarea - Spec</syg-title>
+      </syg-toolbar>
+    </syg-header>
+    <syg-content>
       <h1>Floating Textareas</h1>
 
       <div class="grid">
         <div class="column">
           <h2>Inactive</h2>
-          <ion-item>
-            <ion-label position="floating">Label</ion-label>
-            <ion-textarea placeholder="Placeholder Text"></ion-textarea>
-          </ion-item>
+          <syg-item>
+            <syg-label position="floating">Label</syg-label>
+            <syg-textarea placeholder="Placeholder Text"></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Focused</h2>
-          <ion-item class="item-has-focus">
-            <ion-label position="floating">Label</ion-label>
-            <ion-textarea placeholder="Placeholder Text"></ion-textarea>
-          </ion-item>
+          <syg-item class="item-has-focus">
+            <syg-label position="floating">Label</syg-label>
+            <syg-textarea placeholder="Placeholder Text"></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Activated</h2>
-          <ion-item>
-            <ion-label position="floating">Label</ion-label>
-            <ion-textarea placeholder="Placeholder Text" value="Textarea Text"></ion-textarea>
-          </ion-item>
+          <syg-item>
+            <syg-label position="floating">Label</syg-label>
+            <syg-textarea placeholder="Placeholder Text" value="Textarea Text"></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Hover</h2>
-          <ion-item class="item-hovered">
-            <ion-label position="floating">Label</ion-label>
-            <ion-textarea></ion-textarea>
-          </ion-item>
+          <syg-item class="item-hovered">
+            <syg-label position="floating">Label</syg-label>
+            <syg-textarea></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Disabled</h2>
-          <ion-item>
-            <ion-label position="floating">Label</ion-label>
-            <ion-textarea disabled></ion-textarea>
-          </ion-item>
+          <syg-item>
+            <syg-label position="floating">Label</syg-label>
+            <syg-textarea disabled></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Toggle Placeholder</h2>
-          <ion-item>
-            <ion-label position="floating">Label</ion-label>
-            <ion-textarea id="floatingToggle" type="password"></ion-textarea>
-            <ion-button fill="clear" slot="end" onClick="togglePlaceholder('#floatingToggle')" class="ion-align-self-center">
+          <syg-item>
+            <syg-label position="floating">Label</syg-label>
+            <syg-textarea id="floatingToggle" type="password"></syg-textarea>
+            <syg-button fill="clear" slot="end" onClick="togglePlaceholder('#floatingToggle')" class="syg-align-self-center">
               Toggle
-            </ion-button>
-          </ion-item>
+            </syg-button>
+          </syg-item>
         </div>
       </div>
 
@@ -79,96 +79,96 @@
       <div class="grid">
         <div class="column">
           <h2>Inactive</h2>
-          <ion-item>
-            <ion-label position="stacked">Label</ion-label>
-            <ion-textarea></ion-textarea>
-          </ion-item>
+          <syg-item>
+            <syg-label position="stacked">Label</syg-label>
+            <syg-textarea></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Focused</h2>
-          <ion-item class="item-has-focus">
-            <ion-label position="stacked">Label</ion-label>
-            <ion-textarea placeholder="Placeholder Text"></ion-textarea>
-          </ion-item>
+          <syg-item class="item-has-focus">
+            <syg-label position="stacked">Label</syg-label>
+            <syg-textarea placeholder="Placeholder Text"></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Activated</h2>
-          <ion-item>
-            <ion-label position="stacked">Label</ion-label>
-            <ion-textarea placeholder="Placeholder Text" value="textarea Text"></ion-textarea>
-          </ion-item>
+          <syg-item>
+            <syg-label position="stacked">Label</syg-label>
+            <syg-textarea placeholder="Placeholder Text" value="textarea Text"></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Hover</h2>
-          <ion-item class="item-hovered">
-            <ion-label position="stacked">Label</ion-label>
-            <ion-textarea></ion-textarea>
-          </ion-item>
+          <syg-item class="item-hovered">
+            <syg-label position="stacked">Label</syg-label>
+            <syg-textarea></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Disabled</h2>
-          <ion-item>
-            <ion-label position="stacked">Label</ion-label>
-            <ion-textarea disabled></ion-textarea>
-          </ion-item>
+          <syg-item>
+            <syg-label position="stacked">Label</syg-label>
+            <syg-textarea disabled></syg-textarea>
+          </syg-item>
         </div>
 
         <div class="column">
           <h2>Toggle Placeholder</h2>
-          <ion-item>
-            <ion-label position="stacked">Label</ion-label>
-            <ion-textarea id="stackedToggle" type="password"></ion-textarea>
-            <ion-button fill="clear" slot="end" onClick="togglePlaceholder('#stackedToggle')" class="ion-align-self-center">
+          <syg-item>
+            <syg-label position="stacked">Label</syg-label>
+            <syg-textarea id="stackedToggle" type="password"></syg-textarea>
+            <syg-button fill="clear" slot="end" onClick="togglePlaceholder('#stackedToggle')" class="syg-align-self-center">
               Toggle
-            </ion-button>
-          </ion-item>
+            </syg-button>
+          </syg-item>
         </div>
       </div>
 
       <hr>
 
       <h2>Stacked Div</h2>
-      <ion-item>
-        <ion-label position="stacked">Label</ion-label>
+      <syg-item>
+        <syg-label position="stacked">Label</syg-label>
         <div>A div</div>
-      </ion-item>
+      </syg-item>
 
-      <ion-item class="ion-align-items-center">
+      <syg-item class="syg-align-items-center">
         <ion-icon slot="start" name="planet"></ion-icon>
-        <ion-label position="stacked">Align items: center</ion-label>
+        <syg-label position="stacked">Align items: center</syg-label>
         <div>A div</div>
-      </ion-item>
-      <ion-item class="ion-align-items-center">
+      </syg-item>
+      <syg-item class="syg-align-items-center">
         <ion-icon slot="start" name="planet"></ion-icon>
-        <ion-label position="stacked">Align items: center</ion-label>
-        <div class="ion-align-self-end">A div: align self right</div>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Floating: textarea</ion-label>
-        <ion-textarea></ion-textarea>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Floating: textarea value</ion-label>
-        <ion-textarea value="value"></ion-textarea>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Stacked: textarea</ion-label>
-        <ion-textarea></ion-textarea>
-      </ion-item>
-      <ion-item class="item-has-focus">
-        <ion-label position="stacked">Stacked: textarea focused value</ion-label>
-        <ion-textarea value="value"></ion-textarea>
-      </ion-item>
-      <ion-item class="custom item-has-focus">
-        <ion-label position="stacked">Stacked: textarea focus</ion-label>
-        <ion-textarea></ion-textarea>
-      </ion-item>
+        <syg-label position="stacked">Align items: center</syg-label>
+        <div class="syg-align-self-end">A div: align self right</div>
+      </syg-item>
+      <syg-item>
+        <syg-label position="floating">Floating: textarea</syg-label>
+        <syg-textarea></syg-textarea>
+      </syg-item>
+      <syg-item>
+        <syg-label position="floating">Floating: textarea value</syg-label>
+        <syg-textarea value="value"></syg-textarea>
+      </syg-item>
+      <syg-item>
+        <syg-label position="stacked">Stacked: textarea</syg-label>
+        <syg-textarea></syg-textarea>
+      </syg-item>
+      <syg-item class="item-has-focus">
+        <syg-label position="stacked">Stacked: textarea focused value</syg-label>
+        <syg-textarea value="value"></syg-textarea>
+      </syg-item>
+      <syg-item class="custom item-has-focus">
+        <syg-label position="stacked">Stacked: textarea focus</syg-label>
+        <syg-textarea></syg-textarea>
+      </syg-item>
 
-    </ion-content>
+    </syg-content>
 
     <style>
       h1 {
@@ -207,7 +207,7 @@
         padding: 0 20px 20px;
       }
 
-      ion-item {
+      syg-item {
         --background: #e0e0e0;
         --background-hover: #d3d3d3;
       }
@@ -216,11 +216,11 @@
         --background: lightblue;
       }
 
-      .custom ion-label {
+      .custom syg-label {
         color: white !important;
       }
 
-      .custom.item-has-focus ion-label {
+      .custom.item-has-focus syg-label {
         color: purple !important;
       }
     </style>
@@ -231,7 +231,7 @@
         textarea.placeholder = textarea.placeholder ? undefined : 'Placeholder Text';
       }
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

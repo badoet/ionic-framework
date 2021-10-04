@@ -9,135 +9,135 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Reorder - Basic</ion-title>
-        <ion-buttons slot="primary">
-          <ion-button onclick="toggleEdit()">Toggle</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Reorder - Basic</syg-title>
+        <syg-buttons slot="primary">
+          <syg-button onclick="toggleEdit()">Toggle</syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
-      <ion-list>
-        <ion-reorder-group id="reorder">
-          <ion-item button onclick="openAlert()">
-            <ion-label>
-              Item 1 (default ion-reorder)
-            </ion-label>
-            <ion-reorder slot="end"></ion-reorder>
-          </ion-item>
+    <syg-content id="content">
+      <syg-list>
+        <syg-reorder-group id="reorder">
+          <syg-item button onclick="openAlert()">
+            <syg-label>
+              Item 1 (default syg-reorder)
+            </syg-label>
+            <syg-reorder slot="end"></syg-reorder>
+          </syg-item>
 
-          <ion-item-sliding>
-            <ion-item button onclick="openAlert()">
-              <ion-label>
-                Item 2 (default ion-reorder with ion-item-sliding)
-              </ion-label>
-              <ion-reorder slot="end"></ion-reorder>
-            </ion-item>
-            <ion-item-options side="start">
-              <ion-item-option>Favorite</ion-item-option>
-              <ion-item-option color="danger">Share</ion-item-option>
-            </ion-item-options>
+          <syg-item-sliding>
+            <syg-item button onclick="openAlert()">
+              <syg-label>
+                Item 2 (default syg-reorder with syg-item-sliding)
+              </syg-label>
+              <syg-reorder slot="end"></syg-reorder>
+            </syg-item>
+            <syg-item-options side="start">
+              <syg-item-option>Favorite</syg-item-option>
+              <syg-item-option color="danger">Share</syg-item-option>
+            </syg-item-options>
 
-            <ion-item-options side="end">
-              <ion-item-option>Unread</ion-item-option>
-            </ion-item-options>
-          </ion-item-sliding>
+            <syg-item-options side="end">
+              <syg-item-option>Unread</syg-item-option>
+            </syg-item-options>
+          </syg-item-sliding>
 
-          <ion-item button onclick="openAlert()">
-            <ion-label>
-              Item 3 (default ion-reorder slot="start")
-            </ion-label>
-            <ion-reorder slot="start"></ion-reorder>
-          </ion-item>
+          <syg-item button onclick="openAlert()">
+            <syg-label>
+              Item 3 (default syg-reorder slot="start")
+            </syg-label>
+            <syg-reorder slot="start"></syg-reorder>
+          </syg-item>
 
-          <ion-item button color="secondary">
-            <ion-label>
-              Item 4 (default ion-reorder slot="start")
-            </ion-label>
-            <ion-reorder slot="start"></ion-reorder>
-          </ion-item>
+          <syg-item button color="secondary">
+            <syg-label>
+              Item 4 (default syg-reorder slot="start")
+            </syg-label>
+            <syg-reorder slot="start"></syg-reorder>
+          </syg-item>
 
-          <ion-item button onclick="openAlert()">
-            <ion-label>
-              Item 5 (custom ion-reorder)
-            </ion-label>
-            <ion-reorder slot="end">
+          <syg-item button onclick="openAlert()">
+            <syg-label>
+              Item 5 (custom syg-reorder)
+            </syg-label>
+            <syg-reorder slot="end">
               <ion-icon name="pizza"></ion-icon>
-            </ion-reorder>
-          </ion-item>
+            </syg-reorder>
+          </syg-item>
 
-          <ion-item button onclick="openAlert()">
-            <ion-label>
-              Item 6 (custom ion-reorder)
-            </ion-label>
-            <ion-reorder slot="end">
+          <syg-item button onclick="openAlert()">
+            <syg-label>
+              Item 6 (custom syg-reorder)
+            </syg-label>
+            <syg-reorder slot="end">
               <ion-icon name="pizza"></ion-icon>
-            </ion-reorder>
-          </ion-item>
+            </syg-reorder>
+          </syg-item>
 
-          <ion-item button onclick="openAlert()">
-            <ion-label>
-              Item 7 (custom ion-reorder slot="start")
-            </ion-label>
-            <ion-reorder slot="start">
+          <syg-item button onclick="openAlert()">
+            <syg-label>
+              Item 7 (custom syg-reorder slot="start")
+            </syg-label>
+            <syg-reorder slot="start">
               <ion-icon name="pizza"></ion-icon>
-            </ion-reorder>
-          </ion-item>
+            </syg-reorder>
+          </syg-item>
 
-          <ion-reorder>
-            <ion-item button onclick="openAlert()">
-              <ion-label>
+          <syg-reorder>
+            <syg-item button onclick="openAlert()">
+              <syg-label>
                 Item 8 (the whole item can be dragged)
-              </ion-label>
-            </ion-item>
-          </ion-reorder>
+              </syg-label>
+            </syg-item>
+          </syg-reorder>
 
-          <ion-reorder>
-            <ion-item button onclick="openAlert()">
-              <ion-label>
+          <syg-reorder>
+            <syg-item button onclick="openAlert()">
+              <syg-label>
                 Item 9 (the whole item can be dragged)
-              </ion-label>
-            </ion-item>
-          </ion-reorder>
+              </syg-label>
+            </syg-item>
+          </syg-reorder>
 
-          <ion-reorder>
-            <ion-item button onclick="openAlert()">
-              <ion-label>
+          <syg-reorder>
+            <syg-item button onclick="openAlert()">
+              <syg-label>
                 Item 10 (the whole item can be dragged)
-              </ion-label>
-            </ion-item>
-          </ion-reorder>
+              </syg-label>
+            </syg-item>
+          </syg-reorder>
 
-          <ion-reorder>
-            <ion-item>
-              <ion-label>
+          <syg-reorder>
+            <syg-item>
+              <syg-label>
                 Item 11 (the whole item can be dragged)
-              </ion-label>
-              <ion-toggle></ion-toggle>
-            </ion-item>
-          </ion-reorder>
+              </syg-label>
+              <syg-toggle></syg-toggle>
+            </syg-item>
+          </syg-reorder>
 
-          <ion-reorder>
-            <ion-item>
-              <ion-label>
+          <syg-reorder>
+            <syg-item>
+              <syg-label>
                 Item 12 (the whole item can be dragged)
-              </ion-label>
-              <ion-checkbox></ion-checkbox>
-            </ion-item>
-          </ion-reorder>
+              </syg-label>
+              <syg-checkbox></syg-checkbox>
+            </syg-item>
+          </syg-reorder>
 
-        </ion-reorder-group>
-      </ion-list>
-    </ion-content>
+        </syg-reorder-group>
+      </syg-list>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 
   <script>
     function openAlert() {

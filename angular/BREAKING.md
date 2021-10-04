@@ -130,9 +130,9 @@ The back button is no longer added by default to a navigation bar. It should be 
 
 ```html
 <ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
-  </ion-buttons>
+  <syg-buttons slot="start">
+    <syg-back-button></syg-back-button>
+  </syg-buttons>
   <ion-title>Back Button Example</ion-title>
 </ion-toolbar>
 ```
@@ -143,16 +143,16 @@ See the [back button documentation](https://github.com/ionic-team/ionic/blob/mas
 
 ### Markup Changed
 
-Button should now be written as an `<ion-button>` element. Ionic will determine when to render an anchor tag based on the presence of an `href` attribute.
+Button should now be written as an `<syg-button>` element. Ionic will determine when to render an anchor tag based on the presence of an `href` attribute.
 
 **Old Usage Example:**
 
 ```html
-<button ion-button (click)="doSomething()">
+<button syg-button (click)="doSomething()">
   Default Button
 </button>
 
-<a ion-button href="#">
+<a syg-button href="#">
   Default Anchor
 </a>
 ```
@@ -160,13 +160,13 @@ Button should now be written as an `<ion-button>` element. Ionic will determine 
 **New Usage Example:**
 
 ```html
-<ion-button (click)="doSomething()">
+<syg-button (click)="doSomething()">
   Default Button
-</ion-button>
+</syg-button>
 
-<ion-button href="#">
+<syg-button href="#">
   Default Anchor
-</ion-button>
+</syg-button>
 ```
 
 ### Attributes Renamed
@@ -195,71 +195,71 @@ The `small` and `large` attributes are now combined under the `size` attribute. 
 **Old Usage Example:**
 
 ```html
-<ion-button icon-left>
+<syg-button icon-left>
   <ion-icon name="home"></ion-icon>
   Icon Left
-</ion-button>
+</syg-button>
 
-<ion-button icon-start>
+<syg-button icon-start>
   <ion-icon name="home"></ion-icon>
   Icon Left on LTR, Right on RTL
-</ion-button>
+</syg-button>
 
-<ion-button icon-right>
+<syg-button icon-right>
   Icon Right
   <ion-icon name="home"></ion-icon>
-</ion-button>
+</syg-button>
 
-<ion-button icon-end>
+<syg-button icon-end>
   Icon Right on LTR, Left on RTL
   <ion-icon name="home"></ion-icon>
-</ion-button>
+</syg-button>
 
-<ion-button large>
+<syg-button large>
   Large Button
-</ion-button>
+</syg-button>
 
-<ion-button outline>
+<syg-button outline>
   Outline Button
-</ion-button>
+</syg-button>
 
-<ion-button full>
+<syg-button full>
   Full-width Button
-</ion-button>
+</syg-button>
 
-<ion-button round>
+<syg-button round>
   Round Button
-</ion-button>
+</syg-button>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-button>
+<syg-button>
   <ion-icon slot="start" name="home"></ion-icon>
   Icon Left on LTR, Right on RTL
-</ion-button>
+</syg-button>
 
-<ion-button>
+<syg-button>
   Icon Right on LTR, Left on RTL
   <ion-icon slot="end" name="home"></ion-icon>
-</ion-button>
+</syg-button>
 
-<ion-button size="large">
+<syg-button size="large">
   Large Button
-</ion-button>
+</syg-button>
 
-<ion-button fill="outline">
+<syg-button fill="outline">
   Outline Button
-</ion-button>
+</syg-button>
 
-<ion-button expand="full">
+<syg-button expand="full">
   Full-width Button
-</ion-button>
+</syg-button>
 
-<ion-button shape="round">
+<syg-button shape="round">
   Round Button
-</ion-button>
+</syg-button>
 ```
 
 
@@ -747,7 +747,7 @@ These values have been renamed to `"start"` and `"end"` to better align with our
 
 ### Markup Changed
 
-The option component should now be written as an `ion-item-option`. Previously it was written as a `button` with an `ion-button` directive. The `ion-item-option` element will render a native button element inside of it.
+The option component should now be written as an `ion-item-option`. Previously it was written as a `button` with an `syg-button` directive. The `ion-item-option` element will render a native button element inside of it.
 
 **Old Usage Example:**
 
@@ -757,7 +757,7 @@ The option component should now be written as an `ion-item-option`. Previously i
     Item 1
   </ion-item>
   <ion-item-options side="right">
-    <button ion-button expandable>
+    <button syg-button expandable>
       <ion-icon name="star"></ion-icon>
     </button>
   </ion-item-options>
@@ -901,7 +901,7 @@ The `menuToggle` attribute should not be added to an element anymore. Elements t
 **Old Usage Example:**
 
 ```html
-<button ion-button menuToggle>
+<button syg-button menuToggle>
   Toggle Menu
 </button>
 ```
@@ -910,9 +910,9 @@ The `menuToggle` attribute should not be added to an element anymore. Elements t
 
 ```html
 <ion-menu-toggle>
-  <ion-button>
+  <syg-button>
     Toggle Menu
-  </ion-button>
+  </syg-button>
 </ion-menu-toggle>
 ```
 
@@ -996,9 +996,9 @@ The `<ion-navbar>` component has been removed in favor of always using an `<ion-
 
 ```html
 <ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
-  </ion-buttons>
+  <syg-buttons slot="start">
+    <syg-back-button></syg-back-button>
+  </syg-buttons>
   <ion-title>My Navigation Bar</ion-title>
 </ion-toolbar>
 ```
@@ -1683,7 +1683,7 @@ The tab attribute defines the route to be shown upon clicking on this tab.
     <ion-tab-button tab="map" disabled="true">
       <ion-icon name="map"></ion-icon>
       <ion-label>Map</ion-label>
-      <ion-badge color="danger">2</ion-badge>
+      <syg-badge color="danger">2</syg-badge>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
@@ -1872,13 +1872,13 @@ See [Overlays](#overlays).
 
 ### Menu Toggle
 
-Previously if a `menuToggle` directive was added to an Ionic `button` in a toolbar, it would be positioned outside of the `ion-buttons` element. Since menu toggle is simply a wrapper to a button now, it should be placed inside of the `ion-buttons` element.
+Previously if a `menuToggle` directive was added to an Ionic `button` in a toolbar, it would be positioned outside of the `syg-buttons` element. Since menu toggle is simply a wrapper to a button now, it should be placed inside of the `syg-buttons` element.
 
 **Old Usage Example:**
 
 ```html
 <ion-toolbar>
-  <button ion-button menuToggle>
+  <button syg-button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
   <ion-title>Left side menu toggle</ion-title>
@@ -1889,13 +1889,13 @@ Previously if a `menuToggle` directive was added to an Ionic `button` in a toolb
 
 ```html
 <ion-toolbar>
-  <ion-buttons slot="start">
+  <syg-buttons slot="start">
     <ion-menu-toggle>
-      <ion-button>
+      <syg-button>
         <ion-icon slot="icon-only" name="menu"></ion-icon>
-      </ion-button>
+      </syg-button>
     </ion-menu-toggle>
-  </ion-buttons>
+  </syg-buttons>
   <ion-title>Left side menu toggle</ion-title>
 </ion-toolbar>
 ```
@@ -1917,23 +1917,23 @@ These have been renamed to the following:
 
 ```html
 <ion-toolbar>
-  <ion-buttons left>
-    <button ion-button>Left</button>
-  </ion-buttons>
-  <ion-buttons start>
-    <button ion-button>Secondary</button>
-  </ion-buttons>
+  <syg-buttons left>
+    <button syg-button>Left</button>
+  </syg-buttons>
+  <syg-buttons start>
+    <button syg-button>Secondary</button>
+  </syg-buttons>
 
   <ion-title>
     Title
   </ion-title>
 
-  <ion-buttons end>
-    <button ion-button>Primary</button>
-  </ion-buttons>
-  <ion-buttons right>
-    <button ion-button>Right</button>
-  </ion-buttons>
+  <syg-buttons end>
+    <button syg-button>Primary</button>
+  </syg-buttons>
+  <syg-buttons right>
+    <button syg-button>Right</button>
+  </syg-buttons>
 </ion-toolbar>
 ```
 
@@ -1941,22 +1941,22 @@ These have been renamed to the following:
 
 ```html
 <ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-button>Left</ion-button>
-  </ion-buttons>
-  <ion-buttons slot="secondary">
-    <ion-button>Secondary</ion-button>
-  </ion-buttons>
+  <syg-buttons slot="start">
+    <syg-button>Left</syg-button>
+  </syg-buttons>
+  <syg-buttons slot="secondary">
+    <syg-button>Secondary</syg-button>
+  </syg-buttons>
 
   <ion-title>
     Title
   </ion-title>
 
-  <ion-buttons slot="primary">
-    <ion-button>Primary</ion-button>
-  </ion-buttons>
-  <ion-buttons slot="end">
-    <ion-button>Right</ion-button>
-  </ion-buttons>
+  <syg-buttons slot="primary">
+    <syg-button>Primary</syg-button>
+  </syg-buttons>
+  <syg-buttons slot="end">
+    <syg-button>Right</syg-button>
+  </syg-buttons>
 </ion-toolbar>
 ```

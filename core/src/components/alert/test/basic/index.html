@@ -9,32 +9,32 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <script type="module">
-    import { alertController } from '../../../../dist/ionic/index.esm.js';
+    import { alertController } from '../../../../dist/syg/index.esm.js';
     window.alertController = alertController;
   </script>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Alert - Basic</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Alert - Basic</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding">
-      <ion-button id="basic" expand="block" onclick="presentAlert()">Alert</ion-button>
-      <ion-button id="longMessage" expand="block" onclick="presentAlertLongMessage()">Alert Long Message</ion-button>
-      <ion-button id="multipleButtons" expand="block" onclick="presentAlertMultipleButtons()">Multiple Buttons (>2)</ion-button>
-      <ion-button id="noMessage" expand="block" onclick="presentAlertNoMessage()">Alert No Message</ion-button>
-      <ion-button id="confirm" expand="block" onclick="presentAlertConfirm()">Confirm</ion-button>
-      <ion-button id="prompt" expand="block" onclick="presentAlertPrompt()">Prompt</ion-button>
-      <ion-button id="radio" expand="block" onclick="presentAlertRadio()">Radio</ion-button>
-      <ion-button id="checkbox" expand="block" onclick="presentAlertCheckbox()">Checkbox</ion-button>
-      <ion-button expand="block" onclick="presentWithCssClass()">CssClass</ion-button>
-    </ion-content>
+    <syg-content class="syg-padding">
+      <syg-button id="basic" expand="block" onclick="presentAlert()">Alert</syg-button>
+      <syg-button id="longMessage" expand="block" onclick="presentAlertLongMessage()">Alert Long Message</syg-button>
+      <syg-button id="multipleButtons" expand="block" onclick="presentAlertMultipleButtons()">Multiple Buttons (>2)</syg-button>
+      <syg-button id="noMessage" expand="block" onclick="presentAlertNoMessage()">Alert No Message</syg-button>
+      <syg-button id="confirm" expand="block" onclick="presentAlertConfirm()">Confirm</syg-button>
+      <syg-button id="prompt" expand="block" onclick="presentAlertPrompt()">Prompt</syg-button>
+      <syg-button id="radio" expand="block" onclick="presentAlertRadio()">Radio</syg-button>
+      <syg-button id="checkbox" expand="block" onclick="presentAlertCheckbox()">Checkbox</syg-button>
+      <syg-button expand="block" onclick="presentWithCssClass()">CssClass</syg-button>
+    </syg-content>
 
     <style>
       .my-custom-class {
@@ -46,7 +46,7 @@
         color: #eb445a;
       }
     </style>
-  </ion-app>
+  </syg-app>
 
   <script>
 

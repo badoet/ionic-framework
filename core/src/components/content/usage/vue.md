@@ -1,6 +1,6 @@
 ```html
 <template>
-  <ion-content
+  <syg-content
     :scroll-events="true"
     @ionScrollStart="logScrollStart()"
     @ionScroll="logScrolling($event)"
@@ -10,7 +10,7 @@
       <div slot="fixed">
         <h1>Fixed Content</h1>
       </div>
-  </ion-content>
+  </syg-content>
 </template>
 
 <script>

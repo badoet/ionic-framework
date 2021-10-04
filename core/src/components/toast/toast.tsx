@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, Color, CssClassMap, OverlayEventDetail, OverlayInterface, ToastButton } from '../../interface';
 import { dismiss, eventMethod, isCancel, prepareOverlay, present, safeCall } from '../../utils/overlays';
-import { IonicSafeString, sanitizeDOMString } from '../../utils/sanitization';
+import { SygSafeString, sanitizeDOMString } from '../../utils/sanitization';
 import { createColorClasses, getClassMap } from '../../utils/theme';
 
 import { iosEnterAnimation } from './animations/ios.enter';
@@ -22,7 +22,7 @@ import { ToastAttributes } from './toast-interface';
  * @part icon - The icon that appears next to the toast content.
  */
 @Component({
-  tag: 'ion-toast',
+  tag: 'syg-toast',
   styleUrls: {
     ios: 'toast.ios.scss',
     md: 'toast.md.scss'
@@ -35,7 +35,7 @@ export class Toast implements ComponentInterface, OverlayInterface {
 
   presented = false;
 
-  @Element() el!: HTMLIonToastElement;
+  @Element() el!: HTMLSygToastElement;
 
   /**
    * @internal
@@ -79,7 +79,7 @@ export class Toast implements ComponentInterface, OverlayInterface {
   /**
    * Message to be shown in the toast.
    */
-  @Prop() message?: string | IonicSafeString;
+  @Prop() message?: string | SygSafeString;
 
   /**
    * If `true`, the keyboard will be automatically dismissed when the overlay is presented.
@@ -242,7 +242,7 @@ export class Toast implements ComponentInterface, OverlayInterface {
       return;
     }
 
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const buttonGroupsClasses = {
       'toast-button-group': true,
       [`toast-button-group-${side}`]: true
@@ -260,7 +260,7 @@ export class Toast implements ComponentInterface, OverlayInterface {
                 />}
               {b.text}
             </div>
-            {mode === 'md' && <ion-ripple-effect type={b.icon !== undefined && b.text === undefined ? 'unbounded' : 'bounded'}></ion-ripple-effect>}
+            {mode === 'md' && <syg-ripple-effect type={b.icon !== undefined && b.text === undefined ? 'unbounded' : 'bounded'}></syg-ripple-effect>}
           </button>
         )}
       </div>
@@ -271,7 +271,7 @@ export class Toast implements ComponentInterface, OverlayInterface {
     const allButtons = this.getButtons();
     const startButtons = allButtons.filter(b => b.side === 'start');
     const endButtons = allButtons.filter(b => b.side !== 'start');
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const wrapperClass = {
       'toast-wrapper': true,
       [`toast-${this.position}`]: true
@@ -291,7 +291,7 @@ export class Toast implements ComponentInterface, OverlayInterface {
           ...getClassMap(this.cssClass),
           'toast-translucent': this.translucent
         })}
-        onIonToastWillDismiss={this.dispatchCancelHandler}
+        onSygToastWillDismiss={this.dispatchCancelHandler}
       >
         <div class={wrapperClass}>
           <div class="toast-container" part="container">
@@ -323,8 +323,8 @@ const buttonClass = (button: ToastButton): CssClassMap => {
     'toast-button': true,
     'toast-button-icon-only': button.icon !== undefined && button.text === undefined,
     [`toast-button-${button.role}`]: button.role !== undefined,
-    'ion-focusable': true,
-    'ion-activatable': true,
+    'syg-focusable': true,
+    'syg-activatable': true,
     ...getClassMap(button.cssClass)
   };
 };

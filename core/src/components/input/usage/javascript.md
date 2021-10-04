@@ -1,43 +1,43 @@
 ```html
 <!-- Default Input -->
-<ion-input></ion-input>
+<syg-input></syg-input>
 
 <!-- Input with value -->
-<ion-input value="custom"></ion-input>
+<syg-input value="custom"></syg-input>
 
 <!-- Input with placeholder -->
-<ion-input placeholder="Enter Input"></ion-input>
+<syg-input placeholder="Enter Input"></syg-input>
 
 <!-- Input with clear button when there is a value -->
-<ion-input clear-input value="clear me"></ion-input>
+<syg-input clear-input value="clear me"></syg-input>
 
 <!-- Number type input -->
-<ion-input type="number" value="333"></ion-input>
+<syg-input type="number" value="333"></syg-input>
 
 <!-- Disabled input -->
-<ion-input value="Disabled" disabled></ion-input>
+<syg-input value="Disabled" disabled></syg-input>
 
 <!-- Readonly input -->
-<ion-input value="Readonly" readonly></ion-input>
+<syg-input value="Readonly" readonly></syg-input>
 
 <!-- Inputs with labels -->
-<ion-item>
-  <ion-label>Default Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label>Default Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label position="floating">Floating Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="floating">Floating Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label position="fixed">Fixed Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="fixed">Fixed Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 
-<ion-item>
-  <ion-label position="stacked">Stacked Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<syg-item>
+  <syg-label position="stacked">Stacked Label</syg-label>
+  <syg-input></syg-input>
+</syg-item>
 ```

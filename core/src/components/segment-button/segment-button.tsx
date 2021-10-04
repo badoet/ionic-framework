@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Host, Prop, State, forceUpdate, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { SegmentButtonLayout } from '../../interface';
 import { ButtonInterface } from '../../utils/element-interface';
 import { addEventListener, removeEventListener } from '../../utils/helpers';
@@ -16,7 +16,7 @@ let ids = 0;
  * @part indicator-background - The background element for the indicator displayed on the checked segment button.
  */
 @Component({
-  tag: 'ion-segment-button',
+  tag: 'syg-segment-button',
   styleUrls: {
     ios: 'segment-button.ios.scss',
     md: 'segment-button.md.scss'
@@ -24,7 +24,7 @@ let ids = 0;
   shadow: true
 })
 export class SegmentButton implements ComponentInterface, ButtonInterface {
-  private segmentEl: HTMLIonSegmentElement | null = null;
+  private segmentEl: HTMLSygSegmentElement | null = null;
 
   @Element() el!: HTMLElement;
 
@@ -48,10 +48,10 @@ export class SegmentButton implements ComponentInterface, ButtonInterface {
   /**
    * The value of the segment button.
    */
-  @Prop() value: string = 'ion-sb-' + (ids++);
+  @Prop() value: string = 'syg-sb-' + (ids++);
 
   connectedCallback() {
-    const segmentEl = this.segmentEl = this.el.closest('ion-segment');
+    const segmentEl = this.segmentEl = this.el.closest('syg-segment');
     if (segmentEl) {
       this.updateState();
       addEventListener(segmentEl, 'ionSelect', this.updateState);
@@ -69,7 +69,7 @@ export class SegmentButton implements ComponentInterface, ButtonInterface {
   }
 
   private get hasLabel() {
-    return !!this.el.querySelector('ion-label');
+    return !!this.el.querySelector('syg-label');
   }
 
   private get hasIcon() {
@@ -92,7 +92,7 @@ export class SegmentButton implements ComponentInterface, ButtonInterface {
 
   render() {
     const { checked, type, disabled, hasIcon, hasLabel, layout, segmentEl, tabIndex } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const hasSegmentColor = () => segmentEl !== null && segmentEl.color !== undefined;
     return (
       <Host
@@ -102,9 +102,9 @@ export class SegmentButton implements ComponentInterface, ButtonInterface {
         tabIndex={tabIndex}
         class={{
           [mode]: true,
-          'in-toolbar': hostContext('ion-toolbar', this.el),
-          'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
-          'in-segment': hostContext('ion-segment', this.el),
+          'in-toolbar': hostContext('syg-toolbar', this.el),
+          'in-toolbar-color': hostContext('syg-toolbar[color]', this.el),
+          'in-segment': hostContext('syg-segment', this.el),
           'in-segment-color': hasSegmentColor(),
           'segment-button-has-label': hasLabel,
           'segment-button-has-icon': hasIcon,
@@ -113,9 +113,9 @@ export class SegmentButton implements ComponentInterface, ButtonInterface {
           'segment-button-disabled': disabled,
           'segment-button-checked': checked,
           [`segment-button-layout-${layout}`]: true,
-          'ion-activatable': true,
-          'ion-activatable-instant': true,
-          'ion-focusable': true,
+          'syg-activatable': true,
+          'syg-activatable-instant': true,
+          'syg-focusable': true,
         }}
       >
         <button
@@ -128,7 +128,7 @@ export class SegmentButton implements ComponentInterface, ButtonInterface {
           <span class="button-inner">
             <slot></slot>
           </span>
-          {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+          {mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
         </button>
         <div
           part="indicator"

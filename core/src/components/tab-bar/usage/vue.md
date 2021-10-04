@@ -1,19 +1,19 @@
 ```html
 <template>
-  <ion-tabs>
+  <syg-tabs>
     <!-- Tab bar -->
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="account">
+    <syg-tab-bar slot="bottom">
+      <syg-tab-button tab="account">
         <ion-icon :icon="person"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="contact">
+      </syg-tab-button>
+      <syg-tab-button tab="contact">
         <ion-icon :icon="call"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="settings">
+      </syg-tab-button>
+      <syg-tab-button tab="settings">
         <ion-icon :icon="settings"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+      </syg-tab-button>
+    </syg-tab-bar>
+  </syg-tabs>
 </template>
 
 <script>

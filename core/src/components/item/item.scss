@@ -300,7 +300,7 @@ button, a {
   font-size: 1.6em;
 }
 
-::slotted(ion-button) {
+::slotted(syg-button) {
   --margin-top: 0;
   --margin-bottom: 0;
   --margin-start: 0;
@@ -311,11 +311,11 @@ button, a {
 
 // Setting pointer-events to none allows the label
 // to be clicked to open the select interface
-::slotted(ion-label) {
+::slotted(syg-label) {
   pointer-events: none;
 }
 
-::slotted(ion-label:not([slot="end"])) {
+::slotted(syg-label:not([slot="end"])) {
   flex: 1;
 }
 
@@ -426,14 +426,14 @@ button, a {
 // Item Select
 // --------------------------------------------------
 
-:host(:not(.item-label)) ::slotted(ion-select) {
+:host(:not(.item-label)) ::slotted(syg-select) {
   --padding-start: 0;
 
   max-width: none;
 }
 
-:host(.item-label-stacked) ::slotted(ion-select),
-:host(.item-label-floating) ::slotted(ion-select) {
+:host(.item-label-stacked) ::slotted(syg-select),
+:host(.item-label-floating) ::slotted(syg-select) {
   --padding-top: 8px;
   --padding-bottom: 8px;
   --padding-start: 0;
@@ -449,12 +449,12 @@ button, a {
 // Item Datetime
 // --------------------------------------------------
 
-:host(:not(.item-label)) ::slotted(ion-datetime) {
+:host(:not(.item-label)) ::slotted(syg-datetime) {
   --padding-start: 0;
 }
 
-:host(.item-label-stacked) ::slotted(ion-datetime),
-:host(.item-label-floating) ::slotted(ion-datetime) {
+:host(.item-label-stacked) ::slotted(syg-datetime),
+:host(.item-label-floating) ::slotted(syg-datetime) {
   --padding-start: 0;
 
   width: 100%;
@@ -466,10 +466,10 @@ button, a {
 // Multiple inputs in an item should have the input
 // cover relative to themselves instead of the item
 
-:host(.item-multiple-inputs) ::slotted(ion-checkbox),
-:host(.item-multiple-inputs) ::slotted(ion-datetime),
-:host(.item-multiple-inputs) ::slotted(ion-radio),
-:host(.item-multiple-inputs) ::slotted(ion-select) {
+:host(.item-multiple-inputs) ::slotted(syg-checkbox),
+:host(.item-multiple-inputs) ::slotted(syg-datetime),
+:host(.item-multiple-inputs) ::slotted(syg-radio),
+:host(.item-multiple-inputs) ::slotted(syg-select) {
   position: relative;
 }
 
@@ -484,7 +484,7 @@ button, a {
 // Item Reorder
 // --------------------------------------------------
 
-::slotted(ion-reorder[slot]) {
+::slotted(syg-reorder[slot]) {
   @include margin(0, null);
 }
 
@@ -492,7 +492,7 @@ button, a {
 // Item Button Ripple effect
 // --------------------------------------------------
 
-ion-ripple-effect {
+syg-ripple-effect {
   color: var(--ripple-color);
 }
 

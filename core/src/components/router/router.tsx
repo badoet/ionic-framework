@@ -12,7 +12,7 @@ import { readRedirects, readRoutes } from './utils/parser';
 import { chainToPath, generatePath, parsePath, readPath, writePath } from './utils/path';
 
 @Component({
-  tag: 'ion-router'
+  tag: 'syg-router'
 })
 export class Router implements ComponentInterface {
 
@@ -25,7 +25,7 @@ export class Router implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
-   * By default `ion-router` will match the routes at the root path ("/").
+   * By default `syg-router` will match the routes at the root path ("/").
    * That can be changed when
    *
    */
@@ -164,20 +164,20 @@ export class Router implements ComponentInterface {
   @Method()
   async navChanged(direction: RouterDirection): Promise<boolean> {
     if (this.busy) {
-      console.warn('[ion-router] router is busy, navChanged was cancelled');
+      console.warn('[syg-router] router is busy, navChanged was cancelled');
       return false;
     }
     const { ids, outlet } = await readNavState(window.document.body);
     const routes = readRoutes(this.el);
     const chain = routerIDsToChain(ids, routes);
     if (!chain) {
-      console.warn('[ion-router] no matching URL for ', ids.map(i => i.id));
+      console.warn('[syg-router] no matching URL for ', ids.map(i => i.id));
       return false;
     }
 
     const path = chainToPath(chain);
     if (!path) {
-      console.warn('[ion-router] router could not match path because some required param is missing');
+      console.warn('[syg-router] router could not match path because some required param is missing');
       return false;
     }
 
@@ -187,7 +187,7 @@ export class Router implements ComponentInterface {
     return true;
   }
 
-  // This handler gets called when a `ion-route-redirect` component is added to the DOM or if the from or to property of such node changes.
+  // This handler gets called when a `syg-route-redirect` component is added to the DOM or if the from or to property of such node changes.
   private onRedirectChanged() {
     const path = this.getPath();
     if (path && findRouteRedirect(path, readRedirects(this.el))) {
@@ -195,7 +195,7 @@ export class Router implements ComponentInterface {
     }
   }
 
-  // This handler gets called when a `ion-route` component is added to the DOM or if the from or to property of such node changes.
+  // This handler gets called when a `syg-route` component is added to the DOM or if the from or to property of such node changes.
   private onRoutesChanged() {
     return this.writeNavStateRoot(this.getPath(), ROUTER_INTENT_NONE);
   }
@@ -223,7 +223,7 @@ export class Router implements ComponentInterface {
 
   private async writeNavStateRoot(path: string[] | null, direction: RouterDirection, animation?: AnimationBuilder): Promise<boolean> {
     if (!path) {
-      console.error('[ion-router] URL is not part of the routing set');
+      console.error('[syg-router] URL is not part of the routing set');
       return false;
     }
 
@@ -244,7 +244,7 @@ export class Router implements ComponentInterface {
     const routes = readRoutes(this.el);
     const chain = routerPathToChain(path, routes);
     if (!chain) {
-      console.error('[ion-router] the path does not match any route');
+      console.error('[syg-router] the path does not match any route');
       return false;
     }
 
@@ -311,7 +311,7 @@ export class Router implements ComponentInterface {
     index = 0, animation?: AnimationBuilder
   ): Promise<boolean> {
     if (this.busy) {
-      console.warn('[ion-router] router is busy, transition was cancelled');
+      console.warn('[syg-router] router is busy, transition was cancelled');
       return false;
     }
     this.busy = true;

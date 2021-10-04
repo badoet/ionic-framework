@@ -9,100 +9,100 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
-    <ion-split-pane id="splitPane" content-id="split-content">
+  <syg-app>
+    <syg-split-pane id="splitPane" content-id="split-content">
 
-      <ion-menu side="start" content-id="split-content">
+      <syg-menu side="start" content-id="split-content">
 
-        <ion-header>
-          <ion-toolbar color="secondary">
-            <ion-title>Left Menu</ion-title>
-          </ion-toolbar>
-        </ion-header>
+        <syg-header>
+          <syg-toolbar color="secondary">
+            <syg-title>Left Menu</syg-title>
+          </syg-toolbar>
+        </syg-header>
 
-        <ion-content>
-          <ion-list>
-            <ion-item>Open end Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-            <ion-item>Close Menu</ion-item>
-          </ion-list>
-        </ion-content>
+        <syg-content>
+          <syg-list>
+            <syg-item>Open end Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+            <syg-item>Close Menu</syg-item>
+          </syg-list>
+        </syg-content>
 
-        <ion-footer>
-          <ion-toolbar color="secondary">
-            <ion-title>Footer</ion-title>
-          </ion-toolbar>
-        </ion-footer>
+        <syg-footer>
+          <syg-toolbar color="secondary">
+            <syg-title>Footer</syg-title>
+          </syg-toolbar>
+        </syg-footer>
 
-      </ion-menu>
+      </syg-menu>
 
-      <div class='ion-page' id="split-content">
+      <div class='syg-page' id="split-content">
 
-        <ion-header>
-          <ion-toolbar>
+        <syg-header>
+          <syg-toolbar>
 
-            <ion-buttons slot="start">
-              <ion-menu-button></ion-menu-button>
-              <ion-menu-button auto-hide="false"></ion-menu-button>
-            </ion-buttons>
+            <syg-buttons slot="start">
+              <syg-menu-button></syg-menu-button>
+              <syg-menu-button auto-hide="false"></syg-menu-button>
+            </syg-buttons>
 
-            <ion-title>Navigation</ion-title>
-          </ion-toolbar>
-        </ion-header>
+            <syg-title>Navigation</syg-title>
+          </syg-toolbar>
+        </syg-header>
 
-        <ion-content class="ion-padding">
+        <syg-content class="syg-padding">
           <h1>Page 1</h1>
-          <ion-button onclick="menu()">Disable/enable menu</ion-button>
+          <syg-button onclick="menu()">Disable/enable menu</syg-button>
           <f></f>
           <f></f>
           <f></f>
           <f></f>
-          
-          <ion-item>
-            <ion-label>Toggle Side Min Width</ion-label>
-            <ion-toggle id="side-min-width"></ion-toggle>
-          </ion-item>
-          
-          <ion-item>
-            <ion-label>Toggle Side Max Width</ion-label>
-            <ion-toggle id="side-max-width"></ion-toggle>
-          </ion-item>
-          
-          <ion-item>
-            <ion-label>Toggle Side Fixed Width</ion-label>
-            <ion-toggle id="side-width"></ion-toggle>
-          </ion-item>
-        </ion-content>
-      </div>
-    </ion-split-pane>
 
-  </ion-app>
-  <ion-menu-controller></ion-menu-controller>
+          <syg-item>
+            <syg-label>Toggle Side Min Width</syg-label>
+            <syg-toggle id="side-min-width"></syg-toggle>
+          </syg-item>
+
+          <syg-item>
+            <syg-label>Toggle Side Max Width</syg-label>
+            <syg-toggle id="side-max-width"></syg-toggle>
+          </syg-item>
+
+          <syg-item>
+            <syg-label>Toggle Side Fixed Width</syg-label>
+            <syg-toggle id="side-width"></syg-toggle>
+          </syg-item>
+        </syg-content>
+      </div>
+    </syg-split-pane>
+
+  </syg-app>
+  <syg-menu-controller></syg-menu-controller>
 
   <script>
-    const sideMinWidth = document.querySelector('ion-toggle#side-min-width');
-    const sideMaxWidth = document.querySelector('ion-toggle#side-max-width');
-    const sideWidth = document.querySelector('ion-toggle#side-width');
+    const sideMinWidth = document.querySelector('syg-toggle#side-min-width');
+    const sideMaxWidth = document.querySelector('syg-toggle#side-max-width');
+    const sideWidth = document.querySelector('syg-toggle#side-width');
 
-    const splitPane = document.querySelector('ion-split-pane');
-    
-    sideMinWidth.addEventListener('ionChange', () => splitPane.classList.toggle('side-min-width'));    
-    sideMaxWidth.addEventListener('ionChange', () => splitPane.classList.toggle('side-max-width'));    
-    sideWidth.addEventListener('ionChange', () => splitPane.classList.toggle('side-width')); 
+    const splitPane = document.querySelector('syg-split-pane');
 
-    const menuCtrl = document.querySelector('ion-menu-controller');
+    sideMinWidth.addEventListener('ionChange', () => splitPane.classList.toggle('side-min-width'));
+    sideMaxWidth.addEventListener('ionChange', () => splitPane.classList.toggle('side-max-width'));
+    sideWidth.addEventListener('ionChange', () => splitPane.classList.toggle('side-width'));
+
+    const menuCtrl = document.querySelector('syg-menu-controller');
     function openStart() {
       menuCtrl.open('start');
     }
@@ -117,16 +117,16 @@
       --side-width: 150px;
       --side-min-width: 150px;
     }
-    
+
     .side-min-width {
       --side-min-width: 500px;
     }
-    
+
     .side-max-width {
       --side-max-width: 75px;
       --side-min-width: 0px;
     }
-    
+
     f {
       display: block;
       height: 150px;

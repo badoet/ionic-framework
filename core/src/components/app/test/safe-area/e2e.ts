@@ -11,28 +11,28 @@ test('app: safe-area', async () => {
   // Action Sheet
   await page.click('#show-action-sheet');
   await page.waitForChanges();
-  const actionSheet = await page.find('ion-action-sheet');
+  const actionSheet = await page.find('syg-action-sheet');
   expect(await page.compareScreenshot('action-sheet')).toMatchScreenshot();
   await actionSheet.callMethod('dismiss');
 
   // Menu
   await page.click('#show-menu');
   await page.waitForChanges();
-  const menu = await page.find('ion-menu');
+  const menu = await page.find('syg-menu');
   expect(await page.compareScreenshot('menu')).toMatchScreenshot();
   await menu.callMethod('close');
 
   // Picker
   await page.click('#show-picker');
   await page.waitForChanges();
-  const picker = await page.find('ion-picker');
+  const picker = await page.find('syg-picker');
   expect(await page.compareScreenshot('picker')).toMatchScreenshot();
   await picker.callMethod('dismiss');
 
   // Toast
   await page.click('#show-toast');
   await page.waitForChanges();
-  const toast = await page.find('ion-toast');
+  const toast = await page.find('syg-toast');
   expect(await page.compareScreenshot('toast')).toMatchScreenshot();
   await toast.callMethod('dismiss');
 

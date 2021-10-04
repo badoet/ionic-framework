@@ -1,4 +1,4 @@
-# ion-infinite-scroll
+# syg-infinite-scroll
 
 The Infinite Scroll component calls an action to be performed when the user scrolls a specified distance from the bottom or top of the page.
 
@@ -6,11 +6,11 @@ The expression assigned to the `ionInfinite` event is called when the user reach
 
 ## Infinite Scroll Content
 
-The `ion-infinite-scroll` component has the infinite scroll logic. It requires a child component in order to display content. Ionic uses its `ion-infinite-scroll-content` component by default. This component displays the infinite scroll and changes the look depending on the infinite scroll's state. It displays a spinner that looks best based on the platform the user is on. However, the default spinner can be changed and text can be added by setting properties on the `ion-infinite-scroll-content` component.
+The `syg-infinite-scroll` component has the infinite scroll logic. It requires a child component in order to display content. Ionic uses its `syg-infinite-scroll-content` component by default. This component displays the infinite scroll and changes the look depending on the infinite scroll's state. It displays a spinner that looks best based on the platform the user is on. However, the default spinner can be changed and text can be added by setting properties on the `syg-infinite-scroll-content` component.
 
 ## Custom Content
 
-Separating the `ion-infinite-scroll` and `ion-infinite-scroll-content` components allows developers to create their own content components, if desired. This content can contain anything, from an SVG element to elements with unique CSS animations.
+Separating the `syg-infinite-scroll` and `syg-infinite-scroll-content` components allows developers to create their own content components, if desired. This content can contain anything, from an SVG element to elements with unique CSS animations.
 
 ## Interfaces
 
@@ -32,20 +32,20 @@ interface InfiniteScrollCustomEvent extends CustomEvent {
 ### Angular
 
 ```html
-<ion-content>
-  <ion-button (click)="toggleInfiniteScroll()" expand="block">
+<syg-content>
+  <syg-button (click)="toggleInfiniteScroll()" expand="block">
     Toggle Infinite Scroll
-  </ion-button>
+  </syg-button>
 
-  <ion-list></ion-list>
+  <syg-list></syg-list>
 
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-    <ion-infinite-scroll-content
+  <syg-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <syg-infinite-scroll-content
       loadingSpinner="bubbles"
       loadingText="Loading more data...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-</ion-content>
+    </syg-infinite-scroll-content>
+  </syg-infinite-scroll>
+</syg-content>
 ```
 
 ```typescript
@@ -85,20 +85,20 @@ export class InfiniteScrollExample {
 ### Javascript
 
 ```html
-<ion-content>
-  <ion-button onClick="toggleInfiniteScroll()" expand="block">
+<syg-content>
+  <syg-button onClick="toggleInfiniteScroll()" expand="block">
     Toggle Infinite Scroll
-  </ion-button>
+  </syg-button>
 
-  <ion-list></ion-list>
+  <syg-list></syg-list>
 
-  <ion-infinite-scroll threshold="100px" id="infinite-scroll">
-    <ion-infinite-scroll-content
+  <syg-infinite-scroll threshold="100px" id="infinite-scroll">
+    <syg-infinite-scroll-content
       loading-spinner="bubbles"
       loading-text="Loading more data...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-</ion-content>
+    </syg-infinite-scroll-content>
+  </syg-infinite-scroll>
+</syg-content>
 ```
 
 ```javascript
@@ -177,28 +177,28 @@ export class InfiniteScrollExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.toggleInfiniteScroll()} expand="block">
+      <syg-content>
+        <syg-button onClick={() => this.toggleInfiniteScroll()} expand="block">
           Toggle Infinite Scroll
-        </ion-button>
+        </syg-button>
 
-        <ion-list>
+        <syg-list>
           {this.data.map(item =>
-            <ion-item>
-              <ion-label>{item}</ion-label>
-            </ion-item>
+            <syg-item>
+              <syg-label>{item}</syg-label>
+            </syg-item>
           )}
-        </ion-list>
+        </syg-list>
 
-        <ion-infinite-scroll
+        <syg-infinite-scroll
           ref={el => this.infiniteScroll = el}
           onIonInfinite={(ev) => this.loadData(ev)}>
-          <ion-infinite-scroll-content
+          <syg-infinite-scroll-content
             loadingSpinner="bubbles"
             loadingText="Loading more data...">
-          </ion-infinite-scroll-content>
-        </ion-infinite-scroll>
-      </ion-content>
+          </syg-infinite-scroll-content>
+        </syg-infinite-scroll>
+      </syg-content>
     ];
   }
 }
@@ -209,31 +209,31 @@ export class InfiniteScrollExample {
 
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="toggleInfiniteScroll" expand="block">
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="toggleInfiniteScroll" expand="block">
         Toggle Infinite Scroll
-      </ion-button>
+      </syg-button>
     
-      <ion-list>
-        <ion-item v-for="item in items" :key="item">
-          <ion-label>{{ item }}</ion-label>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-item v-for="item in items" :key="item">
+          <syg-label>{{ item }}</syg-label>
+        </syg-item>
+      </syg-list>
     
-      <ion-infinite-scroll
+      <syg-infinite-scroll
         @ionInfinite="loadData($event)" 
         threshold="100px" 
         id="infinite-scroll"
         :disabled="isDisabled"
       >
-        <ion-infinite-scroll-content
+        <syg-infinite-scroll-content
           loading-spinner="bubbles"
           loading-text="Loading more data...">
-        </ion-infinite-scroll-content>
-      </ion-infinite-scroll>
-    </ion-content>
-  </ion-page>
+        </syg-infinite-scroll-content>
+      </syg-infinite-scroll>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script lang="ts">

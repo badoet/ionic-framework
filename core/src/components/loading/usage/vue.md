@@ -1,8 +1,8 @@
 ```html
 <template>
-  <ion-button @click="presentLoading">Show Loading</ion-button>
+  <syg-button @click="presentLoading">Show Loading</syg-button>
   <br />
-  <ion-button @click="presentLoadingWithOptions">Show Loading</ion-button>
+  <syg-button @click="presentLoadingWithOptions">Show Loading</syg-button>
 </template>
 
 <script>
@@ -57,15 +57,15 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Loading</ion-button>
-  <ion-loading
+  <syg-button @click="setOpen(true)">Show Loading</syg-button>
+  <syg-loading
     :is-open="isOpenRef"
     cssClass="my-custom-class"
     message="Please wait..."
     :duration="timeout"
     @didDismiss="setOpen(false)"
   >
-  </ion-loading>
+  </syg-loading>
 </template>
 
 <script>

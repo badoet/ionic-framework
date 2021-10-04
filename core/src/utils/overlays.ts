@@ -1,6 +1,6 @@
 import { config } from '../global/config';
-import { getIonMode } from '../global/ionic-global';
-import { ActionSheetOptions, AlertOptions, Animation, AnimationBuilder, BackButtonEvent, HTMLIonOverlayElement, IonicConfig, LoadingOptions, ModalOptions, OverlayInterface, PickerOptions, PopoverOptions, ToastOptions } from '../interface';
+import { getSygMode } from '../global/syg-global';
+import { ActionSheetOptions, AlertOptions, Animation, AnimationBuilder, BackButtonEvent, HTMLSygOverlayElement, SygicConfig, LoadingOptions, ModalOptions, OverlayInterface, PickerOptions, PopoverOptions, ToastOptions } from '../interface';
 
 import { OVERLAY_BACK_BUTTON_PRIORITY } from './hardware-back-button';
 import { addEventListener, componentOnReady, focusElement, getElementRoot, removeEventListener } from './helpers';
@@ -23,15 +23,15 @@ const createController = <Opts extends object, HTMLElm extends any>(tagName: str
   };
 };
 
-export const alertController = /*@__PURE__*/createController<AlertOptions, HTMLIonAlertElement>('ion-alert');
-export const actionSheetController = /*@__PURE__*/createController<ActionSheetOptions, HTMLIonActionSheetElement>('ion-action-sheet');
-export const loadingController = /*@__PURE__*/createController<LoadingOptions, HTMLIonLoadingElement>('ion-loading');
-export const modalController = /*@__PURE__*/createController<ModalOptions, HTMLIonModalElement>('ion-modal');
-export const pickerController = /*@__PURE__*/createController<PickerOptions, HTMLIonPickerElement>('ion-picker');
-export const popoverController = /*@__PURE__*/createController<PopoverOptions, HTMLIonPopoverElement>('ion-popover');
-export const toastController = /*@__PURE__*/createController<ToastOptions, HTMLIonToastElement>('ion-toast');
+export const alertController = /*@__PURE__*/createController<AlertOptions, HTMLSygAlertElement>('syg-alert');
+export const actionSheetController = /*@__PURE__*/createController<ActionSheetOptions, HTMLSygActionSheetElement>('syg-action-sheet');
+export const loadingController = /*@__PURE__*/createController<LoadingOptions, HTMLSygLoadingElement>('syg-loading');
+export const modalController = /*@__PURE__*/createController<ModalOptions, HTMLSygModalElement>('syg-modal');
+export const pickerController = /*@__PURE__*/createController<PickerOptions, HTMLSygPickerElement>('syg-picker');
+export const popoverController = /*@__PURE__*/createController<PopoverOptions, HTMLSygPopoverElement>('syg-popover');
+export const toastController = /*@__PURE__*/createController<ToastOptions, HTMLSygToastElement>('syg-toast');
 
-export const prepareOverlay = <T extends HTMLIonOverlayElement>(el: T) => {
+export const prepareOverlay = <T extends HTMLSygOverlayElement>(el: T) => {
   /* tslint:disable-next-line */
   if (typeof document !== 'undefined') {
     connectListeners(document);
@@ -39,15 +39,15 @@ export const prepareOverlay = <T extends HTMLIonOverlayElement>(el: T) => {
   const overlayIndex = lastId++;
   el.overlayIndex = overlayIndex;
   if (!el.hasAttribute('id')) {
-    el.id = `ion-overlay-${overlayIndex}`;
+    el.id = `syg-overlay-${overlayIndex}`;
   }
 };
 
-export const createOverlay = <T extends HTMLIonOverlayElement>(tagName: string, opts: object | undefined): Promise<T> => {
+export const createOverlay = <T extends HTMLSygOverlayElement>(tagName: string, opts: object | undefined): Promise<T> => {
   /* tslint:disable-next-line */
   if (typeof customElements !== 'undefined') {
     return customElements.whenDefined(tagName).then(() => {
-      const element = document.createElement(tagName) as HTMLIonOverlayElement;
+      const element = document.createElement(tagName) as HTMLSygOverlayElement;
       element.classList.add('overlay-hidden');
 
       /**
@@ -65,10 +65,10 @@ export const createOverlay = <T extends HTMLIonOverlayElement>(tagName: string, 
   return Promise.resolve() as any;
 };
 
-const focusableQueryString = '[tabindex]:not([tabindex^="-"]), input:not([type=hidden]):not([tabindex^="-"]), textarea:not([tabindex^="-"]), button:not([tabindex^="-"]), select:not([tabindex^="-"]), .ion-focusable:not([tabindex^="-"])';
+const focusableQueryString = '[tabindex]:not([tabindex^="-"]), input:not([type=hidden]):not([tabindex^="-"]), textarea:not([tabindex^="-"]), button:not([tabindex^="-"]), select:not([tabindex^="-"]), .syg-focusable:not([tabindex^="-"])';
 const innerFocusableQueryString = 'input:not([type=hidden]), textarea, button, select';
 
-export const focusFirstDescendant = (ref: Element, overlay: HTMLIonOverlayElement) => {
+export const focusFirstDescendant = (ref: Element, overlay: HTMLSygOverlayElement) => {
   let firstInput = ref.querySelector(focusableQueryString) as HTMLElement | null;
 
   const shadowRoot = firstInput && firstInput.shadowRoot;
@@ -85,7 +85,7 @@ export const focusFirstDescendant = (ref: Element, overlay: HTMLIonOverlayElemen
   }
 };
 
-const focusLastDescendant = (ref: Element, overlay: HTMLIonOverlayElement) => {
+const focusLastDescendant = (ref: Element, overlay: HTMLSygOverlayElement) => {
   const inputs = Array.from(ref.querySelectorAll(focusableQueryString)) as HTMLElement[];
   let lastInput = inputs.length > 0 ? inputs[inputs.length - 1] : null;
 
@@ -140,7 +140,7 @@ const trapKeyboardFocus = (ev: Event, doc: Document) => {
       /**
        * Otherwise, we must be focusing an element
        * inside of the overlay. The two possible options
-       * here are an input/button/etc or the ion-focus-trap
+       * here are an input/button/etc or the syg-focus-trap
        * element. The focus trap element is used to prevent
        * the keyboard focus from leaving the overlay when
        * using Tab or screen assistants.
@@ -154,7 +154,7 @@ const trapKeyboardFocus = (ev: Event, doc: Document) => {
       const overlayRoot = getElementRoot(lastOverlay);
       if (!overlayRoot.contains(target)) { return; }
 
-      const overlayWrapper = overlayRoot.querySelector('.ion-overlay-wrapper');
+      const overlayWrapper = overlayRoot.querySelector('.syg-overlay-wrapper');
       if (!overlayWrapper) { return; }
 
       /**
@@ -284,15 +284,15 @@ export const dismissOverlay = (doc: Document, data: any, role: string | undefine
   return overlay.dismiss(data, role);
 };
 
-export const getOverlays = (doc: Document, selector?: string): HTMLIonOverlayElement[] => {
+export const getOverlays = (doc: Document, selector?: string): HTMLSygOverlayElement[] => {
   if (selector === undefined) {
-    selector = 'ion-alert,ion-action-sheet,ion-loading,ion-modal,ion-picker,ion-popover,ion-toast';
+    selector = 'syg-alert,syg-action-sheet,syg-loading,syg-modal,syg-picker,syg-popover,syg-toast';
   }
-  return (Array.from(doc.querySelectorAll(selector)) as HTMLIonOverlayElement[])
+  return (Array.from(doc.querySelectorAll(selector)) as HTMLSygOverlayElement[])
     .filter(c => c.overlayIndex > 0);
 };
 
-export const getOverlay = (doc: Document, overlayTag?: string, id?: string): HTMLIonOverlayElement | undefined => {
+export const getOverlay = (doc: Document, overlayTag?: string, id?: string): HTMLSygOverlayElement | undefined => {
   const overlays = getOverlays(doc, overlayTag);
   return (id === undefined)
     ? overlays[overlays.length - 1]
@@ -311,9 +311,9 @@ export const getOverlay = (doc: Document, overlayTag?: string, id?: string): HTM
  * We need a container where all page components
  * exist that is separate from where the overlays
  * are added in the DOM. For most apps, this element
- * is the top most ion-router-outlet. In the event
+ * is the top most syg-router-outlet. In the event
  * that devs are not using a router,
- * they will need to add the "ion-view-container-root"
+ * they will need to add the "syg-view-container-root"
  * id to the element that contains all of their views.
  *
  * TODO: If Framework supports having multiple top
@@ -323,7 +323,7 @@ export const getOverlay = (doc: Document, overlayTag?: string, id?: string): HTM
  */
 export const setRootAriaHidden = (hidden = false) => {
   const root = getAppRoot(document);
-  const viewContainer = root.querySelector('ion-router-outlet, ion-nav, #ion-view-container-root');
+  const viewContainer = root.querySelector('syg-router-outlet, syg-nav, #syg-view-container-root');
 
   if (!viewContainer) { return; }
 
@@ -336,7 +336,7 @@ export const setRootAriaHidden = (hidden = false) => {
 
 export const present = async (
   overlay: OverlayInterface,
-  name: keyof IonicConfig,
+  name: keyof SygicConfig,
   iosEnterAnimation: AnimationBuilder,
   mdEnterAnimation: AnimationBuilder,
   opts?: any
@@ -351,7 +351,7 @@ export const present = async (
   overlay.willPresent.emit();
   overlay.willPresentShorthand?.emit();
 
-  const mode = getIonMode(overlay);
+  const mode = getSygMode(overlay);
   // get the user's animation fn if one was provided
   const animationBuilder = (overlay.enterAnimation)
     ? overlay.enterAnimation
@@ -371,7 +371,7 @@ export const present = async (
    * does not steal focus and is excluded
    * from returning focus as a result.
    */
-  if (overlay.el.tagName !== 'ION-TOAST') {
+  if (overlay.el.tagName !== 'SYG-TOAST') {
     focusPreviousElementOnDismiss(overlay.el);
   }
 
@@ -408,7 +408,7 @@ export const dismiss = async (
   overlay: OverlayInterface,
   data: any | undefined,
   role: string | undefined,
-  name: keyof IonicConfig,
+  name: keyof SygicConfig,
   iosLeaveAnimation: AnimationBuilder,
   mdLeaveAnimation: AnimationBuilder,
   opts?: any
@@ -427,7 +427,7 @@ export const dismiss = async (
     overlay.willDismiss.emit({ data, role });
     overlay.willDismissShorthand?.emit({ data, role });
 
-    const mode = getIonMode(overlay);
+    const mode = getSygMode(overlay);
     const animationBuilder = (overlay.leaveAnimation)
       ? overlay.leaveAnimation
       : config.get(name, mode === 'ios' ? iosLeaveAnimation : mdLeaveAnimation);
@@ -453,7 +453,7 @@ export const dismiss = async (
 };
 
 const getAppRoot = (doc: Document) => {
-  return doc.querySelector('ion-app') || doc.body;
+  return doc.querySelector('syg-app') || doc.body;
 };
 
 const overlayAnimation = async (
@@ -475,7 +475,7 @@ const overlayAnimation = async (
   if (overlay.keyboardClose) {
     animation.beforeAddWrite(() => {
       const activeElement = baseEl.ownerDocument!.activeElement as HTMLElement;
-      if (activeElement && activeElement.matches('input,ion-input, ion-textarea')) {
+      if (activeElement && activeElement.matches('input,syg-input, syg-textarea')) {
         activeElement.blur();
       }
     });

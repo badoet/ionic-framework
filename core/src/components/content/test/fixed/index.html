@@ -9,36 +9,36 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
-    <ion-header id="header">
-      <ion-toolbar>
-        <ion-title>Content - Fixed</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <syg-app>
+    <syg-header id="header">
+      <syg-toolbar>
+        <syg-title>Content - Fixed</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
+    <syg-content>
       <h1>Regular Content</h1>
       <div slot="fixed">
         <h1>Fixed content</h1>
         <p>Fixed paragraph</p>
-        <ion-button>Button</ion-button>
+        <syg-button>Button</syg-button>
       </div>
-      <ion-fab vertical="top" horizontal="end" slot="fixed">
-        <ion-fab-button>
+      <syg-fab vertical="top" horizontal="end" slot="fixed">
+        <syg-fab-button>
           <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-      <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-        <ion-fab-button color="tertiary">
+        </syg-fab-button>
+      </syg-fab>
+      <syg-fab vertical="bottom" horizontal="start" slot="fixed">
+        <syg-fab-button color="tertiary">
           <ion-icon name="star"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-    </ion-content>
+        </syg-fab-button>
+      </syg-fab>
+    </syg-content>
 
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, Color, Mode, RouterDirection } from '../../interface';
 import { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
 import { createColorClasses, openURL } from '../../utils/theme';
@@ -11,7 +11,7 @@ import { createColorClasses, openURL } from '../../utils/theme';
  * @part native - The native HTML button, anchor, or div element that wraps all child elements.
  */
 @Component({
-  tag: 'ion-card',
+  tag: 'syg-card',
   styleUrls: {
     ios: 'card.ios.scss',
     md: 'card.md.scss'
@@ -113,19 +113,19 @@ export class Card implements ComponentInterface, AnchorInterface, ButtonInterfac
         onClick={(ev: Event) => openURL(href, ev, routerDirection, routerAnimation)}
       >
         <slot></slot>
-        {clickable && mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+        {clickable && mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
       </TagType>
     );
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={createColorClasses(this.color, {
           [mode]: true,
           'card-disabled': this.disabled,
-          'ion-activatable': this.isClickable()
+          'syg-activatable': this.isClickable()
         })}
       >
         {this.renderCard(mode)}

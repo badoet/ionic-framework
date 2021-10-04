@@ -1,6 +1,6 @@
 ```javascript
 async function presentLoading() {
-  const loading = document.createElement('ion-loading');
+  const loading = document.createElement('syg-loading');
 
   loading.cssClass = 'my-custom-class';
   loading.message = 'Please wait...';
@@ -14,7 +14,7 @@ async function presentLoading() {
 }
 
 async function presentLoadingWithOptions() {
-  const loading = document.createElement('ion-loading');
+  const loading = document.createElement('syg-loading');
 
   loading.spinner = null;
   loading.duration = 5000;

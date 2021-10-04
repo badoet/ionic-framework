@@ -1,6 +1,6 @@
-# ion-radio
+# syg-radio
 
-Radios should be used inside of an [`ion-radio-group`](../radio-group). Pressing on a radio will check it. They can also be checked programmatically by setting the value property of the parent `ion-radio-group` to the value of the radio.
+Radios should be used inside of an [`syg-radio-group`](../radio-group). Pressing on a radio will check it. They can also be checked programmatically by setting the value property of the parent `syg-radio-group` to the value of the radio.
 
 When radios are inside of a radio group, only one radio in the group will be checked at any time. Pressing a radio will check it and uncheck the previously selected radio, if there is one. If a radio is not in a group with another radio, then both radios will have the ability to be checked at the same time.
 
@@ -15,28 +15,28 @@ When radios are inside of a radio group, only one radio in the group will be che
 ### Angular / javascript
 
 ```html
-<ion-list>
-  <ion-radio-group value="biff">
-    <ion-list-header>
-      <ion-label>Name</ion-label>
-    </ion-list-header>
+<syg-list>
+  <syg-radio-group value="biff">
+    <syg-list-header>
+      <syg-label>Name</syg-label>
+    </syg-list-header>
 
-    <ion-item>
-      <ion-label>Biff</ion-label>
-      <ion-radio slot="start" value="biff"></ion-radio>
-    </ion-item>
+    <syg-item>
+      <syg-label>Biff</syg-label>
+      <syg-radio slot="start" value="biff"></syg-radio>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Griff</ion-label>
-      <ion-radio slot="start" value="griff"></ion-radio>
-    </ion-item>
+    <syg-item>
+      <syg-label>Griff</syg-label>
+      <syg-radio slot="start" value="griff"></syg-radio>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Buford</ion-label>
-      <ion-radio slot="start" value="buford"></ion-radio>
-    </ion-item>
-  </ion-radio-group>
-</ion-list>
+    <syg-item>
+      <syg-label>Buford</syg-label>
+      <syg-radio slot="start" value="buford"></syg-radio>
+    </syg-item>
+  </syg-radio-group>
+</syg-list>
 ```
 
 
@@ -99,28 +99,28 @@ import { Component, h } from '@stencil/core';
 export class RadioExample {
   render() {
     return [
-      <ion-list>
-        <ion-radio-group value="biff">
-          <ion-list-header>
-            <ion-label>Name</ion-label>
-          </ion-list-header>
+      <syg-list>
+        <syg-radio-group value="biff">
+          <syg-list-header>
+            <syg-label>Name</syg-label>
+          </syg-list-header>
 
-          <ion-item>
-            <ion-label>Biff</ion-label>
-            <ion-radio slot="start" value="biff"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Biff</syg-label>
+            <syg-radio slot="start" value="biff"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Griff</ion-label>
-            <ion-radio slot="start" value="griff"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Griff</syg-label>
+            <syg-radio slot="start" value="griff"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Buford</ion-label>
-            <ion-radio slot="start" value="buford"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
+          <syg-item>
+            <syg-label>Buford</syg-label>
+            <syg-radio slot="start" value="buford"></syg-radio>
+          </syg-item>
+        </syg-radio-group>
+      </syg-list>
     ];
   }
 }
@@ -131,28 +131,28 @@ export class RadioExample {
 
 ```html
 <template>
-  <ion-list>
-    <ion-radio-group value="biff">
-      <ion-list-header>
-        <ion-label>Name</ion-label>
-      </ion-list-header>
+  <syg-list>
+    <syg-radio-group value="biff">
+      <syg-list-header>
+        <syg-label>Name</syg-label>
+      </syg-list-header>
 
-      <ion-item>
-        <ion-label>Biff</ion-label>
-        <ion-radio slot="start" value="biff"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Biff</syg-label>
+        <syg-radio slot="start" value="biff"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Griff</ion-label>
-        <ion-radio slot="start" value="griff"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Griff</syg-label>
+        <syg-radio slot="start" value="griff"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Buford</ion-label>
-        <ion-radio slot="start" value="buford"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
-  </ion-list>
+      <syg-item>
+        <syg-label>Buford</syg-label>
+        <syg-radio slot="start" value="buford"></syg-radio>
+      </syg-item>
+    </syg-radio-group>
+  </syg-list>
 </template>
 
 <script>
@@ -222,13 +222,13 @@ export default defineComponent({
 
 ### Used by
 
- - ion-select-popover
+ - syg-select-popover
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-select-popover --> ion-radio
-  style ion-radio fill:#f9f,stroke:#333,stroke-width:4px
+  syg-select-popover --> syg-radio
+  style syg-radio fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

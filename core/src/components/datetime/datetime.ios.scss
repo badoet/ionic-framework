@@ -30,7 +30,7 @@
 
 // Calendar / Header / Action Buttons
 // -----------------------------------
-:host .calendar-action-buttons ion-item {
+:host .calendar-actsyg-buttons syg-item {
   --padding-start: #{$datetime-ios-padding};
   --background-hover: transparent;
   --background-activated: transparent;
@@ -39,16 +39,16 @@
   font-weight: 600;
 }
 
-:host .calendar-action-buttons ion-item ion-icon,
-:host .calendar-action-buttons ion-buttons ion-button {
+:host .calendar-actsyg-buttons syg-item ion-icon,
+:host .calendar-actsyg-buttons syg-buttons syg-button {
   color: current-color(base);
 }
 
-:host .calendar-action-buttons ion-buttons {
+:host .calendar-actsyg-buttons syg-buttons {
   @include padding($datetime-ios-padding / 2, 0, 0, 0);
 }
 
-:host .calendar-action-buttons ion-buttons ion-button {
+:host .calendar-actsyg-buttons syg-buttons syg-button {
   @include margin(0, 0, 0, 0);
 }
 
@@ -166,11 +166,11 @@
 }
 
 :host .datetime-picker-before {
-  background: linear-gradient(to bottom, var(--background, var(--ion-background-color, #fff)) 20%, rgba(var(--background-rgb, var(--ion-background-color-rgb, 255, 255, 255)), 0.8) 100%);
+  background: linear-gradient(to bottom, var(--background, var(--syg-background-color, #fff)) 20%, rgba(var(--background-rgb, var(--syg-background-color-rgb, 255, 255, 255)), 0.8) 100%);
 }
 
 :host .datetime-picker-after {
-  background: linear-gradient(to top, var(--background, var(--ion-background-color, #fff)) 30%, rgba(var(--background-rgb, var(--ion-background-color-rgb, 255, 255, 255)), 0.8) 100%);
+  background: linear-gradient(to top, var(--background, var(--syg-background-color, #fff)) 30%, rgba(var(--background-rgb, var(--syg-background-color-rgb, 255, 255, 255)), 0.8) 100%);
 }
 
 :host .datetime-picker-highlight {
@@ -198,14 +198,14 @@
   border-top: $datetime-ios-border-color;
 }
 
-:host .datetime-buttons ::slotted(ion-buttons),
-:host .datetime-buttons ion-buttons {
+:host .datetime-buttons ::slotted(syg-buttons),
+:host .datetime-buttons syg-buttons {
   display: flex;
 
   align-items: center;
   justify-content: space-between;
 }
 
-:host .datetime-action-buttons {
+:host .datetime-actsyg-buttons {
   width: 100%;
 }

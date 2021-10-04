@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Element, Host, Prop, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, Color } from '../../interface';
 import { ButtonInterface } from '../../utils/element-interface';
 import { createColorClasses, hostContext, openURL } from '../../utils/theme';
@@ -14,7 +14,7 @@ import { createColorClasses, hostContext, openURL } from '../../utils/theme';
  * @part text - The back button text.
  */
 @Component({
-  tag: 'ion-back-button',
+  tag: 'syg-back-button',
   styleUrls: {
     ios: 'back-button.ios.scss',
     md: 'back-button.md.scss'
@@ -76,7 +76,7 @@ export class BackButton implements ComponentInterface, ButtonInterface {
       return icon;
     }
 
-    if (getIonMode(this) === 'ios') {
+    if (getSygMode(this) === 'ios') {
       // default ios back button icon
       return config.get('backButtonIcon', 'chevron-back');
     }
@@ -86,7 +86,7 @@ export class BackButton implements ComponentInterface, ButtonInterface {
   }
 
   get backButtonText() {
-    const defaultBackButtonText = getIonMode(this) === 'ios' ? 'Back' : null;
+    const defaultBackButtonText = getSygMode(this) === 'ios' ? 'Back' : null;
     return this.text != null ? this.text : config.get('backButtonText', defaultBackButtonText);
   }
 
@@ -105,7 +105,7 @@ export class BackButton implements ComponentInterface, ButtonInterface {
   }
 
   private onClick = async (ev: Event) => {
-    const nav = this.el.closest('ion-nav');
+    const nav = this.el.closest('syg-nav');
     ev.preventDefault();
 
     if (nav && await nav.canGoBack()) {
@@ -117,20 +117,20 @@ export class BackButton implements ComponentInterface, ButtonInterface {
   render() {
     const { color, defaultHref, disabled, type, hasIconOnly, backButtonIcon, backButtonText } = this;
     const showBackButton = defaultHref !== undefined;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     return (
       <Host
         onClick={this.onClick}
         class={createColorClasses(color, {
           [mode]: true,
-          'button': true, // ion-buttons target .button
+          'button': true, // syg-buttons target .button
           'back-button-disabled': disabled,
           'back-button-has-icon-only': hasIconOnly,
-          'in-toolbar': hostContext('ion-toolbar', this.el),
-          'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
-          'ion-activatable': true,
-          'ion-focusable': true,
+          'in-toolbar': hostContext('syg-toolbar', this.el),
+          'in-toolbar-color': hostContext('syg-toolbar[color]', this.el),
+          'syg-activatable': true,
+          'syg-focusable': true,
           'show-back-button': showBackButton
         })}
       >
@@ -145,7 +145,7 @@ export class BackButton implements ComponentInterface, ButtonInterface {
             {backButtonIcon && <ion-icon part="icon" icon={backButtonIcon} aria-hidden="true" lazy={false}></ion-icon>}
             {backButtonText && <span part="text" aria-hidden="true" class="button-text">{backButtonText}</span>}
           </span>
-          {mode === 'md' && <ion-ripple-effect type={this.rippleType}></ion-ripple-effect>}
+          {mode === 'md' && <syg-ripple-effect type={this.rippleType}></syg-ripple-effect>}
         </button>
       </Host>
     );

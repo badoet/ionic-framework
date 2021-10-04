@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Element, Host, Listen, Prop, State, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color } from '../../interface';
 import { ButtonInterface } from '../../utils/element-interface';
 import { inheritAttributes } from '../../utils/helpers';
@@ -16,7 +16,7 @@ import { updateVisibility } from '../menu-toggle/menu-toggle-util';
  * @part icon - The menu button icon (uses ion-icon).
  */
 @Component({
-  tag: 'ion-menu-button',
+  tag: 'syg-menu-button',
   styleUrls: {
     ios: 'menu-button.ios.scss',
     md: 'menu-button.md.scss'
@@ -26,7 +26,7 @@ import { updateVisibility } from '../menu-toggle/menu-toggle-util';
 export class MenuButton implements ComponentInterface, ButtonInterface {
   private inheritedAttributes: { [k: string]: any } = {};
 
-  @Element() el!: HTMLIonSegmentElement;
+  @Element() el!: HTMLSygSegmentElement;
 
   @State() visible = false;
 
@@ -77,7 +77,7 @@ export class MenuButton implements ComponentInterface, ButtonInterface {
 
   render() {
     const { color, disabled, inheritedAttributes } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const menuIcon = config.get('menuIcon', mode === 'ios' ? 'menu-outline' : 'menu-sharp');
     const hidden = this.autoHide && !this.visible;
 
@@ -94,13 +94,13 @@ export class MenuButton implements ComponentInterface, ButtonInterface {
         aria-hidden={hidden ? 'true' : null}
         class={createColorClasses(color, {
           [mode]: true,
-          'button': true,  // ion-buttons target .button
+          'button': true,  // syg-buttons target .button
           'menu-button-hidden': hidden,
           'menu-button-disabled': disabled,
-          'in-toolbar': hostContext('ion-toolbar', this.el),
-          'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
-          'ion-activatable': true,
-          'ion-focusable': true
+          'in-toolbar': hostContext('syg-toolbar', this.el),
+          'in-toolbar-color': hostContext('syg-toolbar[color]', this.el),
+          'syg-activatable': true,
+          'syg-focusable': true
         })}
       >
         <button
@@ -115,7 +115,7 @@ export class MenuButton implements ComponentInterface, ButtonInterface {
               <ion-icon part="icon" icon={menuIcon} mode={mode} lazy={false} aria-hidden="true"></ion-icon>
             </slot>
           </span>
-          {mode === 'md' && <ion-ripple-effect type="unbounded"></ion-ripple-effect>}
+          {mode === 'md' && <syg-ripple-effect type="unbounded"></syg-ripple-effect>}
         </button>
       </Host>
     );

@@ -1,10 +1,10 @@
-# ion-card
+# syg-card
 
 Cards are a standard piece of UI that serves as an entry point to more detailed
 information. A card can be a single component, but is often made up of some
-header, title, subtitle, and content. `ion-card` is broken up into several
-sub-components to reflect this. Please see `ion-card-content`,
-`ion-card-header`, `ion-card-title`, `ion-card-subtitle`.
+header, title, subtitle, and content. `syg-card` is broken up into several
+sub-components to reflect this. Please see `syg-card-content`,
+`syg-card-header`, `syg-card-title`, `syg-card-subtitle`.
 
 <!-- Auto Generated Below -->
 
@@ -14,52 +14,52 @@ sub-components to reflect this. Please see `ion-card-content`,
 ### Angular / javascript
 
 ```html
-<ion-card>
-  <ion-card-header>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    <ion-card-title>Card Title</ion-card-title>
-  </ion-card-header>
+<syg-card>
+  <syg-card-header>
+    <syg-card-subtitle>Card Subtitle</syg-card-subtitle>
+    <syg-card-title>Card Title</syg-card-title>
+  </syg-card-header>
 
-  <ion-card-content>
+  <syg-card-content>
     Keep close to Nature's heart... and break clear away, once in awhile,
     and climb a mountain or spend a week in the woods. Wash your spirit clean.
-  </ion-card-content>
-</ion-card>
+  </syg-card-content>
+</syg-card>
 
-<ion-card>
-  <ion-item>
+<syg-card>
+  <syg-item>
     <ion-icon name="pin" slot="start"></ion-icon>
-    <ion-label>ion-item in a card, icon left, button right</ion-label>
-    <ion-button fill="outline" slot="end">View</ion-button>
-  </ion-item>
+    <syg-label>syg-item in a card, icon left, button right</syg-label>
+    <syg-button fill="outline" slot="end">View</syg-button>
+  </syg-item>
 
-  <ion-card-content>
+  <syg-card-content>
     This is content, without any paragraph or header tags,
-    within an ion-card-content element.
-  </ion-card-content>
-</ion-card>
+    within an syg-card-content element.
+  </syg-card-content>
+</syg-card>
 
-<ion-card>
-  <ion-item href="#" class="ion-activated">
+<syg-card>
+  <syg-item href="#" class="syg-activated">
     <ion-icon name="wifi" slot="start"></ion-icon>
-    <ion-label>Card Link Item 1 activated</ion-label>
-  </ion-item>
+    <syg-label>Card Link Item 1 activated</syg-label>
+  </syg-item>
 
-  <ion-item href="#">
+  <syg-item href="#">
     <ion-icon name="wine" slot="start"></ion-icon>
-    <ion-label>Card Link Item 2</ion-label>
-  </ion-item>
+    <syg-label>Card Link Item 2</syg-label>
+  </syg-item>
 
-  <ion-item class="ion-activated">
+  <syg-item class="syg-activated">
     <ion-icon name="warning" slot="start"></ion-icon>
-    <ion-label>Card Button Item 1 activated</ion-label>
-  </ion-item>
+    <syg-label>Card Button Item 1 activated</syg-label>
+  </syg-item>
 
-  <ion-item>
+  <syg-item>
     <ion-icon name="walk" slot="start"></ion-icon>
-    <ion-label>Card Button Item 2</ion-label>
-  </ion-item>
-</ion-card>
+    <syg-label>Card Button Item 2</syg-label>
+  </syg-item>
+</syg-card>
 ```
 
 
@@ -94,18 +94,18 @@ export const CardExamples: React.FC = () => {
         <IonCard>
           <IonItem>
             <IonIcon icon={pin} slot="start" />
-            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
+            <IonLabel>syg-item in a card, icon left, button right</IonLabel>
             <IonButton fill="outline" slot="end">View</IonButton>
           </IonItem>
 
           <IonCardContent>
             This is content, without any paragraph or header tags,
-            within an ion-cardContent element.
+            within an syg-cardContent element.
       </IonCardContent>
         </IonCard>
 
         <IonCard>
-          <IonItem href="#" className="ion-activated">
+          <IonItem href="#" className="syg-activated">
             <IonIcon icon={wifi} slot="start" />
             <IonLabel>Card Link Item 1 activated</IonLabel>
           </IonItem>
@@ -115,7 +115,7 @@ export const CardExamples: React.FC = () => {
             <IonLabel>Card Link Item 2</IonLabel>
           </IonItem>
 
-          <IonItem className="ion-activated">
+          <IonItem className="syg-activated">
             <IonIcon icon={warning} slot="start" />
             <IonLabel>Card Button Item 1 activated</IonLabel>
           </IonItem>
@@ -145,52 +145,52 @@ import { Component, h } from '@stencil/core';
 export class CardExample {
   render() {
     return [
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
-        </ion-card-header>
+      <syg-card>
+        <syg-card-header>
+          <syg-card-subtitle>Card Subtitle</syg-card-subtitle>
+          <syg-card-title>Card Title</syg-card-title>
+        </syg-card-header>
 
-        <ion-card-content>
+        <syg-card-content>
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
-        </ion-card-content>
-      </ion-card>,
+        </syg-card-content>
+      </syg-card>,
 
-      <ion-card>
-        <ion-item>
+      <syg-card>
+        <syg-item>
           <ion-icon name="pin" slot="start"></ion-icon>
-          <ion-label>ion-item in a card, icon left, button right</ion-label>
-          <ion-button fill="outline" slot="end">View</ion-button>
-        </ion-item>
+          <syg-label>syg-item in a card, icon left, button right</syg-label>
+          <syg-button fill="outline" slot="end">View</syg-button>
+        </syg-item>
 
-        <ion-card-content>
+        <syg-card-content>
           This is content, without any paragraph or header tags,
-          within an ion-card-content element.
-        </ion-card-content>
-      </ion-card>,
+          within an syg-card-content element.
+        </syg-card-content>
+      </syg-card>,
 
-      <ion-card>
-        <ion-item href="#" class="ion-activated">
+      <syg-card>
+        <syg-item href="#" class="syg-activated">
           <ion-icon name="wifi" slot="start"></ion-icon>
-          <ion-label>Card Link Item 1 activated</ion-label>
-        </ion-item>
+          <syg-label>Card Link Item 1 activated</syg-label>
+        </syg-item>
 
-        <ion-item href="#">
+        <syg-item href="#">
           <ion-icon name="wine" slot="start"></ion-icon>
-          <ion-label>Card Link Item 2</ion-label>
-        </ion-item>
+          <syg-label>Card Link Item 2</syg-label>
+        </syg-item>
 
-        <ion-item class="ion-activated">
+        <syg-item class="syg-activated">
           <ion-icon name="warning" slot="start"></ion-icon>
-          <ion-label>Card Button Item 1 activated</ion-label>
-        </ion-item>
+          <syg-label>Card Button Item 1 activated</syg-label>
+        </syg-item>
 
-        <ion-item>
+        <syg-item>
           <ion-icon name="walk" slot="start"></ion-icon>
-          <ion-label>Card Button Item 2</ion-label>
-        </ion-item>
-      </ion-card>
+          <syg-label>Card Button Item 2</syg-label>
+        </syg-item>
+      </syg-card>
     ];
   }
 }
@@ -201,52 +201,52 @@ export class CardExample {
 
 ```html
 <template>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
-    </ion-card-header>
+  <syg-card>
+    <syg-card-header>
+      <syg-card-subtitle>Card Subtitle</syg-card-subtitle>
+      <syg-card-title>Card Title</syg-card-title>
+    </syg-card-header>
 
-    <ion-card-content>
+    <syg-card-content>
       Keep close to Nature's heart... and break clear away, once in awhile,
       and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
+    </syg-card-content>
+  </syg-card>
 
-  <ion-card>
-    <ion-item>
+  <syg-card>
+    <syg-item>
       <ion-icon :icon="pin" slot="start"></ion-icon>
-      <ion-label>ion-item in a card, icon left, button right</ion-label>
-      <ion-button fill="outline" slot="end">View</ion-button>
-    </ion-item>
+      <syg-label>syg-item in a card, icon left, button right</syg-label>
+      <syg-button fill="outline" slot="end">View</syg-button>
+    </syg-item>
 
-    <ion-card-content>
+    <syg-card-content>
       This is content, without any paragraph or header tags,
-      within an ion-card-content element.
-    </ion-card-content>
-  </ion-card>
+      within an syg-card-content element.
+    </syg-card-content>
+  </syg-card>
 
-  <ion-card>
-    <ion-item href="#" class="ion-activated">
+  <syg-card>
+    <syg-item href="#" class="syg-activated">
       <ion-icon :icon="wifi" slot="start"></ion-icon>
-      <ion-label>Card Link Item 1 activated</ion-label>
-    </ion-item>
+      <syg-label>Card Link Item 1 activated</syg-label>
+    </syg-item>
 
-    <ion-item href="#">
+    <syg-item href="#">
       <ion-icon :icon="wine" slot="start"></ion-icon>
-      <ion-label>Card Link Item 2</ion-label>
-    </ion-item>
+      <syg-label>Card Link Item 2</syg-label>
+    </syg-item>
 
-    <ion-item class="ion-activated">
+    <syg-item class="syg-activated">
       <ion-icon :icon="warning" slot="start"></ion-icon>
-      <ion-label>Card Button Item 1 activated</ion-label>
-    </ion-item>
+      <syg-label>Card Button Item 1 activated</syg-label>
+    </syg-item>
 
-    <ion-item>
+    <syg-item>
       <ion-icon :icon="walk" slot="start"></ion-icon>
-      <ion-label>Card Button Item 2</ion-label>
-    </ion-item>
-  </ion-card>
+      <syg-label>Card Button Item 2</syg-label>
+    </syg-item>
+  </syg-card>
 </template>
 
 <script>
@@ -301,13 +301,13 @@ export default defineComponent({
 
 ### Depends on
 
-- [ion-ripple-effect](../ripple-effect)
+- [syg-ripple-effect](../ripple-effect)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-card --> ion-ripple-effect
-  style ion-card fill:#f9f,stroke:#333,stroke-width:4px
+  syg-card --> syg-ripple-effect
+  style syg-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

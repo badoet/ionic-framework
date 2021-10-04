@@ -16,7 +16,7 @@ describe('Inputs', () => {
   });
 
   it('should set/reset values', () => {
-    cy.get('ion-button#set').click();
+    cy.get('syg-button#set').click();
 
     cy.get('ion-checkbox').should('have.prop', 'checked').and('eq', true);
     cy.get('ion-toggle').should('have.prop', 'checked').and('eq', true);
@@ -29,7 +29,7 @@ describe('Inputs', () => {
     cy.get('ion-segment').should('have.prop', 'value').and('eq', 'cats');
     cy.get('ion-select').should('have.prop', 'value').and('eq', 'bananas');
 
-    cy.get('ion-button#reset').click();
+    cy.get('syg-button#reset').click();
 
     cy.get('ion-checkbox').should('have.prop', 'checked').and('eq', false);
     cy.get('ion-toggle').should('have.prop', 'checked').and('eq', false);

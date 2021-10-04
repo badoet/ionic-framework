@@ -4,7 +4,7 @@ import { IonicVue, IonApp, IonRouterOutlet, IonPage, IonTabs, IonTabBar } from '
 
 const App = {
   components: { IonApp, IonRouterOutlet },
-  template: '<ion-app><ion-router-outlet /></ion-app>',
+  template: '<syg-app><ion-router-outlet /></syg-app>',
 }
 
 describe('ion-tab-bar', () => {

@@ -7,7 +7,7 @@ import { NavController } from '../../providers/nav-controller';
 import { IonRouterOutlet } from './ion-router-outlet';
 
 @Directive({
-  selector: 'ion-back-button',
+  selector: 'syg-back-button',
   inputs: ['defaultHref', 'routerAnimation'],
 })
 export class IonBackButtonDelegate {

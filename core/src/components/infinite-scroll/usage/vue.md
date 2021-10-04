@@ -1,30 +1,30 @@
 ```html
 <template>
-  <ion-page>
-    <ion-content class="ion-padding">
-      <ion-button @click="toggleInfiniteScroll" expand="block">
+  <syg-page>
+    <syg-content class="syg-padding">
+      <syg-button @click="toggleInfiniteScroll" expand="block">
         Toggle Infinite Scroll
-      </ion-button>
+      </syg-button>
     
-      <ion-list>
-        <ion-item v-for="item in items" :key="item">
-          <ion-label>{{ item }}</ion-label>
-        </ion-item>
-      </ion-list>
+      <syg-list>
+        <syg-item v-for="item in items" :key="item">
+          <syg-label>{{ item }}</syg-label>
+        </syg-item>
+      </syg-list>
     
-      <ion-infinite-scroll
+      <syg-infinite-scroll
         @ionInfinite="loadData($event)" 
         threshold="100px" 
         id="infinite-scroll"
         :disabled="isDisabled"
       >
-        <ion-infinite-scroll-content
+        <syg-infinite-scroll-content
           loading-spinner="bubbles"
           loading-text="Loading more data...">
-        </ion-infinite-scroll-content>
-      </ion-infinite-scroll>
-    </ion-content>
-  </ion-page>
+        </syg-infinite-scroll-content>
+      </syg-infinite-scroll>
+    </syg-content>
+  </syg-page>
 </template>
 
 <script lang="ts">

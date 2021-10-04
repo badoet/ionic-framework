@@ -110,16 +110,16 @@
 // Chip Avatar
 // ---------------------------------------------
 
-::slotted(ion-avatar) {
+::slotted(syg-avatar) {
   width: 24px;
   height: 24px;
 }
 
-::slotted(ion-avatar:first-child) {
+::slotted(syg-avatar:first-child) {
   @include margin(-4px, 8px, -4px, -8px);
 }
 
-::slotted(ion-avatar:last-child) {
+::slotted(syg-avatar:last-child) {
   @include margin(-4px, -8px, -4px, 8px);
 }
 

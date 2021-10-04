@@ -7,7 +7,7 @@ export const FooterExample: React.FC = () => (
     <IonContent />
     
     {/*-- Footer without a border --*/}
-    <IonFooter className="ion-no-border">
+    <IonFooter className="syg-no-border">
       <IonToolbar>
         <IonTitle>Footer - No Border</IonTitle>
       </IonToolbar>

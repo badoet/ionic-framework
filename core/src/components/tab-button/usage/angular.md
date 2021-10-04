@@ -1,26 +1,26 @@
 ```html
-<ion-tabs>
+<syg-tabs>
   <!-- Tab bar -->
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule">
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="schedule">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Schedule</ion-label>
-    </ion-tab-button>
+      <syg-label>Schedule</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="speakers">
+    <syg-tab-button tab="speakers">
       <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Speakers</ion-label>
-    </ion-tab-button>
+      <syg-label>Speakers</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="map">
+    <syg-tab-button tab="map">
       <ion-icon name="map"></ion-icon>
-      <ion-label>Map</ion-label>
-    </ion-tab-button>
+      <syg-label>Map</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="about">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+    <syg-tab-button tab="about">
+      <ion-icon name="informatsyg-circle"></ion-icon>
+      <syg-label>About</syg-label>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```

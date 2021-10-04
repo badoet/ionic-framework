@@ -119,7 +119,7 @@ export const SelectOptionExample: React.FC = () => {
 
 ### Customizing Individual Options
 
-To customize an individual option, set a class on the `ion-select-option`:
+To customize an individual option, set a class on the `syg-select-option`:
 
 ```tsx
 import React from 'react';

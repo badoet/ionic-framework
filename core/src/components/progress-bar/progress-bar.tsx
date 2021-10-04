@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
 import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color } from '../../interface';
 import { clamp } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
@@ -15,7 +15,7 @@ import { createColorClasses } from '../../utils/theme';
  * width of the `buffer` value.
  */
 @Component({
-  tag: 'ion-progress-bar',
+  tag: 'syg-progress-bar',
   styleUrls: {
     ios: 'progress-bar.ios.scss',
     md: 'progress-bar.md.scss'
@@ -58,7 +58,7 @@ export class ProgressBar implements ComponentInterface {
   render() {
     const { color, type, reversed, value, buffer } = this;
     const paused = config.getBoolean('_testing');
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         role="progressbar"
@@ -103,7 +103,7 @@ const renderProgress = (value: number, buffer: number) => {
      * When finalBuffer === 1, we use display: none
      * instead of removing the element to avoid flickering.
      */
-    <div class={{ 'buffer-circles-container': true, 'ion-hide': finalBuffer === 1 }} style={{ transform: `translateX(${finalBuffer * 100}%)` }}>
+    <div class={{ 'buffer-circles-container': true, 'syg-hide': finalBuffer === 1 }} style={{ transform: `translateX(${finalBuffer * 100}%)` }}>
       <div class="buffer-circles-container" style={{ transform: `translateX(-${finalBuffer * 100}%)` }}>
         <div part="stream" class="buffer-circles"></div>
       </div>

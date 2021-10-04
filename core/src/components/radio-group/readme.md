@@ -1,4 +1,4 @@
-# ion-radio-group
+# syg-radio-group
 
 A radio group is a group of [radio buttons](../radio). It allows
 a user to select at most one radio button from a set. Checking one radio
@@ -34,40 +34,40 @@ interface RadioGroupCustomEvent<T = any> extends CustomEvent {
 ### Angular / javascript
 
 ```html
-<ion-list>
-  <ion-radio-group>
-    <ion-list-header>
-      <ion-label>
+<syg-list>
+  <syg-radio-group>
+    <syg-list-header>
+      <syg-label>
         Auto Manufacturers
-      </ion-label>
-    </ion-list-header>
+      </syg-label>
+    </syg-list-header>
 
-    <ion-item>
-      <ion-label>Cord</ion-label>
-      <ion-radio value="cord"></ion-radio>
-    </ion-item>
+    <syg-item>
+      <syg-label>Cord</syg-label>
+      <syg-radio value="cord"></syg-radio>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Duesenberg</ion-label>
-      <ion-radio value="duesenberg"></ion-radio>
-    </ion-item>
+    <syg-item>
+      <syg-label>Duesenberg</syg-label>
+      <syg-radio value="duesenberg"></syg-radio>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Hudson</ion-label>
-      <ion-radio value="hudson"></ion-radio>
-    </ion-item>
+    <syg-item>
+      <syg-label>Hudson</syg-label>
+      <syg-radio value="hudson"></syg-radio>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Packard</ion-label>
-      <ion-radio value="packard"></ion-radio>
-    </ion-item>
+    <syg-item>
+      <syg-label>Packard</syg-label>
+      <syg-radio value="packard"></syg-radio>
+    </syg-item>
 
-    <ion-item>
-      <ion-label>Studebaker</ion-label>
-      <ion-radio value="studebaker"></ion-radio>
-    </ion-item>
-  </ion-radio-group>
-</ion-list>
+    <syg-item>
+      <syg-label>Studebaker</syg-label>
+      <syg-radio value="studebaker"></syg-radio>
+    </syg-item>
+  </syg-radio-group>
+</syg-list>
 ```
 
 
@@ -130,40 +130,40 @@ import { Component, h } from '@stencil/core';
 export class RadioGroupExample {
   render() {
     return [
-      <ion-list>
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label>
+      <syg-list>
+        <syg-radio-group>
+          <syg-list-header>
+            <syg-label>
               Auto Manufacturers
-            </ion-label>
-          </ion-list-header>
+            </syg-label>
+          </syg-list-header>
 
-          <ion-item>
-            <ion-label>Cord</ion-label>
-            <ion-radio value="cord"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Cord</syg-label>
+            <syg-radio value="cord"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Duesenberg</ion-label>
-            <ion-radio value="duesenberg"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Duesenberg</syg-label>
+            <syg-radio value="duesenberg"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Hudson</ion-label>
-            <ion-radio value="hudson"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Hudson</syg-label>
+            <syg-radio value="hudson"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Packard</ion-label>
-            <ion-radio value="packard"></ion-radio>
-          </ion-item>
+          <syg-item>
+            <syg-label>Packard</syg-label>
+            <syg-radio value="packard"></syg-radio>
+          </syg-item>
 
-          <ion-item>
-            <ion-label>Studebaker</ion-label>
-            <ion-radio value="studebaker"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
+          <syg-item>
+            <syg-label>Studebaker</syg-label>
+            <syg-radio value="studebaker"></syg-radio>
+          </syg-item>
+        </syg-radio-group>
+      </syg-list>
     ];
   }
 }
@@ -174,40 +174,40 @@ export class RadioGroupExample {
 
 ```html
 <template>
-  <ion-list>
-    <ion-radio-group>
-      <ion-list-header>
-        <ion-label>
+  <syg-list>
+    <syg-radio-group>
+      <syg-list-header>
+        <syg-label>
           Auto Manufacturers
-        </ion-label>
-      </ion-list-header>
+        </syg-label>
+      </syg-list-header>
 
-      <ion-item>
-        <ion-label>Cord</ion-label>
-        <ion-radio value="cord"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Cord</syg-label>
+        <syg-radio value="cord"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Duesenberg</ion-label>
-        <ion-radio value="duesenberg"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Duesenberg</syg-label>
+        <syg-radio value="duesenberg"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Hudson</ion-label>
-        <ion-radio value="hudson"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Hudson</syg-label>
+        <syg-radio value="hudson"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Packard</ion-label>
-        <ion-radio value="packard"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Packard</syg-label>
+        <syg-radio value="packard"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Studebaker</ion-label>
-        <ion-radio value="studebaker"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
-  </ion-list>
+      <syg-item>
+        <syg-label>Studebaker</syg-label>
+        <syg-radio value="studebaker"></syg-radio>
+      </syg-item>
+    </syg-radio-group>
+  </syg-list>
 </template>
 
 <script>
@@ -256,13 +256,13 @@ export default defineComponent({
 
 ### Used by
 
- - ion-select-popover
+ - syg-select-popover
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-select-popover --> ion-radio-group
-  style ion-radio-group fill:#f9f,stroke:#333,stroke-width:4px
+  syg-select-popover --> syg-radio-group
+  style syg-radio-group fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

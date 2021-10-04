@@ -1,8 +1,8 @@
-# ion-avatar
+# syg-avatar
 
 Avatars are circular components that usually wrap an image or icon. They can be used to represent a person or an object.
 
-Avatars can be used by themselves or inside of any element. If placed inside of an `ion-chip` or `ion-item`, the avatar will resize to fit the parent component. To position an avatar on the left or right side of an item, set the slot to `start` or `end`, respectively.
+Avatars can be used by themselves or inside of any element. If placed inside of an `syg-chip` or `syg-item`, the avatar will resize to fit the parent component. To position an avatar on the left or right side of an item, set the slot to `start` or `end`, respectively.
 
 
 <!-- Auto Generated Below -->
@@ -13,23 +13,23 @@ Avatars can be used by themselves or inside of any element. If placed inside of 
 ### Angular / javascript
 
 ```html
-<ion-avatar>
+<syg-avatar>
   <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-</ion-avatar>
+</syg-avatar>
 
-<ion-chip>
-  <ion-avatar>
+<syg-chip>
+  <syg-avatar>
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-  </ion-avatar>
-  <ion-label>Chip Avatar</ion-label>
-</ion-chip>
+  </syg-avatar>
+  <syg-label>Chip Avatar</syg-label>
+</syg-chip>
 
-<ion-item>
-  <ion-avatar slot="start">
+<syg-item>
+  <syg-avatar slot="start">
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-  </ion-avatar>
-  <ion-label>Item Avatar</ion-label>
-</ion-item>
+  </syg-avatar>
+  <syg-label>Item Avatar</syg-label>
+</syg-item>
 ```
 
 
@@ -75,23 +75,23 @@ import { Component, h } from '@stencil/core';
 export class AvatarExample {
   render() {
     return [
-      <ion-avatar>
+      <syg-avatar>
         <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
-      </ion-avatar>,
+      </syg-avatar>,
 
-      <ion-chip>
-        <ion-avatar>
+      <syg-chip>
+        <syg-avatar>
           <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
-        </ion-avatar>
-        <ion-label>Chip Avatar</ion-label>
-      </ion-chip>,
+        </syg-avatar>
+        <syg-label>Chip Avatar</syg-label>
+      </syg-chip>,
 
-      <ion-item>
-        <ion-avatar slot="start">
+      <syg-item>
+        <syg-avatar slot="start">
           <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
-        </ion-avatar>
-        <ion-label>Item Avatar</ion-label>
-      </ion-item>
+        </syg-avatar>
+        <syg-label>Item Avatar</syg-label>
+      </syg-item>
     ];
   }
 }
@@ -102,23 +102,23 @@ export class AvatarExample {
 
 ```html
 <template>
-  <ion-avatar>
+  <syg-avatar>
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-  </ion-avatar>
+  </syg-avatar>
 
-  <ion-chip>
-    <ion-avatar>
+  <syg-chip>
+    <syg-avatar>
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-avatar>
-    <ion-label>Chip Avatar</ion-label>
-  </ion-chip>
+    </syg-avatar>
+    <syg-label>Chip Avatar</syg-label>
+  </syg-chip>
 
-  <ion-item>
-    <ion-avatar slot="start">
+  <syg-item>
+    <syg-avatar slot="start">
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-avatar>
-    <ion-label>Item Avatar</ion-label>
-  </ion-item>
+    </syg-avatar>
+    <syg-label>Item Avatar</syg-label>
+  </syg-item>
 </template>
 
 <script>

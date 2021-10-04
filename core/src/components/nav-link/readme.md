@@ -1,4 +1,4 @@
-# ion-nav-link
+# syg-nav-link
 
 A navigation link is used to navigate to a specified component. The component can be navigated to by going `forward`, `back` or as a `root` component.
 

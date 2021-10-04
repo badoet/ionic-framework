@@ -8,29 +8,29 @@ import { Component, h } from '@stencil/core';
 export class RippleEffectExample {
   render() {
     return [
-      <ion-app>
-        <ion-content>
-          <div class="ion-activatable ripple-parent">
+      <syg-app>
+        <syg-content>
+          <div class="syg-activatable ripple-parent">
             A plain div with a bounded ripple effect
-            <ion-ripple-effect></ion-ripple-effect>
+            <syg-ripple-effect></syg-ripple-effect>
           </div>
 
-          <button class="ion-activatable ripple-parent">
+          <button class="syg-activatable ripple-parent">
             A button with a bounded ripple effect
-            <ion-ripple-effect></ion-ripple-effect>
+            <syg-ripple-effect></syg-ripple-effect>
           </button>
 
-          <div class="ion-activatable ripple-parent">
+          <div class="syg-activatable ripple-parent">
             A plain div with an unbounded ripple effect
-            <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+            <syg-ripple-effect type="unbounded"></syg-ripple-effect>
           </div>
 
-          <button class="ion-activatable ripple-parent">
+          <button class="syg-activatable ripple-parent">
             A button with an unbounded ripple effect
-            <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+            <syg-ripple-effect type="unbounded"></syg-ripple-effect>
           </button>
-        </ion-content>
-      </ion-app>
+        </syg-content>
+      </syg-app>
     ];
   }
 }

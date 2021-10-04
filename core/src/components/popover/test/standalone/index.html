@@ -9,9 +9,9 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
   <script type="module">
-    import { popoverController } from '../../../../dist/ionic/index.esm.js';
+    import { popoverController } from '../../../../dist/syg/index.esm.js';
     window.popoverController = popoverController;
   </script>
 <body>
@@ -47,15 +47,15 @@
 
       connectedCallback() {
         this.innerHTML = `
-          <ion-content>
-            <ion-list>
-              <ion-list-header><ion-label>Ionic</ion-label></ion-list-header>
-              <ion-item><ion-label>Item 0</ion-label></ion-item>
-              <ion-item><ion-label>Item 1</ion-label></ion-item>
-              <ion-item><ion-label>Item 2</ion-label></ion-item>
-              <ion-item><ion-label>Item 3</ion-label></ion-item>
-            </ion-list>
-          </ion-content>
+          <syg-content>
+            <syg-list>
+              <syg-list-header><syg-label>Ionic</syg-label></syg-list-header>
+              <syg-item><syg-label>Item 0</syg-label></syg-item>
+              <syg-item><syg-label>Item 1</syg-label></syg-item>
+              <syg-item><syg-label>Item 2</syg-label></syg-item>
+              <syg-item><syg-label>Item 3</syg-label></syg-item>
+            </syg-list>
+          </syg-content>
         `;
       }
     }
@@ -70,16 +70,16 @@
       connectedCallback() {
         let items = '';
         for (var i = 0; i < 30; i++) {
-          items += '<ion-item><ion-label>Item ' + i + '</ion-label></ion-item>';
+          items += '<syg-item><syg-label>Item ' + i + '</syg-label></syg-item>';
         }
 
         this.innerHTML = `
-          <ion-content>
-            <ion-list>
-              <ion-list-header><ion-label>Ionic</ion-label></ion-list-header>
+          <syg-content>
+            <syg-list>
+              <syg-list-header><syg-label>Ionic</syg-label></syg-list-header>
               ` + items + `
-            </ion-list>
-          </ion-content>
+            </syg-list>
+          </syg-content>
         `;
       }
     }
@@ -93,7 +93,7 @@
 
       connectedCallback() {
         this.innerHTML = `
-          <div class="ion-padding">
+          <div class="syg-padding">
             <h1>Translucent Popover</h1>
           </div>
         `;

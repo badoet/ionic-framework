@@ -12,17 +12,17 @@ interface HeaderIndex {
 interface ToolbarIndex {
   el: HTMLElement;
   background: HTMLElement;
-  ionTitleEl: HTMLIonTitleElement | undefined;
+  ionTitleEl: HTMLSygTitleElement | undefined;
   innerTitleEl: HTMLElement;
   ionButtonsEl: HTMLElement[] | [];
 }
 
 export const cloneElement = (tagName: string) => {
-  const getCachedEl = document.querySelector(`${tagName}.ion-cloned-element`);
+  const getCachedEl = document.querySelector(`${tagName}.syg-cloned-element`);
   if (getCachedEl !== null) { return getCachedEl; }
 
   const clonedEl = document.createElement(tagName);
-  clonedEl.classList.add('ion-cloned-element');
+  clonedEl.classList.add('syg-cloned-element');
   clonedEl.style.setProperty('display', 'none');
   document.body.appendChild(clonedEl);
 
@@ -32,18 +32,18 @@ export const cloneElement = (tagName: string) => {
 export const createHeaderIndex = (headerEl: HTMLElement | undefined): HeaderIndex | undefined => {
   if (!headerEl) { return; }
 
-  const toolbars = headerEl.querySelectorAll('ion-toolbar');
+  const toolbars = headerEl.querySelectorAll('syg-toolbar');
 
   return {
     el: headerEl,
     toolbars: Array.from(toolbars).map((toolbar: any) => {
-      const ionTitleEl = toolbar.querySelector('ion-title');
+      const ionTitleEl = toolbar.querySelector('syg-title');
       return {
         el: toolbar,
         background: toolbar.shadowRoot!.querySelector('.toolbar-background'),
         ionTitleEl,
         innerTitleEl: (ionTitleEl) ? ionTitleEl.shadowRoot!.querySelector('.toolbar-title') : null,
-        ionButtonsEl: Array.from(toolbar.querySelectorAll('ion-buttons')) || []
+        ionButtonsEl: Array.from(toolbar.querySelectorAll('syg-buttons')) || []
       } as ToolbarIndex;
     }) || []
   } as HeaderIndex;
@@ -55,7 +55,7 @@ export const handleContentScroll = (scrollEl: HTMLElement, scrollHeaderIndex: He
     const scale = clamp(1, 1 + (-scrollTop / 500), 1.1);
 
     // Native refresher should not cause titles to scale
-    const nativeRefresher = contentEl.querySelector('ion-refresher.refresher-native');
+    const nativeRefresher = contentEl.querySelector('syg-refresher.refresher-native');
     if (nativeRefresher === null) {
       writeTask(() => {
         scaleLargeTitles(scrollHeaderIndex.toolbars, scale);

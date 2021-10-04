@@ -2,9 +2,9 @@
   <ion-page data-pageid="navigation">
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Navigation</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -17,7 +17,7 @@
       </ion-header>
 
       <div class="ion-padding">
-        <ion-button expand="block" @click="openModal" id="open-nav-modal">Open Modal</ion-button>
+        <syg-button expand="block" @click="openModal" id="open-nav-modal">Open Modal</syg-button>
       </div>
     </ion-content>
   </ion-page>

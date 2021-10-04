@@ -7,13 +7,13 @@ import type { JSX } from '@ionic/core/components';
 
 import { IonAccordion as IonAccordionCmp } from '@ionic/core/components/ion-accordion.js';
 import { IonAccordionGroup as IonAccordionGroupCmp } from '@ionic/core/components/ion-accordion-group.js';
-import { IonAvatar as IonAvatarCmp } from '@ionic/core/components/ion-avatar.js';
-import { IonBackdrop as IonBackdropCmp } from '@ionic/core/components/ion-backdrop.js';
-import { IonBadge as IonBadgeCmp } from '@ionic/core/components/ion-badge.js';
-import { IonBreadcrumb as IonBreadcrumbCmp } from '@ionic/core/components/ion-breadcrumb.js';
-import { IonBreadcrumbs as IonBreadcrumbsCmp } from '@ionic/core/components/ion-breadcrumbs.js';
-import { IonButton as IonButtonCmp } from '@ionic/core/components/ion-button.js';
-import { IonButtons as IonButtonsCmp } from '@ionic/core/components/ion-buttons.js';
+import { IonAvatar as IonAvatarCmp } from '@ionic/core/components/syg-avatar.js';
+import { IonBackdrop as IonBackdropCmp } from '@ionic/core/components/syg-backdrop.js';
+import { IonBadge as IonBadgeCmp } from '@ionic/core/components/syg-badge.js';
+import { IonBreadcrumb as IonBreadcrumbCmp } from '@ionic/core/components/syg-breadcrumb.js';
+import { IonBreadcrumbs as IonBreadcrumbsCmp } from '@ionic/core/components/syg-breadcrumbs.js';
+import { IonButton as IonButtonCmp } from '@ionic/core/components/syg-button.js';
+import { IonButtons as IonButtonsCmp } from '@ionic/core/components/syg-buttons.js';
 import { IonCard as IonCardCmp } from '@ionic/core/components/ion-card.js';
 import { IonCardContent as IonCardContentCmp } from '@ionic/core/components/ion-card-content.js';
 import { IonCardHeader as IonCardHeaderCmp } from '@ionic/core/components/ion-card-header.js';
@@ -98,10 +98,10 @@ export const IonAccordionGroup = /*@__PURE__*/ defineContainer<JSX.IonAccordionG
 ]);
 
 
-export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar', IonAvatarCmp);
+export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('syg-avatar', IonAvatarCmp);
 
 
-export const IonBackdrop = /*@__PURE__*/ defineContainer<JSX.IonBackdrop>('ion-backdrop', IonBackdropCmp, [
+export const IonBackdrop = /*@__PURE__*/ defineContainer<JSX.IonBackdrop>('syg-backdrop', IonBackdropCmp, [
   'visible',
   'tappable',
   'stopPropagation',
@@ -109,12 +109,12 @@ export const IonBackdrop = /*@__PURE__*/ defineContainer<JSX.IonBackdrop>('ion-b
 ]);
 
 
-export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('ion-badge', IonBadgeCmp, [
+export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('syg-badge', IonBadgeCmp, [
   'color'
 ]);
 
 
-export const IonBreadcrumb = /*@__PURE__*/ defineContainer<JSX.IonBreadcrumb>('ion-breadcrumb', IonBreadcrumbCmp, [
+export const IonBreadcrumb = /*@__PURE__*/ defineContainer<JSX.IonBreadcrumb>('syg-breadcrumb', IonBreadcrumbCmp, [
   'collapsed',
   'last',
   'showCollapsedIndicator',
@@ -134,7 +134,7 @@ export const IonBreadcrumb = /*@__PURE__*/ defineContainer<JSX.IonBreadcrumb>('i
 ]);
 
 
-export const IonBreadcrumbs = /*@__PURE__*/ defineContainer<JSX.IonBreadcrumbs>('ion-breadcrumbs', IonBreadcrumbsCmp, [
+export const IonBreadcrumbs = /*@__PURE__*/ defineContainer<JSX.IonBreadcrumbs>('syg-breadcrumbs', IonBreadcrumbsCmp, [
   'color',
   'maxItems',
   'itemsBeforeCollapse',
@@ -143,7 +143,7 @@ export const IonBreadcrumbs = /*@__PURE__*/ defineContainer<JSX.IonBreadcrumbs>(
 ]);
 
 
-export const IonButton = /*@__PURE__*/ defineContainer<JSX.IonButton>('ion-button', IonButtonCmp, [
+export const IonButton = /*@__PURE__*/ defineContainer<JSX.IonButton>('syg-button', IonButtonCmp, [
   'color',
   'buttonType',
   'disabled',
@@ -164,7 +164,7 @@ export const IonButton = /*@__PURE__*/ defineContainer<JSX.IonButton>('ion-butto
 ]);
 
 
-export const IonButtons = /*@__PURE__*/ defineContainer<JSX.IonButtons>('ion-buttons', IonButtonsCmp, [
+export const IonButtons = /*@__PURE__*/ defineContainer<JSX.IonButtons>('syg-buttons', IonButtonsCmp, [
   'collapse'
 ]);
 

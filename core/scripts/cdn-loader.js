@@ -8,7 +8,7 @@ exports.defineCustomElements = function(_, opts) {
       var mod = document.createElement('script');
       mod.setAttribute('type', 'module');
       mod['data-opts'] = opts;
-      mod.src = '__CDN_LOADER_URL__/dist/ionic/ionic.esm.js';
+      mod.src = '__CDN_LOADER_URL__/dist/syg/syg.esm.js';
 
       var legacy = document.createElement('script');
       legacy.setAttribute('nomodule', '');

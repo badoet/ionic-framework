@@ -73,7 +73,7 @@ console.log(formattedString); // Jun 4, 2021
 - The `open` method has been removed. To present the datetime in an overlay, you can pass it into an `ion-modal` or `ion-popover` component and call the `present` method on the overlay instance. Alternatively, you can use the `trigger` property on `ion-modal` or `ion-popover` to present the overlay on a button click:
 
 ```html
-<ion-button id="open-modal">Open Datetime Modal</ion-button>
+<syg-button id="open-modal">Open Datetime Modal</syg-button>
 <ion-modal trigger="open-modal">
   <ion-datetime></ion-datetime>
 </ion-modal>
@@ -257,7 +257,7 @@ Developers must now provide an `ion-router-outlet` inside of `ion-tabs`. Previou
 <script>
   import { IonTabs, IonTabBar } from '@ionic/vue';
   import { defineComponent } from 'vue';
-  
+
   export default defineComponent({
     components: { IonTabs, IonTabBar }
   });
@@ -276,7 +276,7 @@ Developers must now provide an `ion-router-outlet` inside of `ion-tabs`. Previou
 <script>
   import { IonTabs, IonTabBar, IonRouterOutlet } from '@ionic/vue';
   import { defineComponent } from 'vue';
-  
+
   export default defineComponent({
     components: { IonTabs, IonTabBar, IonRouterOutlet }
   });
@@ -287,7 +287,7 @@ Developers must now provide an `ion-router-outlet` inside of `ion-tabs`. Previou
 
 Overlay events `onWillPresent`, `onDidPresent`, `onWillDismiss`, and `onDidDismiss` have been removed in favor of `willPresent`, `didPresent`, `willDismiss`, and `didDismiss`.
 
-This applies to the following components: `ion-action-sheet`, `ion-alert`, `ion-loading`, `ion-modal`, `ion-picker`, `ion-popover`, and `ion-toast`.
+This applies to the following components: `syg-action-sheet`, `syg-alert`, `ion-loading`, `ion-modal`, `ion-picker`, `ion-popover`, and `ion-toast`.
 
 **Old**
 ```html
@@ -494,13 +494,13 @@ This allows you to still have control over the opacity if desired, but when upda
 
 ```css
 /* Setting the button background on hover to solid red */
-ion-button {
+syg-button {
   --background-hover: red;
   --background-hover-opacity: 1;
 }
 
 /* Setting the action sheet button background on focus to an opaque green */
-ion-action-sheet {
+syg-action-sheet {
   --button-background-focus: green;
   --button-background-focus-opacity: 0.5;
 }
@@ -571,7 +571,7 @@ The `ion-anchor` component has been renamed to `ion-router-link` as this is a be
 
 #### Back Button
 
-- Converted `ion-back-button` to use [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM).
+- Converted `syg-back-button` to use [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM).
 - [Focused, Hover States](#activated-focused-hover-states) have been updated.
 
 #### Button
@@ -585,7 +585,7 @@ Converted `ion-card` to use [shadow DOM](https://developer.mozilla.org/en-US/doc
 
 #### Controllers
 
-The controller components (`ion-action-sheet-controller`, `ion-alert-controller`, `ion-loading-controller`, `ion-menu-controller`, `ion-modal-controller`, `ion-picker-controller`, `ion-popover-controller`, `ion-toast-controller`) have been removed from Ionic core as elements. They should be imported from `@ionic/core` instead. This will not affect projects that use Angular or React. Below is an example of the loading controller change in a JavaScript project, but this change applies to all controller elements.
+The controller components (`syg-action-sheet-controller`, `syg-alert-controller`, `ion-loading-controller`, `ion-menu-controller`, `ion-modal-controller`, `ion-picker-controller`, `ion-popover-controller`, `ion-toast-controller`) have been removed from Ionic core as elements. They should be imported from `@ionic/core` instead. This will not affect projects that use Angular or React. Below is an example of the loading controller change in a JavaScript project, but this change applies to all controller elements.
 
 **Before**
 
@@ -651,7 +651,7 @@ In addition, any text content inside of an `<ion-list-header>` should be wrapped
 ```html
 <ion-list-header>
   New This Week
-  <ion-button>See All</ion-button>
+  <syg-button>See All</syg-button>
 </ion-list-header>
 ```
 
@@ -660,7 +660,7 @@ In addition, any text content inside of an `<ion-list-header>` should be wrapped
 ```html
 <ion-list-header>
   <ion-label>New This Week</ion-label>
-  <ion-button>See All</ion-button>
+  <syg-button>See All</syg-button>
 </ion-list-header>
 ```
 

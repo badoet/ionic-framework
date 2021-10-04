@@ -1,11 +1,11 @@
 import { Animation } from '../../interface';
 import { createAnimation } from '../animation/animation';
-import { TransitionOptions, getIonPageElement } from '../transition';
+import { TransitionOptions, getSygPageElement } from '../transition';
 
 const DURATION = 540;
 
 const getClonedElement = (tagName: string): any => {
-  return document.querySelector(`${tagName}.ion-cloned-element`) as any ;
+  return document.querySelector(`${tagName}.syg-cloned-element`) as any ;
 };
 
 export const shadow = <T extends Element>(el: T): ShadowRoot | T => {
@@ -13,11 +13,11 @@ export const shadow = <T extends Element>(el: T): ShadowRoot | T => {
 };
 
 const getLargeTitle = (refEl: any) => {
-  const tabs = (refEl.tagName === 'ION-TABS') ? refEl : refEl.querySelector('ion-tabs');
-  const query = 'ion-content ion-header:not(.header-collapse-condense-inactive) ion-title.title-large';
+  const tabs = (refEl.tagName === 'SYG-TABS') ? refEl : refEl.querySelector('syg-tabs');
+  const query = 'syg-content syg-header:not(.header-collapse-condense-inactive) syg-title.title-large';
 
   if (tabs != null) {
-    const activeTab = tabs.querySelector('ion-tab:not(.tab-hidden), .ion-page:not(.ion-page-hidden)');
+    const activeTab = tabs.querySelector('syg-tab:not(.tab-hidden), .syg-page:not(.syg-page-hidden)');
     return (activeTab != null) ? activeTab.querySelector(query) : null;
   }
 
@@ -25,22 +25,22 @@ const getLargeTitle = (refEl: any) => {
 };
 
 const getBackButton = (refEl: any, backDirection: boolean) => {
-  const tabs = (refEl.tagName === 'ION-TABS') ? refEl : refEl.querySelector('ion-tabs');
+  const tabs = (refEl.tagName === 'SYG-TABS') ? refEl : refEl.querySelector('syg-tabs');
   let buttonsList = [];
 
   if (tabs != null) {
-    const activeTab = tabs.querySelector('ion-tab:not(.tab-hidden), .ion-page:not(.ion-page-hidden)');
+    const activeTab = tabs.querySelector('syg-tab:not(.tab-hidden), .syg-page:not(.syg-page-hidden)');
     if (activeTab != null) {
-      buttonsList = activeTab.querySelectorAll('ion-buttons');
+      buttonsList = activeTab.querySelectorAll('syg-buttons');
     }
   } else {
-    buttonsList = refEl.querySelectorAll('ion-buttons');
+    buttonsList = refEl.querySelectorAll('syg-buttons');
   }
 
   for (const buttons of buttonsList) {
-    const parentHeader = buttons.closest('ion-header');
+    const parentHeader = buttons.closest('syg-header');
     const activeHeader = parentHeader && !parentHeader.classList.contains('header-collapse-condense-inactive');
-    const backButton = buttons.querySelector('ion-back-button');
+    const backButton = buttons.querySelector('syg-back-button');
     const buttonsCollapse = buttons.classList.contains('buttons-collapse');
     const startSlot = buttons.slot === 'start' || buttons.slot === '';
 
@@ -117,7 +117,7 @@ const animateBackButton = (rootAnimation: Animation, rtl: boolean, backDirection
   const enteringBackButtonTextAnimation = createAnimation();
   const enteringBackButtonIconAnimation = createAnimation();
 
-  const clonedBackButtonEl = getClonedElement('ion-back-button');
+  const clonedBackButtonEl = getClonedElement('syg-back-button');
 
   const backButtonTextEl = shadow(clonedBackButtonEl).querySelector('.button-text');
   const backButtonIconEl = shadow(clonedBackButtonEl).querySelector('ion-icon');
@@ -176,7 +176,7 @@ const animateLargeTitle = (rootAnimation: Animation, rtl: boolean, backDirection
 
   const KEYFRAMES = (backDirection) ? BACKWARDS_KEYFRAMES : FORWARDS_KEYFRAMES;
 
-  const clonedTitleEl = getClonedElement('ion-title');
+  const clonedTitleEl = getClonedElement('syg-title');
   const clonedLargeTitleAnimation = createAnimation();
 
   clonedTitleEl.innerText = largeTitleEl.innerText;
@@ -221,9 +221,9 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
     const leavingEl = opts.leavingEl;
 
     const backDirection = (opts.direction === 'back');
-    const contentEl = enteringEl.querySelector(':scope > ion-content');
-    const headerEls = enteringEl.querySelectorAll(':scope > ion-header > *:not(ion-toolbar), :scope > ion-footer > *');
-    const enteringToolBarEls = enteringEl.querySelectorAll(':scope > ion-header > ion-toolbar');
+    const contentEl = enteringEl.querySelector(':scope > syg-content');
+    const headerEls = enteringEl.querySelectorAll(':scope > syg-header > *:not(syg-toolbar), :scope > syg-footer > *');
+    const enteringToolBarEls = enteringEl.querySelectorAll(':scope > syg-header > syg-toolbar');
 
     const rootAnimation = createAnimation();
     const enteringContentAnimation = createAnimation();
@@ -233,7 +233,7 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
       .duration(opts.duration || DURATION)
       .easing(opts.easing || EASING)
       .fill('both')
-      .beforeRemoveClass('ion-page-invisible');
+      .beforeRemoveClass('syg-page-invisible');
 
     if (leavingEl && navEl) {
       const navDecorAnimation = createAnimation();
@@ -242,7 +242,7 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
     }
 
     if (!contentEl && enteringToolBarEls.length === 0 && headerEls.length === 0) {
-      enteringContentAnimation.addElement(enteringEl.querySelector(':scope > .ion-page, :scope > ion-nav, :scope > ion-tabs')!);  // REVIEW
+      enteringContentAnimation.addElement(enteringEl.querySelector(':scope > .syg-page, :scope > syg-nav, :scope > syg-tabs')!);  // REVIEW
     } else {
       enteringContentAnimation.addElement(contentEl!);  // REVIEW
       enteringContentAnimation.addElement(headerEls);
@@ -263,10 +263,10 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
     }
 
     if (contentEl) {
-      const enteringTransitionEffectEl = shadow(contentEl).querySelector('.transition-effect');
+      const enteringTransitionEffectEl = shadow(contentEl).querySelector('.transitsyg-effect');
       if (enteringTransitionEffectEl) {
-        const enteringTransitionCoverEl = enteringTransitionEffectEl.querySelector('.transition-cover');
-        const enteringTransitionShadowEl = enteringTransitionEffectEl.querySelector('.transition-shadow');
+        const enteringTransitionCoverEl = enteringTransitionEffectEl.querySelector('.transitsyg-cover');
+        const enteringTransitionShadowEl = enteringTransitionEffectEl.querySelector('.transitsyg-shadow');
 
         const enteringTransitionEffect = createAnimation();
         const enteringTransitionCover = createAnimation();
@@ -292,7 +292,7 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
       }
     }
 
-    const enteringContentHasLargeTitle = enteringEl.querySelector('ion-header.header-collapse-condense');
+    const enteringContentHasLargeTitle = enteringEl.querySelector('syg-header.header-collapse-condense');
 
     const { forward, backward } = createLargeTitleTransition(rootAnimation, isRTL, backDirection, enteringEl, leavingEl);
     enteringToolBarEls.forEach(enteringToolBarEl => {
@@ -301,12 +301,12 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
       rootAnimation.addAnimation(enteringToolBar);
 
       const enteringTitle = createAnimation();
-      enteringTitle.addElement(enteringToolBarEl.querySelector('ion-title')!);  // REVIEW
+      enteringTitle.addElement(enteringToolBarEl.querySelector('syg-title')!);  // REVIEW
 
       const enteringToolBarButtons = createAnimation();
-      const buttons = Array.from(enteringToolBarEl.querySelectorAll('ion-buttons,[menuToggle]'));
+      const buttons = Array.from(enteringToolBarEl.querySelectorAll('syg-buttons,[menuToggle]'));
 
-      const parentHeader = enteringToolBarEl.closest('ion-header');
+      const parentHeader = enteringToolBarEl.closest('syg-header');
       const inactiveHeader = parentHeader && parentHeader.classList.contains('header-collapse-condense-inactive');
 
       let buttonsToAnimate;
@@ -322,13 +322,13 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
       enteringToolBarButtons.addElement(buttonsToAnimate);
 
       const enteringToolBarItems = createAnimation();
-      enteringToolBarItems.addElement(enteringToolBarEl.querySelectorAll(':scope > *:not(ion-title):not(ion-buttons):not([menuToggle])'));
+      enteringToolBarItems.addElement(enteringToolBarEl.querySelectorAll(':scope > *:not(syg-title):not(syg-buttons):not([menuToggle])'));
 
       const enteringToolBarBg = createAnimation();
       enteringToolBarBg.addElement(shadow(enteringToolBarEl).querySelector('.toolbar-background')!); // REVIEW
 
       const enteringBackButton = createAnimation();
-      const backButtonEl = enteringToolBarEl.querySelector('ion-back-button');
+      const backButtonEl = enteringToolBarEl.querySelector('syg-back-button');
 
       if (backButtonEl) {
         enteringBackButton.addElement(backButtonEl);
@@ -387,12 +387,12 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
     // setup leaving view
     if (leavingEl) {
       const leavingContent = createAnimation();
-      const leavingContentEl = leavingEl.querySelector(':scope > ion-content');
-      const leavingToolBarEls = leavingEl.querySelectorAll(':scope > ion-header > ion-toolbar');
-      const leavingHeaderEls = leavingEl.querySelectorAll(':scope > ion-header > *:not(ion-toolbar), :scope > ion-footer > *');
+      const leavingContentEl = leavingEl.querySelector(':scope > syg-content');
+      const leavingToolBarEls = leavingEl.querySelectorAll(':scope > syg-header > syg-toolbar');
+      const leavingHeaderEls = leavingEl.querySelectorAll(':scope > syg-header > *:not(syg-toolbar), :scope > syg-footer > *');
 
       if (!leavingContentEl && leavingToolBarEls.length === 0 && leavingHeaderEls.length === 0) {
-        leavingContent.addElement(leavingEl.querySelector(':scope > .ion-page, :scope > ion-nav, :scope > ion-tabs')!);  // REVIEW
+        leavingContent.addElement(leavingEl.querySelector(':scope > .syg-page, :scope > syg-nav, :scope > syg-tabs')!);  // REVIEW
       } else {
         leavingContent.addElement(leavingContentEl!);  // REVIEW
         leavingContent.addElement(leavingHeaderEls);
@@ -406,7 +406,7 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
           .beforeClearStyles([OPACITY])
           .fromTo('transform', `translateX(${CENTER})`, (isRTL ? 'translateX(-100%)' : 'translateX(100%)'));
 
-        const leavingPage = getIonPageElement(leavingEl) as HTMLElement;
+        const leavingPage = getSygPageElement(leavingEl) as HTMLElement;
         rootAnimation.afterAddWrite(() => {
           if (rootAnimation.getDirection() === 'normal') {
             leavingPage.style.setProperty('display', 'none');
@@ -421,11 +421,11 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
       }
 
       if (leavingContentEl) {
-        const leavingTransitionEffectEl = shadow(leavingContentEl).querySelector('.transition-effect');
+        const leavingTransitionEffectEl = shadow(leavingContentEl).querySelector('.transitsyg-effect');
 
         if (leavingTransitionEffectEl) {
-          const leavingTransitionCoverEl = leavingTransitionEffectEl.querySelector('.transition-cover');
-          const leavingTransitionShadowEl = leavingTransitionEffectEl.querySelector('.transition-shadow');
+          const leavingTransitionCoverEl = leavingTransitionEffectEl.querySelector('.transitsyg-cover');
+          const leavingTransitionShadowEl = leavingTransitionEffectEl.querySelector('.transitsyg-shadow');
 
           const leavingTransitionEffect = createAnimation();
           const leavingTransitionCover = createAnimation();
@@ -456,12 +456,12 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
         leavingToolBar.addElement(leavingToolBarEl);
 
         const leavingTitle = createAnimation();
-        leavingTitle.addElement(leavingToolBarEl.querySelector('ion-title')!); // REVIEW
+        leavingTitle.addElement(leavingToolBarEl.querySelector('syg-title')!); // REVIEW
 
         const leavingToolBarButtons = createAnimation();
-        const buttons = leavingToolBarEl.querySelectorAll('ion-buttons,[menuToggle]');
+        const buttons = leavingToolBarEl.querySelectorAll('syg-buttons,[menuToggle]');
 
-        const parentHeader = leavingToolBarEl.closest('ion-header');
+        const parentHeader = leavingToolBarEl.closest('syg-header');
         const inactiveHeader = parentHeader && parentHeader.classList.contains('header-collapse-condense-inactive');
 
         const buttonsToAnimate = Array.from(buttons).filter(button => {
@@ -472,7 +472,7 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
         leavingToolBarButtons.addElement(buttonsToAnimate);
 
         const leavingToolBarItems = createAnimation();
-        const leavingToolBarItemEls = leavingToolBarEl.querySelectorAll(':scope > *:not(ion-title):not(ion-buttons):not([menuToggle])');
+        const leavingToolBarItemEls = leavingToolBarEl.querySelectorAll(':scope > *:not(syg-title):not(syg-buttons):not([menuToggle])');
         if (leavingToolBarItemEls.length > 0) {
           leavingToolBarItems.addElement(leavingToolBarItemEls);
         }
@@ -481,7 +481,7 @@ export const iosTransitionAnimation = (navEl: HTMLElement, opts: TransitionOptio
         leavingToolBarBg.addElement(shadow(leavingToolBarEl).querySelector('.toolbar-background')!); // REVIEW
 
         const leavingBackButton = createAnimation();
-        const backButtonEl = leavingToolBarEl.querySelector('ion-back-button');
+        const backButtonEl = leavingToolBarEl.querySelector('syg-back-button');
         if (backButtonEl) {
           leavingBackButton.addElement(backButtonEl);
         }

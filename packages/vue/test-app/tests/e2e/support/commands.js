@@ -55,7 +55,7 @@ Cypress.Commands.add('ionPageHidden', (pageId) => {
 Cypress.Commands.add('ionBackClick', (pageId) => {
   cy.get(`div.ion-page[data-pageid=${pageId}]`)
     .should('be.visible', true)
-    .find('ion-back-button')
+    .find('syg-back-button')
     .click()
 });
 
@@ -85,6 +85,6 @@ Cypress.Commands.add('routerGo', (n) => {
 Cypress.Commands.add('ionBackButtonHidden', (pageId) => {
   cy.get(`div.ion-page[data-pageid=${pageId}]`)
     .should('be.visible', true)
-    .find('ion-back-button')
+    .find('syg-back-button')
     .should('not.be.visible')
 });

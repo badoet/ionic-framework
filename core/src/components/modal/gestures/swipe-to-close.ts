@@ -9,7 +9,7 @@ export const SwipeToCloseDefaults = {
 };
 
 export const createSwipeToCloseGesture = (
-  el: HTMLIonModalElement,
+  el: HTMLSygModalElement,
   animation: Animation,
   onDismiss: () => void
 ) => {
@@ -24,7 +24,7 @@ export const createSwipeToCloseGesture = (
       return true;
     }
 
-    const contentOrFooter = target.closest('ion-content, ion-footer');
+    const contentOrFooter = target.closest('syg-content, syg-footer');
     if (contentOrFooter === null) {
       return true;
     }

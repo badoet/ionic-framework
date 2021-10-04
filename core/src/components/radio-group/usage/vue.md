@@ -1,39 +1,39 @@
 ```html
 <template>
-  <ion-list>
-    <ion-radio-group>
-      <ion-list-header>
-        <ion-label>
+  <syg-list>
+    <syg-radio-group>
+      <syg-list-header>
+        <syg-label>
           Auto Manufacturers
-        </ion-label>
-      </ion-list-header>
+        </syg-label>
+      </syg-list-header>
 
-      <ion-item>
-        <ion-label>Cord</ion-label>
-        <ion-radio value="cord"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Cord</syg-label>
+        <syg-radio value="cord"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Duesenberg</ion-label>
-        <ion-radio value="duesenberg"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Duesenberg</syg-label>
+        <syg-radio value="duesenberg"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Hudson</ion-label>
-        <ion-radio value="hudson"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Hudson</syg-label>
+        <syg-radio value="hudson"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Packard</ion-label>
-        <ion-radio value="packard"></ion-radio>
-      </ion-item>
+      <syg-item>
+        <syg-label>Packard</syg-label>
+        <syg-radio value="packard"></syg-radio>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Studebaker</ion-label>
-        <ion-radio value="studebaker"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
-  </ion-list>
+      <syg-item>
+        <syg-label>Studebaker</syg-label>
+        <syg-radio value="studebaker"></syg-radio>
+      </syg-item>
+    </syg-radio-group>
+  </syg-list>
 </template>
 
 <script>

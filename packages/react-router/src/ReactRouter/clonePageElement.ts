@@ -10,7 +10,7 @@ export function clonePageElement(leavingViewHtml: string | HTMLElement) {
     newEl.innerHTML = html;
     newEl.style.zIndex = '';
     // Remove an existing back button so the new element doesn't get two of them
-    const ionBackButton = newEl.getElementsByTagName('ion-back-button');
+    const ionBackButton = newEl.getElementsByTagName('syg-back-button');
     if (ionBackButton[0]) {
       ionBackButton[0].remove();
     }

@@ -50,28 +50,28 @@ export class InfiniteScrollExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.toggleInfiniteScroll()} expand="block">
+      <syg-content>
+        <syg-button onClick={() => this.toggleInfiniteScroll()} expand="block">
           Toggle Infinite Scroll
-        </ion-button>
+        </syg-button>
 
-        <ion-list>
+        <syg-list>
           {this.data.map(item =>
-            <ion-item>
-              <ion-label>{item}</ion-label>
-            </ion-item>
+            <syg-item>
+              <syg-label>{item}</syg-label>
+            </syg-item>
           )}
-        </ion-list>
+        </syg-list>
 
-        <ion-infinite-scroll
+        <syg-infinite-scroll
           ref={el => this.infiniteScroll = el}
           onIonInfinite={(ev) => this.loadData(ev)}>
-          <ion-infinite-scroll-content
+          <syg-infinite-scroll-content
             loadingSpinner="bubbles"
             loadingText="Loading more data...">
-          </ion-infinite-scroll-content>
-        </ion-infinite-scroll>
-      </ion-content>
+          </syg-infinite-scroll-content>
+        </syg-infinite-scroll>
+      </syg-content>
     ];
   }
 }

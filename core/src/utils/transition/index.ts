@@ -41,7 +41,7 @@ const beforeTransition = (opts: TransitionOptions) => {
   /**
    * When transitioning, the page should not
    * respond to click events. This resolves small
-   * issues like users double tapping the ion-back-button.
+   * issues like users double tapping the syg-back-button.
    * These pointer events are removed in `afterTransition`.
    */
   enteringEl.style.setProperty('pointer-events', 'none');
@@ -65,10 +65,10 @@ const runTransition = async (opts: TransitionOptions): Promise<TransitionResult>
 const afterTransition = (opts: TransitionOptions) => {
   const enteringEl = opts.enteringEl;
   const leavingEl = opts.leavingEl;
-  enteringEl.classList.remove('ion-page-invisible');
+  enteringEl.classList.remove('syg-page-invisible');
   enteringEl.style.removeProperty('pointer-events');
   if (leavingEl !== undefined) {
-    leavingEl.classList.remove('ion-page-invisible');
+    leavingEl.classList.remove('syg-page-invisible');
     leavingEl.style.removeProperty('pointer-events');
   }
 };
@@ -226,11 +226,11 @@ export const deepReady = async (el: any | undefined): Promise<void> => {
 export const setPageHidden = (el: HTMLElement, hidden: boolean) => {
   if (hidden) {
     el.setAttribute('aria-hidden', 'true');
-    el.classList.add('ion-page-hidden');
+    el.classList.add('syg-page-hidden');
   } else {
     el.hidden = false;
     el.removeAttribute('aria-hidden');
-    el.classList.remove('ion-page-hidden');
+    el.classList.remove('syg-page-hidden');
   }
 };
 
@@ -249,12 +249,12 @@ const setZIndex = (
   }
 };
 
-export const getIonPageElement = (element: HTMLElement) => {
-  if (element.classList.contains('ion-page')) {
+export const getSygPageElement = (element: HTMLElement) => {
+  if (element.classList.contains('syg-page')) {
     return element;
   }
 
-  const ionPage = element.querySelector(':scope > .ion-page, :scope > ion-nav, :scope > ion-tabs');
+  const ionPage = element.querySelector(':scope > .syg-page, :scope > syg-nav, :scope > syg-tabs');
   if (ionPage) {
     return ionPage;
   }

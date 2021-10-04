@@ -8,13 +8,13 @@ test('radio-group: search', async () => {
   const screenshotCompares = [];
   screenshotCompares.push(await page.compareScreenshot());
 
-  const radioTwo = await page.find('ion-radio[value=two]');
+  const radioTwo = await page.find('syg-radio[value=two]');
   await radioTwo.click();
 
   const value = await page.find('#value');
   expect(value.textContent).toEqual('Current value: two');
 
-  const searchbar = await page.find('ion-searchbar');
+  const searchbar = await page.find('syg-searchbar');
   await searchbar.click();
   await page.keyboard.type('zero');
 

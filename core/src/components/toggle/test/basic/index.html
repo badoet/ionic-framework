@@ -9,93 +9,93 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Toggle - Basic</ion-title>
-        <ion-buttons slot="primary">
-          <ion-toggle aria-label="Toggle"></ion-toggle>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Toggle - Basic</syg-title>
+        <syg-buttons slot="primary">
+          <syg-toggle aria-label="Toggle"></syg-toggle>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content id="content">
+    <syg-content id="content">
 
-      <ion-list>
-        <ion-item>
-          <ion-label>Apple</ion-label>
-          <ion-toggle slot="start" name="apple" checked></ion-toggle>
-        </ion-item>
+      <syg-list>
+        <syg-item>
+          <syg-label>Apple</syg-label>
+          <syg-toggle slot="start" name="apple" checked></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Banana</ion-label>
-          <ion-toggle slot="start" name="banana" checked class="toggle-part"></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Banana</syg-label>
+          <syg-toggle slot="start" name="banana" checked class="toggle-part"></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Cherry, disabled</ion-label>
-          <ion-toggle slot="start" color="danger" name="cherry" disabled></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Cherry, disabled</syg-label>
+          <syg-toggle slot="start" color="danger" name="cherry" disabled></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Grape, checked, disabled</ion-label>
-          <ion-toggle slot="start" id="grapeChecked" name="grape" checked disabled></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Grape, checked, disabled</syg-label>
+          <syg-toggle slot="start" id="grapeChecked" name="grape" checked disabled></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Kiwi, (ionChange) Secondary color</ion-label>
-          <ion-toggle slot="start" color="secondary" (ionChange)="kiwiChange($event)"></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Kiwi, (ionChange) Secondary color</syg-label>
+          <syg-toggle slot="start" color="secondary" (ionChange)="kiwiChange($event)"></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Strawberry, (ionChange) checked="true"</ion-label>
-          <ion-toggle slot="start" color="light" (ionChange)="strawberryChange($event)" checked="true"></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Strawberry, (ionChange) checked="true"</syg-label>
+          <syg-toggle slot="start" color="light" (ionChange)="strawberryChange($event)" checked="true"></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Checkbox right, checked, really long text that should ellipsis</ion-label>
-          <ion-toggle slot="end" color="danger" checked></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Checkbox right, checked, really long text that should ellipsis</syg-label>
+          <syg-toggle slot="end" color="danger" checked></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Checkbox right side</ion-label>
-          <ion-toggle slot="end" checked></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Checkbox right side</syg-label>
+          <syg-toggle slot="end" checked></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Button w/ right side default icon, really long text that should ellipsis</ion-label>
-          <ion-icon name="information-circle" slot="end"></ion-icon>
-        </ion-item>
+        <syg-item>
+          <syg-label>Button w/ right side default icon, really long text that should ellipsis</syg-label>
+          <ion-icon name="informatsyg-circle" slot="end"></ion-icon>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Custom</ion-label>
-          <ion-toggle slot="start" style="--border-radius: 0px;--handle-border-radius: 0px;" checked></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Custom</syg-label>
+          <syg-toggle slot="start" style="--border-radius: 0px;--handle-border-radius: 0px;" checked></syg-toggle>
+        </syg-item>
 
-        <ion-item>
-          <ion-label>Stop Immediate Event Propagation</ion-label>
-          <ion-toggle slot="start" checked id="eventPropagation"></ion-toggle>
-        </ion-item>
+        <syg-item>
+          <syg-label>Stop Immediate Event Propagation</syg-label>
+          <syg-toggle slot="start" checked id="eventPropagation"></syg-toggle>
+        </syg-item>
 
-      </ion-list>
+      </syg-list>
 
 
-      <p aria-hidden="true"class="ion-text-center">
-        <ion-button onClick="toggleBoolean('grapeChecked', 'checked')" fill="outline" size="small">Grape Checked</ion-button>
-        <ion-button onClick="toggleBoolean('grapeChecked', 'disabled')" fill="outline" size="small">Grape Disabled</ion-button>
-        <ion-button onClick="printForm()" fill="outline" size="small">Print Form</ion-button>
+      <p aria-hidden="true"class="syg-text-center">
+        <syg-button onClick="toggleBoolean('grapeChecked', 'checked')" fill="outline" size="small">Grape Checked</syg-button>
+        <syg-button onClick="toggleBoolean('grapeChecked', 'disabled')" fill="outline" size="small">Grape Disabled</syg-button>
+        <syg-button onClick="printForm()" fill="outline" size="small">Print Form</syg-button>
       </p>
 
       <p>
-        <ion-toggle aria-label="Stand-alone toggle" id="standAloneChecked"></ion-toggle>
+        <syg-toggle aria-label="Stand-alone toggle" id="standAloneChecked"></syg-toggle>
         Stand-alone toggle:
         <span id="standAloneCheckedSpan"></span>
       </p>
-    </ion-content>
+    </syg-content>
 
     <style>
       .toggle-part.toggle-checked::part(handle) {
@@ -133,7 +133,7 @@
       });
     </script>
 
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

@@ -10,7 +10,7 @@ import { createAnimation } from '../../animation/animation';
 
 export const baseAnimation = (isIos: boolean): Animation => {
   // https://material.io/guidelines/motion/movement.html#movement-movement-in-out-of-screen-bounds
-  // https://material.io/guidelines/motion/duration-easing.html#duration-easing-natural-easing-curves
+  // https://material.io/guidelines/motion/duratsyg-easing.html#duratsyg-easing-natural-easing-curves
 
   /**
    * "Apply the sharp curve to items temporarily leaving the screen that may return

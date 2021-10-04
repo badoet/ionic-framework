@@ -1,12 +1,12 @@
 import { Component, ComponentInterface, Host, Listen, Prop, State, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { menuController } from '../../utils/menu-controller';
 
 import { updateVisibility } from './menu-toggle-util';
 
 @Component({
-  tag: 'ion-menu-toggle',
+  tag: 'syg-menu-toggle',
   styleUrl: 'menu-toggle.scss',
   shadow: true
 })
@@ -19,7 +19,7 @@ export class MenuToggle implements ComponentInterface {
    * Can also be `start` or `end` for the menu side.
    * This is used to find the correct menu to toggle.
    *
-   * If this property is not used, `ion-menu-toggle` will toggle the
+   * If this property is not used, `syg-menu-toggle` will toggle the
    * first menu that is active.
    */
   @Prop() menu?: string;
@@ -28,7 +28,7 @@ export class MenuToggle implements ComponentInterface {
    * Automatically hides the content when the corresponding menu is not active.
    *
    * By default, it's `true`. Change it to `false` in order to
-   * keep `ion-menu-toggle` always visible regardless the state of the menu.
+   * keep `syg-menu-toggle` always visible regardless the state of the menu.
    */
   @Prop() autoHide = true;
 
@@ -47,7 +47,7 @@ export class MenuToggle implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const hidden = this.autoHide && !this.visible;
 
     return (

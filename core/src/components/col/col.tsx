@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Host, Listen, Prop, forceUpdate, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { matchBreakpoint } from '../../utils/media';
 
 const win = window as any;
@@ -8,7 +8,7 @@ const SUPPORTS_VARS = !!(win.CSS && win.CSS.supports && win.CSS.supports('--a: 0
 const BREAKPOINTS = ['', 'xs', 'sm', 'md', 'lg', 'xl'];
 
 @Component({
-  tag: 'ion-col',
+  tag: 'syg-col',
   styleUrl: 'col.scss',
   shadow: true
 })
@@ -187,7 +187,7 @@ export class Col implements ComponentInterface {
     // If size wasn't set for any breakpoint
     // or if the user set the size without a value
     // it means we need to stick with the default and return
-    // e.g. <ion-col size-md>
+    // e.g. <syg-col size-md>
     if (!columns || columns === '') {
       return;
     }
@@ -244,7 +244,7 @@ export class Col implements ComponentInterface {
 
   render() {
     const isRTL = document.dir === 'rtl';
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         class={{

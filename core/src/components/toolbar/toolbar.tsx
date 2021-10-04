@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Host, Listen, Prop, forceUpdate, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { Color, CssClassMap, StyleEventDetail } from '../../interface';
 import { createColorClasses, hostContext } from '../../utils/theme';
 
@@ -14,7 +14,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
  * @slot end - Content is placed to the right of the toolbar text in LTR, and to the left in RTL.
  */
 @Component({
-  tag: 'ion-toolbar',
+  tag: 'syg-toolbar',
   styleUrls: {
     ios: 'toolbar.ios.scss',
     md: 'toolbar.md.scss'
@@ -24,7 +24,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
 export class Toolbar implements ComponentInterface {
   private childrenStyles = new Map<string, CssClassMap>();
 
-  @Element() el!: HTMLIonToolbarElement;
+  @Element() el!: HTMLSygToolbarElement;
 
   /**
    * The color to use from your application's color palette.
@@ -34,7 +34,7 @@ export class Toolbar implements ComponentInterface {
   @Prop({ reflect: true }) color?: Color;
 
   componentWillLoad() {
-    const buttons = Array.from(this.el.querySelectorAll('ion-buttons'));
+    const buttons = Array.from(this.el.querySelectorAll('syg-buttons'));
 
     const firstButtons = buttons.find(button => {
       return button.slot === 'start';
@@ -81,7 +81,7 @@ export class Toolbar implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const childStyles = {};
     this.childrenStyles.forEach(value => {
       Object.assign(childStyles, value);
@@ -92,7 +92,7 @@ export class Toolbar implements ComponentInterface {
           ...childStyles,
           ...createColorClasses(this.color, {
             [mode]: true,
-            'in-toolbar': hostContext('ion-toolbar', this.el),
+            'in-toolbar': hostContext('syg-toolbar', this.el),
           }),
         }}
       >

@@ -27,18 +27,18 @@ export const CardExamples: React.FC = () => {
         <IonCard>
           <IonItem>
             <IonIcon icon={pin} slot="start" />
-            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
+            <IonLabel>syg-item in a card, icon left, button right</IonLabel>
             <IonButton fill="outline" slot="end">View</IonButton>
           </IonItem>
 
           <IonCardContent>
             This is content, without any paragraph or header tags,
-            within an ion-cardContent element.
+            within an syg-cardContent element.
       </IonCardContent>
         </IonCard>
 
         <IonCard>
-          <IonItem href="#" className="ion-activated">
+          <IonItem href="#" className="syg-activated">
             <IonIcon icon={wifi} slot="start" />
             <IonLabel>Card Link Item 1 activated</IonLabel>
           </IonItem>
@@ -48,7 +48,7 @@ export const CardExamples: React.FC = () => {
             <IonLabel>Card Link Item 2</IonLabel>
           </IonItem>
 
-          <IonItem className="ion-activated">
+          <IonItem className="syg-activated">
             <IonIcon icon={warning} slot="start" />
             <IonLabel>Card Button Item 1 activated</IonLabel>
           </IonItem>

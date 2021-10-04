@@ -78,8 +78,8 @@ export const getPopoverDimensions = (
 export const configureDismissInteraction = (
   triggerEl: HTMLElement,
   triggerAction: TriggerAction,
-  popoverEl: HTMLIonPopoverElement,
-  parentPopoverEl: HTMLIonPopoverElement
+  popoverEl: HTMLSygPopoverElement,
+  parentPopoverEl: HTMLSygPopoverElement
 ) => {
   let dismissCallbacks: InteractionCallback[] = [];
   const root = getElementRoot(parentPopoverEl);
@@ -126,7 +126,7 @@ export const configureDismissInteraction = (
              * are hovering over its trigger.
              */
             const target = ev.target as HTMLElement;
-            const closestTrigger = target.closest('[data-ion-popover-trigger]');
+            const closestTrigger = target.closest('[data-syg-popover-trigger]');
             if (closestTrigger === triggerEl) {
               /**
                * stopPropagation here so if the
@@ -160,7 +160,7 @@ export const configureDismissInteraction = (
 export const configureTriggerInteraction = (
   triggerEl: HTMLElement,
   triggerAction: TriggerAction,
-  popoverEl: HTMLIonPopoverElement
+  popoverEl: HTMLSygPopoverElement
 ) => {
   let triggerCallbacks: InteractionCallback[] = [];
 
@@ -210,7 +210,7 @@ export const configureTriggerInteraction = (
             const target = ev.relatedTarget as HTMLElement | null;
             if (!target) { return; }
 
-            if (target.closest('ion-popover') !== popoverEl) {
+            if (target.closest('syg-popover') !== popoverEl) {
               popoverEl.dismiss(undefined, undefined, false);
             }
           }
@@ -277,45 +277,45 @@ export const configureTriggerInteraction = (
   }
 
   triggerCallbacks.forEach(({ eventName, callback }) => triggerEl.addEventListener(eventName, callback));
-  triggerEl.setAttribute('data-ion-popover-trigger', 'true');
+  triggerEl.setAttribute('data-syg-popover-trigger', 'true');
 
   return () => {
     triggerCallbacks.forEach(({ eventName, callback }) => triggerEl.removeEventListener(eventName, callback));
-    triggerEl.removeAttribute('data-ion-popover-trigger');
+    triggerEl.removeAttribute('data-syg-popover-trigger');
   }
 }
 
 /**
- * Returns the index of an ion-item in an array of ion-items.
+ * Returns the index of an syg-item in an array of syg-items.
  */
-export const getIndexOfItem = (items: HTMLIonItemElement[], item: HTMLElement | null) => {
-  if (!item || item.tagName !== 'ION-ITEM') { return -1; }
+export const getIndexOfItem = (items: HTMLSygItemElement[], item: HTMLElement | null) => {
+  if (!item || item.tagName !== 'SYG-ITEM') { return -1; }
 
   return items.findIndex(el => el === item)
 };
 
 /**
- * Given an array of elements and a currently focused ion-item
- * returns the next ion-item relative to the focused one or
+ * Given an array of elements and a currently focused syg-item
+ * returns the next syg-item relative to the focused one or
  * undefined.
  */
-export const getNextItem = (items: HTMLIonItemElement[], currentItem: HTMLElement | null) => {
+export const getNextItem = (items: HTMLSygItemElement[], currentItem: HTMLElement | null) => {
   const currentItemIndex = getIndexOfItem(items, currentItem);
   return items[currentItemIndex + 1];
 }
 
 /**
- * Given an array of elements and a currently focused ion-item
- * returns the previous ion-item relative to the focused one or
+ * Given an array of elements and a currently focused syg-item
+ * returns the previous syg-item relative to the focused one or
  * undefined.
  */
-export const getPrevItem = (items: HTMLIonItemElement[], currentItem: HTMLElement | null) => {
+export const getPrevItem = (items: HTMLSygItemElement[], currentItem: HTMLElement | null) => {
   const currentItemIndex = getIndexOfItem(items, currentItem);
   return items[currentItemIndex - 1];
 }
 
-/** Focus the internal button of the ion-item */
-const focusItem = (item: HTMLIonItemElement) => {
+/** Focus the internal button of the syg-item */
+const focusItem = (item: HTMLSygItemElement) => {
   const root = getElementRoot(item);
   const button = root.querySelector('button');
 
@@ -326,17 +326,17 @@ const focusItem = (item: HTMLIonItemElement) => {
 
 /**
  * Returns `true` if `el` has been designated
- * as a trigger element for an ion-popover.
+ * as a trigger element for an syg-popover.
  */
-export const isTriggerElement = (el: HTMLElement) => el.hasAttribute('data-ion-popover-trigger');
+export const isTriggerElement = (el: HTMLElement) => el.hasAttribute('data-syg-popover-trigger');
 
 export const configureKeyboardInteraction = (
-  popoverEl: HTMLIonPopoverElement
+  popoverEl: HTMLSygPopoverElement
 ) => {
 
   const callback = async (ev: KeyboardEvent) => {
     const activeElement = document.activeElement as HTMLElement | null;
-    let items: HTMLIonItemElement[] = [];
+    let items: HTMLSygItemElement[] = [];
 
     /**
      * Complex selectors with :not() are :not supported
@@ -346,10 +346,10 @@ export const configureKeyboardInteraction = (
     try {
 
       /**
-       * Select all ion-items that are not children of child popovers.
-       * i.e. only select ion-item elements that are part of this popover
+       * Select all syg-items that are not children of child popovers.
+       * i.e. only select syg-item elements that are part of this popover
        */
-      items = Array.from(popoverEl.querySelectorAll('ion-item:not(ion-popover ion-popover *):not([disabled])') as NodeListOf<HTMLIonItemElement>);
+      items = Array.from(popoverEl.querySelectorAll('syg-item:not(syg-popover syg-popover *):not([disabled])') as NodeListOf<HTMLSygItemElement>);
     /* tslint:disable-next-line */
     } catch {}
 
@@ -369,7 +369,7 @@ export const configureKeyboardInteraction = (
         }
         break;
       /**
-       * ArrowDown should move focus to the next focusable ion-item.
+       * ArrowDown should move focus to the next focusable syg-item.
        */
       case 'ArrowDown':
         ev.preventDefault();
@@ -380,7 +380,7 @@ export const configureKeyboardInteraction = (
         }
         break;
       /**
-       * ArrowUp should move focus to the previous focusable ion-item.
+       * ArrowUp should move focus to the previous focusable syg-item.
        */
       case 'ArrowUp':
         ev.preventDefault();
@@ -391,7 +391,7 @@ export const configureKeyboardInteraction = (
         }
         break;
       /**
-       * Home should move focus to the first focusable ion-item.
+       * Home should move focus to the first focusable syg-item.
        */
       case 'Home':
         ev.preventDefault();
@@ -402,7 +402,7 @@ export const configureKeyboardInteraction = (
         }
         break;
       /**
-       * End should move focus to the last focusable ion-item.
+       * End should move focus to the last focusable syg-item.
        */
       case 'End':
         ev.preventDefault();
@@ -495,10 +495,10 @@ export const getPopoverPosition = (
       /**
        * ionShadowTarget is used when we need to align the
        * popover with an element inside of the shadow root
-       * of an Ionic component. Ex: Presenting a popover
+       * of an Sygic component. Ex: Presenting a popover
        * by clicking on the collapsed indicator inside
-       * of `ion-breadcrumb` and centering it relative
-       * to the indicator rather than `ion-breadcrumb`
+       * of `syg-breadcrumb` and centering it relative
+       * to the indicator rather than `syg-breadcrumb`
        * as a whole.
        */
       const actualTriggerEl = (triggerEl || customEv?.detail?.ionShadowTarget || customEv?.target) as HTMLElement | null;

@@ -19,12 +19,12 @@
   @include border-radius($list-inset-ios-border-radius);
 }
 
-.list-ios.list-inset ion-item {
+.list-ios.list-inset syg-item {
   --border-width: 0 0 1px 0;
   --inner-border-width: 0;
 }
 
-.list-ios.list-inset ion-item:last-child {
+.list-ios.list-inset syg-item:last-child {
   --border-width: 0;
   --inner-border-width: 0;
 }
@@ -84,6 +84,6 @@
 // iOS List Inside A Card
 // --------------------------------------------------
 
-ion-card .list-ios {
+syg-card .list-ios {
   @include margin(0);
 }

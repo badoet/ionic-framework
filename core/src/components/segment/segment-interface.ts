@@ -7,5 +7,5 @@ export interface SegmentChangeEventDetail {
 
 export interface SegmentCustomEvent extends CustomEvent {
   detail: SegmentChangeEventDetail;
-  target: HTMLIonSegmentElement;
+  target: HTMLSygSegmentElement;
 }

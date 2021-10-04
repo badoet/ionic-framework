@@ -1,27 +1,27 @@
 ```html
 <!-- Default Checkbox -->
-<ion-checkbox></ion-checkbox>
+<syg-checkbox></syg-checkbox>
 
 <!-- Disabled Checkbox -->
-<ion-checkbox disabled="true"></ion-checkbox>
+<syg-checkbox disabled="true"></syg-checkbox>
 
 <!-- Checked Checkbox -->
-<ion-checkbox checked="true"></ion-checkbox>
+<syg-checkbox checked="true"></syg-checkbox>
 
 <!-- Checkbox Colors -->
-<ion-checkbox color="primary"></ion-checkbox>
-<ion-checkbox color="secondary"></ion-checkbox>
-<ion-checkbox color="danger"></ion-checkbox>
-<ion-checkbox color="light"></ion-checkbox>
-<ion-checkbox color="dark"></ion-checkbox>
+<syg-checkbox color="primary"></syg-checkbox>
+<syg-checkbox color="secondary"></syg-checkbox>
+<syg-checkbox color="danger"></syg-checkbox>
+<syg-checkbox color="light"></syg-checkbox>
+<syg-checkbox color="dark"></syg-checkbox>
 
 <!-- Checkboxes in a List -->
-<ion-list>
-  <ion-item *ngFor="let entry of form">
-    <ion-label>{{entry.val}}</ion-label>
-    <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
-  </ion-item>
-</ion-list>
+<syg-list>
+  <syg-item *ngFor="let entry of form">
+    <syg-label>{{entry.val}}</syg-label>
+    <syg-checkbox slot="end" [(ngModel)]="entry.isChecked"></syg-checkbox>
+  </syg-item>
+</syg-list>
 ```
 
 ```typescript

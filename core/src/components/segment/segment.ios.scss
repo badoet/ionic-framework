@@ -34,7 +34,7 @@
 
 // Default Segment, In a Toolbar
 :host(.in-toolbar:not(.ion-color)) {
-  background: var(--ion-toolbar-segment-background, var(--background));
+  background: var(--syg-toolbar-segment-background, var(--background));
 }
 
 

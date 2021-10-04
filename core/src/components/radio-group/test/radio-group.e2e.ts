@@ -6,7 +6,7 @@ import { newE2EPage } from '@stencil/core/testing';
  * @returns the checked property of the focused radio button
  */
 const selectRadio = async (page, radioButtonId: string, selectionMethod: 'keyboard' | 'mouse'): Promise<boolean> => {
-  const selector = `ion-radio#${radioButtonId}`;
+  const selector = `syg-radio#${radioButtonId}`;
   if (selectionMethod === 'keyboard') {
     await page.focus(selector);
     await page.keyboard.press('Space');
@@ -16,7 +16,7 @@ const selectRadio = async (page, radioButtonId: string, selectionMethod: 'keyboa
   
   await page.waitForChanges();
 
-  const radioGroup = await page.find(`ion-radio#${radioButtonId} >>> input`);
+  const radioGroup = await page.find(`syg-radio#${radioButtonId} >>> input`);
   const checked = await radioGroup.getProperty('checked');
   return checked;
 }
@@ -25,12 +25,12 @@ describe('radio-group', () => {
   it('Spacebar should not deselect without allowEmptySelection', async () => {
     const page = await newE2EPage();
     await page.setContent(`
-      <ion-radio-group value="one" allow-empty-selection="false">
-        <ion-item>
-          <ion-label>One</ion-label>
-          <ion-radio id="one" value="one"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
+      <syg-radio-group value="one" allow-empty-selection="false">
+        <syg-item>
+          <syg-label>One</syg-label>
+          <syg-radio id="one" value="one"></syg-radio>
+        </syg-item>
+      </syg-radio-group>
     `);
 
     const checked = await selectRadio(page, 'one', 'keyboard');
@@ -41,12 +41,12 @@ describe('radio-group', () => {
   it('Spacebar should deselect with allowEmptySelection', async () => {
     const page = await newE2EPage();
     await page.setContent(`
-      <ion-radio-group value="one" allow-empty-selection="true">
-        <ion-item>
-          <ion-label>One</ion-label>
-          <ion-radio id="one" value="one"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
+      <syg-radio-group value="one" allow-empty-selection="true">
+        <syg-item>
+          <syg-label>One</syg-label>
+          <syg-radio id="one" value="one"></syg-radio>
+        </syg-item>
+      </syg-radio-group>
     `);
 
     const checked = await selectRadio(page, 'one', 'keyboard');
@@ -57,12 +57,12 @@ describe('radio-group', () => {
   it('Click should not deselect without allowEmptySelection', async () => {
     const page = await newE2EPage();
     await page.setContent(`
-      <ion-radio-group value="one" allow-empty-selection="false">
-        <ion-item>
-          <ion-label>One</ion-label>
-          <ion-radio id="one" value="one"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
+      <syg-radio-group value="one" allow-empty-selection="false">
+        <syg-item>
+          <syg-label>One</syg-label>
+          <syg-radio id="one" value="one"></syg-radio>
+        </syg-item>
+      </syg-radio-group>
     `);
 
     const checked = await selectRadio(page, 'one', 'mouse');
@@ -73,12 +73,12 @@ describe('radio-group', () => {
   it('Click should deselect with allowEmptySelection', async () => {
     const page = await newE2EPage();
     await page.setContent(`
-      <ion-radio-group value="one" allow-empty-selection="true">
-        <ion-item>
-          <ion-label>One</ion-label>
-          <ion-radio id="one" value="one"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
+      <syg-radio-group value="one" allow-empty-selection="true">
+        <syg-item>
+          <syg-label>One</syg-label>
+          <syg-radio id="one" value="one"></syg-radio>
+        </syg-item>
+      </syg-radio-group>
     `);
 
     const checked = await selectRadio(page, 'one', 'mouse');

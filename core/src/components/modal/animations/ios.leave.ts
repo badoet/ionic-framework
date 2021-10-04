@@ -27,7 +27,7 @@ export const iosLeaveAnimation = (
   const root = getElementRoot(baseEl);
   const { wrapperAnimation, backdropAnimation } = currentBreakpoint !== undefined ? createSheetLeaveAnimation(opts) : createLeaveAnimation();
 
-  backdropAnimation.addElement(root.querySelector('ion-backdrop')!)
+  backdropAnimation.addElement(root.querySelector('syg-backdrop')!)
 
   wrapperAnimation
     .addElement(root.querySelectorAll('.modal-wrapper, .modal-shadow')!)
@@ -41,7 +41,7 @@ export const iosLeaveAnimation = (
 
   if (presentingEl) {
     const isMobile = window.innerWidth < 768;
-    const hasCardModal = (presentingEl.tagName === 'ION-MODAL' && (presentingEl as HTMLIonModalElement).presentingElement !== undefined);
+    const hasCardModal = (presentingEl.tagName === 'SYG-MODAL' && (presentingEl as HTMLSygModalElement).presentingElement !== undefined);
     const presentingElRoot = getElementRoot(presentingEl);
 
     const presentingAnimation = createAnimation()
@@ -53,7 +53,7 @@ export const iosLeaveAnimation = (
 
         presentingEl.style.setProperty('overflow', '');
 
-        const numModals = Array.from(bodyEl.querySelectorAll('ion-modal')).filter(m => m.presentingElement !== undefined).length;
+        const numModals = Array.from(bodyEl.querySelectorAll('syg-modal')).filter(m => m.presentingElement !== undefined).length;
         if (numModals <= 1) {
           bodyEl.style.setProperty('background-color', '');
         }

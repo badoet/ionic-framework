@@ -1,43 +1,43 @@
 ```html
-<ion-tabs>
+<syg-tabs>
   <!-- Tab views -->
-  <ion-tab tab="schedule">
-    <ion-router-outlet name="schedule"></ion-router-outlet>
-  </ion-tab>
+  <syg-tab tab="schedule">
+    <syg-router-outlet name="schedule"></syg-router-outlet>
+  </syg-tab>
 
-  <ion-tab tab="speakers">
-    <ion-router-outlet name="speakers"></ion-router-outlet>
-  </ion-tab>
+  <syg-tab tab="speakers">
+    <syg-router-outlet name="speakers"></syg-router-outlet>
+  </syg-tab>
 
-  <ion-tab tab="map">
-    <ion-router-outlet name="map"></ion-router-outlet>
-  </ion-tab>
+  <syg-tab tab="map">
+    <syg-router-outlet name="map"></syg-router-outlet>
+  </syg-tab>
 
-  <ion-tab tab="about">
-    <ion-router-outlet name="about"></ion-router-outlet>
-  </ion-tab>
+  <syg-tab tab="about">
+    <syg-router-outlet name="about"></syg-router-outlet>
+  </syg-tab>
 
   <!-- Tab bar -->
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule" href="/app/tabs/(schedule:schedule)">
+  <syg-tab-bar slot="bottom">
+    <syg-tab-button tab="schedule" href="/app/tabs/(schedule:schedule)">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Schedule</ion-label>
-    </ion-tab-button>
+      <syg-label>Schedule</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="speakers" href="/app/tabs/(speakers:speakers)">
+    <syg-tab-button tab="speakers" href="/app/tabs/(speakers:speakers)">
       <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Speakers</ion-label>
-    </ion-tab-button>
+      <syg-label>Speakers</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="map" href="/app/tabs/(map:map)">
+    <syg-tab-button tab="map" href="/app/tabs/(map:map)">
       <ion-icon name="map"></ion-icon>
-      <ion-label>Map</ion-label>
-    </ion-tab-button>
+      <syg-label>Map</syg-label>
+    </syg-tab-button>
 
-    <ion-tab-button tab="about" href="/app/tabs/(about:about)">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+    <syg-tab-button tab="about" href="/app/tabs/(about:about)">
+      <ion-icon name="informatsyg-circle"></ion-icon>
+      <syg-label>About</syg-label>
+    </syg-tab-button>
+  </syg-tab-bar>
+</syg-tabs>
 ```

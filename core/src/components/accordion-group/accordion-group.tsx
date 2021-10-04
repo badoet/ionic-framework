@@ -1,13 +1,13 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Listen, Method, Prop, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AccordionGroupChangeEventDetail } from '../../interface';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: 'ion-accordion-group',
+  tag: 'syg-accordion-group',
   styleUrls: {
     ios: 'accordion-group.ios.scss',
     md: 'accordion-group.md.scss'
@@ -15,7 +15,7 @@ import { AccordionGroupChangeEventDetail } from '../../interface';
   shadow: true
 })
 export class AccordionGroup implements ComponentInterface {
-  @Element() el!: HTMLIonAccordionGroupElement;
+  @Element() el!: HTMLSygAccordionGroupElement;
 
   /**
    * If `true`, all accordions inside of the
@@ -98,10 +98,10 @@ export class AccordionGroup implements ComponentInterface {
     const activeElement = document.activeElement;
     if (!activeElement) { return; }
 
-    const accordionEl = (activeElement.tagName === 'ION-ACCORDION') ? activeElement : activeElement.closest('ion-accordion');
+    const accordionEl = (activeElement.tagName === 'SYG-ACCORDION') ? activeElement : activeElement.closest('syg-accordion');
     if (!accordionEl) { return; }
 
-    const closestGroup = accordionEl.closest('ion-accordion-group');
+    const closestGroup = accordionEl.closest('syg-accordion-group');
     if (closestGroup !== this.el) { return; }
 
     // If the active accordion is not in the current array of accordions, do not do anything
@@ -109,7 +109,7 @@ export class AccordionGroup implements ComponentInterface {
     const startingIndex = accordions.findIndex(a => a === accordionEl);
     if (startingIndex === -1) { return; }
 
-    let accordion: HTMLIonAccordionElement | undefined;
+    let accordion: HTMLSygAccordionElement | undefined;
     if (ev.key === 'ArrowDown') {
       accordion = this.findNextAccordion(accordions, startingIndex);
     } else if (ev.key === 'ArrowUp') {
@@ -174,7 +174,7 @@ export class AccordionGroup implements ComponentInterface {
     }
   }
 
-  private findNextAccordion(accordions: HTMLIonAccordionElement[], startingIndex: number) {
+  private findNextAccordion(accordions: HTMLSygAccordionElement[], startingIndex: number) {
     const nextAccordion = accordions[startingIndex + 1];
     // tslint:disable-next-line:strict-type-predicates
     if (nextAccordion === undefined) {
@@ -184,7 +184,7 @@ export class AccordionGroup implements ComponentInterface {
     return nextAccordion;
   }
 
-  private findPreviousAccordion(accordions: HTMLIonAccordionElement[], startingIndex: number) {
+  private findPreviousAccordion(accordions: HTMLSygAccordionElement[], startingIndex: number) {
     const prevAccordion = accordions[startingIndex - 1];
     // tslint:disable-next-line:strict-type-predicates
     if (prevAccordion === undefined) {
@@ -199,12 +199,12 @@ export class AccordionGroup implements ComponentInterface {
    */
   @Method()
   async getAccordions() {
-    return Array.from(this.el.querySelectorAll('ion-accordion'));
+    return Array.from(this.el.querySelectorAll('syg-accordion'));
   }
 
   render() {
     const { disabled, readonly, expand } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
 
     return (
       <Host

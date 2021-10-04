@@ -74,7 +74,7 @@
   --ion-color-light-tint: #f5f6f9;
 
   /* Item Backgrounds */
-  --ion-background-color: #778899;
-  --ion-item-background: #fff;
-  --ion-item-border-color: #5bff76;
+  --syg-background-color: #778899;
+  --syg-item-background: #fff;
+  --syg-item-border-color: #5bff76;
 }

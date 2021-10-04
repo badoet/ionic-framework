@@ -1,22 +1,22 @@
 ```html
 <template>
-  <ion-avatar>
+  <syg-avatar>
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-  </ion-avatar>
+  </syg-avatar>
 
-  <ion-chip>
-    <ion-avatar>
+  <syg-chip>
+    <syg-avatar>
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-avatar>
-    <ion-label>Chip Avatar</ion-label>
-  </ion-chip>
+    </syg-avatar>
+    <syg-label>Chip Avatar</syg-label>
+  </syg-chip>
 
-  <ion-item>
-    <ion-avatar slot="start">
+  <syg-item>
+    <syg-avatar slot="start">
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-avatar>
-    <ion-label>Item Avatar</ion-label>
-  </ion-item>
+    </syg-avatar>
+    <syg-label>Item Avatar</syg-label>
+  </syg-item>
 </template>
 
 <script>

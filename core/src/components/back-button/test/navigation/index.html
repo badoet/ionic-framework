@@ -12,30 +12,30 @@
 </head>
 
 <body onload="loadFirstPage()">
-  <ion-app>
-    <ion-nav></ion-nav>
-  </ion-app>
+  <syg-app>
+    <syg-nav></syg-nav>
+  </syg-app>
 </body>
 
 <script>
 
   async function loadFirstPage() {
-    const nav = document.querySelector('ion-nav');
+    const nav = document.querySelector('syg-nav');
     const firstPage = document.createElement('div');
     firstPage.classList.add('first-page');
     firstPage.innerHTML = `
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-          </ion-buttons>
-          <ion-title>Page One</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-back-button></syg-back-button>
+          </syg-buttons>
+          <syg-title>Page One</syg-title>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content class="syg-padding">
         <h1>Page One</h1>
-        <ion-button class="next">Go to Page Two</ion-button>
-      </ion-content>
+        <syg-button class="next">Go to Page Two</syg-button>
+      </syg-content>
     `;
 
     await nav.setRoot(firstPage);
@@ -51,25 +51,25 @@
     const secondPage = document.createElement('div');
     secondPage.classList.add('second-page');
     secondPage.innerHTML = `
-      <ion-header>
-        <ion-toolbar color="secondary">
-          <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-          </ion-buttons>
-          <ion-title>Page Two</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
+      <syg-header>
+        <syg-toolbar color="secondary">
+          <syg-buttons slot="start">
+            <syg-back-button></syg-back-button>
+          </syg-buttons>
+          <syg-title>Page Two</syg-title>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content class="syg-padding">
         <h1>Page Two</h1>
-        <p>Just an empty <code>ion-back-button</code></p>
-        <ion-button class="next">Go to Page Three</ion-button>
-      </ion-content>
+        <p>Just an empty <code>syg-back-button</code></p>
+        <syg-button class="next">Go to Page Three</syg-button>
+      </syg-content>
     `;
 
     // okay cool, we're in the DOM now
     await nav.push(secondPage);
 
-    const nextButton = secondPage.querySelector('ion-button.next');
+    const nextButton = secondPage.querySelector('syg-button.next');
     nextButton.addEventListener('click', async () => {
       await goToPageThree(nav);
     });
@@ -79,25 +79,25 @@
     const thirdPage = document.createElement('div');
     thirdPage.classList.add('third-page');
     thirdPage.innerHTML = `
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-back-button color="danger" text="Text!" icon="add"></ion-back-button>
-          </ion-buttons>
-          <ion-title>Page Three</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-back-button color="danger" text="Text!" icon="add"></syg-back-button>
+          </syg-buttons>
+          <syg-title>Page Three</syg-title>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content class="syg-padding">
         <h1>Page Three</h1>
         <p>Custom back button</p>
-        <ion-button class="next">Go to Page Four</ion-button>
-      </ion-content>
+        <syg-button class="next">Go to Page Four</syg-button>
+      </syg-content>
     `;
 
     // okay cool, we're in the DOM now
     await nav.push(thirdPage);
 
-    const nextButton = thirdPage.querySelector('ion-button.next');
+    const nextButton = thirdPage.querySelector('syg-button.next');
     nextButton.addEventListener('click', async () => {
       await goToPageFour(nav);
     });
@@ -107,19 +107,19 @@
     const fourthPage = document.createElement('div');
     fourthPage.classList.add('fourth-page');
     fourthPage.innerHTML = `
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-menu-button auto-hide="false"></ion-menu-button>
-            <ion-back-button color="danger"></ion-back-button>
-          </ion-buttons>
-          <ion-title>Page Four</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
+      <syg-header>
+        <syg-toolbar>
+          <syg-buttons slot="start">
+            <syg-menu-button auto-hide="false"></syg-menu-button>
+            <syg-back-button color="danger"></syg-back-button>
+          </syg-buttons>
+          <syg-title>Page Four</syg-title>
+        </syg-toolbar>
+      </syg-header>
+      <syg-content class="syg-padding">
         <h1>Page Four</h1>
         <p>Back button and menu button</p>
-      </ion-content>
+      </syg-content>
     `;
 
     // okay cool, we're in the DOM now

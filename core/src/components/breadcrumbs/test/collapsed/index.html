@@ -9,284 +9,284 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Breadcrumbs - Collapsed</ion-title>
-        <ion-buttons slot="end">
-          <ion-button id="expandToggleButton" onClick="toggleBreadcrumbCollapse()">
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Breadcrumbs - Collapsed</syg-title>
+        <syg-buttons slot="end">
+          <syg-button id="expandToggleButton" onClick="toggleBreadcrumbCollapse()">
             Expand All
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+          </syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding">
+    <syg-content class="syg-padding">
       <h1>Default</h1>
 
-      <ion-breadcrumbs class="expandWithoutCollapse">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs class="expandWithoutCollapse">
+        <syg-breadcrumb href="#">
           Home
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film">
           Film
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
       <h1>Max Items: 4</h1>
 
-      <ion-breadcrumbs max-items="4" class="expandOnClick">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs max-items="4" class="expandOnClick">
+        <syg-breadcrumb href="#">
           Home
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film">
           Film
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
       <h1>Max Items: 4; ItemsBeforeCollapse: 0</h1>
 
-      <ion-breadcrumbs max-items="4" items-before-collapse="0" class="expandOnClick">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs max-items="4" items-before-collapse="0" class="expandOnClick">
+        <syg-breadcrumb href="#">
           Home
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film">
           Film
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
       <h1>Max Items: 4; ItemsBeforeCollapse: 2</h1>
 
-      <ion-breadcrumbs max-items="4" items-before-collapse="2" class="expandOnClick">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs max-items="4" items-before-collapse="2" class="expandOnClick">
+        <syg-breadcrumb href="#">
           Home
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film">
           Film
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
       <h1>Max Items: 4; ItemsAfterCollapse: 0</h1>
 
-      <ion-breadcrumbs max-items="4" items-after-collapse="0" class="expandOnClick">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs max-items="4" items-after-collapse="0" class="expandOnClick">
+        <syg-breadcrumb href="#">
           Home
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film">
           Film
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
       <h1>Max Items: 4; ItemsAfterCollapse: 3</h1>
 
-      <ion-breadcrumbs max-items="4" items-after-collapse="3" class="expandOnClick">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs max-items="4" items-after-collapse="3" class="expandOnClick">
+        <syg-breadcrumb href="#">
           Home
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film">
           Film
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
       <h1>Max Items: 4; ItemsBeforeCollapse: 2; ItemsAfterCollapse: 2</h1>
 
-      <ion-breadcrumbs max-items="4" items-before-collapse="2" items-after-collapse="2" class="expandOnClick">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs max-items="4" items-before-collapse="2" items-after-collapse="2" class="expandOnClick">
+        <syg-breadcrumb href="#">
           Home
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film">
           Film
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
       <h1>
         Max Items: 4; ItemsBeforeCollapse: 0; ItemsAfterCollapse: 4
-        <ion-button size="small" fill="clear" onClick="changeActive()">Set Active</ion-button>
+        <syg-button size="small" fill="clear" onClick="changeActive()">Set Active</syg-button>
       </h1>
 
-      <ion-breadcrumbs id="custom-active" max-items="4" items-before-collapse="0" items-after-collapse="4" class="expandOnClick">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs id="custom-active" max-items="4" items-before-collapse="0" items-after-collapse="4" class="expandOnClick">
+        <syg-breadcrumb href="#">
           Home
           <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
           <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
           <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
           <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film" active>
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film" active>
           Film
           <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
           <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
       <h1>Max Items: 4; ItemsBeforeCollapse: 3; ItemsAfterCollapse: 2</h1>
 
-      <ion-breadcrumbs max-items="4" items-before-collapse="3" items-after-collapse="2" class="expandOnClick">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs max-items="4" items-before-collapse="3" items-after-collapse="2" class="expandOnClick">
+        <syg-breadcrumb href="#">
           Home
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film">
           Film
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
       <h1>Max Items: 4; ItemsBeforeCollapse: 4; ItemsAfterCollapse: 4</h1>
 
-      <ion-breadcrumbs max-items="4" items-before-collapse="4" items-after-collapse="4" class="expandOnClick">
-        <ion-breadcrumb href="#">
+      <syg-breadcrumbs max-items="4" items-before-collapse="4" items-after-collapse="4" class="expandOnClick">
+        <syg-breadcrumb href="#">
           Home
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#electronics">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#electronics">
           Electronics
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#photography">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#photography">
           Photography
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#cameras">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#cameras">
           Cameras
-        </ion-breadcrumb>
-        <ion-breadcrumb href="#film">
+        </syg-breadcrumb>
+        <syg-breadcrumb href="#film">
           Film
-        </ion-breadcrumb>
-        <ion-breadcrumb>
+        </syg-breadcrumb>
+        <syg-breadcrumb>
           35 mm
-        </ion-breadcrumb>
-      </ion-breadcrumbs>
+        </syg-breadcrumb>
+      </syg-breadcrumbs>
 
       <hr>
 
-    </ion-content>
-  </ion-app>
+    </syg-content>
+  </syg-app>
 
   <script>
     let collapsed = true;
@@ -333,7 +333,7 @@
     expandWithoutCollapseBreadcrumbs.addEventListener('ionCollapsedClick', () => expandBreadcrumbs(breadcrumbs));
 
     function changeActive() {
-      const breadcrumbs = Array.from(document.querySelectorAll('#custom-active ion-breadcrumb'));
+      const breadcrumbs = Array.from(document.querySelectorAll('#custom-active syg-breadcrumb'));
       const activeIndex = breadcrumbs.findIndex(breadcrumb => breadcrumb.active);
 
       switch(activeIndex) {
@@ -375,7 +375,7 @@
       margin-bottom: 25px;
     }
 
-    ion-content ion-breadcrumbs {
+    syg-content syg-breadcrumbs {
       padding: 3px 5px;
     }
   </style>

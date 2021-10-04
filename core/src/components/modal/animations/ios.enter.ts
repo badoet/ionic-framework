@@ -27,7 +27,7 @@ export const iosEnterAnimation = (
   const { wrapperAnimation, backdropAnimation } = currentBreakpoint !== undefined ? createSheetEnterAnimation(opts) : createEnterAnimation();
 
   backdropAnimation
-    .addElement(root.querySelector('ion-backdrop')!)
+    .addElement(root.querySelector('syg-backdrop')!)
     .beforeStyles({
       'pointer-events': 'none'
     })
@@ -45,7 +45,7 @@ export const iosEnterAnimation = (
 
   if (presentingEl) {
     const isMobile = window.innerWidth < 768;
-    const hasCardModal = (presentingEl.tagName === 'ION-MODAL' && (presentingEl as HTMLIonModalElement).presentingElement !== undefined);
+    const hasCardModal = (presentingEl.tagName === 'SYG-MODAL' && (presentingEl as HTMLSygModalElement).presentingElement !== undefined);
     const presentingElRoot = getElementRoot(presentingEl);
 
     const presentingAnimation = createAnimation()

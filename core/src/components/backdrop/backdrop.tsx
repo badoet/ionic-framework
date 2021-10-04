@@ -1,10 +1,10 @@
 import { Component, ComponentInterface, Event, EventEmitter, Host, Listen, Prop, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { GESTURE_CONTROLLER } from '../../utils/gesture';
 
 @Component({
-  tag: 'ion-backdrop',
+  tag: 'syg-backdrop',
   styleUrls: {
     ios: 'backdrop.ios.scss',
     md: 'backdrop.md.scss'
@@ -63,7 +63,7 @@ export class Backdrop implements ComponentInterface {
   }
 
   render() {
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     return (
       <Host
         tabindex="-1"

@@ -9,74 +9,74 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Select Item: Multiple Value</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Select Item: Multiple Value</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="outer-content test-content">
+    <syg-content class="outer-content test-content">
 
-      <ion-item>
-        <ion-label>Toppings</ion-label>
-        <ion-select id="toppings" multiple="true" cancel-text="Nah" ok-text="Okay!">
-          <ion-select-option value="bacon">Bacon</ion-select-option>
-          <ion-select-option value="olives">Black Olives</ion-select-option>
-          <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-          <ion-select-option value="peppers">Green Peppers</ion-select-option>
-          <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-          <ion-select-option value="onions">Onions</ion-select-option>
-          <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-          <ion-select-option value="pineapple">Pineapple</ion-select-option>
-          <ion-select-option value="sausage">Sausage</ion-select-option>
-          <ion-select-option value="Spinach">Spinach</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Toppings</syg-label>
+        <syg-select id="toppings" multiple="true" cancel-text="Nah" ok-text="Okay!">
+          <syg-select-option value="bacon">Bacon</syg-select-option>
+          <syg-select-option value="olives">Black Olives</syg-select-option>
+          <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+          <syg-select-option value="peppers">Green Peppers</syg-select-option>
+          <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+          <syg-select-option value="onions">Onions</syg-select-option>
+          <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+          <syg-select-option value="pineapple">Pineapple</syg-select-option>
+          <syg-select-option value="sausage">Sausage</syg-select-option>
+          <syg-select-option value="Spinach">Spinach</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Car Features</ion-label>
-        <ion-select id="carFeatures" multiple="true">
-          <ion-select-option value="backupcamera">Backup Camera</ion-select-option>
-          <ion-select-option value="heatedseats">Headted Seats</ion-select-option>
-          <ion-select-option value="keyless">Keyless Entry</ion-select-option>
-          <ion-select-option value="navigation">Navigation</ion-select-option>
-          <ion-select-option value="parkingassist">Parking Assist</ion-select-option>
-          <ion-select-option value="sunroof">Sun Roof</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Car Features</syg-label>
+        <syg-select id="carFeatures" multiple="true">
+          <syg-select-option value="backupcamera">Backup Camera</syg-select-option>
+          <syg-select-option value="heatedseats">Headted Seats</syg-select-option>
+          <syg-select-option value="keyless">Keyless Entry</syg-select-option>
+          <syg-select-option value="navigation">Navigation</syg-select-option>
+          <syg-select-option value="parkingassist">Parking Assist</syg-select-option>
+          <syg-select-option value="sunroof">Sun Roof</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Pets</ion-label>
-        <ion-select id="pets" multiple>
-          <ion-select-option value="cat">Cat</ion-select-option>
-          <ion-select-option value="dog">Dog</ion-select-option>
-          <ion-select-option value="turtle">Turtle</ion-select-option>
-          <ion-select-option value="fish">Fish</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Pets</syg-label>
+        <syg-select id="pets" multiple>
+          <syg-select-option value="cat">Cat</syg-select-option>
+          <syg-select-option value="dog">Dog</syg-select-option>
+          <syg-select-option value="turtle">Turtle</syg-select-option>
+          <syg-select-option value="fish">Fish</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Disabled</ion-label>
-        <ion-select id="disabled" multiple disabled value="selected">
-          <ion-select-option value="selected">Selected Text</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Disabled</syg-label>
+        <syg-select id="disabled" multiple disabled value="selected">
+          <syg-select-option value="selected">Selected Text</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <ion-item>
-        <ion-label>Statuses</ion-label>
-        <ion-select id="status" value="selected" multiple>
-          <ion-select-option value="selected">Selected</ion-select-option>
-          <ion-select-option value="default">Default</ion-select-option>
-          <ion-select-option value="disabled" disabled="true">Disabled</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label>Statuses</syg-label>
+        <syg-select id="status" value="selected" multiple>
+          <syg-select-option value="selected">Selected</syg-select-option>
+          <syg-select-option value="default">Default</syg-select-option>
+          <syg-select-option value="disabled" disabled="true">Disabled</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-      <p aria-hidden="true" class="ion-padding">
+      <p aria-hidden="true" class="syg-padding">
         <code>toppings: <span id="toppingsResult"></span></code>
         <br>
         <code>carFeatures: <span id="carFeaturesResult"></span></code>
@@ -86,39 +86,39 @@
       </p>
 
       <form>
-        <ion-list class="ion-padding-vertical">
-          <ion-item>
-            <ion-input type="text"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>Select</ion-label>
-            <ion-select id="multiple" multiple="true">
-              <ion-select-option value="1">1</ion-select-option>
-              <ion-select-option value="2">2</ion-select-option>
-              <ion-select-option value="3">3</ion-select-option>
-            </ion-select>
-          </ion-item>
-          <ion-button expand="block" type="submit">Submit</ion-button>
-        </ion-list>
+        <syg-list class="syg-padding-vertical">
+          <syg-item>
+            <syg-input type="text"></syg-input>
+          </syg-item>
+          <syg-item>
+            <syg-label>Select</syg-label>
+            <syg-select id="multiple" multiple="true">
+              <syg-select-option value="1">1</syg-select-option>
+              <syg-select-option value="2">2</syg-select-option>
+              <syg-select-option value="3">3</syg-select-option>
+            </syg-select>
+          </syg-item>
+          <syg-button expand="block" type="submit">Submit</syg-button>
+        </syg-list>
       </form>
 
-      <ion-item>
-        <ion-label position="floating">Floating label</ion-label>
-        <ion-select multiple="true">
-          <ion-select-option value="bacon">Bacon</ion-select-option>
-          <ion-select-option value="olives">Black Olives</ion-select-option>
-          <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-          <ion-select-option value="peppers">Green Peppers</ion-select-option>
-          <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-          <ion-select-option value="onions">Onions</ion-select-option>
-          <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-          <ion-select-option value="pineapple">Pineapple</ion-select-option>
-          <ion-select-option value="sausage">Sausage</ion-select-option>
-          <ion-select-option value="Spinach">Spinach</ion-select-option>
-        </ion-select>
-      </ion-item>
+      <syg-item>
+        <syg-label position="floating">Floating label</syg-label>
+        <syg-select multiple="true">
+          <syg-select-option value="bacon">Bacon</syg-select-option>
+          <syg-select-option value="olives">Black Olives</syg-select-option>
+          <syg-select-option value="xcheese">Extra Cheese</syg-select-option>
+          <syg-select-option value="peppers">Green Peppers</syg-select-option>
+          <syg-select-option value="mushrooms">Mushrooms</syg-select-option>
+          <syg-select-option value="onions">Onions</syg-select-option>
+          <syg-select-option value="pepperoni">Pepperoni</syg-select-option>
+          <syg-select-option value="pineapple">Pineapple</syg-select-option>
+          <syg-select-option value="sausage">Sausage</syg-select-option>
+          <syg-select-option value="Spinach">Spinach</syg-select-option>
+        </syg-select>
+      </syg-item>
 
-    </ion-content>
+    </syg-content>
 
     <style>
       .outer-content {
@@ -157,11 +157,11 @@
           }
         }
       }
-      
+
       const multiple = document.querySelector('#multiple');
       multiple.value = ['1', '3'];
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

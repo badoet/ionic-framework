@@ -12,9 +12,9 @@ test('component: modes', async () => {
   // First test: .button class
   // ----------------------------------------------------------------
   // components that need to have the `button` class
-  // for use in styling by other components (`ion-buttons`)
-  // e.g. <ion-back-button class="button">
-  let tags = ['ion-button', 'ion-back-button', 'ion-menu-button'];
+  // for use in styling by other components (`syg-buttons`)
+  // e.g. <syg-back-button class="button">
+  let tags = ['syg-button', 'syg-back-button', 'syg-menu-button'];
 
   for (const tag of tags) {
     const el = await page.find(tag);
@@ -25,8 +25,8 @@ test('component: modes', async () => {
   // ----------------------------------------------------------------
   // components that need to have the `item` class
   // for use in styling by other components
-  // e.g. <ion-item-divider class="item">
-  tags = ['ion-item', 'ion-item-divider', 'ion-item-group'];
+  // e.g. <syg-item-divider class="item">
+  tags = ['syg-item', 'syg-item-divider', 'syg-item-group'];
 
   for (const tag of tags) {
     const el = await page.find(tag);
@@ -37,8 +37,8 @@ test('component: modes', async () => {
   // ----------------------------------------------------------------
   // components that need to have their tag name
   // + mode as a class for internal styling
-  // e.g. <ion-card-content class="card-content-md">
-  tags = ['ion-card-content', 'ion-footer', 'ion-header', 'ion-infinite-scroll-content', 'ion-item-group', 'ion-item-options', 'ion-list', 'ion-picker', 'ion-refresher', 'ion-slides', 'ion-split-pane'];
+  // e.g. <syg-card-content class="card-content-md">
+  tags = ['syg-card-content', 'syg-footer', 'syg-header', 'syg-infinite-scroll-content', 'syg-item-group', 'syg-item-options', 'syg-list', 'syg-picker', 'syg-refresher', 'syg-slides', 'syg-split-pane'];
 
   const globalMode = await page.evaluate(() => document.documentElement.getAttribute('mode'));
   for (const tag of tags) {
@@ -50,8 +50,8 @@ test('component: modes', async () => {
   // ----------------------------------------------------------------
   // components that need to have the mode class
   // added for external / user styling
-  // e.g. <ion-badge class="md">
-  tags = ['ion-action-sheet', 'ion-alert', 'ion-app', 'ion-avatar', 'ion-back-button', 'ion-backdrop', 'ion-badge', 'ion-button', 'ion-buttons', 'ion-card-content', 'ion-card-header', 'ion-card-subtitle', 'ion-card-title', 'ion-card', 'ion-checkbox', 'ion-chip', 'ion-col', 'ion-content', 'ion-datetime', 'ion-fab', 'ion-fab-button', 'ion-fab-list', 'ion-footer', 'ion-grid', 'ion-header', 'ion-icon', 'ion-img', 'ion-infinite-scroll', 'ion-infinite-scroll-content', 'ion-input', 'ion-item', 'ion-item-divider', 'ion-item-group', 'ion-item-option', 'ion-item-options', 'ion-item-sliding', 'ion-label', 'ion-list', 'ion-list-header', 'ion-loading', 'ion-modal', 'ion-menu', 'ion-menu-button', 'ion-menu-toggle', 'ion-note', 'ion-picker', 'ion-picker-column', 'ion-popover', 'ion-progress-bar', 'ion-radio', 'ion-radio-group', 'ion-range', 'ion-refresher', 'ion-refresher-content', 'ion-reorder', 'ion-reorder-group', 'ion-ripple-effect', 'ion-router-link', 'ion-row', 'ion-searchbar', 'ion-segment', 'ion-segment-button', 'ion-select', 'ion-select-option', 'ion-select-popover', 'ion-skeleton-text', 'ion-slide', 'ion-slides', 'ion-spinner', 'ion-split-pane', 'ion-tab-bar', 'ion-tab-button', 'ion-text', 'ion-textarea', 'ion-thumbnail', 'ion-title', 'ion-toast', 'ion-toggle', 'ion-toolbar'];
+  // e.g. <syg-badge class="md">
+  tags = ['syg-action-sheet', 'syg-alert', 'syg-app', 'syg-avatar', 'syg-back-button', 'syg-backdrop', 'syg-badge', 'syg-button', 'syg-buttons', 'syg-card-content', 'syg-card-header', 'syg-card-subtitle', 'syg-card-title', 'syg-card', 'syg-checkbox', 'syg-chip', 'syg-col', 'syg-content', 'syg-datetime', 'syg-fab', 'syg-fab-button', 'syg-fab-list', 'syg-footer', 'syg-grid', 'syg-header', 'ion-icon', 'syg-img', 'syg-infinite-scroll', 'syg-infinite-scroll-content', 'syg-input', 'syg-item', 'syg-item-divider', 'syg-item-group', 'syg-item-option', 'syg-item-options', 'syg-item-sliding', 'syg-label', 'syg-list', 'syg-list-header', 'syg-loading', 'syg-modal', 'syg-menu', 'syg-menu-button', 'syg-menu-toggle', 'syg-note', 'syg-picker', 'syg-picker-column', 'syg-popover', 'syg-progress-bar', 'syg-radio', 'syg-radio-group', 'syg-range', 'syg-refresher', 'syg-refresher-content', 'syg-reorder', 'syg-reorder-group', 'syg-ripple-effect', 'syg-router-link', 'syg-row', 'syg-searchbar', 'syg-segment', 'syg-segment-button', 'syg-select', 'syg-select-option', 'syg-select-popover', 'syg-skeleton-text', 'syg-slide', 'syg-slides', 'syg-spinner', 'syg-split-pane', 'syg-tab-bar', 'syg-tab-button', 'syg-text', 'syg-textarea', 'syg-thumbnail', 'syg-title', 'syg-toast', 'syg-toggle', 'syg-toolbar'];
 
   for (const tag of tags) {
     await page.waitForSelector(tag);
@@ -64,7 +64,7 @@ test('component: modes', async () => {
   // non-ionic ancestor components with a mode attribute
   // e.g. <p mode="foo">
   const ancestorTags = ['p[mode]'];
-  const childTag = 'ion-label';
+  const childTag = 'syg-label';
 
   for (const tag of ancestorTags) {
     await page.waitForSelector(tag);

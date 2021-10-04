@@ -36,7 +36,7 @@ export class ModalPage {
 }
 ```
 
-> If you need a wrapper element inside of your modal component, we recommend using a `<div class="ion-page">` so that the component dimensions are still computed properly.
+> If you need a wrapper element inside of your modal component, we recommend using a `<div class="syg-page">` so that the component dimensions are still computed properly.
 
 ### Passing Data
 
@@ -134,7 +134,7 @@ Modals in iOS mode have the ability to be presented in a card-style and swiped t
 
 > Card style modals when running on iPhone-sized devices do not have backdrops. As a result, the `--backdrop-opacity` variable will not have any effect.
 
-If you are creating an application that uses `ion-tabs`, it is recommended that you get the parent `ion-router-outlet` using `this.routerOutlet.parentOutlet.nativeEl`, otherwise the tabbar will not scale down when the modal opens.
+If you are creating an application that uses `syg-tabs`, it is recommended that you get the parent `syg-router-outlet` using `this.routerOutlet.parentOutlet.nativeEl`, otherwise the tabbar will not scale down when the modal opens.
 
 ```javascript
 import { IonRouterOutlet } from '@ionic/angular';
@@ -152,7 +152,7 @@ async presentModal() {
 }
 ```
 
-In most scenarios, using the `ion-router-outlet` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `ion-modal` element as the `presentingElement`.
+In most scenarios, using the `syg-router-outlet` element as the `presentingElement` is fine. In cases where you are presenting a card-style modal from within another modal, you should pass in the top-most `syg-modal` element as the `presentingElement`.
 
 ```javascript
 import { ModalController } from '@ionic/angular';
@@ -164,7 +164,7 @@ async presentModal() {
     component: ModalPage,
     cssClass: 'my-custom-class',
     swipeToClose: true,
-    presentingElement: await this.modalController.getTop() // Get the top-most ion-modal
+    presentingElement: await this.modalController.getTop() // Get the top-most syg-modal
   });
   return await modal.present();
 }
@@ -191,14 +191,14 @@ async presentModal() {
 
 **Inline**
 ```html
-<ion-modal [isOpen]="isModalOpen" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5, 1]">
+<syg-modal [isOpen]="isModalOpen" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5, 1]">
   <ng-template>
     <modal-page></modal-page>
   </ng-template>
-</ion-modal>
+</syg-modal>
 ```
 
 
 ### Style Placement
 
-In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Modal can be presented from within a page, the `ion-modal` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
+In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Modal can be presented from within a page, the `syg-modal` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).

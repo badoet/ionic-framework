@@ -21,17 +21,17 @@ const testNavigation = async (page: E2EPage) => {
 
   screenshotCompares.push(await page.compareScreenshot());
 
-  await page.click('page-root ion-button.next');
+  await page.click('page-root syg-button.next');
   await ionRouteDidChange.next();
-  page.click('page-one ion-button.next');
+  page.click('page-one syg-button.next');
   await ionRouteDidChange.next();
-  page.click('page-two ion-button.next');
+  page.click('page-two syg-button.next');
   await ionRouteDidChange.next();
-  page.click('page-three ion-back-button');
+  page.click('page-three syg-back-button');
   await ionRouteDidChange.next();
-  page.click('page-two ion-back-button');
+  page.click('page-two syg-back-button');
   await ionRouteDidChange.next();
-  page.click('page-one ion-back-button');
+  page.click('page-one syg-back-button');
   await ionRouteDidChange.next();
 
   screenshotCompares.push(await page.compareScreenshot('end navigation'));

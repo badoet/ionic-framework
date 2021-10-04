@@ -28,7 +28,7 @@ export const SlidesExample: React.FC = () => (
 
 ```css
 /* Without setting height the slides will take up the height of the slide's content */
-ion-slides {
+syg-slides {
   height: 100%;
 }
 ```

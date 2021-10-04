@@ -9,60 +9,60 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Input - Tabindex</ion-title>
-        <ion-buttons slot="primary">
-          <ion-button>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Input - Tabindex</syg-title>
+        <syg-buttons slot="primary">
+          <syg-button>
             <ion-icon slot="icon-only" name="menu"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+          </syg-button>
+        </syg-buttons>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content class="ion-padding">
-      <ion-input tabindex="0" placeholder="Tab 9th"></ion-input>
-      <ion-input placeholder="Tab 10th"></ion-input>
+    <syg-content class="syg-padding">
+      <syg-input tabindex="0" placeholder="Tab 9th"></syg-input>
+      <syg-input placeholder="Tab 10th"></syg-input>
 
       <hr>
 
-      <ion-input placeholder="Tab 8th" tabindex="8"></ion-input>
-      <ion-input placeholder="Skip" tabindex="-1"></ion-input>
-      <ion-input placeholder="Tab 7th" tabindex="7"></ion-input>
+      <syg-input placeholder="Tab 8th" tabindex="8"></syg-input>
+      <syg-input placeholder="Skip" tabindex="-1"></syg-input>
+      <syg-input placeholder="Tab 7th" tabindex="7"></syg-input>
       <div tabindex="0">Tab 11th</div>
-      <ion-input placeholder="Tab 6th" tabindex="6"></ion-input>
-      <ion-input placeholder="Tab 5th" tabindex="5"></ion-input>
+      <syg-input placeholder="Tab 6th" tabindex="6"></syg-input>
+      <syg-input placeholder="Tab 5th" tabindex="5"></syg-input>
 
-      <ion-item tabindex="4">
-        <ion-label position="stacked">Tab 4th</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item tabindex="3">
-        <ion-label position="stacked">Tab 3rd</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item tabindex="-1">
-        <ion-label position="stacked">Skip</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item tabindex="2">
-        <ion-label position="stacked">Tab 2nd</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item tabindex="1">
-        <ion-label position="stacked">Tab 1st</ion-label>
-        <ion-input></ion-input>
-        <ion-input></ion-input>
-      </ion-item>
-    </ion-content>
+      <syg-item tabindex="4">
+        <syg-label position="stacked">Tab 4th</syg-label>
+        <syg-input></syg-input>
+      </syg-item>
+      <syg-item tabindex="3">
+        <syg-label position="stacked">Tab 3rd</syg-label>
+        <syg-input></syg-input>
+      </syg-item>
+      <syg-item tabindex="-1">
+        <syg-label position="stacked">Skip</syg-label>
+        <syg-input></syg-input>
+      </syg-item>
+      <syg-item tabindex="2">
+        <syg-label position="stacked">Tab 2nd</syg-label>
+        <syg-input></syg-input>
+      </syg-item>
+      <syg-item tabindex="1">
+        <syg-label position="stacked">Tab 1st</syg-label>
+        <syg-input></syg-input>
+        <syg-input></syg-input>
+      </syg-item>
+    </syg-content>
 
     <style>
-      ion-input,
+      syg-input,
       div {
         margin-bottom: 10px;
       }
@@ -71,12 +71,12 @@
         padding-left: 8px;
       }
 
-      ion-item {
+      syg-item {
         --background: #f6f6f6;
         --padding-start: 40px;
       }
     </style>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

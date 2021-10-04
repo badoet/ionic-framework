@@ -1,282 +1,282 @@
 ### Default
 
 ```html
-<ion-breadcrumbs>
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs>
+  <syg-breadcrumb href="#">
     Home
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 ```
 
 ### Colors
 
 ```html
-<ion-breadcrumbs color="secondary">
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs color="secondary">
+  <syg-breadcrumb href="#">
     Home
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 ```
 
 ### Breadcrumbs with Icon
 
 ```html
 <!-- Icon start -->
-<ion-breadcrumbs>
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs>
+  <syg-breadcrumb href="#">
     <ion-icon slot="start" name="home"></ion-icon>
     Home
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#files">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#files">
     <ion-icon slot="start" name="folder"></ion-icon>
     Files
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#projects">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#projects">
     <ion-icon slot="start" name="folder"></ion-icon>
     Projects
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#user-research">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#user-research">
     <ion-icon slot="start" name="folder"></ion-icon>
     User Research
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     <ion-icon slot="start" name="document"></ion-icon>
     Survey.txt
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 
 <!-- Icon end -->
-<ion-breadcrumbs>
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs>
+  <syg-breadcrumb href="#">
     Home
     <ion-icon slot="end" name="home"></ion-icon>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#files">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#files">
     Files
     <ion-icon slot="end" name="folder"></ion-icon>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#projects">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#projects">
     Projects
     <ion-icon slot="end" name="folder"></ion-icon>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#user-research">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#user-research">
     User Research
     <ion-icon slot="end" name="folder"></ion-icon>
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     Survey.txt
     <ion-icon slot="end" name="document"></ion-icon>
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 ```
 
 ### Custom Separator
 
 ```html
 <!-- Custom separator text -->
-<ion-breadcrumbs>
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs>
+  <syg-breadcrumb href="#">
     Home
     <span slot="separator">|</span>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
     <span slot="separator">|</span>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
     <span slot="separator">|</span>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
     <span slot="separator">|</span>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
     <span slot="separator">|</span>
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 
 <!-- Custom separator icon -->
-<ion-breadcrumbs>
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs>
+  <syg-breadcrumb href="#">
     Home
     <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
     <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
     <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
     <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
     <ion-icon slot="separator" name="arrow-forward"></ion-icon>
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 ```
 
 ### Max Items
 
 ```html
 <!-- Max Items -->
-<ion-breadcrumbs [maxItems]="4">
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs [maxItems]="4">
+  <syg-breadcrumb href="#">
     Home
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 ```
 
 ### Items Before or After Collapse
 
 ```html
 <!-- Items before collapse -->
-<ion-breadcrumbs [maxItems]="4" [itemsBeforeCollapse]="2">
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs [maxItems]="4" [itemsBeforeCollapse]="2">
+  <syg-breadcrumb href="#">
     Home
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 
 <!-- Items after collapse -->
-<ion-breadcrumbs [maxItems]="4" [itemsAfterCollapse]="3">
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs [maxItems]="4" [itemsAfterCollapse]="3">
+  <syg-breadcrumb href="#">
     Home
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 
 <!-- Items before and after collapse -->
-<ion-breadcrumbs [maxItems]="4" [itemsBeforeCollapse]="0" [itemsAfterCollapse]="3">
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs [maxItems]="4" [itemsBeforeCollapse]="0" [itemsAfterCollapse]="3">
+  <syg-breadcrumb href="#">
     Home
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 ```
 
 ### Expand on Collapsed Indicator Click
 
 ```html
-<ion-breadcrumbs [maxItems]="maxBreadcrumbs" (ionCollapsedClick)="expandBreadcrumbs()">
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs [maxItems]="maxBreadcrumbs" (ionCollapsedClick)="expandBreadcrumbs()">
+  <syg-breadcrumb href="#">
     Home
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 ```
 
 ```typescript
@@ -299,26 +299,26 @@ export class BreadcrumbsExample {
 ### Popover on Collapsed Indicator Click
 
 ```html
-<ion-breadcrumbs [maxItems]="4" (ionCollapsedClick)="presentPopover($event)">
-  <ion-breadcrumb href="#">
+<syg-breadcrumbs [maxItems]="4" (ionCollapsedClick)="presentPopover($event)">
+  <syg-breadcrumb href="#">
     Home
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#electronics">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#electronics">
     Electronics
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#photography">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#photography">
     Photography
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#cameras">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#cameras">
     Cameras
-  </ion-breadcrumb>
-  <ion-breadcrumb href="#film">
+  </syg-breadcrumb>
+  <syg-breadcrumb href="#film">
     Film
-  </ion-breadcrumb>
-  <ion-breadcrumb>
+  </syg-breadcrumb>
+  <syg-breadcrumb>
     35 mm
-  </ion-breadcrumb>
-</ion-breadcrumbs>
+  </syg-breadcrumb>
+</syg-breadcrumbs>
 ```
 
 ```typescript
@@ -348,13 +348,13 @@ export class BreadcrumbsExample {
 ```
 
 ```html
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let breadcrumb of collapsedBreadcrumbs" [href]="breadcrumb.href">
-      <ion-label>{{ breadcrumb.textContent }}</ion-label>
-    </ion-item>
-  </ion-list>
-</ion-content>
+<syg-content>
+  <syg-list>
+    <syg-item *ngFor="let breadcrumb of collapsedBreadcrumbs" [href]="breadcrumb.href">
+      <syg-label>{{ breadcrumb.textContent }}</syg-label>
+    </syg-item>
+  </syg-list>
+</syg-content>
 ```
 ```typescript
 import { Component, Input } from '@angular/core';

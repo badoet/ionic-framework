@@ -1,11 +1,11 @@
 ```html
 <!-- Redirects when the user navigates to `/admin` but
 will NOT redirect if the user navigates to `/admin/posts` -->
-<ion-route-redirect from="/admin" to="/login"></ion-route-redirect>
+<syg-route-redirect from="/admin" to="/login"></syg-route-redirect>
 
 <!-- By adding the wilcard character (*), the redirect will match
 any subpath of admin -->
-<ion-route-redirect from="/admin/*" to="/login"></ion-route-redirect>
+<syg-route-redirect from="/admin/*" to="/login"></syg-route-redirect>
 ```
 
 ### Route Redirects as Guards
@@ -17,8 +17,8 @@ A route redirect can be added and removed dynamically to redirect (or guard) som
 ```tsx
 const isLoggedIn = false;
 
-const router = document.querySelector('ion-router');
-const routeRedirect = document.createElement('ion-route-redirect');
+const router = document.querySelector('syg-router');
+const routeRedirect = document.createElement('syg-route-redirect');
 routeRedirect.setAttribute('from', '*');
 routeRedirect.setAttribute('to', '/login');
 
@@ -30,7 +30,7 @@ if (!isLoggedIn) {
 Alternatively, the value of `to` can be modified based on a condition. In the following example, the route redirect will check if the user is logged in and redirect to the `/login` url if not.
 
 ```html
-<ion-route-redirect id="tutorialRedirect" from="*"></ion-route-redirect>
+<syg-route-redirect id="tutorialRedirect" from="*"></syg-route-redirect>
 ```
 
 ```javascript

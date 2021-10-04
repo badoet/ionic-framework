@@ -1,10 +1,10 @@
 ```html
-<ion-content>
-  <ion-infinite-scroll>
-    <ion-infinite-scroll-content
+<syg-content>
+  <syg-infinite-scroll>
+    <syg-infinite-scroll-content
       loadingSpinner="bubbles"
       loadingText="Loading more data…">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-</ion-content>
+    </syg-infinite-scroll-content>
+  </syg-infinite-scroll>
+</syg-content>
 ```

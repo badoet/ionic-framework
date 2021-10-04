@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, Watch, h } from '@stencil/core';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { CheckboxChangeEventDetail, Color, StyleEventDetail } from '../../interface';
 import { getAriaLabel, renderHiddenInput } from '../../utils/helpers';
 import { createColorClasses, hostContext } from '../../utils/theme';
@@ -12,7 +12,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
  * @part mark - The checkmark used to indicate the checked state.
  */
 @Component({
-  tag: 'ion-checkbox',
+  tag: 'syg-checkbox',
   styleUrls: {
     ios: 'checkbox.ios.scss',
     md: 'checkbox.md.scss'
@@ -21,7 +21,7 @@ import { createColorClasses, hostContext } from '../../utils/theme';
 })
 export class Checkbox implements ComponentInterface {
 
-  private inputId = `ion-cb-${checkboxIds++}`;
+  private inputId = `syg-cb-${checkboxIds++}`;
   private focusEl?: HTMLElement;
 
   @Element() el!: HTMLElement;
@@ -132,7 +132,7 @@ export class Checkbox implements ComponentInterface {
 
   render() {
     const { color, checked, disabled, el, indeterminate, inputId, name, value } = this;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const { label, labelId, labelText } = getAriaLabel(el, inputId);
 
     renderHiddenInput(true, el, name, (checked ? value : ''), disabled);
@@ -156,7 +156,7 @@ export class Checkbox implements ComponentInterface {
         role="checkbox"
         class={createColorClasses(color, {
           [mode]: true,
-          'in-item': hostContext('ion-item', el),
+          'in-item': hostContext('syg-item', el),
           'checkbox-checked': checked,
           'checkbox-disabled': disabled,
           'checkbox-indeterminate': indeterminate,

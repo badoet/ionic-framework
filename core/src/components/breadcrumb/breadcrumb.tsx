@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
 import { chevronForwardOutline, ellipsisHorizontal } from 'ionicons/icons';
 
-import { getIonMode } from '../../global/ionic-global';
+import { getSygMode } from '../../global/syg-global';
 import { AnimationBuilder, BreadcrumbCollapsedClickEventDetail, Color, RouterDirection } from '../../interface';
 import { inheritAttributes } from '../../utils/helpers';
 import { createColorClasses, hostContext, openURL } from '../../utils/theme';
@@ -14,7 +14,7 @@ import { createColorClasses, hostContext, openURL } from '../../utils/theme';
  * @part collapsed-indicator - The indicator element that shows the breadcrumbs are collapsed.
  */
 @Component({
-  tag: 'ion-breadcrumb',
+  tag: 'syg-breadcrumb',
   styleUrls: {
     'ios': 'breadcrumb.ios.scss',
     'md': 'breadcrumb.md.scss'
@@ -112,10 +112,10 @@ export class Breadcrumb implements ComponentInterface {
 
   /**
    * Emitted when the collapsed indicator is clicked on.
-   * `ion-breadcrumbs` will listen for this and emit ionCollapsedClick.
+   * `syg-breadcrumbs` will listen for this and emit ionCollapsedClick.
    * Normally we could just emit this as `ionCollapsedClick`
-   * and let the event bubble to `ion-breadcrumbs`,
-   * but if the event custom event is not set on `ion-breadcrumbs`,
+   * and let the event bubble to `syg-breadcrumbs`,
+   * but if the event custom event is not set on `syg-breadcrumbs`,
    * TypeScript will throw an error in user applications.
    * @internal
    */
@@ -149,7 +149,7 @@ export class Breadcrumb implements ComponentInterface {
     // Links can still be tabbed to when set to disabled if they have an href
     // in order to truly disable them we can keep it as an anchor but remove the href
     const href = disabled ? undefined : this.href;
-    const mode = getIonMode(this);
+    const mode = getSygMode(this);
     const attrs = (TagType === 'span')
       ? { }
       : {
@@ -176,11 +176,11 @@ export class Breadcrumb implements ComponentInterface {
           'breadcrumb-active': active,
           'breadcrumb-collapsed': collapsed,
           'breadcrumb-disabled': disabled,
-          'in-breadcrumbs-color': hostContext('ion-breadcrumbs[color]', el),
-          'in-toolbar': hostContext('ion-toolbar', this.el),
-          'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
-          'ion-activatable': clickable,
-          'ion-focusable': clickable,
+          'in-breadcrumbs-color': hostContext('syg-breadcrumbs[color]', el),
+          'in-toolbar': hostContext('syg-toolbar', this.el),
+          'in-toolbar-color': hostContext('syg-toolbar[color]', this.el),
+          'syg-activatable': clickable,
+          'syg-focusable': clickable,
         })}
       >
         <TagType

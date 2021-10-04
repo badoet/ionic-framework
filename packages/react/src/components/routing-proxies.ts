@@ -1,5 +1,5 @@
 import type { JSX } from '@ionic/core/components';
-import { IonButton as IonButtonCmp } from '@ionic/core/components/ion-button.js';
+import { IonButton as IonButtonCmp } from '@ionic/core/components/syg-button.js';
 import { IonCard as IonCardCmp } from '@ionic/core/components/ion-card.js';
 import { IonFabButton as IonFabButtonCmp } from '@ionic/core/components/ion-fab-button.js';
 import { IonItemOption as IonItemOptionCmp } from '@ionic/core/components/ion-item-option.js';
@@ -17,7 +17,7 @@ export const IonRouterLink = /*@__PURE__*/ createRoutingComponent<
 export const IonButton = /*@__PURE__*/ createRoutingComponent<
   HrefProps<JSX.IonButton>,
   HTMLIonButtonElement
->('ion-button', IonButtonCmp);
+>('syg-button', IonButtonCmp);
 
 export const IonCard = /*@__PURE__*/ createRoutingComponent<
   HrefProps<JSX.IonCard>,

@@ -1,6 +1,6 @@
-# ion-item-options
+# syg-item-options
 
-The option buttons for an `ion-item-sliding`. These buttons can be placed either on the [start or end side](#side-description).
+The option buttons for an `syg-item-sliding`. These buttons can be placed either on the [start or end side](#side-description).
 You can combine the `ionSwipe` event plus the `expandable` directive to create a full swipe action for the item.
 
 
@@ -19,7 +19,7 @@ You can combine the `ionSwipe` event plus the `expandable` directive to create a
 
 | Property | Attribute | Description                                                                                                                                                 | Type               | Default |
 | -------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------- |
-| `side`   | `side`    | The side the option button should be on. Possible values: `"start"` and `"end"`. If you have multiple `ion-item-options`, a side must be provided for each. | `"end" \| "start"` | `'end'` |
+| `side`   | `side`    | The side the option button should be on. Possible values: `"start"` and `"end"`. If you have multiple `syg-item-options`, a side must be provided for each. | `"end" \| "start"` | `'end'` |
 
 
 ## Events

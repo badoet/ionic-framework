@@ -168,30 +168,30 @@ const getActivatableTarget = (ev: any): any => {
     const path = ev.composedPath() as HTMLElement[];
     for (let i = 0; i < path.length - 2; i++) {
       const el = path[i];
-      if (el.classList && el.classList.contains('ion-activatable')) {
+      if (el.classList && el.classList.contains('syg-activatable')) {
         return el;
       }
     }
   } else {
-    return ev.target.closest('.ion-activatable');
+    return ev.target.closest('.syg-activatable');
   }
 };
 
 const isInstant = (el: HTMLElement) => {
-  return el.classList.contains('ion-activatable-instant');
+  return el.classList.contains('syg-activatable-instant');
 };
 
 const getRippleEffect = (el: HTMLElement) => {
   if (el.shadowRoot) {
-    const ripple = el.shadowRoot.querySelector('ion-ripple-effect');
+    const ripple = el.shadowRoot.querySelector('syg-ripple-effect');
     if (ripple) {
       return ripple;
     }
   }
-  return el.querySelector('ion-ripple-effect');
+  return el.querySelector('syg-ripple-effect');
 };
 
-const ACTIVATED = 'ion-activated';
+const ACTIVATED = 'syg-activated';
 const ADD_ACTIVATED_DEFERS = 200;
 const CLEAR_STATE_DEFERS = 200;
 const MOUSE_WAIT = 2500;

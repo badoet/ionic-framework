@@ -24,12 +24,12 @@
   @include border-radius($list-inset-md-border-radius);
 }
 
-.list-md.list-inset ion-item:first-child {
+.list-md.list-inset syg-item:first-child {
   --border-radius: #{$list-inset-md-border-radius $list-inset-md-border-radius 0 0};
   --border-width: #{0 0 $item-md-border-bottom-width 0};
 }
 
-.list-md.list-inset ion-item:last-child {
+.list-md.list-inset syg-item:last-child {
   --border-radius: #{0 0 $list-inset-md-border-radius, $list-inset-md-border-radius};
   --border-width: 0;
 }
@@ -93,6 +93,6 @@
 // Material Design List Inside A Card
 // --------------------------------------------------
 
-ion-card .list-md {
+syg-card .list-md {
   @include margin(0);
 }

@@ -1,11 +1,11 @@
 ```html
 <template>
-  <ion-button @click="presentAlert">Show Alert</ion-button>
-  <ion-button @click="presentAlertMultipleButtons">Show Alert (multiple buttons)</ion-button>
-  <ion-button @click="presentAlertConfirm">Show Alert (confirm)</ion-button>
-  <ion-button @click="presentAlertPrompt">Show Alert (prompt)</ion-button>
-  <ion-button @click="presentAlertRadio">Show Alert (radio)</ion-button>
-  <ion-button @click="presentAlertCheckbox">Show Alert (checkbox)</ion-button>
+  <syg-button @click="presentAlert">Show Alert</syg-button>
+  <syg-button @click="presentAlertMultipleButtons">Show Alert (multiple buttons)</syg-button>
+  <syg-button @click="presentAlertConfirm">Show Alert (confirm)</syg-button>
+  <syg-button @click="presentAlertPrompt">Show Alert (prompt)</syg-button>
+  <syg-button @click="presentAlertRadio">Show Alert (radio)</syg-button>
+  <syg-button @click="presentAlertCheckbox">Show Alert (checkbox)</syg-button>
 </template>
 
 <script>
@@ -309,8 +309,8 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Alert</ion-button>
-  <ion-alert
+  <syg-button @click="setOpen(true)">Show Alert</syg-button>
+  <syg-alert
     :is-open="isOpenRef"
     header="Alert"
     sub-header="Subtitle"
@@ -319,7 +319,7 @@ Developers can also use this component directly in their template:
     :buttons="buttons"
     @didDismiss="setOpen(false)"
   >
-  </ion-alert>
+  </syg-alert>
 </template>
 
 <script>

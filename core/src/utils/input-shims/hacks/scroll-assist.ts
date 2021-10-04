@@ -6,8 +6,8 @@ import { getScrollData } from './scroll-data';
 export const enableScrollAssist = (
   componentEl: HTMLElement,
   inputEl: HTMLInputElement | HTMLTextAreaElement,
-  contentEl: HTMLIonContentElement | null,
-  footerEl: HTMLIonFooterElement | null,
+  contentEl: HTMLSygContentElement | null,
+  footerEl: HTMLSygFooterElement | null,
   keyboardHeight: number
 ) => {
   let coord: any;
@@ -44,8 +44,8 @@ export const enableScrollAssist = (
 const jsSetFocus = async (
   componentEl: HTMLElement,
   inputEl: HTMLInputElement | HTMLTextAreaElement,
-  contentEl: HTMLIonContentElement | null,
-  footerEl: HTMLIonFooterElement | null,
+  contentEl: HTMLSygContentElement | null,
+  footerEl: HTMLSygFooterElement | null,
   keyboardHeight: number
 ) => {
   if (!contentEl && !footerEl) { return; }
@@ -137,7 +137,7 @@ const jsSetFocus = async (
          * This should only fire in 2 instances:
          * 1. The app is very slow.
          * 2. The app is running in a browser on an old OS
-         * that does not support Ionic Keyboard Events
+         * that does not support Sygic Keyboard Events
          */
         scrollContentTimeout = setTimeout(scrollContent, 1000);
         return;

@@ -1,46 +1,46 @@
 ```html
-<ion-chip>
-  <ion-label>Default</ion-label>
-</ion-chip>
+<syg-chip>
+  <syg-label>Default</syg-label>
+</syg-chip>
 
-<ion-chip>
-  <ion-label color="secondary">Secondary Label</ion-label>
-</ion-chip>
+<syg-chip>
+  <syg-label color="secondary">Secondary Label</syg-label>
+</syg-chip>
 
-<ion-chip color="secondary">
-  <ion-label color="dark">Secondary w/ Dark label</ion-label>
-</ion-chip>
+<syg-chip color="secondary">
+  <syg-label color="dark">Secondary w/ Dark label</syg-label>
+</syg-chip>
 
-<ion-chip disabled="true">
-  <ion-label>Disabled Chip</ion-label>
-</ion-chip>
+<syg-chip disabled="true">
+  <syg-label>Disabled Chip</syg-label>
+</syg-chip>
 
-<ion-chip>
+<syg-chip>
   <ion-icon name="pin"></ion-icon>
-  <ion-label>Default</ion-label>
-</ion-chip>
+  <syg-label>Default</syg-label>
+</syg-chip>
 
-<ion-chip>
+<syg-chip>
   <ion-icon name="heart" color="dark"></ion-icon>
-  <ion-label>Default</ion-label>
-</ion-chip>
+  <syg-label>Default</syg-label>
+</syg-chip>
 
-<ion-chip>
-  <ion-label>Button Chip</ion-label>
+<syg-chip>
+  <syg-label>Button Chip</syg-label>
   <ion-icon name="close-circle"></ion-icon>
-</ion-chip>
+</syg-chip>
 
-<ion-chip>
+<syg-chip>
   <ion-icon name="pin" color="primary"></ion-icon>
-  <ion-label>Icon Chip</ion-label>
+  <syg-label>Icon Chip</syg-label>
   <ion-icon name="close"></ion-icon>
-</ion-chip>
+</syg-chip>
 
-<ion-chip>
-  <ion-avatar>
+<syg-chip>
+  <syg-avatar>
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-  </ion-avatar>
-  <ion-label>Avatar Chip</ion-label>
+  </syg-avatar>
+  <syg-label>Avatar Chip</syg-label>
   <ion-icon name="close-circle"></ion-icon>
-</ion-chip>
+</syg-chip>
 ```

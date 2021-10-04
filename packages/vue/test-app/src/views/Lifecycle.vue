@@ -2,9 +2,9 @@
   <ion-page data-pageid="lifecycle">
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-buttons>
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+        <syg-buttons>
+          <syg-back-button></syg-back-button>
+        </syg-buttons>
         <ion-title>Lifecycle</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -27,7 +27,7 @@
         onIonViewWillLeave: <div id="onWillLeave">{{ onWillLeave }}</div><br />
         onIonViewDidLeave: <div id="onDidLeave">{{ onDidLeave }}</div><br />
 
-        <ion-button router-link="/navigation" id="lifecycle-navigation">Go to another page</ion-button>
+        <syg-button router-link="/navigation" id="lifecycle-navigation">Go to another page</syg-button>
       </div>
     </ion-content>
   </ion-page>

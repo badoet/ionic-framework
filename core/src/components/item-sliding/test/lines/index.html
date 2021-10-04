@@ -9,59 +9,59 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script></head>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script></head>
 
 <body>
-  <ion-app>
+  <syg-app>
 
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Item Sliding - Lines</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Item Sliding - Lines</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
-    <ion-content>
-      <ion-list>
-        <ion-list-header>
-          <ion-label>
+    <syg-content>
+      <syg-list>
+        <syg-list-header>
+          <syg-label>
             Default List
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
         <!-- Sliding items are generated below -->
-      </ion-list>
+      </syg-list>
 
-      <ion-list lines="full">
-        <ion-list-header>
-          <ion-label>
+      <syg-list lines="full">
+        <syg-list-header>
+          <syg-label>
             Full List
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
         <!-- Sliding items are generated below -->
-      </ion-list>
+      </syg-list>
 
-      <ion-list lines="inset">
-        <ion-list-header>
-          <ion-label>
+      <syg-list lines="inset">
+        <syg-list-header>
+          <syg-label>
             Inset List
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
         <!-- Sliding items are generated below -->
-      </ion-list>
+      </syg-list>
 
-      <ion-list lines="none">
-        <ion-list-header>
-          <ion-label>
+      <syg-list lines="none">
+        <syg-list-header>
+          <syg-label>
             No Lines List
-          </ion-label>
-        </ion-list-header>
+          </syg-label>
+        </syg-list-header>
         <!-- Sliding items are generated below -->
-      </ion-list>
-    </ion-content>
+      </syg-list>
+    </syg-content>
 
     <script>
 
 
-      var lists = document.getElementsByTagName('ion-list');
+      var lists = document.getElementsByTagName('syg-list');
       console.log(lists, lists.length);
       for (var i = 0; i < lists.length; i++) {
         console.log(lists[i]);
@@ -71,36 +71,36 @@
       }
 
       function addSlidingItem(list) {
-        const slidingItem = document.createElement('ion-item-sliding');
+        const slidingItem = document.createElement('syg-item-sliding');
         slidingItem.innerHTML = `
-          <ion-item>
-            <ion-label>
+          <syg-item>
+            <syg-label>
               <h2>Item Options Both Sides</h2>
-            </ion-label>
-          </ion-item>
-          <ion-item-options side="start">
-            <ion-item-option color="secondary" expandable>
+            </syg-label>
+          </syg-item>
+          <syg-item-options side="start">
+            <syg-item-option color="secondary" expandable>
               <ion-icon name="checkmark"></ion-icon>
               Unread
-            </ion-item-option>
-          </ion-item-options>
+            </syg-item-option>
+          </syg-item-options>
 
-          <ion-item-options side="end">
-            <ion-item-option color="light">
+          <syg-item-options side="end">
+            <syg-item-option color="light">
               <ion-icon name="mail"></ion-icon>
               Archive
-            </ion-item-option>
-            <ion-item-option color="danger" expandable>
+            </syg-item-option>
+            <syg-item-option color="danger" expandable>
               <ion-icon name="trash"></ion-icon>
               Delete
-            </ion-item-option>
-          </ion-item-options>
+            </syg-item-option>
+          </syg-item-options>
         `;
 
         list.appendChild(slidingItem);
       }
     </script>
-  </ion-app>
+  </syg-app>
 </body>
 
 </html>

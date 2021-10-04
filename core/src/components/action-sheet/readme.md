@@ -1,4 +1,4 @@
-# ion-action-sheet
+# syg-action-sheet
 
 An Action Sheet is a dialog that displays a set of options. It appears on top of the app's content, and must be manually dismissed by the user before they can resume interaction with the app. Destructive options are made obvious in `ios` mode. There are multiple ways to dismiss the action sheet, including tapping the backdrop or hitting the escape key on desktop.
 
@@ -154,14 +154,14 @@ export class ActionSheetExample {
 
 ### Style Placement
 
-In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Action Sheet can be presented from within a page, the `ion-action-sheet` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
+In Angular, the CSS of a specific page is scoped only to elements of that page. Even though the Action Sheet can be presented from within a page, the `syg-action-sheet` element is appended outside of the current page. This means that any custom styles need to go in a global stylesheet file. In an Ionic Angular starter this can be the `src/global.scss` file or you can register a new global style file by [adding to the `styles` build option in `angular.json`](https://angular.io/guide/workspace-config#style-script-config).
 
 
 ### Javascript
 
 ```javascript
 async function presentActionSheet() {
-  const actionSheet = document.createElement('ion-action-sheet');
+  const actionSheet = document.createElement('syg-action-sheet');
 
   actionSheet.header = 'Albums';
   actionSheet.cssClass = 'my-custom-class';
@@ -396,9 +396,9 @@ export class ActionSheetExample {
 
   render() {
     return [
-      <ion-content>
-        <ion-button onClick={() => this.presentActionSheet()}>Present Action Sheet</ion-button>
-      </ion-content>
+      <syg-content>
+        <syg-button onClick={() => this.presentActionSheet()}>Present Action Sheet</syg-button>
+      </syg-content>
     ];
   }
 }
@@ -409,7 +409,7 @@ export class ActionSheetExample {
 
 ```html
 <template>
-  <ion-button @click="presentActionSheet">Show Action Sheet</ion-button>
+  <syg-button @click="presentActionSheet">Show Action Sheet</syg-button>
 </template>
 
 <script>
@@ -430,7 +430,7 @@ export default defineComponent({
               text: 'Delete',
               role: 'destructive',
               icon: trash,
-              id: 'delete-button', 
+              id: 'delete-button',
               data: {
                 type: 'delete'
               },
@@ -441,7 +441,7 @@ export default defineComponent({
             {
               text: 'Share',
               icon: share,
-              data: 10,  
+              data: 10,
               handler: () => {
                 console.log('Share clicked')
               },
@@ -485,15 +485,15 @@ Developers can also use this component directly in their template:
 
 ```html
 <template>
-  <ion-button @click="setOpen(true)">Show Action Sheet</ion-button>
-  <ion-action-sheet
+  <syg-button @click="setOpen(true)">Show Action Sheet</syg-button>
+  <syg-action-sheet
     :is-open="isOpenRef"
     header="Albums"
     css-class="my-custom-class"
     :buttons="buttons"
     @didDismiss="setOpen(false)"
   >
-  </ion-action-sheet>
+  </syg-action-sheet>
 </template>
 
 <script>
@@ -521,7 +521,7 @@ export default defineComponent({
       {
         text: 'Share',
         icon: share,
-        data: 10,  
+        data: 10,
         handler: () => {
           console.log('Share clicked')
         },
@@ -529,7 +529,7 @@ export default defineComponent({
       {
         text: 'Play (open modal)',
         icon: caretForwardCircle,
-        data: 'Data value',  
+        data: 'Data value',
         handler: () => {
           console.log('Play clicked')
         },
@@ -550,7 +550,7 @@ export default defineComponent({
         },
       },
     ];
-    
+
     return { buttons, isOpenRef, setOpen }
   }
 });
@@ -663,17 +663,17 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [ion-backdrop](../backdrop)
+- [syg-backdrop](../backdrop)
 - ion-icon
-- [ion-ripple-effect](../ripple-effect)
+- [syg-ripple-effect](../ripple-effect)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-action-sheet --> ion-backdrop
-  ion-action-sheet --> ion-icon
-  ion-action-sheet --> ion-ripple-effect
-  style ion-action-sheet fill:#f9f,stroke:#333,stroke-width:4px
+  syg-action-sheet --> syg-backdrop
+  syg-action-sheet --> ion-icon
+  syg-action-sheet --> syg-ripple-effect
+  style syg-action-sheet fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

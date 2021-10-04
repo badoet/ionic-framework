@@ -8,5 +8,5 @@ export interface SelectChangeEventDetail<T = any> {
 
 export interface SelectCustomEvent<T = any> extends CustomEvent {
   detail: SelectChangeEventDetail<T>;
-  target: HTMLIonSelectElement;
+  target: HTMLSygSelectElement;
 }

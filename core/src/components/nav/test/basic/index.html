@@ -9,9 +9,9 @@
   <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
   <script src="../../../../../scripts/testing/scripts.js"></script>
   <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>  <style>
+  <script type="module" src="../../../../../dist/syg/syg.esm.js"></script>  <style>
   :root {
-  --ion-background-color: #171717;
+  --syg-background-color: #171717;
   --ion-text-color: #ffffff;
   --ion-color-step-50: #232323;
   --ion-color-step-100: #2e2e2e;
@@ -33,8 +33,8 @@
   --ion-color-step-900: #e8e8e8;
   --ion-color-step-950: #f3f3f3;
 
-  --ion-background-color-rgb: 23,23,23;
-  --ion-background-color-rgb: 0,0,0;
+  --syg-background-color-rgb: 23,23,23;
+  --syg-background-color-rgb: 0,0,0;
   --ion-text-color-rgb: 255,255,255;
 }
 
@@ -48,50 +48,50 @@
     class PageOne extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-          <ion-header>
-            <ion-toolbar>
-              <ion-title>Page One</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
+          <syg-header>
+            <syg-toolbar>
+              <syg-title>Page One</syg-title>
+            </syg-toolbar>
+          </syg-header>
+          <syg-content class="syg-padding">
             <h1>Page One</h1>
-            <ion-nav-link router-direction="forward" component="page-two">
-              <ion-button mode="md" class="next">Go to Page Two</ion-button>
-            </ion-nav-link>
-          </ion-content>
+            <syg-nav-link router-direction="forward" component="page-two">
+              <syg-button mode="md" class="next">Go to Page Two</syg-button>
+            </syg-nav-link>
+          </syg-content>
         `;
       }
     }
     class PageTwo extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-back-button></ion-back-button>
-              </ion-buttons>
-              <ion-title>Page Two</ion-title>
-            </ion-toolbar>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-button>
+          <syg-header>
+            <syg-toolbar>
+              <syg-buttons slot="start">
+                <syg-back-button></syg-back-button>
+              </syg-buttons>
+              <syg-title>Page Two</syg-title>
+            </syg-toolbar>
+            <syg-toolbar>
+              <syg-buttons slot="start">
+                <syg-button>
                   <ion-icon slot="icon-only" name="star"></ion-icon>
-                </ion-button>
-              </ion-buttons>
-              <ion-searchbar></ion-searchbar>
-              <ion-buttons slot="end">
-                <ion-button>
+                </syg-button>
+              </syg-buttons>
+              <syg-searchbar></syg-searchbar>
+              <syg-buttons slot="end">
+                <syg-button>
                   <ion-icon slot="icon-only" name="star"></ion-icon>
-                </ion-button>
-              </ion-buttons>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
+                </syg-button>
+              </syg-buttons>
+            </syg-toolbar>
+          </syg-header>
+          <syg-content class="syg-padding">
             <h1>Page Two</h1>
             <div>
-              <ion-nav-link router-direction="forward" component="page-three">
-                <ion-button class="next">Go to Page Three</ion-button>
-              </ion-nav-link>
+              <syg-nav-link router-direction="forward" component="page-three">
+                <syg-button class="next">Go to Page Three</syg-button>
+              </syg-nav-link>
             </div>
             <div f></div>
             <div f></div>
@@ -102,24 +102,24 @@
             <div f></div>
             <div f></div>
 
-          </ion-content>
+          </syg-content>
         `;
       }
     }
     class PageThree extends HTMLElement {
       connectedCallback() {
         this.innerHTML = `
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-back-button></ion-back-button>
-              </ion-buttons>
-              <ion-title>Page Three</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
+          <syg-header>
+            <syg-toolbar>
+              <syg-buttons slot="start">
+                <syg-back-button></syg-back-button>
+              </syg-buttons>
+              <syg-title>Page Three</syg-title>
+            </syg-toolbar>
+          </syg-header>
+          <syg-content class="syg-padding">
             <h1>Page Three</h1>
-          </ion-content>
+          </syg-content>
         `;
       }
     }
@@ -130,9 +130,9 @@
 </head>
 
 <body>
-  <ion-app>
-    <ion-nav root="page-one"></ion-nav>
-  </ion-app>
+  <syg-app>
+    <syg-nav root="page-one"></syg-nav>
+  </syg-app>
 </body>
 
 </html>

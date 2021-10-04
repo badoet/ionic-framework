@@ -30,12 +30,12 @@
 
 // Calendar / Header / Action Buttons
 // -----------------------------------
-:host .datetime-calendar .calendar-action-buttons ion-item {
+:host .datetime-calendar .calendar-actsyg-buttons syg-item {
   --padding-start: #{$datetime-md-header-padding};
 }
 
-:host .calendar-action-buttons ion-item,
-:host .calendar-action-buttons ion-button {
+:host .calendar-actsyg-buttons syg-item,
+:host .calendar-actsyg-buttons syg-button {
   color: #{$text-color-step-350};
 }
 
@@ -162,11 +162,11 @@
 }
 
 :host .datetime-picker-before {
-  background: linear-gradient(to bottom, var(--background, var(--ion-background-color, #fff)) 20%, rgba(var(--background-rgb, var(--ion-background-color-rgb, 255, 255, 255)), 0) 90%);
+  background: linear-gradient(to bottom, var(--background, var(--syg-background-color, #fff)) 20%, rgba(var(--background-rgb, var(--syg-background-color-rgb, 255, 255, 255)), 0) 90%);
 }
 
 :host .datetime-picker-after {
-  background: linear-gradient(to top, var(--background, var(--ion-background-color, #fff)) 30%, rgba(var(--background-rgb, var(--ion-background-color-rgb, 255, 255, 255)), 0) 90%);
+  background: linear-gradient(to top, var(--background, var(--syg-background-color, #fff)) 30%, rgba(var(--background-rgb, var(--syg-background-color-rgb, 255, 255, 255)), 0) 90%);
 }
 
 /**
@@ -191,7 +191,7 @@
   justify-content: flex-end;
 }
 
-:host .datetime-view-buttons ion-button {
+:host .datetime-view-buttons syg-button {
   color: $text-color-step-200;
 }
 

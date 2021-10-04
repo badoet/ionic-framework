@@ -1,4 +1,4 @@
-# ion-range
+# syg-range
 
 The Range slider lets users select from a range of values by moving
 the slider knob. It can accept dual knobs, but by default one knob
@@ -8,7 +8,7 @@ controls the value of the range.
 
 Labels can be placed on either side of the range by adding the
 `slot="start"` or `slot="end"` to the element. The element doesn't have to
-be an `ion-label`, it can be added to any element to place it to the
+be an `syg-label`, it can be added to any element to place it to the
 left or right of the range.
 
 ## Custom Pin Formatters
@@ -52,41 +52,41 @@ type RangeValue = number | { lower: number, upper: number };
 ### Angular
 
 ```html
-<ion-list>
-  <ion-item>
-    <ion-range color="danger" [pin]="true"></ion-range>
-  </ion-item>
+<syg-list>
+  <syg-item>
+    <syg-range color="danger" [pin]="true"></syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range min="-200" max="200" color="secondary">
-      <ion-label slot="start">-200</ion-label>
-      <ion-label slot="end">200</ion-label>
-    </ion-range>
-  </ion-item>
+  <syg-item>
+    <syg-range min="-200" max="200" color="secondary">
+      <syg-label slot="start">-200</syg-label>
+      <syg-label slot="end">200</syg-label>
+    </syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range min="20" max="80" step="2">
+  <syg-item>
+    <syg-range min="20" max="80" step="2">
       <ion-icon size="small" slot="start" name="sunny"></ion-icon>
       <ion-icon slot="end" name="sunny"></ion-icon>
-    </ion-range>
-  </ion-item>
+    </syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary"></ion-range>
-  </ion-item>
+  <syg-item>
+    <syg-range min="1000" max="2000" step="100" snaps="true" color="secondary"></syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></ion-range>
-  </ion-item>
+  <syg-item>
+    <syg-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range dualKnobs="true" min="21" max="72" step="3" snaps="true"></ion-range>
-  </ion-item>
-  
-  <ion-item>
-    <ion-range min="0" max="100" [pinFormatter]="customFormatter" [pin]="true"></ion-range>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-range dualKnobs="true" min="21" max="72" step="3" snaps="true"></syg-range>
+  </syg-item>
+
+  <syg-item>
+    <syg-range min="0" max="100" [pinFormatter]="customFormatter" [pin]="true"></syg-range>
+  </syg-item>
+</syg-list>
 ```
 
 ```typescript
@@ -95,7 +95,7 @@ import { Component } from '@angular/core';
 @Component({…})
 export class MyComponent {
   constructor() {}
-  
+
   public customFormatter(value: number) {
     return `${value}%`
   }
@@ -106,45 +106,45 @@ export class MyComponent {
 ### Javascript
 
 ```html
-<ion-list>
-  <ion-item>
-    <ion-range color="danger" pin="true"></ion-range>
-  </ion-item>
+<syg-list>
+  <syg-item>
+    <syg-range color="danger" pin="true"></syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range min="-200" max="200" color="secondary">
-      <ion-label slot="start">-200</ion-label>
-      <ion-label slot="end">200</ion-label>
-    </ion-range>
-  </ion-item>
+  <syg-item>
+    <syg-range min="-200" max="200" color="secondary">
+      <syg-label slot="start">-200</syg-label>
+      <syg-label slot="end">200</syg-label>
+    </syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range min="20" max="80" step="2">
+  <syg-item>
+    <syg-range min="20" max="80" step="2">
       <ion-icon size="small" slot="start" name="sunny"></ion-icon>
       <ion-icon slot="end" name="sunny"></ion-icon>
-    </ion-range>
-  </ion-item>
+    </syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary"></ion-range>
-  </ion-item>
+  <syg-item>
+    <syg-range min="1000" max="2000" step="100" snaps="true" color="secondary"></syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></ion-range>
-  </ion-item>
+  <syg-item>
+    <syg-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></syg-range>
+  </syg-item>
 
-  <ion-item>
-    <ion-range dual-knobs="true" min="21" max="72" step="3" snaps="true"></ion-range>
-  </ion-item>
-  
-  <ion-item>
-    <ion-range min="0" max="100" pin="true" id="custom-range"></ion-range>
-  </ion-item>
-</ion-list>
+  <syg-item>
+    <syg-range dual-knobs="true" min="21" max="72" step="3" snaps="true"></syg-range>
+  </syg-item>
+
+  <syg-item>
+    <syg-range min="0" max="100" pin="true" id="custom-range"></syg-range>
+  </syg-item>
+</syg-list>
 
 <script>
   const customRange = document.querySelector('#custom-range');
-  customRange.pinFormatter = (value) => `${value}%`; 
+  customRange.pinFormatter = (value) => `${value}%`;
 </script>
 ```
 
@@ -164,7 +164,7 @@ export const RangeExamples: React.FC = () => {
     lower: number;
     upper: number;
   }>({ lower: 0, upper: 0 });
-  
+
   const customFormatter = (value: number) => `${value}%`;
 
   return (
@@ -217,7 +217,7 @@ export const RangeExamples: React.FC = () => {
           <IonItem>
             <IonLabel>Value: lower: {rangeValue.lower} upper: {rangeValue.upper}</IonLabel>
           </IonItem>
-          
+
           <IonItem>
             <IonRange min={0} max={100} pinFormatter={customFormatter} pin={true}></IonRange>
           </IonItem>
@@ -240,44 +240,44 @@ import { Component, h } from '@stencil/core';
 })
 export class RangeExample {
   private customFormatter = (value: number) => `${value}%`;
-  
+
   render() {
     return [
-      <ion-list>
-        <ion-item>
-          <ion-range color="danger" pin={true}></ion-range>
-        </ion-item>
+      <syg-list>
+        <syg-item>
+          <syg-range color="danger" pin={true}></syg-range>
+        </syg-item>
 
-        <ion-item>
-          <ion-range min={-200} max={200} color="secondary">
-            <ion-label slot="start">-200</ion-label>
-            <ion-label slot="end">200</ion-label>
-          </ion-range>
-        </ion-item>
+        <syg-item>
+          <syg-range min={-200} max={200} color="secondary">
+            <syg-label slot="start">-200</syg-label>
+            <syg-label slot="end">200</syg-label>
+          </syg-range>
+        </syg-item>
 
-        <ion-item>
-          <ion-range min={20} max={80} step={2}>
+        <syg-item>
+          <syg-range min={20} max={80} step={2}>
             <ion-icon size="small" slot="start" name="sunny"></ion-icon>
             <ion-icon slot="end" name="sunny"></ion-icon>
-          </ion-range>
-        </ion-item>
+          </syg-range>
+        </syg-item>
 
-        <ion-item>
-          <ion-range min={1000} max={2000} step={100} snaps={true} color="secondary"></ion-range>
-        </ion-item>
+        <syg-item>
+          <syg-range min={1000} max={2000} step={100} snaps={true} color="secondary"></syg-range>
+        </syg-item>
 
-        <ion-item>
-          <ion-range min={1000} max={2000} step={100} snaps={true} ticks={false} color="secondary"></ion-range>
-        </ion-item>
+        <syg-item>
+          <syg-range min={1000} max={2000} step={100} snaps={true} ticks={false} color="secondary"></syg-range>
+        </syg-item>
 
-        <ion-item>
-          <ion-range dualKnobs={true} min={21} max={72} step={3} snaps={true}></ion-range>
-        </ion-item>
-        
-        <ion-item>
-          <ion-range min="0" max="100" pinFormatter={this.customFormatter} pin={true}></ion-range>
-        </ion-item>
-      </ion-list>
+        <syg-item>
+          <syg-range dualKnobs={true} min={21} max={72} step={3} snaps={true}></syg-range>
+        </syg-item>
+
+        <syg-item>
+          <syg-range min="0" max="100" pinFormatter={this.customFormatter} pin={true}></syg-range>
+        </syg-item>
+      </syg-list>
     ];
   }
 }
@@ -288,41 +288,41 @@ export class RangeExample {
 
 ```html
 <template>
-  <ion-list>
-    <ion-item>
-      <ion-range color="danger" :pin="true"></ion-range>
-    </ion-item>
+  <syg-list>
+    <syg-item>
+      <syg-range color="danger" :pin="true"></syg-range>
+    </syg-item>
 
-    <ion-item>
-      <ion-range min="-200" max="200" color="secondary">
-        <ion-label slot="start">-200</ion-label>
-        <ion-label slot="end">200</ion-label>
-      </ion-range>
-    </ion-item>
+    <syg-item>
+      <syg-range min="-200" max="200" color="secondary">
+        <syg-label slot="start">-200</syg-label>
+        <syg-label slot="end">200</syg-label>
+      </syg-range>
+    </syg-item>
 
-    <ion-item>
-      <ion-range min="20" max="80" step="2">
+    <syg-item>
+      <syg-range min="20" max="80" step="2">
         <ion-icon size="small" slot="start" name="sunny"></ion-icon>
         <ion-icon slot="end" name="sunny"></ion-icon>
-      </ion-range>
-    </ion-item>
+      </syg-range>
+    </syg-item>
 
-    <ion-item>
-      <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary"></ion-range>
-    </ion-item>
+    <syg-item>
+      <syg-range min="1000" max="2000" step="100" snaps="true" color="secondary"></syg-range>
+    </syg-item>
 
-    <ion-item>
-      <ion-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></ion-range>
-    </ion-item>
+    <syg-item>
+      <syg-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></syg-range>
+    </syg-item>
 
-    <ion-item>
-      <ion-range ref="rangeDualKnobs" dual-knobs="true" min="21" max="72" step="3" snaps="true"></ion-range>
-    </ion-item>
-    
-    <ion-item>
-      <ion-range min="0" max="100" :pin-formatter="customFormatter" :pin="true"></ion-range>
-    </ion-item>
-  </ion-list>
+    <syg-item>
+      <syg-range ref="rangeDualKnobs" dual-knobs="true" min="21" max="72" step="3" snaps="true"></syg-range>
+    </syg-item>
+
+    <syg-item>
+      <syg-range min="0" max="100" :pin-formatter="customFormatter" :pin="true"></syg-range>
+    </syg-item>
+  </syg-list>
 </template>
 
 <script lang="ts">
@@ -332,12 +332,12 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   components: {  IonItem, IonLabel, IonList, IonRange },
   mounted() {
-    // Sets initial value for dual-knob ion-range
+    // Sets initial value for dual-knob syg-range
     this.$refs.rangeDualKnobs.value = { lower: 24, upper: 42 };
   },
   setup() {
     const customFormatter = (value: number) => `${value}%`;
-    
+
     return { customFormatter };
   }
 });
