@@ -10,10 +10,10 @@ syg-item {
 }
 
 .item-radio-checked {
-  --background: #{ion-color(primary, base, 0.08)};
-  --background-focused: #{ion-color(primary, base)};
+  --background: #{syg-color(primary, base, 0.08)};
+  --background-focused: #{syg-color(primary, base)};
   --background-focused-opacity: 0.2;
-  --background-hover: #{ion-color(primary, base)};
+  --background-hover: #{syg-color(primary, base)};
   --background-hover-opacity: 0.12;
 }
 
@@ -21,5 +21,5 @@ syg-item {
   --background-activated: #{$item-md-color};
   --background-focused: #{$item-md-color};
   --background-hover: #{$item-md-color};
-  --color: #{ion-color(primary, base)};
+  --color: #{syg-color(primary, base)};
 }

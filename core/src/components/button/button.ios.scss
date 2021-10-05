@@ -28,9 +28,9 @@
 // --------------------------------------------------
 
 :host(.button-solid) {
-  --background-activated: #{ion-color(primary, shade)};
-  --background-focused: #{ion-color(primary, shade)};
-  --background-hover: #{ion-color(primary, tint)};
+  --background-activated: #{syg-color(primary, shade)};
+  --background-focused: #{syg-color(primary, shade)};
+  --background-hover: #{syg-color(primary, tint)};
   --background-activated-opacity: 1;
   --background-focused-opacity: 1;
   --background-hover-opacity: 1;
@@ -44,11 +44,11 @@
   --border-radius: #{$button-ios-outline-border-radius};
   --border-width: #{$button-ios-outline-border-width};
   --border-style: #{$button-ios-outline-border-style};
-  --background-activated: #{ion-color(primary, base)};
-  --background-focused: #{ion-color(primary, base)};
+  --background-activated: #{syg-color(primary, base)};
+  --background-focused: #{syg-color(primary, base)};
   --background-hover: transparent;
   --background-focused-opacity: .1;
-  --color-activated: #{ion-color(primary, contrast)};
+  --color-activated: #{syg-color(primary, contrast)};
 }
 
 
@@ -57,7 +57,7 @@
 
 :host(.button-clear) {
   --background-activated: transparent;
-  --background-focused: #{ion-color(primary, base)};
+  --background-focused: #{syg-color(primary, base)};
   --background-hover: transparent;
   --background-focused-opacity: .1;
 
@@ -123,7 +123,7 @@
   opacity: #{$button-ios-clear-opacity-activated};
 }
 
-:host(.button-outline.ion-activated.ion-color) .button-native {
+:host(.button-outline.ion-activated.syg-color) .button-native {
   color: current-color(contrast);
 
   &::after {
@@ -131,15 +131,15 @@
   }
 }
 
-:host(.button-solid.ion-color.ion-activated) .button-native::after {
+:host(.button-solid.syg-color.ion-activated) .button-native::after {
   background: #{current-color(shade)};
 }
 
 // iOS Button Focused
 // --------------------------------------------------
 
-:host(.button-outline.ion-focused.ion-color) .button-native,
-:host(.button-clear.ion-focused.ion-color) .button-native {
+:host(.button-outline.ion-focused.syg-color) .button-native,
+:host(.button-clear.ion-focused.syg-color) .button-native {
   color: current-color(base);
 
   &::after {
@@ -147,7 +147,7 @@
   }
 }
 
-:host(.button-solid.ion-color.ion-focused) .button-native::after {
+:host(.button-solid.syg-color.ion-focused) .button-native::after {
   background: #{current-color(shade)};
 }
 
@@ -162,8 +162,8 @@
     opacity: #{$button-ios-clear-opacity-hover};
   }
 
-  :host(.button-clear.ion-color:hover) .button-native,
-  :host(.button-outline.ion-color:hover) .button-native {
+  :host(.button-clear.syg-color:hover) .button-native,
+  :host(.button-outline.syg-color:hover) .button-native {
     color: #{current-color(base)};
 
     &::after {
@@ -172,13 +172,13 @@
   }
 
   // Solid buttons use the tint background
-  :host(.button-solid.ion-color:hover) .button-native::after {
+  :host(.button-solid.syg-color:hover) .button-native::after {
     background: #{current-color(tint)};
   }
 
   // Solid buttons inside of a toolbar should use a tint of the current
   // background so use white to tint it
-  :host(:hover.button-solid.in-toolbar:not(.ion-color):not(.in-toolbar-color)) .button-native::after {
+  :host(:hover.button-solid.in-toolbar:not(.syg-color):not(.in-toolbar-color)) .button-native::after {
     background: #fff;
 
     opacity: 0.10;

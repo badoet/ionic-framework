@@ -7,7 +7,7 @@
    * @prop --color: Color of the tab bar
    */
 
-  @include padding-horizontal(var(--ion-safe-area-left), var(--ion-safe-area-right));
+  @include padding-horizontal(var(--syg-safe-area-left), var(--syg-safe-area-right));
 
   display: flex;
 
@@ -16,7 +16,7 @@
 
   width: auto;
 
-  padding-bottom: var(--ion-safe-area-bottom, 0);
+  padding-bottom: var(--syg-safe-area-bottom, 0);
 
   border-top: var(--border);
 
@@ -33,26 +33,26 @@
   box-sizing: content-box !important;
 }
 
-:host(.ion-color) ::slotted(ion-tab-button) {
+:host(.syg-color) ::slotted(ion-tab-button) {
   --background-focused: #{current-color(shade)};
   --color-selected: #{current-color(contrast)};
 }
 
-:host(.ion-color) ::slotted(.tab-selected) {
+:host(.syg-color) ::slotted(.tab-selected) {
   color: #{current-color(contrast)};;
 }
 
-:host(.ion-color),
-:host(.ion-color) ::slotted(ion-tab-button) {
+:host(.syg-color),
+:host(.syg-color) ::slotted(ion-tab-button) {
   color: #{current-color(contrast, .7)};
 }
 
-:host(.ion-color),
-:host(.ion-color) ::slotted(ion-tab-button) {
+:host(.syg-color),
+:host(.syg-color) ::slotted(ion-tab-button) {
   background: #{current-color(base)};
 }
 
-:host(.ion-color) ::slotted(ion-tab-button.ion-focused),
+:host(.syg-color) ::slotted(ion-tab-button.ion-focused),
 :host(.tab-bar-translucent) ::slotted(ion-tab-button.ion-focused) {
   background: var(--background-focused)
 }
@@ -62,7 +62,7 @@
 }
 
 :host([slot="top"]) {
-  padding-top: var(--ion-safe-area-top, 0);
+  padding-top: var(--syg-safe-area-top, 0);
   padding-bottom: 0;
 
   border-top: 0;

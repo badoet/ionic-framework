@@ -10,27 +10,27 @@
   --knob-box-shadow: none;
   --knob-size: 18px;
   --bar-height: #{$range-md-bar-height};
-  --bar-background: #{ion-color(primary, base, 0.26)};
-  --bar-background-active: #{ion-color(primary, base)};
+  --bar-background: #{syg-color(primary, base, 0.26)};
+  --bar-background-active: #{syg-color(primary, base)};
   --bar-border-radius: 0;
   --height: #{$range-md-slider-height};
-  --pin-background: #{ion-color(primary, base)};
-  --pin-color: #{ion-color(primary, contrast)};
+  --pin-background: #{syg-color(primary, base)};
+  --pin-color: #{syg-color(primary, contrast)};
 
   @include padding($range-md-padding-vertical, $range-md-padding-horizontal);
 
   font-size: $range-md-pin-font-size;
 }
 
-:host(.ion-color) .range-bar {
+:host(.syg-color) .range-bar {
   background: current-color(base, 0.26);
 }
 
-:host(.ion-color) .range-bar-active,
-:host(.ion-color) .range-knob,
-:host(.ion-color) .range-pin,
-:host(.ion-color) .range-pin::before,
-:host(.ion-color) .range-tick {
+:host(.syg-color) .range-bar-active,
+:host(.syg-color) .range-knob,
+:host(.syg-color) .range-pin,
+:host(.syg-color) .range-pin::before,
+:host(.syg-color) .range-tick {
   background: current-color(base);
   color: current-color(contrast);
 }

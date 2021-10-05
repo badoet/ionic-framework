@@ -25,7 +25,7 @@
 @media screen and (max-width: 767px) {
   @supports (width: max(0px, 1px)) {
     :host(.modal-card) {
-      --height: calc(100% - max(30px, var(--ion-safe-area-top)) - 10px);
+      --height: calc(100% - max(30px, var(--syg-safe-area-top)) - 10px);
     }
   }
 
@@ -58,7 +58,7 @@
 @media screen and (min-width: 768px) {
   :host(.modal-card) {
     --width: calc(100% - 120px);
-    --height: calc(100% - (120px + var(--ion-safe-area-top) + var(--ion-safe-area-bottom)));
+    --height: calc(100% - (120px + var(--syg-safe-area-top) + var(--syg-safe-area-bottom)));
     --max-width: 720px;
     --max-height: 1000px;
     --backdrop-opacity: 0;

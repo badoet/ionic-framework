@@ -8,8 +8,8 @@
    * @prop --background: Background of the item option
    * @prop --color: Color of the item option
    */
-  --background: #{ion-color(primary, base)};
-  --color: #{ion-color(primary, contrast)};
+  --background: #{syg-color(primary, base)};
+  --color: #{syg-color(primary, contrast)};
 
   background: var(--background);
   color: var(--color);
@@ -19,17 +19,17 @@
 
 :host(.in-list.item-options-end:last-child) {
   @include padding-horizontal(
-    null, calc(.7em + var(--ion-safe-area-right))
+    null, calc(.7em + var(--syg-safe-area-right))
   );
 }
 
 :host(.in-list.item-options-start:first-child) {
   @include padding-horizontal(
-    calc(.7em + var(--ion-safe-area-left)), null
+    calc(.7em + var(--syg-safe-area-left)), null
   );
 }
 
-:host(.ion-color) {
+:host(.syg-color) {
   background: current-color(base);
   color: current-color(contrast);
 }

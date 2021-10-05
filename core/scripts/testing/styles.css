@@ -36,12 +36,12 @@
 :root,
 html,
 html.md.md {
-  --ion-font-family: Roboto, "mdTestingFont", sans-serif;
+  --syg-font-family: Roboto, "mdTestingFont", sans-serif;
   font-family: Roboto, "mdTestingFont", sans-serif;
 }
 
 :root.ios.ios,
 html.ios.ios {
-  --ion-font-family: -apple-system, BlinkMacSystemFont, "iosTestingFont", sans-serif;
+  --syg-font-family: -apple-system, BlinkMacSystemFont, "iosTestingFont", sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, "iosTestingFont", sans-serif;
 }

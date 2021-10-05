@@ -35,7 +35,7 @@
     var(--padding-top),
     var(--padding-end),
     var(--padding-bottom),
-    calc(var(--padding-start) + var(--ion-safe-area-left, 0px))
+    calc(var(--padding-start) + var(--syg-safe-area-left, 0px))
   );
 
   display: flex;
@@ -55,7 +55,7 @@
   box-sizing: border-box;
 }
 
-:host(.ion-color) {
+:host(.syg-color) {
   background: current-color(base);
   color: current-color(contrast);
 }
@@ -69,7 +69,7 @@
   @include margin(0);
   @include padding(
     var(--inner-padding-top),
-    calc(var(--ion-safe-area-right, 0px) + var(--inner-padding-end)),
+    calc(var(--syg-safe-area-right, 0px) + var(--inner-padding-end)),
     var(--inner-padding-bottom),
     var(--inner-padding-start)
   );

@@ -24,7 +24,7 @@
 // Menu Button Color: Focused
 // --------------------------------------------------
 
-:host(.ion-color.ion-focused)::after {
+:host(.syg-color.ion-focused)::after {
   background: #{current-color(base)};
 }
 
@@ -33,7 +33,7 @@
 // --------------------------------------------------
 
 @media (any-hover: hover) {
-  :host(.ion-color:hover) .button-native::after {
+  :host(.syg-color:hover) .button-native::after {
     background: #{current-color(base)};
   }
 }

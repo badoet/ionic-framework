@@ -19,7 +19,7 @@
   color: var(--color);
 }
 
-:host(.ion-color) {
+:host(.syg-color) {
   color: #{current-color(base)};
 }
 

@@ -4,7 +4,7 @@
 $slides-md-bullet-background:                   $text-color-step-800 !default;
 
 /// @prop - Background color of the active bullet
-$slides-md-bullet-background-active:            ion-color(primary, base) !default;
+$slides-md-bullet-background-active:            syg-color(primary, base) !default;
 
 /// @prop - Alpha to use for the background color of the progress bar
 $slides-md-progress-bar-background-alpha:       .25 !default;
@@ -13,7 +13,7 @@ $slides-md-progress-bar-background-alpha:       .25 !default;
 $slides-md-progress-bar-background:             rgba($text-color-rgb, $slides-md-progress-bar-background-alpha) !default;
 
 /// @prop - Background color of the progress bar
-$slides-md-progress-bar-background-active:      ion-color(primary, shade) !default;
+$slides-md-progress-bar-background-active:      syg-color(primary, shade) !default;
 
 /// @prop - Alpha to use for the background color of the scroll bar
 $slides-md-scroll-bar-background-alpha:         .1 !default;

@@ -10,7 +10,7 @@ $segment-button-md-opacity:                           .6 !default;
 $segment-button-md-text-color:                        rgba($text-color-rgb, $segment-button-md-opacity) !default;
 
 /// @prop - Text color of the checked segment button
-$segment-button-md-text-color-checked:                ion-color(primary, base) !default;
+$segment-button-md-text-color-checked:                syg-color(primary, base) !default;
 
 /// @prop - Background of the segment button
 $segment-button-md-background:                        none !default;

@@ -7,14 +7,14 @@
 // --------------------------------------------------
 
 html.ios {
-  --ion-default-font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
+  --syg-default-font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
 }
 html.md {
-  --ion-default-font: "Roboto", "Helvetica Neue", sans-serif;
+  --syg-default-font: "Roboto", "Helvetica Neue", sans-serif;
 }
 
 html {
-  --ion-font-family: var(--ion-default-font);
+  --syg-font-family: var(--syg-default-font);
 }
 
 body {
@@ -61,8 +61,8 @@ html.ios syg-modal.modal-sheet syg-header syg-toolbar:last-of-type {
 * safe area values when in landscape.
 */
 html.ios syg-modal syg-toolbar {
-  padding-right: calc(var(--ion-safe-area-right) + 8px);
-  padding-left: calc(var(--ion-safe-area-left) + 8px);
+  padding-right: calc(var(--syg-safe-area-right) + 8px);
+  padding-left: calc(var(--syg-safe-area-left) + 8px);
 }
 
 /**
@@ -99,16 +99,16 @@ html.ios syg-modal .syg-page {
   $shade: map-get($value, shade);
   $tint: map-get($value, tint);
 
-  --ion-color-base: var(--ion-color-#{$color-name}, #{$base}) !important;
-  --ion-color-base-rgb: var(--ion-color-#{$color-name}-rgb, #{color-to-rgb-list($base)}) !important;
-  --ion-color-contrast: var(--ion-color-#{$color-name}-contrast, #{$contrast}) !important;
-  --ion-color-contrast-rgb: var(--ion-color-#{$color-name}-contrast-rgb, #{color-to-rgb-list($contrast)}) !important;
-  --ion-color-shade: var(--ion-color-#{$color-name}-shade, #{$shade}) !important;
-  --ion-color-tint: var(--ion-color-#{$color-name}-tint, #{$tint}) !important;
+  --syg-color-base: var(--syg-color-#{$color-name}, #{$base}) !important;
+  --syg-color-base-rgb: var(--syg-color-#{$color-name}-rgb, #{color-to-rgb-list($base)}) !important;
+  --syg-color-contrast: var(--syg-color-#{$color-name}-contrast, #{$contrast}) !important;
+  --syg-color-contrast-rgb: var(--syg-color-#{$color-name}-contrast-rgb, #{color-to-rgb-list($contrast)}) !important;
+  --syg-color-shade: var(--syg-color-#{$color-name}-shade, #{$shade}) !important;
+  --syg-color-tint: var(--syg-color-#{$color-name}-tint, #{$tint}) !important;
 }
 
 @each $color-name, $value in $colors {
-  .ion-color-#{$color-name} {
+  .syg-color-#{$color-name} {
     @include generate-color($color-name);
   }
 }
@@ -167,31 +167,31 @@ syg-toast-controller,
 // --------------------------------------------------
 
 html.plt-ios.plt-hybrid, html.plt-ios.plt-pwa {
-  --ion-statusbar-padding: 20px;
+  --syg-statusbar-padding: 20px;
 }
 
 @supports (padding-top: 20px) {
   html {
-    --ion-safe-area-top: var(--ion-statusbar-padding);
+    --syg-safe-area-top: var(--syg-statusbar-padding);
   }
 }
 
 // TODO: remove once Safari 11.2 is no longer supported
 @supports (padding-top: constant(safe-area-inset-top)) {
   html {
-    --ion-safe-area-top: constant(safe-area-inset-top);
-    --ion-safe-area-bottom: constant(safe-area-inset-bottom);
-    --ion-safe-area-left: constant(safe-area-inset-left);
-    --ion-safe-area-right: constant(safe-area-inset-right);
+    --syg-safe-area-top: constant(safe-area-inset-top);
+    --syg-safe-area-bottom: constant(safe-area-inset-bottom);
+    --syg-safe-area-left: constant(safe-area-inset-left);
+    --syg-safe-area-right: constant(safe-area-inset-right);
   }
 }
 
 @supports (padding-top: env(safe-area-inset-top)) {
   html {
-    --ion-safe-area-top: env(safe-area-inset-top);
-    --ion-safe-area-bottom: env(safe-area-inset-bottom);
-    --ion-safe-area-left: env(safe-area-inset-left);
-    --ion-safe-area-right: env(safe-area-inset-right);
+    --syg-safe-area-top: env(safe-area-inset-top);
+    --syg-safe-area-bottom: env(safe-area-inset-bottom);
+    --syg-safe-area-left: env(safe-area-inset-left);
+    --syg-safe-area-right: env(safe-area-inset-right);
   }
 }
 
@@ -199,8 +199,8 @@ html.plt-ios.plt-hybrid, html.plt-ios.plt-pwa {
 // Global Card Styles
 // --------------------------------------------------
 
-syg-card.ion-color .ion-inherit-color,
-syg-card-header.ion-color .ion-inherit-color {
+syg-card.syg-color .ion-inherit-color,
+syg-card-header.syg-color .ion-inherit-color {
   color: inherit;
 }
 

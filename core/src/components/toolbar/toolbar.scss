@@ -27,7 +27,7 @@
   --opacity: 1;
 
   @include font-smoothing();
-  @include padding-horizontal(var(--ion-safe-area-left), var(--ion-safe-area-right));
+  @include padding-horizontal(var(--syg-safe-area-left), var(--syg-safe-area-right));
 
   display: block;
 
@@ -45,11 +45,11 @@
   box-sizing: border-box;
 }
 
-:host(.ion-color) {
+:host(.syg-color) {
   color: current-color(contrast);
 }
 
-:host(.ion-color) .toolbar-background {
+:host(.syg-color) .toolbar-background {
   background: current-color(base);
 }
 

@@ -32,14 +32,14 @@
 }
 
 :host(.in-breadcrumbs-color.ion-focused) .breadcrumb-native,
-:host(.ion-color.ion-focused) .breadcrumb-native {
+:host(.syg-color.ion-focused) .breadcrumb-native {
   background: #{current-color(base, .1)};
   color: #{current-color(base)};
 }
 
 :host(.ion-focused) ::slotted(ion-icon),
 :host(.in-breadcrumbs-color.ion-focused) ::slotted(ion-icon),
-:host(.ion-color.ion-focused) ::slotted(ion-icon) {
+:host(.syg-color.ion-focused) ::slotted(ion-icon) {
   color: $breadcrumb-ios-icon-color-focused;
 }
 

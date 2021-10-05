@@ -3,8 +3,8 @@
 @import "../../themes/ionic.globals.ios";
 
 :host {
-  --background: var(--ion-color-light, #ffffff);
-  --background-rgb: var(--ion-color-light-rgb);
+  --background: var(--syg-color-light, #ffffff);
+  --background-rgb: var(--syg-color-light-rgb);
   --title-color: #{$text-color-step-400};
 }
 
@@ -98,7 +98,7 @@
 
 /**
  * Day that today but not selected
- * should have ion-color for text color.
+ * should have syg-color for text color.
  */
 :host .calendar-day.calendar-day-today {
   color: current-color(base);
@@ -106,7 +106,7 @@
 
 /**
  * Day that is not today but
- * is selected should have ion-color for
+ * is selected should have syg-color for
  * text color and be bolder.
  */
 :host .calendar-day.calendar-day-active {
@@ -185,7 +185,7 @@
 
   transform: translateY(-50%);
 
-  background: var(--ion-color-step-150, #eeeeef);
+  background: var(--syg-color-step-150, #eeeeef);
 
   z-index: -1;
 }

@@ -144,12 +144,12 @@
 // Searchbar Color
 // -----------------------------------------
 
-:host(.ion-color) .searchbar-cancel-button {
+:host(.syg-color) .searchbar-cancel-button {
   color: #{current-color(base)};
 }
 
 @media (any-hover: hover) {
-  :host(.ion-color) .searchbar-cancel-button:hover {
+  :host(.syg-color) .searchbar-cancel-button:hover {
     color: #{current-color(tint)};
   }
 }
@@ -166,26 +166,26 @@
 // Searchbar in Toolbar Color
 // -----------------------------------------
 
-:host-context(syg-toolbar.ion-color):not(.ion-color) {
+:host-context(syg-toolbar.syg-color):not(.syg-color) {
   color: inherit;
 }
 
-:host-context(syg-toolbar.ion-color):not(.ion-color) .searchbar-cancel-button {
+:host-context(syg-toolbar.syg-color):not(.syg-color) .searchbar-cancel-button {
   color: currentColor;
 }
 
-:host-context(syg-toolbar.ion-color) .searchbar-search-icon {
+:host-context(syg-toolbar.syg-color) .searchbar-search-icon {
   color: currentColor;
 
   opacity: $searchbar-ios-input-icon-opacity;
 }
 
-:host-context(syg-toolbar.ion-color):not(.ion-color) .searchbar-input {
-  background: rgba(var(--ion-color-contrast-rgb), $searchbar-ios-input-background-color-alpha);
+:host-context(syg-toolbar.syg-color):not(.syg-color) .searchbar-input {
+  background: rgba(var(--syg-color-contrast-rgb), $searchbar-ios-input-background-color-alpha);
   color: currentColor;
 }
 
-:host-context(syg-toolbar.ion-color):not(.ion-color) .searchbar-clear-button {
+:host-context(syg-toolbar.syg-color):not(.syg-color) .searchbar-clear-button {
   color: currentColor;
 
   opacity: $searchbar-ios-input-icon-opacity;

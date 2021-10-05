@@ -508,7 +508,7 @@ ion-infinite-scroll-content,prop,loadingText,SygSafeString | string | undefined,
 ion-input,scoped
 ion-input,prop,accept,string | undefined,undefined,false,false
 ion-input,prop,autocapitalize,string,'off',false,false
-ion-input,prop,autocomplete,"on" | "off" | "name" | "honorific-prefix" | "given-name" | "additional-name" | "family-name" | "honorific-suffix" | "nickname" | "email" | "username" | "new-password" | "current-password" | "one-time-code" | "organization-title" | "organization" | "street-address" | "address-line1" | "address-line2" | "address-line3" | "address-level4" | "address-level3" | "address-level2" | "address-level1" | "country" | "country-name" | "postal-code" | "cc-name" | "cc-given-name" | "cc-additional-name" | "cc-family-name" | "cc-number" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-csc" | "cc-type" | "transaction-currency" | "transaction-amount" | "language" | "bday" | "bday-day" | "bday-month" | "bday-year" | "sex" | "tel" | "tel-country-code" | "tel-national" | "tel-area-code" | "tel-local" | "tel-extension" | "impp" | "url" | "photo",'off',false,false
+ion-input,prop,autocomplete,"on" | "off" | "name" | "honorific-prefix" | "given-name" | "additional-name" | "family-name" | "honorific-suffix" | "nickname" | "email" | "username" | "new-password" | "current-password" | "one-time-code" | "organizatsyg-title" | "organization" | "street-address" | "address-line1" | "address-line2" | "address-line3" | "address-level4" | "address-level3" | "address-level2" | "address-level1" | "country" | "country-name" | "postal-code" | "cc-name" | "cc-given-name" | "cc-additional-name" | "cc-family-name" | "cc-number" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-csc" | "cc-type" | "transaction-currency" | "transaction-amount" | "language" | "bday" | "bday-day" | "bday-month" | "bday-year" | "sex" | "tel" | "tel-country-code" | "tel-national" | "tel-area-code" | "tel-local" | "tel-extension" | "impp" | "url" | "photo",'off',false,false
 ion-input,prop,autocorrect,"off" | "on",'off',false,false
 ion-input,prop,autofocus,boolean,false,false,false
 ion-input,prop,clearInput,boolean,false,false,false
@@ -1023,9 +1023,9 @@ ion-reorder-group,prop,disabled,boolean,true,false,false
 ion-reorder-group,method,complete,complete(listOrReorder?: boolean | any[] | undefined) => Promise<any>
 ion-reorder-group,event,ionItemReorder,ItemReorderEventDetail,true
 
-ion-ripple-effect,shadow
-ion-ripple-effect,prop,type,"bounded" | "unbounded",'bounded',false,false
-ion-ripple-effect,method,addRipple,addRipple(x: number, y: number) => Promise<() => void>
+syg-ripple-effect,shadow
+syg-ripple-effect,prop,type,"bounded" | "unbounded",'bounded',false,false
+syg-ripple-effect,method,addRipple,addRipple(x: number, y: number) => Promise<() => void>
 
 ion-route,none
 ion-route,prop,beforeEnter,(() => NavigationHookResult | Promise<NavigationHookResult>) | undefined,undefined,false,false
@@ -1067,7 +1067,7 @@ ion-row,shadow
 
 ion-searchbar,scoped
 ion-searchbar,prop,animated,boolean,false,false,false
-ion-searchbar,prop,autocomplete,"on" | "off" | "name" | "honorific-prefix" | "given-name" | "additional-name" | "family-name" | "honorific-suffix" | "nickname" | "email" | "username" | "new-password" | "current-password" | "one-time-code" | "organization-title" | "organization" | "street-address" | "address-line1" | "address-line2" | "address-line3" | "address-level4" | "address-level3" | "address-level2" | "address-level1" | "country" | "country-name" | "postal-code" | "cc-name" | "cc-given-name" | "cc-additional-name" | "cc-family-name" | "cc-number" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-csc" | "cc-type" | "transaction-currency" | "transaction-amount" | "language" | "bday" | "bday-day" | "bday-month" | "bday-year" | "sex" | "tel" | "tel-country-code" | "tel-national" | "tel-area-code" | "tel-local" | "tel-extension" | "impp" | "url" | "photo",'off',false,false
+ion-searchbar,prop,autocomplete,"on" | "off" | "name" | "honorific-prefix" | "given-name" | "additional-name" | "family-name" | "honorific-suffix" | "nickname" | "email" | "username" | "new-password" | "current-password" | "one-time-code" | "organizatsyg-title" | "organization" | "street-address" | "address-line1" | "address-line2" | "address-line3" | "address-level4" | "address-level3" | "address-level2" | "address-level1" | "country" | "country-name" | "postal-code" | "cc-name" | "cc-given-name" | "cc-additional-name" | "cc-family-name" | "cc-number" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-csc" | "cc-type" | "transaction-currency" | "transaction-amount" | "language" | "bday" | "bday-day" | "bday-month" | "bday-year" | "sex" | "tel" | "tel-country-code" | "tel-national" | "tel-area-code" | "tel-local" | "tel-extension" | "impp" | "url" | "photo",'off',false,false
 ion-searchbar,prop,autocorrect,"off" | "on",'off',false,false
 ion-searchbar,prop,cancelButtonIcon,string,config.get('backButtonIcon', 'arrow-back-sharp') as string,false,false
 ion-searchbar,prop,cancelButtonText,string,'Cancel',false,false
@@ -1260,14 +1260,14 @@ ion-tab,prop,component,Function | HTMLElement | null | string | undefined,undefi
 ion-tab,prop,tab,string,undefined,true,false
 ion-tab,method,setActive,setActive() => Promise<void>
 
-ion-tab-bar,shadow
-ion-tab-bar,prop,color,string | undefined,undefined,false,true
-ion-tab-bar,prop,mode,"ios" | "md",undefined,false,false
-ion-tab-bar,prop,selectedTab,string | undefined,undefined,false,false
-ion-tab-bar,prop,translucent,boolean,false,false,false
-ion-tab-bar,css-prop,--background
-ion-tab-bar,css-prop,--border
-ion-tab-bar,css-prop,--color
+syg-tab-bar,shadow
+syg-tab-bar,prop,color,string | undefined,undefined,false,true
+syg-tab-bar,prop,mode,"ios" | "md",undefined,false,false
+syg-tab-bar,prop,selectedTab,string | undefined,undefined,false,false
+syg-tab-bar,prop,translucent,boolean,false,false,false
+syg-tab-bar,css-prop,--background
+syg-tab-bar,css-prop,--border
+syg-tab-bar,css-prop,--color
 
 ion-tab-button,shadow
 ion-tab-button,prop,disabled,boolean,false,false,false
@@ -1347,10 +1347,10 @@ ion-thumbnail,shadow
 ion-thumbnail,css-prop,--border-radius
 ion-thumbnail,css-prop,--size
 
-ion-title,shadow
-ion-title,prop,color,string | undefined,undefined,false,true
-ion-title,prop,size,"large" | "small" | undefined,undefined,false,false
-ion-title,css-prop,--color
+syg-title,shadow
+syg-title,prop,color,string | undefined,undefined,false,true
+syg-title,prop,size,"large" | "small" | undefined,undefined,false,false
+syg-title,css-prop,--color
 
 ion-toast,shadow
 ion-toast,prop,animated,boolean,true,false,false

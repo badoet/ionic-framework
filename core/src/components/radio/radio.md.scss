@@ -6,7 +6,7 @@
 
 :host {
   --color: #{$radio-md-color-off};
-  --color-checked: #{ion-color(primary, base)};
+  --color-checked: #{syg-color(primary, base)};
   --border-width: #{$radio-md-icon-border-width};
   --border-style: #{$radio-md-icon-border-style};
   --border-radius: #{$radio-md-icon-border-radius};
@@ -15,11 +15,11 @@
   height: $radio-md-icon-height;
 }
 
-:host(.ion-color) .radio-inner {
+:host(.syg-color) .radio-inner {
   background: current-color(base);
 }
 
-:host(.ion-color.radio-checked) .radio-icon {
+:host(.syg-color.radio-checked) .radio-icon {
   border-color: current-color(base);
 }
 

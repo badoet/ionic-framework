@@ -60,7 +60,7 @@
 }
 
 :host(.menu-side-start) .menu-inner {
-  --ion-safe-area-right: 0px;
+  --syg-safe-area-right: 0px;
 
   @include multi-dir() {
     /* stylelint-disable property-disallowed-list */
@@ -70,7 +70,7 @@
 }
 
 :host(.menu-side-end) .menu-inner {
-  --ion-safe-area-left: 0px;
+  --syg-safe-area-left: 0px;
 
   @include multi-dir() {
     right: 0;

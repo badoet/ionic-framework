@@ -71,12 +71,12 @@
   padding-bottom: 13px;
 }
 
-.header-collapse-main syg-toolbar.in-toolbar ion-title,
+.header-collapse-main syg-toolbar.in-toolbar syg-title,
 .header-collapse-main syg-toolbar.in-toolbar syg-buttons {
   transition: all 0.2s ease-in-out;
 }
 
-.header-collapse-condense-inactive:not(.header-collapse-condense) syg-toolbar.in-toolbar ion-title,
+.header-collapse-condense-inactive:not(.header-collapse-condense) syg-toolbar.in-toolbar syg-title,
 .header-collapse-condense-inactive:not(.header-collapse-condense) syg-toolbar.in-toolbar syg-buttons.buttons-collapse {
   opacity: 0;
   pointer-events: none;
@@ -88,7 +88,7 @@
  * while rubber-banding causes the scroll position
  * to jump to the top
  */
-.header-collapse-condense-inactive.header-collapse-condense syg-toolbar.in-toolbar ion-title,
+.header-collapse-condense-inactive.header-collapse-condense syg-toolbar.in-toolbar syg-title,
 .header-collapse-condense-inactive.header-collapse-condense syg-toolbar.in-toolbar syg-buttons.buttons-collapse {
   visibility: hidden;
 }

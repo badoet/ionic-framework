@@ -25,7 +25,7 @@
   }
 
   // iOS Translucent Tab bar with Color
-  :host(.ion-color.tab-bar-translucent) {
+  :host(.syg-color.tab-bar-translucent) {
     background: #{current-color(base, $tab-bar-ios-translucent-background-color-alpha)};
   }
 

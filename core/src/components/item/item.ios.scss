@@ -36,13 +36,13 @@
   --transition: none;
 }
 
-:host(.ion-color.ion-focused) .item-native::after {
+:host(.syg-color.ion-focused) .item-native::after {
   background: #000;
 
   opacity: .15;
 }
 
-:host(.ion-color.ion-activated) .item-native {
+:host(.syg-color.ion-activated) .item-native {
   &::after {
     background: #000;
 

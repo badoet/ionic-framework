@@ -47,7 +47,7 @@
   font-size: $item-md-icon-slot-font-size;
 }
 
-:host(.ion-color) ::slotted(ion-icon) {
+:host(.syg-color) ::slotted(ion-icon) {
     color: current-color(contrast);
 }
 

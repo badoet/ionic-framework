@@ -30,12 +30,12 @@ $h5-font-size:                 18px !default;
 $h6-font-size:                 16px !default;
 
 html {
-  font-family: var(--ion-font-family);
+  font-family: var(--syg-font-family);
 }
 
 a {
   background-color: transparent;
-  color: ion-color(primary, base);
+  color: syg-color(primary, base);
 }
 
 h1,

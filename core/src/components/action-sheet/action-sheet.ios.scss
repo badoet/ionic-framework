@@ -23,7 +23,7 @@
 }
 
 .action-sheet-wrapper {
-  @include margin(var(--ion-safe-area-top, 0), auto, var(--ion-safe-area-bottom, 0), auto);
+  @include margin(var(--syg-safe-area-top, 0), auto, var(--syg-safe-area-bottom, 0), auto);
 }
 
 

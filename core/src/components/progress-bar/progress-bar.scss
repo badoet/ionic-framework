@@ -10,8 +10,8 @@
    * @prop --progress-background: Background of the progress bar representing the current value
    * @prop --buffer-background: DEPRECATED, use `--background` instead
    */
-  --background: #{ion-color(primary, base, 0.3)};
-  --progress-background: #{ion-color(primary, base)};
+  --background: #{syg-color(primary, base, 0.3)};
+  --progress-background: #{syg-color(primary, base)};
   --buffer-background: var(--background);
 
   display: block;
@@ -158,15 +158,15 @@
 // Progress Bar: Color
 // ------------------------------------------------------------------------
 
-:host(.ion-color) .progress-buffer-bar {
+:host(.syg-color) .progress-buffer-bar {
   background: #{current-color(base, 0.3)};
 }
 
-:host(.ion-color) .buffer-circles {
+:host(.syg-color) .buffer-circles {
   background-image: radial-gradient(ellipse at center, #{current-color(base, 0.3)} 0%, #{current-color(base, 0.3)} 30%, transparent 30%);
 }
 
-:host(.ion-color) {
+:host(.syg-color) {
   .progress,
   .progress-indeterminate {
     background: #{current-color(base)};

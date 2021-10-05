@@ -63,7 +63,7 @@
 
 // Indicator color and ripple on a Segment w/ color
 // should not change if the variables are set
-:host(.in-segment-color) ion-ripple-effect {
+:host(.in-segment-color) syg-ripple-effect {
   color: #{current-color(base)};
 }
 

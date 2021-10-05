@@ -77,8 +77,8 @@
 
 // Default Solid Color
 :host(.button-solid) {
-  --background: #{ion-color(primary, base)};
-  --color: #{ion-color(primary, contrast)};
+  --background: #{syg-color(primary, base)};
+  --color: #{syg-color(primary, contrast)};
 }
 
 
@@ -87,9 +87,9 @@
 
 // Default Outline Color
 :host(.button-outline) {
-  --border-color: #{ion-color(primary, base)};
+  --border-color: #{syg-color(primary, base)};
   --background: transparent;
-  --color: #{ion-color(primary, base)};
+  --color: #{syg-color(primary, base)};
 }
 
 
@@ -100,7 +100,7 @@
 :host(.button-clear) {
   --border-width: 0;
   --background: transparent;
-  --color: #{ion-color(primary, base)};
+  --color: #{syg-color(primary, base)};
 }
 
 
@@ -234,7 +234,7 @@
 // Button Ripple effect
 // --------------------------------------------------
 
-ion-ripple-effect {
+syg-ripple-effect {
   color: var(--ripple-color);
 }
 
@@ -286,13 +286,13 @@ ion-ripple-effect {
 // --------------------------------------------------
 
 // Solid Button with Color
-:host(.button-solid.ion-color) .button-native {
+:host(.button-solid.syg-color) .button-native {
   background: current-color(base);
   color: current-color(contrast);
 }
 
 // Outline Button with Color
-:host(.button-outline.ion-color) .button-native {
+:host(.button-outline.syg-color) .button-native {
   border-color: current-color(base);
 
   background: transparent;
@@ -300,7 +300,7 @@ ion-ripple-effect {
 }
 
 // Clear Button with Color
-:host(.button-clear.ion-color) .button-native {
+:host(.button-clear.syg-color) .button-native {
   background: transparent;
   color: current-color(base);
 }
@@ -308,15 +308,15 @@ ion-ripple-effect {
 // Button in Toolbar
 // --------------------------------------------------
 
-:host(.in-toolbar:not(.ion-color):not(.in-toolbar-color)) .button-native {
+:host(.in-toolbar:not(.syg-color):not(.in-toolbar-color)) .button-native {
   color: #{var(--syg-toolbar-color, var(--color))};
 }
 
-:host(.button-outline.in-toolbar:not(.ion-color):not(.in-toolbar-color)) .button-native {
+:host(.button-outline.in-toolbar:not(.syg-color):not(.in-toolbar-color)) .button-native {
   border-color: #{var(--syg-toolbar-color, var(--color, var(--border-color)))};
 }
 
-:host(.button-solid.in-toolbar:not(.ion-color):not(.in-toolbar-color)) .button-native {
+:host(.button-solid.in-toolbar:not(.syg-color):not(.in-toolbar-color)) .button-native {
   background: #{var(--syg-toolbar-color, var(--background))};
   color: #{var(--syg-toolbar-background, var(--color))};
 }

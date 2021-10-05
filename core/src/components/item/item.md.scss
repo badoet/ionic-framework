@@ -96,7 +96,7 @@
 // Material Design Item: States
 // --------------------------------------------------
 
-:host(.ion-color.ion-activated) .item-native {
+:host(.syg-color.ion-activated) .item-native {
   &::after {
     background: transparent;
   }
@@ -205,7 +205,7 @@
   font-size: $item-md-icon-slot-font-size;
 }
 
-:host(.ion-color:not(.item-fill-solid):not(.item-fill-outline)) ::slotted(ion-icon) {
+:host(.syg-color:not(.item-fill-solid):not(.item-fill-outline)) ::slotted(ion-icon) {
   color: current-color(contrast);
 }
 
@@ -370,17 +370,17 @@
   --padding-start: 0;
 }
 
-:host(.ion-focused:not(.ion-color)) ::slotted(.label-stacked),
-:host(.ion-focused:not(.ion-color)) ::slotted(.label-floating),
-:host(.item-has-focus:not(.ion-color)) ::slotted(.label-stacked),
-:host(.item-has-focus:not(.ion-color)) ::slotted(.label-floating) {
+:host(.ion-focused:not(.syg-color)) ::slotted(.label-stacked),
+:host(.ion-focused:not(.syg-color)) ::slotted(.label-floating),
+:host(.item-has-focus:not(.syg-color)) ::slotted(.label-stacked),
+:host(.item-has-focus:not(.syg-color)) ::slotted(.label-floating) {
   color: $label-md-text-color-focused;
 }
 
 // Material Design Inputs: Highlight Color
 // --------------------------------------------------
 
-:host(.ion-color) {
+:host(.syg-color) {
   --highlight-color-focused: #{current-color(contrast)};
 }
 
@@ -388,8 +388,8 @@
   --highlight-color-focused: #{current-color(base)};
 }
 
-:host(.item-fill-solid.ion-color),
-:host(.item-fill-outline.ion-color) {
+:host(.item-fill-solid.syg-color),
+:host(.item-fill-outline.syg-color) {
   --highlight-color-focused: #{current-color(base)};
 }
 

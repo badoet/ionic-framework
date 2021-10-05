@@ -57,12 +57,12 @@ syg-item-options {
 }
 
 .item-options-start syg-item-option:first-child {
-  @include padding-horizontal(null, var(--ion-safe-area-left));
+  @include padding-horizontal(null, var(--syg-safe-area-left));
 
 }
 
 .item-options-end syg-item-option:last-child {
-  @include padding-horizontal(null, var(--ion-safe-area-right));
+  @include padding-horizontal(null, var(--syg-safe-area-right));
 
 }
 

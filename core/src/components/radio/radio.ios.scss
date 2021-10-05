@@ -5,13 +5,13 @@
 // --------------------------------------------------
 
 :host {
-  --color-checked: #{ion-color(primary, base)};
+  --color-checked: #{syg-color(primary, base)};
 
   width: $radio-ios-icon-width;
   height: $radio-ios-icon-height;
 }
 
-:host(.ion-color.radio-checked) .radio-inner {
+:host(.syg-color.radio-checked) .radio-inner {
   border-color: current-color(base);
 }
 

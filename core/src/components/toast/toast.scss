@@ -64,17 +64,17 @@
   display: none;
 }
 
-:host(.ion-color) {
+:host(.syg-color) {
   --button-color: inherit;
 
   color: #{current-color(contrast)};
 }
 
-:host(.ion-color) .toast-button-cancel {
+:host(.syg-color) .toast-button-cancel {
   color: inherit;
 }
 
-:host(.ion-color) .toast-wrapper {
+:host(.syg-color) .toast-wrapper {
   background: #{current-color(base)};
 }
 

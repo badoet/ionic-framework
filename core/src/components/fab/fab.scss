@@ -20,13 +20,13 @@
 
 :host(.fab-horizontal-start) {
   @include position-horizontal(
-    calc(#{$fab-content-margin} + var(--ion-safe-area-left, 0px)), null
+    calc(#{$fab-content-margin} + var(--syg-safe-area-left, 0px)), null
   );
 }
 
 :host(.fab-horizontal-end) {
   @include position-horizontal(
-    null, calc(#{$fab-content-margin} + var(--ion-safe-area-right, 0px))
+    null, calc(#{$fab-content-margin} + var(--syg-safe-area-right, 0px))
   );
 }
 

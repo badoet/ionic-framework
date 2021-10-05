@@ -5,7 +5,7 @@
 // --------------------------------------------------
 
 /// @prop - Color of the active toggle
-$toggle-md-active-color:                          ion-color(primary, base) !default;
+$toggle-md-active-color:                          syg-color(primary, base) !default;
 
 /// @prop - Width of the toggle track
 $toggle-md-track-width:                           36px !default;
@@ -14,13 +14,13 @@ $toggle-md-track-width:                           36px !default;
 $toggle-md-track-height:                          14px !default;
 
 /// @prop - Background color of the toggle track
-$toggle-md-track-background-color-off:            rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.39) !default;
+$toggle-md-track-background-color-off:            rgba(var(--syg-text-color-rgb, 0, 0, 0), 0.39) !default;
 
 /// @prop - Background color alpha of the checked toggle track
 $toggle-md-track-background-color-alpha-on:       .5 !default;
 
 /// @prop - Background color of the checked toggle track
-$toggle-md-track-background-color-on:             ion-color(primary, base, $toggle-md-track-background-color-alpha-on) !default;
+$toggle-md-track-background-color-on:             syg-color(primary, base, $toggle-md-track-background-color-alpha-on) !default;
 
 /// @prop - Width of the toggle handle
 $toggle-md-handle-width:                          20px !default;

@@ -9,13 +9,13 @@
    * @prop --color: Text color of the router link
    */
   --background: transparent;
-  --color: #{ion-color(primary, base)};
+  --color: #{syg-color(primary, base)};
 
   background: var(--background);
   color: var(--color);
 }
 
-:host(.ion-color) {
+:host(.syg-color) {
   color: current-color(base);
 }
 

@@ -13,8 +13,8 @@
    * @prop --padding-bottom: Bottom padding of the badge
    * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left of the badge
    */
-  --background: #{ion-color(primary, base)};
-  --color: #{ion-color(primary, contrast)};
+  --background: #{syg-color(primary, base)};
+  --color: #{syg-color(primary, contrast)};
   --padding-top: #{$badge-padding-top};
   --padding-end: #{$badge-padding-end};
   --padding-bottom: #{$badge-padding-bottom};
@@ -44,7 +44,7 @@
   vertical-align: baseline;
 }
 
-:host(.ion-color) {
+:host(.syg-color) {
   background: #{current-color(base)};
   color: #{current-color(contrast)};
 }

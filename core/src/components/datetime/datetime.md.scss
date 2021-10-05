@@ -3,7 +3,7 @@
 @import "../../themes/ionic.globals.md";
 
 :host {
-  --background: var(--ion-color-step-100, #ffffff);
+  --background: var(--syg-color-step-100, #ffffff);
   --title-color: #{current-color(contrast)};
 }
 
@@ -82,7 +82,7 @@
 
 /**
  * Day that today but not selected
- * should have ion-color for text color.
+ * should have syg-color for text color.
  */
 :host .calendar-day.calendar-day-today {
   color: current-color(base);
@@ -94,7 +94,7 @@
 
 /**
  * Day that is not today but
- * is selected should have ion-color for
+ * is selected should have syg-color for
  * text color and be bolder.
  */
 :host .calendar-day.calendar-day-active {

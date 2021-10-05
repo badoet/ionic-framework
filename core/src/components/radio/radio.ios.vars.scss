@@ -8,7 +8,7 @@
 $radio-ios-color-on:                  current-color(base) !default;
 
 /// @prop - Background color of focus indicator for radio when focused
-$radio-ios-background-color-focused:  ion-color(primary, tint) !default;
+$radio-ios-background-color-focused:  syg-color(primary, tint) !default;
 
 /// @prop - Width of the radio icon
 $radio-ios-icon-width:                15px !default;

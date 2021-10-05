@@ -95,7 +95,7 @@
 // Back Button Ripple effect
 // --------------------------------------------------
 
-ion-ripple-effect {
+syg-ripple-effect {
   color: var(--ripple-color);
 }
 
@@ -103,7 +103,7 @@ ion-ripple-effect {
 // Back Button with Color
 // --------------------------------------------------
 
-:host(.ion-color) .button-native {
+:host(.syg-color) .button-native {
   color: current-color(base);
 }
 
@@ -228,7 +228,7 @@ ion-icon {
 // Back Button Color: Focused
 // --------------------------------------------------
 
-:host(.ion-color.ion-focused) .button-native {
+:host(.syg-color.ion-focused) .button-native {
   color: #{current-color(base)};
 }
 
@@ -237,7 +237,7 @@ ion-icon {
 // --------------------------------------------------
 
 @media (any-hover: hover) {
-  :host(.ion-color:hover) .button-native {
+  :host(.syg-color:hover) .button-native {
     color: #{current-color(base)};
   }
 }

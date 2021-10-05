@@ -6,10 +6,10 @@
 
 :host {
   --background: #{$toggle-md-track-background-color-off};
-  --background-checked: #{ion-color(primary, base, $toggle-md-track-background-color-alpha-on)};
+  --background-checked: #{syg-color(primary, base, $toggle-md-track-background-color-alpha-on)};
   --border-radius: #{$toggle-md-track-height};
   --handle-background: #{$toggle-md-handle-background-color-off};
-  --handle-background-checked: #{ion-color(primary, base)};
+  --handle-background-checked: #{syg-color(primary, base)};
   --handle-border-radius: #{$toggle-md-handle-border-radius};
   --handle-box-shadow: #{$toggle-md-handle-box-shadow};
   --handle-width: #{$toggle-md-handle-width};
@@ -26,11 +26,11 @@
   contain: strict;
 }
 
-:host(.ion-color.toggle-checked) .toggle-icon {
+:host(.syg-color.toggle-checked) .toggle-icon {
   background: current-color(base, $toggle-md-track-background-color-alpha-on);
 }
 
-:host(.ion-color.toggle-checked) .toggle-inner {
+:host(.syg-color.toggle-checked) .toggle-inner {
   background: current-color(base);
 }
 

@@ -46,16 +46,16 @@
 // Chip Colors
 // ---------------------------------------------
 
-:host(.ion-color) {
+:host(.syg-color) {
   background: current-color(base, .08);
   color: current-color(shade);
 }
 
-:host(.ion-color:focus) {
+:host(.syg-color:focus) {
   background: current-color(base, .12);
 }
 
-:host(.ion-color.ion-activated) {
+:host(.syg-color.ion-activated) {
   background: current-color(base, .16);
 }
 
@@ -74,15 +74,15 @@
   background: transparent;
 }
 
-:host(.chip-outline.ion-color) {
+:host(.chip-outline.syg-color) {
   border-color: current-color(base, .32);
 }
 
-:host(.chip-outline:not(.ion-color):focus) {
+:host(.chip-outline:not(.syg-color):focus) {
   background: rgba(0, 0, 0, .04);
 }
 
-:host(.chip-outline.ion-activated:not(.ion-color)) {
+:host(.chip-outline.ion-activated:not(.syg-color)) {
   background: rgba(0, 0, 0, .08);
 }
 
@@ -94,7 +94,7 @@
   font-size: 20px;
 }
 
-:host(:not(.ion-color)) ::slotted(ion-icon) {
+:host(:not(.syg-color)) ::slotted(ion-icon) {
   color: rgba(0, 0, 0, .54);
 }
 
@@ -152,11 +152,11 @@
     --background: #{rgba($text-color-rgb, .16)};
   }
 
-  :host(.ion-color:hover) {
+  :host(.syg-color:hover) {
     background: current-color(base, .12);
   }
 
-  :host(.chip-outline:not(.ion-color):hover) {
+  :host(.chip-outline:not(.syg-color):hover) {
     background: rgba($text-color-rgb, .04);
   }
 }

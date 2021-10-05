@@ -94,10 +94,10 @@
   :host {
     --width: #{$modal-inset-width};
     --height: #{$modal-inset-height-small};
-    --ion-safe-area-top: 0px;
-    --ion-safe-area-bottom: 0px;
-    --ion-safe-area-right: 0px;
-    --ion-safe-area-left: 0px;
+    --syg-safe-area-top: 0px;
+    --syg-safe-area-bottom: 0px;
+    --syg-safe-area-right: 0px;
+    --syg-safe-area-left: 0px;
   }
 }
 
@@ -127,7 +127,7 @@
    */
   transform: translateZ(0);
 
-  background: var(--ion-color-step-350, #c0c0be);
+  background: var(--syg-color-step-350, #c0c0be);
 
   z-index: 11;
 }
@@ -137,7 +137,7 @@
  * completely cover the content.
  */
 :host(.modal-sheet) {
-  --height: calc(100% - (var(--ion-safe-area-top) + 10px));
+  --height: calc(100% - (var(--syg-safe-area-top) + 10px));
 }
 
 :host(.modal-sheet) .modal-wrapper,

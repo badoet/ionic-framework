@@ -9,9 +9,9 @@
 }
 
 :host(.ion-activated) {
-  background: ion-color(primary, shade);
+  background: syg-color(primary, shade);
 }
 
-:host(.ion-color.ion-activated) {
+:host(.syg-color.ion-activated) {
   background: current-color(shade);
 }

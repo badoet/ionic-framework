@@ -8,8 +8,8 @@
    * @prop --background: Background of the card
    * @prop --color: Color of the card
    */
-  --ion-safe-area-left: 0px;
-  --ion-safe-area-right: 0px;
+  --syg-safe-area-left: 0px;
+  --syg-safe-area-right: 0px;
 
   @include font-smoothing();
 
@@ -28,7 +28,7 @@
 // Card Colors
 // ---------------------------------------------
 
-:host(.ion-color) {
+:host(.syg-color) {
   background: current-color(base);
   color: current-color(contrast);
 }
@@ -82,6 +82,6 @@ button, a {
 // Card Button Ripple effect
 // --------------------------------------------------
 
-ion-ripple-effect {
+syg-ripple-effect {
   color: var(--ripple-color);
 }
