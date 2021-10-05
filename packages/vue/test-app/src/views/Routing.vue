@@ -1,48 +1,48 @@
 <template>
   <ion-page data-pageid="routing">
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Routing</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Routing</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Routing</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Routing</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-item button @click="setRouteParams" id="route-params">
+      <syg-item button @click="setRouteParams" id="route-params">
         <ion-label>Set Route Parameters</ion-label>
-      </ion-item>
+      </syg-item>
 
-      <ion-item button router-link="/routing/child" id="child">
+      <syg-item button router-link="/routing/child" id="child">
         <ion-label>Go to Child Page</ion-label>
-      </ion-item>
+      </syg-item>
 
-      <ion-item button router-link="/routing/abc" id="parameter-abc">
+      <syg-item button router-link="/routing/abc" id="parameter-abc">
         <ion-label>Go to Parameter Page ABC</ion-label>
-      </ion-item>
+      </syg-item>
 
-      <ion-item button router-link="/routing/xyz" id="parameter-xyz">
+      <syg-item button router-link="/routing/xyz" id="parameter-xyz">
         <ion-label>Go to Parameter Page XYZ</ion-label>
-      </ion-item>
+      </syg-item>
 
-      <ion-item button router-link="/routing/123/view" id="parameter-view-item">
+      <syg-item button router-link="/routing/123/view" id="parameter-view-item">
         <ion-label>Go to Parameterized Page View</ion-label>
-      </ion-item>
+      </syg-item>
 
-      <ion-item button @click="replace" id="replace">
+      <syg-item button @click="replace" id="replace">
         <ion-label>Replace to Navigation page</ion-label>
-      </ion-item>
+      </syg-item>
 
-      <ion-item button router-link="/tabs/tab1" id="tab1">
+      <syg-item button router-link="/tabs/tab1" id="tab1">
         <ion-label>Go to /tabs/tab1</ion-label>
-      </ion-item>
+      </syg-item>
     </ion-content>
   </ion-page>
 </template>

@@ -2,8 +2,8 @@ import type { JSX } from '@ionic/core/components';
 import { IonButton as IonButtonCmp } from '@ionic/core/components/syg-button.js';
 import { IonCard as IonCardCmp } from '@ionic/core/components/ion-card.js';
 import { IonFabButton as IonFabButtonCmp } from '@ionic/core/components/ion-fab-button.js';
-import { IonItemOption as IonItemOptionCmp } from '@ionic/core/components/ion-item-option.js';
-import { IonItem as IonItemCmp } from '@ionic/core/components/ion-item.js';
+import { IonItemOption as IonItemOptionCmp } from '@ionic/core/components/syg-item-option.js';
+import { IonItem as IonItemCmp } from '@ionic/core/components/syg-item.js';
 import { IonRouterLink as IonRouterLinkCmp } from '@ionic/core/components/ion-router-link.js';
 
 import { createRoutingComponent } from './createRoutingComponent';
@@ -32,9 +32,9 @@ export const IonFabButton = /*@__PURE__*/ createRoutingComponent<
 export const IonItem = /*@__PURE__*/ createRoutingComponent<
   HrefProps<JSX.IonItem>,
   HTMLIonItemElement
->('ion-item', IonItemCmp);
+>('syg-item', IonItemCmp);
 
 export const IonItemOption = /*@__PURE__*/ createRoutingComponent<
   HrefProps<JSX.IonItemOption>,
   HTMLIonItemOptionElement
->('ion-item-option', IonItemOptionCmp);
+>('syg-item-option', IonItemOptionCmp);

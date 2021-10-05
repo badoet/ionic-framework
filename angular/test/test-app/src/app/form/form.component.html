@@ -1,21 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
+<syg-header>
+  <syg-toolbar>
+    <syg-title>
       Forms test
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+    </syg-title>
+  </syg-toolbar>
+</syg-header>
 
 <ion-content>
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit($event)">
     <ion-list>
 
-      <ion-item>
+      <syg-item>
         <ion-label>DateTime</ion-label>
         <ion-datetime formControlName="datetime" min="1994-03-14" max="2017-12-09" display-format="MM/DD/YYYY"></ion-datetime>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Select</ion-label>
         <ion-select formControlName="select">
           <ion-select-option value="">No Game Console</ion-select-option>
@@ -26,34 +26,34 @@
           <ion-select-option value="saturn">Sega Saturn</ion-select-option>
           <ion-select-option value="snes">SNES</ion-select-option>
         </ion-select>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Toggle</ion-label>
         <ion-toggle formControlName="toggle" slot="end"></ion-toggle>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Input (required)</ion-label>
         <ion-input formControlName="input" class="required" id="touched-input-test"></ion-input>
-      </ion-item>
+      </syg-item>
 
       <syg-button id="input-touched" (click)="setTouched()">Set Input Touched</syg-button>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Input</ion-label>
         <ion-input formControlName="input2"></ion-input>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Checkbox</ion-label>
         <ion-checkbox formControlName="checkbox" slot="start"></ion-checkbox>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Range</ion-label>
         <ion-range formControlName="range"></ion-range>
-      </ion-item>
+      </syg-item>
 
     </ion-list>
     <p>
@@ -69,11 +69,11 @@
 
   </form>
   <ion-list>
-    <ion-item>
+    <syg-item>
       <ion-label>Outside form</ion-label>
       <ion-toggle [formControl]="outsideToggle"></ion-toggle>
       <ion-note slot="end">{{outsideToggle.value}}</ion-note>
-    </ion-item>
+    </syg-item>
   </ion-list>
   <p>
     <syg-button (click)="setValues()" id="set-values">Set values</syg-button>

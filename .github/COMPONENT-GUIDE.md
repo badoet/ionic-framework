@@ -338,7 +338,7 @@ return (
   >
     <button>
       <slot></slot>
-      {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+      {mode === 'md' && <syg-ripple-effect></syg-ripple-effect>}
     </button>
   </Host>
 );
@@ -349,7 +349,7 @@ The ripple effect can also accept a different `type`. By default it is `"bounded
 Make sure to style the ripple effect for that component to accept a color:
 
 ```css
-ion-ripple-effect {
+syg-ripple-effect {
   color: var(--ripple-color);
 }
 ```
@@ -648,8 +648,8 @@ Certain components can render an `<a>` or a `<button>` depending on the presence
 - [syg-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/button)
 - [ion-card](https://github.com/ionic-team/ionic/tree/master/core/src/components/card)
 - [ion-fab-button](https://github.com/ionic-team/ionic/tree/master/core/src/components/fab-button)
-- [ion-item-option](https://github.com/ionic-team/ionic/tree/master/core/src/components/item-option)
-- [ion-item](https://github.com/ionic-team/ionic/tree/master/core/src/components/item)
+- [syg-item-option](https://github.com/ionic-team/ionic/tree/master/core/src/components/item-option)
+- [syg-item](https://github.com/ionic-team/ionic/tree/master/core/src/components/item)
 
 ### Component Structure
 
@@ -693,30 +693,30 @@ There will be some CSS issues when converting to shadow. Below are some of the d
 
 ```css
 /* IN SCOPED */
-:host(.ion-color)::slotted(ion-segment-button)
+:host(.syg-color)::slotted(ion-segment-button)
 
 /* IN SHADOW*/
-:host(.ion-color) ::slotted(ion-segment-button)
+:host(.syg-color) ::slotted(ion-segment-button)
 ```
 
 **Targeting host-context + host (with a :not)**
 
 ```css
 /* IN SCOPED */
-:host-context(ion-toolbar.ion-color):not(.ion-color) {
+:host-context(syg-toolbar.syg-color):not(.syg-color) {
 
 /* IN SHADOW */
-:host-context(ion-toolbar.ion-color):host(:not(.ion-color))  {
+:host-context(syg-toolbar.syg-color):host(:not(.syg-color))  {
 ```
 
 **Targeting host-context + host (with a :not) > slotted child**
 
 ```css
 /* IN SCOPED */
-:host-context(ion-toolbar:not(.ion-color)):not(.ion-color)::slotted(ion-segment-button) {
+:host-context(syg-toolbar:not(.syg-color)):not(.syg-color)::slotted(ion-segment-button) {
 
 /* IN SHADOW*/
-:host-context(ion-toolbar:not(.ion-color)):host(:not(.ion-color)) ::slotted(ion-segment-button) {
+:host-context(syg-toolbar:not(.syg-color)):host(:not(.syg-color)) ::slotted(ion-segment-button) {
 ```
 
 ## RTL

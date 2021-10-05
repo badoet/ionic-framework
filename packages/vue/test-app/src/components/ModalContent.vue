@@ -1,13 +1,13 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
+    <syg-header>
+      <syg-toolbar>
         <syg-buttons>
           <syg-button @click="dismiss" id="dismiss">Dismiss</syg-button>
         </syg-buttons>
-        <ion-title>Modal</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Modal</syg-title>
+      </syg-toolbar>
+    </syg-header>
     <ion-content class="ion-padding">
       {{ title }}
     </ion-content>

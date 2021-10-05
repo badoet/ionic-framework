@@ -1,16 +1,16 @@
 <template>
   <ion-page data-pageid="tab4">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Tab 4</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <syg-header>
+      <syg-toolbar>
+        <syg-title>Tab 4</syg-title>
+      </syg-toolbar>
+    </syg-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 4</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Tab 4</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <ExploreContainer name="Tab 4 page" />
     </ion-content>

@@ -1,20 +1,20 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Slides</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Slides</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Slides</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Slides</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <ion-slides @ionSlideDidChange="checkIndex" ref="slidesRef">
         <ion-slide v-for="slide in slides" :key="slide.id">

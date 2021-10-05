@@ -1,13 +1,13 @@
 <template>
   <ion-page data-pageid="overlays">
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Overlays</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Overlays</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content class="ion-padding" :fullscreen="true">
       <ion-radio-group v-model="componentType">
@@ -17,30 +17,30 @@
           </ion-label>
         </ion-list-header>
 
-        <ion-item>
+        <syg-item>
           <ion-label>Alert</ion-label>
           <ion-radio value="alert" id="syg-alert"></ion-radio>
-        </ion-item>
-        <ion-item>
+        </syg-item>
+        <syg-item>
           <ion-label>Action Sheet</ion-label>
           <ion-radio value="action-sheet" id="syg-action-sheet"></ion-radio>
-        </ion-item>
-        <ion-item>
+        </syg-item>
+        <syg-item>
           <ion-label>Loading</ion-label>
           <ion-radio value="loading" id="ion-loading"></ion-radio>
-        </ion-item>
-        <ion-item>
+        </syg-item>
+        <syg-item>
           <ion-label>Modal</ion-label>
           <ion-radio value="modal" id="ion-modal"></ion-radio>
-        </ion-item>
-        <ion-item>
+        </syg-item>
+        <syg-item>
           <ion-label>Popover</ion-label>
           <ion-radio value="popover" id="ion-popover"></ion-radio>
-        </ion-item>
-        <ion-item>
+        </syg-item>
+        <syg-item>
           <ion-label>Toast</ion-label>
           <ion-radio value="toast" id="ion-toast"></ion-radio>
-        </ion-item>
+        </syg-item>
       </ion-radio-group>
 
       <ion-radio-group v-model="presentationType">
@@ -50,14 +50,14 @@
           </ion-label>
         </ion-list-header>
 
-        <ion-item>
+        <syg-item>
           <ion-label>Controller</ion-label>
           <ion-radio value="controller" id="controller"></ion-radio>
-        </ion-item>
-        <ion-item>
+        </syg-item>
+        <syg-item>
           <ion-label>Component</ion-label>
           <ion-radio value="component" id="component"></ion-radio>
-        </ion-item>
+        </syg-item>
       </ion-radio-group>
 
       <br />

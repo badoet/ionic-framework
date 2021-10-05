@@ -1,20 +1,20 @@
 <template>
   <ion-page data-pageid="routingchild">
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Routing Child</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Routing Child</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Routing Child</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Routing Child</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <div class="ion-padding">
         Routing Child Page

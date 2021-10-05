@@ -1,13 +1,13 @@
 <template>
   <ion-page data-pageid="inputs">
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Inputs</ion-title>
-      </ion-toolbar>
-      <ion-toolbar>
+        <syg-title>Inputs</syg-title>
+      </syg-toolbar>
+      <syg-toolbar>
         <ion-segment v-model="segment">
           <ion-segment-button value="dogs">
             <ion-label>Dogs</ion-label>
@@ -16,71 +16,71 @@
             <ion-label>Cats</ion-label>
           </ion-segment-button>
         </ion-segment>
-      </ion-toolbar>
-      <ion-toolbar>
+      </syg-toolbar>
+      <syg-toolbar>
         <ion-searchbar v-model="searchbar"></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Inputs</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Inputs</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Checkbox</ion-label>
         <ion-checkbox slot="start" v-model="checkbox"></ion-checkbox>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Toggle</ion-label>
         <ion-toggle slot="end" v-model="toggle"></ion-toggle>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Input</ion-label>
         <ion-input slot="end" v-model="input"></ion-input>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Range</ion-label>
         <ion-range :dual-knobs="true" :min="0" :max="100" slot="end" v-model="range"></ion-range>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Textarea</ion-label>
         <ion-textarea slot="end" v-model="textarea"></ion-textarea>
-      </ion-item>
+      </syg-item>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Datetime</ion-label>
         <ion-datetime v-model="datetime"></ion-datetime>
-      </ion-item>
+      </syg-item>
 
       <ion-radio-group v-model="radio">
-        <ion-item>
+        <syg-item>
           <ion-label>Red</ion-label>
           <ion-radio value="red"></ion-radio>
-        </ion-item>
-        <ion-item>
+        </syg-item>
+        <syg-item>
           <ion-label>Green</ion-label>
           <ion-radio value="green"></ion-radio>
-        </ion-item>
-        <ion-item>
+        </syg-item>
+        <syg-item>
           <ion-label>Blue</ion-label>
           <ion-radio value="blue"></ion-radio>
-        </ion-item>
+        </syg-item>
       </ion-radio-group>
 
-      <ion-item>
+      <syg-item>
         <ion-label>Select</ion-label>
         <ion-select v-model="select">
           <ion-select-option value="apples">Apples</ion-select-option>
           <ion-select-option value="bananas">Bananas</ion-select-option>
         </ion-select>
-      </ion-item>
+      </syg-item>
 
       <div class="ion-padding">
         Checkbox: {{ checkbox }}<br>

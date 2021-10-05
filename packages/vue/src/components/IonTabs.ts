@@ -35,7 +35,7 @@ export const IonTabs = /*@__PURE__*/ defineComponent({
     ];
 
     /**
-     * If ion-tab-bar has slot="top" it needs to be
+     * If syg-tab-bar has slot="top" it needs to be
      * rendered before `.tabs-inner` otherwise it will
      * not show above the tab content.
      */

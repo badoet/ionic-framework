@@ -1,7 +1,7 @@
 describe('Routing', () => {
   it('should go to sibling page', () => {
     cy.visit('http://localhost:8080');
-    cy.get('ion-item#routing').click();
+    cy.get('syg-item#routing').click();
 
     cy.wait(500)
 
@@ -17,7 +17,7 @@ describe('Routing', () => {
 
   it('should go back home', () => {
     cy.visit('http://localhost:8080');
-    cy.get('ion-item#routing').click();
+    cy.get('syg-item#routing').click();
 
     cy.ionBackClick('routing');
 

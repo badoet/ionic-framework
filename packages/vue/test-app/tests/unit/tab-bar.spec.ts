@@ -7,7 +7,7 @@ const App = {
   template: '<syg-app><ion-router-outlet /></syg-app>',
 }
 
-describe('ion-tab-bar', () => {
+describe('syg-tab-bar', () => {
   it('should render in the top slot', async () => {
     const Tabs = {
       components: { IonPage, IonTabs, IonTabBar, IonRouterOutlet },
@@ -15,7 +15,7 @@ describe('ion-tab-bar', () => {
         <ion-page>
           <ion-tabs>
             <ion-router-outlet></ion-router-outlet>
-            <ion-tab-bar slot="top"></ion-tab-bar>
+            <syg-tab-bar slot="top"></syg-tab-bar>
           </ion-tabs>
         </ion-page>
       `,
@@ -37,7 +37,7 @@ describe('ion-tab-bar', () => {
     });
 
     const innerHTML = wrapper.find('ion-tabs').html();
-    expect(innerHTML).toContain(`<ion-tab-bar slot="top"></ion-tab-bar><div class="tabs-inner" style="position: relative; flex: 1; contain: layout size style;">`);
+    expect(innerHTML).toContain(`<syg-tab-bar slot="top"></syg-tab-bar><div class="tabs-inner" style="position: relative; flex: 1; contain: layout size style;">`);
 
   });
 
@@ -48,7 +48,7 @@ describe('ion-tab-bar', () => {
         <ion-page>
           <ion-tabs>
             <ion-router-outlet></ion-router-outlet>
-            <ion-tab-bar slot="bottom"></ion-tab-bar>
+            <syg-tab-bar slot="bottom"></syg-tab-bar>
           </ion-tabs>
         </ion-page>
       `,
@@ -70,7 +70,7 @@ describe('ion-tab-bar', () => {
     });
 
     const innerHTML = wrapper.find('ion-tabs').html();
-    expect(innerHTML).toContain(`<div class="tabs-inner" style="position: relative; flex: 1; contain: layout size style;"><ion-router-outlet></ion-router-outlet></div><ion-tab-bar slot="bottom"></ion-tab-bar>`);
+    expect(innerHTML).toContain(`<div class="tabs-inner" style="position: relative; flex: 1; contain: layout size style;"><ion-router-outlet></ion-router-outlet></div><syg-tab-bar slot="bottom"></syg-tab-bar>`);
 
   });
 
@@ -81,7 +81,7 @@ describe('ion-tab-bar', () => {
         <ion-page>
           <ion-tabs>
             <ion-router-outlet></ion-router-outlet>
-            <ion-tab-bar></ion-tab-bar>
+            <syg-tab-bar></syg-tab-bar>
           </ion-tabs>
         </ion-page>
       `,
@@ -103,7 +103,7 @@ describe('ion-tab-bar', () => {
     });
 
     const innerHTML = wrapper.find('ion-tabs').html();
-    expect(innerHTML).toContain(`<div class="tabs-inner" style="position: relative; flex: 1; contain: layout size style;"><ion-router-outlet></ion-router-outlet></div><ion-tab-bar></ion-tab-bar></ion-tabs>`)
+    expect(innerHTML).toContain(`<div class="tabs-inner" style="position: relative; flex: 1; contain: layout size style;"><ion-router-outlet></ion-router-outlet></div><syg-tab-bar></syg-tab-bar></ion-tabs>`)
   });
 
   // Verifies the fix for https://github.com/ionic-team/ionic-framework/issues/22642
@@ -114,9 +114,9 @@ describe('ion-tab-bar', () => {
         <ion-page>
           <ion-tabs>
             <ion-router-outlet></ion-router-outlet>
-            <ion-tab-bar>
+            <syg-tab-bar>
               <!-- my comment -->
-            </ion-tab-bar>
+            </syg-tab-bar>
           </ion-tabs>
         </ion-page>
       `,
@@ -138,6 +138,6 @@ describe('ion-tab-bar', () => {
     });
 
     const innerHTML = wrapper.find('ion-tabs').html();
-    expect(innerHTML).toContain(`><ion-tab-bar><!-- my comment --></ion-tab-bar>`)
+    expect(innerHTML).toContain(`><syg-tab-bar><!-- my comment --></syg-tab-bar>`)
   })
 });

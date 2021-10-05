@@ -1,27 +1,27 @@
 <template>
   <ion-page :data-pageid="'tab1' + $props.id">
-    <ion-header>
-      <ion-toolbar>
+    <syg-header>
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Tab 1 Child {{ $props.id }}</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Tab 1 Child {{ $props.id }}</syg-title>
+      </syg-toolbar>
+    </syg-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 1 Child {{ $props.id }}</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Tab 1 Child {{ $props.id }}</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-item router-link="childone" id="child-one">
+      <syg-item router-link="childone" id="child-one">
         <ion-label>Tab 1 Child 1</ion-label>
-      </ion-item>
+      </syg-item>
 
-      <ion-item router-link="childtwo" id="child-two">
+      <syg-item router-link="childtwo" id="child-two">
         <ion-label>Tab 1 Child 2</ion-label>
-      </ion-item>
+      </syg-item>
 
     </ion-content>
   </ion-page>

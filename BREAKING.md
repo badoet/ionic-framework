@@ -86,7 +86,7 @@ When using a collapsible large title, the last toolbar in the header with `colla
 To get the old style back, add the following CSS to your global stylesheet:
 
 ```css
-ion-header.header-collapse-condense ion-toolbar:last-of-type {
+syg-header.header-collapse-condense syg-toolbar:last-of-type {
   --border-width: 0 0 0.55px;
 }
 ```
@@ -126,7 +126,7 @@ The `placeholder` property now has a type of `string | undefined` rather than `n
 The default iOS tab bar background color has been updated to better reflect the latest iOS styles. The new default value is:
 
 ```css
-var(--ion-tab-bar-background, var(--ion-color-step-50, #f7f7f7));
+var(--syg-tab-bar-background, var(--syg-color-step-50, #f7f7f7));
 ```
 
 #### Textarea
@@ -142,7 +142,7 @@ The `--white-space` CSS variable now defaults to `normal` instead of `pre-wrap`.
 The default iOS toolbar background color has been updated to better reflect the latest iOS styles. The new default value is:
 
 ```css
-var(--ion-toolbar-background, var(--ion-color-step-50, #f7f7f7));
+var(--syg-toolbar-background, var(--syg-color-step-50, #f7f7f7));
 ```
 
 
@@ -249,9 +249,9 @@ Developers must now provide an `ion-router-outlet` inside of `ion-tabs`. Previou
 **Old**
 ```html
 <ion-tabs>
-  <ion-tab-bar slot="bottom">
+  <syg-tab-bar slot="bottom">
     ...
-  </ion-tab-bar>
+  </syg-tab-bar>
 </ion-tabs>
 
 <script>
@@ -268,9 +268,9 @@ Developers must now provide an `ion-router-outlet` inside of `ion-tabs`. Previou
 ```html
 <ion-tabs>
   <ion-router-outlet></ion-router-outlet>
-  <ion-tab-bar slot="bottom">
+  <syg-tab-bar slot="bottom">
     ...
-  </ion-tab-bar>
+  </syg-tab-bar>
 </ion-tabs>
 
 <script>
@@ -402,19 +402,19 @@ Some examples of what's changed are below. *This is not all-inclusive, see the d
 **Before**
 
 ```html
-<ion-header text-center></ion-header>
+<syg-header text-center></syg-header>
 <ion-content padding></ion-content>
 <ion-label text-wrap></ion-label>
-<ion-item wrap></ion-item>
+<syg-item wrap></syg-item>
 ```
 
 **After**
 
 ```html
-<ion-header class="ion-text-center"></ion-header>
+<syg-header class="ion-text-center"></syg-header>
 <ion-content class="ion-padding"></ion-content>
 <ion-label class="ion-text-wrap"></ion-label>
-<ion-item class="ion-wrap"></ion-item>
+<syg-item class="ion-wrap"></syg-item>
 ```
 
 
@@ -521,16 +521,16 @@ Some variables were renamed, removed or added. See the chart below for the chang
 
 | Old variable                            | Status  | New variable                              |
 | ----------------------------------------| --------|-------------------------------------------|
-| `--ion-toolbar-color-unchecked`         | renamed | `--ion-toolbar-segment-color`             |
-| `--ion-toolbar-color-checked`           | renamed | `--ion-toolbar-segment-color-checked`     |
-| `--ion-toolbar-background-unchecked`    | renamed | `--ion-toolbar-segment-background`        |
-| `--ion-toolbar-background-checked`      | renamed | `--ion-toolbar-segment-background-checked`|
-| `--ion-tab-bar-color-activated`         | renamed | `--ion-tab-bar-color-selected`            |
-|                                         | added   | `--ion-toolbar-segment-indicator-color`   |
-| `--ion-toolbar-color-activated`         | removed |                                           |
-| `--ion-item-background-activated`       | removed |                                           |
-| `--ion-item-background-focused`         | removed |                                           |
-| `--ion-item-background-hover`           | removed |                                           |
+| `--syg-toolbar-color-unchecked`         | renamed | `--syg-toolbar-segment-color`             |
+| `--syg-toolbar-color-checked`           | renamed | `--syg-toolbar-segment-color-checked`     |
+| `--syg-toolbar-background-unchecked`    | renamed | `--syg-toolbar-segment-background`        |
+| `--syg-toolbar-background-checked`      | renamed | `--syg-toolbar-segment-background-checked`|
+| `--syg-tab-bar-color-activated`         | renamed | `--syg-tab-bar-color-selected`            |
+|                                         | added   | `--syg-toolbar-segment-indicator-color`   |
+| `--syg-toolbar-color-activated`         | removed |                                           |
+| `--syg-item-background-activated`       | removed |                                           |
+| `--syg-item-background-focused`         | removed |                                           |
+| `--syg-item-background-hover`           | removed |                                           |
 
 
 #### Distributed Sass
@@ -833,11 +833,11 @@ Some variables were renamed or added. See the chart below for the new names.
 
 | Old variable                            | Status  | New variable                              |
 | ----------------------------------------| --------|-------------------------------------------|
-| `--ion-toolbar-color-unchecked`         | renamed | `--ion-toolbar-segment-color`             |
-| `--ion-toolbar-color-checked`           | renamed | `--ion-toolbar-segment-color-checked`     |
-| `--ion-toolbar-background-unchecked`    | renamed | `--ion-toolbar-segment-background`        |
-| `--ion-toolbar-background-checked`      | renamed | `--ion-toolbar-segment-background-checked`|
-|                                         | added   | `--ion-toolbar-segment-indicator-color`   |
+| `--syg-toolbar-color-unchecked`         | renamed | `--syg-toolbar-segment-color`             |
+| `--syg-toolbar-color-checked`           | renamed | `--syg-toolbar-segment-color-checked`     |
+| `--syg-toolbar-background-unchecked`    | renamed | `--syg-toolbar-segment-background`        |
+| `--syg-toolbar-background-checked`      | renamed | `--syg-toolbar-segment-background-checked`|
+|                                         | added   | `--syg-toolbar-segment-indicator-color`   |
 
 
 #### Segment Button

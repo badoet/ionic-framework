@@ -3,7 +3,7 @@
     <ion-content>
       <ion-tabs id="tabs">
         <ion-router-outlet></ion-router-outlet>
-        <ion-tab-bar slot="bottom">
+        <syg-tab-bar slot="bottom">
           <ion-tab-button
             v-for="tab in tabs"
             :tab="'tab' + tab.id"
@@ -15,7 +15,7 @@
           </ion-tab-button>
 
           <syg-button id="add-tab" @click="addTab()">Add Tab</syg-button>
-        </ion-tab-bar>
+        </syg-tab-bar>
       </ion-tabs>
     </ion-content>
   </ion-page>

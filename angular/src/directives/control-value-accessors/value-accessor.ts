@@ -106,7 +106,7 @@ export const setIonicClasses = (element: ElementRef) => {
     const classes = getClasses(input);
     setClasses(input, classes);
 
-    const item = input.closest('ion-item');
+    const item = input.closest('syg-item');
     if (item) {
       setClasses(item, classes);
     }

@@ -1,20 +1,20 @@
 <template>
   <ion-page data-pageid="nestedchild">
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Nested Child</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Nested Child</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Nested Child</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Nested Child</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <div class="ion-padding">
         <syg-button router-link="/tabs/tab1" id="nested-tabs">Tab 1</syg-button>

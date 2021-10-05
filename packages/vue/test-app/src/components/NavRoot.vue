@@ -1,12 +1,12 @@
 <template>
-  <ion-header>
-    <ion-toolbar>
+  <syg-header>
+    <syg-toolbar>
       <syg-buttons>
         <syg-button @click="dismiss">Dismiss</syg-button>
       </syg-buttons>
-      <ion-title>Nav - Root</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <syg-title>Nav - Root</syg-title>
+    </syg-toolbar>
+  </syg-header>
   <ion-content class="ion-padding">
     <syg-button expand="block" @click="pushPage" id="push-nav-child">Go to Nav Child</syg-button>
   </ion-content>

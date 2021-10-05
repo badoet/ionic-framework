@@ -1,36 +1,36 @@
 <template>
   <ion-page data-pageid="tab1">
-    <ion-header>
-      <ion-toolbar>
+    <syg-header>
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button default-href="/"></syg-back-button>
         </syg-buttons>
-        <ion-title>Tab 1</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Tab 1</syg-title>
+      </syg-toolbar>
+    </syg-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 1</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Tab 1</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <ExploreContainer name="Tab 1 page" />
 
-      <ion-item button router-link="/tabs/tab1/childone" id="child-one">
+      <syg-item button router-link="/tabs/tab1/childone" id="child-one">
         <ion-label>Go to Tab 1 Child 1</ion-label>
-      </ion-item>
-      <ion-item button router-link="/nested" id="nested">
+      </syg-item>
+      <syg-item button router-link="/nested" id="nested">
         <ion-label>Go to Nested Outlet</ion-label>
-      </ion-item>
+      </syg-item>
 
-      <ion-item button router-link="/tabs-secondary" id="tabs-secondary">
+      <syg-item button router-link="/tabs-secondary" id="tabs-secondary">
         <ion-label>Go to Secondary Tabs</ion-label>
-      </ion-item>
+      </syg-item>
 
-      <ion-item button router-link="/tabs" id="tabs-primary">
+      <syg-item button router-link="/tabs" id="tabs-primary">
         <ion-label>Go to Primary Tabs</ion-label>
-      </ion-item>
+      </syg-item>
     </ion-content>
   </ion-page>
 </template>

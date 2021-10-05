@@ -1,20 +1,20 @@
 <template>
   <ion-page data-pageid="lifecycle">
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Lifecycle</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Lifecycle</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Lifecycle</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Lifecycle</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <div class="ion-padding">
         ionViewWillEnter: <div id="willEnter">{{ willEnter }}</div><br />

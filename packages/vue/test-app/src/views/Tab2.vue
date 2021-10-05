@@ -1,23 +1,23 @@
 <template>
   <ion-page data-pageid="tab2">
-    <ion-header>
-      <ion-toolbar>
+    <syg-header>
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button default-href="/"></syg-back-button>
         </syg-buttons>
-        <ion-title>Tab 2</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Tab 2</syg-title>
+      </syg-toolbar>
+    </syg-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 2</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Tab 2</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
-      <ion-item button router-link="/routing" id="routing">
+      <syg-item button router-link="/routing" id="routing">
         <ion-label>Go to /routing</ion-label>
-      </ion-item>
+      </syg-item>
     </ion-content>
   </ion-page>
 </template>

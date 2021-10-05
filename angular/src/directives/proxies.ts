@@ -319,7 +319,7 @@ export class IonGrid {
 export declare interface IonHeader extends Components.IonHeader {
 }
 @ProxyCmp({ inputs: ["collapse", "mode", "translucent"] })
-@Component({ selector: "ion-header", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapse", "mode", "translucent"] })
+@Component({ selector: "syg-header", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapse", "mode", "translucent"] })
 export class IonHeader {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -396,7 +396,7 @@ export class IonInput {
 export declare interface IonItem extends Components.IonItem {
 }
 @ProxyCmp({ inputs: ["button", "color", "counter", "detail", "detailIcon", "disabled", "download", "fill", "href", "lines", "mode", "rel", "routerAnimation", "routerDirection", "shape", "target", "type"] })
-@Component({ selector: "ion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["button", "color", "counter", "detail", "detailIcon", "disabled", "download", "fill", "href", "lines", "mode", "rel", "routerAnimation", "routerDirection", "shape", "target", "type"] })
+@Component({ selector: "syg-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["button", "color", "counter", "detail", "detailIcon", "disabled", "download", "fill", "href", "lines", "mode", "rel", "routerAnimation", "routerDirection", "shape", "target", "type"] })
 export class IonItem {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -407,7 +407,7 @@ export class IonItem {
 export declare interface IonItemDivider extends Components.IonItemDivider {
 }
 @ProxyCmp({ inputs: ["color", "mode", "sticky"] })
-@Component({ selector: "ion-item-divider", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode", "sticky"] })
+@Component({ selector: "syg-item-divider", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode", "sticky"] })
 export class IonItemDivider {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -417,7 +417,7 @@ export class IonItemDivider {
 }
 export declare interface IonItemGroup extends Components.IonItemGroup {
 }
-@Component({ selector: "ion-item-group", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@Component({ selector: "syg-item-group", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
 export class IonItemGroup {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -428,7 +428,7 @@ export class IonItemGroup {
 export declare interface IonItemOption extends Components.IonItemOption {
 }
 @ProxyCmp({ inputs: ["color", "disabled", "download", "expandable", "href", "mode", "rel", "target", "type"] })
-@Component({ selector: "ion-item-option", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "disabled", "download", "expandable", "href", "mode", "rel", "target", "type"] })
+@Component({ selector: "syg-item-option", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "disabled", "download", "expandable", "href", "mode", "rel", "target", "type"] })
 export class IonItemOption {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -439,7 +439,7 @@ export class IonItemOption {
 export declare interface IonItemOptions extends Components.IonItemOptions {
 }
 @ProxyCmp({ inputs: ["side"] })
-@Component({ selector: "ion-item-options", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["side"] })
+@Component({ selector: "syg-item-options", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["side"] })
 export class IonItemOptions {
   ionSwipe!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -452,7 +452,7 @@ export class IonItemOptions {
 export declare interface IonItemSliding extends Components.IonItemSliding {
 }
 @ProxyCmp({ inputs: ["disabled"], "methods": ["getOpenAmount", "getSlidingRatio", "open", "close", "closeOpened"] })
-@Component({ selector: "ion-item-sliding", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled"] })
+@Component({ selector: "syg-item-sliding", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled"] })
 export class IonItemSliding {
   ionDrag!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -674,7 +674,7 @@ export class IonReorderGroup {
 export declare interface IonRippleEffect extends Components.IonRippleEffect {
 }
 @ProxyCmp({ inputs: ["type"], "methods": ["addRipple"] })
-@Component({ selector: "ion-ripple-effect", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["type"] })
+@Component({ selector: "syg-ripple-effect", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["type"] })
 export class IonRippleEffect {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -837,7 +837,7 @@ export class IonSplitPane {
 export declare interface IonTabBar extends Components.IonTabBar {
 }
 @ProxyCmp({ inputs: ["color", "mode", "selectedTab", "translucent"] })
-@Component({ selector: "ion-tab-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode", "selectedTab", "translucent"] })
+@Component({ selector: "syg-tab-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode", "selectedTab", "translucent"] })
 export class IonTabBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -896,7 +896,7 @@ export class IonThumbnail {
 export declare interface IonTitle extends Components.IonTitle {
 }
 @ProxyCmp({ inputs: ["color", "size"] })
-@Component({ selector: "ion-title", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "size"] })
+@Component({ selector: "syg-title", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "size"] })
 export class IonTitle {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -922,7 +922,7 @@ export class IonToggle {
 export declare interface IonToolbar extends Components.IonToolbar {
 }
 @ProxyCmp({ inputs: ["color", "mode"] })
-@Component({ selector: "ion-toolbar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode"] })
+@Component({ selector: "syg-toolbar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode"] })
 export class IonToolbar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

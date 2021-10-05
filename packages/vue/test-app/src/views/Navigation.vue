@@ -1,20 +1,20 @@
 <template>
   <ion-page data-pageid="navigation">
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Navigation</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Navigation</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Navigation</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Navigation</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <div class="ion-padding">
         <syg-button expand="block" @click="openModal" id="open-nav-modal">Open Modal</syg-button>

@@ -491,7 +491,7 @@
 * **react:** setting a ref now allows other props to be passed in ([31f45cd](https://github.com/ionic-team/ionic/commit/31f45cdcc953b08749d9db08321fa5ec6cbe2532)), closes [#22609](https://github.com/ionic-team/ionic/issues/22609)
 * **refresher:** clean up old css if calling refresh method before native refresher is setup ([#22640](https://github.com/ionic-team/ionic/issues/22640)) ([8d5ed47](https://github.com/ionic-team/ionic/commit/8d5ed47a282f92a60a2c4126a673cc2a5733067e)), closes [#22636](https://github.com/ionic-team/ionic/issues/22636)
 * **refresher:** refresher correctly detects native refresher when shown asynchronously ([#22623](https://github.com/ionic-team/ionic/issues/22623)) ([5ed73cd](https://github.com/ionic-team/ionic/commit/5ed73cdf4d63eeee25ef28d9676fcaa4f8e07b47)), closes [#22616](https://github.com/ionic-team/ionic/issues/22616)
-* **vue:** adding non tab button elements inside ion-tab-bar no longer causes errors ([#22643](https://github.com/ionic-team/ionic/issues/22643)) ([61cf0c5](https://github.com/ionic-team/ionic/commit/61cf0c534e45ce09410be6bfb50bdc27b657d1bc)), closes [#22642](https://github.com/ionic-team/ionic/issues/22642)
+* **vue:** adding non tab button elements inside syg-tab-bar no longer causes errors ([#22643](https://github.com/ionic-team/ionic/issues/22643)) ([61cf0c5](https://github.com/ionic-team/ionic/commit/61cf0c534e45ce09410be6bfb50bdc27b657d1bc)), closes [#22642](https://github.com/ionic-team/ionic/issues/22642)
 * **vue:** correctly handle navigation failures ([#22621](https://github.com/ionic-team/ionic/issues/22621)) ([216f51b](https://github.com/ionic-team/ionic/commit/216f51b12a8c4ae7b410f47ce3d350ea513b68a1)), closes [#22591](https://github.com/ionic-team/ionic/issues/22591)
 * **vue:** correctly remove old view when replacing route ([#22566](https://github.com/ionic-team/ionic/issues/22566)) ([4f4f31b](https://github.com/ionic-team/ionic/commit/4f4f31b65e48294c3130ff24ae00b1a2aa1f9d31)), closes [#22492](https://github.com/ionic-team/ionic/issues/22492)
 * **vue:** pass in correct route to props function ([#22605](https://github.com/ionic-team/ionic/issues/22605)) ([01afdc4](https://github.com/ionic-team/ionic/commit/01afdc42e5b1598d4d15cb51761bbb3eb5d13893)), closes [#22602](https://github.com/ionic-team/ionic/issues/22602)
@@ -683,7 +683,7 @@ Check out our [Quickstart Guide](https://ionicframework.com/docs/vue/quickstart)
 * **vue:** correctly handle query params ([#22253](https://github.com/ionic-team/ionic/issues/22253)) ([6849dd3](https://github.com/ionic-team/ionic/commit/6849dd3483fb90aac1ff19834390a652c59a74de)), closes [#22229](https://github.com/ionic-team/ionic/issues/22229)
 * **vue:** correctly show syg-back-button when going back ([#22260](https://github.com/ionic-team/ionic/issues/22260)) ([39d2530](https://github.com/ionic-team/ionic/commit/39d2530427b1cd86975fc95ab2c8da9f4b0b27b3)), closes [#22217](https://github.com/ionic-team/ionic/issues/22217)
 * **vue:** hide layout shift on ion-page components ([#22254](https://github.com/ionic-team/ionic/issues/22254)) ([2bad1bb](https://github.com/ionic-team/ionic/commit/2bad1bb82e0fa3fe9e3db54403565d210f636120)), closes [#22052](https://github.com/ionic-team/ionic/issues/22052)
-* **vue:** ion-tab-bar no longer throws undefined error when re-creating tabs ([#22261](https://github.com/ionic-team/ionic/issues/22261)) ([d746561](https://github.com/ionic-team/ionic/commit/d746561ea29e61db2cfb55d2765b5548fd8b5a78)), closes [#22255](https://github.com/ionic-team/ionic/issues/22255)
+* **vue:** syg-tab-bar no longer throws undefined error when re-creating tabs ([#22261](https://github.com/ionic-team/ionic/issues/22261)) ([d746561](https://github.com/ionic-team/ionic/commit/d746561ea29e61db2cfb55d2765b5548fd8b5a78)), closes [#22255](https://github.com/ionic-team/ionic/issues/22255)
 
 ### Upgrade Steps
 
@@ -1527,19 +1527,19 @@ npm i @types/react@latest @types/react-dom@latest
   BEFORE:
 
   ```html
-  <ion-header text-center></ion-header>
+  <syg-header text-center></syg-header>
   <ion-content padding></ion-content>
   <ion-label text-wrap></ion-label>
-  <ion-item wrap></ion-item>
+  <syg-item wrap></syg-item>
   ```
 
   AFTER:
 
   ```html
-  <ion-header class="ion-text-center"></ion-header>
+  <syg-header class="ion-text-center"></syg-header>
   <ion-content class="ion-padding"></ion-content>
   <ion-label class="ion-text-wrap"></ion-label>
-  <ion-item class="ion-wrap"></ion-item>
+  <syg-item class="ion-wrap"></syg-item>
   ```
 * **events:** remove the Events service. ([#19600](https://github.com/ionic-team/ionic/issues/19600)) ([8d4a721](https://github.com/ionic-team/ionic/commit/8d4a721c6675c13d1f84c455bb222af60be34312))
   - Use "Observables" for a similar pub/sub architecture: https://angular.io/guide/observables
@@ -1800,7 +1800,7 @@ View our [Angular 8 Update Guide](https://docs.google.com/document/d/1QOpQeDifPS
 
 ### Bug Fixes
 
-* **angular:** copy input form classes to parent ion-item ([#18820](https://github.com/ionic-team/ionic/issues/18820)) ([53179c4](https://github.com/ionic-team/ionic/commit/53179c4)), closes [#18800](https://github.com/ionic-team/ionic/issues/18800)
+* **angular:** copy input form classes to parent syg-item ([#18820](https://github.com/ionic-team/ionic/issues/18820)) ([53179c4](https://github.com/ionic-team/ionic/commit/53179c4)), closes [#18800](https://github.com/ionic-team/ionic/issues/18800)
 * **angular:** add the swipeGesture method for enabling or disabling the ability to swipe open a menu ([#18806](https://github.com/ionic-team/ionic/issues/18806)) ([fbfc076](https://github.com/ionic-team/ionic/commit/fbfc076)), closes [#16002](https://github.com/ionic-team/ionic/issues/16002)
 * **angular:** webview "pause", "resume", and "resize" events now trigger change detection ([#18853](https://github.com/ionic-team/ionic/issues/18853)) ([544e550](https://github.com/ionic-team/ionic/commit/544e550)), closes [#18831](https://github.com/ionic-team/ionic/issues/18831)
 * **core:** apply translucent if backdrop-filter is supported ([#18832](https://github.com/ionic-team/ionic/issues/18832)) ([6b5a59d](https://github.com/ionic-team/ionic/commit/6b5a59d)), closes [ionic-team/ionic-docs#666](https://github.com/ionic-team/ionic-docs/issues/666)
@@ -2150,7 +2150,7 @@ View our [Angular 8 Update Guide](https://docs.google.com/document/d/1QOpQeDifPS
 ### Bug Fixes
 
 * **build:** modify rollup.config.js to work with Windows ([#17231](https://github.com/ionic-team/ionic/issues/17231)) ([d26d43d](https://github.com/ionic-team/ionic/commit/d26d43d))
-* **grid:** add flex to ion-grid to allow it to properly render in an ion-item ([#17258](https://github.com/ionic-team/ionic/issues/17258)) ([40c6955](https://github.com/ionic-team/ionic/commit/40c6955)), closes [#17075](https://github.com/ionic-team/ionic/issues/17075)
+* **grid:** add flex to ion-grid to allow it to properly render in an syg-item ([#17258](https://github.com/ionic-team/ionic/issues/17258)) ([40c6955](https://github.com/ionic-team/ionic/commit/40c6955)), closes [#17075](https://github.com/ionic-team/ionic/issues/17075)
 * **menu:** fix content shadow when revealed in iOS ([#17383](https://github.com/ionic-team/ionic/issues/17383)) ([fc43faa](https://github.com/ionic-team/ionic/commit/fc43faa))
 * **platform:** add additional check for safari PWA ([a584f6e](https://github.com/ionic-team/ionic/commit/a584f6e))
 * **platform:** add mobileweb platform back ([cf2b2b3](https://github.com/ionic-team/ionic/commit/cf2b2b3))
@@ -2214,7 +2214,7 @@ Enjoy! 🎈
 * **fab-button:** add default padding for fab-button ([#17050](https://github.com/ionic-team/ionic/issues/17050)) ([418052f](https://github.com/ionic-team/ionic/commit/418052f))
 * **icon:** fix rtl detail icon for ios ([#17016](https://github.com/ionic-team/ionic/issues/17016)) ([b4f3405](https://github.com/ionic-team/ionic/commit/b4f3405)), closes [#14958](https://github.com/ionic-team/ionic/issues/14958)
 * **input:** disable shadow-dom for text inputs ([#17043](https://github.com/ionic-team/ionic/issues/17043)) ([63e0501](https://github.com/ionic-team/ionic/commit/63e0501)), closes [#17020](https://github.com/ionic-team/ionic/issues/17020)
-* **input:** fix display of ion-input in narrow ion-item in Firefox ([#16978](https://github.com/ionic-team/ionic/issues/16978)) ([1099dc3](https://github.com/ionic-team/ionic/commit/1099dc3))
+* **input:** fix display of ion-input in narrow syg-item in Firefox ([#16978](https://github.com/ionic-team/ionic/issues/16978)) ([1099dc3](https://github.com/ionic-team/ionic/commit/1099dc3))
 * **inputs:** fix styles in firefox ([#17066](https://github.com/ionic-team/ionic/issues/17066)) ([0120eee](https://github.com/ionic-team/ionic/commit/0120eee))
 * **inputs:** keyboard focus improvements ([#16838](https://github.com/ionic-team/ionic/issues/16838)) ([6364e4e](https://github.com/ionic-team/ionic/commit/6364e4e)), closes [#16815](https://github.com/ionic-team/ionic/issues/16815) [#16872](https://github.com/ionic-team/ionic/issues/16872) [#13978](https://github.com/ionic-team/ionic/issues/13978) [#16610](https://github.com/ionic-team/ionic/issues/16610)
 * **item:** no lines on item should take precedence over list lines ([#17049](https://github.com/ionic-team/ionic/issues/17049)) ([d2fa946](https://github.com/ionic-team/ionic/commit/d2fa946)), closes [#16900](https://github.com/ionic-team/ionic/issues/16900)
@@ -2572,7 +2572,7 @@ And for the tabs markup, we have something close to pre-beta 16 tabs, but still 
 -    <ion-router-outlet name="tab3"></ion-router-outlet>
 -  </ion-tab>
 -
-   <ion-tab-bar slot="bottom">
+   <syg-tab-bar slot="bottom">
 -
 -    <ion-tab-button tab="tab1" href="/tabs/(tab1:tab1)">
 +    <ion-tab-button tab="tab1">
@@ -2592,7 +2592,7 @@ And for the tabs markup, we have something close to pre-beta 16 tabs, but still 
        <ion-label>Tab Three</ion-label>
      </ion-tab-button>
 -
-   </ion-tab-bar>
+   </syg-tab-bar>
 
  </ion-tabs>
 ```
@@ -2603,7 +2603,7 @@ And for the tabs markup, we have something close to pre-beta 16 tabs, but still 
 
 ### [ANGULAR] href does not cause Angular Router to navigate
 
-For consistency sake, the `href` attribute of `syg-button`, `ion-item` and `ion-anchor` no longer
+For consistency sake, the `href` attribute of `syg-button`, `syg-item` and `ion-anchor` no longer
 trigger navigation using the Angular’s Router,instead use angular’s `[routerLink]`:
 
 ```diff
@@ -2794,10 +2794,10 @@ The following global CSS variables have been removed for the reasons listed.
 
 | Variable Name                     | Reason                                          |
 | ----------------------------------| ------------------------------------------------|
-| `--ion-toolbar-color-inactive`    | Unused                                          |
-| `--ion-ripple-background-color`   | Unused / Ripple color is based on component     |
-| `--ion-header-size`               | Removed in favor of using CSS for h1-h6         |
-| `--ion-header-step`               | Removed in favor of using CSS for h1-h6         |
+| `--syg-toolbar-color-inactive`    | Unused                                          |
+| `--syg-ripple-background-color`   | Unused / Ripple color is based on component     |
+| `--syg-header-size`               | Removed in favor of using CSS for h1-h6         |
+| `--syg-header-step`               | Removed in favor of using CSS for h1-h6         |
 
 ## Renamed Global CSS Variables
 
@@ -2805,15 +2805,15 @@ The following global CSS variables have been renamed for the reasons listed.
 
 | Old Variable Name                        | New Variable Name                  | Reason                                                                        |
 | -----------------------------------------| -----------------------------------| ------------------------------------------------------------------------------|
-| `--ion-toolbar-text-color`               | `--ion-toolbar-color`              | Variable is not limited to text color                                         |
-| `--ion-toolbar-color-active`             | `--ion-toolbar-color-activated`    | Consistency with our component variables                                      |
-| `--ion-tabbar-text-color`                | `--ion-tab-bar-color`              | Variable is not limited to text color                                         |
-| `--ion-tabbar-text-color-active`         | `--ion-tab-bar-color-activated`    | Consistency with our component variables                                      |
-| `--ion-tabbar-background-color`          | `--ion-tab-bar-background`         | Applies to the background property                                            |
-| `--ion-tabbar-background-color-focused`  | `--ion-tab-bar-background-focused` | Applies to the background property                                            |
-| `--ion-item-background-color`            | `--ion-item-background`            | Applies to the background property                                            |
-| `--ion-item-background-color-active`     | `--ion-item-background-activated`  | Applies to the background property / Consistency with our component variables |
-| `--ion-item-text-color`                  | `--ion-item-color`                 | Variable is not limited to text color                                         |
+| `--syg-toolbar-text-color`               | `--syg-toolbar-color`              | Variable is not limited to text color                                         |
+| `--syg-toolbar-color-active`             | `--syg-toolbar-color-activated`    | Consistency with our component variables                                      |
+| `--syg-tabbar-text-color`                | `--syg-tab-bar-color`              | Variable is not limited to text color                                         |
+| `--syg-tabbar-text-color-active`         | `--syg-tab-bar-color-activated`    | Consistency with our component variables                                      |
+| `--syg-tabbar-background-color`          | `--syg-tab-bar-background`         | Applies to the background property                                            |
+| `--syg-tabbar-background-color-focused`  | `--syg-tab-bar-background-focused` | Applies to the background property                                            |
+| `--syg-item-background-color`            | `--syg-item-background`            | Applies to the background property                                            |
+| `--syg-item-background-color-active`     | `--syg-item-background-activated`  | Applies to the background property / Consistency with our component variables |
+| `--syg-item-text-color`                  | `--syg-item-color`                 | Variable is not limited to text color                                         |
 | `--ion-placeholder-text-color`           | `--ion-placeholder-color`          | Consistency with other variables                                              |
 
 ## Rethinking Tabs
@@ -2844,7 +2844,7 @@ Here, we have an `ion-tab` element that accepts an icon, a label, and a link to 
 
 ```html
 <ion-tabs>
-  <ion-tab-bar>
+  <syg-tab-bar>
 
     <!-- No ion-tab, just a link that looks like a tab -->
     <ion-tab-button href="https://ionicframework.com">
@@ -2864,7 +2864,7 @@ Here, we have an `ion-tab` element that accepts an icon, a label, and a link to 
       <ion-icon name="home"></ion-icon>
       <ion-label>Home</ion-label>
     </ion-tab-button>
-  </ion-tab-bar>
+  </syg-tab-bar>
 
   <ion-tab tab="home-view">
     <ion-content></ion-content>
@@ -2880,7 +2880,7 @@ Here, we have an `ion-tab` element that accepts an icon, a label, and a link to 
 There's a lot going on here, so let's break it down:
 
 1. A single parent `ion-tabs` wraps the entire layout. Same as before.
-2. A new element, `ion-tab-bar`, creates the Tab Bar which will contain buttons.
+2. A new element, `syg-tab-bar`, creates the Tab Bar which will contain buttons.
 3. A new element, `ion-tab-button`, is used to create each button in the Tab Bar. These could be static links to different routes, buttons with click handlers on them, or link to whole tab views.
 4. The `ion-tab` component becomes a separate container that has inline content (`ion-content`), a navigation component (`ion-nav`) or a router outlet (`ion-router-outlet`).
 
@@ -2888,9 +2888,9 @@ To connect the `ion-tab-button` to the `ion-tab`, the `tab` property must be add
 
 ```html
 <ion-tabs>
-  <ion-tab-bar>
+  <syg-tab-bar>
     <ion-tab-button tab="home-view"></ion-tab-button>
-  </ion-tab-bar>
+  </syg-tab-bar>
 
   <ion-tab tab="home-view"></ion-tab>
 </ion-tabs>
@@ -2914,7 +2914,7 @@ Lastly, this change also fixes some outstanding issues with Tabs, so we're excit
 * **action-sheet:** update Action Sheet design to match MD spec ([#16135](https://github.com/ionic-team/ionic/issues/16135)) ([068303d](https://github.com/ionic-team/ionic/commit/068303d))
 * **alert:** match MD spec ([#16145](https://github.com/ionic-team/ionic/issues/16145)) ([287aec8](https://github.com/ionic-team/ionic/commit/287aec8))
 * **alert:** update alert min/max interface ([#15987](https://github.com/ionic-team/ionic/issues/15987)) ([a0c60ff](https://github.com/ionic-team/ionic/commit/a0c60ff)), closes [#15986](https://github.com/ionic-team/ionic/issues/15986)
-* **angular:** generate proxies for ion-tabbar ([#15954](https://github.com/ionic-team/ionic/issues/15954)) ([45b46b4](https://github.com/ionic-team/ionic/commit/45b46b4))
+* **angular:** generate proxies for syg-tabbar ([#15954](https://github.com/ionic-team/ionic/issues/15954)) ([45b46b4](https://github.com/ionic-team/ionic/commit/45b46b4))
 * **angular:** make sure angular form control onChange is fired when needed ([#16126](https://github.com/ionic-team/ionic/issues/16126)) ([d5f2e6f](https://github.com/ionic-team/ionic/commit/d5f2e6f))
 * **badge:** match MD padding ([#16134](https://github.com/ionic-team/ionic/issues/16134)) ([615c518](https://github.com/ionic-team/ionic/commit/615c518))
 * **button:** match MD spec timing, outline, hover ([#16160](https://github.com/ionic-team/ionic/issues/16160)) ([0faa355](https://github.com/ionic-team/ionic/commit/0faa355))
@@ -3122,12 +3122,12 @@ Lastly, this change also fixes some outstanding issues with Tabs, so we're excit
 * **anchor:** make it activatable ([6c62e6c](https://github.com/ionic-team/ionic/commit/6c62e6c))
 * **angular:** only append the component when the parent element is not the container element ([6d6f70c](https://github.com/ionic-team/ionic/commit/6d6f70c)), closes [#14737](https://github.com/ionic-team/ionic/issues/14737)
 * **back-button:** subscribe to body ([37c9be7](https://github.com/ionic-team/ionic/commit/37c9be7))
-* **button:** add custom properties and remove --ion-color overrides ([#15463](https://github.com/ionic-team/ionic/issues/15463)) ([3af4361](https://github.com/ionic-team/ionic/commit/3af4361)), closes [#14808](https://github.com/ionic-team/ionic/issues/14808) [#14853](https://github.com/ionic-team/ionic/issues/14853) [#14850](https://github.com/ionic-team/ionic/issues/14850)
+* **button:** add custom properties and remove --syg-color overrides ([#15463](https://github.com/ionic-team/ionic/issues/15463)) ([3af4361](https://github.com/ionic-team/ionic/commit/3af4361)), closes [#14808](https://github.com/ionic-team/ionic/issues/14808) [#14853](https://github.com/ionic-team/ionic/issues/14853) [#14850](https://github.com/ionic-team/ionic/issues/14850)
 * **core:** matchBreakpoint will return true if breakPoint is empty string ([#15498](https://github.com/ionic-team/ionic/issues/15498)) ([b362b0a](https://github.com/ionic-team/ionic/commit/b362b0a)), closes [#15495](https://github.com/ionic-team/ionic/issues/15495)
 * **esm:** reorganiza exports ([bb19243](https://github.com/ionic-team/ionic/commit/bb19243))
 * **fab-button:** add routerDirection ([2398634](https://github.com/ionic-team/ionic/commit/2398634)), closes [#15551](https://github.com/ionic-team/ionic/issues/15551)
 * **input:** value might be null/undefined ([83543b7](https://github.com/ionic-team/ionic/commit/83543b7))
-* **item:** update hostContext to use ion-item element ([21d1f2e](https://github.com/ionic-team/ionic/commit/21d1f2e))
+* **item:** update hostContext to use syg-item element ([21d1f2e](https://github.com/ionic-team/ionic/commit/21d1f2e))
 * **item-option:** add activated and ripple to button ([78e2a0a](https://github.com/ionic-team/ionic/commit/78e2a0a)), closes [#14943](https://github.com/ionic-team/ionic/issues/14943)
 * **item-option:** enable ripple-effect ([428a5da](https://github.com/ionic-team/ionic/commit/428a5da))
 * **item-sliding:** make sure options are ready ([7f59f91](https://github.com/ionic-team/ionic/commit/7f59f91))
@@ -3180,7 +3180,7 @@ Lastly, this change also fixes some outstanding issues with Tabs, so we're excit
 
 ### Bug Fixes
 
-* **button:** add custom properties and remove --ion-color overrides ([#15463](https://github.com/ionic-team/ionic/issues/15463)) ([3af4361](https://github.com/ionic-team/ionic/commit/3af4361)), closes [#14808](https://github.com/ionic-team/ionic/issues/14808) [#14853](https://github.com/ionic-team/ionic/issues/14853) [#14850](https://github.com/ionic-team/ionic/issues/14850)
+* **button:** add custom properties and remove --syg-color overrides ([#15463](https://github.com/ionic-team/ionic/issues/15463)) ([3af4361](https://github.com/ionic-team/ionic/commit/3af4361)), closes [#14808](https://github.com/ionic-team/ionic/issues/14808) [#14853](https://github.com/ionic-team/ionic/issues/14853) [#14850](https://github.com/ionic-team/ionic/issues/14850)
 * **menu:** ios styles ([281f9a3](https://github.com/ionic-team/ionic/commit/281f9a3))
 * **radio:** add and document custom properties ([0f9a7b4](https://github.com/ionic-team/ionic/commit/0f9a7b4)), closes [#14850](https://github.com/ionic-team/ionic/issues/14850)
 * **searchbar:** inherit color from color toolbar ([3042f57](https://github.com/ionic-team/ionic/commit/3042f57))
@@ -3333,10 +3333,10 @@ The following dependencies need to be updated to resolve build errors
 * **img:** add object-fit to the host to avoid skewing the inner img ([2e94227](https://github.com/ionic-team/ionic/commit/2e94227))
 * **infinite-scroll:** remove unused method ([926758e](https://github.com/ionic-team/ionic/commit/926758e))
 * **input:** clearInput works in device ([ac96705](https://github.com/ionic-team/ionic/commit/ac96705)), closes [#15319](https://github.com/ionic-team/ionic/issues/15319)
-* **menu:** do not override --ion-color-base ([a890828](https://github.com/ionic-team/ionic/commit/a890828))
+* **menu:** do not override --syg-color-base ([a890828](https://github.com/ionic-team/ionic/commit/a890828))
 * **modal:** make sure content is ready ([2c8bc04](https://github.com/ionic-team/ionic/commit/2c8bc04)), closes [#14969](https://github.com/ionic-team/ionic/issues/14969)
 * **nav:** remove nav-decor once transition finished ([b8a87fb](https://github.com/ionic-team/ionic/commit/b8a87fb)), closes [#15121](https://github.com/ionic-team/ionic/issues/15121)
-* **note:** do not overide --ion-color-base ([5f90dbf](https://github.com/ionic-team/ionic/commit/5f90dbf))
+* **note:** do not overide --syg-color-base ([5f90dbf](https://github.com/ionic-team/ionic/commit/5f90dbf))
 * **overlay:** expose "animated" API ([8b768fb](https://github.com/ionic-team/ionic/commit/8b768fb)), closes [#14775](https://github.com/ionic-team/ionic/issues/14775)
 * **overlays:** dismiss last overlay ([c1c5102](https://github.com/ionic-team/ionic/commit/c1c5102))
 * **overlays:** esc button works closed top overlays ([c567a82](https://github.com/ionic-team/ionic/commit/c567a82)), closes [#14662](https://github.com/ionic-team/ionic/issues/14662)
@@ -3397,9 +3397,9 @@ The following dependencies need to be updated to resolve build errors
 * **content:** overflow-behavior: contain ([6173479](https://github.com/ionic-team/ionic/commit/6173479))
 * **content:** scrolling Y ([01323ac](https://github.com/ionic-team/ionic/commit/01323ac))
 * **content:** scrollToTop ([695abcf](https://github.com/ionic-team/ionic/commit/695abcf))
-* **css:** --ion-item-background > --ion-item-background-color ([#15101](https://github.com/ionic-team/ionic/issues/15101)) ([e3010e1](https://github.com/ionic-team/ionic/commit/e3010e1))
+* **css:** --syg-item-background > --syg-item-background-color ([#15101](https://github.com/ionic-team/ionic/issues/15101)) ([e3010e1](https://github.com/ionic-team/ionic/commit/e3010e1))
 * **datetime:** add open() method ([f032769](https://github.com/ionic-team/ionic/commit/f032769)), closes [#14923](https://github.com/ionic-team/ionic/issues/14923)
-* **docs:** replace ion-navbar with ion-toolbar ([#15126](https://github.com/ionic-team/ionic/issues/15126)) ([0219309](https://github.com/ionic-team/ionic/commit/0219309))
+* **docs:** replace ion-navbar with syg-toolbar ([#15126](https://github.com/ionic-team/ionic/issues/15126)) ([0219309](https://github.com/ionic-team/ionic/commit/0219309))
 * **fab-button:** sets pointer-events none when disabled ([04d33e5](https://github.com/ionic-team/ionic/commit/04d33e5)), closes [#15129](https://github.com/ionic-team/ionic/issues/15129) [#15120](https://github.com/ionic-team/ionic/issues/15120)
 * **input:** event interfaces ([2e7d355](https://github.com/ionic-team/ionic/commit/2e7d355))
 * **menu:** dismiss when clicking outside ([288eeb5](https://github.com/ionic-team/ionic/commit/288eeb5)), closes [#15096](https://github.com/ionic-team/ionic/issues/15096)

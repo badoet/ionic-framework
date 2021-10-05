@@ -29,17 +29,17 @@ import { IonFabButton as IonFabButtonCmp } from '@ionic/core/components/ion-fab-
 import { IonFabList as IonFabListCmp } from '@ionic/core/components/ion-fab-list.js';
 import { IonFooter as IonFooterCmp } from '@ionic/core/components/ion-footer.js';
 import { IonGrid as IonGridCmp } from '@ionic/core/components/ion-grid.js';
-import { IonHeader as IonHeaderCmp } from '@ionic/core/components/ion-header.js';
+import { IonHeader as IonHeaderCmp } from '@ionic/core/components/syg-header.js';
 import { IonImg as IonImgCmp } from '@ionic/core/components/ion-img.js';
 import { IonInfiniteScroll as IonInfiniteScrollCmp } from '@ionic/core/components/ion-infinite-scroll.js';
 import { IonInfiniteScrollContent as IonInfiniteScrollContentCmp } from '@ionic/core/components/ion-infinite-scroll-content.js';
 import { IonInput as IonInputCmp } from '@ionic/core/components/ion-input.js';
-import { IonItem as IonItemCmp } from '@ionic/core/components/ion-item.js';
-import { IonItemDivider as IonItemDividerCmp } from '@ionic/core/components/ion-item-divider.js';
-import { IonItemGroup as IonItemGroupCmp } from '@ionic/core/components/ion-item-group.js';
-import { IonItemOption as IonItemOptionCmp } from '@ionic/core/components/ion-item-option.js';
-import { IonItemOptions as IonItemOptionsCmp } from '@ionic/core/components/ion-item-options.js';
-import { IonItemSliding as IonItemSlidingCmp } from '@ionic/core/components/ion-item-sliding.js';
+import { IonItem as IonItemCmp } from '@ionic/core/components/syg-item.js';
+import { IonItemDivider as IonItemDividerCmp } from '@ionic/core/components/syg-item-divider.js';
+import { IonItemGroup as IonItemGroupCmp } from '@ionic/core/components/syg-item-group.js';
+import { IonItemOption as IonItemOptionCmp } from '@ionic/core/components/syg-item-option.js';
+import { IonItemOptions as IonItemOptionsCmp } from '@ionic/core/components/syg-item-options.js';
+import { IonItemSliding as IonItemSlidingCmp } from '@ionic/core/components/syg-item-sliding.js';
 import { IonLabel as IonLabelCmp } from '@ionic/core/components/ion-label.js';
 import { IonList as IonListCmp } from '@ionic/core/components/ion-list.js';
 import { IonListHeader as IonListHeaderCmp } from '@ionic/core/components/ion-list-header.js';
@@ -57,7 +57,7 @@ import { IonRefresher as IonRefresherCmp } from '@ionic/core/components/ion-refr
 import { IonRefresherContent as IonRefresherContentCmp } from '@ionic/core/components/ion-refresher-content.js';
 import { IonReorder as IonReorderCmp } from '@ionic/core/components/ion-reorder.js';
 import { IonReorderGroup as IonReorderGroupCmp } from '@ionic/core/components/ion-reorder-group.js';
-import { IonRippleEffect as IonRippleEffectCmp } from '@ionic/core/components/ion-ripple-effect.js';
+import { IonRippleEffect as IonRippleEffectCmp } from '@ionic/core/components/syg-ripple-effect.js';
 import { IonRow as IonRowCmp } from '@ionic/core/components/ion-row.js';
 import { IonSearchbar as IonSearchbarCmp } from '@ionic/core/components/ion-searchbar.js';
 import { IonSegment as IonSegmentCmp } from '@ionic/core/components/ion-segment.js';
@@ -72,9 +72,9 @@ import { IonSplitPane as IonSplitPaneCmp } from '@ionic/core/components/ion-spli
 import { IonText as IonTextCmp } from '@ionic/core/components/ion-text.js';
 import { IonTextarea as IonTextareaCmp } from '@ionic/core/components/ion-textarea.js';
 import { IonThumbnail as IonThumbnailCmp } from '@ionic/core/components/ion-thumbnail.js';
-import { IonTitle as IonTitleCmp } from '@ionic/core/components/ion-title.js';
+import { IonTitle as IonTitleCmp } from '@ionic/core/components/syg-title.js';
 import { IonToggle as IonToggleCmp } from '@ionic/core/components/ion-toggle.js';
-import { IonToolbar as IonToolbarCmp } from '@ionic/core/components/ion-toolbar.js';
+import { IonToolbar as IonToolbarCmp } from '@ionic/core/components/syg-toolbar.js';
 import { IonVirtualScroll as IonVirtualScrollCmp } from '@ionic/core/components/ion-virtual-scroll.js';
 
 
@@ -343,7 +343,7 @@ export const IonGrid = /*@__PURE__*/ defineContainer<JSX.IonGrid>('ion-grid', Io
 ]);
 
 
-export const IonHeader = /*@__PURE__*/ defineContainer<JSX.IonHeader>('ion-header', IonHeaderCmp, [
+export const IonHeader = /*@__PURE__*/ defineContainer<JSX.IonHeader>('syg-header', IonHeaderCmp, [
   'collapse',
   'translucent'
 ]);
@@ -410,7 +410,7 @@ export const IonInput = /*@__PURE__*/ defineContainer<JSX.IonInput>('ion-input',
 'value', 'v-ion-change', 'ionChange');
 
 
-export const IonItem = /*@__PURE__*/ defineContainer<JSX.IonItem>('ion-item', IonItemCmp, [
+export const IonItem = /*@__PURE__*/ defineContainer<JSX.IonItem>('syg-item', IonItemCmp, [
   'color',
   'button',
   'detail',
@@ -430,16 +430,16 @@ export const IonItem = /*@__PURE__*/ defineContainer<JSX.IonItem>('ion-item', Io
 ]);
 
 
-export const IonItemDivider = /*@__PURE__*/ defineContainer<JSX.IonItemDivider>('ion-item-divider', IonItemDividerCmp, [
+export const IonItemDivider = /*@__PURE__*/ defineContainer<JSX.IonItemDivider>('syg-item-divider', IonItemDividerCmp, [
   'color',
   'sticky'
 ]);
 
 
-export const IonItemGroup = /*@__PURE__*/ defineContainer<JSX.IonItemGroup>('ion-item-group', IonItemGroupCmp);
+export const IonItemGroup = /*@__PURE__*/ defineContainer<JSX.IonItemGroup>('syg-item-group', IonItemGroupCmp);
 
 
-export const IonItemOption = /*@__PURE__*/ defineContainer<JSX.IonItemOption>('ion-item-option', IonItemOptionCmp, [
+export const IonItemOption = /*@__PURE__*/ defineContainer<JSX.IonItemOption>('syg-item-option', IonItemOptionCmp, [
   'color',
   'disabled',
   'download',
@@ -451,13 +451,13 @@ export const IonItemOption = /*@__PURE__*/ defineContainer<JSX.IonItemOption>('i
 ]);
 
 
-export const IonItemOptions = /*@__PURE__*/ defineContainer<JSX.IonItemOptions>('ion-item-options', IonItemOptionsCmp, [
+export const IonItemOptions = /*@__PURE__*/ defineContainer<JSX.IonItemOptions>('syg-item-options', IonItemOptionsCmp, [
   'side',
   'ionSwipe'
 ]);
 
 
-export const IonItemSliding = /*@__PURE__*/ defineContainer<JSX.IonItemSliding>('ion-item-sliding', IonItemSlidingCmp, [
+export const IonItemSliding = /*@__PURE__*/ defineContainer<JSX.IonItemSliding>('syg-item-sliding', IonItemSlidingCmp, [
   'disabled',
   'ionDrag'
 ]);
@@ -622,7 +622,7 @@ export const IonReorderGroup = /*@__PURE__*/ defineContainer<JSX.IonReorderGroup
 ]);
 
 
-export const IonRippleEffect = /*@__PURE__*/ defineContainer<JSX.IonRippleEffect>('ion-ripple-effect', IonRippleEffectCmp, [
+export const IonRippleEffect = /*@__PURE__*/ defineContainer<JSX.IonRippleEffect>('syg-ripple-effect', IonRippleEffectCmp, [
   'type'
 ]);
 
@@ -796,7 +796,7 @@ export const IonTextarea = /*@__PURE__*/ defineContainer<JSX.IonTextarea>('ion-t
 export const IonThumbnail = /*@__PURE__*/ defineContainer<JSX.IonThumbnail>('ion-thumbnail', IonThumbnailCmp);
 
 
-export const IonTitle = /*@__PURE__*/ defineContainer<JSX.IonTitle>('ion-title', IonTitleCmp, [
+export const IonTitle = /*@__PURE__*/ defineContainer<JSX.IonTitle>('syg-title', IonTitleCmp, [
   'color',
   'size',
   'ionStyle'
@@ -817,7 +817,7 @@ export const IonToggle = /*@__PURE__*/ defineContainer<JSX.IonToggle>('ion-toggl
 'checked', 'v-ion-change', 'ionChange');
 
 
-export const IonToolbar = /*@__PURE__*/ defineContainer<JSX.IonToolbar>('ion-toolbar', IonToolbarCmp, [
+export const IonToolbar = /*@__PURE__*/ defineContainer<JSX.IonToolbar>('syg-toolbar', IonToolbarCmp, [
   'color'
 ]);
 

@@ -3,7 +3,7 @@
     <ion-content>
       <ion-tabs id="tabs">
         <ion-router-outlet></ion-router-outlet>
-        <ion-tab-bar slot="top">
+        <syg-tab-bar slot="top">
           <ion-tab-button tab="tab1-secondary" href="/tabs-secondary/tab1">
             <ion-icon :icon="triangle" />
             <ion-label>Tab 1</ion-label>
@@ -18,7 +18,7 @@
             <ion-icon :icon="square" />
             <ion-label>Tab 3</ion-label>
           </ion-tab-button>
-        </ion-tab-bar>
+        </syg-tab-bar>
       </ion-tabs>
     </ion-content>
   </ion-page>

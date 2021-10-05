@@ -1,25 +1,25 @@
 <template>
   <ion-page data-pageid="tab1-secondary">
-    <ion-header>
-      <ion-toolbar>
+    <syg-header>
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button default-href="/"></syg-back-button>
         </syg-buttons>
-        <ion-title>Tab 1 - Secondary</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Tab 1 - Secondary</syg-title>
+      </syg-toolbar>
+    </syg-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 1 - Secondary</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Tab 1 - Secondary</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <ExploreContainer name="Tab 1 page" />
 
-      <ion-item router-link="/tabs" id="tabs-primary">
+      <syg-item router-link="/tabs" id="tabs-primary">
         <ion-label>Go to Primary Tabs</ion-label>
-      </ion-item>
+      </syg-item>
     </ion-content>
   </ion-page>
 </template>

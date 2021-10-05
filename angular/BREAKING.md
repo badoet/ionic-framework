@@ -122,19 +122,19 @@ The back button is no longer added by default to a navigation bar. It should be 
 
 ```html
 <ion-navbar>
-  <ion-title>Back Button Example</ion-title>
+  <syg-title>Back Button Example</syg-title>
 </ion-navbar>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-toolbar>
+<syg-toolbar>
   <syg-buttons slot="start">
     <syg-back-button></syg-back-button>
   </syg-buttons>
-  <ion-title>Back Button Example</ion-title>
-</ion-toolbar>
+  <syg-title>Back Button Example</syg-title>
+</syg-toolbar>
 ```
 
 See the [back button documentation](https://github.com/ionic-team/ionic/blob/master/core/src/components/back-button) for more usage examples.
@@ -595,20 +595,20 @@ doInfinite(event) {
 
 ### Markup Changed
 
-Item should now be written as an `<ion-item>` element. Ionic will determine when to render an anchor tag based on the presence of an `href` attribute, and a button tag based on the presence of an `onclick` or `button` attribute. Otherwise, it will render a div.
+Item should now be written as an `<syg-item>` element. Ionic will determine when to render an anchor tag based on the presence of an `href` attribute, and a button tag based on the presence of an `onclick` or `button` attribute. Otherwise, it will render a div.
 
 **Old Usage Example:**
 
 ```html
-<ion-item>
+<syg-item>
   Default Item
-</ion-item>
+</syg-item>
 
-<button ion-item (click)="doSomething()">
+<button syg-item (click)="doSomething()">
   Button Item
 </button>
 
-<a ion-item href="#">
+<a syg-item href="#">
   Anchor Item
 </a>
 ```
@@ -616,40 +616,40 @@ Item should now be written as an `<ion-item>` element. Ionic will determine when
 **New Usage Example:**
 
 ```html
-<ion-item>
+<syg-item>
   <ion-label>
     Default Item
   </ion-label>
-</ion-item>
+</syg-item>
 
-<ion-item button (click)="doSomething()">
+<syg-item button (click)="doSomething()">
   <ion-label>
     Button Item
   </ion-label>
-</ion-item>
+</syg-item>
 
-<ion-item href="#">
+<syg-item href="#">
   <ion-label>
     Anchor Item
   </ion-label>
-</ion-item>
+</syg-item>
 ```
 
 ### Label Required
 
-Previously an `ion-label` would automatically get added to an `ion-item` if one wasn't provided. Now an `ion-label` should always be added in the item component.
+Previously an `ion-label` would automatically get added to an `syg-item` if one wasn't provided. Now an `ion-label` should always be added in the item component.
 
 ```html
-<ion-item>
+<syg-item>
   <ion-label>
     Item Label
   </ion-label>
-</ion-item>
+</syg-item>
 ```
 
 ### Attributes Renamed
 
-Previously to position elements inside of an `ion-item` the following attributes were used: `item-left`, `item-right`, (and with the added support of RTL) `item-start`, `item-end`.
+Previously to position elements inside of an `syg-item` the following attributes were used: `item-left`, `item-right`, (and with the added support of RTL) `item-start`, `item-end`.
 
 These have been renamed to the following:
 
@@ -662,27 +662,27 @@ These have been renamed to the following:
 **Old Usage Example:**
 
 ```html
-<ion-item>
+<syg-item>
   <div item-left>Left</div>
   <ion-label>Item Label</ion-label>
   <div item-right>Right</div>
-</ion-item>
+</syg-item>
 
-<ion-item>
+<syg-item>
   <div item-start>Left on LTR, Right on RTL</div>
   <ion-label>Item Label</ion-label>
   <div item-end>Right on LTR, Left on RTL</div>
-</ion-item>
+</syg-item>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-item>
+<syg-item>
   <div slot="start">Left on LTR, Right on RTL</div>
   <ion-label>Item Label</ion-label>
   <div slot="end">Right on LTR, Left on RTL</div>
-</ion-item>
+</syg-item>
 ```
 
 ### Detail Push
@@ -692,25 +692,25 @@ The attributes to show/hide the detail arrows on items have been converted to a 
 **Old Usage Example:**
 
 ```html
-<button ion-item detail-none>
+<button syg-item detail-none>
   <ion-label>Item Label</ion-label>
 </button>
 
-<ion-item detail-push>
+<syg-item detail-push>
   <ion-label>Item Label</ion-label>
-</ion-item>
+</syg-item>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-item button detail="false">
+<syg-item button detail="false">
   <ion-label>Item Label</ion-label>
-</ion-item>
+</syg-item>
 
-<ion-item detail>
+<syg-item detail>
   <ion-label>Item Label</ion-label>
-</ion-item>
+</syg-item>
 ```
 
 By default, items that render buttons or anchor tags will show the arrow in `ios` mode.
@@ -719,12 +719,12 @@ By default, items that render buttons or anchor tags will show the arrow in `ios
 
 ### Label Required
 
-Previously an `ion-label` would automatically get added to an `ion-item-divider` if one wasn't provided. Now an `ion-label` should always be added around the text.
+Previously an `ion-label` would automatically get added to an `syg-item-divider` if one wasn't provided. Now an `ion-label` should always be added around the text.
 
 ```html
-<ion-item-divider>
+<syg-item-divider>
   <ion-label>Item Divider Label</ion-label>
-</ion-item-divider>
+</syg-item-divider>
 ```
 
 
@@ -732,7 +732,7 @@ Previously an `ion-label` would automatically get added to an `ion-item-divider`
 
 ### Attributes Renamed
 
-Previously to position the item options inside of an `ion-item-sliding` the `side` attribute would be used with one of the following values: `"left"`, `"right"`.
+Previously to position the item options inside of an `syg-item-sliding` the `side` attribute would be used with one of the following values: `"left"`, `"right"`.
 
 These values have been renamed to `"start"` and `"end"` to better align with our support for RTL.
 
@@ -747,36 +747,36 @@ These values have been renamed to `"start"` and `"end"` to better align with our
 
 ### Markup Changed
 
-The option component should now be written as an `ion-item-option`. Previously it was written as a `button` with an `syg-button` directive. The `ion-item-option` element will render a native button element inside of it.
+The option component should now be written as an `syg-item-option`. Previously it was written as a `button` with an `syg-button` directive. The `syg-item-option` element will render a native button element inside of it.
 
 **Old Usage Example:**
 
 ```html
-<ion-item-sliding>
-  <ion-item>
+<syg-item-sliding>
+  <syg-item>
     Item 1
-  </ion-item>
-  <ion-item-options side="right">
+  </syg-item>
+  <syg-item-options side="right">
     <button syg-button expandable>
       <ion-icon name="star"></ion-icon>
     </button>
-  </ion-item-options>
-</ion-item-sliding>
+  </syg-item-options>
+</syg-item-sliding>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-item-sliding>
-  <ion-item>
+<syg-item-sliding>
+  <syg-item>
     <ion-label>Item 1</ion-label>
-  </ion-item>
-  <ion-item-options side="end">
-    <ion-item-option expandable>
+  </syg-item>
+  <syg-item-options side="end">
+    <syg-item-option expandable>
       <ion-icon name="star"></ion-icon>
-    </ion-item-option>
-  </ion-item-options>
-</ion-item-sliding>
+    </syg-item-option>
+  </syg-item-options>
+</syg-item-sliding>
 ```
 
 ### Method Renamed
@@ -819,29 +819,29 @@ The attributes to set label position in an item are now combined under the `posi
 **Old Usage Example:**
 
 ```html
-<ion-item>
+<syg-item>
   <ion-label floating>Floating Label</ion-label>
   <!-- input -->
-</ion-item>
+</syg-item>
 
-<ion-item>
+<syg-item>
   <ion-label fixed>Fixed Label</ion-label>
   <!-- input -->
-</ion-item>
+</syg-item>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-item>
+<syg-item>
   <ion-label position="floating">Floating Label</ion-label>
   <!-- input -->
-</ion-item>
+</syg-item>
 
-<ion-item>
+<syg-item>
   <ion-label position="fixed">Fixed Label</ion-label>
   <!-- input -->
-</ion-item>
+</syg-item>
 ```
 
 
@@ -982,25 +982,25 @@ export class MyPage {
 
 ## Navbar
 
-The `<ion-navbar>` component has been removed in favor of always using an `<ion-toolbar>` with an explicit back button:
+The `<ion-navbar>` component has been removed in favor of always using an `<syg-toolbar>` with an explicit back button:
 
 **Old Usage Example:**
 
 ```html
 <ion-navbar>
-  <ion-title>My Navigation Bar</ion-title>
+  <syg-title>My Navigation Bar</syg-title>
 </ion-navbar>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-toolbar>
+<syg-toolbar>
   <syg-buttons slot="start">
     <syg-back-button></syg-back-button>
   </syg-buttons>
-  <ion-title>My Navigation Bar</ion-title>
-</ion-toolbar>
+  <syg-title>My Navigation Bar</syg-title>
+</syg-toolbar>
 ```
 
 See the [back button](#back-button) changes for more information.
@@ -1118,39 +1118,39 @@ Previously radio was positioned inside of an item automatically or by using `ite
 **Old Usage Example:**
 
 ```html
-<ion-item>
+<syg-item>
   <ion-label>Apple</ion-label>
   <ion-radio value="apple"></ion-radio>
-</ion-item>
+</syg-item>
 
-<ion-item>
+<syg-item>
   <ion-label>Grape, checked, disabled</ion-label>
   <ion-radio item-left value="grape" checked disabled></ion-radio>
-</ion-item>
+</syg-item>
 
-<ion-item>
+<syg-item>
   <ion-label>Cherry</ion-label>
   <ion-radio item-right color="danger" value="cherry"></ion-radio>
-</ion-item>
+</syg-item>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-item>
+<syg-item>
   <ion-label>Apple</ion-label>
   <ion-radio slot="start" value="apple"></ion-radio>
-</ion-item>
+</syg-item>
 
-<ion-item>
+<syg-item>
   <ion-label>Grape, checked, disabled</ion-label>
   <ion-radio slot="start" value="grape" checked disabled></ion-radio>
-</ion-item>
+</syg-item>
 
-<ion-item>
+<syg-item>
   <ion-label>Cherry</ion-label>
   <ion-radio slot="end" color="danger" value="cherry"></ion-radio>
-</ion-item>
+</syg-item>
 ```
 
 ### Radio Group
@@ -1161,20 +1161,20 @@ Radio group has been changed to an element. It should now be wrapped around any 
 
 ```html
 <ion-list radio-group>
-  <ion-item>
+  <syg-item>
     <ion-label>Apple</ion-label>
     <ion-radio value="apple"></ion-radio>
-  </ion-item>
+  </syg-item>
 
-  <ion-item>
+  <syg-item>
     <ion-label>Grape, checked, disabled</ion-label>
     <ion-radio value="grape" checked disabled></ion-radio>
-  </ion-item>
+  </syg-item>
 
-  <ion-item>
+  <syg-item>
     <ion-label>Cherry</ion-label>
     <ion-radio color="danger" value="cherry"></ion-radio>
-  </ion-item>
+  </syg-item>
 </ion-list>
 ```
 
@@ -1183,20 +1183,20 @@ Radio group has been changed to an element. It should now be wrapped around any 
 ```html
 <ion-list>
   <ion-radio-group>
-    <ion-item>
+    <syg-item>
       <ion-label>Apple</ion-label>
       <ion-radio slot="start" value="apple"></ion-radio>
-    </ion-item>
+    </syg-item>
 
-    <ion-item>
+    <syg-item>
       <ion-label>Grape, checked, disabled</ion-label>
       <ion-radio slot="start" value="grape" checked disabled></ion-radio>
-    </ion-item>
+    </syg-item>
 
-    <ion-item>
+    <syg-item>
       <ion-label>Cherry</ion-label>
       <ion-radio slot="start" color="danger" value="cherry"></ion-radio>
-    </ion-item>
+    </syg-item>
   </ion-radio-group>
 </ion-list>
 ```
@@ -1635,7 +1635,7 @@ const routes: Routes = [
 
 ```html
 <ion-tabs>
-  <ion-tab-bar slot="bottom">
+  <syg-tab-bar slot="bottom">
     <ion-tab-button tab="tab1">
       <ion-icon name="flash"></ion-icon>
       <ion-label>Tab One</ion-label>
@@ -1650,19 +1650,19 @@ const routes: Routes = [
       <ion-icon name="send"></ion-icon>
       <ion-label>Tab Three</ion-label>
     </ion-tab-button>
-  </ion-tab-bar>
+  </syg-tab-bar>
 </ion-tabs>
 ```
 
-### `ion-tab-bar`
+### `syg-tab-bar`
 
-A new element, `ion-tab-bar`, creates the tab bar that will contain the tab buttons and allow for full customization. It requires `slot` to be placed properly above or below the content.
+A new element, `syg-tab-bar`, creates the tab bar that will contain the tab buttons and allow for full customization. It requires `slot` to be placed properly above or below the content.
 
 ### `ion-tab-button`
 
 A new element, `ion-tab-button`, is used to create each button in the tab bar. These could be static links to different routes, buttons with click handlers on them, or link to whole tab views.
 
-You can add `<ion-label>` and `<ion-icon>` inside of an `<ion-tab-button>`. An `<ion-tab-button>` should be wrapped by an `<ion-tab-bar>`.
+You can add `<ion-label>` and `<ion-icon>` inside of an `<ion-tab-button>`. An `<ion-tab-button>` should be wrapped by an `<syg-tab-bar>`.
 
 The tab attribute defines the route to be shown upon clicking on this tab.
 
@@ -1678,14 +1678,14 @@ The tab attribute defines the route to be shown upon clicking on this tab.
 
 ```html
 <ion-tabs>
-  <ion-tab-bar>
+  <syg-tab-bar>
     <!-- A route to <current-route>/map must exist -->
     <ion-tab-button tab="map" disabled="true">
       <ion-icon name="map"></ion-icon>
       <ion-label>Map</ion-label>
       <syg-badge color="danger">2</syg-badge>
     </ion-tab-button>
-  </ion-tab-bar>
+  </syg-tab-bar>
 </ion-tabs>
 ```
 
@@ -1877,18 +1877,18 @@ Previously if a `menuToggle` directive was added to an Ionic `button` in a toolb
 **Old Usage Example:**
 
 ```html
-<ion-toolbar>
+<syg-toolbar>
   <button syg-button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>Left side menu toggle</ion-title>
-</ion-toolbar>
+  <syg-title>Left side menu toggle</syg-title>
+</syg-toolbar>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-toolbar>
+<syg-toolbar>
   <syg-buttons slot="start">
     <ion-menu-toggle>
       <syg-button>
@@ -1896,8 +1896,8 @@ Previously if a `menuToggle` directive was added to an Ionic `button` in a toolb
       </syg-button>
     </ion-menu-toggle>
   </syg-buttons>
-  <ion-title>Left side menu toggle</ion-title>
-</ion-toolbar>
+  <syg-title>Left side menu toggle</syg-title>
+</syg-toolbar>
 ```
 
 ### Attributes Renamed
@@ -1916,7 +1916,7 @@ These have been renamed to the following:
 **Old Usage Example:**
 
 ```html
-<ion-toolbar>
+<syg-toolbar>
   <syg-buttons left>
     <button syg-button>Left</button>
   </syg-buttons>
@@ -1924,9 +1924,9 @@ These have been renamed to the following:
     <button syg-button>Secondary</button>
   </syg-buttons>
 
-  <ion-title>
+  <syg-title>
     Title
-  </ion-title>
+  </syg-title>
 
   <syg-buttons end>
     <button syg-button>Primary</button>
@@ -1934,13 +1934,13 @@ These have been renamed to the following:
   <syg-buttons right>
     <button syg-button>Right</button>
   </syg-buttons>
-</ion-toolbar>
+</syg-toolbar>
 ```
 
 **New Usage Example:**
 
 ```html
-<ion-toolbar>
+<syg-toolbar>
   <syg-buttons slot="start">
     <syg-button>Left</syg-button>
   </syg-buttons>
@@ -1948,9 +1948,9 @@ These have been renamed to the following:
     <syg-button>Secondary</syg-button>
   </syg-buttons>
 
-  <ion-title>
+  <syg-title>
     Title
-  </ion-title>
+  </syg-title>
 
   <syg-buttons slot="primary">
     <syg-button>Primary</syg-button>
@@ -1958,5 +1958,5 @@ These have been renamed to the following:
   <syg-buttons slot="end">
     <syg-button>Right</syg-button>
   </syg-buttons>
-</ion-toolbar>
+</syg-toolbar>
 ```

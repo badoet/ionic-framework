@@ -8,7 +8,7 @@ describe('Swipe To Go Back', () => {
   it('/swipe-to-go-back, ', () => {
     cy.visit(`http://localhost:${port}/swipe-to-go-back`);
     cy.ionPageVisible('main');
-    cy.ionNav('ion-item', 'Details');
+    cy.ionNav('syg-item', 'Details');
     cy.ionPageVisible('details');
     cy.ionPageHidden('main');
     cy.ionSwipeToGoBack(true);

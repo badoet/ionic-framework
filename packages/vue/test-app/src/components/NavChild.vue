@@ -1,12 +1,12 @@
 <template>
-  <ion-header>
-    <ion-toolbar>
+  <syg-header>
+    <syg-toolbar>
       <syg-buttons>
         <syg-back-button></syg-back-button>
       </syg-buttons>
-      <ion-title>Nav - Child</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <syg-title>Nav - Child</syg-title>
+    </syg-toolbar>
+  </syg-header>
   <ion-content class="ion-padding" id="nav-child-content">
     {{ title }}
   </ion-content>

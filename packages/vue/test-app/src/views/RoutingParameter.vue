@@ -1,20 +1,20 @@
 <template>
   <ion-page :data-pageid="'routingparameter-' + $props.id">
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons>
           <syg-back-button></syg-back-button>
         </syg-buttons>
-        <ion-title>Routing Parameter</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>Routing Parameter</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Routing Parameter</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">Routing Parameter</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <syg-button id="parameter-view" :router-link="'/routing/' + $route.params.id + '/view'">Go to Single View</syg-button>
 

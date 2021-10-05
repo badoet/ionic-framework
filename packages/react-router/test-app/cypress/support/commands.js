@@ -81,7 +81,7 @@ Cypress.Commands.add('ionSwipeToGoBack', (complete = false, selector = 'ion-rout
 Cypress.Commands.add('ionMenuNav', (contains) => {
   // cy.get('ion-menu.show-menu').should('exist');
   // cy.wait(1000)
-  cy.contains('ion-item', contains).click({ force: true });
+  cy.contains('syg-item', contains).click({ force: true });
   // cy.get('div.ion-page').click();
   // cy.get('ion-menu').then(menu => {
   //   cy.wait(1000)
@@ -96,8 +96,8 @@ Cypress.Commands.add('ionMenuNav', (contains) => {
 
   // cy.wait(1000)
   // cy.wait(1000)
-  // cy.contains('ion-item', contains).click()
-  // cy.contains('ion-item', contains).parent('ion-menu-toggle').click({ force: true });
+  // cy.contains('syg-item', contains).click()
+  // cy.contains('syg-item', contains).parent('ion-menu-toggle').click({ force: true });
 });
 
 Cypress.Commands.add('ionTabClick', (tabText) => {

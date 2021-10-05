@@ -1,20 +1,20 @@
 <template>
   <ion-page data-pageid="folder">
-    <ion-header :translucent="true">
-      <ion-toolbar>
+    <syg-header :translucent="true">
+      <syg-toolbar>
         <syg-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </syg-buttons>
-        <ion-title>{{ $props.id }}</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <syg-title>{{ $props.id }}</syg-title>
+      </syg-toolbar>
+    </syg-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">{{ $props.id }}</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <syg-header collapse="condense">
+        <syg-toolbar>
+          <syg-title size="large">{{ $props.id }}</syg-title>
+        </syg-toolbar>
+      </syg-header>
 
       <div id="container">
         <strong class="capitalize">{{ $props.id }}</strong>
